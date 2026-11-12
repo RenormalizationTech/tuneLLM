@@ -39,6 +39,12 @@ def learning_curve(baseline, history):
             "training_log_points": training}
 
 
+def verify_selection_history(selection, curve):
+    by_step = {str(row["step"]): row["validation_loss"] for row in curve["validation_loss_history"]}
+    if any(by_step.get(step) != value for step, value in selection["candidate_validation_losses"].items()):
+        raise ValueError("selection candidate losses disagree with validation history")
+
+
 def paired_counts(base_rows, adapter_rows, metric):
     base, adapter = indexed(base_rows), indexed(adapter_rows)
     if base.keys() != adapter.keys():
@@ -122,8 +128,9 @@ def summarize(run):
         raise ValueError("selection violates frozen validation-only rule")
     evaluations, raw = {}, {}
     source_files = {"run.json", "protocol.json", "frozen.json", "config.json", "selection.json", "reload_state.json",
-                    "baseline_validation.json", "validation_history.json"}
+                    "baseline_validation.json", "validation_history.json", "adapter/provenance.json"}
     curve = learning_curve(read_json(run / "baseline_validation.json"), read_json(run / "validation_history.json"))
+    verify_selection_history(selection, curve)
     for task, expected_ids in (("gsm8k", protocol["selected_ids"]["test"]), ("retention", protocol["retention_ids"])):
         base_name, adapter_name, reload_name = f"base_final_{task}.json", f"adapter_final_{task}.json", f"reload_{task}.json"
         source_files.update((base_name, adapter_name, reload_name))

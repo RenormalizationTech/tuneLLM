@@ -2,10 +2,20 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from scripts.summarize_qlora_run import condition_summary, exact_mcnemar, learning_curve, paired_counts, summarize
+from scripts.summarize_qlora_run import (condition_summary, exact_mcnemar, learning_curve,
+                                         paired_counts, summarize, verify_selection_history)
 
 
 class PairedSummaryTests(unittest.TestCase):
+    def test_selection_losses_must_match_validation_history(self):
+        curve = {"validation_loss_history": [{"step": 32, "validation_loss": 1.2},
+                                             {"step": 64, "validation_loss": 1.1}]}
+        selection = {"candidate_validation_losses": {"32": 1.2, "64": 1.1}}
+        verify_selection_history(selection, curve)
+        selection["candidate_validation_losses"]["64"] = 1.0
+        with self.assertRaisesRegex(ValueError, "disagree with validation history"):
+            verify_selection_history(selection, curve)
+
     def test_learning_curve_keeps_all_validation_points_and_only_compact_log_fields(self):
         history = [{"step": 0, "eval_loss": 3.0}]
         for step in (16, 32, 48, 64):
