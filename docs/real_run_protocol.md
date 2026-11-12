@@ -102,3 +102,23 @@ Base GGUFs and adapters are separate artifacts with separate cards. No merged
 BF16 or merged GGUF model inherits these results without its own evaluation.
 Hugging Face uploads require account authentication and the intended repository
 visibility. Local training and packaging can finish before those are supplied.
+
+## Secondary output-budget diagnostic
+
+Added after inspecting the base model's primary eight-token retention output,
+before inspecting the selected adapter's retention scores. The base had 58/128
+truncated responses and 112/128 outputs that were not an exact single letter.
+This exposed a substantial output-budget/format limitation in the probe.
+
+Run one additional budget of 64 generated tokens for both the unchanged NF4 base
+and the already selected adapter, after the primary run and reload finish. Use
+the same frozen 128 retention prompts, batch-eight membership, seed and scorer.
+Do not change prompts, parsing, checkpoint choice, training, or the primary
+eight-token results. Do not add further budgets based on this diagnostic.
+
+Report per-item correctness/invalid/ambiguity/truncation agreement between eight
+and 64 tokens, and both base/adapter scores. Longer reasoning can mention several
+answer letters and confuse the existing first-letter fallback, so report ambiguity
+and remaining truncation. This is a secondary sensitivity analysis prompted by a
+baseline limitation, not a replacement primary endpoint or proof of general
+knowledge retention.
