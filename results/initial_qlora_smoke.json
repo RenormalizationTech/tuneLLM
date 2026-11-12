@@ -1,0 +1,389 @@
+{
+  "date": "2026-11-12",
+  "status": "completed",
+  "purpose": "Two-step pipeline smoke on eight training rows; not a validated release or evidence of reasoning improvement.",
+  "model_id": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "dataset": {
+    "source": "openai/gsm8k",
+    "configuration": "main",
+    "license": "MIT",
+    "revision": "740312add88f781978c0658806c59bc2815b9866",
+    "split_policy": "Set exact dataset revision and record deterministic validation carve-out from upstream train; preserve upstream test. Local rows: id, user, assistant, optional system."
+  },
+  "selected_ids": {
+    "train": [
+      "gsm8k-main-train-03370",
+      "gsm8k-main-train-04852",
+      "gsm8k-main-train-00098",
+      "gsm8k-main-train-00102",
+      "gsm8k-main-train-01951",
+      "gsm8k-main-train-06532",
+      "gsm8k-main-train-05823",
+      "gsm8k-main-train-00930"
+    ],
+    "validation": [
+      "gsm8k-main-train-02425",
+      "gsm8k-main-train-03341",
+      "gsm8k-main-train-06656",
+      "gsm8k-main-train-00035",
+      "gsm8k-main-train-01914",
+      "gsm8k-main-train-06456",
+      "gsm8k-main-train-03180",
+      "gsm8k-main-train-06156",
+      "gsm8k-main-train-05822",
+      "gsm8k-main-train-02867",
+      "gsm8k-main-train-06245",
+      "gsm8k-main-train-04833",
+      "gsm8k-main-train-01068",
+      "gsm8k-main-train-03205",
+      "gsm8k-main-train-03486",
+      "gsm8k-main-train-03225"
+    ],
+    "test": [
+      "gsm8k-main-test-00588",
+      "gsm8k-main-test-01214",
+      "gsm8k-main-test-00057",
+      "gsm8k-main-test-00906",
+      "gsm8k-main-test-01252",
+      "gsm8k-main-test-00618",
+      "gsm8k-main-test-00599",
+      "gsm8k-main-test-00289",
+      "gsm8k-main-test-00608",
+      "gsm8k-main-test-00400",
+      "gsm8k-main-test-00237",
+      "gsm8k-main-test-00616",
+      "gsm8k-main-test-00672",
+      "gsm8k-main-test-01132",
+      "gsm8k-main-test-00463",
+      "gsm8k-main-test-00222"
+    ]
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "type": "nf4",
+    "double_quant": true,
+    "compute_dtype": "bfloat16"
+  },
+  "lora": {
+    "r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "training_config": {
+    "max_steps": 2,
+    "learning_rate": 0.0002,
+    "per_device_train_batch_size": 1,
+    "per_device_eval_batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "logging_steps": 1,
+    "save_strategy": "no",
+    "eval_strategy": "no"
+  },
+  "trainable_parameters": 5898240,
+  "training_wall_seconds": 4.5744692059233785,
+  "training_metrics": {
+    "train_runtime": 4.3278,
+    "train_samples_per_second": 1.849,
+    "train_steps_per_second": 0.462,
+    "total_flos": 31400830998528.0,
+    "train_loss": 2.7111579179763794,
+    "epoch": 1.0
+  },
+  "peak_pytorch_allocated_bytes": 4919495680,
+  "loss_scope": "Trainer evaluation loss on assistant tokens including EOS; batch/sample averaged, not a token-weighted corpus perplexity",
+  "reload_identical_generated_ids": true,
+  "reload_representation": "NF4/double-quant BF16 compute; nonquantized floating base parameters cast to FP32 by prepare_model_for_kbit_training on both loads",
+  "source_sha256": {
+    "scripts/__init__.py": "7c5a21e6c2f63dc3daf9507c1f350d27c91dc4710719e8c817fe7ac9987b92dd",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/download_model.py": "cfdab43e1ee032437525a344f384a7b7596b88fcefca623d1dcadeb0086904c0",
+    "scripts/env_check.py": "2d76f6f6225d40fa05bc830c1388b96ee45188ce51f7ee4431560504e63238b5",
+    "scripts/hf_baseline.py": "d0c9715a08fa554a951679187adced85fd30c67603d1101a05bf70531b5e6945",
+    "scripts/prepare_gsm8k.py": "a3a21c57c8aa4870af5c32116ef89667198238e972f8fe7db8deed6f26851585",
+    "scripts/train_qlora.py": "9409cf97ae7db3f6b5e550f9ee5040463b59d212f4c53a7a84ad196aa16692d0",
+    "scripts/training_data.py": "d3b14d4a4b0e9277940b6dbda96c8a514d0e39b588a9106851561a5f2f6b8c35",
+    "evaluation/__init__.py": "c0804d72a3db3b81280de93bc0480f88404fd858e73e22aabb5eed8c45470bb4",
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+    "configs/baseline.json": "3002ce98d58cfc848e867293ed14690c34409b540222439c681486109576942f",
+    "configs/qlora.json": "91e8111c876ced9a11d9cc8232160768f1416d2285e0810b4d5df2f78a27dd39",
+    "requirements-dev.txt": "3c3ad6730cf0c0417b77bae38e53c11fa8cd96a34f2f8956998bafc0aaf3ef17",
+    "requirements-gguf.txt": "dcf404832c4aaaf8a78db0118f2c90f5ed71a5b59e550440c9ebf796e4eb1236",
+    "requirements-qlora.txt": "2c43340c45a6124cbfb70adaa0f5e2e9ea56c87df455b0a8ff4dbb628fa32607",
+    "requirements.txt": "cae4fa0e41dda747e20596c0f640b43b99e1362ffb73e507be83bb1ae4c910bb"
+  },
+  "before": {
+    "heldout_losses": {
+      "validation": 2.574801445007324,
+      "test": 3.2418551445007324
+    },
+    "scores": {
+      "total": 16,
+      "strict_correct": 12,
+      "fallback_correct": 14,
+      "format_compliant": 13,
+      "hit_token_limit": 1,
+      "strict_accuracy": 0.75,
+      "fallback_accuracy": 0.875,
+      "details": [
+        {
+          "id": "gsm8k-main-test-00588",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-01214",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00057",
+          "strict_correct": false,
+          "fallback_correct": true,
+          "format_compliant": false,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00906",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-01252",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00618",
+          "strict_correct": false,
+          "fallback_correct": true,
+          "format_compliant": false,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00599",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00289",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00608",
+          "strict_correct": false,
+          "fallback_correct": false,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00400",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00237",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00616",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00672",
+          "strict_correct": false,
+          "fallback_correct": false,
+          "format_compliant": false,
+          "hit_token_limit": true
+        },
+        {
+          "id": "gsm8k-main-test-01132",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00463",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00222",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        }
+      ],
+      "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+    },
+    "generated_tokens": 3387
+  },
+  "after": {
+    "heldout_losses": {
+      "validation": 2.0165305137634277,
+      "test": 2.567625045776367
+    },
+    "scores": {
+      "total": 16,
+      "strict_correct": 12,
+      "fallback_correct": 14,
+      "format_compliant": 13,
+      "hit_token_limit": 1,
+      "strict_accuracy": 0.75,
+      "fallback_accuracy": 0.875,
+      "details": [
+        {
+          "id": "gsm8k-main-test-00588",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-01214",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00057",
+          "strict_correct": false,
+          "fallback_correct": true,
+          "format_compliant": false,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00906",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-01252",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00618",
+          "strict_correct": false,
+          "fallback_correct": true,
+          "format_compliant": false,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00599",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00289",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00608",
+          "strict_correct": false,
+          "fallback_correct": false,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00400",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00237",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00616",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00672",
+          "strict_correct": false,
+          "fallback_correct": false,
+          "format_compliant": false,
+          "hit_token_limit": true
+        },
+        {
+          "id": "gsm8k-main-test-01132",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00463",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        },
+        {
+          "id": "gsm8k-main-test-00222",
+          "strict_correct": true,
+          "fallback_correct": true,
+          "format_compliant": true,
+          "hit_token_limit": false
+        }
+      ],
+      "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+    },
+    "generated_tokens": 3538
+  },
+  "adapter": {
+    "path": "outputs/qlora-smoke-01/adapter/adapter_model.safetensors",
+    "bytes": 23631240,
+    "sha256": "c7149be76c7ce85620af48adada9be24d6d725874deb0594f8a7b6d5a1a21315"
+  }
+}

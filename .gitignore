@@ -218,3 +218,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local model artifacts, datasets, generated outputs, and Hugging Face cache
+/artifacts/
+/data/
+/outputs/
+/.hf/
+
+# Model binaries, including files outside the local artifact directories
+*.gguf
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+pytorch_model*.bin

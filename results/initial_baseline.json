@@ -1,0 +1,212 @@
+{
+  "date": "2026-11-12",
+  "status": "completed",
+  "scope": "Eight project-authored pipeline smoke tasks; not a capability benchmark. Very short outputs; throughput includes prefill and Python overhead, is not sustained decode speed. Concurrent CPU tool compilation.",
+  "runs": [
+    {
+      "run": "hf-baseline-01",
+      "model": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "gpu": "NVIDIA RTX A6000",
+      "physical_gpu": "1",
+      "parameter_count": 4022468096,
+      "loaded_allocated_bytes": 8044955136,
+      "score": {
+        "correct": 7,
+        "total": 8
+      },
+      "generation_tokens_per_wall_second": 21.68266113045024,
+      "truncated_responses": 0,
+      "outputs": [
+        {
+          "id": "arithmetic",
+          "output": "42",
+          "generated_ids": [
+            19,
+            17,
+            151645
+          ]
+        },
+        {
+          "id": "fraction",
+          "output": "20",
+          "generated_ids": [
+            17,
+            15,
+            151645
+          ]
+        },
+        {
+          "id": "capital",
+          "output": "Paris",
+          "generated_ids": [
+            59604,
+            151645
+          ]
+        },
+        {
+          "id": "sequence",
+          "output": "32",
+          "generated_ids": [
+            18,
+            17,
+            151645
+          ]
+        },
+        {
+          "id": "force",
+          "output": "18",
+          "generated_ids": [
+            16,
+            23,
+            151645
+          ]
+        },
+        {
+          "id": "speed",
+          "output": "5",
+          "generated_ids": [
+            20,
+            151645
+          ]
+        },
+        {
+          "id": "energy_unit",
+          "output": "Joule",
+          "generated_ids": [
+            41,
+            283,
+            273,
+            151645
+          ]
+        },
+        {
+          "id": "charge",
+          "output": "negative",
+          "generated_ids": [
+            42224,
+            151645
+          ]
+        }
+      ],
+      "fixture_sha256": "9fa535d86b730793ff233c494fdc84b46d0e168ac0a621dfaaf8fa4e12c01ea1",
+      "source_sha256": {
+        "scripts/__init__.py": "7c5a21e6c2f63dc3daf9507c1f350d27c91dc4710719e8c817fe7ac9987b92dd",
+        "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+        "scripts/download_model.py": "cfdab43e1ee032437525a344f384a7b7596b88fcefca623d1dcadeb0086904c0",
+        "scripts/env_check.py": "2d76f6f6225d40fa05bc830c1388b96ee45188ce51f7ee4431560504e63238b5",
+        "scripts/hf_baseline.py": "d0c9715a08fa554a951679187adced85fd30c67603d1101a05bf70531b5e6945",
+        "scripts/training_data.py": "d3b14d4a4b0e9277940b6dbda96c8a514d0e39b588a9106851561a5f2f6b8c35",
+        "evaluation/__init__.py": "c0804d72a3db3b81280de93bc0480f88404fd858e73e22aabb5eed8c45470bb4",
+        "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+        "configs/baseline.json": "3002ce98d58cfc848e867293ed14690c34409b540222439c681486109576942f",
+        "configs/qlora.json": "34b3eecdffbd537766626f81c87d89fa8dfd265c4a6573f41d94bae02e199d69",
+        "requirements-qlora.txt": "2c43340c45a6124cbfb70adaa0f5e2e9ea56c87df455b0a8ff4dbb628fa32607",
+        "requirements.txt": "cae4fa0e41dda747e20596c0f640b43b99e1362ffb73e507be83bb1ae4c910bb"
+      }
+    },
+    {
+      "run": "hf-baseline-02",
+      "model": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "gpu": "NVIDIA RTX A6000",
+      "physical_gpu": "1",
+      "parameter_count": 4022468096,
+      "loaded_allocated_bytes": 8044955136,
+      "score": {
+        "correct": 7,
+        "total": 8
+      },
+      "generation_tokens_per_wall_second": 23.0340904184335,
+      "truncated_responses": 0,
+      "outputs": [
+        {
+          "id": "arithmetic",
+          "output": "42",
+          "generated_ids": [
+            19,
+            17,
+            151645
+          ]
+        },
+        {
+          "id": "fraction",
+          "output": "20",
+          "generated_ids": [
+            17,
+            15,
+            151645
+          ]
+        },
+        {
+          "id": "capital",
+          "output": "Paris",
+          "generated_ids": [
+            59604,
+            151645
+          ]
+        },
+        {
+          "id": "sequence",
+          "output": "32",
+          "generated_ids": [
+            18,
+            17,
+            151645
+          ]
+        },
+        {
+          "id": "force",
+          "output": "18",
+          "generated_ids": [
+            16,
+            23,
+            151645
+          ]
+        },
+        {
+          "id": "speed",
+          "output": "5",
+          "generated_ids": [
+            20,
+            151645
+          ]
+        },
+        {
+          "id": "energy_unit",
+          "output": "Joule",
+          "generated_ids": [
+            41,
+            283,
+            273,
+            151645
+          ]
+        },
+        {
+          "id": "charge",
+          "output": "negative",
+          "generated_ids": [
+            42224,
+            151645
+          ]
+        }
+      ],
+      "fixture_sha256": "9fa535d86b730793ff233c494fdc84b46d0e168ac0a621dfaaf8fa4e12c01ea1",
+      "source_sha256": {
+        "scripts/__init__.py": "7c5a21e6c2f63dc3daf9507c1f350d27c91dc4710719e8c817fe7ac9987b92dd",
+        "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+        "scripts/download_model.py": "cfdab43e1ee032437525a344f384a7b7596b88fcefca623d1dcadeb0086904c0",
+        "scripts/env_check.py": "2d76f6f6225d40fa05bc830c1388b96ee45188ce51f7ee4431560504e63238b5",
+        "scripts/hf_baseline.py": "d0c9715a08fa554a951679187adced85fd30c67603d1101a05bf70531b5e6945",
+        "scripts/training_data.py": "d3b14d4a4b0e9277940b6dbda96c8a514d0e39b588a9106851561a5f2f6b8c35",
+        "evaluation/__init__.py": "c0804d72a3db3b81280de93bc0480f88404fd858e73e22aabb5eed8c45470bb4",
+        "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+        "configs/baseline.json": "3002ce98d58cfc848e867293ed14690c34409b540222439c681486109576942f",
+        "configs/qlora.json": "34b3eecdffbd537766626f81c87d89fa8dfd265c4a6573f41d94bae02e199d69",
+        "requirements-qlora.txt": "2c43340c45a6124cbfb70adaa0f5e2e9ea56c87df455b0a8ff4dbb628fa32607",
+        "requirements.txt": "cae4fa0e41dda747e20596c0f640b43b99e1362ffb73e507be83bb1ae4c910bb"
+      }
+    }
+  ],
+  "identical_generated_tokens": true
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "description": "Project-authored exact-answer smoke fixture, not a capability benchmark. Reuse unchanged across HF/GGUF. No training examples.",
+  "tasks": [
+    {"id": "arithmetic", "category": "general", "messages": [{"role": "user", "content": "What is 17 + 25? Reply with only the integer."}], "answers": ["42"]},
+    {"id": "fraction", "category": "general", "messages": [{"role": "user", "content": "What is one quarter of 80? Reply with only the integer."}], "answers": ["20"]},
+    {"id": "capital", "category": "general", "messages": [{"role": "user", "content": "What is the capital of France? Reply with only the city name."}], "answers": ["Paris"]},
+    {"id": "sequence", "category": "general", "messages": [{"role": "user", "content": "Complete the sequence: 2, 4, 8, 16, ... Reply with only the next integer."}], "answers": ["32"]},
+    {"id": "force", "category": "physics", "messages": [{"role": "user", "content": "A 2 kg object accelerates at 3 m/s^2. What is the net force in newtons? Reply with only the number."}], "answers": ["6"]},
+    {"id": "speed", "category": "physics", "messages": [{"role": "user", "content": "An object travels 100 meters in 20 seconds at constant speed. What is its speed in m/s? Reply with only the number."}], "answers": ["5"]},
+    {"id": "energy_unit", "category": "physics", "messages": [{"role": "user", "content": "What is the SI unit of energy? Reply with only the unit name."}], "answers": ["joule", "joules"]},
+    {"id": "charge", "category": "physics", "messages": [{"role": "user", "content": "Is the electric charge of an electron positive, negative, or zero? Reply with only one of those words."}], "answers": ["negative"]}
+  ]
+}

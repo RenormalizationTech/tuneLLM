@@ -1,0 +1,6 @@
+# Use the core environment and converter/gguf-py from llama.cpp commit
+# 8ca5a8008b57aa39f2601546c0d07912045080a5; manager verified conversion.
+-r requirements.txt
+numpy==2.2.6
+sentencepiece==0.2.1
+protobuf==4.25.9
