@@ -83,6 +83,18 @@ class LabelTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "duplicate"):
                 load_splits(paths)
 
+    def test_jsonl_unicode_separators_inside_strings_are_not_records(self):
+        separators = "\u0085\u2028\u2029"
+        with tempfile.TemporaryDirectory() as temp:
+            paths, expected = {}, {}
+            for index, name in enumerate(("train", "validation", "test")):
+                rows = [{"id": f"{name}-{j}", "user": f"{name} question {j}{separators}more",
+                         "assistant": f"answer{separators}continued"} for j in range(2)]
+                p = Path(temp) / (name + ".jsonl")
+                p.write_text("\n".join(json.dumps(row, ensure_ascii=False) for row in rows) + "\n", encoding="utf-8")
+                paths[name], expected[name] = str(p), rows
+            self.assertEqual(load_splits(paths), expected)
+
 
 class GSMTests(unittest.TestCase):
     def test_overlap_dedup_annotations_and_deterministic_split(self):

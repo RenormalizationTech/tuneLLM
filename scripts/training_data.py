@@ -3,12 +3,18 @@ import json
 from scripts.common import path
 
 
+class OverlengthError(ValueError):
+    """A row exceeds the explicit token budget; distinguish from invalid masking."""
+
+
 def load_splits(split_paths):
     if set(split_paths) != {"train", "validation", "test"}:
         raise ValueError("explicit train, validation, and test paths required")
     result, seen_ids, seen_prompts = {}, set(), set()
     for name, filename in split_paths.items():
-        rows = [json.loads(line) for line in path(filename).read_text(encoding="utf-8").splitlines() if line.strip()]
+        # JSONL uses physical LF delimiters. Unicode separators can occur inside
+        # valid ensure_ascii=False JSON strings and must not split a record.
+        rows = [json.loads(line) for line in path(filename).read_text(encoding="utf-8").split("\n") if line.strip()]
         if not rows:
             raise ValueError(f"empty split: {name}")
         for row in rows:
@@ -47,7 +53,7 @@ def encode_row(row, tokenizer, max_length):
     if full_ids[-1] != tokenizer.eos_token_id:
         raise ValueError("assistant response must end with EOS")
     if len(full_ids) > max_length:
-        raise ValueError(f"row {row['id']} has {len(full_ids)} tokens > max_length={max_length}; prepare/filter explicitly, never silently truncate labels")
+        raise OverlengthError(f"row {row['id']} has {len(full_ids)} tokens > max_length={max_length}; prepare/filter explicitly, never silently truncate labels")
     return {"input_ids": full_ids, "attention_mask": [1] * len(full_ids),
             "labels": [-100] * len(prompt_ids) + full_ids[len(prompt_ids):]}
 

@@ -1,0 +1,810 @@
+{
+  "model": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "llama_cpp_commit": "8ca5a8008b57aa39f2601546c0d07912045080a5",
+  "date": "2026-11-12",
+  "scope": "Initial small-model conversion/quantization cycle: CPU eight-prompt comparison with exact HF input-token parity, plus sequential CUDA microbenchmarks and tiny fixed-text perplexity. These do not establish general capability or production performance.",
+  "imatrix_used": false,
+  "files": [
+    {
+      "format": "BF16",
+      "path": "artifacts/gguf/Qwen3-4B-BF16.gguf",
+      "bytes": 8051285472,
+      "gib": 7.498343914747238,
+      "sha256": "5dbbfbb5ccea81a811ef8346248bbf8f808c94477feb84415699d632798925b9",
+      "reload_runtime": "llama.cpp CPU CLI",
+      "smoke_prompt": "What is 17 + 25? Reply with only the integer.",
+      "smoke_answer": "42",
+      "log": "outputs/bf16-reload-smoke.txt",
+      "cpu_prompt_comparison": {
+        "correct": 7,
+        "total": 8,
+        "all_input_tokens_match_hf": true,
+        "runtime": "llama.cpp CPU raw /completion, four threads",
+        "server_cleaned_up": true,
+        "fixture_sha256": "9fa535d86b730793ff233c494fdc84b46d0e168ac0a621dfaaf8fa4e12c01ea1",
+        "outputs": [
+          {
+            "id": "arithmetic",
+            "output": "42",
+            "generated_ids": [
+              19,
+              17,
+              151645
+            ]
+          },
+          {
+            "id": "fraction",
+            "output": "20",
+            "generated_ids": [
+              17,
+              15,
+              151645
+            ]
+          },
+          {
+            "id": "capital",
+            "output": "Paris",
+            "generated_ids": [
+              59604,
+              151645
+            ]
+          },
+          {
+            "id": "sequence",
+            "output": "32",
+            "generated_ids": [
+              18,
+              17,
+              151645
+            ]
+          },
+          {
+            "id": "force",
+            "output": "18",
+            "generated_ids": [
+              16,
+              23,
+              151645
+            ]
+          },
+          {
+            "id": "speed",
+            "output": "5",
+            "generated_ids": [
+              20,
+              151645
+            ]
+          },
+          {
+            "id": "energy_unit",
+            "output": "Joule",
+            "generated_ids": [
+              41,
+              283,
+              273,
+              151645
+            ]
+          },
+          {
+            "id": "charge",
+            "output": "negative",
+            "generated_ids": [
+              42224,
+              151645
+            ]
+          }
+        ]
+      },
+      "gpu_benchmark": {
+        "runtime": "llama.cpp llama-bench",
+        "physical_gpu": "1",
+        "gpu_info": "NVIDIA RTX A6000",
+        "repetitions": 3,
+        "prompt_tokens": 128,
+        "generation_tokens": 64,
+        "threads": 4,
+        "flash_attention": "on",
+        "gpu_layers": 99,
+        "prompt_tokens_per_second": 5933.914089,
+        "generation_tokens_per_second": 79.120135,
+        "generation_tokens_per_second_stddev": 0.035518,
+        "raw_rows": [
+          {
+            "build_commit": "8ca5a80",
+            "build_number": 1,
+            "cpu_info": "AMD Ryzen Threadripper PRO 3975WX 32-Cores",
+            "gpu_info": "NVIDIA RTX A6000",
+            "backends": "CUDA",
+            "model_filename": "artifacts/gguf/Qwen3-4B-BF16.gguf",
+            "model_type": "qwen3 4B BF16",
+            "model_size": 8045328384,
+            "model_n_params": 4022468096,
+            "n_batch": 2048,
+            "n_ubatch": 512,
+            "n_threads": 4,
+            "cpu_mask": "0x0",
+            "cpu_strict": false,
+            "poll": 50,
+            "type_k": "f16",
+            "type_v": "f16",
+            "n_gpu_layers": 99,
+            "n_cpu_moe": 0,
+            "split_mode": "layer",
+            "main_gpu": 0,
+            "no_kv_offload": false,
+            "flash_attn": 1,
+            "devices": "auto",
+            "tensor_split": "0.00",
+            "tensor_buft_overrides": "none",
+            "load_mode": "auto",
+            "lazy_mode": "auto",
+            "embeddings": false,
+            "no_op_offload": 0,
+            "no_host": false,
+            "repack": true,
+            "fit_target": 0,
+            "fit_min_ctx": 0,
+            "n_prompt": 128,
+            "n_gen": 0,
+            "n_depth": 0,
+            "test_time": "2026-11-12T19:30:25Z",
+            "avg_ns": 21806425,
+            "stddev_ns": 2878579,
+            "avg_ts": 5933.914089,
+            "stddev_ts": 728.232948,
+            "samples_ns": [
+              25128074,
+              20039936,
+              20251267
+            ],
+            "samples_ts": [
+              5093.9,
+              6387.25,
+              6320.59
+            ]
+          },
+          {
+            "build_commit": "8ca5a80",
+            "build_number": 1,
+            "cpu_info": "AMD Ryzen Threadripper PRO 3975WX 32-Cores",
+            "gpu_info": "NVIDIA RTX A6000",
+            "backends": "CUDA",
+            "model_filename": "artifacts/gguf/Qwen3-4B-BF16.gguf",
+            "model_type": "qwen3 4B BF16",
+            "model_size": 8045328384,
+            "model_n_params": 4022468096,
+            "n_batch": 2048,
+            "n_ubatch": 512,
+            "n_threads": 4,
+            "cpu_mask": "0x0",
+            "cpu_strict": false,
+            "poll": 50,
+            "type_k": "f16",
+            "type_v": "f16",
+            "n_gpu_layers": 99,
+            "n_cpu_moe": 0,
+            "split_mode": "layer",
+            "main_gpu": 0,
+            "no_kv_offload": false,
+            "flash_attn": 1,
+            "devices": "auto",
+            "tensor_split": "0.00",
+            "tensor_buft_overrides": "none",
+            "load_mode": "auto",
+            "lazy_mode": "auto",
+            "embeddings": false,
+            "no_op_offload": 0,
+            "no_host": false,
+            "repack": true,
+            "fit_target": 0,
+            "fit_min_ctx": 0,
+            "n_prompt": 0,
+            "n_gen": 64,
+            "n_depth": 0,
+            "test_time": "2026-11-12T19:30:25Z",
+            "avg_ns": 808896606,
+            "stddev_ns": 365387,
+            "avg_ts": 79.120135,
+            "stddev_ts": 0.035518,
+            "samples_ns": [
+              809287064,
+              808833844,
+              808568912
+            ],
+            "samples_ts": [
+              79.082,
+              79.1263,
+              79.1522
+            ]
+          }
+        ]
+      },
+      "perplexity": {
+        "value": 2.6299,
+        "tool_reported_uncertainty": 0.17471,
+        "runtime": "llama.cpp llama-perplexity CUDA",
+        "context": 512,
+        "max_chunks": 4,
+        "batch_size": 512,
+        "microbatch_size": 512,
+        "threads": 4,
+        "flash_attention": "on",
+        "data": {
+          "source": "openai/gsm8k",
+          "revision": "740312add88f781978c0658806c59bc2815b9866",
+          "ids": [
+            "gsm8k-main-test-00000",
+            "gsm8k-main-test-00001",
+            "gsm8k-main-test-00002",
+            "gsm8k-main-test-00003",
+            "gsm8k-main-test-00004",
+            "gsm8k-main-test-00005",
+            "gsm8k-main-test-00006",
+            "gsm8k-main-test-00007",
+            "gsm8k-main-test-00008",
+            "gsm8k-main-test-00009",
+            "gsm8k-main-test-00010",
+            "gsm8k-main-test-00011",
+            "gsm8k-main-test-00012",
+            "gsm8k-main-test-00013",
+            "gsm8k-main-test-00014",
+            "gsm8k-main-test-00015",
+            "gsm8k-main-test-00016",
+            "gsm8k-main-test-00017",
+            "gsm8k-main-test-00018",
+            "gsm8k-main-test-00019",
+            "gsm8k-main-test-00020",
+            "gsm8k-main-test-00021",
+            "gsm8k-main-test-00022",
+            "gsm8k-main-test-00023",
+            "gsm8k-main-test-00024",
+            "gsm8k-main-test-00025",
+            "gsm8k-main-test-00026",
+            "gsm8k-main-test-00027",
+            "gsm8k-main-test-00028",
+            "gsm8k-main-test-00029",
+            "gsm8k-main-test-00030",
+            "gsm8k-main-test-00031"
+          ],
+          "text_sha256": "048219bde1975ccd232dc5182c04fc8622db0b92a8554436c2632918f113f4cc",
+          "scope": "First32source-test question/solution pairs, same text for all GGUF precisions; pipeline comparison, not general capability benchmark"
+        },
+        "caveat": "Tiny fixed text comparison; tool-reported uncertainty is not labelled a 95% confidence interval. No general capability claim."
+      }
+    },
+    {
+      "format": "Q8_0",
+      "path": "artifacts/gguf/Qwen3-4B-Q8_0.gguf",
+      "bytes": 4280405472,
+      "gib": 3.9864382445812225,
+      "sha256": "4b2b96c36712c42d902fb23cb361ed8ebf838a4342f77cedb87afe99e291775f",
+      "reload_runtime": "llama.cpp CPU CLI",
+      "smoke_prompt": "What is 17 + 25? Reply with only the integer.",
+      "smoke_answer": "42",
+      "log": "outputs/q8-reload-smoke.txt",
+      "cpu_prompt_comparison": {
+        "correct": 7,
+        "total": 8,
+        "all_input_tokens_match_hf": true,
+        "runtime": "llama.cpp CPU raw /completion, four threads",
+        "server_cleaned_up": true,
+        "fixture_sha256": "9fa535d86b730793ff233c494fdc84b46d0e168ac0a621dfaaf8fa4e12c01ea1",
+        "outputs": [
+          {
+            "id": "arithmetic",
+            "output": "42",
+            "generated_ids": [
+              19,
+              17,
+              151645
+            ]
+          },
+          {
+            "id": "fraction",
+            "output": "20",
+            "generated_ids": [
+              17,
+              15,
+              151645
+            ]
+          },
+          {
+            "id": "capital",
+            "output": "Paris",
+            "generated_ids": [
+              59604,
+              151645
+            ]
+          },
+          {
+            "id": "sequence",
+            "output": "32",
+            "generated_ids": [
+              18,
+              17,
+              151645
+            ]
+          },
+          {
+            "id": "force",
+            "output": "18",
+            "generated_ids": [
+              16,
+              23,
+              151645
+            ]
+          },
+          {
+            "id": "speed",
+            "output": "5",
+            "generated_ids": [
+              20,
+              151645
+            ]
+          },
+          {
+            "id": "energy_unit",
+            "output": "Joule",
+            "generated_ids": [
+              41,
+              283,
+              273,
+              151645
+            ]
+          },
+          {
+            "id": "charge",
+            "output": "negative",
+            "generated_ids": [
+              42224,
+              151645
+            ]
+          }
+        ]
+      },
+      "gpu_benchmark": {
+        "runtime": "llama.cpp llama-bench",
+        "physical_gpu": "1",
+        "gpu_info": "NVIDIA RTX A6000",
+        "repetitions": 3,
+        "prompt_tokens": 128,
+        "generation_tokens": 64,
+        "threads": 4,
+        "flash_attention": "on",
+        "gpu_layers": 99,
+        "prompt_tokens_per_second": 5973.687294,
+        "generation_tokens_per_second": 130.49722,
+        "generation_tokens_per_second_stddev": 0.129907,
+        "raw_rows": [
+          {
+            "build_commit": "8ca5a80",
+            "build_number": 1,
+            "cpu_info": "AMD Ryzen Threadripper PRO 3975WX 32-Cores",
+            "gpu_info": "NVIDIA RTX A6000",
+            "backends": "CUDA",
+            "model_filename": "artifacts/gguf/Qwen3-4B-Q8_0.gguf",
+            "model_type": "qwen3 4B Q8_0",
+            "model_size": 4274448384,
+            "model_n_params": 4022468096,
+            "n_batch": 2048,
+            "n_ubatch": 512,
+            "n_threads": 4,
+            "cpu_mask": "0x0",
+            "cpu_strict": false,
+            "poll": 50,
+            "type_k": "f16",
+            "type_v": "f16",
+            "n_gpu_layers": 99,
+            "n_cpu_moe": 0,
+            "split_mode": "layer",
+            "main_gpu": 0,
+            "no_kv_offload": false,
+            "flash_attn": 1,
+            "devices": "auto",
+            "tensor_split": "0.00",
+            "tensor_buft_overrides": "none",
+            "load_mode": "auto",
+            "lazy_mode": "auto",
+            "embeddings": false,
+            "no_op_offload": 0,
+            "no_host": false,
+            "repack": true,
+            "fit_target": 0,
+            "fit_min_ctx": 0,
+            "n_prompt": 128,
+            "n_gen": 0,
+            "n_depth": 0,
+            "test_time": "2026-11-12T19:30:33Z",
+            "avg_ns": 21593358,
+            "stddev_ns": 2388168,
+            "avg_ts": 5973.687294,
+            "stddev_ts": 623.189262,
+            "samples_ns": [
+              24336142,
+              19974622,
+              20469311
+            ],
+            "samples_ts": [
+              5259.67,
+              6408.13,
+              6253.26
+            ]
+          },
+          {
+            "build_commit": "8ca5a80",
+            "build_number": 1,
+            "cpu_info": "AMD Ryzen Threadripper PRO 3975WX 32-Cores",
+            "gpu_info": "NVIDIA RTX A6000",
+            "backends": "CUDA",
+            "model_filename": "artifacts/gguf/Qwen3-4B-Q8_0.gguf",
+            "model_type": "qwen3 4B Q8_0",
+            "model_size": 4274448384,
+            "model_n_params": 4022468096,
+            "n_batch": 2048,
+            "n_ubatch": 512,
+            "n_threads": 4,
+            "cpu_mask": "0x0",
+            "cpu_strict": false,
+            "poll": 50,
+            "type_k": "f16",
+            "type_v": "f16",
+            "n_gpu_layers": 99,
+            "n_cpu_moe": 0,
+            "split_mode": "layer",
+            "main_gpu": 0,
+            "no_kv_offload": false,
+            "flash_attn": 1,
+            "devices": "auto",
+            "tensor_split": "0.00",
+            "tensor_buft_overrides": "none",
+            "load_mode": "auto",
+            "lazy_mode": "auto",
+            "embeddings": false,
+            "no_op_offload": 0,
+            "no_host": false,
+            "repack": true,
+            "fit_target": 0,
+            "fit_min_ctx": 0,
+            "n_prompt": 0,
+            "n_gen": 64,
+            "n_depth": 0,
+            "test_time": "2026-11-12T19:30:33Z",
+            "avg_ns": 490432226,
+            "stddev_ns": 489025,
+            "avg_ts": 130.49722,
+            "stddev_ts": 0.129907,
+            "samples_ns": [
+              490835358,
+              490571658,
+              489889664
+            ],
+            "samples_ts": [
+              130.39,
+              130.46,
+              130.642
+            ]
+          }
+        ]
+      },
+      "perplexity": {
+        "value": 2.6282,
+        "tool_reported_uncertainty": 0.17453,
+        "runtime": "llama.cpp llama-perplexity CUDA",
+        "context": 512,
+        "max_chunks": 4,
+        "batch_size": 512,
+        "microbatch_size": 512,
+        "threads": 4,
+        "flash_attention": "on",
+        "data": {
+          "source": "openai/gsm8k",
+          "revision": "740312add88f781978c0658806c59bc2815b9866",
+          "ids": [
+            "gsm8k-main-test-00000",
+            "gsm8k-main-test-00001",
+            "gsm8k-main-test-00002",
+            "gsm8k-main-test-00003",
+            "gsm8k-main-test-00004",
+            "gsm8k-main-test-00005",
+            "gsm8k-main-test-00006",
+            "gsm8k-main-test-00007",
+            "gsm8k-main-test-00008",
+            "gsm8k-main-test-00009",
+            "gsm8k-main-test-00010",
+            "gsm8k-main-test-00011",
+            "gsm8k-main-test-00012",
+            "gsm8k-main-test-00013",
+            "gsm8k-main-test-00014",
+            "gsm8k-main-test-00015",
+            "gsm8k-main-test-00016",
+            "gsm8k-main-test-00017",
+            "gsm8k-main-test-00018",
+            "gsm8k-main-test-00019",
+            "gsm8k-main-test-00020",
+            "gsm8k-main-test-00021",
+            "gsm8k-main-test-00022",
+            "gsm8k-main-test-00023",
+            "gsm8k-main-test-00024",
+            "gsm8k-main-test-00025",
+            "gsm8k-main-test-00026",
+            "gsm8k-main-test-00027",
+            "gsm8k-main-test-00028",
+            "gsm8k-main-test-00029",
+            "gsm8k-main-test-00030",
+            "gsm8k-main-test-00031"
+          ],
+          "text_sha256": "048219bde1975ccd232dc5182c04fc8622db0b92a8554436c2632918f113f4cc",
+          "scope": "First32source-test question/solution pairs, same text for all GGUF precisions; pipeline comparison, not general capability benchmark"
+        },
+        "caveat": "Tiny fixed text comparison; tool-reported uncertainty is not labelled a 95% confidence interval. No general capability claim."
+      }
+    },
+    {
+      "format": "Q4_K_M",
+      "path": "artifacts/gguf/Qwen3-4B-Q4_K_M.gguf",
+      "bytes": 2497280992,
+      "gib": 2.325774163007736,
+      "sha256": "f7a3480949df3ae406a9661aae19e34b6c6ae344e7b6b8edd38b6185b786f339",
+      "reload_runtime": "llama.cpp CPU CLI",
+      "smoke_prompt": "What is 17 + 25? Reply with only the integer.",
+      "smoke_answer": "42",
+      "log": "outputs/q4-reload-smoke.txt",
+      "cpu_prompt_comparison": {
+        "correct": 8,
+        "total": 8,
+        "all_input_tokens_match_hf": true,
+        "runtime": "llama.cpp CPU raw /completion, four threads",
+        "server_cleaned_up": true,
+        "fixture_sha256": "9fa535d86b730793ff233c494fdc84b46d0e168ac0a621dfaaf8fa4e12c01ea1",
+        "outputs": [
+          {
+            "id": "arithmetic",
+            "output": "42",
+            "generated_ids": [
+              19,
+              17,
+              151645
+            ]
+          },
+          {
+            "id": "fraction",
+            "output": "20",
+            "generated_ids": [
+              17,
+              15,
+              151645
+            ]
+          },
+          {
+            "id": "capital",
+            "output": "Paris",
+            "generated_ids": [
+              59604,
+              151645
+            ]
+          },
+          {
+            "id": "sequence",
+            "output": "32",
+            "generated_ids": [
+              18,
+              17,
+              151645
+            ]
+          },
+          {
+            "id": "force",
+            "output": "6",
+            "generated_ids": [
+              21,
+              151645
+            ]
+          },
+          {
+            "id": "speed",
+            "output": "5",
+            "generated_ids": [
+              20,
+              151645
+            ]
+          },
+          {
+            "id": "energy_unit",
+            "output": "Joule",
+            "generated_ids": [
+              41,
+              283,
+              273,
+              151645
+            ]
+          },
+          {
+            "id": "charge",
+            "output": "negative",
+            "generated_ids": [
+              42224,
+              151645
+            ]
+          }
+        ]
+      },
+      "gpu_benchmark": {
+        "runtime": "llama.cpp llama-bench",
+        "physical_gpu": "1",
+        "gpu_info": "NVIDIA RTX A6000",
+        "repetitions": 3,
+        "prompt_tokens": 128,
+        "generation_tokens": 64,
+        "threads": 4,
+        "flash_attention": "on",
+        "gpu_layers": 99,
+        "prompt_tokens_per_second": 5585.524907,
+        "generation_tokens_per_second": 186.039778,
+        "generation_tokens_per_second_stddev": 0.745381,
+        "raw_rows": [
+          {
+            "build_commit": "8ca5a80",
+            "build_number": 1,
+            "cpu_info": "AMD Ryzen Threadripper PRO 3975WX 32-Cores",
+            "gpu_info": "NVIDIA RTX A6000",
+            "backends": "CUDA",
+            "model_filename": "artifacts/gguf/Qwen3-4B-Q4_K_M.gguf",
+            "model_type": "qwen3 4B Q4_K - Medium",
+            "model_size": 2491323904,
+            "model_n_params": 4022468096,
+            "n_batch": 2048,
+            "n_ubatch": 512,
+            "n_threads": 4,
+            "cpu_mask": "0x0",
+            "cpu_strict": false,
+            "poll": 50,
+            "type_k": "f16",
+            "type_v": "f16",
+            "n_gpu_layers": 99,
+            "n_cpu_moe": 0,
+            "split_mode": "layer",
+            "main_gpu": 0,
+            "no_kv_offload": false,
+            "flash_attn": 1,
+            "devices": "auto",
+            "tensor_split": "0.00",
+            "tensor_buft_overrides": "none",
+            "load_mode": "auto",
+            "lazy_mode": "auto",
+            "embeddings": false,
+            "no_op_offload": 0,
+            "no_host": false,
+            "repack": true,
+            "fit_target": 0,
+            "fit_min_ctx": 0,
+            "n_prompt": 128,
+            "n_gen": 0,
+            "n_depth": 0,
+            "test_time": "2026-11-12T19:30:39Z",
+            "avg_ns": 23089261,
+            "stddev_ns": 2522717,
+            "avg_ts": 5585.524907,
+            "stddev_ts": 574.175288,
+            "samples_ns": [
+              26001329,
+              21569987,
+              21696467
+            ],
+            "samples_ts": [
+              4922.83,
+              5934.17,
+              5899.58
+            ]
+          },
+          {
+            "build_commit": "8ca5a80",
+            "build_number": 1,
+            "cpu_info": "AMD Ryzen Threadripper PRO 3975WX 32-Cores",
+            "gpu_info": "NVIDIA RTX A6000",
+            "backends": "CUDA",
+            "model_filename": "artifacts/gguf/Qwen3-4B-Q4_K_M.gguf",
+            "model_type": "qwen3 4B Q4_K - Medium",
+            "model_size": 2491323904,
+            "model_n_params": 4022468096,
+            "n_batch": 2048,
+            "n_ubatch": 512,
+            "n_threads": 4,
+            "cpu_mask": "0x0",
+            "cpu_strict": false,
+            "poll": 50,
+            "type_k": "f16",
+            "type_v": "f16",
+            "n_gpu_layers": 99,
+            "n_cpu_moe": 0,
+            "split_mode": "layer",
+            "main_gpu": 0,
+            "no_kv_offload": false,
+            "flash_attn": 1,
+            "devices": "auto",
+            "tensor_split": "0.00",
+            "tensor_buft_overrides": "none",
+            "load_mode": "auto",
+            "lazy_mode": "auto",
+            "embeddings": false,
+            "no_op_offload": 0,
+            "no_host": false,
+            "repack": true,
+            "fit_target": 0,
+            "fit_min_ctx": 0,
+            "n_prompt": 0,
+            "n_gen": 64,
+            "n_depth": 0,
+            "test_time": "2026-11-12T19:30:39Z",
+            "avg_ns": 344016133,
+            "stddev_ns": 1378486,
+            "avg_ts": 186.039778,
+            "stddev_ts": 0.745381,
+            "samples_ns": [
+              344007938,
+              342641888,
+              345398574
+            ],
+            "samples_ts": [
+              186.042,
+              186.784,
+              185.293
+            ]
+          }
+        ]
+      },
+      "perplexity": {
+        "value": 2.6608,
+        "tool_reported_uncertainty": 0.17679,
+        "runtime": "llama.cpp llama-perplexity CUDA",
+        "context": 512,
+        "max_chunks": 4,
+        "batch_size": 512,
+        "microbatch_size": 512,
+        "threads": 4,
+        "flash_attention": "on",
+        "data": {
+          "source": "openai/gsm8k",
+          "revision": "740312add88f781978c0658806c59bc2815b9866",
+          "ids": [
+            "gsm8k-main-test-00000",
+            "gsm8k-main-test-00001",
+            "gsm8k-main-test-00002",
+            "gsm8k-main-test-00003",
+            "gsm8k-main-test-00004",
+            "gsm8k-main-test-00005",
+            "gsm8k-main-test-00006",
+            "gsm8k-main-test-00007",
+            "gsm8k-main-test-00008",
+            "gsm8k-main-test-00009",
+            "gsm8k-main-test-00010",
+            "gsm8k-main-test-00011",
+            "gsm8k-main-test-00012",
+            "gsm8k-main-test-00013",
+            "gsm8k-main-test-00014",
+            "gsm8k-main-test-00015",
+            "gsm8k-main-test-00016",
+            "gsm8k-main-test-00017",
+            "gsm8k-main-test-00018",
+            "gsm8k-main-test-00019",
+            "gsm8k-main-test-00020",
+            "gsm8k-main-test-00021",
+            "gsm8k-main-test-00022",
+            "gsm8k-main-test-00023",
+            "gsm8k-main-test-00024",
+            "gsm8k-main-test-00025",
+            "gsm8k-main-test-00026",
+            "gsm8k-main-test-00027",
+            "gsm8k-main-test-00028",
+            "gsm8k-main-test-00029",
+            "gsm8k-main-test-00030",
+            "gsm8k-main-test-00031"
+          ],
+          "text_sha256": "048219bde1975ccd232dc5182c04fc8622db0b92a8554436c2632918f113f4cc",
+          "scope": "First32source-test question/solution pairs, same text for all GGUF precisions; pipeline comparison, not general capability benchmark"
+        },
+        "caveat": "Tiny fixed text comparison; tool-reported uncertainty is not labelled a 95% confidence interval. No general capability claim."
+      }
+    }
+  ]
+}

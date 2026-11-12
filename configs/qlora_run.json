@@ -1,0 +1,43 @@
+{
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "hf_home": ".hf",
+  "gpu": "1",
+  "dtype": "bfloat16",
+  "enable_thinking": false,
+  "seed": 42,
+  "max_length": 2048,
+  "train_rows": 1024,
+  "validation_rows": 256,
+  "final_test_rows": 128,
+  "reload_rows": 16,
+  "smoke_results": "results/initial_qlora_smoke.json",
+  "retention_fixture": "data/mmlu/retention.json",
+  "generation_batch_size": 8,
+  "eval_max_new_tokens": 512,
+  "retention_max_new_tokens": 8,
+  "candidate_steps": [32, 64],
+  "splits": {
+    "train": "data/gsm8k/train.jsonl",
+    "validation": "data/gsm8k/validation.jsonl",
+    "test": "data/gsm8k/test.jsonl"
+  },
+  "dataset_revision": "740312add88f781978c0658806c59bc2815b9866",
+  "lora": {"r": 8, "lora_alpha": 16, "lora_dropout": 0.05, "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"]},
+  "training": {
+    "max_steps": 64,
+    "num_train_epochs": 1.0,
+    "learning_rate": 0.0002,
+    "warmup_ratio": 0.05,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "per_device_eval_batch_size": 2,
+    "logging_steps": 4,
+    "eval_strategy": "steps",
+    "eval_steps": 16,
+    "save_strategy": "steps",
+    "save_steps": 32,
+    "save_total_limit": 2,
+    "load_best_model_at_end": false
+  }
+}

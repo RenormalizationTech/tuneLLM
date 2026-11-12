@@ -1,0 +1,201 @@
+{
+  "purpose": "Numerical batching validation on eight fixed GSM8K validation rows, not final-test evaluation",
+  "model_id": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "selected_validation_ids": [
+    "gsm8k-main-train-02425",
+    "gsm8k-main-train-03341",
+    "gsm8k-main-train-06656",
+    "gsm8k-main-train-00035",
+    "gsm8k-main-train-01914",
+    "gsm8k-main-train-06456",
+    "gsm8k-main-train-03180",
+    "gsm8k-main-train-06156"
+  ],
+  "representation": {
+    "quant_type": "nf4",
+    "double_quant": true,
+    "compute_dtype": "bfloat16",
+    "nonquantized_base_dtype": "float32 (prepare_model_for_kbit_training)",
+    "attention": "sdpa"
+  },
+  "token_mismatch_rows": 2,
+  "scoring_mismatch_rows": 0,
+  "details": [
+    {
+      "id": "gsm8k-main-train-02425",
+      "exact_tokens_match": true,
+      "first_token_mismatch_index": null,
+      "scoring_matches": true,
+      "batch1_scores": {
+        "id": "gsm8k-main-train-02425",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      },
+      "batch8_scores": {
+        "id": "gsm8k-main-train-02425",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      }
+    },
+    {
+      "id": "gsm8k-main-train-03341",
+      "exact_tokens_match": true,
+      "first_token_mismatch_index": null,
+      "scoring_matches": true,
+      "batch1_scores": {
+        "id": "gsm8k-main-train-03341",
+        "strict_correct": false,
+        "fallback_correct": false,
+        "format_compliant": true,
+        "hit_token_limit": false
+      },
+      "batch8_scores": {
+        "id": "gsm8k-main-train-03341",
+        "strict_correct": false,
+        "fallback_correct": false,
+        "format_compliant": true,
+        "hit_token_limit": false
+      }
+    },
+    {
+      "id": "gsm8k-main-train-06656",
+      "exact_tokens_match": false,
+      "first_token_mismatch_index": 6,
+      "scoring_matches": true,
+      "batch1_scores": {
+        "id": "gsm8k-main-train-06656",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      },
+      "batch8_scores": {
+        "id": "gsm8k-main-train-06656",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      }
+    },
+    {
+      "id": "gsm8k-main-train-00035",
+      "exact_tokens_match": true,
+      "first_token_mismatch_index": null,
+      "scoring_matches": true,
+      "batch1_scores": {
+        "id": "gsm8k-main-train-00035",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      },
+      "batch8_scores": {
+        "id": "gsm8k-main-train-00035",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      }
+    },
+    {
+      "id": "gsm8k-main-train-01914",
+      "exact_tokens_match": true,
+      "first_token_mismatch_index": null,
+      "scoring_matches": true,
+      "batch1_scores": {
+        "id": "gsm8k-main-train-01914",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      },
+      "batch8_scores": {
+        "id": "gsm8k-main-train-01914",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      }
+    },
+    {
+      "id": "gsm8k-main-train-06456",
+      "exact_tokens_match": true,
+      "first_token_mismatch_index": null,
+      "scoring_matches": true,
+      "batch1_scores": {
+        "id": "gsm8k-main-train-06456",
+        "strict_correct": false,
+        "fallback_correct": true,
+        "format_compliant": false,
+        "hit_token_limit": false
+      },
+      "batch8_scores": {
+        "id": "gsm8k-main-train-06456",
+        "strict_correct": false,
+        "fallback_correct": true,
+        "format_compliant": false,
+        "hit_token_limit": false
+      }
+    },
+    {
+      "id": "gsm8k-main-train-03180",
+      "exact_tokens_match": false,
+      "first_token_mismatch_index": 33,
+      "scoring_matches": true,
+      "batch1_scores": {
+        "id": "gsm8k-main-train-03180",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      },
+      "batch8_scores": {
+        "id": "gsm8k-main-train-03180",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      }
+    },
+    {
+      "id": "gsm8k-main-train-06156",
+      "exact_tokens_match": true,
+      "first_token_mismatch_index": null,
+      "scoring_matches": true,
+      "batch1_scores": {
+        "id": "gsm8k-main-train-06156",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      },
+      "batch8_scores": {
+        "id": "gsm8k-main-train-06156",
+        "strict_correct": true,
+        "fallback_correct": true,
+        "format_compliant": true,
+        "hit_token_limit": false
+      }
+    }
+  ],
+  "timing": {
+    "1": {
+      "generation_wall_seconds": 130.41091721039265,
+      "pipeline_wall_seconds": 130.44735586922616,
+      "generated_tokens_per_generation_wall_second": 12.291915694557007,
+      "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+    },
+    "8": {
+      "generation_wall_seconds": 35.42911489587277,
+      "pipeline_wall_seconds": 35.43396974168718,
+      "generated_tokens_per_generation_wall_second": 44.65254084527783,
+      "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+    }
+  },
+  "decision": "Use fixed batch8 membership in realrun base/adapter comparisons; acknowledge token-level batching sensitivity. Timing is diagnostic, no warmup, batch1 first."
+}
