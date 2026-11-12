@@ -25,6 +25,9 @@ complete the initial project.
 - GitHub repository: created; this working directory is the project repository.
 - Hugging Face organization: `RenormalizationTech` (confirmed by user).
 - Hugging Face artifact repositories: not created; no artifacts uploaded.
+- Base GGUF and experimental adapter release bundles are prepared locally.
+- Bounded QLoRA completed: better answer format, lower math accuracy; see release cards.
+- Publication needs Hugging Face login and repository visibility choice.
 - Environment verified: Python 3.10, PyTorch 2.6.0+cu124, both A6000 GPUs visible.
 - Small-model BF16 baseline: two successful Qwen3-4B runs with identical generated tokens;
   7/8 on the basic smoke fixture. See `docs/execution.md` for evidence and limitations.
@@ -841,9 +844,9 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   [x] Prepare first licensed dataset: GSM8K; physics specialization deferred
 -   [x] Establish held-out smoke evaluation (16 validation/test rows each)
 -   [x] Run two-step QLoRA smoke and verify fresh-base adapter reload
--   [ ] Run a larger bounded training experiment
--   [ ] Benchmark domain improvement
--   [ ] Check general capability retention
+-   [x] Run 1,024-example/64-step experiment; selected step64 by validation loss
+-   [x] Evaluate domain accuracy: observed 121/128 to 101/128 math regression
+-   [x] Run small retention probes at 8/64 output tokens; no general equivalence claim
 -   [ ] Publish selected adapter
 
 ## M3 - Refusal Baseline

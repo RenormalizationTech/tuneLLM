@@ -31,5 +31,32 @@
     "bytes": 58542,
     "sha256": "c418776d175e98e3745ade70ae2f7c2f28ad6923afb9a526b3bc8e676db53d41",
     "recipe": "git archive --format=zip dab1dae"
-  }
+  },
+  "metadata_files": [
+    {
+      "file": "README.md",
+      "bytes": 4412,
+      "sha256": "f2a9d1434fba5e25e823e78a7ce4561220335de539f500b99ca47140d3fb0ece"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "file": "evaluation.json",
+      "bytes": 25065,
+      "sha256": "1836d8a2a9aab2ef06e80de966d020d72bda34080408fbe4bb0e7920989c95df"
+    },
+    {
+      "file": "REPRODUCE.md",
+      "bytes": 2045,
+      "sha256": "77eb266e6ac4e1f85d0e3c010c8f48d227992ca83a229685e4d7a690b97db0db"
+    },
+    {
+      "file": "environment.lock.txt",
+      "bytes": 1395,
+      "sha256": "5f56da2277bf8eeb14a11c4fb53a73bffba5df6452d24c5c964950d6f31105de"
+    }
+  ]
 }

@@ -222,3 +222,99 @@ The original run source hashes remain recorded rather than being relabelled.
 Before a larger evaluation, use a small fixed generation batch to reduce cost,
 and check batch-size effects. Left-padding, attention masks, trailing-pad removal
 and fixed batch membership must be recorded; training remains right-padded.
+
+## Batching and bounded run
+
+The batch-size diagnostic completed at `outputs/batching-validation-01/` on
+eight fixed validation rows. Batch 1 took 130.41 seconds of generation wall time;
+batch 8 took 35.43 seconds. Two rows had different token sequences, but all eight
+had identical strict/fallback/format/truncation scores. Both scored 6/8 strict
+and 7/8 fallback. These are diagnostic timings with no warmup, batch 1 first;
+they are not directly comparable to llama-bench. Compact results are in
+`results/batching_validation.json`.
+
+The full training split exposed a JSONL-reader bug: Python text `splitlines()`
+split two valid U+2028 characters inside JSON strings into extra records. Original
+file hashes were unchanged. Reading physical LF-delimited records fixed it;
+regression tests cover Unicode separators and EOS versus padding at generation
+limits. The retry passed before the larger GPU run.
+
+The next experiment is specified in `docs/real_run_protocol.md` and the exact
+ID/hash manifest `results/qlora_real_01_protocol.json`. Both source and protocol
+were committed as `663bae2` before execution. Preflight selected 1,024 training,
+256 validation and 128 final-test rows; it excluded the 16 prior smoke-test rows
+from the final test set. All 7,217 available training rows fit the 2048-token
+budget, so no overlength rows were excluded. The retention fixture has 128 MMLU
+questions across 52 non-math subjects. Warmup resolves to four optimizer steps.
+
+```bash
+.venv/bin/python -m scripts.prepare_retention
+.venv/bin/python -m scripts.validate_batching --gpu 1 --output outputs/batching-validation-01
+.venv/bin/python -m scripts.train_qlora_run --output outputs/qlora-real-01
+# Commit an exact copy of the generated protocol together with the implementation.
+.venv/bin/python -u -m scripts.train_qlora_run \
+  --execute outputs/qlora-real-01 --protocol results/qlora_real_01_protocol.json
+```
+
+Execution uses the frozen source/config/input snapshot and verifies the committed
+protocol before allocating the model. Checkpoint choice is by validation loss at
+steps 32/64 only. Final math/retention comparisons and adapter reload follow that
+choice. See the protocol for scope and statistical limits. The run completed all 64 steps and passed its scoped reload checks. The final
+results and interpretation follow below.
+
+The base GGUF payload is prepared under
+`artifacts/releases/Qwen3-4B-tuneLLM-GGUF/`, including the upstream license,
+model card, measurements, file manifest and a source archive. See `releases/`
+for reviewable release files and authentication instructions. No upload has
+occurred; Hugging Face login and repository visibility remain publication inputs.
+
+## Bounded-run outcome
+
+Step 64 was selected by the fixed validation-only rule: 0.528 validation loss
+versus 0.547 at step 32. The baseline validation loss was 2.690. Training, including
+scheduled validation and checkpoint saves, took 370.94 seconds. Peak PyTorch
+allocation over that interval was 5.81 GiB, excluding other processes and
+non-PyTorch CUDA allocations.
+
+| Fixed 128-row measure | NF4 base | Adapter |
+| --- | ---: | ---: |
+| GSM8K numeric fallback correct | 121 | 101 |
+| GSM8K strict correct | 101 | 101 |
+| Required answer-format compliance | 107 | 128 |
+| Math responses at the 512-token cap | 2 | 0 |
+| Mean math emitted tokens including EOS | 241.9 | 86.1 |
+| Primary MMLU fallback correct (8 tokens) | 83 | 76 |
+| MMLU at the 8-token cap | 58 | 27 |
+| Secondary MMLU fallback correct (64 tokens) | 83 | 83 |
+| MMLU at the 64-token cap | 10 | 12 |
+
+The math primary comparison had 2 fixed and 22 broken answers, a 15.625-point
+accuracy decline (exploratory exact McNemar p=0.000035882). Claude checked the
+broken rows and the base's fallback-only credits: the regression is numeric,
+not a strict-format grading artifact. The strict score stayed tied because 14
+strict fixes offset 14 strict losses. Lower reference loss and cleaner, shorter
+answers did not imply better task accuracy.
+
+The secondary retention diagnostic was fixed after seeing base truncation,
+before inspecting adapter retention scores; it did not change the primary
+endpoint or checkpoint. All seven recovered adapter answers lacked a letter
+within eight tokens, and no eight-token-correct answer changed. At 64 tokens
+the base/adapter comparison had 4 fixed and 4 broken answers (exploratory p=1).
+Equal observed totals do not establish general retention or equivalence; the
+first-letter fallback and remaining truncations still limit this probe.
+
+Adapter tensors matched bit-for-bit after fresh-base reload. Generated tokens
+matched on the first 16 final GSM8K questions and all 128 retention questions
+with identical batch membership. The other 112 math generations were not replayed.
+
+Compact results: `results/qlora_real_01.json` and
+`results/retention_cap64_01.json`. The workflow has 30 passing tests. Source,
+protocol, analysis and diagnostic commits are recorded in the release provenance.
+The raw runs remain unchanged in ignored output folders.
+
+Both local release payloads are prepared with cards, licenses, hashes, measured
+limitations, source archives, an environment lock and reproduction instructions.
+The adapter card leads with the observed math regression. Publication copies
+replace machine paths and omit Git author history; original hashes and the
+transformation are recorded separately. No upload has happened. The remaining
+external inputs are Hugging Face authentication and repository visibility.

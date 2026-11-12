@@ -18,10 +18,21 @@ files for the upload client.
 
 ## QLoRA adapter
 
-The two-step smoke adapter is a pipeline artifact. The bounded 1,024-example
-experiment will produce a separate candidate after validation-only checkpoint
-selection, final math/retention evaluation and a fresh-base reload check. Its
-card and payload will be recorded here when those results exist.
+The bounded 1,024-example experiment completed 64 steps and selected step 64 by
+validation loss. Its final math fallback accuracy regressed from 121/128 to
+101/128, while required-format compliance improved from 107/128 to 128/128.
+It is an experimental learning artifact with that regression prominent in its card.
+
+- Target: `RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA`.
+- Payload: `artifacts/releases/Qwen3-4B-tuneLLM-GSM8K-QLoRA/`.
+- Adapter tensors matched exactly after reload. Generated tokens matched on the
+  first 16 final math questions and all 128 retention questions.
+- The primary eight-token retention scores were 83/128 to 76/128; the single
+  secondary 64-token diagnostic scored 83/128 for both. The output-budget and
+  parser limits prevent a general-retention claim.
+- Both payloads include an environment lock and reproduction guide. Publication
+  metadata copies replace local paths; raw local records remain unchanged. Source
+  archives omit Git author history.
 
 ## Authentication and publication
 

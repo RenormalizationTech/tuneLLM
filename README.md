@@ -32,6 +32,15 @@ generated tokens. Results are in
 [results/initial_qlora_smoke.json](results/initial_qlora_smoke.json). This validates
 the workflow; it does not establish a useful fine-tuned model.
 
+A bounded run on 1,024 GSM8K examples completed 64 steps with a frozen,
+committed protocol. The selected adapter improved answer-format compliance
+from 107/128 to 128/128 but reduced numeric accuracy from 121/128 to 101/128.
+It is documented as an experimental learning result. See
+[the full result](results/qlora_real_01.json),
+[the fixed protocol](docs/real_run_protocol.md), and
+[release candidates](releases/README.md). Local payloads are prepared; Hugging
+Face login and visibility choice are still needed for upload.
+
 After installing the environment described in the execution record:
 
 ```bash
