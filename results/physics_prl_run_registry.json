@@ -168,11 +168,45 @@
           "passed": false
         }
       }
+    },
+    {
+      "id": "physics-r8-lr5e5",
+      "rank": 8,
+      "learning_rate": 5e-05,
+      "seed": 42,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "loss_tokens": 1567140,
+      "training_wall_seconds": 1331.1947862091474,
+      "peak_pytorch_allocated_bytes": 6746892288,
+      "replay": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "nominated_epoch": 3,
+      "nominated_checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r8-lr5e5/checkpoints/checkpoint-207",
+      "nominated_development_nll": 1.9786641041537358,
+      "development_nll_difference_vs_base": {
+        "candidate_minus_reference_nll": -0.2481483953825292,
+        "ci95": [
+          -0.26109693518595173,
+          -0.23542045458092908
+        ],
+        "includes_zero": false,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 10,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      },
+      "screen_status": "pending; rank comparison not selected"
     }
   ],
   "learning_rate_selection": "results/physics_lr_selection.json",
   "pending_runs": [
-    "physics-r8-lr5e5",
     "physics-r128-lr5e5"
   ]
 }

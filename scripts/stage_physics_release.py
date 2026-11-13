@@ -302,6 +302,13 @@ def card_text(cfg, budget, final, selection, fallback, base_revision, quality=No
                 key = "fallback_correct" if task == "gsm8k" else "prompt_strict_correct" if task == "ifeval" else "correct"
                 score = f"{values[key]}/{values['total']}"
             lines.append(f"| {name} | {task} | {score} |")
+    paper_rows = [(name, condition["paper_text"]) for name, condition in final["conditions"].items()
+                  if condition.get("paper_text")]
+    paper_rows += list(final.get("paper_only_conditions", {}).items())
+    if paper_rows:
+        lines += ["", "| Condition | Held-out paper NLL | Perplexity |", "| --- | ---: | ---: |"]
+        for name, values in paper_rows:
+            lines.append(f"| {name} | {values['token_weighted_nll']:.6f} | {values['perplexity']:.6f} |")
     lines += ["", "Scores include all reported conditions and any math regressions or BF16-control differences; see `evaluation.json` and `selection.json` for paired results, gate failures, paper NLL, and limits. A BF16 control uses BF16 frozen weights; NF4 uses prepared FP32 nonquantized modules. This compares workflow representations.",
               "MMLU uses custom local zero-shot likelihood subsets, GSM8K uses numeric fallback, and IFEval uses its pinned official strict scorer. These are not full standard leaderboard scores. Lower paper NLL measures fit, not writing quality or benchmark capability.", "",
               "## Data, attribution and reproduction", "",
@@ -312,7 +319,9 @@ def card_text(cfg, budget, final, selection, fallback, base_revision, quality=No
               "## Development gate outcomes", ""]
     for candidate in (lr_selection or {}).get("candidates", []) + selection["candidates"]:
         failed = [name for name, check in candidate["gate"].get("checks", {}).items() if check.get("passed") is False]
-        lines.append(f"- {candidate['id']}: {'passed' if candidate['gate']['passed'] else 'failed'}; failed checks: {', '.join(failed) or 'none recorded'}.")
+        math_drop = candidate["gate"].get("checks", {}).get("gsm8k_correct_drop", {}).get("value")
+        math_note = f" GSM8K net correct-count drop vs base: {math_drop}." if math_drop is not None else ""
+        lines.append(f"- {candidate['id']}: {'passed' if candidate['gate']['passed'] else 'failed'}; failed checks: {', '.join(failed) or 'none recorded'}.{math_note}")
     lines += ["", "## Reported limitations", ""] + ["- " + value for value in final.get("limits", [])] + [""]
     if quality:
         lines += [f"- Frozen corpus QA records {quality['unicode_replacement_characters']} replacement characters across {len(quality['papers_with_replacement_characters'])} papers. The proper-name review and unchanged split hashes are in `corpus_quality.json`; prepared scientific data remain unchanged.", ""]

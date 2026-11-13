@@ -22,6 +22,30 @@ quantization metadata, logits and deterministic generation. Record preparation
 of unquantized parameters (our PEFT preparation casts them to FP32). Every adapter
 must identify the exact saved base and its quantization settings.
 
+```mermaid
+flowchart TD
+    Original[Original pinned BF16 model] --> BF16[BF16 reference]
+    Original --> GGUFref[BF16 GGUF reference]
+    Original --> Q8[GGUF Q8_0]
+    Original --> Q4[GGUF Q4_K_M]
+    Original --> NF4[Save and verify standalone NF4 base]
+    NF4 --> NF4ref[Unadapted NF4 reference]
+    NF4 --> Pilots[QLoRA LR and rank experiments]
+    Pilots --> Choice[Choose using development data only]
+    Choice --> Repeat[Repeat selected configuration with another seed]
+    BF16 --> Control[BF16 LoRA control at selected configuration]
+    Choice --> Control
+    Choice --> Final[Fixed final evaluation and blinded writing review]
+    Repeat --> Final
+    Control --> Final
+    NF4ref --> Final
+    BF16 --> Final
+    GGUFref --> Final
+    Q8 --> Final
+    Q4 --> Final
+    Final --> Release[Private experimental adapter and reproducible report]
+```
+
 ## Condensed-matter scientific-writing pilot
 
 Collect approximately 100 PRL condensed-matter **theory** papers, balancing topics
