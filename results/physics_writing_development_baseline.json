@@ -1,0 +1,127 @@
+{
+  "status": "completed",
+  "run": "outputs/physics-writing-nf4-fewshot-dev",
+  "fixture_sha256": "8bb91146a770a43c0174e0b566ceca2b7af50cf835831ca0a6136a362e8e5e6e",
+  "summary": {
+    "writing": {
+      "total": 30,
+      "nonempty": 30,
+      "automatic_fidelity_flags": 1,
+      "human_ratings": "pending",
+      "quality_improvement_established": false
+    }
+  },
+  "truncated": 0,
+  "wall_seconds": 288.37389291310683,
+  "generation_diagnostics": {
+    "groups": [
+      {
+        "task": "writing/title",
+        "rows": 10,
+        "max_new_tokens": 48,
+        "pipeline_wall_seconds": 16.70051230210811,
+        "returned_generated_token_ids": 207,
+        "hf_generation_timing": {
+          "generation_wall_seconds": 16.576545380055904,
+          "pipeline_wall_seconds": 16.69795497599989,
+          "generated_tokens_per_generation_wall_second": 12.487523501069914,
+          "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+        }
+      },
+      {
+        "task": "writing/abstract",
+        "rows": 10,
+        "max_new_tokens": 256,
+        "pipeline_wall_seconds": 77.7415580120869,
+        "returned_generated_token_ids": 1922,
+        "hf_generation_timing": {
+          "generation_wall_seconds": 77.65961160324514,
+          "pipeline_wall_seconds": 77.73883945075795,
+          "generated_tokens_per_generation_wall_second": 24.749029261429964,
+          "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+        }
+      },
+      {
+        "task": "writing/introduction",
+        "rows": 10,
+        "max_new_tokens": 768,
+        "pipeline_wall_seconds": 189.95608157012612,
+        "returned_generated_token_ids": 4052,
+        "hf_generation_timing": {
+          "generation_wall_seconds": 189.8381824111566,
+          "pipeline_wall_seconds": 189.95307739684358,
+          "generated_tokens_per_generation_wall_second": 21.34449428737192,
+          "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+        }
+      }
+    ],
+    "pipeline_wall_seconds": 284.3981518843211,
+    "returned_generated_token_ids": 6181,
+    "returned_token_ids_per_pipeline_wall_second": 21.733615211796877,
+    "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+  },
+  "automatic_flags": [
+    {
+      "id": "2410.09148v2::abstract",
+      "task": "abstract",
+      "nonempty": true,
+      "new_number_flags": [
+        "-20",
+        "0.2",
+        "10",
+        "3"
+      ],
+      "new_citation_flags": [],
+      "word_count": 136,
+      "automatic_fidelity_flag": true,
+      "human_scientific_fidelity": null,
+      "human_style_preference": null,
+      "note": "Flags need review; absence of flags does not establish claim fidelity or writing quality."
+    }
+  ],
+  "source_sha256": {
+    "scripts/__init__.py": "7c5a21e6c2f63dc3daf9507c1f350d27c91dc4710719e8c817fe7ac9987b92dd",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/benchmark_screen.py": "0c4d54220a4a3ae9ad7613504415052afa1ed43ee057bda2ab57a25a8d667246",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/download_model.py": "cfdab43e1ee032437525a344f384a7b7596b88fcefca623d1dcadeb0086904c0",
+    "scripts/env_check.py": "2d76f6f6225d40fa05bc830c1388b96ee45188ce51f7ee4431560504e63238b5",
+    "scripts/fetch_physics_candidates.py": "c5b69eaf6c1ada1c30acf82cb2cf05aede3c9aa61dd4d7f846a0a31ec7a056b4",
+    "scripts/gguf_eval.py": "8420a1a47f71cfd7ee6c5200367329293de6e4ffc5f18c692e7f8898dc938a81",
+    "scripts/hf_baseline.py": "d0c9715a08fa554a951679187adced85fd30c67603d1101a05bf70531b5e6945",
+    "scripts/physics_data.py": "3fe45260f6630da263fb861695a42cabd280442773d623e93cb941ab1b94d226",
+    "scripts/physics_eval.py": "80821b05f58c70f071a9a0c10aee74eb41c1fe35bfef3e1196d2b61629fde45c",
+    "scripts/physics_selection.py": "830bfc0a01c3aa820911c7591598db17c1560376c6e63c1be3af37b734ec3758",
+    "scripts/physics_train.py": "f54f079d8e6113b0c07a40fc1f8d1965f0c332e68dd87d5992a84690266ddbe0",
+    "scripts/prepare_benchmark_screen.py": "e4d21793e38f7087dcdd1c7548ce37c3da5a15d42a27432785301af3b2b4c042",
+    "scripts/prepare_gsm8k.py": "a3a21c57c8aa4870af5c32116ef89667198238e972f8fe7db8deed6f26851585",
+    "scripts/prepare_physics_corpus.py": "98ba69ebe29be92e850b0e3d6ea3d4385c33f63b55b5fd5eaf7da337d4e46ab2",
+    "scripts/prepare_retention.py": "edf9517b7b415057a647158814f9c8f8e3156b32add0755be2f5e11505d08fbb",
+    "scripts/prepare_writing_fixture.py": "60a67486b21ba4e362716a071914942aec437e766e05a22264c27e72b4976af8",
+    "scripts/retention_sensitivity.py": "0d1eb0aaee84d0a17ff3da1b5a74db734ede06b1e53c19a4dae9fbfee2dd3306",
+    "scripts/run_support.py": "e36e9d585cd14fea368ec2df388705406792153a8f9f66b199e076603051d380",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/score_retention.py": "c2848659ff387312d5a9506c7a467082637654c0f2917c23c6e22ac776e4d90d",
+    "scripts/setup_benchmark_sources.py": "8ed1e94d8b7b77f254d8dd0e34c8a7395f1bf5c07b5de2e6aea2d01153de873a",
+    "scripts/summarize_qlora_run.py": "07ec9acc62a378bbc52b40d9c4f64b93d445c96c637475ce669a56a8eea5f648",
+    "scripts/train_qlora.py": "4073448ac51a7f81440c277d71f48a1314ba58cbca57be033a43fe1f8816d905",
+    "scripts/train_qlora_run.py": "c224c7f90c78e75e6d397e5456031c75a0a7c9a610504a239b081e0c0dae1911",
+    "scripts/training_data.py": "08e5034f9a1f3b36313b7b4c205dc5e8f4c4777a28141dcdbac54d147ff54fed",
+    "scripts/validate_batching.py": "497b900680fd8f6016ca572fc99d92bd06c463d7ee888bdf60423259b43bf784",
+    "evaluation/__init__.py": "c0804d72a3db3b81280de93bc0480f88404fd858e73e22aabb5eed8c45470bb4",
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+    "configs/baseline.json": "3002ce98d58cfc848e867293ed14690c34409b540222439c681486109576942f",
+    "configs/benchmark_sources.json": "5d995bc9649ae80be711a21cdc2424b1b7a6dd012a59fe1d4e5966c941f7d633",
+    "configs/physics.json": "3e2a8f74519c722b71aef44a783f378e40caaa87383e331f37bb802be67408ec",
+    "configs/qlora.json": "91e8111c876ced9a11d9cc8232160768f1416d2285e0810b4d5df2f78a27dd39",
+    "configs/qlora_run.json": "d4baadcd6d588801781a9836db872a4b74c2be2d5c8ec76493a79b3ebd89506f",
+    "requirements-benchmark.txt": "e6b21dd625994bad17609c8f8cdf8c183d15f2d4e79b65971339088e8e723ada",
+    "requirements-dev.txt": "3c3ad6730cf0c0417b77bae38e53c11fa8cd96a34f2f8956998bafc0aaf3ef17",
+    "requirements-gguf.txt": "dcf404832c4aaaf8a78db0118f2c90f5ed71a5b59e550440c9ebf796e4eb1236",
+    "requirements-qlora.txt": "2c43340c45a6124cbfb70adaa0f5e2e9ea56c87df455b0a8ff4dbb628fa32607",
+    "requirements.txt": "cae4fa0e41dda747e20596c0f640b43b99e1362ffb73e507be83bb1ae4c910bb"
+  },
+  "human_ratings": "pending",
+  "writing_quality_improvement_established": false
+}

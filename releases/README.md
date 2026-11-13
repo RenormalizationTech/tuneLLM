@@ -1,13 +1,19 @@
 # Published model artifacts
 
 Model/data binaries stay under ignored `artifacts/releases/`. This directory
-contains reviewable cards, licenses and provenance. Both releases have been
-uploaded with the visibility chosen by the user and verified at pinned revisions.
+contains reviewable cards, licenses and provenance. The initial two releases use
+the visibility chosen by the user. The standalone NF4 dependency is also private.
 
 | Artifact | Visibility | Hub revision |
 | --- | --- | --- |
 | [Base GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF) | Public | `96038e0cb81737bc58489e19cf97461058a0b4e5` |
 | [Experimental adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA) | Private | `399903ca450b44a68b84ec8b6acfe2ff36cc6e64` |
+| [Standalone NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4) | Private | `e9af208e44e083b77702a71d8aa65b7d97f78ce6` |
+
+The standalone NF4 is unadapted and preserves the exact base used for the physics
+workflow. Its uploaded hashes are verified; GPU verification of the downloaded
+revision follows when the training GPU is released. See
+`results/nf4_huggingface_publication.json` and its model card for verification scope.
 
 Every uploaded file was checked against its expected SHA256, using Hub LFS
 metadata for large files and revision-pinned downloads for small files. The

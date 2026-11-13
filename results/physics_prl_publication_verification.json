@@ -1,0 +1,821 @@
+{
+  "records": [
+    {
+      "id": "2507.10762v2",
+      "doi": "10.1103/ssb5-vm9b",
+      "arxiv_title": "Marginal Metals and Kosterlitz-Thouless Type Phase Transition in Disordered Altermagnets",
+      "crossref_title": "Marginal Metals and Kosterlitz-Thouless-Type Phase Transition in Disordered Altermagnets",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2506.13696v1",
+      "doi": "10.1103/llys-8b4p",
+      "arxiv_title": "Photomagnetic-Chiral Anisotropy mediated by Chirality-Driven Asymmetric Spin Splitting",
+      "crossref_title": "Photomagnetic-Chiral Anisotropy Mediated by Chirality-Driven Asymmetric Spin Splitting",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2304.09040v3",
+      "doi": "10.1103/PhysRevLett.131.256601",
+      "arxiv_title": "Edge-selective extremal damping from topological heritage of dissipative Chern insulators",
+      "crossref_title": "Edge-Selective Extremal Damping from Topological Heritage of Dissipative Chern Insulators",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2307.16853v2",
+      "doi": "10.1103/PhysRevLett.132.096703",
+      "arxiv_title": "Spin-frame field theory of a three-sublattice antiferromagnet",
+      "crossref_title": "Spin-Frame Field Theory of a Three-Sublattice Antiferromagnet",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2405.13809v3",
+      "doi": "10.1103/PhysRevLett.134.113404",
+      "arxiv_title": "Self-trapping phenomenon, multistability and chaos in open anisotropic Dicke dimer",
+      "crossref_title": "Self-Trapping Phenomenon, Multistability and Chaos in Open Anisotropic Dicke Dimer",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2307.02840v2",
+      "doi": "10.1103/PhysRevLett.131.257101",
+      "arxiv_title": "Sampling efficiency of transverse forces in dense liquids",
+      "crossref_title": "Sampling Efficiency of Transverse Forces in Dense Liquids",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2305.10363v1",
+      "doi": "10.1103/PhysRevLett.132.056502",
+      "arxiv_title": "Resilient infinite randomness criticality for a disordered chain of interacting Majorana fermions",
+      "crossref_title": "Resilient Infinite Randomness Criticality for a Disordered Chain of Interacting Majorana Fermions",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2504.06849v2",
+      "doi": "10.1103/z64g-nqs6",
+      "arxiv_title": "Numerical renormalization of glassy dynamics",
+      "crossref_title": "Numerical Renormalization of Glassy Dynamics",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2412.03648v3",
+      "doi": "10.1103/PhysRevLett.134.196702",
+      "arxiv_title": "Phase Diagram of the Easy-Axis Triangular-Lattice $J_1\\!-\\!J_2$ Model",
+      "crossref_title": "Phase Diagram of the Easy-Axis Triangular-Lattice\n                    <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\n                      <mml:mrow>\n                        <mml:msub>\n                          <mml:mrow>\n                            <mml:mi>J</mml:mi>\n                          </mml:mrow>\n                          <mml:mrow>\n                            <mml:mn>1</mml:mn>\n                          </mml:mrow>\n                        </mml:msub>\n                        <mml:mtext>−</mml:mtext>\n                        <mml:msub>\n                          <mml:mrow>\n                            <mml:mi>J</mml:mi>\n                          </mml:mrow>\n                          <mml:mrow>\n                            <mml:mn>2</mml:mn>\n                          </mml:mrow>\n                        </mml:msub>\n                      </mml:mrow>\n                    </mml:math>\n                    Model",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2401.01928v2",
+      "doi": "10.1103/PhysRevLett.133.093404",
+      "arxiv_title": "Interferometry of non-Abelian band singularities and Euler class topology",
+      "crossref_title": "Interferometry of Non-Abelian Band Singularities and Euler Class Topology",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2412.06915v2",
+      "doi": "10.1103/dljc-j3z7",
+      "arxiv_title": "Quantum phases and transitions of bosons on a comb lattice",
+      "crossref_title": "Quantum Phases and Transitions of Bosons on a Comb Lattice",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2303.17553v2",
+      "doi": "10.1103/PhysRevLett.131.116603",
+      "arxiv_title": "Topological Circular Dichroism in Chiral Multifold Semimetals",
+      "crossref_title": "Topological Circular Dichroism in Chiral Multifold Semimetals",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2407.20101v2",
+      "doi": "10.1103/PhysRevLett.134.087101",
+      "arxiv_title": "Exponential Change of Relaxation Rate by Quenched Disorder",
+      "crossref_title": "Exponential Change of Relaxation Rate by Quenched Disorder",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2308.04094v2",
+      "doi": "10.1103/PhysRevLett.132.117102",
+      "arxiv_title": "Shortcuts of freely relaxing systems using equilibrium physical observables",
+      "crossref_title": "Shortcuts of Freely Relaxing Systems Using Equilibrium Physical Observables",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2402.06585v2",
+      "doi": "10.1103/PhysRevLett.133.028202",
+      "arxiv_title": "Irreversible Monte Carlo algorithms for hard disk glasses: from event-chain to collective swaps",
+      "crossref_title": "Irreversible Monte Carlo Algorithms for Hard Disk Glasses: From Event-Chain to Collective Swaps",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2310.16352v6",
+      "doi": "10.1103/PhysRevLett.133.268001",
+      "arxiv_title": "Quantifying the Chirality of Vibrational Modes in Helical Molecular Chains",
+      "crossref_title": "Quantifying the Chirality of Vibrational Modes in Helical Molecular Chains",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2506.05262v2",
+      "doi": "10.1103/qvr9-rvw4",
+      "arxiv_title": "Tuning Steady Shear Rheology through Active Dopants",
+      "crossref_title": "Tuning Steady Shear Rheology through Active Dopants",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2310.07476v2",
+      "doi": "10.1103/PhysRevLett.131.206301",
+      "arxiv_title": "Superfluidity meets the solid-state: frictionless mass-transport through a (5,5) carbon-nanotube",
+      "crossref_title": "Superfluidity Meets the Solid State: Frictionless Mass Transport through a (5,5) Carbon Nanotube",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2509.08479v2",
+      "doi": "10.1103/y3j5-dknd",
+      "arxiv_title": "From Kardar-Parisi-Zhang scaling to soliton proliferation in Josephson junction arrays",
+      "crossref_title": "From Kardar-Parisi-Zhang Scaling to Soliton Proliferation in Josephson Junction Arrays",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2510.14724v4",
+      "doi": "10.1103/65q6-5wxl",
+      "arxiv_title": "Crossed surface flat bands in three-dimensional superconducting altermagnets",
+      "crossref_title": "Crossed Surface Flat Bands in Three-Dimensional Superconducting Altermagnets",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2405.04159v2",
+      "doi": "10.1103/PhysRevLett.133.100403",
+      "arxiv_title": "Maxwell relation between entropy and atom-atom pair correlation",
+      "crossref_title": "Maxwell Relation between Entropy and Atom-Atom Pair Correlation",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2507.19147v1",
+      "doi": "10.1103/6m6b-y3yv",
+      "arxiv_title": "The Josephson effect in Fibonacci superconductors",
+      "crossref_title": "Josephson Effect in Fibonacci Superconductors from Topological Supragap States",
+      "normalized_title_similarity": 0.7192982456140351
+    },
+    {
+      "id": "2309.07886v1",
+      "doi": "10.1103/PhysRevLett.132.018301",
+      "arxiv_title": "Vortex Lattices in Active Nematics with Periodic Obstacle Arrays",
+      "crossref_title": "Vortex Lattices in Active Nematics with Periodic Obstacle Arrays",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2305.06033v2",
+      "doi": "10.1103/PhysRevLett.131.048101",
+      "arxiv_title": "Non-monotonous translocation time of polymers across pores",
+      "crossref_title": "Nonmonotonous Translocation Time of Polymers across Pores",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2402.14321v1",
+      "doi": "10.1103/PhysRevLett.133.216701",
+      "arxiv_title": "Non-relativistic spin splitting in compensated magnets that are not altermagnets",
+      "crossref_title": "Nonrelativistic Spin Splitting at the Brillouin Zone Center in Compensated Magnets",
+      "normalized_title_similarity": 0.676056338028169
+    },
+    {
+      "id": "2311.08893v1",
+      "doi": "10.1103/PhysRevLett.132.166301",
+      "arxiv_title": "Stark-Many body localization in interacting infinite dimensional systems",
+      "crossref_title": "Stark Many-Body Localization in Interacting Infinite Dimensional Systems",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2306.05149v2",
+      "doi": "10.1103/PhysRevLett.132.166901",
+      "arxiv_title": "Engineering flat bands in twisted-bilayer graphene away from the magic angle with chiral optical cavities",
+      "crossref_title": "Engineering Flat Bands in Twisted-Bilayer Graphene away from the Magic Angle with Chiral Optical Cavities",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2503.18068v2",
+      "doi": "10.1103/31q1-hj3n",
+      "arxiv_title": "Pseudo-giant number fluctuations and nematic order in microswimmer suspensions",
+      "crossref_title": "Pseudogiant Number Fluctuations and Nematic Order in Microswimmer Suspensions",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2411.18108v1",
+      "doi": "10.1103/h45s-4118",
+      "arxiv_title": "Fluctuation-response inequalities for kinetic and entropic perturbations",
+      "crossref_title": "Fluctuation-Response Inequalities for Kinetic and Entropic Perturbations",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2308.09574v3",
+      "doi": "10.1103/PhysRevLett.132.218303",
+      "arxiv_title": "Dissipative effects in odd viscous Stokes flow around a single sphere",
+      "crossref_title": "Dissipative Effects in Odd Viscous Stokes Flow around a Single Sphere",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2404.11647v1",
+      "doi": "10.1103/PhysRevLett.133.226301",
+      "arxiv_title": "Quantized Acoustoelectric Floquet Effect in Quantum Nanowires",
+      "crossref_title": "Quantized Acoustoelectric Floquet Effect in Quantum Nanowires",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2505.07790v2",
+      "doi": "10.1103/jmk4-46tj",
+      "arxiv_title": "Unconventional Fractional Phases in Multi-Band Vortexable Systems",
+      "crossref_title": "Unconventional Fractional Phases in Multiband Vortexable Systems",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2309.02242v1",
+      "doi": "10.1103/PhysRevLett.131.236101",
+      "arxiv_title": "Compressing and forecasting atomic material simulations with descriptors",
+      "crossref_title": "Coarse-Graining and Forecasting Atomic Material Simulations with Descriptors",
+      "normalized_title_similarity": 0.9172932330827067
+    },
+    {
+      "id": "2312.14598v3",
+      "doi": "10.1103/PhysRevLett.133.016501",
+      "arxiv_title": "Exact numerical solution of the fully-connected classical and quantum Heisenberg spin glass",
+      "crossref_title": "Exact Numerical Solution of the Fully Connected Classical and Quantum Heisenberg Spin Glass",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2310.03809v3",
+      "doi": "10.1103/PhysRevLett.132.230402",
+      "arxiv_title": "Iterative construction of conserved quantities in dissipative nearly integrable systems",
+      "crossref_title": "Iterative Construction of Conserved Quantities in Dissipative Nearly Integrable Systems",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2304.12201v2",
+      "doi": "10.1103/PhysRevLett.130.203605",
+      "arxiv_title": "Quantum-Squeezing-Induced Point-Gap Topology and Skin Effect",
+      "crossref_title": "Quantum-Squeezing-Induced Point-Gap Topology and Skin Effect",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2405.08887v2",
+      "doi": "10.1103/43nq-ntqm",
+      "arxiv_title": "Non-Abelian Fractional Chern Insulators and Competing States in Flat Moir\\'e Bands",
+      "crossref_title": "Non-Abelian Fractional Chern Insulators and Competing States in Flat Moiré Bands",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2309.14047v1",
+      "doi": "10.1103/PhysRevLett.133.257401",
+      "arxiv_title": "Random-Energy Secret Sharing via Extreme Synergy",
+      "crossref_title": "Extreme Synergy in the Random-Energy Model",
+      "normalized_title_similarity": 0.358974358974359
+    },
+    {
+      "id": "2507.11308v2",
+      "doi": "10.1103/c81j-h58j",
+      "arxiv_title": "Localization Transition for Interacting Quantum Particles in Colored-Noise Disorder",
+      "crossref_title": "Localization Transition for Interacting Quantum Particles in Colored-Noise Disorder",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2303.18169v2",
+      "doi": "10.1103/PhysRevLett.133.107401",
+      "arxiv_title": "Dynamical fluctuations of random walks in higher-order networks",
+      "crossref_title": "Dynamical Fluctuations of Random Walks in Higher-Order Networks",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2503.03477v2",
+      "doi": "10.1103/yfqr-y9ks",
+      "arxiv_title": "Dual Spectroscopy of Quantum Simulated Fermi-Hubbard Systems",
+      "crossref_title": "Dual Spectroscopy of Quantum Simulated Fermi-Hubbard Systems",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2405.19607v2",
+      "doi": "10.1103/PhysRevLett.134.123402",
+      "arxiv_title": "Generic transverse stability of kink structures in atomic and optical nonlinear media with competing attractive and repulsive interactions",
+      "crossref_title": "Generic Transverse Stability of Kink Structures in Atomic and Optical Nonlinear Media with Competing Attractive and Repulsive Interactions",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2305.02091v2",
+      "doi": "10.1103/PhysRevLett.131.266202",
+      "arxiv_title": "Finite-Entanglement Scaling of 2D Metals",
+      "crossref_title": "Finite-Entanglement Scaling of 2D Metals",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2310.02218v1",
+      "doi": "10.1103/nys8-5mg2",
+      "arxiv_title": "Symmetry-based classification of exact flat bands in single and bilayer moir\\'e systems",
+      "crossref_title": "Symmetry-Based Classification of Exact Flat Bands in Single and Bilayer Moiré Systems",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2507.20705v4",
+      "doi": "10.1103/9346-9jpf",
+      "arxiv_title": "Light-induced Odd-parity Magnetism in Conventional Collinear Antiferromagnets",
+      "crossref_title": "Light-Induced Odd-Parity Magnetism in Conventional Antiferromagnetism",
+      "normalized_title_similarity": 0.916030534351145
+    },
+    {
+      "id": "2307.14965v3",
+      "doi": "10.1103/PhysRevLett.132.146002",
+      "arxiv_title": "Interlayer Coupling Driven High-Temperature Superconductivity in La$_3$Ni$_2$O$_7$ Under Pressure",
+      "crossref_title": "Interlayer-Coupling-Driven High-Temperature Superconductivity in\n                    <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\n                      <mml:mrow>\n                        <mml:msub>\n                          <mml:mrow>\n                            <mml:mi>La</mml:mi>\n                          </mml:mrow>\n                          <mml:mrow>\n                            <mml:mn>3</mml:mn>\n                          </mml:mrow>\n                        </mml:msub>\n                        <mml:msub>\n                          <mml:mrow>\n                            <mml:mi>Ni</mml:mi>\n                          </mml:mrow>\n                          <mml:mrow>\n                            <mml:mn>2</mml:mn>\n                          </mml:mrow>\n                        </mml:msub>\n                        <mml:msub>\n                          <mml:mrow>\n                            <mml:mi mathvariant=\"normal\">O</mml:mi>\n                          </mml:mrow>\n                          <mml:mrow>\n                            <mml:mn>7</mml:mn>\n                          </mml:mrow>\n                        </mml:msub>\n                      </mml:mrow>\n                    </mml:math>\n                    under Pressure",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2305.03962v2",
+      "doi": "10.1103/PhysRevLett.131.238402",
+      "arxiv_title": "Mechanisms of DNA-mediated allostery",
+      "crossref_title": "Mechanisms of DNA-Mediated Allostery",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2409.18050v2",
+      "doi": "10.1103/PhysRevLett.134.206001",
+      "arxiv_title": "Superconductivity and charge-density-wave in the Holstein model on the Penrose Lattice",
+      "crossref_title": "Superconductivity and Charge Density Wave in the Holstein Model on the Penrose Lattice",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2409.07804v2",
+      "doi": "10.1103/PhysRevLett.134.188201",
+      "arxiv_title": "Geometric control and memory in networks of hysteretic elements",
+      "crossref_title": "Geometric Control and Memory in Networks of Hysteretic Elements",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2507.15503v2",
+      "doi": "10.1103/xwjd-qxfg",
+      "arxiv_title": "Harnessing higher-dimensional fluctuations in an information engine",
+      "crossref_title": "Harnessing Higher-Dimensional Fluctuations in an Information Engine",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2312.03840v1",
+      "doi": "10.1103/PhysRevLett.132.266502",
+      "arxiv_title": "Transient localization from the interaction with quantum bosons",
+      "crossref_title": "Transient Localization from the Interaction with Quantum Bosons",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2411.02489v1",
+      "doi": "10.1103/PhysRevLett.134.146001",
+      "arxiv_title": "Adatom engineering magnetic order in superconductors: Applications to altermagnetic superconductivity",
+      "crossref_title": "Adatom Engineering Magnetic Order in Superconductors: Applications to Altermagnetic Superconductivity",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2407.08194v3",
+      "doi": "10.1103/PhysRevLett.133.223401",
+      "arxiv_title": "Uncovering Emergent Spacetime Supersymmetry with Rydberg Atom Arrays",
+      "crossref_title": "Uncovering Emergent Spacetime Supersymmetry with Rydberg Atom Arrays",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2309.16227v2",
+      "doi": "10.1103/PhysRevLett.132.187101",
+      "arxiv_title": "Fast rare events in exit times distributions of jump processes",
+      "crossref_title": "Fast Rare Events in Exit Times Distributions of Jump Processes",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2407.01457v1",
+      "doi": "10.1103/PhysRevLett.134.026304",
+      "arxiv_title": "Quantum Nonlinear Acoustic Hall Effect and Inverse Acoustic Faraday Effect in Dirac Insulators",
+      "crossref_title": "Quantum Nonlinear Acoustic Hall Effect and Inverse Acoustic Faraday Effect in Dirac Insulators",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2503.16384v2",
+      "doi": "10.1103/k8sb-rqxf",
+      "arxiv_title": "Spontaneous vortex-antivortex lattice and Majorana fermions in rhombohedral graphene",
+      "crossref_title": "Spontaneous Vortex-Antivortex Lattice and Majorana Fermions in Rhombohedral Graphene",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2312.04093v2",
+      "doi": "10.1103/PhysRevLett.134.116301",
+      "arxiv_title": "Intrinsic gyrotropic magnetic current from Zeeman quantum geometry",
+      "crossref_title": "Intrinsic Gyrotropic Magnetic Current from Zeeman Quantum Geometry",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2306.12548v1",
+      "doi": "10.1103/PhysRevLett.132.057301",
+      "arxiv_title": "Finite-time Lyapunov exponents of deep neural networks",
+      "crossref_title": "Finite-Time Lyapunov Exponents of Deep Neural Networks",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2407.02481v3",
+      "doi": "10.1103/PhysRevLett.134.163401",
+      "arxiv_title": "Unveiling Supersolid Order via Vortex Trajectory Correlations",
+      "crossref_title": "Unveiling Supersolid Order via Vortex Trajectory Correlations",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2307.10103v1",
+      "doi": "10.1103/PhysRevLett.132.258301",
+      "arxiv_title": "Coexistence of defect morphologies in three dimensional active nematics",
+      "crossref_title": "Coexistence of Defect Morphologies in Three-Dimensional Active Nematics",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2402.18364v2",
+      "doi": "10.1103/PhysRevLett.134.076501",
+      "arxiv_title": "Extracting the Luttinger parameter from a single wave function",
+      "crossref_title": "Extracting the Luttinger Parameter from a Single Wave Function",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2405.09217v2",
+      "doi": "10.1103/PhysRevLett.133.190402",
+      "arxiv_title": "Augmenting Density Matrix Renormalization Group with Clifford Circuits",
+      "crossref_title": "Augmenting Density Matrix Renormalization Group with Clifford Circuits",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2306.11321v1",
+      "doi": "10.1103/PhysRevLett.131.056401",
+      "arxiv_title": "Intrinsic Nonlinear Hall Detection of the N\\'eel Vector for Two-Dimensional Antiferromagnetic Spintronics",
+      "crossref_title": "Intrinsic Nonlinear Hall Detection of the Néel Vector for Two-Dimensional Antiferromagnetic Spintronics",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2304.03303v1",
+      "doi": "10.1103/PhysRevLett.132.046003",
+      "arxiv_title": "Enhanced Superconducting Diode Effect due to coexisting Phases",
+      "crossref_title": "Enhanced Superconducting Diode Effect due to Coexisting Phases",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2506.04356v1",
+      "doi": "10.1103/dlpb-gfct",
+      "arxiv_title": "Intra-unit-cell singlet pairing mediated by altermagnetic fluctuations",
+      "crossref_title": "Intra-Unit-Cell Singlet Pairing Mediated by Altermagnetic Fluctuations",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2409.17096v2",
+      "doi": "10.1103/PhysRevLett.134.178203",
+      "arxiv_title": "Self-organization and memory in an disordered solid subject to random loading",
+      "crossref_title": "Self-Organization and Memory in a Disordered Solid Subject to Random Driving",
+      "normalized_title_similarity": 0.9465648854961832
+    },
+    {
+      "id": "2305.16244v2",
+      "doi": "10.1103/PhysRevLett.131.173401",
+      "arxiv_title": "Tuning photon-mediated interactions in a multimode cavity: from supersolid to insulating droplets hosting phononic excitations",
+      "crossref_title": "Tuning Photon-Mediated Interactions in a Multimode Cavity: From Supersolid to Insulating Droplets Hosting Phononic Excitations",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2406.09080v2",
+      "doi": "10.1103/PhysRevLett.133.266102",
+      "arxiv_title": "Link to Densify: Topological Transitions and Origin of Hysteresis During the (De)Compression of Amorphous Ices",
+      "crossref_title": "Link to Densify: Topological Transitions and Origin of Hysteresis During the Compression and Decompression of Amorphous Ices",
+      "normalized_title_similarity": 0.93
+    },
+    {
+      "id": "2306.10411v1",
+      "doi": "10.1103/PhysRevLett.132.020401",
+      "arxiv_title": "Quantum scars and regular eigenstates in a chaotic spinor condensate",
+      "crossref_title": "Quantum Scars and Regular Eigenstates in a Chaotic Spinor Condensate",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2404.19009v2",
+      "doi": "10.1103/PhysRevLett.134.097103",
+      "arxiv_title": "Classical origins of Landau-incompatible transitions",
+      "crossref_title": "Classical Origins of Landau-Incompatible Transitions",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2305.13561v3",
+      "doi": "10.1103/physrevlett.131.147102",
+      "arxiv_title": "Fluids in random media and dimensional augmentation",
+      "crossref_title": "Fluids in Random Media and Dimensional Augmentation",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2503.00475v1",
+      "doi": "10.1103/lhj4-9h29",
+      "arxiv_title": "Field-driven band asymmetry and non-reciprocal transport in a helimagnet",
+      "crossref_title": "Field-Driven Band Asymmetry and Nonreciprocal Transport in a Helimagnet",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2407.01936v1",
+      "doi": "10.1103/PhysRevLett.134.096504",
+      "arxiv_title": "Many-body effects on high-harmonic generation in Hubbard ladders",
+      "crossref_title": "Many-Body Effects on High-Harmonic Generation in Hubbard Ladders",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2410.09148v2",
+      "doi": "10.1103/7f6c-jh1k",
+      "arxiv_title": "Unconventional superconductivity mediated by exciton density wave fluctuations",
+      "crossref_title": "Unconventional Superconductivity Mediated by Exciton Density Wave Fluctuations",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2410.12204v1",
+      "doi": "10.1103/PhysRevLett.134.153402",
+      "arxiv_title": "Fate of thermalization of ultracold fermions with two-body dissipation",
+      "crossref_title": "Fate of Thermalization of Ultracold Fermions with Two-Body Dissipation",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2404.03638v1",
+      "doi": "10.1103/PhysRevLett.134.136002",
+      "arxiv_title": "Cooperation between electron-phonon coupling and electronic interaction in bilayer nickelates La$_3$Ni$_2$O$_7$",
+      "crossref_title": "Cooperation between Electron-Phonon Coupling and Electronic Interaction in Bilayer Nickelates\n                    <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\n                      <mml:mrow>\n                        <mml:mrow>\n                          <mml:msub>\n                            <mml:mrow>\n                              <mml:mi>La</mml:mi>\n                            </mml:mrow>\n                            <mml:mrow>\n                              <mml:mn>3</mml:mn>\n                            </mml:mrow>\n                          </mml:msub>\n                        </mml:mrow>\n                        <mml:msub>\n                          <mml:mrow>\n                            <mml:mi>Ni</mml:mi>\n                          </mml:mrow>\n                          <mml:mrow>\n                            <mml:mn>2</mml:mn>\n                          </mml:mrow>\n                        </mml:msub>\n                        <mml:msub>\n                          <mml:mrow>\n                            <mml:mi mathvariant=\"normal\">O</mml:mi>\n                          </mml:mrow>\n                          <mml:mrow>\n                            <mml:mn>7</mml:mn>\n                          </mml:mrow>\n                        </mml:msub>\n                      </mml:mrow>\n                    </mml:math>",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2505.18272v2",
+      "doi": "10.1103/19rh-3whq",
+      "arxiv_title": "Mechanochemical feedback drives complex inertial dynamics in active solids",
+      "crossref_title": "Mechanochemical Feedback Drives Complex Inertial Dynamics in Active Solids",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2307.08110v2",
+      "doi": "10.1103/PhysRevLett.132.067101",
+      "arxiv_title": "Collective relaxation dynamics in a three-dimensional lattice glass model",
+      "crossref_title": "Collective Relaxation Dynamics in a Three-Dimensional Lattice Glass Model",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2303.14385v3",
+      "doi": "10.1103/PhysRevLett.131.126301",
+      "arxiv_title": "Nonequilibrium Fractional Josephson Effect",
+      "crossref_title": "Nonequilibrium Fractional Josephson Effect",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2405.18443v1",
+      "doi": "10.1103/PhysRevLett.133.214003",
+      "arxiv_title": "Using Thermal Crowding to Direct Pattern Formation on the Nanoscale",
+      "crossref_title": "Using Thermal Crowding to Direct Pattern Formation on the Nanoscale",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2401.13026v2",
+      "doi": "10.1103/PhysRevLett.133.066801",
+      "arxiv_title": "Liquid-crystal-like dynamic transition in ferroelectric/dielectric superlattices",
+      "crossref_title": "Liquid-Crystal-Like Dynamic Transition in Ferroelectric-Dielectric Superlattices",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2306.09698v2",
+      "doi": "10.1103/PhysRevLett.131.223401",
+      "arxiv_title": "Glitches in rotating supersolids",
+      "crossref_title": "Glitches in Rotating Supersolids",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2509.13502v3",
+      "doi": "10.1103/nl7n-bqn4",
+      "arxiv_title": "Effective delocalization in the one-dimensional Anderson model with stealthy disorder",
+      "crossref_title": "Effective Delocalization in the One-Dimensional Anderson Model with Stealthy Disorder",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2307.01253v2",
+      "doi": "10.1103/PhysRevLett.132.236001",
+      "arxiv_title": "Geometric Stiffness in Interlayer Exciton Condensates",
+      "crossref_title": "Geometric Stiffness in Interlayer Exciton Condensates",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2501.01330v2",
+      "doi": "10.1103/gbg1-lwwt",
+      "arxiv_title": "Non-reciprocal mixtures in suspension: the role of hydrodynamic interactions",
+      "crossref_title": "Nonreciprocal Mixtures in Suspension: The Role of Hydrodynamic Interactions",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2405.09728v3",
+      "doi": "10.1103/PhysRevLett.134.056601",
+      "arxiv_title": "Hidden zero modes and topology of multiband non-Hermitian systems",
+      "crossref_title": "Hidden Zero Modes and Topology of Multiband Non-Hermitian Systems",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2411.03879v2",
+      "doi": "10.1103/j7bs-2zbx",
+      "arxiv_title": "Chiral Phonons Arising From Chirality-Selective Magnon-Phonon Coupling",
+      "crossref_title": "Chiral Phonons Arising from Chirality-Selective Magnon-Phonon Coupling",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2501.03341v2",
+      "doi": "10.1103/b9gd-y4y6",
+      "arxiv_title": "Dynamic scaling theory for a field quench near the Kasteleyn transition in spin ice",
+      "crossref_title": "Dynamic Scaling Theory for a Field Quench near the Kasteleyn Transition in Spin Ice",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2306.02861v2",
+      "doi": "10.1103/physrevlett.133.086001",
+      "arxiv_title": "Decoding the drive-bath interplay: A guideline to enhance superconductivity",
+      "crossref_title": "Decoding the Drive-Bath Interplay: A Guideline to Enhance Superconductivity",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2503.07708v3",
+      "doi": "10.1103/s5q2-317m",
+      "arxiv_title": "Exact Chiral Symmetries of 3+1D Hamiltonian Lattice Fermions",
+      "crossref_title": "Exact Chiral Symmetries of\n                    <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\n                      <mml:mrow>\n                        <mml:mn>3</mml:mn>\n                        <mml:mo>+</mml:mo>\n                        <mml:mn>1</mml:mn>\n                        <mml:mi mathvariant=\"normal\">D</mml:mi>\n                      </mml:mrow>\n                    </mml:math>\n                    Hamiltonian Lattice Fermions",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2408.06242v2",
+      "doi": "10.1103/PhysRevLett.134.148301",
+      "arxiv_title": "Enhanced stability and chaotic condensates in multi-species non-reciprocal mixtures",
+      "crossref_title": "Enhanced Stability and Chaotic Condensates in Multispecies Nonreciprocal Mixtures",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2409.20006v1",
+      "doi": "10.1103/PhysRevLett.134.146502",
+      "arxiv_title": "Anomalous quantum oscillations from boson-mediated interband scattering",
+      "crossref_title": "Anomalous Quantum Oscillations from Boson-Mediated Interband Scattering",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2401.12313v2",
+      "doi": "10.1103/PhysRevLett.133.056501",
+      "arxiv_title": "Eliashberg theory for dynamical screening in bilayer exciton condensation",
+      "crossref_title": "Eliashberg Theory for Dynamical Screening in Bilayer Exciton Condensation",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2510.17587v1",
+      "doi": "10.1103/2b12-3vrx",
+      "arxiv_title": "Macroscopic fluctuation-response theory and its use for gene regulatory networks",
+      "crossref_title": "Macroscopic Fluctuation-Response Theory and Its Use for Gene Regulatory Networks",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2305.09530v2",
+      "doi": "10.1103/PhysRevLett.132.066301",
+      "arxiv_title": "Tomasch Oscillations as Above-Gap Signature of Topological Superconductivity",
+      "crossref_title": "Tomasch Oscillations as Above-Gap Signature of Topological Superconductivity",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2405.00379v2",
+      "doi": "10.1103/PhysRevLett.134.026301",
+      "arxiv_title": "Planar Hall Effect in Quasi-Two-Dimensional Materials",
+      "crossref_title": "Planar Hall Effect in Quasi-Two-Dimensional Materials",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2412.15103v1",
+      "doi": "10.1103/PhysRevLett.134.256001",
+      "arxiv_title": "Topological Landau Theory",
+      "crossref_title": "Topological Landau Theory",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2402.02310v3",
+      "doi": "10.1103/PhysRevLett.133.226601",
+      "arxiv_title": "Topological effect on the Anderson transition in chiral symmetry classes",
+      "crossref_title": "Topological Effect on the Anderson Transition in Chiral Symmetry Classes",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2406.08868v2",
+      "doi": "10.1103/ww8r-sjhb",
+      "arxiv_title": "Dissipative Superfluidity in a Molecular Bose-Einstein Condensate",
+      "crossref_title": "Dissipative Superfluidity in a Molecular Bose-Einstein Condensate",
+      "normalized_title_similarity": 1.0
+    },
+    {
+      "id": "2306.03549v1",
+      "doi": "10.1103/PhysRevLett.132.048202",
+      "arxiv_title": "A hard-sphere quasicrystal stabilized by configurational entropy",
+      "crossref_title": "Quasicrystal of Binary Hard Spheres on a Plane Stabilized by Configurational Entropy",
+      "normalized_title_similarity": 0.7076923076923077
+    }
+  ],
+  "low_similarity_threshold": 0.75,
+  "low_similarity_ids": [
+    "2507.19147v1",
+    "2402.14321v1",
+    "2309.14047v1",
+    "2306.03549v1"
+  ],
+  "low_similarity_review": {
+    "2507.19147v1": "Same five authors; both titles describe the theoretical Josephson effect in Fibonacci superconductors. Published title emphasizes topological supragap states.",
+    "2402.14321v1": "Same three authors; both concern nonrelativistic spin splitting in compensated magnets. Published title emphasizes the Brillouin-zone center.",
+    "2309.14047v1": "Same two authors; abstract links the random-energy model, secret sharing and information synergy. Published title uses the shorter synergy framing.",
+    "2306.03549v1": "Same four authors; both concern configurational-entropy stabilization of hard-sphere quasicrystals; publication title adds binary mixture and planar geometry."
+  },
+  "reviewer": "Coordinating AI, comparing arXiv metadata abstracts and Crossref author/title records",
+  "limits": "The corpus uses recorded arXiv source versions associated with verified PRL publications. These can precede final publisher wording; title changes are not proof of a before/after writing improvement.",
+  "crossref_response_sha256": {
+    "2507.10762v2": "fe273116dae77f522c7bce59675743e9e68ab11a31e75aca345c7d3681cdfc4a",
+    "2506.13696v1": "919ca3f8400b794d91d0da14aea63e95e233a488cb801c74a68a0629dda79073",
+    "2304.09040v3": "0b3f9f398b270d8c86050ea3b8526a6a9f5bc9eff9a139bd2ee7d30a0af2ab9d",
+    "2307.16853v2": "d697acf06380980450c19835bc264ed22120c2a2f49e3c6ed54de1ccffd32409",
+    "2405.13809v3": "ce938c29268afef27909c4f9bdc8a905411a068b546e1568e15b3f0d1ff61596",
+    "2307.02840v2": "64b15ca050cc45c6b961251cbd238ca291c8e33b72c62324f68e9fe5356a6faf",
+    "2305.10363v1": "2f6ccc5ba68ba4f7794d3fa0a86bd124edf7cc605ee1eaa6d03816d3295f4123",
+    "2504.06849v2": "6a0f090d3bae2e667298c9115cdab17c2c58ff1f2f01f2623e6624bfeaefa641",
+    "2412.03648v3": "d86d3121eeda732ca1ef4a067073da637e98e7b9124f2248a025b436b542df9b",
+    "2401.01928v2": "e839d8a203577c9b974a1d7ed89d7a1e2a9be2183fe421f6bd14939266d97423",
+    "2412.06915v2": "5ff8cdd5b33f549c057bff45ced19bd5c68cb51f52b231469710b85b71118dcc",
+    "2303.17553v2": "32449d0ca7a83df35a45a225abce8fcd41d413d0d902df56ceec56bd72c6aca3",
+    "2407.20101v2": "890326a5e71544c58fa421a12fe19524993cbef3b07b8739ad79d3beddc37383",
+    "2308.04094v2": "3eaa267b1298958ba22df988482f2489e38abe3238ccd4336459b49d560428bf",
+    "2402.06585v2": "1edb3f0a6e81ea3f35a3923178986ad5e47ccc6e838ed694a46abb2d603523e9",
+    "2310.16352v6": "32755e4df832df6483185e7df59793a5035e1bbd62625f35e0cfac792d41ee16",
+    "2506.05262v2": "211ef92ca8f4706545a0c34984d99939c674497ff501575ea43a8c002fec0b53",
+    "2310.07476v2": "b38b98b248bd29168eb17dd2e85efe5082b1b0a12a93861b61345edc575991d5",
+    "2509.08479v2": "a7cca9c0e89727aa090adf57084e99943d1014e28fc5880e17dc82339606c5ff",
+    "2510.14724v4": "12b9a8cf0f0932e857bbbb4b695732ca25f931b1c9b89dab7064c276cebfb966",
+    "2405.04159v2": "3cd64e7fb989d4f790888c1816f01d77997e5d2778a14dd5af35fb80c15d0e61",
+    "2507.19147v1": "b03bd72f80aa4a88ef373f9ae563c092088e498a51701bfc3ddeb6b3fc97d958",
+    "2309.07886v1": "6887bce9904e09dcf17fa591effb6997666921261c3492dee499c513acb10447",
+    "2305.06033v2": "c5bb8e3fce0b3de2dab92845b5c49d34f707ba524656836a297cb9ebdcd78141",
+    "2402.14321v1": "75f112118221cdcb20cca4bfe48df3fc7e1243c2e7b61f77dc1e3e0ef211f549",
+    "2311.08893v1": "d64b164974e86c2e627729080765f725c872d63a40232532e35bca57b6f513c1",
+    "2306.05149v2": "6bf9239503d4ce2b4fdf0eec002971025c8ccfce7aa0f2211e14bfe3af9d7b5f",
+    "2503.18068v2": "0a7086c4d49572d53f2c397b48030d3bc6aef73ae3ac06d8c8fdaefe49752f54",
+    "2411.18108v1": "434ca47616733efa3a0cedf2b34c7f4fbac840d4355bdc9b53923118a200389d",
+    "2308.09574v3": "61d43f9f2f2dc22295e0be6444ddaa1b1ae0a124c50630d20708f5980640cf87",
+    "2404.11647v1": "e4db51a20ee4c42b4bceb64e4f292a77fd573c47eb41ce716c8a7b0505b989fe",
+    "2505.07790v2": "cedcd14d9a957ee30898f997b151c175c0b2ab79adf9cc75d0f60b2ffb43e62b",
+    "2309.02242v1": "f12dc0ebf261718601a487e5b6b033905c57a5746b1aee28c5f701841583f4b4",
+    "2312.14598v3": "013afb572b3206d91b3db4d10d4a6834796cd5bcd9e2c1b388de3aa44a7182ee",
+    "2310.03809v3": "aa93daf0db16cfd89b42b0ad75b30bf9f11583ae4e00bfaa41aabfe903858d4f",
+    "2304.12201v2": "4f86ecac27af232b2db705a170ed832791e978e1bc4dc389fc591f1229835613",
+    "2405.08887v2": "699a30211add99c6ac8d74a34f36961611efcb3bcf446d22b70189cd391ab301",
+    "2309.14047v1": "ca11db14fe5754e5c7828444d95e32d794beccace9c2fede08e973131cab0291",
+    "2507.11308v2": "de62b416078c6b7d845859cf0d0853486b78d6d90838765054f51fa4e97261d5",
+    "2303.18169v2": "1c7ad2af117b9af4fdb994f4fde3e6fa07a80c400e916682d59a5a84b57a6a37",
+    "2503.03477v2": "653f603c2bb6864b5323a3c216aeed69fc4696603ac2aed7ab0c01d0cd46de9a",
+    "2405.19607v2": "233102229b696300168e4da669a0aef96154d6b0be3c0e1679a38596453e687a",
+    "2305.02091v2": "52715428aa62b665082d0da24247646f98d234d1aac29812da43999a1798ea86",
+    "2310.02218v1": "cab1efd426313b81958f6b733240d9d6b7247827ffd5dd3f1cc6bda45efb16a9",
+    "2507.20705v4": "4776b906615bd4d36104c134b2e81c6c0e36c80bd881c2d9d44cfdfefa1315a2",
+    "2307.14965v3": "e3b0783370dd7e809536a11d41f400aaf508fcf17189e5bcd5a26e7795ff5d5b",
+    "2305.03962v2": "b41744819461782b9da227b0d3a3d5dfca52d027e2f4643c24bfb935435312a4",
+    "2409.18050v2": "66eba9879bd64c328f8d54817a9157121592972dbf3a79694887cb006f94e6ca",
+    "2409.07804v2": "1982b390d211854c5da719f072e0bb0c9aaa58efb9adec170d791810b55af0f2",
+    "2507.15503v2": "6cb67addc398fa16a9c287e7ed7b8ea7f45474468759545f10c478b147559481",
+    "2312.03840v1": "96c6b95b0ee5ed687217f30cb2d980d4b1e2583de11b05caa04a25b4b004449b",
+    "2411.02489v1": "0a3fdc3baffcfbef5407b15285d3a4d978cdd72c1de7eb0eca14dc4ddad0ef5a",
+    "2407.08194v3": "6404f3fac321f130a0c1b0f06a984fe02faf359ad54c6de6f284aadcaf37f8b4",
+    "2309.16227v2": "a1ba4b5c18f9a2250952a2c2be3fd9dd8961737d9adfe9e5076b164c8908f79e",
+    "2407.01457v1": "64cd02fc5ffeb3041b76a37e17b5a220ef7f2e22e456f20ef5820c22450b3360",
+    "2503.16384v2": "2382eff84d4df770282b57dfbb49f7e6d1612ca7940c5ea0c4fac21fb8ea6d0f",
+    "2312.04093v2": "f54ec3f3edaaa7071899e0abdc87ef50a31aa5de41e7c68762ec9bf0c9a1b4c1",
+    "2306.12548v1": "a7208486ca04a232f4762aa6121426d6a9c7a2c364f3f5488e1d8ef978a5af15",
+    "2407.02481v3": "3aa78041a68536cbec46a9c7859f74c6537aa782df3c1151e06d1845bacc5ff5",
+    "2307.10103v1": "b35eb013020704280524e27d7b86e31ecf3c073500b1155e97bd6f100070a84e",
+    "2402.18364v2": "b050673b1ffebfb63ea72265ff00fba38bd4bfc147b21c64b946a2d63a9b1e70",
+    "2405.09217v2": "ee78277bfa5ac31c761b1e3531f1c1de0b21213a413c009cabf86004faf089ec",
+    "2306.11321v1": "c2d624041dce843883621b9f8ed6f981a303eca8551c568cb50e668480fff91d",
+    "2304.03303v1": "89cc26ade7c42979d92aeb2923c7ea1d93a873f7d5ad8c937ee53e04d61ba688",
+    "2506.04356v1": "2df6070948c74b295eebe44a98efb145a6ca094042c182a0d369e81d5aa130b1",
+    "2409.17096v2": "3c49352388173b0fbd493c6dddcf564e3c0eab9dd297a202f0af835bb5ffa5ab",
+    "2305.16244v2": "c654dabf975f7c3cc8690e9ffa2d2fc1450802f7e51eaeab063dbd2ed7660a4d",
+    "2406.09080v2": "c64ed1355aa5826bff6edd76ea4977e5eb7320cc28e283bcfd508f13acd5bcd3",
+    "2306.10411v1": "f68897ef5da56e2848d55df674965be9a77c4809a03a8add23df7a42b86ccdde",
+    "2404.19009v2": "7838326c1e221540b00b66f6ddba3e10d9b80a1a7b0dcc983bb8d0d4931b2f35",
+    "2305.13561v3": "1e8c07404e0c57cc744994065eb136808b51c18c62789ea1a2d270256e79ebbf",
+    "2503.00475v1": "1d15cb8728880806da2424f4a98d629a7fb20093bfda9965eeaea8745783702c",
+    "2407.01936v1": "23b1cebece5bfb29b5830cc923a6b9d12a6ecd5b9f8ab766f6666541319156e3",
+    "2410.09148v2": "50d46b69ec375b5390dbb32f25de731017c340ab6963b65290c82d8acf949a73",
+    "2410.12204v1": "41056ea8123a45286905381f8ae7c6fdd99f029756dcd5d837a0b0c4c7f36ae8",
+    "2404.03638v1": "3d49f41de38ef09111cd568c7aa4cb31a0ce7950da5826c21229ce93815b93e7",
+    "2505.18272v2": "9fa2175dcbde289bb45bd2fcc83da682b9a64ae63051c3b4c193359e46c6d354",
+    "2307.08110v2": "013565a366c1df41730bad961b38e8c987b0720d62dab1ef8a9b0fe8451539a9",
+    "2303.14385v3": "c0e9d7569633098aa5dcf0c3fd155bfda20e811e238a7f8fa1553ddcf32df8d6",
+    "2405.18443v1": "9df7c89e3ad6eedc875cc300836d308a08575e4a9690d684fb3d90c1d67e0344",
+    "2401.13026v2": "1e91efc2971b55bcfe54d60c259de8a743e336a95dc1447b1620bcab9c2cc2ba",
+    "2306.09698v2": "f15fd5fe31ac2cf9f1c5aba088bfe0051015761942ff33d025811344d78c0090",
+    "2509.13502v3": "ee07505e79dcf825a835da58052e830f10c4dd9e09d3992efe8569b4200bb327",
+    "2307.01253v2": "66030cc7f449fb7e87aaa18341efb3057a11b02bba96271f9d28c7e8048ad3ab",
+    "2501.01330v2": "8e38f132269d92de17ccb4839c8b9fdc2fc405d3099cc50dea6e95d1b3b1b0ad",
+    "2405.09728v3": "d566d8ccfc374bada6c34a1c462c836ee36b99c3d4ece36b6c1efef103cb563d",
+    "2411.03879v2": "3e06d4c84e259724a0024a56735bb361d280328c338bd90627a0ba440307331a",
+    "2501.03341v2": "eb09e1ac966c8bc4b3cd1e34c0b884f69f8cfc4104771c76390ee92734d10b64",
+    "2306.02861v2": "8243861e3740a01b988f2579f0a99cadbd465c07622ba5a5c067ff8bc95cb837",
+    "2503.07708v3": "aca2845eb573e50657b1db593fc844050a9df4f785f41f4ade7b143f20737722",
+    "2408.06242v2": "46b671a937f1d3922ad7bfdf7b57eef6892ee7acf038391f506cea68846c17ab",
+    "2409.20006v1": "beaa7686a16dcfdb1d32b52fe9da04e3d2c7a721b9b810a680c750d7709941b5",
+    "2401.12313v2": "b916d1a1f111ee79584754bf13b0463455750f45256de6b74d3f82f194847bfd",
+    "2510.17587v1": "3f04c63b6deadc0c16fcecd3f11c74058b1a14052eeaadf38d359158d90fd3d1",
+    "2305.09530v2": "601f2271304b7c21c222d84cc63cc333000801ab552a0cc278157de57cffe832",
+    "2405.00379v2": "f6f8efc5b730c706404bcc49a5dd746fbc978d36f795817806e8544fc7abf704",
+    "2412.15103v1": "686427a066e9983d265e0fc19cd28e42772337a085bcce3a13a7747f4c822e65",
+    "2402.02310v3": "418fac39b50ff1ebc8ad188db1b5e2d521998117e28c0890278519909e7304da",
+    "2406.08868v2": "5f09bdd0e24ddd127e99ce4f4eae9be68c1c10238eaa6bc6fee7e04571464199",
+    "2306.03549v1": "366d91797d312dea4724b27618906077141930f76853c1dff18d5d43ad7174af"
+  }
+}
