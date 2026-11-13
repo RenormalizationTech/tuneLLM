@@ -34,7 +34,145 @@
         "papers_per_draw": 10,
         "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
       },
-      "screen_status": "pending; no model selection yet"
+      "screen_status": "completed",
+      "development_screen_passed": true,
+      "learning_rate_selected": true,
+      "development_gate_checks": {
+        "general_mc_correct_drop": {
+          "value": -3,
+          "maximum": 4,
+          "passed": true
+        },
+        "physics_mc_correct_drop": {
+          "value": 0,
+          "maximum": 4,
+          "passed": true
+        },
+        "gsm8k_correct_drop": {
+          "value": 2,
+          "maximum": 4,
+          "passed": true
+        },
+        "gsm8k_truncation_increase": {
+          "value": 0,
+          "maximum": 2,
+          "passed": true
+        },
+        "ifeval_correct_drop": {
+          "value": 1,
+          "maximum": 3,
+          "passed": true
+        },
+        "ifeval_truncation_increase": {
+          "value": 0,
+          "maximum": 2,
+          "passed": true
+        },
+        "writing_all_nonempty": {
+          "value": 30,
+          "required": 30,
+          "passed": true
+        },
+        "writing_flags_increase": {
+          "value": 1,
+          "maximum": 2,
+          "passed": true
+        },
+        "writing_truncated_increase": {
+          "value": 2,
+          "maximum": 2,
+          "passed": true
+        }
+      }
+    },
+    {
+      "id": "physics-r32-lr1e4",
+      "rank": 32,
+      "learning_rate": 0.0001,
+      "seed": 42,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "loss_tokens": 1567140,
+      "training_wall_seconds": 1329.9342844476923,
+      "peak_pytorch_allocated_bytes": 7597219328,
+      "replay": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "nominated_epoch": 1,
+      "nominated_checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/checkpoints/checkpoint-69",
+      "nominated_development_nll": 1.9676019530963014,
+      "development_nll_difference_vs_base": {
+        "candidate_minus_reference_nll": -0.25921054643996366,
+        "ci95": [
+          -0.27374994267374403,
+          -0.24499371315087387
+        ],
+        "includes_zero": false,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 10,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      },
+      "screen_status": "completed",
+      "development_screen_passed": false,
+      "learning_rate_selected": false,
+      "development_gate_checks": {
+        "general_mc_correct_drop": {
+          "value": -2,
+          "maximum": 4,
+          "passed": true
+        },
+        "physics_mc_correct_drop": {
+          "value": -1,
+          "maximum": 4,
+          "passed": true
+        },
+        "gsm8k_correct_drop": {
+          "value": 4,
+          "maximum": 4,
+          "passed": true
+        },
+        "gsm8k_truncation_increase": {
+          "value": -1,
+          "maximum": 2,
+          "passed": true
+        },
+        "ifeval_correct_drop": {
+          "value": 2,
+          "maximum": 3,
+          "passed": true
+        },
+        "ifeval_truncation_increase": {
+          "value": 0,
+          "maximum": 2,
+          "passed": true
+        },
+        "writing_all_nonempty": {
+          "value": 30,
+          "required": 30,
+          "passed": true
+        },
+        "writing_flags_increase": {
+          "value": 2,
+          "maximum": 2,
+          "passed": true
+        },
+        "writing_truncated_increase": {
+          "value": 3,
+          "maximum": 2,
+          "passed": false
+        }
+      }
     }
+  ],
+  "learning_rate_selection": "results/physics_lr_selection.json",
+  "pending_runs": [
+    "physics-r8-lr5e5",
+    "physics-r128-lr5e5"
   ]
 }

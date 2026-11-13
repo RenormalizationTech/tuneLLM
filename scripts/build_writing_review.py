@@ -27,7 +27,10 @@ def main():
     left, right = outputs(args.reference), outputs(args.candidate)
     if set(left) != set(right) or not {r["id"] for r in rows} <= set(left):
         raise ValueError("paired writing output IDs do not align")
+    # The sample subset remains reproducible; A/B identities must not be derivable
+    # from a seed published alongside the review.
     rng = random.Random(20261112)
+    swaps = random.SystemRandom()
     selected = []
     for task in ["title", "abstract", "introduction"]:
         candidates = [r for r in rows if r["task"] == task]
@@ -36,7 +39,7 @@ def main():
     rng.shuffle(selected)
     public, key = [], []
     for i, row in enumerate(selected):
-        swap = rng.choice([False, True])
+        swap = swaps.choice([False, True])
         a, b = (right[row["id"]], left[row["id"]]) if swap else (left[row["id"]], right[row["id"]])
         sample_id = hashlib.sha256((row["id"] + str(i)).encode()).hexdigest()[:12]
         public.append({"sample_id": sample_id, "task": row["task"], "evidence": row["source"], "A": a, "B": b,

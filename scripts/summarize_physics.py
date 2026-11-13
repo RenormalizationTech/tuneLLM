@@ -47,9 +47,22 @@ def main():
             "generation_diagnostics": run.get("generation_diagnostics"),
             "raw_result_sha256": {f.name: digest(f) for f in out.glob("*.json")},
             "checkpoint": spec.get("checkpoint"), "prompt_condition": spec.get("prompt_condition", "zero-shot")}
+        output_lengths = {}
+        for task in ["gsm8k", "ifeval", "writing"]:
+            filename = out / f"{task}_predictions.json"
+            if not filename.exists():
+                continue
+            predictions = read_json(filename)
+            output_lengths[task] = {"items": len(predictions),
+                "mean_input_token_ids": sum(len(r["input_ids"]) for r in predictions) / len(predictions),
+                "mean_returned_generated_token_ids": sum(len(r["generated_ids"]) for r in predictions) / len(predictions),
+                "hit_token_limit": sum(bool(r["hit_token_limit"]) for r in predictions)}
+        conditions[name]["output_lengths"] = output_lengths
         if spec.get("paper_nll"):
             filename = path(spec["paper_nll"])
             report = read_json(filename)
+            if report.get("split") != "test":
+                raise ValueError("final paper evaluation requires a test-split report")
             report = report.get("metrics", report)
             if len(report["per_paper"]) != 20:
                 raise ValueError("final paper evaluation requires all20 held-out papers")
@@ -57,6 +70,19 @@ def main():
             conditions[name]["paper_text"] = {k: v for k, v in report.items() if k not in {"chunks", "per_paper", "records"}}
             conditions[name]["paper_nll_sha256"] = digest(filename)
     comparisons = {}
+    paper_only = {}
+    for name, spec in mapping.get("paper_only_conditions", {}).items():
+        if name in conditions:
+            raise ValueError("duplicate paper-only condition")
+        filename = path(spec["paper_nll"])
+        saved = read_json(filename)
+        report = saved.get("metrics", saved)
+        if saved.get("split") != "test" or len(report["per_paper"]) != 20:
+            raise ValueError("paper-only condition requires all20 final-test papers")
+        paper_reports[name] = report
+        paper_only[name] = {**spec, "paper_nll_sha256": digest(filename),
+                            "token_weighted_nll": report["token_weighted_nll"],
+                            "perplexity": report["perplexity"]}
     for reference, candidate in mapping["paired_comparisons"]:
         a, b = conditions[reference], conditions[candidate]
         if a["fixture_sha256"] != b["fixture_sha256"]:
@@ -71,6 +97,9 @@ def main():
         if reference in paper_reports and candidate in paper_reports:
             comparison["paper_text_nll"] = paired_bootstrap(paper_reports[candidate], paper_reports[reference])
         comparisons[reference + "__" + candidate] = comparison
+    paper_comparisons = {reference + "__" + candidate:
+                         paired_bootstrap(paper_reports[candidate], paper_reports[reference])
+                         for reference, candidate in mapping.get("paper_only_comparisons", [])}
     training = []
     for directory in mapping.get("training_runs", []):
         run = read_json(path(directory) / "run.json")
@@ -87,8 +116,11 @@ def main():
     write_json(args.output, {"status": "computational_evaluation_complete_human_writing_review_pending",
         "model_id": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
         "selection_report": relative(selection), "selection_report_sha256": digest(selection),
+        "lr_selection_report_sha256": digest("results/physics_lr_selection.json"),
         "corpus_manifest_sha256": digest("results/physics_prl_corpus.json"),
         "conditions": conditions, "paired_comparisons": comparisons, "training_runs": training,
+        "paper_only_conditions": paper_only, "paper_only_comparisons": paper_comparisons,
+        "corpus_quality": read_json("results/physics_prl_corpus_quality.json") if path("results/physics_prl_corpus_quality.json").exists() else None,
         "human_writing_ratings": "pending", "writing_quality_improvement_established": False,
         "limits": ["One small paper corpus; arXiv versions can precede final PRL wording; existing pretraining exposure unknown.",
                    "No matched PRB corpus control, so lower text loss is not evidence of PRL-specific style learning.",

@@ -56,7 +56,11 @@ Cleaning removes title-block identity commands even when they follow the abstrac
 hidden/comment blocks, acknowledgments/funding, and back matter. Used macro
 definitions and scientific notation are retained. Six sources contain visible
 revision-color markup, and one long main text was inspected through its conclusion.
-Raw archives are retained locally; TeX is never executed.
+Raw archives are retained locally; TeX is never executed. Five Unicode replacement
+characters in proper names on two training papers were retained in the frozen
+pilot; inspected equations and numbers were unaffected. The cleaned macro subset
+is intended as training text and is not guaranteed to compile. See
+`results/physics_prl_corpus_quality.json`.
 
 ## Development baselines
 
@@ -161,6 +165,14 @@ sequences matched exactly on a fresh-base reload.
 The private NF4 base is published at revision
 `e9af208e44e083b77702a71d8aa65b7d97f78ce6`. All 16 downloaded file hashes and
 both original GPU verification probes match. See `results/nf4_huggingface_publication.json`.
+
+The second rank-32 pilot (1e-4) also completed the identical three-epoch budget.
+Its best development loss was 1.9676020 at epoch 1. Its nominated writing screen
+hit three generation caps, exceeding the registered increase limit of two. The
+5e-5 pilot passed all registered development gates and was selected before the
+rank comparison. The exclusive decision is `results/physics_lr_selection.json`
+(commit `9d60703`); ranks 8 and 128 use 5e-5 with the same maximum exposure.
+These small development checks do not establish improved human-rated writing.
 
 Remaining training and final comparisons are in progress. This section will be replaced
 with the completed run registry, selected checkpoints, final tests, release
