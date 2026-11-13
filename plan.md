@@ -24,13 +24,15 @@ complete the initial project.
 
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
-  the next exercise, while preserving its historical results.
+  the physics-writing exercise, while preserving the historical results.
 - Physics progress: 100 licensed PRL-associated papers frozen into 70/10/20 splits;
   NF4 base published privately and reload-verified. Four optimization runs and
   their development screens completed. The fixed rule selected all-linear rank
   128, LR 5e-5, epoch 1. Both matched controls completed and passed reload
-  verification; the fixed final evaluation is running. See `docs/physics_prl_execution.md` and
-  `results/physics_rank_selection.json`. Human writing ratings remain pending.
+  verification; the fixed final evaluation and private physics-adapter publication
+  are complete. See `docs/physics_prl_execution.md` and
+  `results/physics_rank_selection.json`. Release verification is in
+  `results/physics_huggingface_publication.json`. Human writing ratings remain pending.
 - Current objective: learn the language and structure of a balanced corpus of
   condensed-matter theory PRLs, focusing evaluation on titles, abstracts and
   introductions. No publication-acceptance claim is intended.
@@ -150,8 +152,8 @@ paper-text causal training experiment.
 The current workflow is `docs/model_workflow.md`; its exact frozen physics design
 is `docs/physics_prl_protocol.md`, with the documented contingency addendum.
 Completed development choices stay fixed during the repeat, BF16 control and
-final evaluations. The final report will separate paper-text likelihood, general
-retention and pending human writing judgments.
+final evaluations. The final report separates paper-text likelihood, general
+retention and pending human writing judgments: `results/physics_prl_final.json`.
 
 ------------------------------------------------------------------------
 

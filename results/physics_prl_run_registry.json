@@ -1,5 +1,5 @@
 {
-  "status": "in_progress",
+  "status": "computational_workflow_complete_human_writing_review_pending",
   "completed_runs": [
     {
       "id": "physics-r32-lr5e5",
@@ -408,8 +408,12 @@
   "selected_learning_rate": 5e-05,
   "training_complete": true,
   "pending_stages": [
-    "fixed_final_evaluation",
-    "private_adapter_publication",
     "human_writing_review"
-  ]
+  ],
+  "final_report": "results/physics_prl_final.json",
+  "writing_review": "results/physics_writing_review.json",
+  "publication_status": "published_and_verified",
+  "publication_report": "results/physics_huggingface_publication.json",
+  "adapter_repository": "RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA",
+  "adapter_revision": "fcd1af6d47678431d69cbdff6b1e6af4bee57854"
 }

@@ -5,11 +5,23 @@ Research into behavioral representations and activation steering is an optional
 extension.
 
 The current reusable workflow is documented in
-[docs/model_workflow.md](docs/model_workflow.md). Its next complete exercise uses
+[docs/model_workflow.md](docs/model_workflow.md). The completed Qwen3-4B physics-writing exercise uses
 a saved NF4 base, a balanced corpus of condensed-matter theory PRLs, and writing
 evaluations for titles, abstracts and introductions, with one BF16 LoRA control.
 The verified standalone base is recorded in
 [results/nf4_checkpoint.json](results/nf4_checkpoint.json).
+
+The physics pilot completed six training runs, matched BF16/NF4 controls and
+fixed broad evaluation on a licensed 100-paper corpus. Its selected rank-128,
+epoch-1 adapter reduced held-out paper-text NLL from 1.97494 to 1.73395 but
+reduced numeric GSM8K accuracy from 117/128 to 111/128. Human writing-quality
+improvement remains unestablished. See the [full physics result](results/physics_prl_final.json)
+and [execution record](docs/physics_prl_execution.md). A blinded local review is
+available at `outputs/physics-writing-review/review.html`; its ratings are pending.
+The [private physics adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) is published with its
+[pinned private NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4).
+[Publication checks](results/physics_huggingface_publication.json) passed.
+
 
 Initial workflow:
 

@@ -81,3 +81,29 @@ For a public new repository, omit `--private`. That flag only controls creation;
 an existing repository keeps its visibility. Uploaded artifacts should be checked
 against their file manifest and loaded from the recorded Hub revision before
 calling publication complete.
+
+
+## Physics-writing pilot (private)
+
+- Repository: [RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA).
+- Verified revision: `fcd1af6d47678431d69cbdff6b1e6af4bee57854`.
+- Dependency: private `RenormalizationTech/Qwen3-4B-tuneLLM-NF4` at
+  `e9af208e44e083b77702a71d8aa65b7d97f78ce6`.
+- Selected adapter: all-linear rank 128, alpha 256, LR 5e-5, epoch 1 / step 69,
+  522,380 prediction targets. The full registered run completed three epochs.
+- Training: 70 licensed PRL-associated condensed-matter theory arXiv papers;
+  10 development and 20 final-test papers, with frozen LaTeX and attribution.
+- Held-out NLL: 1.974938 to 1.733950; numeric GSM8K: 117/128 to 111/128.
+  Human writing-quality improvement is not established.
+- All 49 remote file hashes matched; downloaded weights/config/tokenizer hashes
+  and eight title input/generated-ID probes matched. No logits or full-benchmark
+  replay claim is made.
+- Card: [physics adapter README](Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/README.md).
+  Complete [results](../results/physics_prl_final.json) and
+  [publication proof](../results/physics_huggingface_publication.json).
+
+The model package includes exact prepared CC BY data, full attribution, source
+code, environment lock, scorer/fixture metadata and a blinded 60-pair JSON packet.
+Its A/B key remains outside the payload. A separate local 30-pair review is at
+`outputs/physics-writing-review/review.html`; ratings are pending. Earlier public
+GGUF and private GSM8K releases remain separate historical artifacts.

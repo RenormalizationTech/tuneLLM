@@ -1,0 +1,2449 @@
+{
+  "status": "computational_evaluation_complete_human_writing_review_pending",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "summarizer_source_sha256": "44d59787a56fa146450149fef037b6da2e0d9a8e84ac0feb3b6ad07294f0b950",
+  "final_mapping_sha256": "c141541e6ff4e1861cf2507068e0554ed40790c11a4c6a7f0bc72e8f2ca8392f",
+  "selection_report": "results/physics_rank_selection.json",
+  "selection_report_sha256": "47f61e28235bfaa928e4e49f14978811a2d1fcca22af185bbda006973f9d34f7",
+  "lr_selection_report_sha256": "6101d94b3cf2460d0fafcb360b273ea450b04f1687308725c51fd155db36a61d",
+  "nltk_resource_report_sha256": "960585e51a9f5048f5f27a0e04b4ac0aa57c4161ffd8daa5f44f16910e7d8955",
+  "corpus_manifest_sha256": "6deaff7e6ce9d5e139b37168eb0b714b028136fb93d3ec274e0ad1109932f3ec",
+  "conditions": {
+    "nf4_base": {
+      "representation": "nf4",
+      "summary": {
+        "general_mc": {
+          "total": 128,
+          "correct": 85
+        },
+        "physics_mc": {
+          "total": 96,
+          "correct": 63
+        },
+        "gsm8k": {
+          "total": 128,
+          "strict_correct": 97,
+          "fallback_correct": 117,
+          "format_compliant": 104,
+          "hit_token_limit": 2,
+          "strict_accuracy": 0.7578125,
+          "fallback_accuracy": 0.9140625,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 32,
+          "prompt_strict_correct": 24,
+          "instruction_strict_correct": 38,
+          "instruction_total": 47
+        },
+        "writing": {
+          "total": 60,
+          "nonempty": 60,
+          "automatic_fidelity_flags": 0,
+          "human_ratings": "pending",
+          "quality_improvement_established": false
+        }
+      },
+      "evaluation_run": "outputs/physics-final-screen-nf4_base",
+      "run_sha256": "387851ab78bcfa06c8f7377f7eacd64288764e52c974f6ff807f525225d7f5c9",
+      "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+      "writing_sha256": "8cfa6d22c267d49e898e59f034ab067aff260d2af3df8654343198e4210e506e",
+      "generation_batch": 8,
+      "wall_seconds": 1196.7031135512516,
+      "peak_pytorch_allocated_bytes": 9801180672,
+      "generation_diagnostics": {
+        "groups": [
+          {
+            "task": "gsm8k",
+            "rows": 128,
+            "max_new_tokens": 512,
+            "pipeline_wall_seconds": 564.5266147758812,
+            "returned_generated_token_ids": 31635,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 564.4317302349955,
+              "pipeline_wall_seconds": 564.5236902311444,
+              "generated_tokens_per_generation_wall_second": 56.04752232272464,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "ifeval",
+            "rows": 32,
+            "max_new_tokens": 1024,
+            "pipeline_wall_seconds": 356.9525793059729,
+            "returned_generated_token_ids": 13352,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 356.93270524870604,
+              "pipeline_wall_seconds": 356.950523939915,
+              "generated_tokens_per_generation_wall_second": 37.40761158520484,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/title",
+            "rows": 20,
+            "max_new_tokens": 48,
+            "pipeline_wall_seconds": 16.016563850920647,
+            "returned_generated_token_ids": 412,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 15.946533048525453,
+              "pipeline_wall_seconds": 16.014445356093347,
+              "generated_tokens_per_generation_wall_second": 25.8363368856591,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/abstract",
+            "rows": 20,
+            "max_new_tokens": 256,
+            "pipeline_wall_seconds": 80.92421533493325,
+            "returned_generated_token_ids": 3973,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 80.85601465404034,
+              "pipeline_wall_seconds": 80.92209667991847,
+              "generated_tokens_per_generation_wall_second": 49.1367280096518,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/introduction",
+            "rows": 20,
+            "max_new_tokens": 768,
+            "pipeline_wall_seconds": 164.0098409783095,
+            "returned_generated_token_ids": 6477,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 163.94330681441352,
+              "pipeline_wall_seconds": 164.00783023890108,
+              "generated_tokens_per_generation_wall_second": 39.50755981354011,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          }
+        ],
+        "pipeline_wall_seconds": 1182.4298142460175,
+        "returned_generated_token_ids": 55849,
+        "returned_token_ids_per_pipeline_wall_second": 47.23240172661952,
+        "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+      },
+      "raw_result_sha256": {
+        "writing_predictions.json": "688792ed8cf0cbeccbf422e080943c189cbcf29c2cdc20e0e9022ef57678aaeb",
+        "summary.json": "00f79dadde9b054a948ac2a517b8dffce4ad85a88b06cd1d7f4ec230872addca",
+        "run.json": "387851ab78bcfa06c8f7377f7eacd64288764e52c974f6ff807f525225d7f5c9",
+        "gsm8k_predictions.json": "df519ae5a952477818a36861f40d794ec330b22157391eaa38dde30bb1905cd7",
+        "ifeval_predictions.json": "476f76d7fbc3c5cd8ba670ec3a5c6ed9e7495b65014e238d474e8b750b07beac",
+        "training_overlap.json": "c33b5295a177276cb79af3dc5bcb01948f0d0c41ef447d8b8cda9b8e2a6b689f",
+        "general_mc.json": "320287ec55c1709c4b92204c8ad136308c621001bdc357dee0f4c555589f0897",
+        "ifeval_scores.json": "e19c14bd29517536cb8e1a78f0e4ea2c4f03837924f63d6665aee6484b042474",
+        "writing_checks.json": "6f8dadb515f0a1643bf336a630d4c8e79a956882ea1614f6e9f3518d07b5fda3",
+        "gsm8k_scores.json": "b60fa978bc8160774266fef125207c0bf39787223a5daf311c0da06c8ee192cc",
+        "physics_mc.json": "3bc5187a8d098d982fe1bf9c3a1e25c11494f55631fc57403df4e174c9166318"
+      },
+      "checkpoint": null,
+      "checkpoint_sha256": null,
+      "prompt_condition": "zero-shot",
+      "output_lengths": {
+        "gsm8k": {
+          "items": 128,
+          "mean_input_token_ids": 99.4453125,
+          "mean_returned_generated_token_ids": 247.1484375,
+          "hit_token_limit": 2
+        },
+        "ifeval": {
+          "items": 32,
+          "mean_input_token_ids": 56.4375,
+          "mean_returned_generated_token_ids": 417.25,
+          "hit_token_limit": 5
+        },
+        "writing": {
+          "items": 60,
+          "mean_input_token_ids": 1693.3666666666666,
+          "mean_returned_generated_token_ids": 181.03333333333333,
+          "hit_token_limit": 0
+        }
+      },
+      "training_overlap_diagnostic": {
+        "training_sha256": "64f3277ed507798ffea0a5d84b9502d9c11809fab53ec844e4e4044db2d84a08",
+        "predictions_sha256": "688792ed8cf0cbeccbf422e080943c189cbcf29c2cdc20e0e9022ef57678aaeb",
+        "normalization": "casefold; Unicode word tokens; exact within-paper shingles hashed with BLAKE2b-128",
+        "outputs_with_25gram_overlap": 0,
+        "limits": "Overlap may reflect common scientific language, supplied examples or pretraining. Absence of exact overlap does not establish originality; no causal memorization or plagiarism judgment."
+      },
+      "paper_text": {
+        "loss_tokens": 155298,
+        "token_weighted_nll": 1.9749380020590552,
+        "perplexity": 7.206172872090675,
+        "mean_per_paper_nll": 1.9974756384687697,
+        "evaluation_wall_seconds": 25.586780009791255,
+        "scope": "GPU forward uses explicit BF16 autocast before/after training and in standalone evaluation; per-target FP32 cross entropy, FP64 sum. Plain within-paper causal chunks including final EOS, excluding padding and context-only first position"
+      },
+      "paper_nll_sha256": "c6829228661dd575c881f14c8833aba9e17e607c0e9348448525b6338fb48d06"
+    },
+    "nf4_adapter": {
+      "representation": "nf4",
+      "summary": {
+        "general_mc": {
+          "total": 128,
+          "correct": 93
+        },
+        "physics_mc": {
+          "total": 96,
+          "correct": 67
+        },
+        "gsm8k": {
+          "total": 128,
+          "strict_correct": 106,
+          "fallback_correct": 111,
+          "format_compliant": 120,
+          "hit_token_limit": 2,
+          "strict_accuracy": 0.828125,
+          "fallback_accuracy": 0.8671875,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 32,
+          "prompt_strict_correct": 23,
+          "instruction_strict_correct": 37,
+          "instruction_total": 47
+        },
+        "writing": {
+          "total": 60,
+          "nonempty": 60,
+          "automatic_fidelity_flags": 3,
+          "human_ratings": "pending",
+          "quality_improvement_established": false
+        }
+      },
+      "evaluation_run": "outputs/physics-final-screen-nf4_adapter",
+      "run_sha256": "ebefd45a7760fe3a8b71a0efbb76db4abf355f6afcbdcc36521c7ffd6f46e43b",
+      "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+      "writing_sha256": "8cfa6d22c267d49e898e59f034ab067aff260d2af3df8654343198e4210e506e",
+      "generation_batch": 8,
+      "wall_seconds": 1608.8258440908976,
+      "peak_pytorch_allocated_bytes": 11401668096,
+      "generation_diagnostics": {
+        "groups": [
+          {
+            "task": "gsm8k",
+            "rows": 128,
+            "max_new_tokens": 512,
+            "pipeline_wall_seconds": 723.8833828768693,
+            "returned_generated_token_ids": 29871,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 723.7892348519526,
+              "pipeline_wall_seconds": 723.8740188949741,
+              "generated_tokens_per_generation_wall_second": 41.27030157627304,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "ifeval",
+            "rows": 32,
+            "max_new_tokens": 1024,
+            "pipeline_wall_seconds": 510.790862982627,
+            "returned_generated_token_ids": 11302,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 510.75649188272655,
+              "pipeline_wall_seconds": 510.77809382695705,
+              "generated_tokens_per_generation_wall_second": 22.127961522993274,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/title",
+            "rows": 20,
+            "max_new_tokens": 48,
+            "pipeline_wall_seconds": 18.910522266291082,
+            "returned_generated_token_ids": 350,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 18.79824091028422,
+              "pipeline_wall_seconds": 18.897320028860122,
+              "generated_tokens_per_generation_wall_second": 18.61876340825702,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/abstract",
+            "rows": 20,
+            "max_new_tokens": 256,
+            "pipeline_wall_seconds": 103.70327507704496,
+            "returned_generated_token_ids": 3520,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 103.60323270456865,
+              "pipeline_wall_seconds": 103.6904086470604,
+              "generated_tokens_per_generation_wall_second": 33.975773806571354,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/introduction",
+            "rows": 20,
+            "max_new_tokens": 768,
+            "pipeline_wall_seconds": 226.96646827505901,
+            "returned_generated_token_ids": 6262,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 226.86342069739476,
+              "pipeline_wall_seconds": 226.9535292671062,
+              "generated_tokens_per_generation_wall_second": 27.602510712172787,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          }
+        ],
+        "pipeline_wall_seconds": 1584.2545114778914,
+        "returned_generated_token_ids": 51305,
+        "returned_token_ids_per_pipeline_wall_second": 32.38431680534683,
+        "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+      },
+      "raw_result_sha256": {
+        "writing_predictions.json": "4eb2f8db9ee0e72d5893a54389c1bebe8a2a5e765db422cfd5717afd3aafd91e",
+        "summary.json": "3a8c4e2bdffb57d2deb3b811851e5fb221292a8ab0841163dbc86b7e249771a6",
+        "run.json": "ebefd45a7760fe3a8b71a0efbb76db4abf355f6afcbdcc36521c7ffd6f46e43b",
+        "gsm8k_predictions.json": "c99e76b48c800acd9dfaf7830f1437df00e71aa7ec6f86cecf4706850f21e5d2",
+        "ifeval_predictions.json": "12d475f5629234d17276927cf34812309ce3ced082181c08e0d1a29c00a88022",
+        "training_overlap.json": "78402f560c4c18e904b90d56da340c9a93578389e37146d9b00425d24501f5c8",
+        "general_mc.json": "f7eaf4e6a49e785b3c8df9acee9e0661432f1d1c9c8c5210ff151bfc3ecfecb5",
+        "ifeval_scores.json": "dd6baf21f52c3d6635595d5d54414d618bcfc7adc2e019b4a7e88f676beb322f",
+        "writing_checks.json": "480819a26b323cb6d668fac5cd6097762bf37632e21cef5fa34da80bfa13e00f",
+        "gsm8k_scores.json": "4e8ad51b015f24b76ce18b44d87e450d0a00c27edfc897d06ac04e0a7991fa99",
+        "physics_mc.json": "9e9bd07f3b92da5d966ba116c273b26903fb3b9c8193105a7d6f122b0d435505"
+      },
+      "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r128-lr5e5/checkpoints/checkpoint-69",
+      "checkpoint_sha256": "cc3e18f287aac6f688f31a3516c7e1ebec305b4b3c7e630f169a5faad4070d21",
+      "prompt_condition": "zero-shot",
+      "output_lengths": {
+        "gsm8k": {
+          "items": 128,
+          "mean_input_token_ids": 99.4453125,
+          "mean_returned_generated_token_ids": 233.3671875,
+          "hit_token_limit": 2
+        },
+        "ifeval": {
+          "items": 32,
+          "mean_input_token_ids": 56.4375,
+          "mean_returned_generated_token_ids": 353.1875,
+          "hit_token_limit": 4
+        },
+        "writing": {
+          "items": 60,
+          "mean_input_token_ids": 1693.3666666666666,
+          "mean_returned_generated_token_ids": 168.86666666666667,
+          "hit_token_limit": 1
+        }
+      },
+      "training_overlap_diagnostic": {
+        "training_sha256": "64f3277ed507798ffea0a5d84b9502d9c11809fab53ec844e4e4044db2d84a08",
+        "predictions_sha256": "4eb2f8db9ee0e72d5893a54389c1bebe8a2a5e765db422cfd5717afd3aafd91e",
+        "normalization": "casefold; Unicode word tokens; exact within-paper shingles hashed with BLAKE2b-128",
+        "outputs_with_25gram_overlap": 0,
+        "limits": "Overlap may reflect common scientific language, supplied examples or pretraining. Absence of exact overlap does not establish originality; no causal memorization or plagiarism judgment."
+      },
+      "paper_text": {
+        "loss_tokens": 155298,
+        "token_weighted_nll": 1.7339501168980056,
+        "perplexity": 5.662979215504913,
+        "mean_per_paper_nll": 1.7568533862320312,
+        "evaluation_wall_seconds": 35.11900335503742,
+        "scope": "GPU forward uses explicit BF16 autocast before/after training and in standalone evaluation; per-target FP32 cross entropy, FP64 sum. Plain within-paper causal chunks including final EOS, excluding padding and context-only first position"
+      },
+      "paper_nll_sha256": "67ce57caf79dc21a7f74173de85f095428a6c2bc2ed1e293e8fa209e4adc1bf3"
+    },
+    "bf16_base": {
+      "representation": "bf16",
+      "summary": {
+        "general_mc": {
+          "total": 128,
+          "correct": 92
+        },
+        "physics_mc": {
+          "total": 96,
+          "correct": 63
+        },
+        "gsm8k": {
+          "total": 128,
+          "strict_correct": 117,
+          "fallback_correct": 119,
+          "format_compliant": 126,
+          "hit_token_limit": 0,
+          "strict_accuracy": 0.9140625,
+          "fallback_accuracy": 0.9296875,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 32,
+          "prompt_strict_correct": 24,
+          "instruction_strict_correct": 37,
+          "instruction_total": 47
+        },
+        "writing": {
+          "total": 60,
+          "nonempty": 60,
+          "automatic_fidelity_flags": 0,
+          "human_ratings": "pending",
+          "quality_improvement_established": false
+        }
+      },
+      "evaluation_run": "outputs/physics-final-screen-bf16_base",
+      "run_sha256": "c3b80f75f75bd78c546e5847250ca6c35e2a511ffefda53de431ee5a265f91ba",
+      "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+      "writing_sha256": "8cfa6d22c267d49e898e59f034ab067aff260d2af3df8654343198e4210e506e",
+      "generation_batch": 8,
+      "wall_seconds": 581.2786752171814,
+      "peak_pytorch_allocated_bytes": 11249876480,
+      "generation_diagnostics": {
+        "groups": [
+          {
+            "task": "gsm8k",
+            "rows": 128,
+            "max_new_tokens": 512,
+            "pipeline_wall_seconds": 266.5921146860346,
+            "returned_generated_token_ids": 25827,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 266.47733333474025,
+              "pipeline_wall_seconds": 266.58926751092076,
+              "generated_tokens_per_generation_wall_second": 96.92006324439217,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "ifeval",
+            "rows": 32,
+            "max_new_tokens": 1024,
+            "pipeline_wall_seconds": 175.17510029673576,
+            "returned_generated_token_ids": 11918,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 175.15048885764554,
+              "pipeline_wall_seconds": 175.17236722866073,
+              "generated_tokens_per_generation_wall_second": 68.0443433400087,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/title",
+            "rows": 20,
+            "max_new_tokens": 48,
+            "pipeline_wall_seconds": 8.969685291871428,
+            "returned_generated_token_ids": 408,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 8.87291773268953,
+              "pipeline_wall_seconds": 8.966930782888085,
+              "generated_tokens_per_generation_wall_second": 45.982619504838844,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/abstract",
+            "rows": 20,
+            "max_new_tokens": 256,
+            "pipeline_wall_seconds": 40.586606519296765,
+            "returned_generated_token_ids": 3792,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 40.49462557956576,
+              "pipeline_wall_seconds": 40.583981505129486,
+              "generated_tokens_per_generation_wall_second": 93.6420560933277,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/introduction",
+            "rows": 20,
+            "max_new_tokens": 768,
+            "pipeline_wall_seconds": 79.69949880987406,
+            "returned_generated_token_ids": 7235,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 79.59895190736279,
+              "pipeline_wall_seconds": 79.69655960099772,
+              "generated_tokens_per_generation_wall_second": 90.89315658854514,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          }
+        ],
+        "pipeline_wall_seconds": 571.0230056038126,
+        "returned_generated_token_ids": 49180,
+        "returned_token_ids_per_pipeline_wall_second": 86.12612717415116,
+        "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+      },
+      "raw_result_sha256": {
+        "writing_predictions.json": "49efb99fb4b5a2fe83a0b83f05b4f816b44875a16cdccf7e90ed87a564096861",
+        "summary.json": "a64bcdcbce14b532f993fbc96be3a9bf54be9ce9e98910eea7834ecbfc09eda9",
+        "run.json": "c3b80f75f75bd78c546e5847250ca6c35e2a511ffefda53de431ee5a265f91ba",
+        "gsm8k_predictions.json": "bc29f54d8d10d17adc40bbd2f0386319609a834d384cc65dee17995ce2e33448",
+        "ifeval_predictions.json": "80a8641c7df34ff3fcc873d4cf9d62273c989d97e35e90525c876a8304d54706",
+        "training_overlap.json": "e95515cd5e39f120eda8bef756d8384302c4386596273f3e968d3289763b65b5",
+        "general_mc.json": "87aa64d45f62bbd59e06ee9bb0285eb4d7df14909d8e6f5f1bf2096a8af409d8",
+        "ifeval_scores.json": "17c11ec0f3cced48412e168faf3df192088cad221245a45ad413ae931111c7ea",
+        "writing_checks.json": "f5374ce57de81825381369ebb0095da7bd2e9f9527df7a25710a288bb0b1b8e1",
+        "gsm8k_scores.json": "a3a710c2242377026cf1b3091c514edf7720520772b0af031b89da6c186ed3a1",
+        "physics_mc.json": "85643837b3b577fc68aa896e8184fba545dea9bd85559377275cda8dd52f4234"
+      },
+      "checkpoint": null,
+      "checkpoint_sha256": null,
+      "prompt_condition": "zero-shot",
+      "output_lengths": {
+        "gsm8k": {
+          "items": 128,
+          "mean_input_token_ids": 99.4453125,
+          "mean_returned_generated_token_ids": 201.7734375,
+          "hit_token_limit": 0
+        },
+        "ifeval": {
+          "items": 32,
+          "mean_input_token_ids": 56.4375,
+          "mean_returned_generated_token_ids": 372.4375,
+          "hit_token_limit": 3
+        },
+        "writing": {
+          "items": 60,
+          "mean_input_token_ids": 1693.3666666666666,
+          "mean_returned_generated_token_ids": 190.58333333333334,
+          "hit_token_limit": 0
+        }
+      },
+      "training_overlap_diagnostic": {
+        "training_sha256": "64f3277ed507798ffea0a5d84b9502d9c11809fab53ec844e4e4044db2d84a08",
+        "predictions_sha256": "49efb99fb4b5a2fe83a0b83f05b4f816b44875a16cdccf7e90ed87a564096861",
+        "normalization": "casefold; Unicode word tokens; exact within-paper shingles hashed with BLAKE2b-128",
+        "outputs_with_25gram_overlap": 0,
+        "limits": "Overlap may reflect common scientific language, supplied examples or pretraining. Absence of exact overlap does not establish originality; no causal memorization or plagiarism judgment."
+      },
+      "paper_text": {
+        "loss_tokens": 155298,
+        "token_weighted_nll": 1.9291159944537524,
+        "perplexity": 6.883422567482081,
+        "mean_per_paper_nll": 1.9516247088827057,
+        "evaluation_wall_seconds": 19.13388053420931,
+        "scope": "GPU forward uses explicit BF16 autocast before/after training and in standalone evaluation; per-target FP32 cross entropy, FP64 sum. Plain within-paper causal chunks including final EOS, excluding padding and context-only first position"
+      },
+      "paper_nll_sha256": "de0cf71b2e556eb555f19e0c42f0e9fe8d8b5716712e343f3287da084c2e6993"
+    },
+    "bf16_control": {
+      "representation": "bf16",
+      "summary": {
+        "general_mc": {
+          "total": 128,
+          "correct": 95
+        },
+        "physics_mc": {
+          "total": 96,
+          "correct": 64
+        },
+        "gsm8k": {
+          "total": 128,
+          "strict_correct": 112,
+          "fallback_correct": 114,
+          "format_compliant": 125,
+          "hit_token_limit": 1,
+          "strict_accuracy": 0.875,
+          "fallback_accuracy": 0.890625,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 32,
+          "prompt_strict_correct": 25,
+          "instruction_strict_correct": 40,
+          "instruction_total": 47
+        },
+        "writing": {
+          "total": 60,
+          "nonempty": 60,
+          "automatic_fidelity_flags": 7,
+          "human_ratings": "pending",
+          "quality_improvement_established": false
+        }
+      },
+      "evaluation_run": "outputs/physics-final-screen-bf16_control",
+      "run_sha256": "93e31e08cbd86e8977cde4fdf3b963fff949b18a5e58665f4d0e35e1fd9df1bd",
+      "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+      "writing_sha256": "8cfa6d22c267d49e898e59f034ab067aff260d2af3df8654343198e4210e506e",
+      "generation_batch": 8,
+      "wall_seconds": 1040.1585326357745,
+      "peak_pytorch_allocated_bytes": 13283806720,
+      "generation_diagnostics": {
+        "groups": [
+          {
+            "task": "gsm8k",
+            "rows": 128,
+            "max_new_tokens": 512,
+            "pipeline_wall_seconds": 440.23750729626045,
+            "returned_generated_token_ids": 23336,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 440.1285265032202,
+              "pipeline_wall_seconds": 440.2281504869461,
+              "generated_tokens_per_generation_wall_second": 53.02087593685946,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "ifeval",
+            "rows": 32,
+            "max_new_tokens": 1024,
+            "pipeline_wall_seconds": 346.1605822532438,
+            "returned_generated_token_ids": 11167,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 346.1259165802039,
+              "pipeline_wall_seconds": 346.1476791049354,
+              "generated_tokens_per_generation_wall_second": 32.26282536231983,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/title",
+            "rows": 20,
+            "max_new_tokens": 48,
+            "pipeline_wall_seconds": 12.950693222228438,
+            "returned_generated_token_ids": 361,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 12.834634638857096,
+              "pipeline_wall_seconds": 12.937802656088024,
+              "generated_tokens_per_generation_wall_second": 28.127018038134544,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/abstract",
+            "rows": 20,
+            "max_new_tokens": 256,
+            "pipeline_wall_seconds": 65.56239281129092,
+            "returned_generated_token_ids": 3452,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 65.45610299892724,
+              "pipeline_wall_seconds": 65.54976751795039,
+              "generated_tokens_per_generation_wall_second": 52.73763395380527,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/introduction",
+            "rows": 20,
+            "max_new_tokens": 768,
+            "pipeline_wall_seconds": 148.2590294298716,
+            "returned_generated_token_ids": 6815,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 148.14791251113638,
+              "pipeline_wall_seconds": 148.24613308440894,
+              "generated_tokens_per_generation_wall_second": 46.00132316739672,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          }
+        ],
+        "pipeline_wall_seconds": 1013.1702050128952,
+        "returned_generated_token_ids": 45131,
+        "returned_token_ids_per_pipeline_wall_second": 44.544341885207324,
+        "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+      },
+      "raw_result_sha256": {
+        "writing_predictions.json": "81847004e96092f2159f9b9d1a93e246862ce14d8f5d0c620fe5d7d82ae1b0a4",
+        "summary.json": "7297c57e5d53264ec9f4cd061d2560b46154ba1de3f11c6da0a1c483b2a46b73",
+        "run.json": "93e31e08cbd86e8977cde4fdf3b963fff949b18a5e58665f4d0e35e1fd9df1bd",
+        "gsm8k_predictions.json": "2e8ec41a7250580a0683972d872ab31cf07dfb64cbab73a5e1197736eea9b9d1",
+        "ifeval_predictions.json": "c1e2535ef86fa2eeae7b1ca1a1d46f821adeee323b2a51ad76dd6442536da7dd",
+        "training_overlap.json": "da0afa1e6bba4eb81e63703916a4a4c82327979ae0005fe66d7e5ca92fbf5c5a",
+        "general_mc.json": "90699d5f79cde2f87f0698264525b76620af11f3413843e8ce79be2b04fefbd9",
+        "ifeval_scores.json": "32e5f30e784882d9bf1bbaba1051ca596bb01403e0ce406ee56dcc589b2b5dc0",
+        "writing_checks.json": "f975a468d7612bab186aff86896c533eeb097f1f3aaf12843a0304f5ae21046e",
+        "gsm8k_scores.json": "eca64263bdb6fb558d8bf368ae8310d0b898a65c35f2919e0dda89171d2cf859",
+        "physics_mc.json": "93e0c1a0c60e137503a47f72ad5cfd49da326b4ba54d5cdad3d8d19e2274fe6c"
+      },
+      "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r128-lr5e5-bf16/checkpoints/checkpoint-69",
+      "checkpoint_sha256": "08c6e5179970e40d57e0f697a240d831a0235953c9cc43781366bf036d8cf92c",
+      "prompt_condition": "zero-shot",
+      "output_lengths": {
+        "gsm8k": {
+          "items": 128,
+          "mean_input_token_ids": 99.4453125,
+          "mean_returned_generated_token_ids": 182.3125,
+          "hit_token_limit": 1
+        },
+        "ifeval": {
+          "items": 32,
+          "mean_input_token_ids": 56.4375,
+          "mean_returned_generated_token_ids": 348.96875,
+          "hit_token_limit": 4
+        },
+        "writing": {
+          "items": 60,
+          "mean_input_token_ids": 1693.3666666666666,
+          "mean_returned_generated_token_ids": 177.13333333333333,
+          "hit_token_limit": 0
+        }
+      },
+      "training_overlap_diagnostic": {
+        "training_sha256": "64f3277ed507798ffea0a5d84b9502d9c11809fab53ec844e4e4044db2d84a08",
+        "predictions_sha256": "81847004e96092f2159f9b9d1a93e246862ce14d8f5d0c620fe5d7d82ae1b0a4",
+        "normalization": "casefold; Unicode word tokens; exact within-paper shingles hashed with BLAKE2b-128",
+        "outputs_with_25gram_overlap": 0,
+        "limits": "Overlap may reflect common scientific language, supplied examples or pretraining. Absence of exact overlap does not establish originality; no causal memorization or plagiarism judgment."
+      },
+      "paper_text": {
+        "loss_tokens": 155298,
+        "token_weighted_nll": 1.7136371576308553,
+        "perplexity": 5.549107797514118,
+        "mean_per_paper_nll": 1.7362334362366205,
+        "evaluation_wall_seconds": 26.395526894833893,
+        "scope": "GPU forward uses explicit BF16 autocast before/after training and in standalone evaluation; per-target FP32 cross entropy, FP64 sum. Plain within-paper causal chunks including final EOS, excluding padding and context-only first position"
+      },
+      "paper_nll_sha256": "a2c11a6566d3c28c22980f725e5f34b22289c47f51db4998c9d491c847291164"
+    },
+    "nf4_base_fewshot": {
+      "representation": "nf4",
+      "summary": {
+        "writing": {
+          "total": 60,
+          "nonempty": 60,
+          "automatic_fidelity_flags": 0,
+          "human_ratings": "pending",
+          "quality_improvement_established": false
+        }
+      },
+      "evaluation_run": "outputs/physics-final-screen-nf4_base_fewshot",
+      "run_sha256": "54e8e8bae2db128c216e80e3b2cb013c6b11383d430d934c6680cf143f2df3b1",
+      "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+      "writing_sha256": "71739a55f7a8e1487be84acaa8aae79368afdfae4c444150ebe8cd53f923e418",
+      "generation_batch": 8,
+      "wall_seconds": 511.5378678981215,
+      "peak_pytorch_allocated_bytes": 19061264896,
+      "generation_diagnostics": {
+        "groups": [
+          {
+            "task": "writing/title",
+            "rows": 20,
+            "max_new_tokens": 48,
+            "pipeline_wall_seconds": 25.152799733914435,
+            "returned_generated_token_ids": 360,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 24.957134284544736,
+              "pipeline_wall_seconds": 25.15013553481549,
+              "generated_tokens_per_generation_wall_second": 14.42473306011492,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/abstract",
+            "rows": 20,
+            "max_new_tokens": 256,
+            "pipeline_wall_seconds": 136.32314807595685,
+            "returned_generated_token_ids": 3995,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 136.15173771604896,
+              "pipeline_wall_seconds": 136.32035341998562,
+              "generated_tokens_per_generation_wall_second": 29.342262295114924,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          },
+          {
+            "task": "writing/introduction",
+            "rows": 20,
+            "max_new_tokens": 768,
+            "pipeline_wall_seconds": 346.0617689997889,
+            "returned_generated_token_ids": 7684,
+            "hf_generation_timing": {
+              "generation_wall_seconds": 345.8980679279193,
+              "pipeline_wall_seconds": 346.059624907095,
+              "generated_tokens_per_generation_wall_second": 22.214636947903525,
+              "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+            }
+          }
+        ],
+        "pipeline_wall_seconds": 507.5377168096602,
+        "returned_generated_token_ids": 12039,
+        "returned_token_ids_per_pipeline_wall_second": 23.72040461480607,
+        "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+      },
+      "raw_result_sha256": {
+        "writing_predictions.json": "75a6e919a222ddae01f19bb2a4cfda2a2d3296a147f56040aeaa2a729a119312",
+        "summary.json": "304a0832645ae77c594ad7a1c7888329e4a6a84f71ae95def14fcb2b69e5b0ad",
+        "run.json": "54e8e8bae2db128c216e80e3b2cb013c6b11383d430d934c6680cf143f2df3b1",
+        "training_overlap.json": "5468346c1535c3ff8be3a61cc8b0233292681adab73f23a78c275563749fdb63",
+        "writing_checks.json": "9ce1723d8b1d388d064a2948c42ff12fc0c08ef0681f7da7d9566aad8a706134"
+      },
+      "checkpoint": null,
+      "checkpoint_sha256": null,
+      "prompt_condition": "two-example",
+      "output_lengths": {
+        "writing": {
+          "items": 60,
+          "mean_input_token_ids": 3429.366666666667,
+          "mean_returned_generated_token_ids": 200.65,
+          "hit_token_limit": 0
+        }
+      },
+      "training_overlap_diagnostic": {
+        "training_sha256": "64f3277ed507798ffea0a5d84b9502d9c11809fab53ec844e4e4044db2d84a08",
+        "predictions_sha256": "75a6e919a222ddae01f19bb2a4cfda2a2d3296a147f56040aeaa2a729a119312",
+        "normalization": "casefold; Unicode word tokens; exact within-paper shingles hashed with BLAKE2b-128",
+        "outputs_with_25gram_overlap": 0,
+        "limits": "Overlap may reflect common scientific language, supplied examples or pretraining. Absence of exact overlap does not establish originality; no causal memorization or plagiarism judgment."
+      }
+    },
+    "bf16_gguf": {
+      "representation": "gguf",
+      "summary": {
+        "general_mc": {
+          "total": 128,
+          "correct": 92
+        },
+        "physics_mc": {
+          "total": 96,
+          "correct": 62
+        },
+        "gsm8k": {
+          "total": 128,
+          "strict_correct": 115,
+          "fallback_correct": 119,
+          "format_compliant": 124,
+          "hit_token_limit": 0,
+          "strict_accuracy": 0.8984375,
+          "fallback_accuracy": 0.9296875,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 32,
+          "prompt_strict_correct": 25,
+          "instruction_strict_correct": 39,
+          "instruction_total": 47
+        }
+      },
+      "evaluation_run": "outputs/physics-final-screen-bf16_gguf",
+      "run_sha256": "ac8c36064e984645a93a4fb2950af0a245be190d85ba1802e40407af63df5d52",
+      "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+      "writing_sha256": null,
+      "generation_batch": 1,
+      "wall_seconds": 521.8785560759716,
+      "peak_pytorch_allocated_bytes": null,
+      "generation_diagnostics": {
+        "groups": [
+          {
+            "task": "gsm8k",
+            "rows": 128,
+            "max_new_tokens": 512,
+            "pipeline_wall_seconds": 352.38160686194897,
+            "returned_generated_token_ids": 25993,
+            "hf_generation_timing": null
+          },
+          {
+            "task": "ifeval",
+            "rows": 32,
+            "max_new_tokens": 1024,
+            "pipeline_wall_seconds": 154.92742059892043,
+            "returned_generated_token_ids": 11619,
+            "hf_generation_timing": null
+          }
+        ],
+        "pipeline_wall_seconds": 507.3090274608694,
+        "returned_generated_token_ids": 37612,
+        "returned_token_ids_per_pipeline_wall_second": 74.14021427580677,
+        "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+      },
+      "raw_result_sha256": {
+        "summary.json": "1900aea9643e6b7ff221e6132bdefa0b557f11d5ca74bb66f6ae5c5747c0be49",
+        "run.json": "ac8c36064e984645a93a4fb2950af0a245be190d85ba1802e40407af63df5d52",
+        "gsm8k_predictions.json": "83538ce5d5eb7e4486db07cc74ac9ae81926a5932a1273dba3d7101927b188d9",
+        "ifeval_predictions.json": "4b4daf63299761cbf0ecff26a8b9091864458410e3d49fcfe0ac5da693ba0a6c",
+        "general_mc.json": "0e6f08ba7b27a134354d2bc720be42b87aa4d49a03ecac1b83f22e04f051023f",
+        "ifeval_scores.json": "f57f6fac0846d0b4ab3c15644b0d0ef636890c8a7837d9dcb4a7711e792cfd13",
+        "gsm8k_scores.json": "399fdde939e82b481421299ee1a4af1bb2df018ea81cdbdae97212b427317754",
+        "physics_mc.json": "7c6c192cbcf6412641c8f00013d11be2163de63619824052beb1ddd442b69294"
+      },
+      "checkpoint": null,
+      "checkpoint_sha256": null,
+      "prompt_condition": "zero-shot",
+      "output_lengths": {
+        "gsm8k": {
+          "items": 128,
+          "mean_input_token_ids": 99.4453125,
+          "mean_returned_generated_token_ids": 203.0703125,
+          "hit_token_limit": 0
+        },
+        "ifeval": {
+          "items": 32,
+          "mean_input_token_ids": 56.4375,
+          "mean_returned_generated_token_ids": 363.09375,
+          "hit_token_limit": 3
+        }
+      },
+      "gguf_file": "/home/angkunwu/Documents/tuneLLM/artifacts/gguf/Qwen3-4B-BF16.gguf",
+      "gguf_sha256": "5dbbfbb5ccea81a811ef8346248bbf8f808c94477feb84415699d632798925b9",
+      "llama_cpp_revision": "8ca5a8008b57aa39f2601546c0d07912045080a5",
+      "llama_server_sha256": "8833d8c750965e9a9c248a5c7efd0e1bf0744d55363ce59dcb8492595f315e9d"
+    },
+    "q8": {
+      "representation": "gguf",
+      "summary": {
+        "general_mc": {
+          "total": 128,
+          "correct": 89
+        },
+        "physics_mc": {
+          "total": 96,
+          "correct": 61
+        },
+        "gsm8k": {
+          "total": 128,
+          "strict_correct": 118,
+          "fallback_correct": 121,
+          "format_compliant": 125,
+          "hit_token_limit": 0,
+          "strict_accuracy": 0.921875,
+          "fallback_accuracy": 0.9453125,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 32,
+          "prompt_strict_correct": 25,
+          "instruction_strict_correct": 38,
+          "instruction_total": 47
+        }
+      },
+      "evaluation_run": "outputs/physics-final-screen-q8",
+      "run_sha256": "f6b73148a4105bc1fc9533d4c927b7ad031c9bcb43a4b536834099aae2dbed9d",
+      "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+      "writing_sha256": null,
+      "generation_batch": 1,
+      "wall_seconds": 336.305969981011,
+      "peak_pytorch_allocated_bytes": null,
+      "generation_diagnostics": {
+        "groups": [
+          {
+            "task": "gsm8k",
+            "rows": 128,
+            "max_new_tokens": 512,
+            "pipeline_wall_seconds": 222.8227247307077,
+            "returned_generated_token_ids": 26042,
+            "hf_generation_timing": null
+          },
+          {
+            "task": "ifeval",
+            "rows": 32,
+            "max_new_tokens": 1024,
+            "pipeline_wall_seconds": 100.61328496877104,
+            "returned_generated_token_ids": 11737,
+            "hf_generation_timing": null
+          }
+        ],
+        "pipeline_wall_seconds": 323.43600969947875,
+        "returned_generated_token_ids": 37779,
+        "returned_token_ids_per_pipeline_wall_second": 116.80517588348445,
+        "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+      },
+      "raw_result_sha256": {
+        "summary.json": "e062cf6d61e96d7c428f749fdc9d1670bc0f173031fd72c5a5057ed2bcb4f234",
+        "run.json": "f6b73148a4105bc1fc9533d4c927b7ad031c9bcb43a4b536834099aae2dbed9d",
+        "gsm8k_predictions.json": "5636c546b81a51cceaf1371348334518d9e0685856abc89b2c7b63b0092c9af1",
+        "ifeval_predictions.json": "55a52e6b4cb67ea8c2ba51fca0c8d211d7cacc19f8fb69afda08dbdb4a70eac2",
+        "general_mc.json": "e82df83567d9666d983cbba156dc4971e4b7b11058e73ba450a148da6ad127fc",
+        "ifeval_scores.json": "acce7a6c2fa9deaa86b7d2891f683e5c07b34eb6c4beccd62999a67cc1ebe491",
+        "gsm8k_scores.json": "92b27a02334d6a00b208b3b1d0de2053cc361661260a6d7b8dbbb7228470e9f1",
+        "physics_mc.json": "9f8a56ac320d76a557fcbad783ec0e3a9da98770ee2cafd3d488b996a69e21a3"
+      },
+      "checkpoint": null,
+      "checkpoint_sha256": null,
+      "prompt_condition": "zero-shot",
+      "output_lengths": {
+        "gsm8k": {
+          "items": 128,
+          "mean_input_token_ids": 99.4453125,
+          "mean_returned_generated_token_ids": 203.453125,
+          "hit_token_limit": 0
+        },
+        "ifeval": {
+          "items": 32,
+          "mean_input_token_ids": 56.4375,
+          "mean_returned_generated_token_ids": 366.78125,
+          "hit_token_limit": 3
+        }
+      },
+      "gguf_file": "/home/angkunwu/Documents/tuneLLM/artifacts/gguf/Qwen3-4B-Q8_0.gguf",
+      "gguf_sha256": "4b2b96c36712c42d902fb23cb361ed8ebf838a4342f77cedb87afe99e291775f",
+      "llama_cpp_revision": "8ca5a8008b57aa39f2601546c0d07912045080a5",
+      "llama_server_sha256": "8833d8c750965e9a9c248a5c7efd0e1bf0744d55363ce59dcb8492595f315e9d"
+    },
+    "q4": {
+      "representation": "gguf",
+      "summary": {
+        "general_mc": {
+          "total": 128,
+          "correct": 89
+        },
+        "physics_mc": {
+          "total": 96,
+          "correct": 61
+        },
+        "gsm8k": {
+          "total": 128,
+          "strict_correct": 114,
+          "fallback_correct": 116,
+          "format_compliant": 124,
+          "hit_token_limit": 2,
+          "strict_accuracy": 0.890625,
+          "fallback_accuracy": 0.90625,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 32,
+          "prompt_strict_correct": 24,
+          "instruction_strict_correct": 39,
+          "instruction_total": 47
+        }
+      },
+      "evaluation_run": "outputs/physics-final-screen-q4",
+      "run_sha256": "ca0f893023b9d763f8fd1ce76dc3187e205cd27c8b517e9e93af1281a3dfc7a0",
+      "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+      "writing_sha256": null,
+      "generation_batch": 1,
+      "wall_seconds": 243.0669180699624,
+      "peak_pytorch_allocated_bytes": null,
+      "generation_diagnostics": {
+        "groups": [
+          {
+            "task": "gsm8k",
+            "rows": 128,
+            "max_new_tokens": 512,
+            "pipeline_wall_seconds": 163.5213563768193,
+            "returned_generated_token_ids": 25744,
+            "hf_generation_timing": null
+          },
+          {
+            "task": "ifeval",
+            "rows": 32,
+            "max_new_tokens": 1024,
+            "pipeline_wall_seconds": 67.11670288909227,
+            "returned_generated_token_ids": 10656,
+            "hf_generation_timing": null
+          }
+        ],
+        "pipeline_wall_seconds": 230.63805926591158,
+        "returned_generated_token_ids": 36400,
+        "returned_token_ids_per_pipeline_wall_second": 157.82304150432097,
+        "scope": "Generation pipeline wall includes rendering/tokenization/transfers/decoding; GGUF includes token parity HTTP requests. HF IDs include terminal EOS; GGUF returned IDs use server conventions. Diagnostic, not decode-only throughput; excludes scoring and MC likelihood."
+      },
+      "raw_result_sha256": {
+        "summary.json": "d7a2804f18bb17834bcdc1b7db6dd3cd83f273ee56fa090984d5946cad9b24f9",
+        "run.json": "ca0f893023b9d763f8fd1ce76dc3187e205cd27c8b517e9e93af1281a3dfc7a0",
+        "gsm8k_predictions.json": "5095245a94e365e4acd56ae9b79944f719af08d84cfd716a235fa29775291b63",
+        "ifeval_predictions.json": "43019849913885dea5e66caac5faac834b2fc0779054c1a71b27c56bbca6f755",
+        "general_mc.json": "919d9ec02dd38ebcbad143285da3b33c6f906c9ab89cb3261b9264d51f16a033",
+        "ifeval_scores.json": "09e0ae0df6157efb96827b17167e14e59502e862c024484c365f6f744c6c8c5c",
+        "gsm8k_scores.json": "3aabb12d1b6948a3076b59077cb78e88c7c410fd4e77dfad4f1ba8d547ecb53a",
+        "physics_mc.json": "e4d0348ed28622109a874b2520a3390a9b8a98996ccb23f79a6df585b6a1b4e7"
+      },
+      "checkpoint": null,
+      "checkpoint_sha256": null,
+      "prompt_condition": "zero-shot",
+      "output_lengths": {
+        "gsm8k": {
+          "items": 128,
+          "mean_input_token_ids": 99.4453125,
+          "mean_returned_generated_token_ids": 201.125,
+          "hit_token_limit": 2
+        },
+        "ifeval": {
+          "items": 32,
+          "mean_input_token_ids": 56.4375,
+          "mean_returned_generated_token_ids": 333.0,
+          "hit_token_limit": 2
+        }
+      },
+      "gguf_file": "/home/angkunwu/Documents/tuneLLM/artifacts/gguf/Qwen3-4B-Q4_K_M.gguf",
+      "gguf_sha256": "f7a3480949df3ae406a9661aae19e34b6c6ae344e7b6b8edd38b6185b786f339",
+      "llama_cpp_revision": "8ca5a8008b57aa39f2601546c0d07912045080a5",
+      "llama_server_sha256": "8833d8c750965e9a9c248a5c7efd0e1bf0744d55363ce59dcb8492595f315e9d"
+    }
+  },
+  "paired_comparisons": {
+    "nf4_base__nf4_adapter": {
+      "general_mc": {
+        "fixed": 11,
+        "broken": 3,
+        "both": 82,
+        "neither": 32,
+        "b": 3,
+        "c": 11,
+        "total": 128,
+        "discordant": 14,
+        "accuracy_delta": 0.0625,
+        "mcnemar_exact_two_sided_p": 0.057373046875,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "gsm8k": {
+        "fixed": 3,
+        "broken": 9,
+        "both": 108,
+        "neither": 8,
+        "b": 9,
+        "c": 3,
+        "total": 128,
+        "discordant": 12,
+        "accuracy_delta": -0.046875,
+        "mcnemar_exact_two_sided_p": 0.14599609375,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "ifeval": {
+        "fixed": 1,
+        "broken": 2,
+        "both": 22,
+        "neither": 7,
+        "b": 2,
+        "c": 1,
+        "total": 32,
+        "discordant": 3,
+        "accuracy_delta": -0.03125,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "physics_mc": {
+        "fixed": 8,
+        "broken": 4,
+        "both": 59,
+        "neither": 25,
+        "b": 4,
+        "c": 8,
+        "total": 96,
+        "discordant": 12,
+        "accuracy_delta": 0.041666666666666664,
+        "mcnemar_exact_two_sided_p": 0.3876953125,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "paper_text_nll": {
+        "candidate_minus_reference_nll": -0.24098788516104963,
+        "ci95": [
+          -0.2474378295443064,
+          -0.23498718313124042
+        ],
+        "includes_zero": false,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 20,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      }
+    },
+    "bf16_base__bf16_control": {
+      "general_mc": {
+        "fixed": 10,
+        "broken": 7,
+        "both": 85,
+        "neither": 26,
+        "b": 7,
+        "c": 10,
+        "total": 128,
+        "discordant": 17,
+        "accuracy_delta": 0.0234375,
+        "mcnemar_exact_two_sided_p": 0.629058837890625,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "gsm8k": {
+        "fixed": 2,
+        "broken": 7,
+        "both": 112,
+        "neither": 7,
+        "b": 7,
+        "c": 2,
+        "total": 128,
+        "discordant": 9,
+        "accuracy_delta": -0.0390625,
+        "mcnemar_exact_two_sided_p": 0.1796875,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "ifeval": {
+        "fixed": 1,
+        "broken": 0,
+        "both": 24,
+        "neither": 7,
+        "b": 0,
+        "c": 1,
+        "total": 32,
+        "discordant": 1,
+        "accuracy_delta": 0.03125,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "physics_mc": {
+        "fixed": 3,
+        "broken": 2,
+        "both": 61,
+        "neither": 30,
+        "b": 2,
+        "c": 3,
+        "total": 96,
+        "discordant": 5,
+        "accuracy_delta": 0.010416666666666666,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "paper_text_nll": {
+        "candidate_minus_reference_nll": -0.21547883682289704,
+        "ci95": [
+          -0.22404035530699687,
+          -0.20819636929055022
+        ],
+        "includes_zero": false,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 20,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      }
+    },
+    "nf4_base__bf16_base": {
+      "general_mc": {
+        "fixed": 11,
+        "broken": 4,
+        "both": 81,
+        "neither": 32,
+        "b": 4,
+        "c": 11,
+        "total": 128,
+        "discordant": 15,
+        "accuracy_delta": 0.0546875,
+        "mcnemar_exact_two_sided_p": 0.11846923828125,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "gsm8k": {
+        "fixed": 4,
+        "broken": 2,
+        "both": 115,
+        "neither": 7,
+        "b": 2,
+        "c": 4,
+        "total": 128,
+        "discordant": 6,
+        "accuracy_delta": 0.015625,
+        "mcnemar_exact_two_sided_p": 0.6875,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "ifeval": {
+        "fixed": 1,
+        "broken": 1,
+        "both": 23,
+        "neither": 7,
+        "b": 1,
+        "c": 1,
+        "total": 32,
+        "discordant": 2,
+        "accuracy_delta": 0.0,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "physics_mc": {
+        "fixed": 5,
+        "broken": 5,
+        "both": 58,
+        "neither": 28,
+        "b": 5,
+        "c": 5,
+        "total": 96,
+        "discordant": 10,
+        "accuracy_delta": 0.0,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "paper_text_nll": {
+        "candidate_minus_reference_nll": -0.04582200760530286,
+        "ci95": [
+          -0.049330191526176126,
+          -0.04195060526424132
+        ],
+        "includes_zero": false,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 20,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      }
+    },
+    "nf4_adapter__bf16_control": {
+      "general_mc": {
+        "fixed": 5,
+        "broken": 3,
+        "both": 90,
+        "neither": 30,
+        "b": 3,
+        "c": 5,
+        "total": 128,
+        "discordant": 8,
+        "accuracy_delta": 0.015625,
+        "mcnemar_exact_two_sided_p": 0.7265625,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "gsm8k": {
+        "fixed": 7,
+        "broken": 4,
+        "both": 107,
+        "neither": 10,
+        "b": 4,
+        "c": 7,
+        "total": 128,
+        "discordant": 11,
+        "accuracy_delta": 0.0234375,
+        "mcnemar_exact_two_sided_p": 0.548828125,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "ifeval": {
+        "fixed": 2,
+        "broken": 0,
+        "both": 23,
+        "neither": 7,
+        "b": 0,
+        "c": 2,
+        "total": 32,
+        "discordant": 2,
+        "accuracy_delta": 0.0625,
+        "mcnemar_exact_two_sided_p": 0.5,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "physics_mc": {
+        "fixed": 2,
+        "broken": 5,
+        "both": 62,
+        "neither": 27,
+        "b": 5,
+        "c": 2,
+        "total": 96,
+        "discordant": 7,
+        "accuracy_delta": -0.03125,
+        "mcnemar_exact_two_sided_p": 0.453125,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "paper_text_nll": {
+        "candidate_minus_reference_nll": -0.020312959267150266,
+        "ci95": [
+          -0.021826823622688656,
+          -0.018843337362992214
+        ],
+        "includes_zero": false,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 20,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      }
+    },
+    "bf16_base__bf16_gguf": {
+      "general_mc": {
+        "fixed": 3,
+        "broken": 3,
+        "both": 89,
+        "neither": 33,
+        "b": 3,
+        "c": 3,
+        "total": 128,
+        "discordant": 6,
+        "accuracy_delta": 0.0,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "gsm8k": {
+        "fixed": 0,
+        "broken": 0,
+        "both": 119,
+        "neither": 9,
+        "b": 0,
+        "c": 0,
+        "total": 128,
+        "discordant": 0,
+        "accuracy_delta": 0.0,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "ifeval": {
+        "fixed": 1,
+        "broken": 0,
+        "both": 24,
+        "neither": 7,
+        "b": 0,
+        "c": 1,
+        "total": 32,
+        "discordant": 1,
+        "accuracy_delta": 0.03125,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "physics_mc": {
+        "fixed": 0,
+        "broken": 1,
+        "both": 62,
+        "neither": 33,
+        "b": 1,
+        "c": 0,
+        "total": 96,
+        "discordant": 1,
+        "accuracy_delta": -0.010416666666666666,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      }
+    },
+    "bf16_gguf__q8": {
+      "general_mc": {
+        "fixed": 1,
+        "broken": 4,
+        "both": 88,
+        "neither": 35,
+        "b": 4,
+        "c": 1,
+        "total": 128,
+        "discordant": 5,
+        "accuracy_delta": -0.0234375,
+        "mcnemar_exact_two_sided_p": 0.375,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "gsm8k": {
+        "fixed": 3,
+        "broken": 1,
+        "both": 118,
+        "neither": 6,
+        "b": 1,
+        "c": 3,
+        "total": 128,
+        "discordant": 4,
+        "accuracy_delta": 0.015625,
+        "mcnemar_exact_two_sided_p": 0.625,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "ifeval": {
+        "fixed": 1,
+        "broken": 1,
+        "both": 24,
+        "neither": 6,
+        "b": 1,
+        "c": 1,
+        "total": 32,
+        "discordant": 2,
+        "accuracy_delta": 0.0,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "physics_mc": {
+        "fixed": 0,
+        "broken": 1,
+        "both": 61,
+        "neither": 34,
+        "b": 1,
+        "c": 0,
+        "total": 96,
+        "discordant": 1,
+        "accuracy_delta": -0.010416666666666666,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      }
+    },
+    "bf16_gguf__q4": {
+      "general_mc": {
+        "fixed": 5,
+        "broken": 8,
+        "both": 84,
+        "neither": 31,
+        "b": 8,
+        "c": 5,
+        "total": 128,
+        "discordant": 13,
+        "accuracy_delta": -0.0234375,
+        "mcnemar_exact_two_sided_p": 0.5810546875,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "gsm8k": {
+        "fixed": 3,
+        "broken": 6,
+        "both": 113,
+        "neither": 6,
+        "b": 6,
+        "c": 3,
+        "total": 128,
+        "discordant": 9,
+        "accuracy_delta": -0.0234375,
+        "mcnemar_exact_two_sided_p": 0.5078125,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "ifeval": {
+        "fixed": 0,
+        "broken": 1,
+        "both": 24,
+        "neither": 7,
+        "b": 1,
+        "c": 0,
+        "total": 32,
+        "discordant": 1,
+        "accuracy_delta": -0.03125,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      },
+      "physics_mc": {
+        "fixed": 3,
+        "broken": 4,
+        "both": 58,
+        "neither": 31,
+        "b": 4,
+        "c": 3,
+        "total": 96,
+        "discordant": 7,
+        "accuracy_delta": -0.010416666666666666,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "interpretation": "Exploratory, unadjusted exact two-sided McNemar; b=broken=base right/adapter wrong, c=fixed=base wrong/adapter right. No continuity correction; zero discordant pairs gives p=1."
+      }
+    }
+  },
+  "training_runs": [
+    {
+      "run": "outputs/physics-r128-lr5e5",
+      "rank": 128,
+      "learning_rate": 5e-05,
+      "seed": 42,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "exposure": {
+        "actual_loss_tokens": 1567140,
+        "actual_microbatches": 1650
+      },
+      "trainable_parameters": 264241152,
+      "wall_seconds": 1371.5269506452605,
+      "peak_pytorch_allocated_bytes": 11104091136,
+      "final_epoch_serialization_probe": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "learning_curve": [
+        {
+          "eval_loss": 1.9626056121585655,
+          "eval_mean_per_paper_nll": 1.9675099946873504,
+          "epoch": 1.0,
+          "step": 69
+        },
+        {
+          "eval_loss": 1.9730482880596054,
+          "eval_mean_per_paper_nll": 1.9780701477749225,
+          "epoch": 2.0,
+          "step": 138
+        },
+        {
+          "eval_loss": 2.003700930588991,
+          "eval_mean_per_paper_nll": 2.0085887561400453,
+          "epoch": 3.0,
+          "step": 207
+        }
+      ],
+      "run_sha256": "fb28b6a8031d1741f6f87f83d0553a836b338a789f2e77184a9362bfd80c8b9a"
+    },
+    {
+      "run": "outputs/physics-r128-lr5e5-bf16",
+      "rank": 128,
+      "learning_rate": 5e-05,
+      "seed": 42,
+      "representation": "bf16",
+      "epochs": 3,
+      "steps": 207,
+      "exposure": {
+        "actual_loss_tokens": 1567140,
+        "actual_microbatches": 1650
+      },
+      "trainable_parameters": 264241152,
+      "wall_seconds": 1087.1568453363143,
+      "peak_pytorch_allocated_bytes": 14772923392,
+      "final_epoch_serialization_probe": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "learning_curve": [
+        {
+          "eval_loss": 1.941322823173061,
+          "eval_mean_per_paper_nll": 1.9463068818643017,
+          "epoch": 1.0,
+          "step": 69
+        },
+        {
+          "eval_loss": 1.953930637359068,
+          "eval_mean_per_paper_nll": 1.9589724978659464,
+          "epoch": 2.0,
+          "step": 138
+        },
+        {
+          "eval_loss": 1.985128721737838,
+          "eval_mean_per_paper_nll": 1.990190442605798,
+          "epoch": 3.0,
+          "step": 207
+        }
+      ],
+      "run_sha256": "e7050f67b1bb08e7ba52e780b1db41eb33e0790a77ffe731679f3ee3280fcd33"
+    },
+    {
+      "run": "outputs/physics-r128-lr5e5-seed43",
+      "rank": 128,
+      "learning_rate": 5e-05,
+      "seed": 43,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "exposure": {
+        "actual_loss_tokens": 1567140,
+        "actual_microbatches": 1650
+      },
+      "trainable_parameters": 264241152,
+      "wall_seconds": 1371.9934191433713,
+      "peak_pytorch_allocated_bytes": 11104091136,
+      "final_epoch_serialization_probe": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "learning_curve": [
+        {
+          "eval_loss": 1.9624437363130305,
+          "eval_mean_per_paper_nll": 1.9675164389911028,
+          "epoch": 1.0,
+          "step": 69
+        },
+        {
+          "eval_loss": 1.9723483731375648,
+          "eval_mean_per_paper_nll": 1.9775200599914904,
+          "epoch": 2.0,
+          "step": 138
+        },
+        {
+          "eval_loss": 2.005780319318288,
+          "eval_mean_per_paper_nll": 2.01086013997891,
+          "epoch": 3.0,
+          "step": 207
+        }
+      ],
+      "run_sha256": "d880d2270cad52ba00cf407974e4cddbd57318a74f64d2ab38f21044b14f4b4e"
+    },
+    {
+      "run": "outputs/physics-r32-lr1e4",
+      "rank": 32,
+      "learning_rate": 0.0001,
+      "seed": 42,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "exposure": {
+        "actual_loss_tokens": 1567140,
+        "actual_microbatches": 1650
+      },
+      "trainable_parameters": 66060288,
+      "wall_seconds": 1329.9342844476923,
+      "peak_pytorch_allocated_bytes": 7597219328,
+      "final_epoch_serialization_probe": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "learning_curve": [
+        {
+          "eval_loss": 1.9676019530963014,
+          "eval_mean_per_paper_nll": 1.9724578669822777,
+          "epoch": 1.0,
+          "step": 69
+        },
+        {
+          "eval_loss": 1.9718371598835982,
+          "eval_mean_per_paper_nll": 1.9768733789958133,
+          "epoch": 2.0,
+          "step": 138
+        },
+        {
+          "eval_loss": 1.9954951941976213,
+          "eval_mean_per_paper_nll": 2.0004185950463906,
+          "epoch": 3.0,
+          "step": 207
+        }
+      ],
+      "run_sha256": "6c832303a1a263864d85b85a539bcc62f46c77c8c4471a820c16a3ba13fbc044"
+    },
+    {
+      "run": "outputs/physics-r32-lr5e5",
+      "rank": 32,
+      "learning_rate": 5e-05,
+      "seed": 42,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "exposure": {
+        "actual_loss_tokens": 1567140,
+        "actual_microbatches": 1650
+      },
+      "trainable_parameters": 66060288,
+      "wall_seconds": 1334.4284805450588,
+      "peak_pytorch_allocated_bytes": 7597219328,
+      "final_epoch_serialization_probe": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "learning_curve": [
+        {
+          "eval_loss": 1.9777026286287003,
+          "eval_mean_per_paper_nll": 1.982565575765744,
+          "epoch": 1.0,
+          "step": 69
+        },
+        {
+          "eval_loss": 1.9657981930000399,
+          "eval_mean_per_paper_nll": 1.9707550649595036,
+          "epoch": 2.0,
+          "step": 138
+        },
+        {
+          "eval_loss": 1.9670664823558517,
+          "eval_mean_per_paper_nll": 1.9719192670863275,
+          "epoch": 3.0,
+          "step": 207
+        }
+      ],
+      "run_sha256": "0cc00756fbd5479dc31cc5d98d1b5196c05f5a26a4b8f522a4d953cae299d116"
+    },
+    {
+      "run": "outputs/physics-r8-lr5e5",
+      "rank": 8,
+      "learning_rate": 5e-05,
+      "seed": 42,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "exposure": {
+        "actual_loss_tokens": 1567140,
+        "actual_microbatches": 1650
+      },
+      "trainable_parameters": 16515072,
+      "wall_seconds": 1331.1947862091474,
+      "peak_pytorch_allocated_bytes": 6746892288,
+      "final_epoch_serialization_probe": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "learning_curve": [
+        {
+          "eval_loss": 2.004695741020833,
+          "eval_mean_per_paper_nll": 2.009662109203112,
+          "epoch": 1.0,
+          "step": 69
+        },
+        {
+          "eval_loss": 1.9825770630174568,
+          "eval_mean_per_paper_nll": 1.9873648779900992,
+          "epoch": 2.0,
+          "step": 138
+        },
+        {
+          "eval_loss": 1.9786641041537358,
+          "eval_mean_per_paper_nll": 1.9834756727796106,
+          "epoch": 3.0,
+          "step": 207
+        }
+      ],
+      "run_sha256": "e08f592783471a88b3d61a504a41ac79ed0a1b4a5b29ca9cbdb2f612a8666bbe"
+    }
+  ],
+  "paper_only_conditions": {
+    "nf4_repeat": {
+      "paper_nll": "/home/angkunwu/Documents/tuneLLM/outputs/physics-final-nf4_repeat-paper-nll.json",
+      "checkpoint_sha256": "243b85ebaa53c3cc2a6010b5027dd678918d01e2688f7257c86e802afb225d6c",
+      "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r128-lr5e5-seed43/checkpoints/checkpoint-69",
+      "representation": "nf4",
+      "paper_nll_sha256": "417e17e5cbc9c3b42b89a2036751374cfcec0e7f81f85c29a9ad72f7f4d9be69",
+      "token_weighted_nll": 1.7339258897044154,
+      "perplexity": 5.66284201907311
+    }
+  },
+  "paper_only_comparisons": {
+    "nf4_adapter__nf4_repeat": {
+      "candidate_minus_reference_nll": -2.4227193590187213e-05,
+      "ci95": [
+        -0.001100409117051182,
+        0.0010016866955237346
+      ],
+      "includes_zero": true,
+      "resamples": 10000,
+      "seed": 20261112,
+      "papers_per_draw": 20,
+      "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+    },
+    "nf4_base__nf4_repeat": {
+      "candidate_minus_reference_nll": -0.24101211235463982,
+      "ci95": [
+        -0.2479016579185726,
+        -0.2346954310269098
+      ],
+      "includes_zero": false,
+      "resamples": 10000,
+      "seed": 20261112,
+      "papers_per_draw": 20,
+      "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+    }
+  },
+  "corpus_quality": {
+    "papers": 100,
+    "unique_dois": 100,
+    "unique_clean_text_sha256": 100,
+    "unicode_replacement_characters": 5,
+    "papers_with_replacement_characters": [
+      "2507.10762v2",
+      "2311.08893v1"
+    ],
+    "year_counts": {
+      "2025": 22,
+      "2023": 40,
+      "2024": 38
+    },
+    "annotation_flagged_ids": [
+      "2507.10762v2",
+      "2507.20705v4",
+      "2409.18050v2",
+      "2407.01457v1",
+      "2312.04093v2",
+      "2410.09148v2"
+    ],
+    "long_main_text_ids": [
+      "2310.02218v1"
+    ],
+    "split_sha256": {
+      "train": "64f3277ed507798ffea0a5d84b9502d9c11809fab53ec844e4e4044db2d84a08",
+      "validation": "99af3cc0990049054664587e015e471885ee7ff857aafc35bf555cd2a161ea77",
+      "test": "29b759abbeace7f379bf9b8afd166c4ca5560562ff141f2fee19d160b61b9973"
+    },
+    "current_data_not_mutated": true,
+    "replacement_character_review": "Five replacement characters occur in proper names (Büttiker/Néel) in two training papers; no equations or numerical values were affected in inspected contexts. Retained in this frozen pilot; stricter source decoding is a follow-up.",
+    "latex_limit": "Cleaned paper text preserves a subset of used macro definitions and is not guaranteed to be a compilable standalone document."
+  },
+  "ifeval_language_stability": {
+    "scope": "Supplementary language-detector seed sensitivity only; primary official scores retained unchanged",
+    "primary_scores_modified": false,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "langdetect_version": "1.0.9",
+    "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+    "diagnostic_source_sha256": "62f8403c43c55dd1c1a497a7ecf3262378161414dbaf6fe87249f5ae18f09889",
+    "method": "Replay language and English-case clauses for seeds 0..19; retain other official clause results and recombine prompt-strict flags. No text or labels are altered.",
+    "conditions": {
+      "physics-final-screen-nf4_base": {
+        "primary_prompt_strict_correct": 24,
+        "seeded_prompt_strict_counts": [
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        "seeded_count_range": [
+          24,
+          24
+        ],
+        "all_seeded_prompt_counts_equal_primary": true,
+        "cases": [
+          {
+            "id": "1779",
+            "instruction": "change_case:english_capital",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2817",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2299",
+            "instruction": "language:response_language",
+            "expected_language": "sw",
+            "case_precondition": true,
+            "label_counts": {
+              "sw": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2372",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          }
+        ],
+        "predictions_sha256": "476f76d7fbc3c5cd8ba670ec3a5c6ed9e7495b65014e238d474e8b750b07beac",
+        "primary_scores_sha256": "e19c14bd29517536cb8e1a78f0e4ea2c4f03837924f63d6665aee6484b042474"
+      },
+      "physics-final-screen-nf4_adapter": {
+        "primary_prompt_strict_correct": 23,
+        "seeded_prompt_strict_counts": [
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23
+        ],
+        "seeded_count_range": [
+          23,
+          23
+        ],
+        "all_seeded_prompt_counts_equal_primary": true,
+        "cases": [
+          {
+            "id": "1779",
+            "instruction": "change_case:english_capital",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2817",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2299",
+            "instruction": "language:response_language",
+            "expected_language": "sw",
+            "case_precondition": true,
+            "label_counts": {
+              "sw": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2372",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          }
+        ],
+        "predictions_sha256": "12d475f5629234d17276927cf34812309ce3ced082181c08e0d1a29c00a88022",
+        "primary_scores_sha256": "dd6baf21f52c3d6635595d5d54414d618bcfc7adc2e019b4a7e88f676beb322f"
+      },
+      "physics-final-screen-bf16_base": {
+        "primary_prompt_strict_correct": 24,
+        "seeded_prompt_strict_counts": [
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        "seeded_count_range": [
+          24,
+          24
+        ],
+        "all_seeded_prompt_counts_equal_primary": true,
+        "cases": [
+          {
+            "id": "1779",
+            "instruction": "change_case:english_capital",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2817",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2299",
+            "instruction": "language:response_language",
+            "expected_language": "sw",
+            "case_precondition": true,
+            "label_counts": {
+              "sw": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2372",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          }
+        ],
+        "predictions_sha256": "80a8641c7df34ff3fcc873d4cf9d62273c989d97e35e90525c876a8304d54706",
+        "primary_scores_sha256": "17c11ec0f3cced48412e168faf3df192088cad221245a45ad413ae931111c7ea"
+      },
+      "physics-final-screen-bf16_control": {
+        "primary_prompt_strict_correct": 25,
+        "seeded_prompt_strict_counts": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "seeded_count_range": [
+          25,
+          25
+        ],
+        "all_seeded_prompt_counts_equal_primary": true,
+        "cases": [
+          {
+            "id": "1779",
+            "instruction": "change_case:english_capital",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2817",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2299",
+            "instruction": "language:response_language",
+            "expected_language": "sw",
+            "case_precondition": true,
+            "label_counts": {
+              "sw": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2372",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          }
+        ],
+        "predictions_sha256": "c1e2535ef86fa2eeae7b1ca1a1d46f821adeee323b2a51ad76dd6442536da7dd",
+        "primary_scores_sha256": "32e5f30e784882d9bf1bbaba1051ca596bb01403e0ce406ee56dcc589b2b5dc0"
+      },
+      "physics-final-screen-bf16_gguf": {
+        "primary_prompt_strict_correct": 25,
+        "seeded_prompt_strict_counts": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "seeded_count_range": [
+          25,
+          25
+        ],
+        "all_seeded_prompt_counts_equal_primary": true,
+        "cases": [
+          {
+            "id": "1779",
+            "instruction": "change_case:english_capital",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2817",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2299",
+            "instruction": "language:response_language",
+            "expected_language": "sw",
+            "case_precondition": true,
+            "label_counts": {
+              "sw": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2372",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          }
+        ],
+        "predictions_sha256": "4b4daf63299761cbf0ecff26a8b9091864458410e3d49fcfe0ac5da693ba0a6c",
+        "primary_scores_sha256": "f57f6fac0846d0b4ab3c15644b0d0ef636890c8a7837d9dcb4a7711e792cfd13"
+      },
+      "physics-final-screen-q8": {
+        "primary_prompt_strict_correct": 25,
+        "seeded_prompt_strict_counts": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "seeded_count_range": [
+          25,
+          25
+        ],
+        "all_seeded_prompt_counts_equal_primary": true,
+        "cases": [
+          {
+            "id": "1779",
+            "instruction": "change_case:english_capital",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2817",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2299",
+            "instruction": "language:response_language",
+            "expected_language": "sw",
+            "case_precondition": true,
+            "label_counts": {
+              "sw": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2372",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          }
+        ],
+        "predictions_sha256": "55a52e6b4cb67ea8c2ba51fca0c8d211d7cacc19f8fb69afda08dbdb4a70eac2",
+        "primary_scores_sha256": "acce7a6c2fa9deaa86b7d2891f683e5c07b34eb6c4beccd62999a67cc1ebe491"
+      },
+      "physics-final-screen-q4": {
+        "primary_prompt_strict_correct": 24,
+        "seeded_prompt_strict_counts": [
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        "seeded_count_range": [
+          24,
+          24
+        ],
+        "all_seeded_prompt_counts_equal_primary": true,
+        "cases": [
+          {
+            "id": "1779",
+            "instruction": "change_case:english_capital",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2817",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2299",
+            "instruction": "language:response_language",
+            "expected_language": "sw",
+            "case_precondition": true,
+            "label_counts": {
+              "sw": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          },
+          {
+            "id": "2372",
+            "instruction": "change_case:english_lowercase",
+            "expected_language": "en",
+            "case_precondition": true,
+            "label_counts": {
+              "en": 20
+            },
+            "language_clause_passes": 20,
+            "language_clause_stable": true,
+            "primary_clause_result": true
+          }
+        ],
+        "predictions_sha256": "43019849913885dea5e66caac5faac834b2fc0779054c1a71b27c56bbca6f755",
+        "primary_scores_sha256": "09e0ae0df6157efb96827b17167e14e59502e862c024484c365f6f744c6c8c5c"
+      }
+    }
+  },
+  "local_human_review": {
+    "status": "human_ratings_pending",
+    "pairs": 30,
+    "tasks_per_type": 10,
+    "reference": "NF4 base with two training-paper examples",
+    "candidate": "selected NF4 rank128 epoch1 adapter",
+    "html": "outputs/physics-writing-review/review.html",
+    "html_sha256": "f395491725b56c2c92936178508ad2357e4a4c86492e1ad53fa4163cafe7fc5e",
+    "key_commitment_sha256": "4a9e17c8dba1f5b6855dca1a55d2e1a3bbb770cd6b296c35beeecdda11595d5c",
+    "identities": "Randomized A/B; key retained locally outside release payload with private backup",
+    "ratings_supplied": false,
+    "scientific_fidelity_before_style": true,
+    "scope": "This local HTML uses its own key; the later published 60-pair JSON packet is randomized independently with a separate key."
+  },
+  "human_writing_ratings": "pending",
+  "writing_quality_improvement_established": false,
+  "limits": [
+    "One small paper corpus; arXiv versions can precede final PRL wording; existing pretraining exposure unknown.",
+    "No matched PRB corpus control, so lower text loss is not evidence of PRL-specific style learning.",
+    "Paper splits are disjoint but some authors overlap; theory labels were AI-reviewed.",
+    "Loss uses identical1024-token within-paper chunks, not whole-paper context.",
+    "Small benchmark subsets and unadjusted exploratory paired tests do not establish broad capability equivalence.",
+    "GGUF and HF inference use different backends and batch sizes; decoding settings and input IDs are checked.",
+    "Automatic fidelity flags and exact text overlap are diagnostics, not human scientific or style judgments.",
+    "Ranks receive equal maximum training budgets; their nominated checkpoints can come from different epochs.",
+    "Rank8's minimum occurred at the three-epoch budget boundary; convergence beyond that budget was not tested.",
+    "The BF16 control uses the NF4-selected rank, learning rate and epoch; it is not independently optimized."
+  ]
+}

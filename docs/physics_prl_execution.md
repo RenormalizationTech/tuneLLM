@@ -256,9 +256,9 @@ NLL was 0.0031926 (paired paper-bootstrap 95% interval 0.0017998 to 0.0045028);
 rank 8 minus rank 128 was 0.0160585 (0.0132842 to 0.0188015). The registered
 smallest-compatible-rank heuristic therefore selected 128. See
 `results/physics_rank_selection.json`. This heuristic is not proof of practical
-writing superiority. The seed-43 repeat and BF16 control will use the full
-three-epoch schedule but be compared at the primary epoch-1 checkpoint. Final
-comparisons remain pending. Human writing-quality improvement is not established.
+writing superiority. The seed-43 repeat and BF16 control used the full
+three-epoch schedule and are compared at the primary epoch-1 checkpoint. Final
+comparisons are complete and reported below. Human writing-quality improvement is not established.
 
 Selection has visible tradeoffs. The selected rank-128 checkpoint scored 28/32
 on development GSM8K (base 29/32), 11/16 on strict IFEval (base 13/16; rank 32
@@ -277,7 +277,7 @@ replay. Comparison remains fixed at epoch 1 / step 69. The BF16 control also com
 2.1754497 before training and 1.9413228, 1.9539306, 1.9851287 after epochs 1–3.
 Its Trainer interval was 1,087.157 seconds (18m07s), with peak PyTorch allocation
 13.76 GiB. All final-epoch reload probes matched exactly. Comparison remains
-fixed at epoch 1. The fixed final evaluation is now running.
+fixed at epoch 1. The fixed final evaluation completed under its committed protocols.
 
 
 ## Fixed held-out paper-text results
@@ -301,4 +301,81 @@ minus BF16 base is -0.215479 (-0.224040 to -0.208196). The repeat minus
 primary difference is -0.000024 (-0.001100 to 0.001002). These measure held-out
 text prediction and seed stability; they do not establish better human-rated
 writing or independently optimized BF16 performance. No checkpoint was
-reselected from these outcomes. The full task/writing matrix remains in progress.
+reselected from these outcomes. The full task and writing matrix is complete; results follow.
+
+## Final retention and writing screens
+
+These are fixed, custom subsets: zero-shot MMLU answer-letter likelihood,
+GSM8K numeric fallback and the pinned official strict IFEval scorer. They are
+not full leaderboard scores. HF uses generation batch 8; GGUF uses sequential
+requests with input-token parity checks. Compare quants within the GGUF backend.
+
+| Condition | General /128 | Physics /96 | Math /128 | IFEval /32 |
+|---|---:|---:|---:|---:|
+| NF4 base | 85 | 63 | 117 | 24 |
+| NF4 LoRA, rank 128 / epoch 1 | 93 | 67 | 111 | 23 |
+| BF16 HF base | 92 | 63 | 119 | 24 |
+| BF16 LoRA control / epoch 1 | 95 | 64 | 114 | 25 |
+| BF16 GGUF | 92 | 62 | 119 | 25 |
+| GGUF Q8_0 | 89 | 61 | 121 | 25 |
+| GGUF Q4_K_M | 89 | 61 | 116 | 24 |
+
+The primary adapter fixed 11 and broke 3 general-MMLU answers; it fixed 8 and
+broke 4 physics answers, fixed 3 and broke 9 math answers, and fixed 1 and broke
+2 IFEval prompts. Unadjusted exact McNemar p-values are 0.0574, 0.3877, 0.1460
+and 1.0, respectively. These small exploratory comparisons do not establish
+broad capability gains or equivalence. The observed math drop is disclosed.
+Strict-format math correct counts rose from 97 to 106, while numeric correctness
+fell from 117 to 111; both NF4 conditions had two math truncations.
+
+The BF16 control also lost numeric math accuracy (119 to 114) relative to its
+own base. Its rank, LR and epoch were selected by the NF4 experiment, so it is a
+matched control rather than an independently optimized BF16 result.
+
+| Writing condition | Nonempty /60 | Automatic number/citation flags | Hit generation limit |
+|---|---:|---:|---:|
+| NF4 base | 60 | 0 | 0 |
+| NF4 base with two examples | 60 | 0 | 0 |
+| NF4 LoRA, rank 128 / epoch 1 | 60 | 3 | 1 |
+| BF16 HF base | 60 | 0 | 0 |
+| BF16 LoRA control / epoch 1 | 60 | 7 | 0 |
+
+Flags are review prompts, not confirmed factual errors. No exact 25-word spans
+matched the local training corpus in any writing condition; this is a limited
+diagnostic and does not establish originality or rule out pretraining exposure.
+All recorded IFEval prompt-strict totals reproduced across the supplementary
+20-seed language-detector check; the original primary scores were not replaced.
+
+The full 444-item HF screens took 19m57s (NF4 base), 26m49s (NF4 adapter),
+9m41s (BF16 base), and 17m20s (BF16 control). The separate two-example 60-task
+writing reference took 8m32s. Within the same 384-item GGUF screen, BF16 took
+8m42s, Q8 took 5m36s and Q4 took 4m03s. These are complete screen wall times,
+including load, generation and scoring, not decode-only throughput. The report
+preserves separate timing diagnostics and memory scopes.
+
+## Human review and release
+
+The local blinded review is `outputs/physics-writing-review/review.html`: 30
+pairs, ten each for titles, abstracts and introductions, comparing the selected
+adapter with the two-example NF4 base. JavaScript syntax validation passed. The
+random identity key is separate and privately backed up. The release contains a
+separately randomized 60-pair JSON packet; its key is excluded and committed by
+SHA256 only. No human ratings have been supplied, and writing-quality improvement
+remains unestablished.
+
+The exact selected epoch-1 adapter is staged under
+`artifacts/releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/`, with a reviewed manifest
+at `outputs/physics_adapter_release_manifest.json`. It is published privately as
+[RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) at revision
+`fcd1af6d47678431d69cbdff6b1e6af4bee57854`. All 49 revision-pinned remote file hashes matched the
+reviewed manifest. Downloaded adapter/config/tokenizer bytes matched, and all
+eight title probes reproduced identical input and generated token IDs on the
+pinned downloaded NF4 base with requantization forbidden. This is an eight-title
+reload check, not a replay of the whole benchmark; logits were not compared.
+See `results/physics_huggingface_publication.json`.
+
+The code suite passed 87 tests. After the advisor requested explicit writing
+prompt-condition and truncation disclosures, all 11 release-staging tests passed
+again. Claude reviewed the rebuilt payload and found no blocking issues; see
+`results/reviews/physics_release_advisor_review.md`. The only outstanding step
+is actual human writing review. No GitHub push was performed.

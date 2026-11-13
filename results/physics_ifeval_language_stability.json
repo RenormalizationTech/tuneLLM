@@ -1,0 +1,606 @@
+{
+  "scope": "Supplementary language-detector seed sensitivity only; primary official scores retained unchanged",
+  "primary_scores_modified": false,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "langdetect_version": "1.0.9",
+  "fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+  "diagnostic_source_sha256": "62f8403c43c55dd1c1a497a7ecf3262378161414dbaf6fe87249f5ae18f09889",
+  "method": "Replay language and English-case clauses for seeds 0..19; retain other official clause results and recombine prompt-strict flags. No text or labels are altered.",
+  "conditions": {
+    "physics-final-screen-nf4_base": {
+      "primary_prompt_strict_correct": 24,
+      "seeded_prompt_strict_counts": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "seeded_count_range": [
+        24,
+        24
+      ],
+      "all_seeded_prompt_counts_equal_primary": true,
+      "cases": [
+        {
+          "id": "1779",
+          "instruction": "change_case:english_capital",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2817",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2299",
+          "instruction": "language:response_language",
+          "expected_language": "sw",
+          "case_precondition": true,
+          "label_counts": {
+            "sw": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2372",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        }
+      ],
+      "predictions_sha256": "476f76d7fbc3c5cd8ba670ec3a5c6ed9e7495b65014e238d474e8b750b07beac",
+      "primary_scores_sha256": "e19c14bd29517536cb8e1a78f0e4ea2c4f03837924f63d6665aee6484b042474"
+    },
+    "physics-final-screen-nf4_adapter": {
+      "primary_prompt_strict_correct": 23,
+      "seeded_prompt_strict_counts": [
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      "seeded_count_range": [
+        23,
+        23
+      ],
+      "all_seeded_prompt_counts_equal_primary": true,
+      "cases": [
+        {
+          "id": "1779",
+          "instruction": "change_case:english_capital",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2817",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2299",
+          "instruction": "language:response_language",
+          "expected_language": "sw",
+          "case_precondition": true,
+          "label_counts": {
+            "sw": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2372",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        }
+      ],
+      "predictions_sha256": "12d475f5629234d17276927cf34812309ce3ced082181c08e0d1a29c00a88022",
+      "primary_scores_sha256": "dd6baf21f52c3d6635595d5d54414d618bcfc7adc2e019b4a7e88f676beb322f"
+    },
+    "physics-final-screen-bf16_base": {
+      "primary_prompt_strict_correct": 24,
+      "seeded_prompt_strict_counts": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "seeded_count_range": [
+        24,
+        24
+      ],
+      "all_seeded_prompt_counts_equal_primary": true,
+      "cases": [
+        {
+          "id": "1779",
+          "instruction": "change_case:english_capital",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2817",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2299",
+          "instruction": "language:response_language",
+          "expected_language": "sw",
+          "case_precondition": true,
+          "label_counts": {
+            "sw": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2372",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        }
+      ],
+      "predictions_sha256": "80a8641c7df34ff3fcc873d4cf9d62273c989d97e35e90525c876a8304d54706",
+      "primary_scores_sha256": "17c11ec0f3cced48412e168faf3df192088cad221245a45ad413ae931111c7ea"
+    },
+    "physics-final-screen-bf16_control": {
+      "primary_prompt_strict_correct": 25,
+      "seeded_prompt_strict_counts": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25
+      ],
+      "seeded_count_range": [
+        25,
+        25
+      ],
+      "all_seeded_prompt_counts_equal_primary": true,
+      "cases": [
+        {
+          "id": "1779",
+          "instruction": "change_case:english_capital",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2817",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2299",
+          "instruction": "language:response_language",
+          "expected_language": "sw",
+          "case_precondition": true,
+          "label_counts": {
+            "sw": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2372",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        }
+      ],
+      "predictions_sha256": "c1e2535ef86fa2eeae7b1ca1a1d46f821adeee323b2a51ad76dd6442536da7dd",
+      "primary_scores_sha256": "32e5f30e784882d9bf1bbaba1051ca596bb01403e0ce406ee56dcc589b2b5dc0"
+    },
+    "physics-final-screen-bf16_gguf": {
+      "primary_prompt_strict_correct": 25,
+      "seeded_prompt_strict_counts": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25
+      ],
+      "seeded_count_range": [
+        25,
+        25
+      ],
+      "all_seeded_prompt_counts_equal_primary": true,
+      "cases": [
+        {
+          "id": "1779",
+          "instruction": "change_case:english_capital",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2817",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2299",
+          "instruction": "language:response_language",
+          "expected_language": "sw",
+          "case_precondition": true,
+          "label_counts": {
+            "sw": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2372",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        }
+      ],
+      "predictions_sha256": "4b4daf63299761cbf0ecff26a8b9091864458410e3d49fcfe0ac5da693ba0a6c",
+      "primary_scores_sha256": "f57f6fac0846d0b4ab3c15644b0d0ef636890c8a7837d9dcb4a7711e792cfd13"
+    },
+    "physics-final-screen-q8": {
+      "primary_prompt_strict_correct": 25,
+      "seeded_prompt_strict_counts": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25
+      ],
+      "seeded_count_range": [
+        25,
+        25
+      ],
+      "all_seeded_prompt_counts_equal_primary": true,
+      "cases": [
+        {
+          "id": "1779",
+          "instruction": "change_case:english_capital",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2817",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2299",
+          "instruction": "language:response_language",
+          "expected_language": "sw",
+          "case_precondition": true,
+          "label_counts": {
+            "sw": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2372",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        }
+      ],
+      "predictions_sha256": "55a52e6b4cb67ea8c2ba51fca0c8d211d7cacc19f8fb69afda08dbdb4a70eac2",
+      "primary_scores_sha256": "acce7a6c2fa9deaa86b7d2891f683e5c07b34eb6c4beccd62999a67cc1ebe491"
+    },
+    "physics-final-screen-q4": {
+      "primary_prompt_strict_correct": 24,
+      "seeded_prompt_strict_counts": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "seeded_count_range": [
+        24,
+        24
+      ],
+      "all_seeded_prompt_counts_equal_primary": true,
+      "cases": [
+        {
+          "id": "1779",
+          "instruction": "change_case:english_capital",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2817",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2299",
+          "instruction": "language:response_language",
+          "expected_language": "sw",
+          "case_precondition": true,
+          "label_counts": {
+            "sw": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        },
+        {
+          "id": "2372",
+          "instruction": "change_case:english_lowercase",
+          "expected_language": "en",
+          "case_precondition": true,
+          "label_counts": {
+            "en": 20
+          },
+          "language_clause_passes": 20,
+          "language_clause_stable": true,
+          "primary_clause_result": true
+        }
+      ],
+      "predictions_sha256": "43019849913885dea5e66caac5faac834b2fc0779054c1a71b27c56bbca6f755",
+      "primary_scores_sha256": "09e0ae0df6157efb96827b17167e14e59502e862c024484c365f6f744c6c8c5c"
+    }
+  }
+}

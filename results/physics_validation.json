@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "tests": 87,
+  "failures": 0,
+  "warnings": 2,
+  "test_wall_seconds": 8.45,
+  "command": ".venv/bin/python -m pytest -q",
+  "tested_source_commit": "9c54d55",
+  "test_log_sha256": "c31bc03d5912237473b10d5541be68f1b98bed577e764902eacd9624a0fa56e4",
+  "javascript_review_syntax_check": "node --check outputs/physics-writing-review/syntax-check.js: passed",
+  "scope": "CPU unit/integration guards; actual GPU model benchmarks and serialization probes reported separately",
+  "warning_scope": "Sandbox NVML visibility and synthetic PEFT config lookup warnings in CPU test; tests passed",
+  "post_review_release_tests": {
+    "tests": 11,
+    "failures": 0,
+    "wall_seconds": 0.28,
+    "stager_source_sha256": "317a4db9a551a94db5726258f1363d19d3312664264866226b51d50a6a9d60ac",
+    "scope": "Prompt-condition/truncation disclosure and blinded-packet wording fixes"
+  }
+}
