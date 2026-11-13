@@ -11,8 +11,9 @@ import shutil
 import subprocess
 import sys
 
-from scripts.common import ROOT, digest, path, read_json, write_json
+from scripts.common import ROOT, digest, local_snapshot, path, read_json, write_json
 from scripts.run_support import verify_committed_protocol
+from scripts.gguf_eval import DEFAULT_SERVER
 
 
 def choose(selection):
@@ -73,6 +74,16 @@ def prepare(args):
         for name in ("adapter_model.safetensors", "adapter_config.json"):
             filename = path(checkpoint) / name
             frozen[str(filename)] = digest(filename)
+    nf4_report = read_json(primary_cfg["nf4_report"])
+    for name, record in nf4_report["files"].items():
+        filename = path(primary_cfg["nf4_checkpoint"]) / name
+        if digest(filename) != record["sha256"]:
+            raise ValueError("saved NF4 base changed")
+        frozen[str(filename)] = record["sha256"]
+    upstream = local_snapshot(baseline_cfg)
+    for filename in upstream.iterdir():
+        if filename.is_file() and filename.suffix in {".safetensors", ".json", ".txt", ".jinja"}:
+            frozen[str(filename)] = digest(filename)
     global_protocol = read_json("results/physics_prl_protocol.json")
     writing_provenance = read_json("data/benchmark-screen-01/writing_provenance.json")
     if digest("data/benchmark-screen-01/writing_provenance.json") != global_protocol["writing_provenance_sha256"]:
@@ -115,6 +126,9 @@ def prepare(args):
         preparations[representation], protocols[representation] = str(directory), str(protocol)
         frozen[str(protocol)] = digest(protocol)
     jobs, nll_files = [], {}
+    frozen[str(path(DEFAULT_SERVER))] = digest(DEFAULT_SERVER)
+    llama_revision = subprocess.run(["git", "-C", str(path("artifacts/tools/llama.cpp")), "rev-parse", "HEAD"],
+                                    capture_output=True, text=True, check=True).stdout.strip()
     for name, representation in (("nf4_base", "nf4"), ("nf4_adapter", "nf4"), ("nf4_repeat", "nf4"),
                                  ("bf16_base", "bf16"), ("bf16_control", "bf16")):
         output = path(f"outputs/physics-final-{name}-paper-nll.json")
@@ -148,6 +162,9 @@ def prepare(args):
                             "checkpoint": checkpoints.get(name),
                             "checkpoint_sha256": digest(path(checkpoints[name]) / "adapter_model.safetensors") if name in checkpoints else None,
                             "prompt_condition": "two-example" if name == "nf4_base_fewshot" else "zero-shot"}
+        if gguf:
+            conditions[name].update(gguf_file=str(filename), gguf_sha256=frozen[str(filename)],
+                                    llama_cpp_revision=llama_revision, llama_server_sha256=digest(DEFAULT_SERVER))
         if name in nll_files:
             conditions[name]["paper_nll"] = nll_files[name]
         jobs.append({"command": command, "output": str(output), "kind": "screen"})

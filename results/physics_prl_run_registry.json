@@ -345,16 +345,71 @@
         }
       },
       "rank_selected": true
+    },
+    {
+      "id": "physics-r128-lr5e5-seed43",
+      "role": "seed_repeat",
+      "rank": 128,
+      "learning_rate": 5e-05,
+      "seed": 43,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "loss_tokens": 1567140,
+      "training_wall_seconds": 1371.9934191433713,
+      "peak_pytorch_allocated_bytes": 11104091136,
+      "replay": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "fixed_comparison_epoch": 1,
+      "fixed_comparison_checkpoint": "outputs/physics-r128-lr5e5-seed43/checkpoints/checkpoint-69",
+      "fixed_comparison_development_nll": 1.9624437363130305,
+      "trainable_parameters": 264241152,
+      "adapter_bytes": 1057033224,
+      "scope": "Stability run, primary epoch1 retained without reselection"
+    },
+    {
+      "id": "physics-r128-lr5e5-bf16",
+      "role": "bf16_control",
+      "rank": 128,
+      "learning_rate": 5e-05,
+      "seed": 42,
+      "representation": "bf16",
+      "epochs": 3,
+      "steps": 207,
+      "loss_tokens": 1567140,
+      "training_wall_seconds": 1087.1568453363143,
+      "peak_pytorch_allocated_bytes": 14772923392,
+      "replay": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "fixed_comparison_epoch": 1,
+      "fixed_comparison_checkpoint": "outputs/physics-r128-lr5e5-bf16/checkpoints/checkpoint-69",
+      "fixed_comparison_development_nll": 1.941322823173061,
+      "trainable_parameters": 264241152,
+      "adapter_bytes": 1057033224,
+      "scope": "BF16 control uses NF4-selected rank/LR/epoch without independent optimization"
     }
   ],
   "learning_rate_selection": "results/physics_lr_selection.json",
-  "pending_runs": [
-    "physics-r128-lr5e5-seed43",
-    "physics-r128-lr5e5-bf16"
-  ],
+  "pending_runs": [],
   "rank_screen_status": "completed",
   "rank_selection": "results/physics_rank_selection.json",
   "selected_rank": 128,
   "selected_epoch": 1,
-  "selected_learning_rate": 5e-05
+  "selected_learning_rate": 5e-05,
+  "training_complete": true,
+  "pending_stages": [
+    "fixed_final_evaluation",
+    "private_adapter_publication",
+    "human_writing_review"
+  ]
 }

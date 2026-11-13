@@ -120,6 +120,22 @@ Source availability and mirror metadata can change. The original archives and
 frozen inputs, rather than a fresh live query, define this experiment. Recreate
 and review exclusions before registering a new run if acquisition differs.
 
+Before optimization, record the NF4 development reference and the two-example
+writing reference under the names consumed by the selection runner:
+
+```bash
+.venv/bin/python -m scripts.benchmark_screen --representation nf4 \
+  --fixture data/benchmark-screen-01/development.json \
+  --tasks general_mc physics_mc gsm8k ifeval --output outputs/physics-screen-nf4-dev-02
+.venv/bin/python -m scripts.benchmark_screen --representation nf4 \
+  --fixture data/benchmark-screen-01/development.json \
+  --writing data/benchmark-screen-01/writing_development_fewshot.json \
+  --tasks writing --output outputs/physics-writing-nf4-fewshot-dev
+```
+
+These are fresh-run examples; existing output folders are never overwritten.
+Archive the source/fixture hashes and register the protocol before optimization.
+
 Prepare a run on CPU, review its exact protocol, and commit a byte-identical copy
 before execution:
 
@@ -251,3 +267,14 @@ two-example base. Its two writing truncations and two extra flags each sit at
 the registered increase limit. All three ranks had two writing truncations.
 The 0.0032-nat/token development-loss advantage over rank 32 is small; these
 screens do not establish that the larger adapter writes better for people.
+
+The selected rank-128 configuration's NF4 seed-43 repeat has completed all 207
+steps and 1,567,140 prediction targets. Its epoch losses were 1.9624437,
+1.9723484 and 2.0057803, close to the primary seed-42 trajectory. Trainer wall
+time was 1,371.993 seconds and peak PyTorch allocation was 10.34 GiB. All final-
+epoch adapter tensors, probe logits and generated IDs matched on fresh-base
+replay. Comparison remains fixed at epoch 1 / step 69. The BF16 control also completed the full exposure, with development losses
+2.1754497 before training and 1.9413228, 1.9539306, 1.9851287 after epochs 1–3.
+Its Trainer interval was 1,087.157 seconds (18m07s), with peak PyTorch allocation
+13.76 GiB. All final-epoch reload probes matched exactly. Comparison remains
+fixed at epoch 1. Final-test evaluation is next.

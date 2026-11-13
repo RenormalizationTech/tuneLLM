@@ -59,6 +59,9 @@ def main():
                 "mean_returned_generated_token_ids": sum(len(r["generated_ids"]) for r in predictions) / len(predictions),
                 "hit_token_limit": sum(bool(r["hit_token_limit"]) for r in predictions)}
         conditions[name]["output_lengths"] = output_lengths
+        for field in ("gguf_file", "gguf_sha256", "llama_cpp_revision", "llama_server_sha256"):
+            if field in spec:
+                conditions[name][field] = spec[field]
         if spec.get("paper_nll"):
             filename = path(spec["paper_nll"])
             report = read_json(filename)
@@ -132,7 +135,8 @@ def main():
                    "GGUF and HF inference use different backends and batch sizes; decoding settings and input IDs are checked.",
                    "Automatic fidelity flags and exact text overlap are diagnostics, not human scientific or style judgments.",
                    "Ranks receive equal maximum training budgets; their nominated checkpoints can come from different epochs.",
-                   "Rank8's minimum occurred at the three-epoch budget boundary; convergence beyond that budget was not tested."]})
+                   "Rank8's minimum occurred at the three-epoch budget boundary; convergence beyond that budget was not tested.",
+                   "The BF16 control uses the NF4-selected rank, learning rate and epoch; it is not independently optimized."]})
     print(path(args.output))
 
 
