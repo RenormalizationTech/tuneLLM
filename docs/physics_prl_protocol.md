@@ -56,6 +56,8 @@ For each run, nominate the epoch with minimum token-weighted development NLL;
 ties choose the earlier epoch. NLL is a measure of register fit, not a writing
 quality rating. Use 10,000 paired paper-bootstrap resamples, seed 20261112, with
 the summed-NLL/summed-token ratio within each draw. This reflects paper clustering.
+Apply the screen gates only to that nominated checkpoint. If it fails, the
+entire run is ineligible; do not try another epoch to obtain a passing result.
 
 For learning rate, prefer the smaller value when its loss difference from the
 best includes zero in the paired 95% bootstrap interval. For rank, prefer the
@@ -65,13 +67,19 @@ the optimal rank/learning rate.
 
 Screen gates, fixed before training:
 
-- On each 32-question development MC/math task, lose at most four correct answers
+- On each 32-question development MC/math task, the net score drops by at most four
+  correct answers
   relative to the saved NF4 base.
-- On 16 IFEval development prompts, lose at most three strict prompt-level passes.
+- On 16 IFEval development prompts, the net score drops by at most three strict
+  prompt-level passes. Report gross fixed/broken item counts separately.
 - Generation truncations increase by at most two per task relative to the base.
 - All 30 development writing outputs are nonempty. New-number/citation flags
   exceed the base-with-few-shot count by at most two; writing truncations increase
   by at most two. Flags are imperfect diagnostics and require human review.
+
+For the writing gate, evaluate the adapter zero-shot and compare it with the
+unadapted NF4 base given two training-paper examples. Both receive the same
+new-paper evidence and task instruction; only the base receives exemplars.
 
 If no adapter passes, retain the base as the recommended model. Report the best
 observed register-fit adapter as experimental if useful, with gate failures

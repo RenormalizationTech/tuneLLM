@@ -3,7 +3,7 @@
   "model_id": "Qwen/Qwen3-4B",
   "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
   "protocol_document": "docs/physics_prl_protocol.md",
-  "protocol_document_sha256": "c124f0f6950c5655a47aac2cfbb37970fac041f14a1717e3aca9b4ca9b862d82",
+  "protocol_document_sha256": "44a68fc9117147ec923612c00de6188955963ef943f7be2061ed78b6861f2fcf",
   "corpus_manifest_sha256": "6deaff7e6ce9d5e139b37168eb0b714b028136fb93d3ec274e0ad1109932f3ec",
   "benchmark_provenance": {
     "mmlu_revision": "c30699e8356da336a370243923dbaf21066bb9fe",
@@ -96,5 +96,8 @@
   "preflight_excluded": "outputs/physics-screen-nf4-dev-01 interrupted after MC/math; batch4, not a paired result",
   "final_test_policy": "Withhold finaltestloss/predictions until selection fixed. Report negativeoutcomes; nohumanwritingclaimwithoutactualratings.",
   "human_ratings": "pending",
-  "publication": "new experimental adapters private by default; preserve old published artifacts"
+  "publication": "new experimental adapters private by default; preserve old published artifacts",
+  "gate_counting": "net score drops; gross fixed/broken reported separately",
+  "writing_gate_conditions": "zero-shot adapter vs two-example NF4 base",
+  "failed_epoch_policy": "nominate minimum-devNLL epoch once; if gates fail, whole run ineligible; no alternate epoch gate search"
 }
