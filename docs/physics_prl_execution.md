@@ -153,6 +153,26 @@ explicit, hash-reviewed manifest to the authorized repository and visibility;
 it refuses to overwrite an existing repository by default and verifies the
 revision-pinned remote bytes before reporting publication success.
 
+After rank selection and the complete seed-43/BF16 control runs, prepare the fixed
+final matrix using their actual run paths:
+
+```bash
+.venv/bin/python -m scripts.run_physics_final --repeat outputs/SELECTED-SEED43 --control outputs/SELECTED-BF16
+# Review and commit results/protocols/physics-final-eval-{nf4,bf16}.json.
+.venv/bin/python -u -m scripts.run_physics_final --execute
+.venv/bin/python -m scripts.summarize_physics --mapping outputs/physics_final_mapping.json
+```
+
+The runner fixes the primary selected epoch for both controls, checks complete
+training exposure, and refuses changed inputs or result folders without matching
+invocation records. It evaluates five conditions on the 20 held-out papers; four
+HF conditions receive the 444-item screen, the two-example NF4 writing reference
+receives 60 tasks, and BF16/Q8/Q4 GGUF receive the 384 nonwriting items. BF16 LoRA
+is compared with its own unadapted BF16 base; GGUF quantization is compared within
+the llama.cpp backend. The repeat's paper loss is reported separately without
+reselection. The final review's random answer key is kept outside the published
+payload with a SHA256 commitment; keep an offline backup before collecting ratings.
+
 ## Results
 
 The rank-32, 5e-5 pilot completed all 207 steps and 1,567,140 prediction targets
