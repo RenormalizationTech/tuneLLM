@@ -1,0 +1,54 @@
+{
+  "registered_at_utc": "2026-11-13T04:29:46.243210+00:00",
+  "scope": "Before any adapted-model development screen or final-test output; training NLL has already been inspected.",
+  "original_global_protocol_sha256": "67438603f2aedb1414ec2ee34c34577d62594f718a19fe36257bfd6ccf23b3a9",
+  "known_development_losses": {
+    "physics-r32-lr5e5": [
+      {
+        "step": "step-000000",
+        "development_nll": 2.226812499536265
+      },
+      {
+        "step": "step-000069",
+        "development_nll": 1.9777026286287003
+      },
+      {
+        "step": "step-000138",
+        "development_nll": 1.9657981930000399
+      },
+      {
+        "step": "step-000207",
+        "development_nll": 1.9670664823558517
+      }
+    ],
+    "physics-r32-lr1e4": [
+      {
+        "step": "step-000000",
+        "development_nll": 2.226812499536265
+      },
+      {
+        "step": "step-000069",
+        "development_nll": 1.9676019530963014
+      },
+      {
+        "step": "step-000138",
+        "development_nll": 1.9718371598835982
+      }
+    ]
+  },
+  "reason": "The planned three-rank learning comparison still needs a learning rate if both rank32 pilots fail screen gates.",
+  "learning_rate_fallback": "If no rank32 LR pilot passes, use5e-5 for the already planned rank8 and128 runs. This conservative fallback is partly informed by the observed development NLL and the original smaller-LR preference.",
+  "rank_stage": "Include the5e-5 rank32 result for reporting, but a failed gate makes it ineligible. Apply unchanged gates/epoch rules to ranks8/128; choose only among passing adapters.",
+  "all_ranks_fail": "Recommend the unadapted base. To complete the learning/control exercise, use the lowest observed development-NLL nominated candidate (ties:smaller rank,lower LR) for descriptive-only seed43 repeat and BF16 control. These do not override base recommendation.",
+  "unchanged": [
+    "Frozen data/splits",
+    "Registered ranks8/32/128",
+    "Maximum3epochs/tokenexposure",
+    "Nominatedepochmin-devNLL",
+    "Allgate thresholds",
+    "No alternateepoch gate search",
+    "Finaltesthelduntilchoicesfixed",
+    "Humanwritingratingspending"
+  ],
+  "interpretation": "Gate failures are findings about behavior under continued training, not results to suppress. The planned rank comparison tests whether capacity changes that behavior."
+}
