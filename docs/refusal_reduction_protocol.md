@@ -147,7 +147,10 @@ IDs and scorer/runtime artifacts before model execution. Use the existing
 raw multiple-choice likelihood scoring and official strict IFEval helpers.
 Generation settings match the existing screen (math 512, IFEval 1024, batch 8);
 all-token interventions remain active during both scoring and generation.
-These are tiny custom subsets, not full benchmark scores.
+For this new paired comparison, set the language-detector seed to 0 before
+IFEval scoring and record it; retain the official scorer source unchanged.
+Earlier published scores are not recomputed. These are tiny custom subsets,
+not full benchmark scores.
 
 Final quality criteria, assessed once and not used to reselect:
 
