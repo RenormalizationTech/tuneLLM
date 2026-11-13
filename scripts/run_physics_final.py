@@ -33,17 +33,28 @@ def prepare(args):
     selected = choose(selection)
     primary_checkpoint = path(selected["best_epoch"]["checkpoint"])
     primary = primary_checkpoint.parent.parent
+    primary_protocol = read_json(primary / "protocol.json")
+    primary_cfg = read_json(primary / "config.json")
+    baseline_cfg = read_json("configs/baseline.json")
+    if any(primary_cfg[key] != baseline_cfg[key] for key in ("model_id", "revision")):
+        raise ValueError("benchmark BF16 snapshot differs from training lineage")
     rank, lr = selected["rank"], selected["learning_rate"]
     epoch, step = selected["best_epoch"]["epoch"], selected["best_epoch"]["step"]
     runs = {"nf4_adapter": primary, "nf4_repeat": path(args.repeat), "bf16_control": path(args.control)}
     checkpoints = {}
     for name, directory in runs.items():
         cfg, run = read_json(directory / "config.json"), read_json(directory / "run.json")
+        protocol = read_json(directory / "protocol.json")
         representation, seed = ("bf16", 42) if name == "bf16_control" else ("nf4", 43 if name == "nf4_repeat" else 42)
         if (not run.get("completed") or cfg["rank"] != rank or cfg["learning_rate"] != lr
                 or cfg["representation"] != representation or cfg["seed"] != seed or cfg["epochs"] != 3
                 or run["exposure"]["actual_loss_tokens"] != 1567140):
             raise ValueError(f"incomplete or mismatched registered run: {name}")
+        keys = ("model_id", "revision", "steps_per_epoch", "max_sequence_length", "warmup_steps",
+                "per_device_train_batch_size", "gradient_accumulation_steps")
+        if (any(cfg[key] != primary_cfg[key] for key in keys)
+                or protocol["raw_corpus_sha256"] != primary_protocol["raw_corpus_sha256"]):
+            raise ValueError("matched control requires identical lineage, data and schedule")
         checkpoint = directory / "checkpoints" / f"checkpoint-{step}"
         if not (checkpoint / "adapter_model.safetensors").is_file():
             raise ValueError("fixed selected-epoch checkpoint missing")
@@ -58,8 +69,20 @@ def prepare(args):
               str(Path(__file__).resolve()): digest(__file__),
               "results/physics_lr_selection.json": digest("results/physics_lr_selection.json"),
               **{name: digest(name) for name in source_names}}
+    for checkpoint in checkpoints.values():
+        for name in ("adapter_model.safetensors", "adapter_config.json"):
+            filename = path(checkpoint) / name
+            frozen[str(filename)] = digest(filename)
+    global_protocol = read_json("results/physics_prl_protocol.json")
+    writing_provenance = read_json("data/benchmark-screen-01/writing_provenance.json")
+    if digest("data/benchmark-screen-01/writing_provenance.json") != global_protocol["writing_provenance_sha256"]:
+        raise ValueError("registered writing provenance changed")
     for name in ("test.json", "writing_test.json", "writing_test_fewshot.json"):
         filename = path("data/benchmark-screen-01") / name
+        expected = (global_protocol["benchmark_provenance"]["fixture_sha256"]["test"] if name == "test.json"
+                    else writing_provenance["files"][name]["sha256"])
+        if digest(filename) != expected:
+            raise ValueError("registered final fixture changed")
         frozen[str(filename)] = digest(filename)
     preparations, protocols = {}, {}
     for representation in ("nf4", "bf16"):
@@ -75,6 +98,10 @@ def prepare(args):
                         "--output", str(directory), "--representation", representation,
                         "--rank", str(rank), "--learning-rate", str(lr), "--epochs", "3"], check=True)
         protocol = path(f"results/protocols/physics-final-eval-{representation}.json")
+        prepared_protocol = read_json(directory / "protocol.json")
+        if (prepared_protocol["raw_corpus_sha256"] != primary_protocol["raw_corpus_sha256"]
+                or read_json(directory / "config.json")["max_sequence_length"] != primary_cfg["max_sequence_length"]):
+            raise ValueError("final evaluation data/context differs from primary training")
         if protocol.exists():
             raise FileExistsError(protocol)
         shutil.copyfile(directory / "protocol.json", protocol)
@@ -112,6 +139,7 @@ def prepare(args):
             command += ["--adapter", checkpoints[name]]
         conditions[name] = {"directory": str(output), "representation": representation,
                             "checkpoint": checkpoints.get(name),
+                            "checkpoint_sha256": digest(path(checkpoints[name]) / "adapter_model.safetensors") if name in checkpoints else None,
                             "prompt_condition": "two-example" if name == "nf4_base_fewshot" else "zero-shot"}
         if name in nll_files:
             conditions[name]["paper_nll"] = nll_files[name]
@@ -122,6 +150,7 @@ def prepare(args):
                                       ["nf4_base", "bf16_base"], ["nf4_adapter", "bf16_control"],
                                       ["bf16_base", "bf16_gguf"], ["bf16_gguf", "q8"], ["bf16_gguf", "q4"]],
                "paper_only_conditions": {"nf4_repeat": {"paper_nll": nll_files["nf4_repeat"],
+                                         "checkpoint_sha256": digest(path(checkpoints["nf4_repeat"]) / "adapter_model.safetensors"),
                                          "checkpoint": checkpoints["nf4_repeat"], "representation": "nf4"}},
                "paper_only_comparisons": [["nf4_adapter", "nf4_repeat"], ["nf4_base", "nf4_repeat"]],
                "training_runs": sorted(str(p.parent) for p in path("outputs").glob("physics-r*/run.json")

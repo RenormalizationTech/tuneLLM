@@ -46,7 +46,8 @@ def main():
             "peak_pytorch_allocated_bytes": run.get("peak_pytorch_allocated_bytes"),
             "generation_diagnostics": run.get("generation_diagnostics"),
             "raw_result_sha256": {f.name: digest(f) for f in out.glob("*.json")},
-            "checkpoint": spec.get("checkpoint"), "prompt_condition": spec.get("prompt_condition", "zero-shot")}
+            "checkpoint": spec.get("checkpoint"), "checkpoint_sha256": spec.get("checkpoint_sha256"),
+            "prompt_condition": spec.get("prompt_condition", "zero-shot")}
         output_lengths = {}
         for task in ["gsm8k", "ifeval", "writing"]:
             filename = out / f"{task}_predictions.json"
@@ -67,7 +68,7 @@ def main():
             if len(report["per_paper"]) != 20:
                 raise ValueError("final paper evaluation requires all20 held-out papers")
             paper_reports[name] = report
-            conditions[name]["paper_text"] = {k: v for k, v in report.items() if k not in {"chunks", "per_paper", "records"}}
+            conditions[name]["paper_text"] = {k: v for k, v in report.items() if k not in {"chunks", "chunk_records", "per_paper", "records"}}
             conditions[name]["paper_nll_sha256"] = digest(filename)
     comparisons = {}
     paper_only = {}
