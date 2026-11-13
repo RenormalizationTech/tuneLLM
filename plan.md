@@ -20,11 +20,17 @@ Learning the Hugging Face, PyTorch, PEFT/QLoRA, GGUF, and llama.cpp workflows
 is itself a successful outcome. Novel research findings are not required to
 complete the initial project.
 
-## Current status and execution priorities (2026-11-12)
+## Current status and execution priorities (2026-11-13)
 
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
   the next exercise, while preserving its historical results.
+- Physics progress: 100 licensed PRL-associated papers frozen into 70/10/20 splits;
+  NF4 base published privately and reload-verified. Four optimization runs and
+  their development screens completed. The fixed rule selected all-linear rank
+  128, LR 5e-5, epoch 1; second-seed and BF16 controls are running before final
+  evaluation. See `docs/physics_prl_execution.md` and
+  `results/physics_rank_selection.json`. Human writing ratings remain pending.
 - Current objective: learn the language and structure of a balanced corpus of
   condensed-matter theory PRLs, focusing evaluation on titles, abstracts and
   introductions. No publication-acceptance claim is intended.
@@ -87,7 +93,7 @@ in Git. Before downloads/conversion, check disk space for source weights,
 high-precision GGUF, quantized outputs, and temporary files. Avoid duplicate
 base-model copies and keep credentials out of version control.
 
-### Immediate work order
+### Initial work order (completed)
 
 1. Verify the environment, GPUs, available disk, and upstream model/tool support.
 2. Select one small model and pin its revision; establish minimal fixed evaluation.
@@ -121,8 +127,9 @@ generation settings, evaluation data and model revisions explicit. Within
 llama.cpp, compare high-precision and quantized GGUFs using the same settings;
 investigate large discrepancies against the Hugging Face baseline.
 
-Before QLoRA training, inspect a decoded batch to verify assistant-token loss
-masking, padding, and end-of-sequence handling. Run a tiny training smoke test,
+Before QLoRA training, inspect a decoded batch to verify loss targets, padding
+and end-of-sequence handling. Instruction SFT masks prompt tokens; paper-text
+causal training includes all within-paper prediction targets. Run a tiny training smoke test,
 then train on a small licensed dataset with separate validation and test data.
 Save and reload the adapter, and report held-out domain performance and general
 retention without assuming improvement. Save run metadata with each result.
@@ -131,23 +138,20 @@ Multi-GPU training, TRL, DeepSpeed, hosted tracking, a web interface, additional
 quantization formats, and custom training loops can wait until a concrete need
 arises. Merging and requantizing the tuned model is a follow-up exercise.
 
-### Candidate next training experiment (not yet run)
+### Historical GSM8K training experiment (completed)
 
-After the two-step smoke and adapter reload pass, use a fixed 1,024-row subset
-of the prepared GSM8K training split for one epoch. Claude suggested an
-effective batch of 16 (64 optimizer steps), attention LoRA rank 8, learning rate
-2e-4 with a short warmup and decay, and checkpoints at steps 32 and 64.
-Measure actual memory before increasing the per-device batch from the smoke
-setting; gradient accumulation can provide the same effective batch.
+The 1,024-example, 64-step GSM8K experiment and its fixed checkpoint-selection
+protocol completed before the physics-writing exercise. The selected attention
+LoRA rank-8 adapter improved answer formatting but reduced held-out math accuracy.
+The private release preserves that negative result; see `results/qlora_real_01.json`
+and `docs/execution.md`. It is a distinct objective and dataset from the current
+paper-text causal training experiment.
 
-Use validation data for checkpoint decisions. Reserve a fixed final test subset
-that excludes the 16 smoke-test rows and do not use it to tune prompts or training
-settings. Compare the NF4 base and selected adapter on the same examples.
-Record strict-format and numeric-answer scores separately, output length,
-truncation, and paired fixed/broken answers. A small trained-row probe and the
-validation loss help distinguish memorization from held-out fit. Reference loss
-or format improvement alone does not establish better reasoning. This proposal
-is a follow-up learning experiment, not a completed result or a release claim.
+The current workflow is `docs/model_workflow.md`; its exact frozen physics design
+is `docs/physics_prl_protocol.md`, with the documented contingency addendum.
+Completed development choices stay fixed during the repeat, BF16 control and
+final evaluations. The final report will separate paper-text likelihood, general
+retention and pending human writing judgments.
 
 ------------------------------------------------------------------------
 

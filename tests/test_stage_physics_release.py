@@ -86,6 +86,11 @@ def project(tmp_path):
                    "download_check": {"repo_id": BASE, "revision": "f" * 40, "all_sha256_equal": True,
                                       "snapshot": str(snapshot)}}
     write(root / "results/nf4_huggingface_publication.json", publication)
+    nltk_file = root / "artifacts/tools/nltk/tokenizers/punkt_tab/english/abbrev_types.txt"
+    nltk_file.parent.mkdir(parents=True)
+    nltk_file.write_text("synthetic sentence-tokenizer resource\n")
+    write(root / "results/physics_nltk_resource.json",
+          {"files": {"tokenizers/punkt_tab/english/abbrev_types.txt": sha(nltk_file)}})
     parent_files = {name: entry for name, entry in base_files.items() if name != "LICENSE"}
     parent_files["provenance.json"] = {"bytes": 22, "sha256": bytes_sha(b"unpublished provenance")}
     write(inputs / "nf4_report.json", {"completed": True, "model_id": cfg["model_id"], "revision": cfg["revision"],
@@ -119,6 +124,7 @@ def project(tmp_path):
     final_file = root / "results/final.json"
     final = {"status": "computational_evaluation_complete_human_writing_review_pending", "writing_quality_improvement_established": False,
              "lr_selection_report_sha256": sha(lr_file),
+             "nltk_resource_report_sha256": sha(root / "results/physics_nltk_resource.json"),
              "selection_report": str(selection_file), "selection_report_sha256": sha(selection_file),
              "limits": ["Human ratings pending; small subsets."], "conditions": {}}
     for label, adapter in (("nf4_base_fewshot", None), ("nf4_adapter", str(checkpoint))):

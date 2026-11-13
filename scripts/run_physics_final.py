@@ -85,6 +85,13 @@ def prepare(args):
             raise ValueError("registered final fixture changed")
         frozen[str(filename)] = digest(filename)
     preparations, protocols = {}, {}
+    nltk_manifest = path("results/physics_nltk_resource.json")
+    frozen[str(nltk_manifest)] = digest(nltk_manifest)
+    for name, expected in read_json(nltk_manifest)["files"].items():
+        filename = path("artifacts/tools/nltk") / name
+        if digest(filename) != expected:
+            raise ValueError("pinned IFEval tokenizer data changed")
+        frozen[str(filename)] = expected
     for representation in ("nf4", "bf16"):
         cfg = read_json("configs/physics.json")
         cfg["allow_test_evaluation"] = True

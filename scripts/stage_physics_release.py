@@ -418,6 +418,7 @@ def stage(args, root=ROOT):
                         "corpus_provenance.json": run / "inputs/corpus_provenance.json",
                         "base_publication.json": publication_file,
                         "lr_selection.json": lr_file,
+                        "nltk_resource.json": root / "results/physics_nltk_resource.json",
                         "global_protocol.json": root / "results/physics_prl_protocol.json",
                         "protocol_addendum_01.json": root / "results/physics_prl_protocol_addendum_01.json",
                         "benchmark_dataset_licenses.json": root / "outputs/benchmark_dataset_licenses.json"}
@@ -440,6 +441,11 @@ def stage(args, root=ROOT):
             raise ValueError("benchmark dataset license/revision proof disagrees with export notices")
     for name, filename in metadata_sources.items():
         files[name] = json_bytes(read(filename), root)
+    for name, expected in read(metadata_sources["nltk_resource.json"])["files"].items():
+        if sha(root / "artifacts/tools/nltk" / name) != expected:
+            raise ValueError("pinned IFEval tokenizer data changed")
+    if final.get("nltk_resource_report_sha256") != sha(metadata_sources["nltk_resource.json"]):
+        raise ValueError("final report must pin the scorer tokenizer resource report")
     benchmark = root / "data/benchmark-screen-01"
     benchmark_provenance = read(benchmark / "provenance.json")
     writing_provenance = read(benchmark / "writing_provenance.json")
@@ -515,13 +521,17 @@ def stage(args, root=ROOT):
     files["README.md"] = card_text(cfg, budget, final, selection, fallback, publication["revision"], quality, lr_selection).encode()
     guide = f"""# Reproduce the measured private artifact
 
-Install environment.lock.txt in a compatible Python 3.10/CUDA environment. Extract
+Install environment.lock.txt in a compatible Python 3.10/CUDA environment. The
+recorded torch CUDA wheel needs the official https://download.pytorch.org/whl/cu124
+extra package index. Extract
 reproduction.zip into a clean workspace (no Git history is included). Copy exact
 reproduction_data/train.jsonl, validation.jsonl and test.jsonl to
 data/physics-prl-01/; copy corpus_provenance.json to that directory as
 provenance.json. Copy reproduction_data/benchmarks/ to data/benchmark-screen-01/
-and third_party/ifeval/ to artifacts/tools/ifeval/. Restore NLTK punkt_tab locally
-before offline IFEval scoring. These frozen scientific bytes must not be edited.
+and third_party/ifeval/ to artifacts/tools/ifeval/. Before offline IFEval scoring,
+download NLTK punkt_tab to artifacts/tools/nltk/ and verify the English resource
+files against nltk_resource.json. Its source URL and archive hash are recorded;
+tokenizer data are a separate dependency. These frozen scientific bytes must not be edited.
 Consult corpus_quality.json if present; proper-name decoding artifacts were kept
 in this frozen pilot, and the cleaned text is not guaranteed compilable LaTeX.
 

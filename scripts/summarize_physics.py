@@ -118,6 +118,7 @@ def main():
         "model_id": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
         "selection_report": relative(selection), "selection_report_sha256": digest(selection),
         "lr_selection_report_sha256": digest("results/physics_lr_selection.json"),
+        "nltk_resource_report_sha256": digest("results/physics_nltk_resource.json"),
         "corpus_manifest_sha256": digest("results/physics_prl_corpus.json"),
         "conditions": conditions, "paired_comparisons": comparisons, "training_runs": training,
         "paper_only_conditions": paper_only, "paper_only_comparisons": paper_comparisons,
