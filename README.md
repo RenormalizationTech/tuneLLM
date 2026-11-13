@@ -26,6 +26,15 @@ skipped and the refusal pilot is closed. See the
 [follow-up record](docs/refusal_late_execution.md).
 Management plans are reviewed with Claude before implementation; the dedicated
 Codex worker implements code.
+
+The clarified research objective is **refusal reduction**, with answer quality
+and direct persona style measured separately. The completed positive probes
+did not test that objective. A new bounded comparison of baseline, single-block
+subtraction and all-block projection removal is specified in
+[the reduction protocol](docs/refusal_reduction_protocol.md). Claude declined
+reviewing this design; the user authorized proceeding without that review.
+The coordinating Codex owns acceptance and the dedicated worker implements
+and tests. No reduction-model outputs have been generated yet.
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment
 reported separately.

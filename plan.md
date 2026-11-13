@@ -52,6 +52,17 @@ complete the initial project.
   generation was skipped and the refusal pilot is closed under its rule.
   See `docs/refusal_late_execution.md` and `results/refusal_02.json`.
   No further sweep, negative steering, NF4 transfer or new training is active.
+- Clarified next objective: refusal-reduction and activation-steering research,
+  with answer quality and direct persona measured separately. The user
+  authorized proceeding if Claude declined; it declined the core and limited
+  measurement review. This design is not Claude-approved. The coordinating
+  Codex owns scientific acceptance; the dedicated worker implements/tests.
+- New pilot scope: baseline versus fixed block-23 subtraction and all-block
+  projection removal, original BF16 Qwen3-4B, reused development defaults and
+  labels, 120 new development responses, then one baseline/selected-method
+  final comparison and a small automatic retention check only if eligible.
+  See `docs/refusal_reduction_protocol.md`. No layer/strength sweep or new
+  training is part of it. Earlier positive-probe results remain unchanged.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
   device. Tone generation stages finished and released project GPU memory.
