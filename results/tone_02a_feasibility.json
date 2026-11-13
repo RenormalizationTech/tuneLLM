@@ -1,0 +1,35 @@
+{
+  "status": "mechanically_ineligible_conditional_fallback_triggered",
+  "registration": "results/protocols/tone-02-registration.json",
+  "implementation_and_registration_commit": "45c41c4",
+  "prepared_manifest_sha256": "5d84bd1099fe72cd7e99cff6ee69ce0902b1dc778e7ab3ec2e31b756572f2696",
+  "scenarios": 80,
+  "responses": 160,
+  "required_eligible_pairs": 50,
+  "mechanical_eligible_upper_bound": 31,
+  "independent_filter_pass_counts": {
+    "both_literal_complete_without_unsupported_literals": 76,
+    "length_window_0_85_to_1_25": 35,
+    "both_nonempty_uncapped": 80
+  },
+  "neutral_mean_response_tokens_excluding_eos": 30.3125,
+  "warm_mean_response_tokens_excluding_eos": 37.425,
+  "median_per_pair_warm_neutral_token_ratio": 1.227390180878553,
+  "analysis": "Frozen tone_common.literal_checks/token_length; upper bound is the intersection of literal, length and nonempty/uncapped conditions. AI judging can only lower this count.",
+  "raw_artifact_sha256": {
+    "neutral.json": "3805d89738b7f2eb0ee34184d60cd9edfc02cd904da70b2836c7f6c6c610c441",
+    "warm.json": "98b197ac4aab43a63658112d093b41ae78db3bd17bc348302bad869e90c203b0",
+    "run.json": "20ef88b081e17b617e45ddda380a7fc89684b7909667e0512b1182da2734ba69"
+  },
+  "runtime": {
+    "physical_gpu": "0",
+    "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+    "elapsed_wall_seconds_including_model_load": 54.4165013730526,
+    "peak_pytorch_allocated_bytes": 8246733824
+  },
+  "experiment_ai_ratings_performed": false,
+  "steering_vectors_created": false,
+  "development_or_final_generation_performed": false,
+  "interpretation": "Symmetric sentence instructions reduced the length confound but did not supply 50 mechanically eligible pairs; no steering effect was tested.",
+  "next_action": "Run only the pre-registered rewrite fallback B after its exact implementation and inputs are separately sealed; preserve this attempt."
+}

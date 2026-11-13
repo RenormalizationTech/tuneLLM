@@ -1,0 +1,35 @@
+{
+  "status": "prepared_and_registered_before_rewrite_generation",
+  "manifest_sha256": "eaafeae4ec7d877d09de7dcd15cd4ce5b62d5e1a7e4bd428a9393ce85a32b25e",
+  "config_sha256": "7f3acaec60dd72ee89cba771634a4d0b3f64435d3b8f48b897fa718fbdfef3e6",
+  "protocol_sha256": "6f76909f99e58ab9b66b44e80171eb4b0a3a5450ddcc487e78edf1226f9ecebd",
+  "semantic_fixture_audit_passed": true,
+  "advisor_review": "results/reviews/steering_planning_advisor_review.md",
+  "rewrite_source_sha256": "d52b735edd181219330b5e71577912a095652e3eddab9d556d6e8c80a3239f91",
+  "a_neutral_sha256": "3805d89738b7f2eb0ee34184d60cd9edfc02cd904da70b2836c7f6c6c610c441",
+  "a_manifest_sha256": "5d84bd1099fe72cd7e99cff6ee69ce0902b1dc778e7ab3ec2e31b756572f2696",
+  "a_input_extraction_sha256": "03c53d7d760dc582e49f0f0032a574dd96ba39c15c24a8816491db1f46ec1c01",
+  "a_gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "rewrite_template": "Original scenario:\n{scenario}\n\nNeutral message:\n{neutral}\n\nRewrite this message in a warm, encouraging, considerate tone. Keep every stated fact and the same requested message; add no facts, flattery or extra claims. Use at most {N} words.\nReturn only the rewritten message.",
+  "rewrite_system": "Answer the user's request accurately in two or three sentences. Preserve the stated facts and do not invent details.",
+  "generation": {
+    "physical_gpu": "0",
+    "seed": 42,
+    "batch_size": 8,
+    "max_new_tokens": 256,
+    "enable_thinking": false,
+    "do_sample": false,
+    "attempts_per_scenario": 1
+  },
+  "word_budget": {
+    "definition": "Neutral output whitespace word count plus three",
+    "instruction_only": true,
+    "compliance_reported": true,
+    "hard_eligibility_gate": false
+  },
+  "unchanged": "Original core sources, fixture/rubric, token-length window, 50-pair requirement, all content/task/warmth gates and tone-02 development/final systems.",
+  "trigger": "Tone-02A mechanical upper bound 31 is below registered 50-pair requirement.",
+  "final_fallback": true,
+  "stop_rule": "If mechanical upper bound or AI-approved eligible count is below 50, stop tone construction; no further attempts.",
+  "judging": "No actual ratings until separately accepted and registered final helper and context audit."
+}
