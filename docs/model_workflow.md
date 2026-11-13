@@ -44,8 +44,14 @@ The physics choice of rank 128, LR 5e-5 and seed 42 belongs to that model/corpus
 experiment. A new task gets its own declared configuration. Adapter storage of
 1–5 GB is an upper allowance, not a minimum target.
 
-The next planned exercise is [task-specific instruction tuning](next_sft_pilot.md).
-Its dataset and protocol will be selected and frozen before a new training run.
+The original learning milestone is complete, including GSM8K instruction tuning.
+Another [task-specific instruction-tuning exercise](next_sft_pilot.md) is optional
+backlog. The next approved phase is reporting and
+[written-tone activation steering](tone_steering_protocol.md), followed by a
+separately reviewed refusal study. Steering changes activations during inference;
+the routine adapter-training steps above apply only when a new training exercise
+is explicitly selected. Review management plans with Claude first and delegate
+code implementation to the worker.
 
 ## Artifact lineage
 

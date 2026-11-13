@@ -1,12 +1,14 @@
-# Next milestone: a small task-specific SFT exercise
+# Optional backlog: a small task-specific SFT exercise
 
-Status: planned; dataset selection and protocol registration precede execution.
-This document does not register a training run.
+Status: optional backlog, not the next required milestone. Dataset selection and
+protocol registration would precede execution. This document does not register
+a training run. The original quantization and QLoRA milestone is complete; the
+earlier GSM8K experiment already performed instruction/response fine-tuning.
 
 ## Goal
 
-Use the existing pinned Qwen3-4B and verified NF4 base to learn ordinary
-instruction/response fine-tuning on a task with automatic scoring. The proposed
+Optionally reuse the pinned Qwen3-4B and verified NF4 base to practice a different
+instruction/response task with automatic scoring. The proposed
 task is extracting information from supplied text into a fixed JSON schema.
 Physics writing and a larger-model exercise remain deferred.
 

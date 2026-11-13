@@ -25,9 +25,20 @@ complete the initial project.
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
   the physics-writing exercise, while preserving the historical results.
-- Next milestone: a small instruction/response SFT exercise on the existing 4B
-  model, proposed as structured extraction into a fixed JSON schema. See
-  `docs/next_sft_pilot.md`; the dataset and new training protocol are not yet fixed.
+- Original quantization and QLoRA learning milestone: complete. The earlier GSM8K
+  experiment already covered instruction tuning; the physics experiment used
+  paper-text continued causal language modeling.
+- Next approved phase: finish benchmark reporting and Hugging Face documentation,
+  then a bounded written-tone steering pilot on Qwen3-4B, followed by a separately
+  reviewed refusal study. See `docs/tone_steering_protocol.md`. Discuss management
+  planning with Claude first; the dedicated Codex worker implements code.
+- Reporting cleanup is published and hash-verified in all four Hugging Face
+  repositories; only cards and new compact summaries changed. See
+  `docs/benchmark_summary.md` and `releases/README.md` for scores and exact
+  documentation revisions. Tone-steering preparation is next; unrelated GPU
+  workloads must finish before project inference resumes.
+- The JSON extraction SFT proposal is optional backlog, not a missing required
+  step. See `docs/next_sft_pilot.md`; no new training run is registered.
 - Routine default: one verified base, one fresh adapter configuration and seed
   42; a small development screen followed by one fixed final paired comparison.
   Reuse compatible baseline results. Rank/LR grids, extra seeds, BF16 controls
@@ -119,7 +130,7 @@ base-model copies and keep credentials out of version control.
 Model cards live as `README.md` files in the artifact repositories. The exact
 organization ID, artifact names, and visibility must be resolved before upload.
 
-### Routine work order for the next milestone
+### Routine work order for an optional future SFT task
 
 1. Select the task dataset and JSON schema; define labels, source-disjoint splits,
    primary metrics, retention checks and the runtime budget.

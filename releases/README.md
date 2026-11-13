@@ -10,6 +10,28 @@ the visibility chosen by the user. The standalone NF4 dependency is also private
 | [Experimental adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA) | Private | `399903ca450b44a68b84ec8b6acfe2ff36cc6e64` |
 | [Standalone NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4) | Private | `e9af208e44e083b77702a71d8aa65b7d97f78ce6` |
 
+### Additive benchmark documentation updates (2026-11-13)
+
+The completed [benchmark summary](../docs/benchmark_summary.md) is now included
+in all four Hub repositories as `benchmark_summary.json`, alongside updated
+cards. These commits changed only `README.md` and added that report. Original
+weights, configuration, tokenizer, evaluation files and release manifests remain
+unchanged. Original revisions above and the physics adapter's NF4 dependency
+pin remain valid; the table below records the newer documentation revisions.
+
+| Artifact | Documentation revision | Verified audit |
+| --- | --- | --- |
+| Public GGUFs | `c089994f008cc3d6326e4e010e5cba04974d0d02` | [GGUF](../results/huggingface_documentation_update_GGUF.json) |
+| Private GSM8K adapter | `6a29265f7dc99577777e412fa76659d8b734fdea` | [GSM8K](../results/huggingface_documentation_update_GSM8K-QLoRA.json) |
+| Private NF4 base | `6ba2181bb08ebab104292f19fb381efb8bc6d207` | [NF4](../results/huggingface_documentation_update_NF4.json) |
+| Private physics adapter | `5a3b128e520b9147b999ecb00da02216159a8cc6` | [Physics](../results/huggingface_documentation_update_PRL-Writing-QLoRA.json) |
+
+Each audit records the remote parent and complete before/after inventories.
+Read-only preflights passed, publication used an exact two-file allowlist and
+parent-commit concurrency check, and post-update hashes and visibility matched.
+Claude reviewed the concrete cards and reports before application. No new
+inference or model-weight upload was needed for these reporting updates.
+
 The standalone NF4 is unadapted and preserves the exact base used for the physics
 workflow. Every downloaded file hash matches, and a GPU reload of the downloaded
 revision reproduced both original probe logits and token sequences exactly. See
@@ -105,5 +127,6 @@ calling publication complete.
 The model package includes exact prepared CC BY data, full attribution, source
 code, environment lock, scorer/fixture metadata and a blinded 60-pair JSON packet.
 Its A/B key remains outside the payload. A separate local 30-pair review is at
-`outputs/physics-writing-review/review.html`; ratings are pending. Earlier public
+`outputs/physics-writing-review/review.html`; ratings are absent and assessment
+is deferred. Human ratings do not block completion. Earlier public
 GGUF and private GSM8K releases remain separate historical artifacts.

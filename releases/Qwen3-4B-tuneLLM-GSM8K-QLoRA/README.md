@@ -70,6 +70,13 @@ does not by itself establish better reasoning.
 
 ## Evaluation
 
+The additive `benchmark_summary.json` summarizes this earlier experiment without
+replacing `evaluation.json`, provenance or the original release manifest. Its
+121→101/128 result uses an earlier, different fixture/prompt protocol from the
+later 384-item cross-condition screen. Those totals are **not directly
+comparable**, even when subset sizes match. The regression remains the result
+of this experiment; later base measurements do not revise it.
+
 The primary measurements use:
 
 - 128 fixed GSM8K test rows, excluding the 16 earlier pipeline-smoke rows.

@@ -63,6 +63,47 @@ respectively. A one-item difference is not evidence that Q4 is more capable.
 BF16 and Q8_0 produced token-identical responses to Transformers on this fixture.
 Complete compact measurements are included as `evaluation.json`.
 
+## Completed fixed-subset benchmark screen
+
+The later screen evaluated the **same published weight bytes** on 384 items per
+condition. This is separate from the initial eight-item smoke check and tiny
+perplexity/microbenchmark above; the historical `evaluation.json` and provenance
+remain unchanged. The additive `benchmark_summary.json` records the new screen,
+paired counts, evaluated source commits and scorer hashes.
+
+| GGUF condition | General MMLU /128 | Physics MMLU /96 | GSM8K /128 | IFEval /32 |
+| --- | ---: | ---: | ---: | ---: |
+| BF16 | 92 | 62 | 119 | 25 |
+| Q8_0 | 89 | 61 | 121 | 25 |
+| Q4_K_M | 89 | 61 | 116 | 24 |
+
+General/physics are custom zero-shot MMLU four-choice likelihood subsets, not
+full standard leaderboard scores. GSM8K uses last-number fallback correctness;
+strict final-line correctness and truncation are reported separately. IFEval
+uses its pinned official prompt-level strict scorer. Dataset revisions:
+MMLU `c30699e8356da336a370243923dbaf21066bb9fe`,
+GSM8K `740312add88f781978c0658806c59bc2815b9866`, and
+IFEval `966cd89545d6b6acfd7638bc708b98261ca58e84`; official scorer source
+`f8d6d14a1fc6eaef606d7d1e1fa4e96ee09afb81`.
+
+The screen uses llama.cpp `8ca5a8008b57aa39f2601546c0d07912045080a5`,
+greedy non-thinking decoding, seed 42, batch one, and output budgets of 512 tokens
+for GSM8K and 1024 for IFEval. Input-token parity is checked against the pinned
+upstream tokenizer. The implementation commits and source SHA256s are in the
+new report; the original reproduction archive still describes the initial cycle.
+
+| Published weight | SHA256 |
+| --- | --- |
+| `Qwen3-4B-BF16.gguf` | `5dbbfbb5ccea81a811ef8346248bbf8f808c94477feb84415699d632798925b9` |
+| `Qwen3-4B-Q8_0.gguf` | `4b2b96c36712c42d902fb23cb361ed8ebf838a4342f77cedb87afe99e291775f` |
+| `Qwen3-4B-Q4_K_M.gguf` | `f7a3480949df3ae406a9661aae19e34b6c6ae344e7b6b8edd38b6185b786f339` |
+
+These are small fixed subsets with unknown base-pretraining exposure. The paired
+tests are exploratory and unadjusted; equal totals or nonsignificant differences
+do not establish equivalence, preserved general capability, or a universal
+quantization ranking. IFEval language-detection random-state sensitivity limits
+close comparisons. No full benchmark or production-performance claim is made.
+
 ## Use
 
 Use a llama.cpp build that supports Qwen3 and these GGUF formats. For example:

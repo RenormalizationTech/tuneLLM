@@ -1,0 +1,106 @@
+{
+  "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+  "private": false,
+  "parent_commit": "96038e0cb81737bc58489e19cf97461058a0b4e5",
+  "pre_inventory": {
+    ".gitattributes": {
+      "bytes": 1686,
+      "sha256": "fa1e0310b9bb326d9d160c12b3816eecfab1b5c613329e3c6bf8ca731876a892"
+    },
+    "LICENSE": {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    "Qwen3-4B-BF16.gguf": {
+      "bytes": 8051285472,
+      "sha256": "5dbbfbb5ccea81a811ef8346248bbf8f808c94477feb84415699d632798925b9"
+    },
+    "Qwen3-4B-Q4_K_M.gguf": {
+      "bytes": 2497280992,
+      "sha256": "f7a3480949df3ae406a9661aae19e34b6c6ae344e7b6b8edd38b6185b786f339"
+    },
+    "Qwen3-4B-Q8_0.gguf": {
+      "bytes": 4280405472,
+      "sha256": "4b2b96c36712c42d902fb23cb361ed8ebf838a4342f77cedb87afe99e291775f"
+    },
+    "README.md": {
+      "bytes": 4412,
+      "sha256": "f2a9d1434fba5e25e823e78a7ce4561220335de539f500b99ca47140d3fb0ece"
+    },
+    "REPRODUCE.md": {
+      "bytes": 2045,
+      "sha256": "77eb266e6ac4e1f85d0e3c010c8f48d227992ca83a229685e4d7a690b97db0db"
+    },
+    "environment.lock.txt": {
+      "bytes": 1395,
+      "sha256": "5f56da2277bf8eeb14a11c4fb53a73bffba5df6452d24c5c964950d6f31105de"
+    },
+    "evaluation.json": {
+      "bytes": 25065,
+      "sha256": "1836d8a2a9aab2ef06e80de966d020d72bda34080408fbe4bb0e7920989c95df"
+    },
+    "provenance.json": {
+      "bytes": 2267,
+      "sha256": "191734fe93ddb5d10a8ad20f0447f82456f56079bc32cfcef5b76e2fcb7a862a"
+    },
+    "reproduction-dab1dae.zip": {
+      "bytes": 58542,
+      "sha256": "c418776d175e98e3745ade70ae2f7c2f28ad6923afb9a526b3bc8e676db53d41"
+    }
+  },
+  "applied": true,
+  "credentials_recorded": false,
+  "revision": "c089994f008cc3d6326e4e010e5cba04974d0d02",
+  "post_verified": true,
+  "post_inventory": {
+    ".gitattributes": {
+      "bytes": 1686,
+      "sha256": "fa1e0310b9bb326d9d160c12b3816eecfab1b5c613329e3c6bf8ca731876a892"
+    },
+    "LICENSE": {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    "Qwen3-4B-BF16.gguf": {
+      "bytes": 8051285472,
+      "sha256": "5dbbfbb5ccea81a811ef8346248bbf8f808c94477feb84415699d632798925b9"
+    },
+    "Qwen3-4B-Q4_K_M.gguf": {
+      "bytes": 2497280992,
+      "sha256": "f7a3480949df3ae406a9661aae19e34b6c6ae344e7b6b8edd38b6185b786f339"
+    },
+    "Qwen3-4B-Q8_0.gguf": {
+      "bytes": 4280405472,
+      "sha256": "4b2b96c36712c42d902fb23cb361ed8ebf838a4342f77cedb87afe99e291775f"
+    },
+    "README.md": {
+      "bytes": 6692,
+      "sha256": "49a8dffaaa28f0ca6aac0907b0c6713c8117a6d22a862bdfc40ba16bcc4b2ad8"
+    },
+    "REPRODUCE.md": {
+      "bytes": 2045,
+      "sha256": "77eb266e6ac4e1f85d0e3c010c8f48d227992ca83a229685e4d7a690b97db0db"
+    },
+    "benchmark_summary.json": {
+      "bytes": 9999,
+      "sha256": "fac8e5a1588cbb6486bf66852a2a48c050375a4c55b07b67786d6b98e72f168d"
+    },
+    "environment.lock.txt": {
+      "bytes": 1395,
+      "sha256": "5f56da2277bf8eeb14a11c4fb53a73bffba5df6452d24c5c964950d6f31105de"
+    },
+    "evaluation.json": {
+      "bytes": 25065,
+      "sha256": "1836d8a2a9aab2ef06e80de966d020d72bda34080408fbe4bb0e7920989c95df"
+    },
+    "provenance.json": {
+      "bytes": 2267,
+      "sha256": "191734fe93ddb5d10a8ad20f0447f82456f56079bc32cfcef5b76e2fcb7a862a"
+    },
+    "reproduction-dab1dae.zip": {
+      "bytes": 58542,
+      "sha256": "c418776d175e98e3745ade70ae2f7c2f28ad6923afb9a526b3bc8e676db53d41"
+    }
+  },
+  "update_manifest_sha256": "5ae303a08db65dbdeb48420002419eaa0186b1019755175dba4a30d8b11898a2"
+}

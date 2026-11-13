@@ -9,13 +9,19 @@ a small development screen, and one fixed final comparison. Compatible baseline
 results can be reused. Multi-rank/LR sweeps and extra controls are calibration
 experiments rather than default steps.
 
-The [next milestone](docs/next_sft_pilot.md) is a small instruction/response SFT
-exercise with automatically scored JSON extraction on the existing 4B model.
-Dataset selection and protocol registration precede training. Physics writing
-remains a lightweight style-learning pilot; further writing assessment is
-deferred. Later Claude/Codex ratings will be identified as AI judgments.
-The existing scripts implement the completed pilots; the new task still needs
-data preparation, JSON scoring and task-specific orchestration adaptations.
+The original quantization and QLoRA milestone is complete. The next approved
+phase is benchmark reporting followed by a small Qwen3-4B written-tone steering
+pilot, then a separately reviewed refusal study. See the
+[steering protocol](docs/tone_steering_protocol.md). Management plans are reviewed
+with Claude before implementation; the dedicated Codex worker implements code.
+The [benchmark summary](docs/benchmark_summary.md) collects the completed
+quantization and physics-adapter scores, with the earlier GSM8K experiment
+reported separately.
+The [JSON instruction-tuning exercise](docs/next_sft_pilot.md) is optional backlog:
+the earlier GSM8K QLoRA run already covered instruction tuning.
+Physics writing remains a lightweight exploratory exercise; further training and
+writing assessment are deferred. Later Claude/Codex ratings will be identified
+as AI judgments.
 
 The current reusable workflow is documented in
 [docs/model_workflow.md](docs/model_workflow.md). The completed Qwen3-4B physics-writing exercise uses
