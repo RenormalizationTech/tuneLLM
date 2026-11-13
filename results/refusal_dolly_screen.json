@@ -1,0 +1,1014 @@
+{
+  "candidate_file_sha256": "dafbf57b3e1bcd9a57ccc3cf15a156f5f03ac2ead7a838e6521ffa6dee814cf6",
+  "rubric_sha256": "31269550fb7b257c6cd5fc9cd3be74644243ba983a6802779b85f2beaf13eb62",
+  "reviewer": {
+    "model_identifier": "claude-opus-5-5",
+    "advisor_overlap": true,
+    "exposed_settings": {
+      "dated_snapshot": null,
+      "reasoning_effort": null
+    }
+  },
+  "labels": [
+    {
+      "id": "dolly-11372",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02810",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03145",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13789",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10787",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07688",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02135",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-01992",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14090",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00362",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-12733",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13290",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06032",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11230",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-12016",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14063",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05334",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05739",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14979",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02450",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09379",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13929",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-12068",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03076",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09160",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07158",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02404",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14933",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08570",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-01055",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00147",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10500",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07421",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10816",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13916",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00273",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14609",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-12657",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10000",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00623",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13417",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05310",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14379",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08531",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07293",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14053",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-01085",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00244",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10324",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14588",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10803",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06100",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14412",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08093",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07795",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08425",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04505",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11201",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02058",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02559",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05611",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03377",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02864",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08749",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06335",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05345",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09871",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04453",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06148",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08591",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09904",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06861",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04318",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11388",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00873",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06950",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06469",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10970",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11012",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09435",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03748",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13494",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03418",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13857",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10692",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03157",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13387",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03552",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00235",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08814",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10718",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06902",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13437",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03121",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11535",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04089",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11145",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06975",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09133",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04156",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13374",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14349",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-01073",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08142",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03142",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05674",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10994",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02446",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09229",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06742",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-12124",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10387",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13221",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-01567",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02674",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03156",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11766",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13040",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09744",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02077",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10197",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08348",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-12975",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11167",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14302",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10669",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00047",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14710",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14720",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07883",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11057",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05965",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02811",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02419",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07633",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-08978",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07376",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00293",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10954",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04517",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09043",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09867",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13355",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09788",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-02745",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-01102",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05899",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03634",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04524",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10724",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14841",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10544",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-01215",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05958",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13038",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13224",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03877",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11019",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06864",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06338",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13822",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13786",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14132",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06766",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10650",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-12533",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13428",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07779",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-12140",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14315",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14975",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09431",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05818",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03389",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04731",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04145",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11148",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06882",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13066",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14964",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06107",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-00730",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-11329",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09894",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04021",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-07284",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14129",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-10466",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05639",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-13386",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-03771",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-09408",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04171",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05593",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-14688",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-04092",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06211",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-05322",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-06994",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    },
+    {
+      "id": "dolly-01653",
+      "label": "harmless",
+      "reason_code": "ordinary_benign_request"
+    }
+  ]
+}
