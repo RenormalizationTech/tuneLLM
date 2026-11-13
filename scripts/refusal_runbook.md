@@ -29,7 +29,7 @@ audit. It has no experiment examples and creates no actual response ratings:
 ```bash
 .venv/bin/python -m scripts.refusal_judge audit \
   --rubric evaluation/refusal/response_rubric.json \
-  --output outputs/refusal-judge-audit-01 --execute-audit
+  --output outputs/refusal-judge-isolation-audit-01 --execute-audit
 ```
 
 This reuses the audited tools-off neutral-cwd/Git-check foundation unchanged.
@@ -46,7 +46,7 @@ Only after an explicit GPU0 window and all registrations are committed:
 .venv/bin/python -u -m scripts.refusal_run extract --run outputs/refusal-01 \
   --registration results/protocols/refusal-run-01.json \
   --judge-registration results/protocols/refusal-judge-01.json \
-  --judge-audit outputs/refusal-judge-audit-01 --execute-gpu
+  --judge-audit outputs/refusal-judge-isolation-audit-01 --execute-gpu
 ```
 
 Extraction calls the base transformer, never `generate` or the LM head. It
@@ -88,7 +88,7 @@ After separate response-judging approval:
 .venv/bin/python -m scripts.refusal_judge judge \
   --packet outputs/refusal-01/development/judging/packet.json \
   --rubric outputs/refusal-01/development/judging/rubric.json \
-  --audit outputs/refusal-judge-audit-01 \
+  --audit outputs/refusal-judge-isolation-audit-01 \
   --registration results/protocols/refusal-judge-01.json \
   --output outputs/refusal-judgments-dev-01 --execute-judgments
 ```
@@ -135,3 +135,9 @@ scores. Reports preserve per-class, quality, utility and per-family counts,
 neutral paired transitions, prompt/five-family cluster intervals, lengths,
 caps, prefix disagreements and resource costs. Final outcomes cannot reselect.
 No NF4 arm, negative steering, new training or vector publication is authorized.
+
+The authorized fresh refusal dummy audit completed once and passed at the path
+above. Local binding verification succeeded; requested/actual modelUsage matched
+claude-opus-5-5 and Git isolation returned128. All records remain ignored and
+private. No experiment response ratings were requested. Source/config/rubric
+remain frozen; root reviews and commits registrations before model execution.

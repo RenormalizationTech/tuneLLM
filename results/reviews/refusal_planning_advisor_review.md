@@ -59,3 +59,37 @@ homonyms, privacy and discrimination. Source/input IDs and hashes are in
 No refusal-model generation, steering vector, development selection, final
 response or experimental response rating exists at this review stage. Actual
 code/rubric/audit and run-registration review must precede execution.
+
+## Implementation acceptance and extraction review
+
+Before model execution, the dedicated worker passed 27 refusal-specific CPU
+checks and froze the runner, validator, judge adapter, config and rubric. Claude
+accepted the implementation review and the attention-mask position-ID fix.
+The new adapter passed one fresh dummy isolation audit with tools disabled,
+a neutral temporary working directory and an independent Git-not-repository
+check. Requested and observed judge model were `claude-opus-5-5`; exact dated
+snapshot and actual effort were not exposed. Only sanitized audit metadata
+is tracked in `results/refusal_judge_validation.json`. Commit `f6a0f87` froze
+the code and exact run/judge registrations before GPU extraction.
+
+Extraction then produced finite directions from 100 harmful and 100 benign
+prompts, without generating answers. Claude reviewed the diagnostics: layer17
+split-half cosine 0.984 indicates a stable source-class mean difference, while
+development projection AUC 0.637 gives only modest safe/unsafe separation.
+Neither establishes causal refusal control. Diagnostic layer23 had AUC 0.974,
+but the intervention remains at the registered layer17. Source register and
+topic confounds remain. High-dose disruption must not count as refusal.
+
+The initial cap256 preflight hit the limit on40/60 prompts and therefore
+triggered the registered cap320 rerun. Claude accepted this fixed rule, with no
+further extension. At320,27/30 safe and9/30 unsafe baseline responses remain
+truncated. Refusal is classified from the available text, with unscorable
+responses handled by the frozen rubric. Useful/correct ratings are indicative
+only: cutoff can affect completion, and length changes can make its effect
+differ across conditions. Report cap-hit counts beside usefulness results.
+
+Actual zero-vector/multiplier1 generation matched baseline tokens exactly;
+nonzero/multiplier1 had active prefill/decode hooks, hidden-state delta1.296875
+and maximum last-prompt logit delta7.5. The remaining generation upper
+projection was642.2 seconds, excluding judging/loading/extraction, within the
+reviewed small-pilot budget. The exact report is committed before development.

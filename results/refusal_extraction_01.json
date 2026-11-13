@@ -1,0 +1,46 @@
+{
+  "sha256": "41bf974a42af17442d9abcb100a6bc8f34a4060d3acc1985514867b0ff3d5d95",
+  "diagnostics": {
+    "11": {
+      "norm": 8.840304374694824,
+      "median_prompt_activation_norm": 33.88974380493164,
+      "norm_to_median_prompt_activation_norm": 0.2608548599711864,
+      "harmful_prompts": 100,
+      "benign_prompts": 100,
+      "split_half_cosine": 0.9774336218833923,
+      "split_half_method": "first/second halves of frozen pairing order; per-class means; null if undefined",
+      "weighting": "equal per prompt, harmful mean minus benign mean; no response tokens",
+      "development_projection_auc": 0.6388888888888888
+    },
+    "17": {
+      "norm": 14.495134353637695,
+      "median_prompt_activation_norm": 46.92325019836426,
+      "norm_to_median_prompt_activation_norm": 0.3089115586060361,
+      "harmful_prompts": 100,
+      "benign_prompts": 100,
+      "split_half_cosine": 0.9842469096183777,
+      "split_half_method": "first/second halves of frozen pairing order; per-class means; null if undefined",
+      "weighting": "equal per prompt, harmful mean minus benign mean; no response tokens",
+      "development_projection_auc": 0.6366666666666667
+    },
+    "23": {
+      "norm": 61.19376754760742,
+      "median_prompt_activation_norm": 102.34415817260742,
+      "norm_to_median_prompt_activation_norm": 0.5979214509185932,
+      "harmful_prompts": 100,
+      "benign_prompts": 100,
+      "split_half_cosine": 0.9862765073776245,
+      "split_half_method": "first/second halves of frozen pairing order; per-class means; null if undefined",
+      "weighting": "equal per prompt, harmful mean minus benign mean; no response tokens",
+      "development_projection_auc": 0.9744444444444444
+    }
+  },
+  "primary_layer": 17,
+  "diagnostic_layers_only": [
+    11,
+    23
+  ],
+  "answers_generated": false,
+  "position": "last real prompt token after upstream nonthinking generation prefix; no system prompt",
+  "extraction_input_sha256": "9e65ea5c4ee75d971a372bbb924d5787cf20598e9f153a87796c713ed744ec71"
+}
