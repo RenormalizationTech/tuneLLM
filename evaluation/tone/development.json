@@ -1,0 +1,1352 @@
+[
+  {
+    "id": "repair_log-1",
+    "family": "repair_log",
+    "domain": "home",
+    "user": "Write a repair update to the household saying Maya replaced 2 drawer handles on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: replaced 2 drawer handles",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "drawer handles"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "repair_log-2",
+    "family": "repair_log",
+    "domain": "home",
+    "user": "Write a repair update to the household saying Leo replaced 3 cupboard knobs on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: replaced 3 cupboard knobs",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "cupboard knobs"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "repair_log-3",
+    "family": "repair_log",
+    "domain": "home",
+    "user": "Write a repair update to the household saying Nora replaced 4 shelf brackets on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: replaced 4 shelf brackets",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "shelf brackets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "repair_log-4",
+    "family": "repair_log",
+    "domain": "home",
+    "user": "Write a repair update to the household saying Omar replaced 5 curtain hooks on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: replaced 5 curtain hooks",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "curtain hooks"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "repair_log-5",
+    "family": "repair_log",
+    "domain": "home",
+    "user": "Write a repair update to the household saying Iris replaced 6 door stops on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: replaced 6 door stops",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "door stops"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "delivery_location-1",
+    "family": "delivery_location",
+    "domain": "home",
+    "user": "Write delivery instructions to Maya: leave 2 parcels by the side door on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: leave 2 parcels",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "parcels"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      },
+      {
+        "key": "location",
+        "allowed_values": [
+          "side door"
+        ]
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "delivery_location-2",
+    "family": "delivery_location",
+    "domain": "home",
+    "user": "Write delivery instructions to Leo: leave 3 cartons by the front porch on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: leave 3 cartons",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "cartons"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      },
+      {
+        "key": "location",
+        "allowed_values": [
+          "front porch"
+        ]
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "delivery_location-3",
+    "family": "delivery_location",
+    "domain": "home",
+    "user": "Write delivery instructions to Nora: leave 4 envelopes by the back door on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: leave 4 envelopes",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "envelopes"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      },
+      {
+        "key": "location",
+        "allowed_values": [
+          "back door"
+        ]
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "delivery_location-4",
+    "family": "delivery_location",
+    "domain": "home",
+    "user": "Write delivery instructions to Omar: leave 5 crates by the garden shed on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: leave 5 crates",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "crates"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      },
+      {
+        "key": "location",
+        "allowed_values": [
+          "garden shed"
+        ]
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "delivery_location-5",
+    "family": "delivery_location",
+    "domain": "home",
+    "user": "Write delivery instructions to Iris: leave 6 packages by the garage door on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: leave 6 packages",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "packages"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      },
+      {
+        "key": "location",
+        "allowed_values": [
+          "garage door"
+        ]
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "practice_reflection-1",
+    "family": "practice_reflection",
+    "domain": "learning",
+    "user": "Write a practice update to the tutor saying Maya completed 2 spelling exercises on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: completed 2 spelling exercises",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "spelling exercises"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "practice_reflection-2",
+    "family": "practice_reflection",
+    "domain": "learning",
+    "user": "Write a practice update to the tutor saying Leo completed 3 arithmetic exercises on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: completed 3 arithmetic exercises",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "arithmetic exercises"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "practice_reflection-3",
+    "family": "practice_reflection",
+    "domain": "learning",
+    "user": "Write a practice update to the tutor saying Nora completed 4 handwriting exercises on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: completed 4 handwriting exercises",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "handwriting exercises"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "practice_reflection-4",
+    "family": "practice_reflection",
+    "domain": "learning",
+    "user": "Write a practice update to the tutor saying Omar completed 5 reading exercises on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: completed 5 reading exercises",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "reading exercises"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "practice_reflection-5",
+    "family": "practice_reflection",
+    "domain": "learning",
+    "user": "Write a practice update to the tutor saying Iris completed 6 grammar exercises on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: completed 6 grammar exercises",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "grammar exercises"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "experiment_observation-1",
+    "family": "experiment_observation",
+    "domain": "learning",
+    "user": "Write an observation update to the gardening group: Maya counted 2 sprouts on Monday; do not explain their cause.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: counted 2 sprouts",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "sprouts"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "experiment_observation-2",
+    "family": "experiment_observation",
+    "domain": "learning",
+    "user": "Write an observation update to the gardening group: Leo counted 3 buds on Tuesday; do not explain their cause.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: counted 3 buds",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "buds"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "experiment_observation-3",
+    "family": "experiment_observation",
+    "domain": "learning",
+    "user": "Write an observation update to the gardening group: Nora counted 4 leaves on Wednesday; do not explain their cause.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: counted 4 leaves",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "leaves"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "experiment_observation-4",
+    "family": "experiment_observation",
+    "domain": "learning",
+    "user": "Write an observation update to the gardening group: Omar counted 5 roots on Thursday; do not explain their cause.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: counted 5 roots",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "roots"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "experiment_observation-5",
+    "family": "experiment_observation",
+    "domain": "learning",
+    "user": "Write an observation update to the gardening group: Iris counted 6 shoots on Friday; do not explain their cause.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: counted 6 shoots",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "shoots"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "tool_checkout-1",
+    "family": "tool_checkout",
+    "domain": "community",
+    "user": "Write a loan confirmation message to Maya: you borrowed 2 spades on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: borrowed 2 spades",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "spades"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "tool_checkout-2",
+    "family": "tool_checkout",
+    "domain": "community",
+    "user": "Write a loan confirmation message to Leo: you borrowed 3 rakes on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: borrowed 3 rakes",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "rakes"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "tool_checkout-3",
+    "family": "tool_checkout",
+    "domain": "community",
+    "user": "Write a loan confirmation message to Nora: you borrowed 4 trowels on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: borrowed 4 trowels",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "trowels"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "tool_checkout-4",
+    "family": "tool_checkout",
+    "domain": "community",
+    "user": "Write a loan confirmation message to Omar: you borrowed 5 watering cans on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: borrowed 5 watering cans",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "watering cans"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "tool_checkout-5",
+    "family": "tool_checkout",
+    "domain": "community",
+    "user": "Write a loan confirmation message to Iris: you borrowed 6 buckets on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: borrowed 6 buckets",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "buckets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "ticket_confirmation-1",
+    "family": "ticket_confirmation",
+    "domain": "leisure",
+    "user": "Write a booking confirmation to Maya: you reserved 2 cinema tickets for Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: reserved 2 cinema tickets",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "cinema tickets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "ticket_confirmation-2",
+    "family": "ticket_confirmation",
+    "domain": "leisure",
+    "user": "Write a booking confirmation to Leo: you reserved 3 concert tickets for Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: reserved 3 concert tickets",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "concert tickets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "ticket_confirmation-3",
+    "family": "ticket_confirmation",
+    "domain": "leisure",
+    "user": "Write a booking confirmation to Nora: you reserved 4 theatre tickets for Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: reserved 4 theatre tickets",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "theatre tickets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "ticket_confirmation-4",
+    "family": "ticket_confirmation",
+    "domain": "leisure",
+    "user": "Write a booking confirmation to Omar: you reserved 5 gallery tickets for Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: reserved 5 gallery tickets",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "gallery tickets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "ticket_confirmation-5",
+    "family": "ticket_confirmation",
+    "domain": "leisure",
+    "user": "Write a booking confirmation to Iris: you reserved 6 festival tickets for Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: reserved 6 festival tickets",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "festival tickets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  }
+]

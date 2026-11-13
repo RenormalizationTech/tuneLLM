@@ -1,0 +1,30 @@
+{
+  "status": "prepared_and_registered_before_generation",
+  "manifest_sha256": "f5f28a1351fd26e3be5b6b42fa16282c7a935a36c7ba52d5a0bdf4893e393653",
+  "protocol_sha256": "9635e862d8c826c418543aa0c98c7352f2a1c0286e5900ce53ee72447dab518c",
+  "config_sha256": "ae065962b6d7082004d410b13d370809be516f41c12c56359151b48d66a3f161",
+  "fixture_sha256": {
+    "extraction": "03c53d7d760dc582e49f0f0032a574dd96ba39c15c24a8816491db1f46ec1c01",
+    "development": "bf690ccd2718f51264c409fc0b4eb2af2195c8e97e74b5aafbf203c7c7696517",
+    "final": "e6ab20536435b7573b34a2985f75e35ac223b8786da04b475e0990dae9b7a59f"
+  },
+  "rubric_sha256": "a2325fb772a630f554079405d9299516dca15d19e0940edbb222e002f51ac1ba",
+  "semantic_fixture_audit_passed": true,
+  "advisor_review": "results/reviews/steering_planning_advisor_review.md",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "physical_gpu": "0",
+  "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "resource_authorization": "User explicitly permitted GPU 0 coexistence if memory and utilization allow; preserve all existing jobs.",
+  "initial_generation": "80 extraction scenarios, neutral and warm systems, greedy nonthinking, seed 42, batch 8, cap 256",
+  "extraction_order": "Fixed round-robin across 16 families; retain first 50 pairs passing unchanged eligibility rules.",
+  "core_cpu_checks": {
+    "tone_tests_passed": 22,
+    "reporting_tests_passed": 21,
+    "combined_tests_passed": 43,
+    "gpu_inference_in_tests": false
+  },
+  "judge_helper": "Independent implementation and context audit must be accepted and hashed before actual ratings.",
+  "budget_registration": "Development timing preflight and exact budget registration still required before development selection.",
+  "final_execution": "Requires committed development-only selection lock; final inputs do not calibrate this protocol."
+}

@@ -1,0 +1,39 @@
+{
+  "counts": {
+    "extraction": {
+      "rows": 80,
+      "families": 16,
+      "domains": {
+        "home": 20,
+        "learning": 20,
+        "community": 20,
+        "leisure": 20
+      }
+    },
+    "development": {
+      "rows": 30,
+      "families": 6,
+      "domains": {
+        "home": 10,
+        "learning": 10,
+        "community": 5,
+        "leisure": 5
+      }
+    },
+    "final": {
+      "rows": 60,
+      "families": 12,
+      "domains": {
+        "home": 15,
+        "learning": 15,
+        "community": 15,
+        "leisure": 15
+      }
+    }
+  },
+  "authorship": "synthetic AI-authored",
+  "automatic_family_disjointness": true,
+  "extraction_order": "fixed round-robin across 16 families: all scenario1, then all scenario2, etc.; retain first50 eligible",
+  "pre_generation_revision": "semantic event and task completion; communicative requests; varied objects/locations",
+  "semantic_template_audit": "Distinct authored actions; independent advisor paraphrase-leakage review required before generation."
+}

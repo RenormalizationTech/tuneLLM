@@ -1,0 +1,3522 @@
+[
+  {
+    "id": "laundry_sort-1",
+    "family": "laundry_sort",
+    "domain": "home",
+    "user": "Write a reminder to Maya about sorting 2 towels on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: sorting 2 towels",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "towels"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "pantry_label-1",
+    "family": "pantry_label",
+    "domain": "home",
+    "user": "Write a message to the household saying Maya labeled 2 jars on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: labeled 2 jars",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "jars"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "plant_water-1",
+    "family": "plant_water",
+    "domain": "home",
+    "user": "Write a reminder to Maya about watering 2 ferns on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: watering 2 ferns",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "ferns"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "key_handover-1",
+    "family": "key_handover",
+    "domain": "home",
+    "user": "Write a handover message to Maya: collect 2 keys on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: collect 2 keys",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "keys"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "flashcard_plan-1",
+    "family": "flashcard_plan",
+    "domain": "learning",
+    "user": "Write a study-plan message to Maya about practicing 2 word cards on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: practicing 2 word cards",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "word cards"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "book_return-1",
+    "family": "book_return",
+    "domain": "learning",
+    "user": "Write a library reminder to Maya about returning 2 novels on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: returning 2 novels",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "novels"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notebook_index-1",
+    "family": "notebook_index",
+    "domain": "learning",
+    "user": "Write a message to the study group saying Maya indexed 2 notebook pages on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: indexed 2 notebook pages",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "notebook pages"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "quiz_materials-1",
+    "family": "quiz_materials",
+    "domain": "learning",
+    "user": "Write a quiz preparation message to Maya: bring 2 pencils on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: bring 2 pencils",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "pencils"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "food_donation-1",
+    "family": "food_donation",
+    "domain": "community",
+    "user": "Write a donation update to the volunteers: Maya donated 2 soup tins on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: donated 2 soup tins",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "soup tins"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "volunteer_badge-1",
+    "family": "volunteer_badge",
+    "domain": "community",
+    "user": "Write a message to the welcome team saying Maya prepared 2 name badges for Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: prepared 2 name badges",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "name badges"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "street_cleanup-1",
+    "family": "street_cleanup",
+    "domain": "community",
+    "user": "Write a cleanup assignment message to Maya: fill 2 rubbish bags on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: fill 2 rubbish bags",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "rubbish bags"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notice_translation-1",
+    "family": "notice_translation",
+    "domain": "community",
+    "user": "Turn these notes into a message to the hall team: Maya; deliver 2 chairs; Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: deliver 2 chairs",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "chairs"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "picnic_checklist-1",
+    "family": "picnic_checklist",
+    "domain": "leisure",
+    "user": "Write a picnic preparation message to Maya: pack 2 cups on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: pack 2 cups",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "cups"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "game_rules-1",
+    "family": "game_rules",
+    "domain": "leisure",
+    "user": "Write a game setup message to Maya: start with 2 tiles on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: start with 2 tiles",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "tiles"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "craft_allocation-1",
+    "family": "craft_allocation",
+    "domain": "leisure",
+    "user": "Write a craft-session message to Maya: take 2 ribbons on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: take 2 ribbons",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "ribbons"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "photo_caption-1",
+    "family": "photo_caption",
+    "domain": "leisure",
+    "user": "Write a photo-sharing message to the club: the photo shows Maya holding 2 kites on Monday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Maya"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Monday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Maya: holding 2 kites",
+        "literal_groups": [
+          [
+            "2",
+            "two"
+          ],
+          [
+            "kites"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Maya"
+    ],
+    "allowed_days": [
+      "Monday"
+    ],
+    "allowed_numbers": [
+      "2"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "laundry_sort-2",
+    "family": "laundry_sort",
+    "domain": "home",
+    "user": "Write a reminder to Leo about sorting 3 socks on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: sorting 3 socks",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "socks"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "pantry_label-2",
+    "family": "pantry_label",
+    "domain": "home",
+    "user": "Write a message to the household saying Leo labeled 3 tins on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: labeled 3 tins",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "tins"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "plant_water-2",
+    "family": "plant_water",
+    "domain": "home",
+    "user": "Write a reminder to Leo about watering 3 seedlings on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: watering 3 seedlings",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "seedlings"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "key_handover-2",
+    "family": "key_handover",
+    "domain": "home",
+    "user": "Write a handover message to Leo: collect 3 access cards on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: collect 3 access cards",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "access cards"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "flashcard_plan-2",
+    "family": "flashcard_plan",
+    "domain": "learning",
+    "user": "Write a study-plan message to Leo about practicing 3 number cards on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: practicing 3 number cards",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "number cards"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "book_return-2",
+    "family": "book_return",
+    "domain": "learning",
+    "user": "Write a library reminder to Leo about returning 3 atlases on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: returning 3 atlases",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "atlases"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notebook_index-2",
+    "family": "notebook_index",
+    "domain": "learning",
+    "user": "Write a message to the study group saying Leo indexed 3 sketch pages on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: indexed 3 sketch pages",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "sketch pages"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "quiz_materials-2",
+    "family": "quiz_materials",
+    "domain": "learning",
+    "user": "Write a quiz preparation message to Leo: bring 3 erasers on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: bring 3 erasers",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "erasers"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "food_donation-2",
+    "family": "food_donation",
+    "domain": "community",
+    "user": "Write a donation update to the volunteers: Leo donated 3 rice packets on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: donated 3 rice packets",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "rice packets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "volunteer_badge-2",
+    "family": "volunteer_badge",
+    "domain": "community",
+    "user": "Write a message to the welcome team saying Leo prepared 3 visitor badges for Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: prepared 3 visitor badges",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "visitor badges"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "street_cleanup-2",
+    "family": "street_cleanup",
+    "domain": "community",
+    "user": "Write a cleanup assignment message to Leo: fill 3 leaf sacks on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: fill 3 leaf sacks",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "leaf sacks"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notice_translation-2",
+    "family": "notice_translation",
+    "domain": "community",
+    "user": "Turn these notes into a message to the hall team: Leo; deliver 3 stools; Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: deliver 3 stools",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "stools"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "picnic_checklist-2",
+    "family": "picnic_checklist",
+    "domain": "leisure",
+    "user": "Write a picnic preparation message to Leo: pack 3 plates on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: pack 3 plates",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "plates"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "game_rules-2",
+    "family": "game_rules",
+    "domain": "leisure",
+    "user": "Write a game setup message to Leo: start with 3 counters on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: start with 3 counters",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "counters"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "craft_allocation-2",
+    "family": "craft_allocation",
+    "domain": "leisure",
+    "user": "Write a craft-session message to Leo: take 3 paper squares on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: take 3 paper squares",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "paper squares"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "photo_caption-2",
+    "family": "photo_caption",
+    "domain": "leisure",
+    "user": "Write a photo-sharing message to the club: the photo shows Leo holding 3 paper boats on Tuesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Leo"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Tuesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Leo: holding 3 paper boats",
+        "literal_groups": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "paper boats"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Leo"
+    ],
+    "allowed_days": [
+      "Tuesday"
+    ],
+    "allowed_numbers": [
+      "3"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "laundry_sort-3",
+    "family": "laundry_sort",
+    "domain": "home",
+    "user": "Write a reminder to Nora about sorting 4 shirts on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: sorting 4 shirts",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "shirts"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "pantry_label-3",
+    "family": "pantry_label",
+    "domain": "home",
+    "user": "Write a message to the household saying Nora labeled 4 containers on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: labeled 4 containers",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "containers"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "plant_water-3",
+    "family": "plant_water",
+    "domain": "home",
+    "user": "Write a reminder to Nora about watering 4 herbs on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: watering 4 herbs",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "herbs"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "key_handover-3",
+    "family": "key_handover",
+    "domain": "home",
+    "user": "Write a handover message to Nora: collect 4 key rings on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: collect 4 key rings",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "key rings"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "flashcard_plan-3",
+    "family": "flashcard_plan",
+    "domain": "learning",
+    "user": "Write a study-plan message to Nora about practicing 4 picture cards on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: practicing 4 picture cards",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "picture cards"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "book_return-3",
+    "family": "book_return",
+    "domain": "learning",
+    "user": "Write a library reminder to Nora about returning 4 comic books on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: returning 4 comic books",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "comic books"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notebook_index-3",
+    "family": "notebook_index",
+    "domain": "learning",
+    "user": "Write a message to the study group saying Nora indexed 4 reference pages on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: indexed 4 reference pages",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "reference pages"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "quiz_materials-3",
+    "family": "quiz_materials",
+    "domain": "learning",
+    "user": "Write a quiz preparation message to Nora: bring 4 rulers on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: bring 4 rulers",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "rulers"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "food_donation-3",
+    "family": "food_donation",
+    "domain": "community",
+    "user": "Write a donation update to the volunteers: Nora donated 4 pasta bags on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: donated 4 pasta bags",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "pasta bags"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "volunteer_badge-3",
+    "family": "volunteer_badge",
+    "domain": "community",
+    "user": "Write a message to the welcome team saying Nora prepared 4 helper badges for Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: prepared 4 helper badges",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "helper badges"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "street_cleanup-3",
+    "family": "street_cleanup",
+    "domain": "community",
+    "user": "Write a cleanup assignment message to Nora: fill 4 recycling bags on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: fill 4 recycling bags",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "recycling bags"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notice_translation-3",
+    "family": "notice_translation",
+    "domain": "community",
+    "user": "Turn these notes into a message to the hall team: Nora; deliver 4 tables; Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: deliver 4 tables",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "tables"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "picnic_checklist-3",
+    "family": "picnic_checklist",
+    "domain": "leisure",
+    "user": "Write a picnic preparation message to Nora: pack 4 spoons on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: pack 4 spoons",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "spoons"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "game_rules-3",
+    "family": "game_rules",
+    "domain": "leisure",
+    "user": "Write a game setup message to Nora: start with 4 cards on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: start with 4 cards",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "cards"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "craft_allocation-3",
+    "family": "craft_allocation",
+    "domain": "leisure",
+    "user": "Write a craft-session message to Nora: take 4 felt strips on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: take 4 felt strips",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "felt strips"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "photo_caption-3",
+    "family": "photo_caption",
+    "domain": "leisure",
+    "user": "Write a photo-sharing message to the club: the photo shows Nora holding 4 painted stones on Wednesday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Nora"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Wednesday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Nora: holding 4 painted stones",
+        "literal_groups": [
+          [
+            "4",
+            "four"
+          ],
+          [
+            "painted stones"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Nora"
+    ],
+    "allowed_days": [
+      "Wednesday"
+    ],
+    "allowed_numbers": [
+      "4"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "laundry_sort-4",
+    "family": "laundry_sort",
+    "domain": "home",
+    "user": "Write a reminder to Omar about sorting 5 sheets on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: sorting 5 sheets",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "sheets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "pantry_label-4",
+    "family": "pantry_label",
+    "domain": "home",
+    "user": "Write a message to the household saying Omar labeled 5 bottles on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: labeled 5 bottles",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "bottles"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "plant_water-4",
+    "family": "plant_water",
+    "domain": "home",
+    "user": "Write a reminder to Omar about watering 5 flowers on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: watering 5 flowers",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "flowers"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "key_handover-4",
+    "family": "key_handover",
+    "domain": "home",
+    "user": "Write a handover message to Omar: collect 5 key tags on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: collect 5 key tags",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "key tags"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "flashcard_plan-4",
+    "family": "flashcard_plan",
+    "domain": "learning",
+    "user": "Write a study-plan message to Omar about practicing 5 phrase cards on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: practicing 5 phrase cards",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "phrase cards"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "book_return-4",
+    "family": "book_return",
+    "domain": "learning",
+    "user": "Write a library reminder to Omar about returning 5 dictionaries on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: returning 5 dictionaries",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "dictionaries"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notebook_index-4",
+    "family": "notebook_index",
+    "domain": "learning",
+    "user": "Write a message to the study group saying Omar indexed 5 journal pages on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: indexed 5 journal pages",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "journal pages"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "quiz_materials-4",
+    "family": "quiz_materials",
+    "domain": "learning",
+    "user": "Write a quiz preparation message to Omar: bring 5 pens on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: bring 5 pens",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "pens"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "food_donation-4",
+    "family": "food_donation",
+    "domain": "community",
+    "user": "Write a donation update to the volunteers: Omar donated 5 bean tins on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: donated 5 bean tins",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "bean tins"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "volunteer_badge-4",
+    "family": "volunteer_badge",
+    "domain": "community",
+    "user": "Write a message to the welcome team saying Omar prepared 5 team badges for Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: prepared 5 team badges",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "team badges"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "street_cleanup-4",
+    "family": "street_cleanup",
+    "domain": "community",
+    "user": "Write a cleanup assignment message to Omar: fill 5 litter sacks on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: fill 5 litter sacks",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "litter sacks"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notice_translation-4",
+    "family": "notice_translation",
+    "domain": "community",
+    "user": "Turn these notes into a message to the hall team: Omar; deliver 5 benches; Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: deliver 5 benches",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "benches"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "picnic_checklist-4",
+    "family": "picnic_checklist",
+    "domain": "leisure",
+    "user": "Write a picnic preparation message to Omar: pack 5 forks on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: pack 5 forks",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "forks"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "game_rules-4",
+    "family": "game_rules",
+    "domain": "leisure",
+    "user": "Write a game setup message to Omar: start with 5 tokens on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: start with 5 tokens",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "tokens"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "craft_allocation-4",
+    "family": "craft_allocation",
+    "domain": "leisure",
+    "user": "Write a craft-session message to Omar: take 5 wooden beads on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: take 5 wooden beads",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "wooden beads"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "photo_caption-4",
+    "family": "photo_caption",
+    "domain": "leisure",
+    "user": "Write a photo-sharing message to the club: the photo shows Omar holding 5 origami birds on Thursday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Omar"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Thursday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Omar: holding 5 origami birds",
+        "literal_groups": [
+          [
+            "5",
+            "five"
+          ],
+          [
+            "origami birds"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Omar"
+    ],
+    "allowed_days": [
+      "Thursday"
+    ],
+    "allowed_numbers": [
+      "5"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "laundry_sort-5",
+    "family": "laundry_sort",
+    "domain": "home",
+    "user": "Write a reminder to Iris about sorting 6 napkins on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: sorting 6 napkins",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "napkins"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "pantry_label-5",
+    "family": "pantry_label",
+    "domain": "home",
+    "user": "Write a message to the household saying Iris labeled 6 boxes on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: labeled 6 boxes",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "boxes"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "plant_water-5",
+    "family": "plant_water",
+    "domain": "home",
+    "user": "Write a reminder to Iris about watering 6 palms on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: watering 6 palms",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "palms"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "key_handover-5",
+    "family": "key_handover",
+    "domain": "home",
+    "user": "Write a handover message to Iris: collect 6 door fobs on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: collect 6 door fobs",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "door fobs"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "flashcard_plan-5",
+    "family": "flashcard_plan",
+    "domain": "learning",
+    "user": "Write a study-plan message to Iris about practicing 6 symbol cards on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: practicing 6 symbol cards",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "symbol cards"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "book_return-5",
+    "family": "book_return",
+    "domain": "learning",
+    "user": "Write a library reminder to Iris about returning 6 poetry books on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: returning 6 poetry books",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "poetry books"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notebook_index-5",
+    "family": "notebook_index",
+    "domain": "learning",
+    "user": "Write a message to the study group saying Iris indexed 6 reading notes on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: indexed 6 reading notes",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "reading notes"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "quiz_materials-5",
+    "family": "quiz_materials",
+    "domain": "learning",
+    "user": "Write a quiz preparation message to Iris: bring 6 blank cards on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: bring 6 blank cards",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "blank cards"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "food_donation-5",
+    "family": "food_donation",
+    "domain": "community",
+    "user": "Write a donation update to the volunteers: Iris donated 6 oat packets on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: donated 6 oat packets",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "oat packets"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "volunteer_badge-5",
+    "family": "volunteer_badge",
+    "domain": "community",
+    "user": "Write a message to the welcome team saying Iris prepared 6 speaker badges for Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: prepared 6 speaker badges",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "speaker badges"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "street_cleanup-5",
+    "family": "street_cleanup",
+    "domain": "community",
+    "user": "Write a cleanup assignment message to Iris: fill 6 paper bags on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: fill 6 paper bags",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "paper bags"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "notice_translation-5",
+    "family": "notice_translation",
+    "domain": "community",
+    "user": "Turn these notes into a message to the hall team: Iris; deliver 6 seat cushions; Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: deliver 6 seat cushions",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "seat cushions"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "picnic_checklist-5",
+    "family": "picnic_checklist",
+    "domain": "leisure",
+    "user": "Write a picnic preparation message to Iris: pack 6 water bottles on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: pack 6 water bottles",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "water bottles"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "game_rules-5",
+    "family": "game_rules",
+    "domain": "leisure",
+    "user": "Write a game setup message to Iris: start with 6 marbles on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: start with 6 marbles",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "marbles"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "craft_allocation-5",
+    "family": "craft_allocation",
+    "domain": "leisure",
+    "user": "Write a craft-session message to Iris: take 6 fabric patches on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: take 6 fabric patches",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "fabric patches"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  },
+  {
+    "id": "photo_caption-5",
+    "family": "photo_caption",
+    "domain": "leisure",
+    "user": "Write a photo-sharing message to the club: the photo shows Iris holding 6 clay figures on Friday.",
+    "required_facts": [
+      {
+        "key": "person",
+        "allowed_values": [
+          "Iris"
+        ]
+      },
+      {
+        "key": "day",
+        "allowed_values": [
+          "Friday"
+        ]
+      },
+      {
+        "key": "event",
+        "meaning": "Iris: holding 6 clay figures",
+        "literal_groups": [
+          [
+            "6",
+            "six"
+          ],
+          [
+            "clay figures"
+          ]
+        ],
+        "ai_check": "Preserve action, quantity, object and their relationship; mere keyword presence is insufficient."
+      }
+    ],
+    "allowed_names": [
+      "Iris"
+    ],
+    "allowed_days": [
+      "Friday"
+    ],
+    "allowed_numbers": [
+      "6"
+    ],
+    "authorship": "synthetic AI-authored scenario; no generated response"
+  }
+]

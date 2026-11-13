@@ -9,7 +9,7 @@ from scripts.common import ROOT
 from scripts import stage_benchmark_reports
 from scripts.stage_benchmark_reports import build, compact_conditions, compact_pairs, publication_inventory
 from scripts.update_hf_documentation import (
-    ALLOW, BASE_PIN, PREFIX, PostVerificationError, execute, fingerprint, validate_stage,
+    ALLOW, BASE_PIN, DEPENDENCIES, PREFIX, PostVerificationError, execute, fingerprint, validate_stage,
 )
 
 
@@ -26,8 +26,8 @@ def staged(tmp_path, suffix="NF4"):
     manifest = {"repo_id": PREFIX + suffix, "private": suffix != "GGUF", "parent_commit": "a" * 40,
                 "allowed_changes": sorted(ALLOW), "updates": {n: fingerprint(b) for n, b in updates.items()},
                 "expected_inventory": before}
-    if suffix == "PRL-Writing-QLoRA":
-        manifest["pinned_dependency"] = BASE_PIN
+    if manifest["repo_id"] in DEPENDENCIES:
+        manifest["pinned_dependency"] = DEPENDENCIES[manifest["repo_id"]]
     return manifest, before, updates
 
 
@@ -154,8 +154,9 @@ def test_post_verification_failure_retains_remote_revision(tmp_path):
     assert exc.value.record["applied"] and not exc.value.record["post_verified"]
 
 
-def test_physics_dependency_cannot_be_changed(tmp_path):
-    manifest, before, _ = staged(tmp_path, "PRL-Writing-QLoRA")
+@pytest.mark.parametrize("suffix", ["PRL-Writing-QLoRA", "GSM8K-QLoRA"])
+def test_adapter_dependency_cannot_be_changed(tmp_path, suffix):
+    manifest, before, _ = staged(tmp_path, suffix)
     remote = Remote(manifest, before)
     remote.dependency["revision"] = "c" * 40
     with pytest.raises(ValueError, match="pin"):
