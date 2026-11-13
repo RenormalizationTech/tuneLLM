@@ -44,13 +44,14 @@ complete the initial project.
   degenerated on all 30. No setting passed, so final generation was skipped.
   Claude accepted the result. See `docs/refusal_execution.md` and
   `results/refusal_01.json`. No safety or model-improvement claim is supported.
-- Next choice awaits the user: close steering here, conduct one separately
-  registered late-layer refusal follow-up, or return to tone/emotion research.
-  Claude recommends the late-layer follow-up if steering continues. Its rationale
-  comes from an already-seen development diagnostic, so it must be disclosed as
-  exploratory follow-up; preserve this null and keep final outcomes unused until
-  a new development decision is locked. No new study starts automatically.
-  Negative steering, NF4 transfer, new training and vector release remain deferred.
+- The user selected one late-layer follow-up, planned with Claude in
+  `docs/refusal_late_protocol.md`: fixed layer 23, strengths 0.25/0.5/1,
+  unchanged data/rubric, compatible baseline outputs and ratings reused, and
+  a new development decision locked before any final generation. Its rationale
+  comes from an already-seen diagnostic, so disclose the exploratory follow-up
+  and development reuse. The worker implements new code; registration precedes
+  GPU execution. A second null closes this refusal pilot. Negative steering,
+  NF4 transfer, new training and vector release remain deferred.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
   device. Tone generation stages finished and released project GPU memory.

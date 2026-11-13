@@ -115,3 +115,11 @@ This would be exploratory follow-up with disclosed development reuse; its
 strengths, layer and rules need a new registration. Closing steering or returning
 to tone/emotion work are alternatives. No new job starts before the user's
 scientific-priority choice. The layer 17 null is preserved.
+
+The user subsequently selected the late-layer follow-up. Claude settled a
+fixed layer 23 only design with strengths 0.25/0.5/1, exact reuse of original
+development defaults and their existing AI ratings, new layer 23 mechanics
+probes, and a fresh development decision before any final generation. The
+unchanged judge call path can reuse its verified audit. The follow-up has a
+separate protocol at `docs/refusal_late_protocol.md`; the first null is not
+reopened. This decision supersedes the earlier pending-choice status.
