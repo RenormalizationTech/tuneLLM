@@ -123,3 +123,8 @@ probes, and a fresh development decision before any final generation. The
 unchanged judge call path can reuse its verified audit. The follow-up has a
 separate protocol at `docs/refusal_late_protocol.md`; the first null is not
 reopened. This decision supersedes the earlier pending-choice status.
+
+The selected follow-up is now complete. Its separate acceptance record is
+`results/reviews/refusal_late_advisor_review.md`. It produced an exploratory
+dose-related refusal increase, but no strength passed both refusal and quality
+gates. Final generation was skipped again and the refusal pilot is closed.

@@ -19,9 +19,11 @@ benign refusals were 1/30 at baseline and 2/30 at strengths 1 and 2; strength 4
 degenerated on all 30 prompts. No setting qualified, so final generation was
 skipped. See the [execution record](docs/refusal_execution.md) and
 [compact result](results/refusal_01.json). This does not rule out refusal
-control at other layers. The user selected one exploratory follow-up at layer 23; see the
-[separate protocol](docs/refusal_late_protocol.md). Implementation and
-registration precede new generation.
+control at other layers. The user-selected layer-23 follow-up also completed: refusals rose to 4/30,
+7/30 and 24/30 at strengths 0.25/0.5/1, but the strongest setting had six
+degenerate outputs and no setting passed both gates. Final generation was
+skipped and the refusal pilot is closed. See the
+[follow-up record](docs/refusal_late_execution.md).
 Management plans are reviewed with Claude before implementation; the dedicated
 Codex worker implements code.
 The [benchmark summary](docs/benchmark_summary.md) collects the completed

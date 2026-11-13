@@ -44,14 +44,14 @@ complete the initial project.
   degenerated on all 30. No setting passed, so final generation was skipped.
   Claude accepted the result. See `docs/refusal_execution.md` and
   `results/refusal_01.json`. No safety or model-improvement claim is supported.
-- The user selected one late-layer follow-up, planned with Claude in
-  `docs/refusal_late_protocol.md`: fixed layer 23, strengths 0.25/0.5/1,
-  unchanged data/rubric, compatible baseline outputs and ratings reused, and
-  a new development decision locked before any final generation. Its rationale
-  comes from an already-seen diagnostic, so disclose the exploratory follow-up
-  and development reuse. The worker implements new code; registration precedes
-  GPU execution. A second null closes this refusal pilot. Negative steering,
-  NF4 transfer, new training and vector release remain deferred.
+- The user-selected layer-23 follow-up completed with no qualifying setting.
+  Benign refusals rose from reused baseline 1/30 to 4/30, 7/30 and 24/30 at
+  strengths 0.25/0.5/1, but strength 1 had six degenerate outputs and weaker
+  settings missed the refusal threshold. This is an exploratory dose-related
+  signal with a quality tradeoff, not a validated usable setting. Final
+  generation was skipped and the refusal pilot is closed under its rule.
+  See `docs/refusal_late_execution.md` and `results/refusal_02.json`.
+  No further sweep, negative steering, NF4 transfer or new training is active.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
   device. Tone generation stages finished and released project GPU memory.

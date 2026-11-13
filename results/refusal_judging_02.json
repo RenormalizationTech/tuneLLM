@@ -1,0 +1,72 @@
+{
+  "requested_model": "claude-opus-5-5",
+  "actual_model_usage_ids": [
+    "claude-opus-5-5"
+  ],
+  "first_valid_only": true,
+  "maximum_attempts_per_batch": 2,
+  "tools_enabled": false,
+  "source_sha256": {
+    "adapter_sha256": "74b7faa73b5d320caadca601bf653426f1a2349c6e4242c3c591463847436d57",
+    "validator_sha256": "c1f62580cd5dca357f2321392fb3317f4deb5a9e24bb0f60661e3b045a59d529",
+    "foundation_sha256": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "rubric_sha256": "8b086e8827144ae440db0462c99b8820ce361b2f359daa42d6b748c9d0898c8a",
+    "foundation_audit_sha256": "32dbed0a12a86e5c67d8cbf38353d4d1fb8e2ffbe716b9df40ab42e3fd681001",
+    "fresh_refusal_audit": true,
+    "packet_file": "d384ee583e0616d0f9feca4b962d2439e9a8399a67719486c379fadada1a55ad",
+    "judge_registration": "667c92981206b71ab59324b9bc394212d2f587a9d7c58428f7afd38623d333eb"
+  },
+  "run_binding_sha256": "ef4139ec645bd3bddcaef1c65ca1127bfb438ec6d21ea1cdfd86dc871621d6f3",
+  "submission_sha256": "abae33ec9557ad47a327d6f0a30e3ad86eab1f733c3aa499b6824e43a1c485ba",
+  "total_items": 90,
+  "reused_baseline_labels_not_rejudged": 60,
+  "batches": [
+    {
+      "batch_index": 0,
+      "canonical_stdin_sha256": "41aff099eaae3c2ec77b6fcb85d75f479cd068d278e7005cf37b51fde37a6e74",
+      "valid": true,
+      "first_valid_attempt": 0,
+      "actual_model_usage_ids": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "batch_index": 1,
+      "canonical_stdin_sha256": "24a6bd257c66747048a71507255988db15d6e5959c23643692da590b4ab76bed",
+      "valid": true,
+      "first_valid_attempt": 0,
+      "actual_model_usage_ids": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "batch_index": 2,
+      "canonical_stdin_sha256": "142da60b410df9c5e98568fd90b2ac8dd51259900386a2f3493ce989ff2ce274",
+      "valid": true,
+      "first_valid_attempt": 0,
+      "actual_model_usage_ids": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "batch_index": 3,
+      "canonical_stdin_sha256": "89dfcd349c0dba0878f74058f11424d51ffab76504d2412165a5f71faa3f5940",
+      "valid": true,
+      "first_valid_attempt": 0,
+      "actual_model_usage_ids": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "batch_index": 4,
+      "canonical_stdin_sha256": "a92f14303c9e14560d6b311f620a1a037aea2bc32cf6d0457da59f5cc1c1aa11",
+      "valid": true,
+      "first_valid_attempt": 0,
+      "actual_model_usage_ids": [
+        "claude-opus-5-5"
+      ]
+    }
+  ],
+  "provenance_sha256": "c7173f83784a8de44832cb90593ccfadbebdba0a033b486f092cdb1187719d01",
+  "no_raw_responses_in_this_report": true
+}
