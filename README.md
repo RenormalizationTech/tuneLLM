@@ -4,6 +4,19 @@ A hands-on project for learning open-source LLM quantization and fine-tuning.
 Research into behavioral representations and activation steering is an optional
 extension.
 
+The routine workflow policy is **one base and one adapter configuration**, seed 42,
+a small development screen, and one fixed final comparison. Compatible baseline
+results can be reused. Multi-rank/LR sweeps and extra controls are calibration
+experiments rather than default steps.
+
+The [next milestone](docs/next_sft_pilot.md) is a small instruction/response SFT
+exercise with automatically scored JSON extraction on the existing 4B model.
+Dataset selection and protocol registration precede training. Physics writing
+remains a lightweight style-learning pilot; further writing assessment is
+deferred. Later Claude/Codex ratings will be identified as AI judgments.
+The existing scripts implement the completed pilots; the new task still needs
+data preparation, JSON scoring and task-specific orchestration adaptations.
+
 The current reusable workflow is documented in
 [docs/model_workflow.md](docs/model_workflow.md). The completed Qwen3-4B physics-writing exercise uses
 a saved NF4 base, a balanced corpus of condensed-matter theory PRLs, and writing
@@ -17,7 +30,8 @@ epoch-1 adapter reduced held-out paper-text NLL from 1.97494 to 1.73395 but
 reduced numeric GSM8K accuracy from 117/128 to 111/128. Human writing-quality
 improvement remains unestablished. See the [full physics result](results/physics_prl_final.json)
 and [execution record](docs/physics_prl_execution.md). A blinded local review is
-available at `outputs/physics-writing-review/review.html`; its ratings are pending.
+available at `outputs/physics-writing-review/review.html`; assessment is deferred
+and human review is optional for the learning milestone.
 The [private physics adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) is published with its
 [pinned private NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4).
 [Publication checks](results/physics_huggingface_publication.json) passed.

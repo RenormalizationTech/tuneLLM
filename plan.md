@@ -25,6 +25,13 @@ complete the initial project.
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
   the physics-writing exercise, while preserving the historical results.
+- Next milestone: a small instruction/response SFT exercise on the existing 4B
+  model, proposed as structured extraction into a fixed JSON schema. See
+  `docs/next_sft_pilot.md`; the dataset and new training protocol are not yet fixed.
+- Routine default: one verified base, one fresh adapter configuration and seed
+  42; a small development screen followed by one fixed final paired comparison.
+  Reuse compatible baseline results. Rank/LR grids, extra seeds, BF16 controls
+  and full quantization sweeps are optional investigations.
 - Physics progress: 100 licensed PRL-associated papers frozen into 70/10/20 splits;
   NF4 base published privately and reload-verified. Four optimization runs and
   their development screens completed. The fixed rule selected all-linear rank
@@ -37,7 +44,7 @@ complete the initial project.
   language and structure of condensed-matter theory PRLs. Writing-specific
   fine-tuning remains exploratory. Further training and writing ratings can wait;
   future Claude/Codex ratings will be recorded as AI judgments, not human ratings.
-- Current objective: learn the language and structure of a balanced corpus of
+- Deferred physics objective: learn the language and structure of a balanced corpus of
   condensed-matter theory PRLs, focusing evaluation on titles, abstracts and
   introductions. No publication-acceptance claim is intended.
 - Quantization choices: original BF16; independent GGUF Q8_0/Q4_K_M inference
@@ -111,6 +118,23 @@ base-model copies and keep credentials out of version control.
 
 Model cards live as `README.md` files in the artifact repositories. The exact
 organization ID, artifact names, and visibility must be resolved before upload.
+
+### Routine work order for the next milestone
+
+1. Select the task dataset and JSON schema; define labels, source-disjoint splits,
+   primary metrics, retention checks and the runtime budget.
+2. Pin the existing model/NF4 dependency and inspect formatted batches and loss
+   masks. Record a development base reference or verify a compatible cached reference.
+3. Register one task-appropriate configuration and seed 42 before optimization;
+   record the full LR schedule and maximum exposure.
+4. Train one fresh adapter and nominate one checkpoint by the registered
+   development criterion. Screen that nominee once, retain the base if it fails,
+   and run the fixed final base-versus-selected-adapter comparison once.
+5. Verify reload, report the outcome and measured costs, and release selected
+   experimental artifacts under the existing private publication scope.
+
+The reusable workflow documents the larger physics calibration as completed
+history. Further physics writing ratings or another model are separate follow-ups.
 
 ### Minimal implementation approach (reviewed with Claude)
 
