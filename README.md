@@ -49,6 +49,13 @@ code links. A [stored-output diagnosis](docs/refusal_output_diagnosis.md) review
 findings do not support a token-cap increase as a sufficient fix: apparent
 errors, repetition and drift also need attention.
 
+The next bounded phase is a [benign helpfulness baseline survey](docs/benign_helpfulness_protocol.md):
+36 fresh legitimate requests, separate refusal/content/completion measurements,
+and an unused held-out fixture sealed before generation. It uses no activation
+intervention or candidate prompt and does not optimize harmful-request
+compliance. Its gates can stop further work when completion is inadequate or
+benign refusals are too rare to measure in this fixture.
+
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment
 reported separately.

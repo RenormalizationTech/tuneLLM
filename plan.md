@@ -77,10 +77,14 @@ complete the initial project.
   See `docs/refusal_output_diagnosis.md` and the two-method explanation in
   `docs/activation_steering_methods.md`. All 315 original input hashes stayed
   unchanged. The review is unblinded qualitative evidence, not a new benchmark.
-- Proposed next design work: improve completion-aware quality checks and use
-  fresh held-out prompts; then consider one gentler same-block intervention
-  or a better-matched contrast if justified. No automatic block/strength grid
-  or new experiment is registered by this diagnosis. Persona stays separate.
+- Current bounded follow-up: a new benign-only baseline survey, discussed with
+  Claude before worker implementation. Phase A measures 24 legitimate sensitive
+  requests and 12 physics tasks, with three anchors each and a sealed unused
+  held-out fixture. It uses no activation vector or candidate intervention and
+  does not optimize harmful-request compliance. Completion and refusal-headroom
+  gates can close it without further generation. See
+  `docs/benign_helpfulness_protocol.md`. Persona remains separate; prior gentler
+  activation-intervention suggestions were hypotheses, not a registered run.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
   device. All registered steering stages finished and released project GPU memory.
