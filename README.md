@@ -42,6 +42,13 @@ The tiny capability screen stayed within its tolerances, while the final
 response-quality criteria failed. This is a measured tradeoff, not a validated
 usable configuration. See the [execution record](docs/refusal_reduction_execution.md)
 and [compact summary](results/refusal_reduction_summary_03.json).
+The [two-method guide](docs/activation_steering_methods.md) explains constant
+vector shifts versus all-block projection removal, with formulas, diagrams and
+code links. A [stored-output diagnosis](docs/refusal_output_diagnosis.md) reviewed
+19 existing pairs without generation or changes to scores. Its qualitative
+findings do not support a token-cap increase as a sufficient fix: apparent
+errors, repetition and drift also need attention.
+
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment
 reported separately.

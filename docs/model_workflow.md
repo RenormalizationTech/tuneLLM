@@ -242,3 +242,23 @@ token rates to budget the screen; retain small development checks for every
 candidate and broader final tests only for the chosen adapter and any registered
 controls.
 Recheck the model/data licenses and converter support for the newly pinned model.
+
+## Optional inference-time activation-steering research
+
+Activation steering is a separate branch from quantization and adapter training.
+The [two-method guide](activation_steering_methods.md) defines the fixed vector
+shift and all-block projection-removal approaches used on Qwen3-4B.
+
+Before another steering run, diagnose existing regressions using stored outputs
+when possible. The [run-03 diagnosis](refusal_output_diagnosis.md) illustrates
+why cap hits alone cannot explain quality loss. A baseline quality screen
+should usually let its answers finish, and willingness to answer must remain
+separate from task completion, grounded correctness and repetition.
+
+Choose layer, direction, token scope, normalization and actual perturbation
+strength explicitly; larger vector norms or a higher projection AUC do not
+establish the best intervention. Keep a follow-up focused and predeclare its
+selection rule. When changing the token budget or prompt policy, use compatible
+baseline results or regenerate a matched baseline. Preserve previous results,
+identify retrospective AI observations as such, and reserve untouched prompts
+for any new final claim. No automatic layer/strength sweep is required.

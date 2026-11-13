@@ -167,3 +167,13 @@ See the [compact summary](../results/refusal_reduction_summary_03.json),
 [full result](../results/refusal_03.json),
 [judging provenance](../results/refusal_judging_03.json), and
 [fixed selection lock](../results/protocols/refusal-selection-03.json).
+
+## Retrospective diagnosis and method explanation
+
+The completed [stored-output diagnosis](refusal_output_diagnosis.md) uses
+existing texts and preserves every original score and decision. It found
+qualitative evidence of apparent errors, repetition and drift as well as
+cutoff effects; it does not turn this final set into a fresh test or repair
+the failed result. The [two-method guide](activation_steering_methods.md)
+explains the exact formulas, raw/unit-vector distinction, block numbering,
+token coverage and hook locations used here.

@@ -68,6 +68,19 @@ complete the initial project.
   `docs/refusal_reduction_execution.md`, `results/refusal_03.json`, and
   `results/refusal_reduction_summary_03.json`. No reselection or further
   sweep is active; original positive results and model weights are unchanged.
+- Run-03 stored-output diagnosis: complete with Claude advisory review.
+  Nineteen unique pairs were inspected retrospectively, with no new target
+  generation and no change to original ratings. For nine benign losses the
+  reviewer coded seven as main-answer-present before cutoff, one before the
+  main answer, and one unclear. Apparent errors, repetition/drift and mixed
+  causes remain; a cap increase alone is not a sufficient proposed fix.
+  See `docs/refusal_output_diagnosis.md` and the two-method explanation in
+  `docs/activation_steering_methods.md`. All 315 original input hashes stayed
+  unchanged. The review is unblinded qualitative evidence, not a new benchmark.
+- Proposed next design work: improve completion-aware quality checks and use
+  fresh held-out prompts; then consider one gentler same-block intervention
+  or a better-matched contrast if justified. No automatic block/strength grid
+  or new experiment is registered by this diagnosis. Persona stays separate.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
   device. All registered steering stages finished and released project GPU memory.

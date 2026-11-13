@@ -232,4 +232,3 @@ See the [execution record](refusal_reduction_execution.md),
 [stored-output diagnostic protocol](refusal_output_diagnosis_protocol.md).
 The diagnosis preserves the original results and determines what uncertainty
 a future study should address.
-
