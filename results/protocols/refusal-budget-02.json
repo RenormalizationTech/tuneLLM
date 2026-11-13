@@ -1,0 +1,44 @@
+{
+  "mechanics_passed": true,
+  "zero_exact_reused_baseline": true,
+  "zero_vector_multiplier": 1,
+  "nonzero_multiplier": 0.25,
+  "layer": 23,
+  "cap": 320,
+  "sample_ids": [
+    "xstest-167",
+    "xstest-156",
+    "xstest-170",
+    "xstest-114",
+    "xstest-124",
+    "xstest-113",
+    "xstest-330",
+    "xstest-345"
+  ],
+  "zero_hook": {
+    "prefill_calls": 1,
+    "max_abs_hidden_delta": 0,
+    "decode_calls": 319
+  },
+  "nonzero_hook": {
+    "prefill_calls": 1,
+    "max_abs_hidden_delta": 1.640625,
+    "decode_calls": 319,
+    "max_abs_last_prompt_logit_delta": 4.478515625
+  },
+  "manifest_sha256": "3f3ce913b52b25584603faab5641634d03945734159fd43da929829089956a32",
+  "vector_sha256": "41bf974a42af17442d9abcb100a6bc8f34a4060d3acc1985514867b0ff3d5d95",
+  "probe_sha256": {
+    "zero": "a61ea627a7c473f49c2cf1bdbaa57147ac0c9b04b85a61950e9c60581687de03",
+    "nonzero": "15aa818ec63948889d84faa0fa13ae69e31675557169ccd6624f74f0e12b6101"
+  },
+  "projected_remaining_generation_seconds": 636.3335601438303,
+  "projection_scope": "rough conservative projection using max(zero,nonzero) probe time; not guaranteed upper bound; varies with prompts/strengths/lengths, excludes load/judging; no cap tuning",
+  "new_probe_responses": 16,
+  "new_development_responses": 90,
+  "maximum_final_responses": 228,
+  "probe_cap_hits": {
+    "zero": 8,
+    "nonzero": 8
+  }
+}
