@@ -1,0 +1,1280 @@
+{
+  "stage": "candidates_only_before_adviser_screen",
+  "seed": 20261114,
+  "candidate_count": 200,
+  "source_pins": {
+    "xstest": "d7bb5bd738c1fcbc36edd83d5e7d1b71a3e2d84d",
+    "advbench": "098262edf85f807224e70ecd87b9d83716bf6b73",
+    "dolly": "bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a"
+  },
+  "raw_source_sha256": {
+    "xstest_prompts.csv": "11783fb294ed017473ee53c207d71f2161c7672c8d0b037501e78387f801cb5a",
+    "advbench_harmful_behaviors.csv": "6cd1a5c63c07610d7eb67307772ee5606017ee950b5770ab288a2c487489d3e1",
+    "dolly.jsonl": "2df9083338b4abd6bceb5635764dab5d833b393b55759dffb0959b6fcbf794ec"
+  },
+  "model_id": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "tokenizer_sha256": {
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a"
+  },
+  "files": {
+    "candidates.json": "dafbf57b3e1bcd9a57ccc3cf15a156f5f03ac2ead7a838e6521ffa6dee814cf6",
+    "advbench_order.json": "1e9912afd2767b1789da96cb09bb3f321036b5c9ff31c6d2d8bbd7c6a060d2a6",
+    "inputs/xstest_prompts.csv": "11783fb294ed017473ee53c207d71f2161c7672c8d0b037501e78387f801cb5a",
+    "inputs/screening_rubric.json": "31269550fb7b257c6cd5fc9cd3be74644243ba983a6802779b85f2beaf13eb62",
+    "inputs/source_audit.json": "60e9dda18d5a084274f75d13bd04242ee8547c241c0ae54c0f90ef6f3f6a00c9",
+    "inputs/protocol.md": "fda285909e9764d5e15f8f30318e33dcd3dbdc35f1a9392b506b6fedcfc36c6d",
+    "source/evaluation/refusal/screening_rubric.json": "31269550fb7b257c6cd5fc9cd3be74644243ba983a6802779b85f2beaf13eb62",
+    "source/scripts/prepare_refusal.py": "3af6340ed595f0b63f6046fca91899adf1272dd5d69a0a189d9eb94d4269c448",
+    "source/scripts/refusal_data_audit.py": "9c2b85ac60c808029324f5038de634bd9c13d62c29cf20f4af9711e2e7d9c184"
+  },
+  "source_sha256": {
+    "scripts/prepare_refusal.py": "3af6340ed595f0b63f6046fca91899adf1272dd5d69a0a189d9eb94d4269c448",
+    "scripts/refusal_data_audit.py": "9c2b85ac60c808029324f5038de634bd9c13d62c29cf20f4af9711e2e7d9c184",
+    "evaluation/refusal/screening_rubric.json": "31269550fb7b257c6cd5fc9cd3be74644243ba983a6802779b85f2beaf13eb62"
+  },
+  "envelope": {
+    "advbench_raw_min": 7,
+    "advbench_raw_max": 29,
+    "dolly_integer_min": 5,
+    "dolly_integer_max": 35,
+    "rounding": "outward: floor(0.8*raw_min), ceil(1.2*raw_max); minimum1",
+    "computed_before_draw": true
+  },
+  "losses": {
+    "advbench": {
+      "input_rows": 520,
+      "within_source_duplicate_rows_removed": 0,
+      "all_xstest_overlap_rows_removed": 0,
+      "cross_class_ambiguous_rows_removed": 0,
+      "remaining_rows": 520
+    },
+    "dolly": {
+      "input_rows": 7644,
+      "within_source_duplicate_rows_removed": 53,
+      "all_xstest_overlap_rows_removed": 0,
+      "cross_class_ambiguous_rows_removed": 0,
+      "remaining_rows": 7591,
+      "outside_length_envelope_removed": 766,
+      "envelope_eligible": 6825
+    }
+  },
+  "no_model_outputs": true,
+  "no_gpu_run_registered": true,
+  "reviewer": {
+    "model_identifier": "claude-opus-5-5",
+    "identity_basis": "reported by actual reviewing adviser",
+    "advisor_overlap": true,
+    "exposed_settings": {
+      "dated_snapshot": null,
+      "reasoning_effort": null
+    }
+  },
+  "manifest_sha256": "92f333a3cb00c25e0495f2a10471dbc1fefd276cc10a8f3d10ee434aa22d09a3",
+  "candidate_ids_hashes": [
+    {
+      "id": "dolly-11372",
+      "prompt_sha256": "48fedb3a9cb7d02043ae55f6031a3b46027e0b8c92a974b63352a67c5aca08ad",
+      "normalized_sha256": "5a797b9f1e535b929a39966bb862abb3b712971626bf89e5bb54ce506626d1a9",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-02810",
+      "prompt_sha256": "7286864c0296904675204936ec7fd492d37df1883696f5d73cf82e8175b0ce83",
+      "normalized_sha256": "39f9c04e4a22ea8ed0c9a86edbdeb86a0a258848f6b5a9cc87afffaf7d16aae2",
+      "raw_token_length": 16
+    },
+    {
+      "id": "dolly-03145",
+      "prompt_sha256": "1e70eaf438223df390bf347240ecf0097228c10d63feae61279e4fcc9ab1fa85",
+      "normalized_sha256": "3fd063dd5ebc65e2b70ece858bc475f2124d4b8bf1150054bc378e63bb212efb",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-13789",
+      "prompt_sha256": "37fc93ce39396828604faaeb25b356fdd6af6f9654cd9a4a752053c33f4db333",
+      "normalized_sha256": "9468505b4b4b6606becdcb71ff29b8ddc4d359545fae6318623bc0e91d4807e3",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-10787",
+      "prompt_sha256": "c688bc12ede28d8a780b4386942143acd6df16137e37f0199c8d3285a89b204f",
+      "normalized_sha256": "4195e6f1fd2934fd5720dff7971f680b12139906b7f8454bf1ca2299c29a4d54",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-07688",
+      "prompt_sha256": "18d37cf3fdd24e1cdf604ae8382e038177624d66f687a7de6d36e9280e1a3af2",
+      "normalized_sha256": "8536a7b210cab6b48d0788084e9a228c05edd2452ef3a58d76137bd10c3a1e70",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-02135",
+      "prompt_sha256": "1394415a0be3f1cb4b46bd809096603567dcd79421318f550c911861021846b9",
+      "normalized_sha256": "c9840034b0eaf301e37ebc63c048267967ec6a56045a10219536aecaee0260f4",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-01992",
+      "prompt_sha256": "ec6c00ff2412d7c0fd048f7804c96fc8b9a3ee3910dee0e22374a7140b00d3ed",
+      "normalized_sha256": "6aa824a81f280bdb976dd03a45af717264d0f5363b71de4b2d3e74bf86e41424",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-14090",
+      "prompt_sha256": "032aec33d7f5cfba064e7037606f8f434e81afad2b60727be6caf54e2a46d019",
+      "normalized_sha256": "e0b7810917381f0ec6b73fceb09c1e285559abc0a28932663661f3ebbe0ff117",
+      "raw_token_length": 17
+    },
+    {
+      "id": "dolly-00362",
+      "prompt_sha256": "1a9dc0f41bfb03e1055ea989e405c4a0c9bc5fb1c24879c69a975bc348b26be1",
+      "normalized_sha256": "ba95114f38da011f729dd4a334529c1764560651df537e8f177de87bbc9c4ece",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-12733",
+      "prompt_sha256": "cc1105f2cdf83a4958e8c69c283cc67a5ec45d6e9ae1c6225cec87e60cec6e9d",
+      "normalized_sha256": "8caf5ee387833d60cb6a78c47bfdd5c8dd756cba8bca4f189d37545ca13e74f5",
+      "raw_token_length": 33
+    },
+    {
+      "id": "dolly-13290",
+      "prompt_sha256": "bcfd55795ee1c85b1c51dbc865a0c0bb9a5d6a913a71d4c7a7ba7574fbbf312e",
+      "normalized_sha256": "98846019146f248230c6f3e801e12516a2674212c4bfc613fe7a589ef33b238d",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-06032",
+      "prompt_sha256": "a72afd92090339d26e1ac86f9073ce476437748cd88e81ea9795ad58c96a85ea",
+      "normalized_sha256": "6ef271ac4d0842f8032e74ff2fd253a161a960f5d8ac79e47d1069bc1e646c2d",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-11230",
+      "prompt_sha256": "2860f586daa6e329de02f7b318cf039d1c58a7b70b91a52941909baf88869668",
+      "normalized_sha256": "0e0ded14e3428403f44952cc94984d37b15a730ff00fdb26ebfdbe9667198188",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-12016",
+      "prompt_sha256": "8c4e73748596077d2be11140475515759ce95c0ba3b3008b0f84b5c244392b85",
+      "normalized_sha256": "65a1af1ce033c551465d09cd667b58c94bbe6b984f6512409997eea3bfe00615",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-14063",
+      "prompt_sha256": "88de5b48daa9dbedb4c43ed5d48aea6a66ef88b462fccd89b29730180d187477",
+      "normalized_sha256": "a76ed9c063f45a16fde7075bdb658777d8e6651e8ed3646efa7b66279f44ced9",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-05334",
+      "prompt_sha256": "d83c2b509dce1f0502c2423daf8ae10d53c09e61e6c5861086716ac8ca49be72",
+      "normalized_sha256": "ccfc47c9f52e24d7e1d40d550995069acb669606560c3926222782c32e77278d",
+      "raw_token_length": 16
+    },
+    {
+      "id": "dolly-05739",
+      "prompt_sha256": "1cc03ab572f68f5ebd9df65d1bc387736e397ca445477495d5dc8ae23b0b10f0",
+      "normalized_sha256": "f4fd0f164fddcaba167992713f82c2874c8972010d3cd8f30a5213cd56fe47bd",
+      "raw_token_length": 16
+    },
+    {
+      "id": "dolly-14979",
+      "prompt_sha256": "0031151f8bb0633299ef467a74d9cf80fa76e4b4bcb865283880e110f9bf1819",
+      "normalized_sha256": "7fab868d177582ea231ae6c386eab7a2ccf619fb5fb0453d8c7cbbb715961305",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-02450",
+      "prompt_sha256": "7fa8ce23f625e97a9c7541446deaf2610844bc0ac8b45e54ec72110d8189730c",
+      "normalized_sha256": "dce8f64d09928b76986256f943f9a01de6645a5b4b66e3d9a3bb36c89f2cfd3b",
+      "raw_token_length": 31
+    },
+    {
+      "id": "dolly-09379",
+      "prompt_sha256": "6ac22b9cd5486cd4604eab16602af82ed8e97a87e8ad54b9522103d701aace8e",
+      "normalized_sha256": "e797cc10e63a600884fc91771cf7941f78a34f87431710ca46ed77af3b29523d",
+      "raw_token_length": 30
+    },
+    {
+      "id": "dolly-13929",
+      "prompt_sha256": "4c48cd78a35e8a425bec4a2bc21bb7ff72b20bb76e1009352ccdfe25f3949628",
+      "normalized_sha256": "229a8278fb32665226e12b0f77433daaa75a736628ee8dfee792888a9507bae1",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-12068",
+      "prompt_sha256": "b6d876e9c6d12313fd065bf9a6213e3fbba41f136cbed1c5ee39d28b28e3f3f0",
+      "normalized_sha256": "2d346264b83ab666b851dc0cd6db684c36515fa2ed7a00ee2328d0b55d8d7ed7",
+      "raw_token_length": 29
+    },
+    {
+      "id": "dolly-03076",
+      "prompt_sha256": "5f61e5fd0643e8498cc476dd0b14e6b4de172221c00260a1a1768997680128df",
+      "normalized_sha256": "35f68149d1ccde3ca266fd6c3ca968a3be9c5f539ae4511f680847a610d0f5b5",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-09160",
+      "prompt_sha256": "d21203cb29103ec4675642efb1d4a470b6c9f60a9c43e409034d9c6542561fa0",
+      "normalized_sha256": "e646ea17ebf97a0beef648d9d71d8cc53977b18c1f925ab8c43348de49cc5955",
+      "raw_token_length": 33
+    },
+    {
+      "id": "dolly-07158",
+      "prompt_sha256": "488201148497fa575004dbd12a8cf25638fcfdeeb3674662f2fe45b0ab6ce511",
+      "normalized_sha256": "67bb47c715ca0f87c69adb05975f7718d94a75cb0bb614acec9a8731c200b9f0",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-02404",
+      "prompt_sha256": "ed4ff66dede0265a1349f0604d7d64cd641da0dda1b84fb7ebb01ad3a5fdfb81",
+      "normalized_sha256": "ed4ff66dede0265a1349f0604d7d64cd641da0dda1b84fb7ebb01ad3a5fdfb81",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-14933",
+      "prompt_sha256": "efe2badfe6f76157ecc27ab26333886a799901e810a579de5e165a900da4fea3",
+      "normalized_sha256": "5aed4102fb41805d801a62b9b69e4891ca2133e99224c6d0156325a51654474d",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-08570",
+      "prompt_sha256": "ac5f4996b50805c31871375a0c2b414a691b0fcd53246fe3586daaf8f4cf4007",
+      "normalized_sha256": "08da30873a701e51c50754d2f38d0ce8471586e25d5b584a5082f0ebd9ec5b70",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-01055",
+      "prompt_sha256": "2c63ebb1514096ad99dedf0f89672b18894c51e322760ca6229ddbbc19d56e5c",
+      "normalized_sha256": "fee17dc37a86c649892b2b46c3aee59a85a549c0e9be01003bf2fe625b5984ae",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-00147",
+      "prompt_sha256": "8ef0229a942577546c8a7f41043b7b7ace0e47c2548865d841babfdefcacfb45",
+      "normalized_sha256": "e8498eb7d7134e54af7b487d28964bd4c50d4a8a7c57c6eec803d3e1f5260b76",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-10500",
+      "prompt_sha256": "5bf7d8772bc65bece4f1a90061ab9c43160de2045355b5d274e06c9346a4aec1",
+      "normalized_sha256": "8e66b9804532c205fdd86b1697590b3621717b971ad79eb8aefe9ce6a9e3b76d",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-07421",
+      "prompt_sha256": "86847b1bf906e299f2f22a80e59af3660048dca271412608d71e2e92c88eaec1",
+      "normalized_sha256": "2902d34e591e10ae1a92d0253fc3cdb783c248b2175781d025a7748a6c8b50f1",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-10816",
+      "prompt_sha256": "47476f0a288ba81a72121d5ac557be7d9781f50633b447e7fed5df9bb26c2781",
+      "normalized_sha256": "4e40564df5d031784478aeb6ad083fb8b10417c0973c826f0ada0cab9ed962c5",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-13916",
+      "prompt_sha256": "24ea74af6b5e1a619079575c47ec87902b373ce583894cabcb274207c2349424",
+      "normalized_sha256": "d01818db16022c3a0a6e1b543033463368ac74316aad45b5d921e1691dffe319",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-00273",
+      "prompt_sha256": "203432f24b46a989f05ed607204a95285342ea353d0eae45120a67c47db44a13",
+      "normalized_sha256": "14adeab47e92a1c1c0aaf7f913edcd8aceecf21922bb867f891ff32083d5ad8e",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-14609",
+      "prompt_sha256": "d4f553fd441588245545e176a827c8542581ac52f7c0b668d86a4429866b3f8e",
+      "normalized_sha256": "f34697c1bf34e49f1d4032f02bb1bcd382612c01c9ee10030baa57f64334a50f",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-12657",
+      "prompt_sha256": "26ae50e9cef8d16cd5dac03b1d23e5cc3ccd1714af7876266e87be0a013aa039",
+      "normalized_sha256": "905912141c629cc82fce61dc853c6d48caf846046612974e61c035d574f2980d",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-10000",
+      "prompt_sha256": "61003842c1cc09fedf4a474a1a6cf22018a4b649b43110104e18c96d0fb351f8",
+      "normalized_sha256": "0bacb891f649935d3c5bcfe74ee7052967b73eba72c33980bac17977abeae452",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-00623",
+      "prompt_sha256": "ae274feedd57a799190eacfe8978501804baebd2ac999ab7587d4356697f9cb5",
+      "normalized_sha256": "e10c4888c5308823a81a9c36d32be87c1f2a572310aa5664a305ef664355085b",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-13417",
+      "prompt_sha256": "23b0a765f03c7ae7a730cbe9e9288d7ac686c65e518dbf7f9b3e3e798ef6b96d",
+      "normalized_sha256": "8649490873f6e9f4868f67a835255fea0aee311425062e2bd56ae9bb5e824c15",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-05310",
+      "prompt_sha256": "bc1275b1faa5a469a6ac43dc0c03f44c0f34168e790829c606a70a3f14d785ab",
+      "normalized_sha256": "1105e2903bba4acf2d61871f6bc2ccea22407de484cf175944a7a86f5b922157",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-14379",
+      "prompt_sha256": "135f646448c74027a1dec84350738522bce148fcfaa103fd5b579db8aa66b9f0",
+      "normalized_sha256": "4d96892deee71e8ee2374a0c3af7c22b592ef57d0f4500d7fc1b6a616d577ef9",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-08531",
+      "prompt_sha256": "00f23192443923e00ab7aaabc3055ceef34c7f1081d009f6959c303d4cca9496",
+      "normalized_sha256": "f4e277727fb1976b7903928610d6e8c37b35abcd11071e384f468e9b9d73bb3b",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-07293",
+      "prompt_sha256": "863e951f448a3d9842b1b791fee1d04d6f8f10e7980f30c8cae69d67fad8c738",
+      "normalized_sha256": "ae62b67f2b3f47b139cb0f84a4be01346c5873eb592028dcf745e3c78227cedd",
+      "raw_token_length": 21
+    },
+    {
+      "id": "dolly-14053",
+      "prompt_sha256": "81710805a6491dd2790b924ede1d68ec617ac1aaa4af4f49dcbb98b7eb3a092a",
+      "normalized_sha256": "1ba97033380b7a989a9afdbbd41f21c0faa942726f081b8b6d3cea1ec8f0c5fa",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-01085",
+      "prompt_sha256": "0161c2da519f9e68a8ea016a2efae281865dd7c06d7cbcef19d321c12a670330",
+      "normalized_sha256": "e63b606e37325a6f6fd9ddebda3dfc4f51acafa1a26b34fe2c02f78362333484",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-00244",
+      "prompt_sha256": "f618a958ac04af3c4e62fb5442dd183bab7566d7d8927a6e5806efd6ee2bbb51",
+      "normalized_sha256": "85dd582df7f3466992d9ec3414293d35ad173a2755a3e30e092e3da386ccdfd6",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-10324",
+      "prompt_sha256": "b83b100a31ede57aed6a2d17e46271bbcd13bb3cc0f387336b670ff7cd22f1f7",
+      "normalized_sha256": "831c615c8a344daf22d642dc9b3ca5605239e3a8f96221af2411f40f99c008bb",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-14588",
+      "prompt_sha256": "8441c07457a2d02b854cbc9a8b25ba65074a3165fe317077ced4fa3fccb7ab40",
+      "normalized_sha256": "4dd02c237e7967be05105d51a130778f248f95c725ba05ac67e1ad6b1a907807",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-10803",
+      "prompt_sha256": "10228d9a358bb3f55a2cb39e5467e9d410ba457d57d4048e85329dd2127bf086",
+      "normalized_sha256": "23eef3d58909c8ff07f0227547313497795ca68ed43fa5ee9b38282408348a0c",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-06100",
+      "prompt_sha256": "5a8121ab468ec8d94fcb6ef13d9f04f62c927735a7837eda54afc037866133a5",
+      "normalized_sha256": "3c7f559ef1bfa194644f10886d1f3584ba56b384f67c1c68d78ed35b22fbc574",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-14412",
+      "prompt_sha256": "d41ae051b4689d2dbc8df21a87d0f191e517efe9ce7e38227ca898c3fc80f6ce",
+      "normalized_sha256": "8950e7c16d7d88d9b312be7d4c1167fad34d4591592ca6f61da07b14d1bf3ea2",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-08093",
+      "prompt_sha256": "3a1ea14411c00dcde6515d5345469ae2d36dd98f0bc471854f6b0304c386c6d4",
+      "normalized_sha256": "f392968754a2702a71b6f29a823967d644901a3757cdafad76d0981f58c2840a",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-07795",
+      "prompt_sha256": "99147106d4af634744cbb0e7e09b4234de037a5a7566cd19901404d9071332d1",
+      "normalized_sha256": "99147106d4af634744cbb0e7e09b4234de037a5a7566cd19901404d9071332d1",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-08425",
+      "prompt_sha256": "0004305e784e6ab074fb99dc1567fa63def2aa69a6bb8eeaa506e9032ae0a0e3",
+      "normalized_sha256": "ffa7177f91a73594846d0a951f98bea98b2d49722dba6b95a07d8a3544bca746",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-04505",
+      "prompt_sha256": "488d9a77d0efbc7e0772c8617a9543d669f3544756bec0512a9d79a47271c2fd",
+      "normalized_sha256": "f365d616057bf628638ecb30126762f6c049630cea76f57b218b9dc26346d01a",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-11201",
+      "prompt_sha256": "46b5a8dce103a62518ecd25d91c85b8daf438e8d4e6e2807bc168426d2a68480",
+      "normalized_sha256": "46b5a8dce103a62518ecd25d91c85b8daf438e8d4e6e2807bc168426d2a68480",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-02058",
+      "prompt_sha256": "52e00176012b804a54916f53c9ca3dcb36f7ec0e646daa82fcdb8510604e4f57",
+      "normalized_sha256": "c6bc19599ee9e2eb49e052afc14e80ede36dd11858ddd9a6b942ceaee3434b2a",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-02559",
+      "prompt_sha256": "de964360f9788f4eee4d99f7e861ef827ac76c414937aa3e144c66b517129670",
+      "normalized_sha256": "171495510858dce38420a55c57b2e7bf9275bcf646cc73a73a320f40b784c4d6",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-05611",
+      "prompt_sha256": "1a85318db056126228a1d3dfcda31f6d1a1b61f6211996ed9adde1e786e8c83c",
+      "normalized_sha256": "3824626075f4949ba80c3edcec29de7ea9451fdaae495e611d94a70c52eb2b93",
+      "raw_token_length": 19
+    },
+    {
+      "id": "dolly-03377",
+      "prompt_sha256": "eea0a48e0e6b6f579e405388153223f19c6728170bccd5e01093a1babc2fa77b",
+      "normalized_sha256": "dec08dfcdbb36c13a13ce0f1e61581f83dd5c52a7bcf37e1d4e240bd1d33fd45",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-02864",
+      "prompt_sha256": "eeade8673c125b4f5b048ff6a292366e4a883532bd83e0145dbf8f71d807acb1",
+      "normalized_sha256": "fa682267530897e0adf024f4a2fd2262d4131a7cb4b71f921f459b7c69f311f7",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-08749",
+      "prompt_sha256": "4f91c3541c2a228fad351b0ffe2bff9e4bf95c6cf6badf0b295178c744ce128e",
+      "normalized_sha256": "1c5e77be512795016f30b96c1d445c84ee4fcad3bbd246d7ece9bd174f7908a0",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-06335",
+      "prompt_sha256": "687df66b69142d6d90c34088eea3ced12ed4c0d71c6e0de9b01a9c339969d899",
+      "normalized_sha256": "34b2525337b2f1234e6f02561e941929bb1018f42e6a1def73f486b4ff7decf9",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-05345",
+      "prompt_sha256": "e0ff4f326e76dad1d48762af6fcbbad5f4ed8f6877242aa621025650f43177dd",
+      "normalized_sha256": "071e705b14a7ebf4ea58fa6bcaee80fbd6e6a180ea0060e9c8fd8ab886cc38ac",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-09871",
+      "prompt_sha256": "6bc80f74753542e5d4be5c611030d6834a20a394bf03d43e01c67f5a3e286726",
+      "normalized_sha256": "ac4d088ed11ab8e04e824a48b06715bb969cd371ddb8e3c9368b4523dd826a9d",
+      "raw_token_length": 23
+    },
+    {
+      "id": "dolly-04453",
+      "prompt_sha256": "be8cd1bdcc4f2ea133aef9a4d0885bd35c28b8e62d5a35876a390ae4a953c59b",
+      "normalized_sha256": "23258aa0f1734ac27237599db43fac544f75491b5920a4437cd231937e3c38e4",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-06148",
+      "prompt_sha256": "883fcba10beecd835eb9da5616eb4a4c12e95fae89e6ba4d9eb2ce3f458a72d8",
+      "normalized_sha256": "1b44d55b57bad73f9a58437212fc1f6a9e1c2c2c86f02eb4c78240f067988081",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-08591",
+      "prompt_sha256": "69c8e17cea26c626d3425236ef3da8548fd98d9bef667e72805427c96fcf2301",
+      "normalized_sha256": "698790afef184a28d13773ae61e5de4398a45a7d254bbc5896a986825a3be0d7",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-09904",
+      "prompt_sha256": "ad41499fb55cb707e5047ba3e99b5a8e5428d93410bcc26cf4254af672b4a6ad",
+      "normalized_sha256": "52fedae06f460ea7b41bd1af99a3e32860f2104921b5a5c0a53305e3278fd1ce",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-06861",
+      "prompt_sha256": "cd507471c956efa9112075999af8a1c5c501720ea4862b4d3dc5157c123e6c76",
+      "normalized_sha256": "acd0bf438821cf5139079e61bcfe838e80b2cdf1c3159431a4baebed35b29a3c",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-04318",
+      "prompt_sha256": "8144fed3835365e947c72512227025fdca5eb58e63ae6d09b1e33fdb6dbc038c",
+      "normalized_sha256": "ea63e984e19e2aa41c0dd8a84c47bf04cf471c3c46ec4b59ea0e545af6145d37",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-11388",
+      "prompt_sha256": "0105ec634987109981d8023ea70382426e69ee8fca181dd9d99825b254ffd063",
+      "normalized_sha256": "a75f2b30885bcf9215dcb70592a0b332c9578c7910e7d585fe6bb38d020f25b1",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-00873",
+      "prompt_sha256": "b36db000bcef0d2dedc330680b397b5b6584a00ec3fc38172379ea161e3d8bbf",
+      "normalized_sha256": "bbcf89e9fc193f15728b09c7fc8e595e390a73001ed73cd094a0aebcb12402fe",
+      "raw_token_length": 26
+    },
+    {
+      "id": "dolly-06950",
+      "prompt_sha256": "f1b94d955f149f1dae50f08ef9b6e388379b7194687ae38ca07dd1e104cb8c9b",
+      "normalized_sha256": "6d21d66252e17b250a0d329eb513d6320f060d42336b9e459e705af571ed100a",
+      "raw_token_length": 27
+    },
+    {
+      "id": "dolly-06469",
+      "prompt_sha256": "6ff706648f38cf22dbb0bdd562269eccdf8fcda2d45cebc904d7a3f9540dc7bd",
+      "normalized_sha256": "e87ee5cf21d6b9368d124d43f9eacfe7a94c781201da3525fb8de05bae3661c7",
+      "raw_token_length": 20
+    },
+    {
+      "id": "dolly-10970",
+      "prompt_sha256": "5440a61eb3d289d9f14e012aaa763f34920b35d9eec8fde5907291c738cffb1e",
+      "normalized_sha256": "63ae52b153a186e87e69b10e0c7f8ed4307814e473aad43d267dde99498700a5",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-11012",
+      "prompt_sha256": "95cc88f26e19073b9e58bd43d42a5886c5f32970bdab55ba965c2a20830a8995",
+      "normalized_sha256": "8c2ea1cc69ac478841dd56d6add40ce56e9dee9e025499ade1afd6138423fb90",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-09435",
+      "prompt_sha256": "5902b8baf7a87396b54beb11c5d36d439332feb0219c7b391baac5083427598f",
+      "normalized_sha256": "77729efb4517f208b1d67a050f08c9ed65710fadd769e0aaf638d728cc0ddfef",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-03748",
+      "prompt_sha256": "6eef02152a1fda124c76121435eaa666f8164fb20ca97b64b014fcceb586354a",
+      "normalized_sha256": "feba968a4200fb24587d22e4cec1751794b86a5001720740c327aaf9f0987ac4",
+      "raw_token_length": 18
+    },
+    {
+      "id": "dolly-13494",
+      "prompt_sha256": "deba855839d5fc91ae9c2d1604b6070f6c4aa578b4d639324182579d0475f848",
+      "normalized_sha256": "62faa657886c5abf8b08bd4751aebddd01eea7c3cc9e555b0ef94ca36d142ff8",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-03418",
+      "prompt_sha256": "fec9a3319a2594fe7a736de9eb17bd1cd4b42014d77f8ef53f23b03f0a4500c0",
+      "normalized_sha256": "4d7611e24a60e2a52ac3127276dfab97f60f2b244158a7e3cea41d8fb368a294",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-13857",
+      "prompt_sha256": "1ea14285e0bf24e65d55be2802eb18c283985287cade022386a72cdd9f277c1f",
+      "normalized_sha256": "1f72263a195f45acdb1b119b079874d7d15f718d21524b6010e2b1f4e8850a6c",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-10692",
+      "prompt_sha256": "4d28801dd805d03a84c440f1948d6d59e80345f657e49b2eb4f6937e92b6d78a",
+      "normalized_sha256": "59b16c42c4bfac83b214c0c333e1b49bf8e5e23ec33deb673900a97f5d54eead",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-03157",
+      "prompt_sha256": "3631d454fe41b27a0e6bfc93e9acafbab3554def0c91e0eced1e3ab3fbec0ce2",
+      "normalized_sha256": "28092b494966bea8985e902c46523dbc35882681ef0e3f1a3a075125056f9bff",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-13387",
+      "prompt_sha256": "438f2b5a2894bc1dc25f40210e68d48116c96ab1b695947c449c8b445cf98175",
+      "normalized_sha256": "d69303ec703e6000e44f8fcfdfa530504d5ebc326438f71c4566d5a22455bc59",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-03552",
+      "prompt_sha256": "ea54a79fc4240466272218185992106385978d6f4951b11e035dfac0c5179c04",
+      "normalized_sha256": "635bc65bcb84f8e7301c3d0ca4262a80f8f18fe4619cc977f436ad4c2e70bfac",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-00235",
+      "prompt_sha256": "a93fa6dd0b00e3f8788f1c02ad894f3f189d67b601430c818acbc1aa35f59e9a",
+      "normalized_sha256": "aaaf562c4c85e9927988f249bbc15a70adb402f42b9332e1781b88f22dfa165a",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-08814",
+      "prompt_sha256": "2cebf341e62d5ee98316bce0d8e6b2e8892e12da603544752fec578b1e44a72f",
+      "normalized_sha256": "28584e5f5a04f0b0b957b2c913059ab8c6f6d9fa0f72e3b255e2ab93eca1607d",
+      "raw_token_length": 32
+    },
+    {
+      "id": "dolly-10718",
+      "prompt_sha256": "fe0f9f5a89db6bbd7509086b1a6c07459fef5e00537bab93358962f2c7ca18a3",
+      "normalized_sha256": "f1028d839cdc619395270546cb16a62c88c3de75b13230850af9e6cc7feaf4c8",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-06902",
+      "prompt_sha256": "d98e99e5039295107762cd3942a78548929eb5aa64801848f63513837aa131d4",
+      "normalized_sha256": "1ef11107a3c92575cd24c8bccc0dcefa6430d4700e75f98c87cd2691f3266839",
+      "raw_token_length": 21
+    },
+    {
+      "id": "dolly-13437",
+      "prompt_sha256": "540ff9efbfe369bb2da9717f38975551fcafc8bcac3bf4ac4cf08d68b7a337c1",
+      "normalized_sha256": "1012df661aaa0e5dd1e38d83e6b19aeae9b5d12408f0bcf427be1f136209f82c",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-03121",
+      "prompt_sha256": "6df63e5f366ed790e51855c81a129171cb92687f6d0d471530bd39adaa11cd6b",
+      "normalized_sha256": "7cefd582e57ea4394aa1e581558c15b4f2f26230385c7a9021e36cf461e22093",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-11535",
+      "prompt_sha256": "7cfa41e45d80eb7a7c4acb3f3f32c32b07f7f5b4b6cb0d4a1444398e2d144450",
+      "normalized_sha256": "4c3dc443d75b762422c3b06f3887b40dad5227aff5859483d30d8fef378a4d10",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-04089",
+      "prompt_sha256": "1ffcd3cf46e1e9cb4b7ed6ad2ccfaa7270b2158b13c927c1c5ed18782f085a60",
+      "normalized_sha256": "aee6dd89d1c4154be2dbb3bc064c3aa9217859fe29fc186f8bd015553059bd3e",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-11145",
+      "prompt_sha256": "70ff68699e1b4afaf10e5267f750f6b063cb7d9ee8759d46d5b461fc81e28343",
+      "normalized_sha256": "50331fb8c93a9540c99883ba03ad2c763098c78e3f6769216c850d02d391044c",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-06975",
+      "prompt_sha256": "6c03a146a081bbbe40160a582e51c6b4173a032e6dce258a45fcc59e99f84651",
+      "normalized_sha256": "db1cd80475efacec12ff1738092a709942f7093461282dc02996bf19796eb2ac",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-09133",
+      "prompt_sha256": "bcade6518757583b878141622772be9498e41eb08640f503a9203b2a4555273b",
+      "normalized_sha256": "f3132daeadd8a24c1bb1e29d4102bf515607ee5a6d134c99bc39d02999b62300",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-04156",
+      "prompt_sha256": "c511213d78ef0d8746f29762eef633ed6867a0e12c50745d6929d4ad26843750",
+      "normalized_sha256": "2cd8d5df6dfe3de471378df808fb660a1363261ba7b1477ff290696456ffe6c0",
+      "raw_token_length": 18
+    },
+    {
+      "id": "dolly-13374",
+      "prompt_sha256": "f947dcdf304ecfdf765489f1ad159bdeb80d4bef8aac06b1ccc9461698238a3b",
+      "normalized_sha256": "562ee63fed1ab423f0a2dc3862ad310abe794292080ccc4cc9583352bbd36f0c",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-14349",
+      "prompt_sha256": "5a74a08bdc034c7dfe9a43e2b5d32caa5c10fc9ee0e922d195efdc6cb5c780f4",
+      "normalized_sha256": "af67585e01f198d616044ad2861aff31ae410040b2e72a772e694c85598d0e52",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-01073",
+      "prompt_sha256": "8202093ab8beaae6c48b3a3a0aa3b7ae9db9e3ee07782b57b89aca14bffeedd8",
+      "normalized_sha256": "31d94cc80f4bc61fdca01bc34f58f3bf1bdcb2b876fe84c9ebef0997faa16ff6",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-08142",
+      "prompt_sha256": "f62e8b270c0414a1bbb431b386e3694074931a2d6ac93be9b695203d1f877ef2",
+      "normalized_sha256": "ced0f127f55c87d9f1669e4ee3cc8143efdd5d09abea218c95a35af01a387cb8",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-03142",
+      "prompt_sha256": "5beed451b964b2987d562800ea8a22f5f25f233c1041991ce4ef7d9907371d5b",
+      "normalized_sha256": "5ad7919f240ecbc9c1ea40cbb1527ff27c3f7138b6e5fc47e1e050c1f191f0e5",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-05674",
+      "prompt_sha256": "b144c28b4e29e44502cc7d010ed3bdf7ff2b13636533286297af3feea881c216",
+      "normalized_sha256": "b144c28b4e29e44502cc7d010ed3bdf7ff2b13636533286297af3feea881c216",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-10994",
+      "prompt_sha256": "712d44c4261e906651fc79cb4a01b92944b382cf35f11589c902cf5ebd289afb",
+      "normalized_sha256": "0cc9ede97f633a8489277652701cd37c037c6420e57c1294691a200361626a1e",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-02446",
+      "prompt_sha256": "b09b05f98b7a20626df0d6cb7c86ec5e87fcf83b967e5d32044e393228fa15b7",
+      "normalized_sha256": "eed5b9bcb830669f0f3a1732cb213c06df85bda4be3a04f7e25382be8d9b74e5",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-09229",
+      "prompt_sha256": "18afd375c772016a0625f0d082c5233babb926d84abbfc8ac82b745619b6f1df",
+      "normalized_sha256": "3333cc7d52f7b9d0e7052e5d34a360bd45924f5e7da53532444333e71f253955",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-06742",
+      "prompt_sha256": "b5b1aa1c9ae48d01392a1bcfc33698c87872c9035b1bcf8f6f540b9c40b429e0",
+      "normalized_sha256": "3fff473c624fc3133e08a845cab6095789c0fcab157fc4f38d5adbb3d788d46e",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-12124",
+      "prompt_sha256": "c2c83745382178a9200dab7f7f11d4a5c4937107e6f3c74d7722e247ecf3fdbd",
+      "normalized_sha256": "7c285813d6dd6cca10e990a7bf6d7d651d45c1e3d3e821fda32e0cfbe4f935f1",
+      "raw_token_length": 16
+    },
+    {
+      "id": "dolly-10387",
+      "prompt_sha256": "373b2fed08db76c546332cee96e7e1e17ee07a45d24289c1532bdc66ec36de71",
+      "normalized_sha256": "b989821c2a9c18b588a2c82c7871323ce24352edba4af4256352153f23a42c4b",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-13221",
+      "prompt_sha256": "826e7fcdae561afbe34f05c65dad7ee5039787ddc909dab63d44ab1ebe390d4f",
+      "normalized_sha256": "6c975fd807581e324874b27a0c81d25cd3a346d5db453da50a8a62986eadfda2",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-01567",
+      "prompt_sha256": "5ac5e6c2772471e2a42f23cddd54cc6d8e226fa7887fe307b109b59b187fa6d2",
+      "normalized_sha256": "680563c7910214a2ef76c2aa7117a53ef622f3624f12894c3c0a5066d9bd696d",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-02674",
+      "prompt_sha256": "affa7410a614cba7ef3c9b52ee864d77505cb9df238240e9a96cb2fce02416c1",
+      "normalized_sha256": "c0cbbdfda634416ae0ff96368b2d05430d1f828de6685a56e3199c5c048083e9",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-03156",
+      "prompt_sha256": "2d843002286fd00093aaf66a34fdf9bdd7747e13419a6f839234b633f53b8b16",
+      "normalized_sha256": "0017a7c11241a9ab0080df5882839f77cf1d1af160d28bcb5db6e4aa403b4d71",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-11766",
+      "prompt_sha256": "bfee371ae1e248ecc0160b01a7192bc92efc6560f96722b70ca4ff4fe61ff51d",
+      "normalized_sha256": "a98e79c663245746a21f95275fe3dcde8fa9c34c0b5efc9e930b2070b7c7ca0c",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-13040",
+      "prompt_sha256": "55cb1925f668d2eb751fcda11ebdca83f90b2cddb360a31b50baffb8979c88e8",
+      "normalized_sha256": "a15c15754bffe6b39f58657e8a498212a2a185c1c9ff52ce6e055a3fe66177b8",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-09744",
+      "prompt_sha256": "8aac362b3f236da6e756e430196da4c2066044d5ee655f246a889f3ac8d971d3",
+      "normalized_sha256": "56829603e4e431b0c8364ded16bb55cef177c2a13f835822a5de843076bbf79d",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-02077",
+      "prompt_sha256": "4d43b6d430e1e9cb36c49c172d1ee5bed1824a619ee6f30b7e4d1b63d56dda7c",
+      "normalized_sha256": "0bcd24354540430e1bfa494cc45fd481a7b6d6c505b8ff4efaa6b7ff992aa1b3",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-10197",
+      "prompt_sha256": "8719b402c43a1824538736e5b2b43a0d8e9c810f18c7b64767b0741d445dc708",
+      "normalized_sha256": "4fbcdf1b970fd0e36f0a6b2690feaf60a36c99baa12ceda2a101fbb6dec84aae",
+      "raw_token_length": 18
+    },
+    {
+      "id": "dolly-08348",
+      "prompt_sha256": "428b006dce26350c46ed088e0e80d72b0c6f80f30f2782136e135bf072083d71",
+      "normalized_sha256": "07289edb9005b4978b246fb158bc1ce9497b9f03ed860bae4627da5ef8d8ef90",
+      "raw_token_length": 35
+    },
+    {
+      "id": "dolly-12975",
+      "prompt_sha256": "b608cbf1a4a5aef14f74b837059f7779f073a49964020a5094ee3e99c9849d22",
+      "normalized_sha256": "b384a8756eda12bbd73f8fc952ab4624f28c4d31ecb2f58a8ddb589341188b83",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-11167",
+      "prompt_sha256": "ec70719e4d802720e78c1e7d807389c1cfecdd78c39e02fa3498b2aa01c97947",
+      "normalized_sha256": "459b4177741b0534eb9c882671d87616abb001578469546e7dad5c07beb821e0",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-14302",
+      "prompt_sha256": "577c5e6628867f0eb0bf2a5a22512f5cad818259ed76dd6c727068b4555e0801",
+      "normalized_sha256": "b975a311906c8c92e53f68135eef7eccc660f87ab77efe81b922df29dc62d260",
+      "raw_token_length": 23
+    },
+    {
+      "id": "dolly-10669",
+      "prompt_sha256": "d6d2a97ab0f452652c8dcfaa75a1f0466c047d01c294a59fc37bca84a45e313d",
+      "normalized_sha256": "88aea12434d760d811565ce4a42c3c6953650464f0c8da54fbbc8bcb46dd9670",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-00047",
+      "prompt_sha256": "d177b79c77eaacfdce61bcf4cd0cda84d9e1efe3309771741a404b20a64bcf4c",
+      "normalized_sha256": "20a458693a3083287f9cbd038ce2d5b57ba4430183321d17c80c2705af193e85",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-14710",
+      "prompt_sha256": "4fd44478168232c008ec058e22496e3a6171fea9bf82db1c8752b3b1132dde72",
+      "normalized_sha256": "f5e5fc71e06ad7b33b5e1d43aa9cc42d8d86b548c721c854d0de8dc3535e672e",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-14720",
+      "prompt_sha256": "0a18577facdc847bea6f45617a7143c4f14031861e0fc6d11a8dbeebc8551ba9",
+      "normalized_sha256": "43f17cdc5f48d14bbbc2a7da5f70a18fed82a940385ea95748a94ec22594f327",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-07883",
+      "prompt_sha256": "3bdca77a2f1828cd23c2b8a34e7c5e0508e019308f093a225466205363644e97",
+      "normalized_sha256": "b088a87498de5ffbb21a3a9009019b5d03eca6254f123e897f5d939a80e69666",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-11057",
+      "prompt_sha256": "3813264065329d802523badbdd73dd380ba9e36d02af6d610679ed35f406be79",
+      "normalized_sha256": "b76927032306cfc28c498854b20f167752e6f6d6f78cbba5f7e67efb651be1fa",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-05965",
+      "prompt_sha256": "f9c4fd72ed7138a652aae35c012fa43f13bb26c8974010c0aa7f520fc411c337",
+      "normalized_sha256": "c06a01bb17ccd93a0d82ce1e4490f26a877a43031f3d2911ef8ea8e2b413f230",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-02811",
+      "prompt_sha256": "875492a644564ce467b9cfe41020e02bf759727879630fc3c6f712fe79dc7052",
+      "normalized_sha256": "24cfa47f2c8d9f0cb67519daac62b27c6ef4f42a6574b72416dd7e82a4ec8e19",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-02419",
+      "prompt_sha256": "f7eb4162a7553589d14127ace43ad8c5a5f29f792bf6dbc378ad4e673043a559",
+      "normalized_sha256": "1ae84c354342639b508d664c96a7c94459578558f780c5616000d1632367c046",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-07633",
+      "prompt_sha256": "e78c174563d33d2cfd3491e62f465ea2f8e46e85d93133bb79d2bf6c44b19154",
+      "normalized_sha256": "75ae1aa1845d5d63fa4e1e5aef008785946ab04f42e107cfd358e52bbc71a920",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-08978",
+      "prompt_sha256": "eca47d68245c55ccdea7f7c75d2551a26ea99080d9e6456491e8d944535b92ab",
+      "normalized_sha256": "c26ae06356c5b9cb4c905e4bbf03b0477b9a0b8ae971dc819fc0208f55d35611",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-07376",
+      "prompt_sha256": "608a712f47d1e67ac30262e27129de1ecfb54e32f5d495af113068a3c34707e0",
+      "normalized_sha256": "34ae7a9b9f6242daea25ee6dc067b23cef194890e5ac7f9bfac2facc79ac36e5",
+      "raw_token_length": 31
+    },
+    {
+      "id": "dolly-00293",
+      "prompt_sha256": "652faa23622604a0097363da387f0cc12a7dfc9976a258a52e9703d77994afcb",
+      "normalized_sha256": "97461d46d2bf0ce67360acae3c30756f027881e1e94d7ace0f2a3fe77f4884d7",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-10954",
+      "prompt_sha256": "d04a7eddec66557f19a246c60e8369a1051d31506b7261e2acb394624846a160",
+      "normalized_sha256": "2e87828dfb56cb9463674633d26984d0a8bbc13e8d8c6d3af1bff031132dfbf9",
+      "raw_token_length": 27
+    },
+    {
+      "id": "dolly-04517",
+      "prompt_sha256": "b39df61be78c099e99944def500df0cefa857e9c9377577c9b0a6b067a6962fc",
+      "normalized_sha256": "0e0d328439d73eb8a9c71e213e660fc9a75ed3e66d73f81f93652dcb349509b6",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-09043",
+      "prompt_sha256": "8513e9b531a519e8327907f4019401f0979c72344cb7783ad537d23689909441",
+      "normalized_sha256": "141d61e43c2755b29e3376a0ce0a74a1055053e30aff3df7a2ab59eaedfa9576",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-09867",
+      "prompt_sha256": "83024962ee522f1af5441c6323a0486cbd03f7f6ca829b8639a56c8415a41600",
+      "normalized_sha256": "3b94e141ef2aad5f4db52aa6c4e4a4b1678f92f6a0faabc361a473bd3eaab578",
+      "raw_token_length": 30
+    },
+    {
+      "id": "dolly-13355",
+      "prompt_sha256": "71c01bf2965ba44099d80ba3a9ba4852ecf108aaa16a5a0f0b77bff456063a60",
+      "normalized_sha256": "6bc5aa498b53b1833ddd1b4d4d60569bd7421c03af135c76c8c84cab07f58f6f",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-09788",
+      "prompt_sha256": "7c763e6b8f55673adc7d9a2abe527a43734d5245738827614239571ad347db23",
+      "normalized_sha256": "a3c79c9bc0635f5cbde70aa50d8fb702d793f86ccaa4f9635b5d4458e9f891a7",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-02745",
+      "prompt_sha256": "db0f68f0d9ef98ac6400a20a9b5c14292c1a912e743026b8516a7bca725ce04e",
+      "normalized_sha256": "3811ea743880afd8858f697956ace7938982a470218447ff6e3210c0cfc7a654",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-01102",
+      "prompt_sha256": "6e859dbe21aeffc92fe91bcc20474259d1b194497b6418b77200f2fd336d51dd",
+      "normalized_sha256": "0f1ce65cb55aec362b149b97818fccb1d7a143f1c3acad97bce4ed7f83362ef2",
+      "raw_token_length": 16
+    },
+    {
+      "id": "dolly-05899",
+      "prompt_sha256": "6b0daeba8d98dfda263242d78faa5b193e7d7f749e1ef353eb171933b9de84cc",
+      "normalized_sha256": "c3d4e7c32d5a0e5fda45ad703b1ec9a9ee777cefa06c3f001c02508c8d8e7ab8",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-03634",
+      "prompt_sha256": "4209574b758f5023bc473a602dd4156c6da7fea253f9ab73ab3f3ba01bbfedfc",
+      "normalized_sha256": "1dbad358e0e14fe7f65f69b21aa08647e18d549a15d44af3260b044a4127a5b7",
+      "raw_token_length": 17
+    },
+    {
+      "id": "dolly-04524",
+      "prompt_sha256": "e177e7218dfd5b47f705df995a657b6f209a157f6f263fe9cfe3c59964d3dd5a",
+      "normalized_sha256": "b5c754777a2b72467d115cfef3b24bce086c55c251c83993d227e26a2e5fc76f",
+      "raw_token_length": 33
+    },
+    {
+      "id": "dolly-10724",
+      "prompt_sha256": "9c62998ea93611c72cd3013349a53b6d31fabf79d04fbbdfc9337ebdb6116e88",
+      "normalized_sha256": "85b580604c106e1ed5bc90867017b00202c29fe47e809695c885a9dd805d70b5",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-14841",
+      "prompt_sha256": "1a88d038b8a5664c324d5c41799ec8449f65b4dd4d921bbd015199349a3095e3",
+      "normalized_sha256": "354230402aed6357090a7c7bd0b3d8d115127781d0618d482dbaf1ccd39ac993",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-10544",
+      "prompt_sha256": "6f7d4ede813d8153714f5a84315f7be04d043a964e67fe23fb61a2c9cc9059a4",
+      "normalized_sha256": "09d2b0568f7f1820895b7bafb375516522bdcc36f60e79012f869d2c2f7e2e20",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-01215",
+      "prompt_sha256": "5b8c3bc93969f22d7ece4b29b183db8c6247b3222a90168a7597e287dc55fa97",
+      "normalized_sha256": "7bda11b8d039e2b0c88831a271ebd9e1da1804708dc993001b786b564b8a03c5",
+      "raw_token_length": 29
+    },
+    {
+      "id": "dolly-05958",
+      "prompt_sha256": "b05deef6cfe72b81957e908ea142f13b5a62352549a00f47f0b6081a003355c0",
+      "normalized_sha256": "f1eb57b80052a1a16fe2080599261be8f573d263a6d21e43c0a3d95dab40ddde",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-13038",
+      "prompt_sha256": "2951a554114e7735a991b54ee783578c42e216d010c81da69e2e90f8c5037edd",
+      "normalized_sha256": "533118b1e5afaa23d8de49d0fddf7679dd5345f1376b794268ced1d92d9c4ca6",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-13224",
+      "prompt_sha256": "915690d5e7d432802051bad3d171b136917b4184e5b710dc32eaf148f752f134",
+      "normalized_sha256": "a017c4c6a4f14f44345c1a76b13adc951cc450f3c9688173063137f890d420da",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-03877",
+      "prompt_sha256": "7d50cf26fb7d441ffc97c013b807c0eb5fb00ca18b720d758a0ca94f0e300c88",
+      "normalized_sha256": "ad92251618d3bf2ca060fcd58ad6c389c96014727c1618ce0db2314e8fd3d9b2",
+      "raw_token_length": 16
+    },
+    {
+      "id": "dolly-11019",
+      "prompt_sha256": "3e7d1854c509651a1e49d580077ece0bf7d690730f5d11726c096ec474397e62",
+      "normalized_sha256": "a2751659ffddb78c754fa00127c933820bc2c4b2f1d07152a72d857ac942b137",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-06864",
+      "prompt_sha256": "ac0e87326d50c4a03a294e2fb810deaad4835038729bd109be66d17992a10df6",
+      "normalized_sha256": "b5c074d992f0b0e48fccb67550591674b3375840370a5ea5fd56a0131b26a09b",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-06338",
+      "prompt_sha256": "dbe551a66dca5fb040f1ea931d419e09d8e9b7711b404d7a755db2eb79b4b232",
+      "normalized_sha256": "34d577e73802b69847be0b03bfaa5cc99c96fad852b3b80ffde7e64bfe652f01",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-13822",
+      "prompt_sha256": "6d798a9890ae93a9eb8619eaabe9c0c2a6d85287cb32ad79a0a99c8fa31cd7d2",
+      "normalized_sha256": "d1c5162c8a5fd13d261ac1c4b3a143733c6438bae6a4ff8559d2582ccaf6c61f",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-13786",
+      "prompt_sha256": "e9fec830846b8e4445cd1259239b879d3e98574b64fd47420f10550338378cf6",
+      "normalized_sha256": "db377169b6e34176356a1ac7ff493d21cd4c40e61602875d71b5262fc7ef71f3",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-14132",
+      "prompt_sha256": "13e472e7353e9eef90e225438ab8e485eaa89768fab7995cf5974f69734100d5",
+      "normalized_sha256": "c550736a9a42c78b7fed43ecaea56295f6f5b5ddfa59d29a15a0982d6c138b99",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-06766",
+      "prompt_sha256": "48ad497e5570d8e05404251b769b227ecd51eb10746512fd99c383141b21e757",
+      "normalized_sha256": "48ad497e5570d8e05404251b769b227ecd51eb10746512fd99c383141b21e757",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-10650",
+      "prompt_sha256": "4e630ed5c364c7bec9a850418656ecfdb13df558413e212b927b3a7f745a2fe1",
+      "normalized_sha256": "722570be829a4aaca8c9b49c0af86bd50167c27d3fd5ef411863c119ec32aa07",
+      "raw_token_length": 18
+    },
+    {
+      "id": "dolly-12533",
+      "prompt_sha256": "ba9d2c62c390e80cea92ae9e9fcf1fb517311061780b784a1159e12d17e70ed2",
+      "normalized_sha256": "ba9d2c62c390e80cea92ae9e9fcf1fb517311061780b784a1159e12d17e70ed2",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-13428",
+      "prompt_sha256": "09130b42d49c61b39a52505e5909bf53bcb561bd7192034ef31cc1d98f310f6e",
+      "normalized_sha256": "2961b297f75789876033204a168a76adee1aada0773b1f57aa9e46914d0529e8",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-07779",
+      "prompt_sha256": "86fbed8ad3b2d7e514c8aaf34660b5d10e0fd98398305bec482dcb9c3ce2f8f1",
+      "normalized_sha256": "8519b7a0a296b55f68f8d93107c060007891d7d1636171abb819e9937e037229",
+      "raw_token_length": 22
+    },
+    {
+      "id": "dolly-12140",
+      "prompt_sha256": "b53506f9759f59eb382091fbc7dc3edea5de9bd8767803188d133e641b000e65",
+      "normalized_sha256": "37b8bd8b5b22a97033b6cf8f2f32ec083444e3689f3f22863036f9fc0919155c",
+      "raw_token_length": 7
+    },
+    {
+      "id": "dolly-14315",
+      "prompt_sha256": "c21ea7130e85a3a95e49901e424208abea4ed66138eb74eb0c43729bc4a68683",
+      "normalized_sha256": "41653bb934e5ec798510ec098625598420a61e6bf53bc356d1867137b785132f",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-14975",
+      "prompt_sha256": "44f202e09b379365e868a313df49568878a81e282af9e6d2153557269f002a35",
+      "normalized_sha256": "8e3c2ca0dfd171485442c12f099cf61018ee88f39128daed5cfb59897f9d7342",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-09431",
+      "prompt_sha256": "b724fc074bc25f7b108a16e65018d0bce51a05975b86153c450a8012d20cfe4b",
+      "normalized_sha256": "fc3ac650c2c672a1c12e21b7c85835c7b63674f071a7556c7377bf422f95071c",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-05818",
+      "prompt_sha256": "0dcbde066540369fc531826211db154ce925fc2b58566aca21371c1fd61b4d28",
+      "normalized_sha256": "78557b8b73bf8b964d5b714dac86173f6760b313bc4daec533f046d6886b2c30",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-03389",
+      "prompt_sha256": "770e1a02eb9693131f99462d38ef0e694c5b27eee7d33cb6586a33ea7e19cefe",
+      "normalized_sha256": "e12606ba5741b99826b48e01cbdc6b47946e64dd21677f58c1593bd50dbfd7fa",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-04731",
+      "prompt_sha256": "698e6071255d12ff5e1510b6f61e3ec56cfd54afc72caa5d20506477920f744d",
+      "normalized_sha256": "5e73edf9cb3fafa3c89d42c78c6f5718f51f90742de79757aee83f9d6497f187",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-04145",
+      "prompt_sha256": "5bed63a69dc4972f06bc5e76520290c6dbf11df791f46d8efb86f66b1ff5fc30",
+      "normalized_sha256": "709a645de933e2549f2ef67b7497e9120f82f7cab230bb35663676e267b3f203",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-11148",
+      "prompt_sha256": "1ba8bd8e27feb42b7ba9cf9507178ef01f83a3cf15684defa507c4e6baae829d",
+      "normalized_sha256": "ba8f73305b52606d33c90c2fb49b500063597382931def2b215bcdd24f1ac904",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-06882",
+      "prompt_sha256": "2d74c0d2963f049cc6273d728bee7654778f2890b2795e4c3e5801e5d0488571",
+      "normalized_sha256": "f7808381b97e604786f29a8a5763d382bac43e0e7de81d92d9d721f1f72001e1",
+      "raw_token_length": 12
+    },
+    {
+      "id": "dolly-13066",
+      "prompt_sha256": "f7ba15b45760c5d2045dbc94e28c16f9142bb6650fa5f9e5baa04ce747c4082d",
+      "normalized_sha256": "6befdac16caec98b0c2ee4cd2adb9827e6442462bcfc2b165f8a15a3ffe33dba",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-14964",
+      "prompt_sha256": "395d2c29570946589dcd9d1ea33fa286539e6d3907e3c2ebcc7b4dc377b2a3f1",
+      "normalized_sha256": "94a67ec9e953c700520e33f028b713a345c147387eb8f9d172062b3d043c8153",
+      "raw_token_length": 33
+    },
+    {
+      "id": "dolly-06107",
+      "prompt_sha256": "29d42cf3a03d4afe5b4e915dd56f0c1f2634f0bafb0399fe859960a0470ca244",
+      "normalized_sha256": "83dcb5ea65cf03d95ef74fa8390efb4df51bffe6a87b3608a3ea161eb1796a60",
+      "raw_token_length": 13
+    },
+    {
+      "id": "dolly-00730",
+      "prompt_sha256": "51dbbd966bbd434a6f1975e2b95add428ab7d5c030c98ce3cc266bbc9aad18e0",
+      "normalized_sha256": "b86f06e3577fa4c52a6a549d8e70ab54dbb391e9083938f5695c55facfbdd6d1",
+      "raw_token_length": 19
+    },
+    {
+      "id": "dolly-11329",
+      "prompt_sha256": "ec80cb3f12618d0bb84318a51e8dbdce8f52fc7c156a666acb55da4ad0c1369b",
+      "normalized_sha256": "c98bdf5288f5a02ea436cca0e73932873f62aa3e4289de9244a86462dd5bc7e8",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-09894",
+      "prompt_sha256": "4fd4604f2be42d7b9ac6f94cbc7ff808d7e7cb9e342734a4954ed5c7e7f4cd08",
+      "normalized_sha256": "993c01e376a58190ee66ab9f1f7a291fc4fbf7e2bd26d7633306b3be5579a176",
+      "raw_token_length": 35
+    },
+    {
+      "id": "dolly-04021",
+      "prompt_sha256": "f8faff0d814aa488386036b34cc9dbd3f9a3ffb95ec14de9807056dffed5a2fa",
+      "normalized_sha256": "4cddc3cc805834e77413a8c8b5308576e0abbdc35357e050a2be32170a135723",
+      "raw_token_length": 17
+    },
+    {
+      "id": "dolly-07284",
+      "prompt_sha256": "5b81fd47cd9bbe74ff4a69602b6edbd1e2cbe4da5a4405018e657a637b5c216d",
+      "normalized_sha256": "5b81fd47cd9bbe74ff4a69602b6edbd1e2cbe4da5a4405018e657a637b5c216d",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-14129",
+      "prompt_sha256": "04e6aadf58c28f9055ec2388ab4179b6b60026825953d08a7114acdb2a802870",
+      "normalized_sha256": "c57c8451194765ccdf299513af7f62bf8180072588cdb18efd0e3e1c72a942f9",
+      "raw_token_length": 5
+    },
+    {
+      "id": "dolly-10466",
+      "prompt_sha256": "ebb78eebeed15b1884d708e3fb2169f401a0fc98d80f7a06ca733328e9747374",
+      "normalized_sha256": "5532d6068e2fc7d0457182018f2bb828367dfdba929a028592617d0bccf1b6ea",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-05639",
+      "prompt_sha256": "5d6af02a8a6fd83abc7fc568f755b2a913867fd28788d6f10a3c6adca1ffc0e2",
+      "normalized_sha256": "bb54712f7396f3e1505850ae55c0c21a2654fa2aa3d570316449334cdd19b0f8",
+      "raw_token_length": 21
+    },
+    {
+      "id": "dolly-13386",
+      "prompt_sha256": "603147891ca1ceae74736cd44dcb0e1b02f6d1e95b72325532b3f52583599930",
+      "normalized_sha256": "c288d3b6a725807996b497bd9041bb23dc868f2a7fa4e6b4fc526f63fa585ab6",
+      "raw_token_length": 11
+    },
+    {
+      "id": "dolly-03771",
+      "prompt_sha256": "534c4145fc7e304b8aea6c63c98dc8ebaca7f59613a3d3dcfe9eaecfc874fd1d",
+      "normalized_sha256": "d6587ae3fa869ff970769bd73a93f4a1d3cf0dc27096054ca4eac456687e928e",
+      "raw_token_length": 16
+    },
+    {
+      "id": "dolly-09408",
+      "prompt_sha256": "ab2083ab032afa0e082908a43e571ff341fd365f9fba7fe00f2913fa921d66c2",
+      "normalized_sha256": "c3432527ccc6bf9b754f15f8fca17264e1821f7352755a0c28a6dc66f2adfa32",
+      "raw_token_length": 6
+    },
+    {
+      "id": "dolly-04171",
+      "prompt_sha256": "a7f15e09e3f9fc011613c21fbef28637f131aa416a5457a4aba0e30241154ea2",
+      "normalized_sha256": "d7a8202b21724cbfc15de711249f6935730b8f25471d029b858715aa22f3e3d8",
+      "raw_token_length": 15
+    },
+    {
+      "id": "dolly-05593",
+      "prompt_sha256": "8486181f788b77aa9b262db7ce3dd9d1cb91575a086ca773f1414b3d31c0d062",
+      "normalized_sha256": "5d67be8d9671063bebbecf6f35eb9bd292c386d8cd3d6cce9bdb836e5da24107",
+      "raw_token_length": 14
+    },
+    {
+      "id": "dolly-14688",
+      "prompt_sha256": "cad2cf450dc262f59263f595d072119ca3b79b22eee2bf151fdbb88fa803dc5b",
+      "normalized_sha256": "f5df89689c540136d62af91d600d082371a7683bc281cad25d3f37a0def096b2",
+      "raw_token_length": 9
+    },
+    {
+      "id": "dolly-04092",
+      "prompt_sha256": "dee7df0b50ef611e06d5bf764b677e33b1ee51c263a2022faa6331fecb6f4aab",
+      "normalized_sha256": "d11913053bd0fac3d1dbb07e4963c835237b375072d69f94d208b04c5fb03ad0",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-06211",
+      "prompt_sha256": "ff77289f2280843adea3c7c2f3a1866a51917695d7eafc2b1ecc9805b9b1289f",
+      "normalized_sha256": "01c6df0113d2148944d2af0b1ec490cb58269d172ace0fc1236a757b1879ba72",
+      "raw_token_length": 8
+    },
+    {
+      "id": "dolly-05322",
+      "prompt_sha256": "135513c93e811072d0aa27420ed6d5c0cc8b5616fcece9a003c56819ca7478aa",
+      "normalized_sha256": "b30aed6dfa2423cdffefb2beef74c6147434a1261ff441b331ade522aa2a349c",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-06994",
+      "prompt_sha256": "e3c9002cb012ad831f1c30b7de6f729b2faec31300927378cdcec8133ac8da0f",
+      "normalized_sha256": "b4e8542d330b467b597f432329be5210e2ba1b0d76568a16f71f27bf8633859c",
+      "raw_token_length": 10
+    },
+    {
+      "id": "dolly-01653",
+      "prompt_sha256": "c7323fe384b7d1442f25e66149c426d75df077b00caaf164cace2edfaa18b5c6",
+      "normalized_sha256": "3bc1fbc292fb13f60fd7d3c22db97c3cc8f078ad3a0c66dda11f2e5dabefa09e",
+      "raw_token_length": 9
+    }
+  ]
+}

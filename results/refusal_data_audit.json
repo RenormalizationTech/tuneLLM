@@ -1,0 +1,431 @@
+{
+  "status": "public_source_data_audit_only_no_experimental_splits",
+  "pins": {
+    "xstest": "d7bb5bd738c1fcbc36edd83d5e7d1b71a3e2d84d",
+    "advbench": "098262edf85f807224e70ecd87b9d83716bf6b73",
+    "dolly": "bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a"
+  },
+  "audited_at_utc": "2026-11-13T17:50:55.850737+00:00",
+  "helper_sha256": "9c2b85ac60c808029324f5038de634bd9c13d62c29cf20f4af9711e2e7d9c184",
+  "files": {
+    "dolly_metadata.json": {
+      "url": "https://huggingface.co/api/datasets/databricks/databricks-dolly-15k/revision/bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a",
+      "sha256": "b5e97ca7022a07a62c8e2a1bb9a0ea26fb9dee7ed3193426c73715d950ba1347",
+      "bytes": 1511
+    },
+    "xstest_prompts.csv": {
+      "url": "https://raw.githubusercontent.com/paul-rottger/xstest/d7bb5bd738c1fcbc36edd83d5e7d1b71a3e2d84d/xstest_prompts.csv",
+      "sha256": "11783fb294ed017473ee53c207d71f2161c7672c8d0b037501e78387f801cb5a",
+      "bytes": 38719
+    },
+    "xstest_LICENSE.txt": {
+      "url": "https://raw.githubusercontent.com/paul-rottger/xstest/d7bb5bd738c1fcbc36edd83d5e7d1b71a3e2d84d/LICENSE",
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+      "bytes": 18656
+    },
+    "xstest_readme.md": {
+      "url": "https://raw.githubusercontent.com/paul-rottger/xstest/d7bb5bd738c1fcbc36edd83d5e7d1b71a3e2d84d/readme.md",
+      "sha256": "51488f4032ba007b0345449e63293fccf5588cde1a967e3897107c6e08b532ce",
+      "bytes": 2772
+    },
+    "advbench_harmful_behaviors.csv": {
+      "url": "https://raw.githubusercontent.com/llm-attacks/llm-attacks/098262edf85f807224e70ecd87b9d83716bf6b73/data/advbench/harmful_behaviors.csv",
+      "sha256": "6cd1a5c63c07610d7eb67307772ee5606017ee950b5770ab288a2c487489d3e1",
+      "bytes": 82125
+    },
+    "advbench_LICENSE.txt": {
+      "url": "https://raw.githubusercontent.com/llm-attacks/llm-attacks/098262edf85f807224e70ecd87b9d83716bf6b73/LICENSE",
+      "sha256": "1e4bb8e2313ef9ff36033526503aa8837c80ba1d4c055c2e7d9977760028eec7",
+      "bytes": 1065
+    },
+    "advbench_README.md": {
+      "url": "https://raw.githubusercontent.com/llm-attacks/llm-attacks/098262edf85f807224e70ecd87b9d83716bf6b73/README.md",
+      "sha256": "6f1e9df31dce20764ace8b3790c777ae28a2aed16d9315c509cc7a6655ea1ab0",
+      "bytes": 5898
+    },
+    "dolly.jsonl": {
+      "url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k/resolve/bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a/databricks-dolly-15k.jsonl",
+      "sha256": "2df9083338b4abd6bceb5635764dab5d833b393b55759dffb0959b6fcbf794ec",
+      "bytes": 13085339
+    },
+    "dolly_README.md": {
+      "url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k/resolve/bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a/README.md",
+      "sha256": "db06c60090a11b20e79d1933b2f316f781605f07761ff2ae2795d6523e3e960b",
+      "bytes": 8199
+    }
+  },
+  "xstest": {
+    "rows": 450,
+    "columns": [
+      "id",
+      "prompt",
+      "type",
+      "label",
+      "focus",
+      "note"
+    ],
+    "label_counts": {
+      "safe": 250,
+      "unsafe": 200
+    },
+    "type_counts_by_label": {
+      "safe": {
+        "definitions": 25,
+        "figurative_language": 25,
+        "historical_events": 25,
+        "homonyms": 25,
+        "nons_group_real_discr": 25,
+        "privacy_fictional": 25,
+        "privacy_public": 25,
+        "real_group_nons_discr": 25,
+        "safe_contexts": 25,
+        "safe_targets": 25
+      },
+      "unsafe": {
+        "contrast_definitions": 25,
+        "contrast_discr": 25,
+        "contrast_figurative_language": 25,
+        "contrast_historical_events": 25,
+        "contrast_homonyms": 25,
+        "contrast_privacy": 25,
+        "contrast_safe_contexts": 25,
+        "contrast_safe_targets": 25
+      }
+    },
+    "id_duplicates": {
+      "unique": 450,
+      "extra_rows": 0,
+      "duplicate_groups": 0
+    },
+    "prompt_duplicates_exact": {
+      "unique": 450,
+      "extra_rows": 0,
+      "duplicate_groups": 0
+    },
+    "prompt_duplicates_normalized": {
+      "unique": 450,
+      "extra_rows": 0,
+      "duplicate_groups": 0
+    },
+    "cross_label_normalized_prompt_groups": 0,
+    "safe_to_contrast_mapping": {
+      "definitions": {
+        "contrast_type": "contrast_definitions",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "figurative_language": {
+        "contrast_type": "contrast_figurative_language",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "historical_events": {
+        "contrast_type": "contrast_historical_events",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "homonyms": {
+        "contrast_type": "contrast_homonyms",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "safe_contexts": {
+        "contrast_type": "contrast_safe_contexts",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "safe_targets": {
+        "contrast_type": "contrast_safe_targets",
+        "safe_count": 25,
+        "unsafe_count": 25
+      }
+    },
+    "unmapped_unsafe_types": [
+      "contrast_discr",
+      "contrast_privacy"
+    ],
+    "mapping_method": "literal author type labels: contrast_<safe_type>, or identical type across labels; no semantic invention",
+    "complete_safe_to_contrast_mapping": {
+      "definitions": {
+        "contrast_type": "contrast_definitions",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "figurative_language": {
+        "contrast_type": "contrast_figurative_language",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "historical_events": {
+        "contrast_type": "contrast_historical_events",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "homonyms": {
+        "contrast_type": "contrast_homonyms",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "safe_contexts": {
+        "contrast_type": "contrast_safe_contexts",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "safe_targets": {
+        "contrast_type": "contrast_safe_targets",
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "nons_group_real_discr": {
+        "contrast_type": "contrast_discr",
+        "safe_count": 25,
+        "unsafe_count": 25,
+        "shared_contrast_pool": true
+      },
+      "real_group_nons_discr": {
+        "contrast_type": "contrast_discr",
+        "safe_count": 25,
+        "unsafe_count": 25,
+        "shared_contrast_pool": true
+      },
+      "privacy_public": {
+        "contrast_type": "contrast_privacy",
+        "safe_count": 25,
+        "unsafe_count": 25,
+        "shared_contrast_pool": true
+      },
+      "privacy_fictional": {
+        "contrast_type": "contrast_privacy",
+        "safe_count": 25,
+        "unsafe_count": 25,
+        "shared_contrast_pool": true
+      }
+    },
+    "distinct_contrast_groups": {
+      "contrast_definitions": {
+        "safe_types": [
+          "definitions"
+        ],
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "contrast_figurative_language": {
+        "safe_types": [
+          "figurative_language"
+        ],
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "contrast_historical_events": {
+        "safe_types": [
+          "historical_events"
+        ],
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "contrast_homonyms": {
+        "safe_types": [
+          "homonyms"
+        ],
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "contrast_safe_contexts": {
+        "safe_types": [
+          "safe_contexts"
+        ],
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "contrast_safe_targets": {
+        "safe_types": [
+          "safe_targets"
+        ],
+        "safe_count": 25,
+        "unsafe_count": 25
+      },
+      "contrast_discr": {
+        "safe_types": [
+          "nons_group_real_discr",
+          "real_group_nons_discr"
+        ],
+        "safe_count": 50,
+        "unsafe_count": 25
+      },
+      "contrast_privacy": {
+        "safe_types": [
+          "privacy_public",
+          "privacy_fictional"
+        ],
+        "safe_count": 50,
+        "unsafe_count": 25
+      }
+    },
+    "safe_types_with_contrasts": 10,
+    "distinct_contrast_group_count": 8,
+    "pooled_mapping_evidence": "Authors NAACL2024 paper Table4 groups C6/7 discrimination and C9/10 privacy: https://aclanthology.org/2024.naacl-long.301.pdf#page=23",
+    "pooling_note": "Two safe types share each discrimination/privacy unsafe pool. Do not count unsafe rows twice or split a shared contrast pool across development/final; coordinator must register grouping before selection.",
+    "paired_types": 6,
+    "at_least_three_paired_types": true,
+    "per_type_capacity_for_proposed_plan": {
+      "definitions": {
+        "dev_safe_max10": 10,
+        "dev_unsafe_max10": 10,
+        "final_safe_max6": 6,
+        "final_unsafe_max6": 6
+      },
+      "figurative_language": {
+        "dev_safe_max10": 10,
+        "dev_unsafe_max10": 10,
+        "final_safe_max6": 6,
+        "final_unsafe_max6": 6
+      },
+      "historical_events": {
+        "dev_safe_max10": 10,
+        "dev_unsafe_max10": 10,
+        "final_safe_max6": 6,
+        "final_unsafe_max6": 6
+      },
+      "homonyms": {
+        "dev_safe_max10": 10,
+        "dev_unsafe_max10": 10,
+        "final_safe_max6": 6,
+        "final_unsafe_max6": 6
+      },
+      "safe_contexts": {
+        "dev_safe_max10": 10,
+        "dev_unsafe_max10": 10,
+        "final_safe_max6": 6,
+        "final_unsafe_max6": 6
+      },
+      "safe_targets": {
+        "dev_safe_max10": 10,
+        "dev_unsafe_max10": 10,
+        "final_safe_max6": 6,
+        "final_unsafe_max6": 6
+      }
+    }
+  },
+  "advbench": {
+    "rows": 520,
+    "prompt_column": "goal",
+    "columns": [
+      "goal",
+      "target"
+    ],
+    "excluded_columns": [
+      "target"
+    ],
+    "target_completions_used": false,
+    "original_source_ids": "zero-based authors CSV data-row index",
+    "prompt_duplicates_exact": {
+      "unique": 520,
+      "extra_rows": 0,
+      "duplicate_groups": 0
+    },
+    "prompt_duplicates_normalized": {
+      "unique": 520,
+      "extra_rows": 0,
+      "duplicate_groups": 0
+    }
+  },
+  "dolly": {
+    "rows": 15011,
+    "category_counts": {
+      "brainstorming": 1766,
+      "classification": 2136,
+      "closed_qa": 1773,
+      "creative_writing": 709,
+      "general_qa": 2191,
+      "information_extraction": 1506,
+      "open_qa": 3742,
+      "summarization": 1188
+    },
+    "eligible_categories": [
+      "brainstorming",
+      "classification",
+      "generation",
+      "open_qa"
+    ],
+    "eligible_no_context_rows": 7644,
+    "requested_categories_absent": [
+      "generation"
+    ],
+    "eligible_counts_by_category": {
+      "brainstorming": 1766,
+      "classification": 2136,
+      "open_qa": 3742
+    },
+    "eligible_instruction_duplicates_exact": {
+      "unique": 7597,
+      "extra_rows": 47,
+      "duplicate_groups": 32
+    },
+    "eligible_instruction_duplicates_normalized": {
+      "unique": 7591,
+      "extra_rows": 53,
+      "duplicate_groups": 38
+    },
+    "original_source_ids": "zero-based authors JSONL physical LF row index",
+    "responses_used": false
+  },
+  "cross_source_normalized_prompt_overlap": {
+    "advbench_xstest_safe": 0,
+    "advbench_xstest_unsafe": 0,
+    "eligible_dolly_xstest": 0,
+    "advbench_eligible_dolly": 0
+  },
+  "licenses": {
+    "xstest": {
+      "id": "CC-BY-4.0",
+      "status": "verified authors license/readme evidence"
+    },
+    "advbench": {
+      "id": "MIT",
+      "status": "verified repository-level license; authors CSV from that pinned repository"
+    },
+    "dolly": {
+      "id": "CC-BY-SA-3.0",
+      "status": "verified authors dataset card; public and ungated",
+      "gated": false
+    }
+  },
+  "source_license_copies": {
+    "refusal_source_licenses/xstest_LICENSE.txt": {
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+      "bytes": 18656
+    },
+    "refusal_source_licenses/advbench_LICENSE.txt": {
+      "sha256": "1e4bb8e2313ef9ff36033526503aa8837c80ba1d4c055c2e7d9977760028eec7",
+      "bytes": 1065
+    },
+    "refusal_source_licenses/dolly_card_license.txt": {
+      "sha256": "c04ab8a0719c71712d59cdcff691782bda7c74bc22a1c71d6897206744107959",
+      "bytes": 408
+    }
+  },
+  "authentication": "none; unauthenticated GET only; no HF client/token/terms acceptance",
+  "raw_directory": "data/refusal-01/raw",
+  "raw_data_in_report": false,
+  "proposed_plan_not_executed": {
+    "seed": 20261114,
+    "extraction_max_advbench": 100,
+    "extraction_max_dolly": 100,
+    "token_length_matching": "plus/minus20%; not assessed in this source audit",
+    "xstest_dev_paired_types": 3,
+    "dev_per_type_safe_unsafe_max": [
+      10,
+      10
+    ],
+    "remaining_paired_types_final_per_type_safe_unsafe_max": [
+      6,
+      6
+    ],
+    "split_selection_frozen": false
+  },
+  "limits": [
+    "Source/type-label audit only; no experimental split, model response, judge call or harmful completion generated.",
+    "Dolly category/no-context eligibility is not a guarantee of harmlessness; later prompt-only screening remains necessary.",
+    "Target/response columns remain unused; source raw files are preserved for exact provenance under ignored storage."
+  ]
+}
