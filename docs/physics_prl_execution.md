@@ -131,6 +131,24 @@ evaluation preparation after model selection. `benchmark_screen` writes individu
 outputs and scores; `build_writing_review` creates an offline blinded review with
 a separate identity key. No human judgments are synthesized.
 
+After both registered learning-rate runs complete, the screen runner nominates
+each run's minimum-loss epoch, checks unchanged inference dependencies and frozen
+fixtures, and runs the development comparisons:
+
+```bash
+.venv/bin/python -m scripts.run_development_screens \
+  --runs outputs/physics-r32-lr5e5 outputs/physics-r32-lr1e4 \
+  --stage lr_pilot --mapping outputs/physics_lr_mapping.json --execute
+.venv/bin/python -m scripts.physics_selection \
+  --mapping outputs/physics_lr_mapping.json --output results/physics_lr_selection.json
+```
+
+Use the analogous rank-stage mapping after the registered rank runs complete.
+These commands never read final-test outputs. `publish_release` uploads only an
+explicit, hash-reviewed manifest to the authorized repository and visibility;
+it refuses to overwrite an existing repository by default and verifies the
+revision-pinned remote bytes before reporting publication success.
+
 ## Results
 
 The rank-32, 5e-5 pilot completed all 207 steps and 1,567,140 prediction targets
