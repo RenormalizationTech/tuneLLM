@@ -1,0 +1,271 @@
+{
+  "stage": "lr_pilot",
+  "split": "development",
+  "decision": {
+    "selected_id": "physics-r32-lr5e5",
+    "fallback_base": false,
+    "best_passing_nll_id": "physics-r32-lr5e5",
+    "selected_epoch": 2,
+    "selected_checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/checkpoints/checkpoint-138",
+    "comparisons": {
+      "physics-r32-lr5e5": {
+        "candidate_minus_reference_nll": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "includes_zero": true,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 10,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      },
+      "physics-r32-lr1e4": {
+        "candidate_minus_reference_nll": 0.0018037600962614864,
+        "ci95": [
+          0.00025975747774231175,
+          0.0032745661943919865
+        ],
+        "includes_zero": false,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 10,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      }
+    },
+    "rule": "Epoch:minimum token-weighted development NLL,tie earlier. Filter screen gates first. LR:prefer lower passing LR if its paired CI vs best contains0; otherwise best. Rank:smallest passing rank whose paired CI vs best contains0."
+  },
+  "candidates": [
+    {
+      "id": "physics-r32-lr5e5",
+      "rank": 32,
+      "learning_rate": 5e-05,
+      "best_epoch": {
+        "epoch": 2,
+        "step": 138,
+        "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/checkpoints/checkpoint-138",
+        "token_weighted_nll": 1.9657981930000399,
+        "validation_file": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/validation/step-000138.json",
+        "validation_sha256": "036c15b89a0272e193caff5bd5a74fd1730b6424cad45d2618cd85f43dd208bf"
+      },
+      "gate": {
+        "passed": true,
+        "checks": {
+          "general_mc_correct_drop": {
+            "value": -3,
+            "maximum": 4,
+            "passed": true
+          },
+          "physics_mc_correct_drop": {
+            "value": 0,
+            "maximum": 4,
+            "passed": true
+          },
+          "gsm8k_correct_drop": {
+            "value": 2,
+            "maximum": 4,
+            "passed": true
+          },
+          "gsm8k_truncation_increase": {
+            "value": 0,
+            "maximum": 2,
+            "passed": true
+          },
+          "ifeval_correct_drop": {
+            "value": 1,
+            "maximum": 3,
+            "passed": true
+          },
+          "ifeval_truncation_increase": {
+            "value": 0,
+            "maximum": 2,
+            "passed": true
+          },
+          "writing_all_nonempty": {
+            "value": 30,
+            "required": 30,
+            "passed": true
+          },
+          "writing_flags_increase": {
+            "value": 1,
+            "maximum": 2,
+            "passed": true
+          },
+          "writing_truncated_increase": {
+            "value": 2,
+            "maximum": 2,
+            "passed": true
+          }
+        },
+        "gate_metadata": {
+          "nominated_epoch": 2,
+          "checkpoint_adapter_sha256": "1d78151128a96b3ac6208366e242d6e551cfc3f374ab744ebce8a719fca93cbc",
+          "prompt_condition": "zero-shot adapter vs two-example base writing comparator",
+          "no_alternate_epoch_gate_search": true
+        },
+        "human_style_improvement_claim": false,
+        "interpretation": "Net correct-count gates, GSM last-number fallback, IFEval prompt strict. Writing flags need review; no human style claim. Truncation is gated by increase, not zero absolute count; MC is single-token likelihood."
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "step": 69,
+          "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/checkpoints/checkpoint-69",
+          "token_weighted_nll": 1.9777026286287003,
+          "validation_file": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/validation/step-000069.json",
+          "validation_sha256": "a165037defe0edc244a275dc9f7318dca2d8fcf443f38428d0ee9ee4b1e2df6c"
+        },
+        {
+          "epoch": 2,
+          "step": 138,
+          "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/checkpoints/checkpoint-138",
+          "token_weighted_nll": 1.9657981930000399,
+          "validation_file": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/validation/step-000138.json",
+          "validation_sha256": "036c15b89a0272e193caff5bd5a74fd1730b6424cad45d2618cd85f43dd208bf"
+        },
+        {
+          "epoch": 3,
+          "step": 207,
+          "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/checkpoints/checkpoint-207",
+          "token_weighted_nll": 1.9670664823558517,
+          "validation_file": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/validation/step-000207.json",
+          "validation_sha256": "167218f3d7b5de6ce4e533f1a2b07044ecde78dfcac2232b7154603aec016ade"
+        }
+      ],
+      "checkpoint_adapter_sha256": "1d78151128a96b3ac6208366e242d6e551cfc3f374ab744ebce8a719fca93cbc"
+    },
+    {
+      "id": "physics-r32-lr1e4",
+      "rank": 32,
+      "learning_rate": 0.0001,
+      "best_epoch": {
+        "epoch": 1,
+        "step": 69,
+        "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/checkpoints/checkpoint-69",
+        "token_weighted_nll": 1.9676019530963014,
+        "validation_file": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/validation/step-000069.json",
+        "validation_sha256": "cea8952763cebe137a291b213c7524bc35a9c5341c0b3847a02fe99e10f1b695"
+      },
+      "gate": {
+        "passed": false,
+        "checks": {
+          "general_mc_correct_drop": {
+            "value": -2,
+            "maximum": 4,
+            "passed": true
+          },
+          "physics_mc_correct_drop": {
+            "value": -1,
+            "maximum": 4,
+            "passed": true
+          },
+          "gsm8k_correct_drop": {
+            "value": 4,
+            "maximum": 4,
+            "passed": true
+          },
+          "gsm8k_truncation_increase": {
+            "value": -1,
+            "maximum": 2,
+            "passed": true
+          },
+          "ifeval_correct_drop": {
+            "value": 2,
+            "maximum": 3,
+            "passed": true
+          },
+          "ifeval_truncation_increase": {
+            "value": 0,
+            "maximum": 2,
+            "passed": true
+          },
+          "writing_all_nonempty": {
+            "value": 30,
+            "required": 30,
+            "passed": true
+          },
+          "writing_flags_increase": {
+            "value": 2,
+            "maximum": 2,
+            "passed": true
+          },
+          "writing_truncated_increase": {
+            "value": 3,
+            "maximum": 2,
+            "passed": false
+          }
+        },
+        "gate_metadata": {
+          "nominated_epoch": 1,
+          "checkpoint_adapter_sha256": "f3573eb3dc026044eb7a63427ade4f292f1dbf9df09fa3db2df00a495a0d36de",
+          "prompt_condition": "zero-shot adapter vs two-example base writing comparator",
+          "no_alternate_epoch_gate_search": true
+        },
+        "human_style_improvement_claim": false,
+        "interpretation": "Net correct-count gates, GSM last-number fallback, IFEval prompt strict. Writing flags need review; no human style claim. Truncation is gated by increase, not zero absolute count; MC is single-token likelihood."
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "step": 69,
+          "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/checkpoints/checkpoint-69",
+          "token_weighted_nll": 1.9676019530963014,
+          "validation_file": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/validation/step-000069.json",
+          "validation_sha256": "cea8952763cebe137a291b213c7524bc35a9c5341c0b3847a02fe99e10f1b695"
+        },
+        {
+          "epoch": 2,
+          "step": 138,
+          "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/checkpoints/checkpoint-138",
+          "token_weighted_nll": 1.9718371598835982,
+          "validation_file": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/validation/step-000138.json",
+          "validation_sha256": "c127db50424dcf4021a600072548f4d0ebf9acc1afddc4b58ba581b6e9bae206"
+        },
+        {
+          "epoch": 3,
+          "step": 207,
+          "checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/checkpoints/checkpoint-207",
+          "token_weighted_nll": 1.9954951941976213,
+          "validation_file": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/validation/step-000207.json",
+          "validation_sha256": "7deee1d7b09e8ed62879a521cb6b3c45e921bb0b0cd3d90ce61d44bc6054b26e"
+        }
+      ],
+      "checkpoint_adapter_sha256": "f3573eb3dc026044eb7a63427ade4f292f1dbf9df09fa3db2df00a495a0d36de"
+    }
+  ],
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 20261112,
+    "papers_per_draw": 10,
+    "confidence": 0.95,
+    "caution": "Paired paper bootstrap is a development-selection heuristic, not proof of equivalence; no final-test results read."
+  },
+  "gate_metadata": null,
+  "raw_development_sha256": {
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-nf4-dev-02/summary.json": "6f14db4f916b8caf110aa986c6b866540645e30314b05d6872d9ebc295208339",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-nf4-dev-02/run.json": "fe1c99990acb0601288271742ebc62de3cd486547c66525ea3b1711e9291fa6b",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-nf4-dev-02/ifeval_predictions.json": "c1757cc10978b5f5c743556a3871f425ddedaf840b89a58afa701b35e1722012",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-writing-nf4-fewshot-dev/summary.json": "9c8c1473fc35e045ef0b18aa3a5b9c5ce19d9b74709080b712b54dd0b8105eae",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-writing-nf4-fewshot-dev/run.json": "393319654cc8e26253c0d95662d4d28aa4550860feb58204eb8700ccf8741d99",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-writing-nf4-fewshot-dev/writing_predictions.json": "c96eefec3351e2700cc43d0743198b73ac3301997ef040e814611ed084b8fb4e",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-physics-r32-lr5e5-e2-dev/summary.json": "343fd1fac26b2a15685e44612aca3919a08183e223256242cbee27707015e7d9",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-physics-r32-lr5e5-e2-dev/run.json": "bb7a7c3b0d62ba82694ce5ad82430cff4aa8439f4638bd1699492437a7ea10e7",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-physics-r32-lr5e5-e2-dev/ifeval_predictions.json": "af594d7b47e78d28ef869e09aa08bbcb6cca3fccbd98e72e3b8b2aad8ec1836d",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-physics-r32-lr5e5-e2-dev/writing_predictions.json": "6863e7d2418e1acb54dd1747cacc8edf412862710c970f343e6b01cd56106b16",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/learning_curve.json": "d1670a0de75b6dbf839f910504ac994ed6f6a234cdd6606feaf33be23be66019",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/validation/step-000069.json": "a165037defe0edc244a275dc9f7318dca2d8fcf443f38428d0ee9ee4b1e2df6c",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/validation/step-000138.json": "036c15b89a0272e193caff5bd5a74fd1730b6424cad45d2618cd85f43dd208bf",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr5e5/validation/step-000207.json": "167218f3d7b5de6ce4e533f1a2b07044ecde78dfcac2232b7154603aec016ade",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-physics-r32-lr1e4-e1-dev/summary.json": "b620f5f9dbfa06550d25d4b65a78912e7216972b2ef0c257049ec4bc24b1807f",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-physics-r32-lr1e4-e1-dev/run.json": "2efcdbb4df3dc93956f15b3aa61d56cde01998e83da3ff442a2bbcd1c3bff008",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-physics-r32-lr1e4-e1-dev/ifeval_predictions.json": "f7cedc546bb8a3c757f7178544752d960d5240f21fad4c4ba3952f939f643319",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-screen-physics-r32-lr1e4-e1-dev/writing_predictions.json": "07774c7010a4c60e23fac3645cc0ac5af8b8444bf113bbcc8df9b3b1291d69c8",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/learning_curve.json": "376d4ccc8d549b6b840131fe886e85965bf68badec401d6dc3d0e09497035739",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/validation/step-000069.json": "cea8952763cebe137a291b213c7524bc35a9c5341c0b3847a02fe99e10f1b695",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/validation/step-000138.json": "c127db50424dcf4021a600072548f4d0ebf9acc1afddc4b58ba581b6e9bae206",
+    "/home/angkunwu/Documents/tuneLLM/outputs/physics-r32-lr1e4/validation/step-000207.json": "7deee1d7b09e8ed62879a521cb6b3c45e921bb0b0cd3d90ce61d44bc6054b26e"
+  },
+  "selection_policy": "Apply once after all registered candidate development screens; output refuses overwrite. All-fail falls back to base; no human style claim.",
+  "mapping_sha256": "7ff6740e8ccdf02e5f027094bae2152b2f7f8d5e0574662449c13b2e1eccc54f",
+  "selector_source_sha256": "830bfc0a01c3aa820911c7591598db17c1560376c6e63c1be3af37b734ec3758"
+}
