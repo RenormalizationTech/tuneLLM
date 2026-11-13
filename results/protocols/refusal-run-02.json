@@ -1,0 +1,40 @@
+{
+  "manifest_sha256": "3f3ce913b52b25584603faab5641634d03945734159fd43da929829089956a32",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "primary_layer": 23,
+  "multipliers": [
+    0.25,
+    0.5,
+    1
+  ],
+  "cap": 320,
+  "post_hoc_exploratory": true,
+  "user_selected_one_late_layer_followup": true,
+  "protocol_sha256": "72fdcd048df6a5ebcefeff4c0d16376ebff3d3c1eda62562df6dd819bfd19aba",
+  "origin_manifest_sha256": "4ae3fda3f440a95e27543de8b0fd056f600815833ceb5dfee344a7507f5bf75a",
+  "reused_files_sha256": {
+    "vectors.pt": "41bf974a42af17442d9abcb100a6bc8f34a4060d3acc1985514867b0ff3d5d95",
+    "vectors.json": "b2858e0024889055b471e048cdb0124de69224bc07ef9cdfc22dfe75999ebb90",
+    "m0_safe.json": "1b0a3b89c1600260dd8450a5df374a6d62b37c4069255a183da29182bcba630b",
+    "m0_unsafe.json": "25e1c4af4bd735810dd9c74d0078f74dc3eb368b754421ed7652cb124dc83e96",
+    "ratings.json": "4f467b6a7eaf92e3deafb7d696f7a9a4b6958ef4ae20d5b51a04ebb792b1ec8f",
+    "keys.local.json": "3a6f2b9d27333172870ad45b8cc3ce3e76091c47fc99808a2247427c9f09b689",
+    "packet.json": "1dd9e6365e6b93b141d1df20fee1f07fa2fc387e02cf559fa795c9393fae557f",
+    "submission.json": "1d758d6a73a02bfb1cee41d8f9e34a6deca1e5915fd60daf4b82d5e045e4fdbf",
+    "provenance.json": "3ea1756729c290dff55b7fb1544097679f3a016911c30a6e4de9d5b44971ff78",
+    "run_binding.json": "5ef223a824ca692dba41e5f2a54496844cb4d8641f5d85e33cd0eabeda200ca6",
+    "old_manifest.json": "4ae3fda3f440a95e27543de8b0fd056f600815833ceb5dfee344a7507f5bf75a",
+    "old_conditions.json": "68e55e504e466336a7a97e7f272a0ef6fb848bf481e4fdb5a49f33ba6a486844"
+  },
+  "reused_predictions": 60,
+  "reused_labels": 60,
+  "new_development_judgments": 90,
+  "judge_registration_sha256": "667c92981206b71ab59324b9bc394212d2f587a9d7c58428f7afd38623d333eb",
+  "audit_reused_unchanged": true,
+  "physical_gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "cpu_tests_new": 13,
+  "registration_before_followup_gpu": true,
+  "final_previously_generated": false,
+  "null_closes_pilot": true
+}
