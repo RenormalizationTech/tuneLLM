@@ -1,0 +1,14 @@
+{
+  "status": "human_ratings_pending",
+  "pairs": 30,
+  "tasks_per_type": 10,
+  "reference": "NF4 base with two training-paper examples",
+  "candidate": "selected NF4 rank128 epoch1 adapter",
+  "html": "outputs/physics-writing-review/review.html",
+  "html_sha256": "f395491725b56c2c92936178508ad2357e4a4c86492e1ad53fa4163cafe7fc5e",
+  "key_commitment_sha256": "4a9e17c8dba1f5b6855dca1a55d2e1a3bbb770cd6b296c35beeecdda11595d5c",
+  "identities": "Randomized A/B; key retained locally outside release payload with private backup",
+  "ratings_supplied": false,
+  "scientific_fidelity_before_style": true,
+  "scope": "This local HTML uses its own key; the later published 60-pair JSON packet is randomized independently with a separate key."
+}

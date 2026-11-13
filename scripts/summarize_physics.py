@@ -59,6 +59,10 @@ def main():
                 "mean_returned_generated_token_ids": sum(len(r["generated_ids"]) for r in predictions) / len(predictions),
                 "hit_token_limit": sum(bool(r["hit_token_limit"]) for r in predictions)}
         conditions[name]["output_lengths"] = output_lengths
+        overlap_file = out / "training_overlap.json"
+        if overlap_file.exists():
+            # Per-output word counts could reveal the writing packet's A/B key.
+            conditions[name]["training_overlap_diagnostic"] = {k: v for k, v in read_json(overlap_file).items() if k != "records"}
         for field in ("gguf_file", "gguf_sha256", "llama_cpp_revision", "llama_server_sha256"):
             if field in spec:
                 conditions[name][field] = spec[field]
@@ -128,6 +132,7 @@ def main():
         "paper_only_conditions": paper_only, "paper_only_comparisons": paper_comparisons,
         "corpus_quality": read_json("results/physics_prl_corpus_quality.json") if path("results/physics_prl_corpus_quality.json").exists() else None,
         "ifeval_language_stability": read_json("results/physics_ifeval_language_stability.json") if path("results/physics_ifeval_language_stability.json").exists() else None,
+        "local_human_review": read_json("results/physics_writing_review.json") if path("results/physics_writing_review.json").exists() else None,
         "human_writing_ratings": "pending", "writing_quality_improvement_established": False,
         "limits": ["One small paper corpus; arXiv versions can precede final PRL wording; existing pretraining exposure unknown.",
                    "No matched PRB corpus control, so lower text loss is not evidence of PRL-specific style learning.",
