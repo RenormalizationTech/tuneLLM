@@ -9,11 +9,14 @@ a small development screen, and one fixed final comparison. Compatible baseline
 results can be reused. Multi-rank/LR sweeps and extra controls are calibration
 experiments rather than default steps.
 
-The original quantization and QLoRA milestone is complete. The next approved
-phase is benchmark reporting followed by a small Qwen3-4B written-tone steering
-pilot, then a separately reviewed refusal study. See the
-[steering protocol](docs/tone_steering_protocol.md). Management plans are reviewed
-with Claude before implementation; the dedicated Codex worker implements code.
+The original quantization and QLoRA milestone is complete. Benchmark reports and
+Hugging Face cards are updated. The registered tone pilot stopped during
+contrast construction: its three mechanical upper bounds were 5, 31 and 46 pairs
+against the declared 50-pair requirement. No steering vector or final tone test
+was produced; see the [execution record](docs/tone_steering_execution.md).
+A separately reviewed refusal-mechanism study is being prepared. Management
+plans are reviewed with Claude before implementation; the dedicated Codex
+worker implements code.
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment
 reported separately.

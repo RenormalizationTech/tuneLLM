@@ -1,0 +1,43 @@
+{
+  "status": "stopped_mechanical_upper_bound_below_registered_requirement",
+  "registration": "results/protocols/tone-02b-registration.json",
+  "implementation_and_registration_commit": "143ca0d",
+  "prepared_manifest_sha256": "eaafeae4ec7d877d09de7dcd15cd4ce5b62d5e1a7e4bd428a9393ce85a32b25e",
+  "scenarios": 80,
+  "neutral_responses_reused": 80,
+  "new_warm_rewrites": 80,
+  "required_eligible_pairs": 50,
+  "mechanical_eligible_upper_bound": 46,
+  "independent_filter_pass_counts": {
+    "both_literal_complete_without_unsupported_literals": 76,
+    "length_window_0_85_to_1_25": 49,
+    "both_nonempty_uncapped": 80
+  },
+  "below_length_window": 31,
+  "above_length_window": 0,
+  "word_budget_instruction_compliant": 80,
+  "word_budget_hard_gate": false,
+  "neutral_mean_tokens_excluding_eos": 30.3125,
+  "warm_mean_tokens_excluding_eos": 26.225,
+  "median_per_pair_warm_neutral_token_ratio": 0.8804761904761904,
+  "raw_artifact_sha256": {
+    "neutral.json": "3805d89738b7f2eb0ee34184d60cd9edfc02cd904da70b2836c7f6c6c610c441",
+    "warm.json": "61a0e3ec81815cdfddc800b5fc5dfead33cda10f18e99618aaf134594089086c",
+    "run.json": "b3994f690ab12ad0bb0dcb381fe59b4ffd2643c06e015c9475d05874cc08cc23",
+    "rewrite_diagnostics.json": "5d5fa81abae043b9c02ec1daeea0a4a718e98becadbaab9bf5d22b0429619549"
+  },
+  "runtime": {
+    "physical_gpu": "0",
+    "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+    "elapsed_wall_seconds_including_model_load": 22.461262710858136,
+    "peak_pytorch_allocated_bytes": 8346217984
+  },
+  "experiment_ai_ratings_performed": false,
+  "steering_vectors_created": false,
+  "development_or_final_generation_performed": false,
+  "stop_rule_followed": true,
+  "further_tone_construction_attempts": 0,
+  "interpretation": "The maximum-word instruction was followed, but 31 rewrites became too short for the unchanged token-length window. No steering effect was tested.",
+  "limits": "The 50-pair threshold was a declared pilot design choice, not a universal scientific minimum. Failing it does not establish that 46 pairs could not support a separately registered exploratory study.",
+  "next_action": "Preserve all attempts; consult Claude before the next phase. No further tone construction under this pilot."
+}

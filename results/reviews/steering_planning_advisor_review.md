@@ -95,3 +95,58 @@ isolation audit and a fixed swapped-order diagnostic sample. A nonzero smoke
 probe must demonstrate hidden/logit changes and correct hook positions; greedy
 token changes are recorded but not required and never trigger an effect search.
 Implementation and actual runtime validation remain separate acceptance steps.
+
+## Registered tone feasibility outcomes and follow-up review
+
+Tone-01's 80 pairs had a mechanical eligibility upper bound of five; Claude
+approved stopping before AI judging because it could not reach the registered
+50. The advisor approved one symmetric two-to-three-sentence construction A,
+with one conditional neutral-to-warm rewrite fallback B, keeping all original
+eligibility gates and final inputs out of calibration. New configurations,
+addenda and registrations preserved every original artifact.
+
+A's upper bound was 31, triggering B. Claude reviewed and accepted B's exact
+prompt, input/source hashes, same-device requirement, unchanged development/final
+systems and independent implementation. Word count is a construction instruction
+with reported compliance; the token window remains the hard length gate.
+Five B CPU tests and actual offline input validation passed before generation.
+B's upper bound was 46, so the registered tone construction stopped. No AI
+experiment ratings, vectors, development selection or final generation occurred.
+Reports: `results/tone_01_feasibility.json`, `results/tone_02a_feasibility.json`
+and `results/tone_02b_feasibility.json`.
+
+## Independent judge helper review and final acceptance
+
+The first dummy call used the requested model and reported no project/file/
+memory context, but emitted a JSON fence. Its failed parser record was retained;
+an offline, deterministic reparse was separately recorded without another call.
+Claude accepted the normalization rule but required stronger invocation isolation
+and a new final-wrapper dummy audit: remove all inherited `GIT_*` variables,
+prove the neutral directory is outside Git, bind the audit to the actual calling
+code, and resume interrupted batches without re-judging saved valid attempts.
+Those changes are independent of the frozen generation sources. No actual
+experiment judging is authorized before their final review and registration.
+
+The final helper at SHA256
+`63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5`
+passed 27 helper tests (75 combined relevant CPU checks). A new dummy audit
+proved exit code 128 outside Git, a clean Git environment, matching model ID
+and no reported project/file/memory context. Claude reviewed the actual source,
+resume tests and audit 02 and accepted the reusable foundation, closing all
+three blockers. The sanitized record is `results/judge_helper_validation.json`.
+Raw calls remain ignored/private. A new refusal rubric/validator needs its own
+binding and fresh audit before real refusal ratings. An uncertain in-flight call
+with no saved response stops judging; recovery cannot silently reissue it.
+
+## Next phase review
+
+Claude recommended moving to refusal research rather than another tone retry.
+A smaller-set post-hoc tone study remains optional backlog. The manager reduced
+the proposed refusal scope from about 2,000 generated/judged responses to about
+400: one fixed layer, three positive strengths, small type-disjoint XSTest
+subsets and prompt-side extraction without harmful completions. Claude approved
+the smaller mechanism scope with primary AI refusal labels, string matching as
+a diagnostic, explicit contrast-type mapping, token-length matching and
+correlational projection diagnostics. Dataset counts, immutable source pins and
+licenses must be verified before a definitive experimental registration; no
+refusal model run is registered by this review record.

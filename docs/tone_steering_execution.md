@@ -56,3 +56,36 @@ hard token window and content checks. B's word budget is a construction
 instruction with measured compliance, not an additional eligibility gate.
 If B cannot provide 50 eligible pairs, the tone pilot stops; there is no further
 construction attempt in this protocol.
+
+## Rewrite fallback: tone construction stopped
+
+The [registered B fallback](../results/protocols/tone-02b-registration.json)
+copied A's neutral responses exactly and generated 80 warm rewrites in 22.46
+seconds including model load, on the same GPU 0. See the
+[B result](../results/tone_02b_feasibility.json).
+
+All 80 followed the maximum-word instruction, but 31 were shorter than 0.85
+times their neutral partner; none exceeded 1.25. Forty-nine passed the token
+window and 76 the literal checks, leaving a mechanical upper bound of 46.
+Mean warm length was 26.225 tokens versus the reused neutral mean of 30.3125;
+median pair ratio was 0.880476. All outputs were nonempty and uncapped.
+
+| Construction | Mechanical upper bound /80 | Median length ratio | Outcome |
+| --- | ---: | ---: | --- |
+| Tone-01, concise systems | 5 | 2.457 | Stopped before judging |
+| Tone-02A, symmetric sentence format | 31 | 1.227 | Registered fallback triggered |
+| Tone-02B, one warm rewrite | 46 | 0.880 | Registered tone construction stopped |
+
+The 50-pair threshold was a declared design choice, not a universal scientific
+minimum. We preserve its stop rule for this pilot; a later smaller-set study
+would require its own protocol and could not turn this outcome into a success.
+There were no experiment AI ratings, steering vectors, development selection,
+final generations or NF4 transfer. Tiny CPU hook tests validate implementation
+mechanics and do not demonstrate an effect on the 4B model.
+
+Across the three constructions, 400 new responses were generated and 80 neutral
+responses reused. Measured generation-stage wall times total about 133 seconds,
+including each model load and excluding preparation, coding, review and any
+judging. All existing jobs remained untouched, and the project released GPU 0.
+The coordinator has consulted Claude about the next phase; no additional tone
+construction is running.

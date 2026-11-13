@@ -1,0 +1,38 @@
+{
+  "status": "advisor_accepted_cpu_tests_and_final_dummy_isolation_passed_no_experiment_ratings",
+  "advisor_acceptance": "Claude reviewed and closed the Git-isolation, actual-calling-code audit and resume blockers for this exact helper hash and audit 02.",
+  "helper": "scripts/tone_judge.py",
+  "helper_sha256": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+  "helper_cpu_tests_passed": 27,
+  "combined_reporting_tone_and_rewrite_tests_passed": 75,
+  "cli_version": "2.1.323 (Claude Code)",
+  "requested_model": "claude-opus-5-5",
+  "actual_model_usage_ids": [
+    "claude-opus-5-5"
+  ],
+  "requested_effort": "medium",
+  "verified_effort": null,
+  "dated_model_snapshot": null,
+  "final_audit_sha256": "fa5b676274f4a7440cfbe942eca9e59a09e92c7ec04829d1f621332ab42c9377",
+  "final_dummy_attempt_sha256": "978a2f54daae8775ae509196cf92debd2df3f9d191278abf94517229b64978e7",
+  "git_isolation": {
+    "git_rev_parse_returncode": 128,
+    "not_a_repository": true,
+    "inherited_git_variables_removed": true
+  },
+  "judge_reported_project_context_visible": false,
+  "judge_reported_project_files_visible": false,
+  "judge_reported_project_memory_visible": false,
+  "tools_enabled": false,
+  "mcp_enabled": false,
+  "resumed_session": false,
+  "neutral_temporary_cwd": true,
+  "actual_dummy_calls_total": 2,
+  "offline_reparse_added_calls": 0,
+  "experiment_ratings_performed": false,
+  "resume": "Saved first-valid attempts are reused and exact input/code hashes checked; terminal auth/model errors and uncertain in-flight calls require coordinator review.",
+  "parser": "Bare JSON or one complete enclosing JSON fence; no surrounding prose or selection among embedded objects.",
+  "retry": "Two attempts total per batch, only malformed/incomplete submissions; first valid result final.",
+  "privacy": "Raw calls, explanations, account metadata and anonymous keys remain local/ignored; this summary contains only flags and hashes.",
+  "scope": "Infrastructure validation, not a model writing/refusal evaluation or a human-rating claim."
+}

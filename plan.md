@@ -35,8 +35,19 @@ complete the initial project.
 - Reporting cleanup is published and hash-verified in all four Hugging Face
   repositories; only cards and new compact summaries changed. See
   `docs/benchmark_summary.md` and `releases/README.md` for scores and exact
-  documentation revisions. Tone-steering preparation is next; unrelated GPU
-  workloads must finish before project inference resumes.
+  documentation revisions.
+- Tone contrast-construction feasibility is complete: upper bounds 5, 31 and 46
+  did not reach the registered 50-pair requirement, so no experiment ratings,
+  vectors or final tests ran. See `docs/tone_steering_execution.md`. Reusing a
+  smaller existing set is optional exploratory backlog, not an automatic retry.
+- Next: a bounded refusal-controllability study reviewed with Claude, using
+  prompt-side extraction rather than response-pair construction. Data/license
+  auditing precedes definitive registration. Positive steering is a mechanism
+  demonstration with a utility cost, not a model-improvement claim; negative
+  steering and NF4 transfer remain deferred.
+- The user explicitly authorized GPU 0 coexistence if memory and utilization
+  allow; leave existing jobs untouched and keep each comparison on one physical
+  device. Tone generation stages finished and released project GPU memory.
 - The JSON extraction SFT proposal is optional backlog, not a missing required
   step. See `docs/next_sft_pilot.md`; no new training run is registered.
 - Routine default: one verified base, one fresh adapter configuration and seed
