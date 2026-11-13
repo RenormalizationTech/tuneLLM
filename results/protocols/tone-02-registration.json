@@ -1,0 +1,20 @@
+{
+  "status": "prepared_and_registered_before_generation",
+  "manifest_sha256": "5d84bd1099fe72cd7e99cff6ee69ce0902b1dc778e7ab3ec2e31b756572f2696",
+  "protocol_sha256": "7e7bbfdaa5ef6f27a68cf819d084c197ea200724271c874f4c64662e5f769513",
+  "original_protocol_sha256": "9635e862d8c826c418543aa0c98c7352f2a1c0286e5900ce53ee72447dab518c",
+  "config_sha256": "799cc406c1185dc47b52392ecfb2af5b26c0fe0188663cd01472968859fd8a52",
+  "semantic_fixture_audit_passed": true,
+  "advisor_review": "results/reviews/steering_planning_advisor_review.md",
+  "previous_attempt": "results/tone_01_feasibility.json",
+  "change_before_any_development_or_final_generation": "Both system prompts now request two or three sentences; the warm prompt adds the registered warmth instruction within that same format.",
+  "unchanged": "Pinned bases, core sources, fixture/rubric, all gates, 80 round-robin candidates, 50 eligible-pair requirement, length window, seed, batching and decoding.",
+  "physical_gpu": "0",
+  "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "resource_authorization": "User explicitly permitted GPU 0 coexistence if memory and utilization allow; preserve all existing jobs.",
+  "mechanical_audit_before_judging": true,
+  "conditional_fallback": "Only if attempt A mechanical upper bound is below 50, a separately committed and sealed one-shot rewrite construction B may run. Exact implementation/prompt/input hashes must be registered before B; it does not modify this attempt.",
+  "judge_helper": "Fresh-context helper/parser/isolation audit must be accepted and separately hash-registered before actual ratings.",
+  "development_budget": "Exact successful preflight report must be committed before development selection.",
+  "final_generation": "Requires committed development-only selection lock; no final-driven calibration or reselection."
+}

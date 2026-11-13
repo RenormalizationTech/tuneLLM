@@ -1,0 +1,36 @@
+{
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "hf_home": ".hf",
+  "gpu": "0",
+  "dtype": "bfloat16",
+  "enable_thinking": false,
+  "nf4_checkpoint": "artifacts/nf4/Qwen3-4B",
+  "nf4_report": "results/nf4_checkpoint.json",
+  "fixture_directory": "evaluation/tone",
+  "rubric": "evaluation/tone/rubric.json",
+  "protocol": "docs/tone_steering_protocol_02.md",
+  "layers": [
+    11,
+    17,
+    23
+  ],
+  "multipliers": [
+    1,
+    2,
+    4
+  ],
+  "retain_pairs": 50,
+  "pair_length_ratio": [
+    0.85,
+    1.25
+  ],
+  "batch_size": 8,
+  "max_new_tokens": 256,
+  "extended_cap": 320,
+  "seed": 42,
+  "judging_seed": 20261113,
+  "bootstrap_samples": 10000,
+  "neutral_system": "Answer the user's request accurately in two or three sentences. Preserve the stated facts and do not invent details.",
+  "warm_system": "Answer the user's request accurately in two or three sentences. Preserve the stated facts and do not invent details. Use a warm, encouraging, considerate written tone within the same two or three sentences, without flattery or extra factual claims."
+}

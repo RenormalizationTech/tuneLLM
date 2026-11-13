@@ -1,0 +1,45 @@
+{
+  "status": "stopped_before_judging_and_vector_extraction",
+  "reason": "Mechanical eligibility upper bound is 5 pairs, below the registered requirement of 50; AI ratings cannot increase this upper bound.",
+  "registration": "results/protocols/tone-01-registration.json",
+  "implementation_commit": "7c0bc1f",
+  "prepared_manifest_sha256": "f5f28a1351fd26e3be5b6b42fa16282c7a935a36c7ba52d5a0bdf4893e393653",
+  "scenarios": 80,
+  "responses": 160,
+  "required_eligible_pairs": 50,
+  "mechanical_eligible_upper_bound": 5,
+  "independent_filter_pass_counts": {
+    "both_responses_literal_complete_without_unsupported_literals": 72,
+    "warm_neutral_token_ratio_between_0_85_and_1_25": 5,
+    "both_responses_nonempty_and_uncapped": 80
+  },
+  "length_measurement": "Generated token IDs excluding final EOS, using frozen scripts/tone_common.py token_length.",
+  "neutral_mean_response_tokens": 16.675,
+  "warm_mean_response_tokens": 36.9625,
+  "median_per_pair_warm_neutral_token_ratio": 2.4571428571428573,
+  "upper_bound_calculation": "Count the intersection of the three mechanical pass conditions. Full eligibility would additionally require AI content/task-completion approval and a strict warmer preference, so cannot exceed this count.",
+  "raw_artifact_sha256": {
+    "neutral.json": "2bdb55edf821379c3e12eafc07da4f400b335fef142a17b2f9f1d1bb5c6329c3",
+    "warm.json": "1f2285676f180a2d55dca5010259b83bb2e10b38bde1a912248372555f705639",
+    "run.json": "3a3e0a0a1a1e8cd5b5a22a100de0de877052c6235544372ca22fcac2a9583239"
+  },
+  "analysis_source_sha256": {
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f"
+  },
+  "runtime": {
+    "physical_gpu": "0",
+    "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+    "gpu_name": "NVIDIA RTX A6000",
+    "elapsed_wall_seconds_including_model_load": 56.364403773099184,
+    "peak_pytorch_allocated_bytes": 8268976128,
+    "peak_pytorch_reserved_bytes": 8392802304,
+    "model_weights_changed": false
+  },
+  "experiment_ai_ratings_performed": false,
+  "steering_vectors_created": false,
+  "development_selection_performed": false,
+  "final_generation_performed": false,
+  "interpretation": "The prompt-based extraction construction confounded warm tone with increased response length. This does not establish that activation steering fails or that the warm responses are better writing.",
+  "next_action": "Consult Claude before a separate length-controlled construction protocol; preserve this failed feasibility attempt and unchanged eligibility rules."
+}
