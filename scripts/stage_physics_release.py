@@ -315,6 +315,7 @@ def card_text(cfg, budget, final, selection, fallback, base_revision, quality=No
                 caps = condition.get("output_lengths", {}).get("writing", {}).get("hit_token_limit")
                 if caps is not None:
                     score += f"; {caps} generation caps"
+                score += f"; {condition.get('prompt_condition', 'zero-shot')} prompts"
             else:
                 key = "fallback_correct" if task == "gsm8k" else "prompt_strict_correct" if task == "ifeval" else "correct"
                 score = f"{values[key]}/{values['total']}"
@@ -497,6 +498,7 @@ def stage(args, root=ROOT):
     if writing_fixture.get("source_split") != "test":
         raise ValueError("final writing fixture must be the frozen test fixture")
     packet, answer_key = blind_review_packet(final, args.adapter_condition, writing_fixture, root)
+    packet["comparison"] = packet["comparison"].replace("Selected NF4 adapter", f"Selected NF4 rank {cfg['rank']}, epoch {epoch} adapter")
     # Scientific evidence and model outputs stay unchanged in the blinded packet.
     files["human_review/packet.json"] = (json.dumps(packet, indent=2, ensure_ascii=False) + "\n").encode()
     answer_key_bytes = json_bytes(answer_key, root)
