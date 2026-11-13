@@ -49,12 +49,16 @@ code links. A [stored-output diagnosis](docs/refusal_output_diagnosis.md) review
 findings do not support a token-cap increase as a sufficient fix: apparent
 errors, repetition and drift also need attention.
 
-The next bounded phase is a [benign helpfulness baseline survey](docs/benign_helpfulness_protocol.md):
-36 fresh legitimate requests, separate refusal/content/completion measurements,
-and an unused held-out fixture sealed before generation. It uses no activation
-intervention or candidate prompt and does not optimize harmful-request
-compliance. Its gates can stop further work when completion is inadequate or
-benign refusals are too rare to measure in this fixture.
+The [benign helpfulness baseline survey](docs/benign_helpfulness_protocol.md)
+generated all 36 fresh legitimate requests within its token budget, without
+empty or mechanically degenerate outputs. Primary grading stopped incomplete:
+the first 20-item batch passed, but the second omitted one required rating on
+both permitted attempts. No formal refusal-headroom or quality score is claimed.
+See the [execution record](docs/benign_helpfulness_execution.md) and
+[incomplete report](results/benign_helpfulness_01.json). The sealed held-out set
+is unused. No activation intervention, candidate prompt or harmful-request
+compliance optimization ran; a further grading-only completion needs its own
+registration and is awaiting the user's priority choice.
 
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment

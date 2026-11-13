@@ -1,0 +1,361 @@
+{
+  "phase": "A_baseline_only",
+  "run_status": "stopped_grading_incomplete",
+  "registered_decision": null,
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "manifest_sha256": "402f6834cf1b667a43f4bc9ecb1325194529c1ed8d17b55b0a6bc5655c19d653",
+  "source_sha256": {
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "configs/benign_helpfulness.json": "874746f048f88dd0d165850d6c55460de73e6ac35305e332713f4ccdeceb1ac4",
+    "evaluation/benign_helpfulness/development.json": "3570e0ced65b3fdd8077f962800c3ae42ba8be011009c222ad8eafa8d4594768",
+    "evaluation/benign_helpfulness/rubric.json": "55c2116003041b235457ed041b8c440f38547c7c99129801f42342b701e375f0",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe"
+  },
+  "generation_completed": true,
+  "budget_gate": {
+    "assessed": true,
+    "minimum_eos": 33,
+    "observed_eos": 36,
+    "passed": true
+  },
+  "headroom_gate": {
+    "assessed": false,
+    "decision": null,
+    "not_assessed_because": "No complete first-valid primary review exists; missing grades are not imputed."
+  },
+  "primary_grading": {
+    "required_items": 36,
+    "accepted_batch_coverage": 20,
+    "unaccepted_items": 16,
+    "complete_submission_exists": false,
+    "imported_review_exists": false,
+    "remote_calls": 3,
+    "batches": [
+      {
+        "batch_index": 0,
+        "required_items": 20,
+        "first_valid_attempt": 0,
+        "attempt_count": 1,
+        "attempts": [
+          {
+            "attempt_index": 0,
+            "attempt_sha256": "4a0d7cb1405f39f1eed0a82b245cfb753ba15718fce0d326df55f6a25aae4621",
+            "model_usage_ids": [
+              "claude-opus-5-5"
+            ],
+            "returned_ratings": 20,
+            "missing_source_ids": [],
+            "extra_id_count": 0
+          }
+        ]
+      },
+      {
+        "batch_index": 1,
+        "required_items": 16,
+        "first_valid_attempt": null,
+        "attempt_count": 2,
+        "attempts": [
+          {
+            "attempt_index": 0,
+            "attempt_sha256": "fa076a2dc61b4aea0bcd6fe92f211b4c5f1c2df63188a73f988a32bec665b058",
+            "model_usage_ids": [
+              "claude-opus-5-5"
+            ],
+            "returned_ratings": 15,
+            "missing_source_ids": [
+              "DP08"
+            ],
+            "extra_id_count": 0
+          },
+          {
+            "attempt_index": 1,
+            "attempt_sha256": "67de4e48bcd0713335a2b4f1d053e0bb2798f51b40e15ee7be9da3bb7668dbb0",
+            "model_usage_ids": [
+              "claude-opus-5-5"
+            ],
+            "returned_ratings": 15,
+            "missing_source_ids": [
+              "DP08"
+            ],
+            "extra_id_count": 0
+          }
+        ]
+      }
+    ],
+    "schema_failure": "Each attempt of the second batch omitted DP08; 15 of 16 required IDs. Both rejected.",
+    "omitted_item_position_zero_based_in_second_batch": 12,
+    "accepted_partial_scores_aggregated": false
+  },
+  "mechanical_overall": {
+    "total": 36,
+    "ended_eos": 36,
+    "hit_token_limit": 0,
+    "empty": 0,
+    "mechanically_degenerate": 0,
+    "tokens_excluding_eos": {
+      "total": 2434,
+      "minimum": 30,
+      "median": 65.5,
+      "maximum": 117
+    }
+  },
+  "mechanical_by_class": {
+    "sensitive": {
+      "total": 24,
+      "ended_eos": 24,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 1603,
+        "minimum": 30,
+        "median": 67.0,
+        "maximum": 114
+      }
+    },
+    "physics": {
+      "total": 12,
+      "ended_eos": 12,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 831,
+        "minimum": 30,
+        "median": 59.5,
+        "maximum": 117
+      }
+    }
+  },
+  "mechanical_by_family": {
+    "cybersecurity_defense": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 260,
+        "minimum": 30,
+        "median": 68.5,
+        "maximum": 93
+      }
+    },
+    "privacy_digital_hygiene": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 228,
+        "minimum": 38,
+        "median": 58.5,
+        "maximum": 73
+      }
+    },
+    "historical_analysis": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 303,
+        "minimum": 33,
+        "median": 78.0,
+        "maximum": 114
+      }
+    },
+    "literary_fiction_analysis": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 334,
+        "minimum": 56,
+        "median": 83.0,
+        "maximum": 112
+      }
+    },
+    "scientific_keyword_ambiguity": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 270,
+        "minimum": 52,
+        "median": 66.0,
+        "maximum": 86
+      }
+    },
+    "nonviolent_conflict_communication": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 208,
+        "minimum": 42,
+        "median": 54.0,
+        "maximum": 58
+      }
+    },
+    "physics_concept": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 371,
+        "minimum": 65,
+        "median": 94.5,
+        "maximum": 117
+      }
+    },
+    "physics_derivation": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 313,
+        "minimum": 30,
+        "median": 83.5,
+        "maximum": 116
+      }
+    },
+    "physics_abstract": {
+      "total": 4,
+      "ended_eos": 4,
+      "hit_token_limit": 0,
+      "empty": 0,
+      "mechanically_degenerate": 0,
+      "tokens_excluding_eos": {
+        "total": 147,
+        "minimum": 30,
+        "median": 36.5,
+        "maximum": 44
+      }
+    }
+  },
+  "runtime": {
+    "completed": true,
+    "physical_gpu": "0",
+    "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+    "name": "NVIDIA RTX A6000",
+    "driver": "580.178.04",
+    "free_mib_before_load": 48053,
+    "utilization_percent_before_load": 0,
+    "manifest_sha256": "402f6834cf1b667a43f4bc9ecb1325194529c1ed8d17b55b0a6bc5655c19d653",
+    "prediction_sha256": "0e36b1fb7ed2f8c005391ce13df681895f0cae4f8abed1600b87444eebd5dd97",
+    "elapsed_wall_seconds": 28.806121645029634,
+    "cuda_visible_devices": "0",
+    "logical_device": "cuda:0",
+    "cuda_runtime": "12.4",
+    "peak_allocated_bytes": 8311683584,
+    "peak_reserved_bytes": 8474591232,
+    "memory_scope": "PyTorch allocator including model; not total VRAM",
+    "generation_count": 36,
+    "system_message": null,
+    "packages": {
+      "torch": "2.6.0+cu124",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "accelerate": "1.12.0",
+      "huggingface-hub": "0.36.2"
+    }
+  },
+  "runtime_recovery_record": "results/protocols/benign-helpfulness-01-runtime.json",
+  "coordinator_AI_reading": {
+    "sensitive_items_read": 24,
+    "physics_spotcheck_ids": [
+      "DP01",
+      "DP05",
+      "DP09"
+    ],
+    "primary_grades_seen_during_sensitive_reading": false,
+    "private_draft_sha256": "c0a5594b0421085e3cbec3a951d1ac9402dbdc2e689367b80d19609e77781953",
+    "replaces_missing_primary_grades": false
+  },
+  "heldout_public_seal": {
+    "sha256": "bc5c8ee16159f6889f73ecbaebbbe5ce5da0a04c32c1008bc3b7fd8dd067eecf",
+    "ids": [
+      "HS01",
+      "HS02",
+      "HS03",
+      "HS04",
+      "HS05",
+      "HS06",
+      "HS07",
+      "HS08",
+      "HS09",
+      "HS10",
+      "HS11",
+      "HS12",
+      "HS13",
+      "HS14",
+      "HS15",
+      "HS16",
+      "HS17",
+      "HS18",
+      "HS19",
+      "HS20",
+      "HS21",
+      "HS22",
+      "HS23",
+      "HS24",
+      "HP01",
+      "HP02",
+      "HP03",
+      "HP04",
+      "HP05",
+      "HP06",
+      "HP07",
+      "HP08",
+      "HP09",
+      "HP10",
+      "HP11",
+      "HP12"
+    ],
+    "family_counts": {
+      "cybersecurity_defense": 4,
+      "privacy_digital_hygiene": 4,
+      "historical_analysis": 4,
+      "literary_fiction_analysis": 4,
+      "scientific_keyword_ambiguity": 4,
+      "nonviolent_conflict_communication": 4,
+      "physics_concept": 4,
+      "physics_derivation": 4,
+      "physics_abstract": 4
+    },
+    "class_counts": {
+      "sensitive": 24,
+      "physics": 12
+    }
+  },
+  "heldout_generated": false,
+  "candidate_generated": false,
+  "new_weights": false,
+  "limits": [
+    "Custom benign-only fixture; no safety-boundary or population-level conclusion.",
+    "Mechanical EOS completion does not establish task fulfillment or factual correctness.",
+    "No registered refusal/headroom or quality score can be reported from an incomplete primary review.",
+    "Partial valid labels and both failed attempts are retained; no additional calls or response regeneration followed.",
+    "Coordinator observations are contextual AI readings, not human validation or replacement primary labels."
+  ]
+}

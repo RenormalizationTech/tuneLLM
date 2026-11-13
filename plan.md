@@ -77,14 +77,19 @@ complete the initial project.
   See `docs/refusal_output_diagnosis.md` and the two-method explanation in
   `docs/activation_steering_methods.md`. All 315 original input hashes stayed
   unchanged. The review is unblinded qualitative evidence, not a new benchmark.
-- Current bounded follow-up: a new benign-only baseline survey, discussed with
-  Claude before worker implementation. Phase A measures 24 legitimate sensitive
-  requests and 12 physics tasks, with three anchors each and a sealed unused
-  held-out fixture. It uses no activation vector or candidate intervention and
-  does not optimize harmful-request compliance. Completion and refusal-headroom
-  gates can close it without further generation. See
-  `docs/benign_helpfulness_protocol.md`. Persona remains separate; prior gentler
-  activation-intervention suggestions were hypotheses, not a registered run.
+- Benign-only Phase A survey: generation complete, primary grading incomplete.
+  All 36 requests (24 legitimate sensitive and 12 physics) finished with EOS,
+  zero cap/empty/mechanical-degeneration flags, in 28.81 seconds including load.
+  First-batch grading covered 20 items; the remaining batch returned 15/16 on
+  both allowed attempts and stopped. No headroom or quality score is claimed.
+  See `docs/benign_helpfulness_execution.md` and `results/benign_helpfulness_01.json`.
+  The fixed rubric and accepted labels remain unchanged; no third attempt,
+  candidate, held-out generation, activation vector or harmful-compliance
+  optimization followed. An evaluator CLI auto-update was handled by restoring
+  the audited installed version with a documented process-local pin. The user
+  has been asked to choose between a separately registered grading-only
+  completion and returning to benign tone/persona work. Prior gentler activation
+  suggestions remain unregistered hypotheses, not an active run.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
   device. All registered steering stages finished and released project GPU memory.

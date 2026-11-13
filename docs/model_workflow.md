@@ -243,6 +243,19 @@ candidate and broader final tests only for the chosen adapter and any registered
 controls.
 Recheck the model/data licenses and converter support for the newly pinned model.
 
+## AI evaluation runtime
+
+For AI evaluation, pin the actual CLI executable before the isolation audit and
+record its version and SHA-256 alongside wrapper/argv/rubric/payload hashes.
+Use that same binary resolution for the version guard and every grading call;
+an automatically updated default command is not a stable runtime dependency.
+Keep any command pin local to the evaluation process. A local guard failure
+before a remote call should retain its log and require a documented coordinator
+review before resumption. Do not replace responses, change grading criteria or
+hide the failure. Record exposed server-side model IDs and disclose when a
+dated model snapshot is unavailable. See the
+[Phase A runtime incident](benign_helpfulness_execution.md#grading-runtime-incident).
+
 ## Optional inference-time activation-steering research
 
 Activation steering is a separate branch from quantization and adapter training.
