@@ -32,7 +32,11 @@ complete the initial project.
   verification; the fixed final evaluation and private physics-adapter publication
   are complete. See `docs/physics_prl_execution.md` and
   `results/physics_rank_selection.json`. Release verification is in
-  `results/physics_huggingface_publication.json`. Human writing ratings remain pending.
+  `results/physics_huggingface_publication.json`. Writing-quality assessment is deferred.
+- Latest writing scope: keep this a lightweight exercise in learning the rough
+  language and structure of condensed-matter theory PRLs. Writing-specific
+  fine-tuning remains exploratory. Further training and writing ratings can wait;
+  future Claude/Codex ratings will be recorded as AI judgments, not human ratings.
 - Current objective: learn the language and structure of a balanced corpus of
   condensed-matter theory PRLs, focusing evaluation on titles, abstracts and
   introductions. No publication-acceptance claim is intended.
