@@ -278,7 +278,10 @@ def blind_review_packet(final, adapter_condition, fixture, root):
                       "scientific_fidelity_rating": None, "style_preference": None})
         key.append({"sample_id": sample, "fixture_id": row["id"], "A": adapter_condition if swap else name,
                     "B": name if swap else adapter_condition})
-    return {"ratings": "pending; never inferred", "instructions": "Review scientific fidelity first, then clarity, concision, structure, accessibility and supported significance. Do not open the separate answer key during blinded review.", "pairs": pairs}, {"mapping": key}
+    reference_description = ("saved NF4 base with two training-paper examples" if re.search(r"few.?shot|two.?example", name + " " + reference.get("prompt_condition", ""))
+                             else "saved NF4 base with zero-shot prompts")
+    return {"ratings": "pending; never inferred", "comparison": "Selected NF4 adapter with zero-shot prompts versus " + reference_description + "; A/B identities hidden independently for each pair",
+            "instructions": "Review scientific fidelity first, then clarity, concision, structure, accessibility and supported significance. Do not open the separate answer key during blinded review.", "pairs": pairs}, {"mapping": key}
 
 
 def card_text(cfg, budget, final, selection, fallback, base_revision, quality=None, lr_selection=None):
@@ -309,6 +312,9 @@ def card_text(cfg, budget, final, selection, fallback, base_revision, quality=No
         for task, values in condition["summary"].items():
             if task == "writing":
                 score = f"{values['nonempty']}/{values['total']} nonempty; {values['automatic_fidelity_flags']} automatic fidelity flags"
+                caps = condition.get("output_lengths", {}).get("writing", {}).get("hit_token_limit")
+                if caps is not None:
+                    score += f"; {caps} generation caps"
             else:
                 key = "fallback_correct" if task == "gsm8k" else "prompt_strict_correct" if task == "ifeval" else "correct"
                 score = f"{values[key]}/{values['total']}"
@@ -326,7 +332,7 @@ def card_text(cfg, budget, final, selection, fallback, base_revision, quality=No
               "The exact private prepared 70/10/20 paper splits are in `reproduction_data/`. All 100 paper attributions, versioned source URLs, PRL DOIs and verified CC BY4.0 licenses are in `paper_attributions.json`. Cleaning removed comments/hidden blocks, author/funding/back matter and preserved scientific equations, citations and used macros; consult corpus provenance and the source archive for exact processing. Source versions may precede final PRL wording. Cleaned text is not guaranteed to be compilable standalone LaTeX.",
               "Paper text is CC BY4.0; model Apache2.0 does not override that license. MMLU and GSM8K dataset cards specify MIT; IFEval specifies Apache2.0. These three benchmark datasets are evaluation-only, not physics training data. `data_licenses.json` and `benchmark_dataset_licenses.json` record the separate terms and pinned verification. Git history, credentials, raw source archives and base-model weights are not in this adapter payload.",
               "`reproduction.zip` contains tracked code/config/docs without history; executable source is unchanged and verified against measured modules. Metadata/documentation path redaction is recorded. Start from the pinned NF4 dependency, exact prepared data and frozen fixtures; do not re-query live paper selection. See `REPRODUCE.md` and `environment.lock.txt`.", "",
-              "Human ratings are pending. `human_review/packet.json` is the blinded review packet. Its random answer key is retained locally outside this payload; provenance records its SHA256 commitment. Automated flags cannot establish human preference or scientific fidelity. Do not treat absence of flags or insignificant paired tests as equivalence.", "",
+              "Human ratings are pending. `human_review/packet.json` compares the selected zero-shot adapter with the saved NF4 base given two training-paper examples. A/B identities are hidden separately for each pair. Its random answer key is retained locally outside this payload; provenance records its SHA256 commitment. Automated flags cannot establish human preference or scientific fidelity. Do not treat absence of flags or insignificant paired tests as equivalence.", "",
               "## Development gate outcomes", ""]
     for stage_name, candidates in (("Learning-rate pilot", (lr_selection or {}).get("candidates", [])),
                                     ("Adapter ranks", selection["candidates"])):
@@ -595,7 +601,7 @@ hashes are in provenance.json. Final results are evaluation.json; do not tune
 selection from those test outcomes. Human ratings are pending.
 """
     files["REPRODUCE.md"] = guide.encode()
-    files["human_review/README.md"] = b"# Blinded review pending\n\npacket.json contains all frozen final-writing pairs with randomized A/B labels and source evidence. The cryptographically random mapping key is retained locally outside this payload; provenance.json commits its SHA256. No human ratings have been supplied; review scientific fidelity first, then style. Automated flags are not human ratings.\n"
+    files["human_review/README.md"] = ("# Blinded review pending\n\n" + packet["comparison"] + ".\n\npacket.json contains all frozen final-writing pairs with randomized A/B labels and source evidence. The cryptographically random mapping key is retained locally outside this payload; provenance.json commits its SHA256. No human ratings have been supplied; review scientific fidelity first, then style. Automated flags are not human ratings.\n").encode()
     # Everything except model weights is cheap enough to privacy-check before mkdir.
     for name, data in files.items():
         # ZIP executable content was checked before compression.
