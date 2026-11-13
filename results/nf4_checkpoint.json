@@ -1,0 +1,138 @@
+{
+  "completed": true,
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "representation": {
+    "quant_type": "nf4",
+    "double_quant": true,
+    "compute_dtype": "bfloat16",
+    "nonquantized_base_dtype": "float32 (prepare_model_for_kbit_training)",
+    "attention": "sdpa"
+  },
+  "gpu": "1",
+  "checkpoint": "artifacts/nf4/Qwen3-4B",
+  "source_commit": "0e967c25798e94e890ea78f89f5ea85a300c1cbe",
+  "source_sha256": {
+    "scripts/__init__.py": "7c5a21e6c2f63dc3daf9507c1f350d27c91dc4710719e8c817fe7ac9987b92dd",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/download_model.py": "cfdab43e1ee032437525a344f384a7b7596b88fcefca623d1dcadeb0086904c0",
+    "scripts/env_check.py": "2d76f6f6225d40fa05bc830c1388b96ee45188ce51f7ee4431560504e63238b5",
+    "scripts/gguf_eval.py": "8420a1a47f71cfd7ee6c5200367329293de6e4ffc5f18c692e7f8898dc938a81",
+    "scripts/hf_baseline.py": "d0c9715a08fa554a951679187adced85fd30c67603d1101a05bf70531b5e6945",
+    "scripts/prepare_gsm8k.py": "a3a21c57c8aa4870af5c32116ef89667198238e972f8fe7db8deed6f26851585",
+    "scripts/prepare_retention.py": "edf9517b7b415057a647158814f9c8f8e3156b32add0755be2f5e11505d08fbb",
+    "scripts/retention_sensitivity.py": "0d1eb0aaee84d0a17ff3da1b5a74db734ede06b1e53c19a4dae9fbfee2dd3306",
+    "scripts/run_support.py": "e36e9d585cd14fea368ec2df388705406792153a8f9f66b199e076603051d380",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/score_retention.py": "c2848659ff387312d5a9506c7a467082637654c0f2917c23c6e22ac776e4d90d",
+    "scripts/summarize_qlora_run.py": "07ec9acc62a378bbc52b40d9c4f64b93d445c96c637475ce669a56a8eea5f648",
+    "scripts/train_qlora.py": "4073448ac51a7f81440c277d71f48a1314ba58cbca57be033a43fe1f8816d905",
+    "scripts/train_qlora_run.py": "c224c7f90c78e75e6d397e5456031c75a0a7c9a610504a239b081e0c0dae1911",
+    "scripts/training_data.py": "08e5034f9a1f3b36313b7b4c205dc5e8f4c4777a28141dcdbac54d147ff54fed",
+    "scripts/validate_batching.py": "497b900680fd8f6016ca572fc99d92bd06c463d7ee888bdf60423259b43bf784",
+    "evaluation/__init__.py": "c0804d72a3db3b81280de93bc0480f88404fd858e73e22aabb5eed8c45470bb4",
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+    "configs/baseline.json": "3002ce98d58cfc848e867293ed14690c34409b540222439c681486109576942f",
+    "configs/qlora.json": "91e8111c876ced9a11d9cc8232160768f1416d2285e0810b4d5df2f78a27dd39",
+    "configs/qlora_run.json": "d4baadcd6d588801781a9836db872a4b74c2be2d5c8ec76493a79b3ebd89506f",
+    "requirements-dev.txt": "3c3ad6730cf0c0417b77bae38e53c11fa8cd96a34f2f8956998bafc0aaf3ef17",
+    "requirements-gguf.txt": "dcf404832c4aaaf8a78db0118f2c90f5ed71a5b59e550440c9ebf796e4eb1236",
+    "requirements-qlora.txt": "2c43340c45a6124cbfb70adaa0f5e2e9ea56c87df455b0a8ff4dbb628fa32607",
+    "requirements.txt": "cae4fa0e41dda747e20596c0f640b43b99e1362ffb73e507be83bb1ae4c910bb"
+  },
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.6",
+    "accelerate": "1.12.0",
+    "huggingface-hub": "0.36.2",
+    "peft": "0.18.1",
+    "bitsandbytes": "0.49.2",
+    "datasets": "4.4.2",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0"
+  },
+  "checks": {
+    "all_state_tensors_equal": true,
+    "packed_weights_and_quantization_state_equal": true,
+    "fixed_last_token_logits_exact": true,
+    "max_abs_logit_difference": 0.0,
+    "fixed_generated_ids_equal": true,
+    "requantization_forbidden_during_reload": true,
+    "state_tensor_count": 1659,
+    "mismatched_state_keys": []
+  },
+  "stored_quantization_config": {
+    "_load_in_4bit": true,
+    "_load_in_8bit": false,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_quant_storage": "uint8",
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "llm_int8_enable_fp32_cpu_offload": false,
+    "llm_int8_has_fp16_weight": false,
+    "llm_int8_skip_modules": null,
+    "llm_int8_threshold": 6.0,
+    "load_in_4bit": true,
+    "load_in_8bit": false,
+    "quant_method": "bitsandbytes"
+  },
+  "files": {
+    "added_tokens.json": {
+      "bytes": 707,
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+    },
+    "chat_template.jinja": {
+      "bytes": 4168,
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    "config.json": {
+      "bytes": 2016,
+      "sha256": "3d2a894aed3f76cdaa7cb8693535b2fb1eafa08f9c36f64579c74dbcb708e7ed"
+    },
+    "generation_config.json": {
+      "bytes": 214,
+      "sha256": "64d86df2173901c58389974bde21f7d2ab9eb7d79f35a337753329d39cf265c0"
+    },
+    "merges.txt": {
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 1999008122,
+      "sha256": "4b0f3e6a6da9c11b379c455a10f4fecbd6ec731d520d89ac46b4829a83a52747"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 1432430629,
+      "sha256": "4ecb4c6014dab3b74f7c0625fa3872344c3e997b41d00c8c32547b0415addddf"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 154761,
+      "sha256": "c0607b666aa425800ae3a585b4637f5543a357a554da548d21389c3c5e6389d6"
+    },
+    "provenance.json": {
+      "bytes": 7357,
+      "sha256": "adfd64fd58540663c3d9fd181b0baa2c7df646cbae812434129d6ada8008470f"
+    },
+    "special_tokens_map.json": {
+      "bytes": 613,
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+    },
+    "tokenizer.json": {
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "tokenizer_config.json": {
+      "bytes": 5404,
+      "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "total_bytes": 3447485331,
+  "elapsed_wall_seconds": 32.72003382630646,
+  "log_directory": "outputs/nf4-checkpoint-01"
+}

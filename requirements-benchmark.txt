@@ -1,0 +1,5 @@
+-r requirements-qlora.txt
+nltk==3.9.2
+langdetect==1.0.9
+absl-py==2.3.1
+immutabledict==4.2.2

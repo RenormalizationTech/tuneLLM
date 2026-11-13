@@ -1,0 +1,100 @@
+{
+  "status": "registered_before_training",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "protocol_document": "docs/physics_prl_protocol.md",
+  "protocol_document_sha256": "c124f0f6950c5655a47aac2cfbb37970fac041f14a1717e3aca9b4ca9b862d82",
+  "corpus_manifest_sha256": "6deaff7e6ce9d5e139b37168eb0b714b028136fb93d3ec274e0ad1109932f3ec",
+  "benchmark_provenance": {
+    "mmlu_revision": "c30699e8356da336a370243923dbaf21066bb9fe",
+    "ifeval_revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+    "ifeval_scorer": {
+      "repository": "https://github.com/google-research/google-research",
+      "revision": "f8d6d14a1fc6eaef606d7d1e1fa4e96ee09afb81"
+    },
+    "ifeval_source_sha256": {
+      "evaluation_lib.py": "35decc06000718487f44d7deafa6d3f48a8ec0886281edf40162c0265b7d248c",
+      "instructions_util.py": "a73797261eee5bf447e279d82a2b700b1bdd3cb1193412dbab1270a85832bc6b",
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "instructions_registry.py": "ec92d72c264f6d906978613085db262356174300370a3fffe6fefd5969ce9cfc",
+      "instructions.py": "60e086f5342a03ce8e18b64bbcccf86308f523c08aa826707a562150a52f3edf"
+    },
+    "source_files": [
+      {
+        "file": ".hf/hub/datasets--cais--mmlu/snapshots/c30699e8356da336a370243923dbaf21066bb9fe/all/dev-00000-of-00001.parquet",
+        "sha256": "2b19bde1ed8ca6b482fb283abc90e8e0d9d228947029c0b91795d64b28b3bc3f"
+      },
+      {
+        "file": ".hf/hub/datasets--cais--mmlu/snapshots/c30699e8356da336a370243923dbaf21066bb9fe/all/validation-00000-of-00001.parquet",
+        "sha256": "66cdf0b090ccb657d18d13cd81e31fdc55c3467da9642ffb178653268a97c8ef"
+      },
+      {
+        "file": ".hf/hub/datasets--cais--mmlu/snapshots/c30699e8356da336a370243923dbaf21066bb9fe/all/test-00000-of-00001.parquet",
+        "sha256": "74a41822ce7d3def56e1682f958469c04642a5336a5ce912fa375fdb90fb25d7"
+      },
+      {
+        "file": ".hf/hub/datasets--google--IFEval/snapshots/966cd89545d6b6acfd7638bc708b98261ca58e84/ifeval_input_data.jsonl",
+        "sha256": "6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2"
+      }
+    ],
+    "multiple_choice_protocol": "zero-shot raw standard MMLU prompt; summed conditional log-likelihood of answer letters; custom local runner, not a published full MMLU score",
+    "ifeval_protocol": "official prompt-level strict and instruction-level strict, offline non-URL subset",
+    "seed": [
+      4701,
+      4702,
+      4703,
+      4704
+    ],
+    "writing": "added separately from held-out physics papers before training",
+    "fixture_sha256": {
+      "development": "2c45bcb2aaab919162e62433f75303b6ecf4b8904b3940db5d7729324343f4ef",
+      "test": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264"
+    },
+    "counts": {
+      "development": {
+        "general_mc": 32,
+        "physics_mc": 32,
+        "gsm8k": 32,
+        "ifeval": 16
+      },
+      "test": {
+        "general_mc": 128,
+        "physics_mc": 96,
+        "gsm8k": 128,
+        "ifeval": 32
+      }
+    }
+  },
+  "writing_provenance_sha256": "54c5373a8f631870ab995b7131cf1e618ac679429cd51ed144f59391753c075c",
+  "ranks": [
+    8,
+    32,
+    128
+  ],
+  "learning_rate_pilot": [
+    5e-05,
+    0.0001
+  ],
+  "epoch_cap": 3,
+  "sequence_length": 1024,
+  "all_linear": true,
+  "alpha_over_rank": 2,
+  "lora_dropout": 0.05,
+  "training_seed": 42,
+  "repeat_seed": 43,
+  "control": "BF16 base LoRA at chosen NF4 configuration, same planned 3-epoch schedule, compare same chosen epoch",
+  "selection": "Best per-run devNLL epoch, conservative paired paper-bootstrap LR/rank selection among passing development gates; fallbackbaseifallfail",
+  "gates": {
+    "correct_drop_32item_max": 4,
+    "ifeval_drop_16item_max": 3,
+    "truncation_increase_max": 2,
+    "writing_nonempty_all": true,
+    "writing_flag_increase_over_fewshot_base_max": 2
+  },
+  "baseline": "outputs/physics-screen-nf4-dev-02",
+  "writing_baseline": "outputs/physics-writing-nf4-fewshot-dev",
+  "preflight_excluded": "outputs/physics-screen-nf4-dev-01 interrupted after MC/math; batch4, not a paired result",
+  "final_test_policy": "Withhold finaltestloss/predictions until selection fixed. Report negativeoutcomes; nohumanwritingclaimwithoutactualratings.",
+  "human_ratings": "pending",
+  "publication": "new experimental adapters private by default; preserve old published artifacts"
+}

@@ -4,6 +4,13 @@ A hands-on project for learning open-source LLM quantization and fine-tuning.
 Research into behavioral representations and activation steering is an optional
 extension.
 
+The current reusable workflow is documented in
+[docs/model_workflow.md](docs/model_workflow.md). Its next complete exercise uses
+a saved NF4 base, a balanced corpus of condensed-matter theory PRLs, and writing
+evaluations for titles, abstracts and introductions, with one BF16 LoRA control.
+The verified standalone base is recorded in
+[results/nf4_checkpoint.json](results/nf4_checkpoint.json).
+
 Initial workflow:
 
 1. Run a reproducible small-model inference baseline and fixed evaluation.

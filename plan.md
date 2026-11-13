@@ -22,6 +22,16 @@ complete the initial project.
 
 ## Current status and execution priorities (2026-11-12)
 
+- New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
+  `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
+  the next exercise, while preserving its historical results.
+- Current objective: learn the language and structure of a balanced corpus of
+  condensed-matter theory PRLs, focusing evaluation on titles, abstracts and
+  introductions. No publication-acceptance claim is intended.
+- Quantization choices: original BF16; independent GGUF Q8_0/Q4_K_M inference
+  branches; saved NF4/double-quantized base before QLoRA. One BF16 LoRA control.
+- Standalone NF4 serialization verified: 1,659 state tensors, probe logits and
+  generated IDs match exactly; `results/nf4_checkpoint.json`.
 - GitHub repository: created; this working directory is the project repository.
 - Hugging Face organization: `RenormalizationTech` (confirmed by user).
 - Hugging Face artifacts published and verified: public base GGUFs and private experimental adapter.

@@ -1,0 +1,3179 @@
+{
+  "counts": {
+    "train": 70,
+    "validation": 10,
+    "test": 20
+  },
+  "category_counts": {
+    "cond-mat.dis-nn": 13,
+    "cond-mat.mes-hall": 13,
+    "cond-mat.mtrl-sci": 9,
+    "cond-mat.quant-gas": 13,
+    "cond-mat.soft": 13,
+    "cond-mat.stat-mech": 13,
+    "cond-mat.str-el": 13,
+    "cond-mat.supr-con": 13
+  },
+  "split_seed": 42,
+  "selection_seed": 20261112,
+  "dev_category_allocation": {
+    "cond-mat.dis-nn": 1,
+    "cond-mat.mes-hall": 1,
+    "cond-mat.mtrl-sci": 1,
+    "cond-mat.quant-gas": 1,
+    "cond-mat.soft": 1,
+    "cond-mat.stat-mech": 1,
+    "cond-mat.str-el": 2,
+    "cond-mat.supr-con": 2
+  },
+  "test_category_allocation": {
+    "cond-mat.dis-nn": 2,
+    "cond-mat.mes-hall": 2,
+    "cond-mat.mtrl-sci": 2,
+    "cond-mat.quant-gas": 2,
+    "cond-mat.soft": 3,
+    "cond-mat.stat-mech": 3,
+    "cond-mat.str-el": 3,
+    "cond-mat.supr-con": 3
+  },
+  "author_overlap": {
+    "count": 5,
+    "authors_and_papers": {
+      "Bj\\\"orn Trauzettel": {
+        "train": [
+          "2507.10762"
+        ],
+        "validation": [
+          "2303.14385"
+        ]
+      },
+      "Ludovic Berthier": {
+        "train": [
+          "2307.02840",
+          "2402.06585"
+        ],
+        "validation": [
+          "2307.08110"
+        ]
+      },
+      "Robert-Jan Slager": {
+        "train": [
+          "2401.01928"
+        ],
+        "validation": [
+          "2503.00475"
+        ]
+      },
+      "Siddhartha Sarkar": {
+        "train": [
+          "2505.07790",
+          "2310.02218"
+        ],
+        "validation": [
+          "2505.18272"
+        ]
+      },
+      "Daniele Guerci": {
+        "train": [
+          "2503.16384"
+        ],
+        "test": [
+          "2307.01253"
+        ]
+      }
+    },
+    "method": "heuristic comma/and splitting of metadata author strings; not identity-resolved"
+  },
+  "license_policy": "arXiv metadata explicitly CC BY; publisher status verified through Crossref",
+  "theory_review_sha256": "49b1ae15c8f00910d78dba2ee0d9a2add6926c7ed01442683d18cd9871af9817",
+  "clean_failures": [
+    {
+      "id": "2407.08420",
+      "reason": "no main TeX document"
+    },
+    {
+      "id": "2502.19212",
+      "reason": "no main TeX document"
+    },
+    {
+      "id": "2411.01464",
+      "reason": "no main TeX document"
+    },
+    {
+      "id": "2408.00924",
+      "reason": "no main TeX document"
+    }
+  ],
+  "limits": [
+    "Theory eligibility reviewed by an AI advisor from abstracts, not a human expert.",
+    "Author/group overlap across splits is reported, not guaranteed absent.",
+    "Source mirror metadata used for license/version selection; upstream source archives downloaded directly."
+  ],
+  "papers": [
+    {
+      "id": "2507.10762v2",
+      "paper_id": "2507.10762",
+      "title": "Marginal Metals and Kosterlitz-Thouless Type Phase Transition in Disordered Altermagnets",
+      "authors": "Chang-An Li, Bo Fu, Huaiming Guo, Bj\\\"orn Trauzettel, Song-Bo Zhang",
+      "doi": "10.1103/ssb5-vm9b",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "d1bf9b7e54d3b1fa73f342a8c53fd44236199ca3c32d66006403a3cc4b9ef02d",
+      "source_url": "https://arxiv.org/src/2507.10762v2",
+      "theory_review": {
+        "id": "2507.10762",
+        "eligible": true,
+        "reason": "Numerical localization study of disordered d-wave altermagnets",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2507.10762v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "b26b10cc21471a6648cfd83c978a251f098f99e6f9c202be9bed5b8994c62101"
+      },
+      "split": "train",
+      "clean_text_sha256": "7739ab1106c749abac61e24fac10d665e1d6ee75d3879396a26f4334d9ffdc14",
+      "annotation_macros": [
+        "\\textcolor"
+      ],
+      "main_text_characters": 24994,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2506.13696v1",
+      "paper_id": "2506.13696",
+      "title": "Photomagnetic-Chiral Anisotropy mediated by Chirality-Driven Asymmetric Spin Splitting",
+      "authors": "Tianwei Ouyang, Hang Su, Wanning Zhang, Yingying Duan, Yuxi Fang, Shunai Che, and Yizhou Liu",
+      "doi": "10.1103/llys-8b4p",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "bd777f61e4c6fc931d5add55756c95ac3d479014b9dc4b85a1f978fcfd4ba354",
+      "source_url": "https://arxiv.org/src/2506.13696v1",
+      "theory_review": {
+        "id": "2506.13696",
+        "eligible": true,
+        "reason": "First-principles NEGF and TDDFT of chiral gold chains",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2506.13696v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "0f2b382fc789c8c5327ac37966c77b7ade823a5dc25baa4d91329c6a3ef02dc1"
+      },
+      "split": "train",
+      "clean_text_sha256": "b488ebbcd4dcca591d249e6983525d0bfa4dd8b17cca359e6641432455ca2d82",
+      "annotation_macros": [],
+      "main_text_characters": 19016,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2304.09040v3",
+      "paper_id": "2304.09040",
+      "title": "Edge-selective extremal damping from topological heritage of dissipative Chern insulators",
+      "authors": "Suraj S. Hegde, Toni Ehmcke, and Tobias Meng",
+      "doi": "10.1103/PhysRevLett.131.256601",
+      "categories": "cond-mat.mes-hall cond-mat.other",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "2200887dd250ee52fbcb9ad77f688535a304955308bac0209d0fbac8b6ba682a",
+      "source_url": "https://arxiv.org/src/2304.09040v3",
+      "theory_review": {
+        "id": "2304.09040",
+        "eligible": true,
+        "reason": "Lindblad theory of edge-selective damping in dissipative Chern insulators",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2304.09040v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "272f52cb042a702458b76d1644bc7bc1d1c5825e9898dafb641c8127416ff51e"
+      },
+      "split": "train",
+      "clean_text_sha256": "017e55b585bc6b4b6c37bcab7802409cefb9eefa4b05350298f2857dd1fd9e85",
+      "annotation_macros": [],
+      "main_text_characters": 21934,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2307.16853v2",
+      "paper_id": "2307.16853",
+      "title": "Spin-frame field theory of a three-sublattice antiferromagnet",
+      "authors": "Bastian Pradenas and Oleg Tchernyshyov",
+      "doi": "10.1103/PhysRevLett.132.096703",
+      "categories": "cond-mat.str-el nlin.PS",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "00f9ae1133c35b06eb34b352a45795b4ff2a6f5a39e14cdb13b7ac20e9fb5de2",
+      "source_url": "https://arxiv.org/src/2307.16853v2",
+      "theory_review": {
+        "id": "2307.16853",
+        "eligible": true,
+        "reason": "Nonlinear spin-frame field theory of three-sublattice antiferromagnet",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2307.16853v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "99d06d37e24b74c98ad44a33721d266ce7838ca44222651fc0e066db69bb5a78"
+      },
+      "split": "train",
+      "clean_text_sha256": "82baf826693db38dd12a03128223fb91107207896cd4d75c18295ac06f00431d",
+      "annotation_macros": [],
+      "main_text_characters": 20738,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2405.13809v3",
+      "paper_id": "2405.13809",
+      "title": "Self-trapping phenomenon, multistability and chaos in open anisotropic Dicke dimer",
+      "authors": "G. Vivek, Debabrata Mondal, Subhadeep Chakraborty, and S. Sinha",
+      "doi": "10.1103/PhysRevLett.134.113404",
+      "categories": "cond-mat.quant-gas cond-mat.stat-mech nlin.CD physics.optics",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "b8b8713c8083ad62efab2602cd77485533c41d1cc1f2c52a8621aee32299d3bd",
+      "source_url": "https://arxiv.org/src/2405.13809v3",
+      "theory_review": {
+        "id": "2405.13809",
+        "eligible": true,
+        "reason": "Semiclassical dynamics of open anisotropic Dicke dimer",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2405.13809v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "013b4baa4bd54dc50a605d07063875cde4369ccc59e73ea5a559c45272e186a7"
+      },
+      "split": "train",
+      "clean_text_sha256": "0dee9b74ca55f037e7f7168167eff2cfa0277e29d803abd53fa2c538fb2b266a",
+      "annotation_macros": [],
+      "main_text_characters": 25172,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2307.02840v2",
+      "paper_id": "2307.02840",
+      "title": "Sampling efficiency of transverse forces in dense liquids",
+      "authors": "Federico Ghimenti, Ludovic Berthier, Grzegorz Szamel and Fr\\'ed\\'eric\n  van Wijland",
+      "doi": "10.1103/PhysRevLett.131.257101",
+      "categories": "cond-mat.soft cond-mat.dis-nn cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "836ec746fb912c23240a515bdae2c589d20eb6aac3a233d6298b2ca6f3705e9d",
+      "source_url": "https://arxiv.org/src/2307.02840v2",
+      "theory_review": {
+        "id": "2307.02840",
+        "eligible": true,
+        "reason": "Brownian dynamics, infinite-d theory and MCT of transverse forces",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2307.02840v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "63ae72e2a74a882c2d7f00f62dc9a318fe2046c3727552465d012fa2a8010f2b"
+      },
+      "split": "train",
+      "clean_text_sha256": "af127703882efc4e95f4f6d49d24eddd8353a6f2a5e7fe41ffe3d6f886cfd991",
+      "annotation_macros": [],
+      "main_text_characters": 25529,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2305.10363v1",
+      "paper_id": "2305.10363",
+      "title": "Resilient infinite randomness criticality for a disordered chain of interacting Majorana fermions",
+      "authors": "Natalia Chepiga, Nicolas Laflorencie",
+      "doi": "10.1103/PhysRevLett.132.056502",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "277a65259337b5ac043890cb12c8cd337fd826343fe130fe2f426cd0d67e670f",
+      "source_url": "https://arxiv.org/src/2305.10363v1",
+      "theory_review": {
+        "id": "2305.10363",
+        "eligible": true,
+        "reason": "DMRG of disordered interacting Majorana chain",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2305.10363v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "2a3b4bb7720c06416131f323a0b995990f7e3b79b156e3eb3428358dc843322e"
+      },
+      "split": "train",
+      "clean_text_sha256": "c1a564fb62b06af91797d948ba08f3f6ab1b96d5654be8de435955bd964c8c0b",
+      "annotation_macros": [],
+      "main_text_characters": 22561,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2504.06849v2",
+      "paper_id": "2504.06849",
+      "title": "Numerical renormalization of glassy dynamics",
+      "authors": "Johannes Lang, Subir Sachdev, Sebastian Diehl",
+      "doi": "10.1103/z64g-nqs6",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "c7795a93a93ca01e6e5fc4c93a1dd3ead7ed0661bff00f5750212c1a8a9cc596",
+      "source_url": "https://arxiv.org/src/2504.06849v2",
+      "theory_review": {
+        "id": "2504.06849",
+        "eligible": true,
+        "reason": "Green's-function interpolation algorithm for glassy quench dynamics",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2504.06849v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "b79e82828c1d6a56a4227f14f5442f689991324a5562840015bb97fec2b0f303"
+      },
+      "split": "train",
+      "clean_text_sha256": "0d0c101118a97c02b5822f578f8657ad161fdb190e89838bfb3815c253e1970a",
+      "annotation_macros": [],
+      "main_text_characters": 24962,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2412.03648v3",
+      "paper_id": "2412.03648",
+      "title": "Phase Diagram of the Easy-Axis Triangular-Lattice $J_1\\!-\\!J_2$ Model",
+      "authors": "Cesar A. Gallegos, Shengtao Jiang, Steven R. White, A. L. Chernyshev",
+      "doi": "10.1103/PhysRevLett.134.196702",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "17ce5ff85bfae485591b26646aa9e7082383e0281eb1d2509cf70efe4863d1bb",
+      "source_url": "https://arxiv.org/src/2412.03648v3",
+      "theory_review": {
+        "id": "2412.03648",
+        "eligible": true,
+        "reason": "DMRG plus analytics on easy-axis triangular J1-J2 phase diagram; no measurements",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2412.03648v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "29ca8da8147df48da5b7d2ff4c3c763b8707e289e3f7218870484c6890abee0c"
+      },
+      "split": "train",
+      "clean_text_sha256": "325e8f2dae5d9ff97fbbf8aaaaad693a4012cc7a4be76ec7d10662b79f32d245",
+      "annotation_macros": [],
+      "main_text_characters": 25737,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2401.01928v2",
+      "paper_id": "2401.01928",
+      "title": "Interferometry of non-Abelian band singularities and Euler class topology",
+      "authors": "Oliver Breach, Robert-Jan Slager, F. Nur \\\"Unal",
+      "doi": "10.1103/PhysRevLett.133.093404",
+      "categories": "cond-mat.quant-gas cond-mat.mes-hall physics.atom-ph quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "ba6260292cca5225b17ffdcd732f4bcc09b040484d1dcd3fa5367b8795508596",
+      "source_url": "https://arxiv.org/src/2401.01928v2",
+      "theory_review": {
+        "id": "2401.01928",
+        "eligible": true,
+        "reason": "Theoretical construction and numerics of interferometry for Euler-class topology",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2401.01928v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "5f056979107c5bb9653f907d2c5e1ccda7ec9f97f70c27a6f91c31cf201ced0a"
+      },
+      "split": "train",
+      "clean_text_sha256": "7746a5a58f73423cf892182764ad120dd5de5e4ebdd86ef65d9cd71ba2a47c82",
+      "annotation_macros": [],
+      "main_text_characters": 27927,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2412.06915v2",
+      "paper_id": "2412.06915",
+      "title": "Quantum phases and transitions of bosons on a comb lattice",
+      "authors": "Leo Radzihovsky, Emil Pellett",
+      "doi": "10.1103/dljc-j3z7",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "36b93a68d621b841126e80b2bcd12ee736148e96f145ae14e49fba76f6c7b8d5",
+      "source_url": "https://arxiv.org/src/2412.06915v2",
+      "theory_review": {
+        "id": "2412.06915",
+        "eligible": true,
+        "reason": "Phase diagram of bosons on comb lattice (theory); no PRL DOI in metadata",
+        "category": "cond-mat.quant-gas",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2412.06915v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "8eb3a21537e9f0ed37518c9d1d69203bf42d71345136703c3d9af86363ae389a"
+      },
+      "split": "train",
+      "clean_text_sha256": "581ea063bb100aac8ac0f53a7fc79f92520658db88e412eabfba98e1ab4d014f",
+      "annotation_macros": [],
+      "main_text_characters": 26145,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2303.17553v2",
+      "paper_id": "2303.17553",
+      "title": "Topological Circular Dichroism in Chiral Multifold Semimetals",
+      "authors": "Junyeong Ahn and Barun Ghosh",
+      "doi": "10.1103/PhysRevLett.131.116603",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "7139d19f0723c3a2a903ec8d8daaae12058fb6da32fc2a9080f0540bfb031eba",
+      "source_url": "https://arxiv.org/src/2303.17553v2",
+      "theory_review": {
+        "id": "2303.17553",
+        "eligible": true,
+        "reason": "Linear-response and first-principles theory of topological circular dichroism",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2303.17553v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "20a08e7f535d23ebc130d565efc0176fb1b7e7b7eba50a5108c8008dd1b94acb"
+      },
+      "split": "train",
+      "clean_text_sha256": "9e9dcc5b484cf4f4c307b0bbe8404c85e398cc9e890f409a5b371e870bac6171",
+      "annotation_macros": [],
+      "main_text_characters": 22403,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2407.20101v2",
+      "paper_id": "2407.20101",
+      "title": "Exponential Change of Relaxation Rate by Quenched Disorder",
+      "authors": "Jan Meibohm and Sabine H. L. Klapp",
+      "doi": "10.1103/PhysRevLett.134.087101",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "d3e8f067e877a327ea4c895c6c7a07435d4f1a14208e2ab7c7f48a04fffd6782",
+      "source_url": "https://arxiv.org/src/2407.20101v2",
+      "theory_review": {
+        "id": "2407.20101",
+        "eligible": true,
+        "reason": "Analytic relaxation rate of Brownian particle in quenched disorder",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2407.20101v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "da0109cc80e3921437b956be72eaf6edddf83803ebe133a5edc837595d479fe3"
+      },
+      "split": "train",
+      "clean_text_sha256": "19b86108ad105cc424906e5c024e040cec1583d8111d91b3d3729eb686f2e7e7",
+      "annotation_macros": [],
+      "main_text_characters": 28786,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2308.04094v2",
+      "paper_id": "2308.04094",
+      "title": "Shortcuts of freely relaxing systems using equilibrium physical observables",
+      "authors": "Isidoro Gonz\\'alez-Adalid Pemart\\'in, Emanuel Momp\\'o, Antonio\n  Lasanta, V\\'ictor Mart\\'in-Mayor, Jes\\'us Salas",
+      "doi": "10.1103/PhysRevLett.132.117102",
+      "categories": "cond-mat.stat-mech cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "94ca89094ffc93ac5e4c47a3c2260919b9b60ea4991c3eb06f438ff6d7a1ee69",
+      "source_url": "https://arxiv.org/src/2308.04094v2",
+      "theory_review": {
+        "id": "2308.04094",
+        "eligible": true,
+        "reason": "Theory of relaxation shortcuts with 1D Ising analytics and numerics",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2308.04094v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "574705c81297b620e3a4d0de7fbe0603cd887cd4db2512b608655dddf0ee44d3"
+      },
+      "split": "train",
+      "clean_text_sha256": "b60ebb62a9f9e1d3c861fc5fe1fec799ffe455de1ed4194dca3cfc95e9325c0a",
+      "annotation_macros": [],
+      "main_text_characters": 29293,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2402.06585v2",
+      "paper_id": "2402.06585",
+      "title": "Irreversible Monte Carlo algorithms for hard disk glasses: from event-chain to collective swaps",
+      "authors": "Federico Ghimenti, Ludovic Berthier, Fr\\'ed\\'eric van Wijland",
+      "doi": "10.1103/PhysRevLett.133.028202",
+      "categories": "cond-mat.dis-nn cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "7377c1a95ce767d9383b6023a8b8c6cbbbb04e25373ce724c584832a39738c89",
+      "source_url": "https://arxiv.org/src/2402.06585v2",
+      "theory_review": {
+        "id": "2402.06585",
+        "eligible": true,
+        "reason": "Irreversible Monte Carlo algorithms for hard-disk glasses",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2402.06585v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "a361961e91b10b6994ee77f261373639f39220cf59a0882a5435f909f15e84a7"
+      },
+      "split": "train",
+      "clean_text_sha256": "17def0d08df205e0d9813872bd49a5dc750b1041a368bd5d41514c56622ad385",
+      "annotation_macros": [],
+      "main_text_characters": 21308,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2310.16352v6",
+      "paper_id": "2310.16352",
+      "title": "Quantifying the Chirality of Vibrational Modes in Helical Molecular Chains",
+      "authors": "Ethan Abraham and Abraham Nitzan",
+      "doi": "10.1103/PhysRevLett.133.268001",
+      "categories": "cond-mat.mes-hall math-ph math.MP",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v6",
+      "source_sha256": "e98b3ece92881b27f1cf8928ca182e3105159b2f745eefc499e451e294d3e820",
+      "source_url": "https://arxiv.org/src/2310.16352v6",
+      "theory_review": {
+        "id": "2310.16352",
+        "eligible": true,
+        "reason": "Computational chirality measures for normal modes of helical molecular chains",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2310.16352v6",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "2afdfa24c9022718201f9d32a929166764cfc27614493239ca5e57fa9178bf9e"
+      },
+      "split": "train",
+      "clean_text_sha256": "6760c1b82d87433b2dcd853d62ea40e9b09c970bc2bdb2de27bd821ca4b7b3b0",
+      "annotation_macros": [],
+      "main_text_characters": 24962,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2506.05262v2",
+      "paper_id": "2506.05262",
+      "title": "Tuning Steady Shear Rheology through Active Dopants",
+      "authors": "Amir Shee, Ritwik Bandyopadhyay and Haicen Yue",
+      "doi": "10.1103/qvr9-rvw4",
+      "categories": "cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "4013ab101221be6ee5108bd9ea911651fa57f37b9fa1a2b6399c75132b9f83b8",
+      "source_url": "https://arxiv.org/src/2506.05262v2",
+      "theory_review": {
+        "id": "2506.05262",
+        "eligible": true,
+        "reason": "Numerical shear rheology of active-passive mixtures",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2506.05262v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "477fea9b2784a11d92d768ab1b1320ea0beae265b9c3a04e62f8f27ae165c059"
+      },
+      "split": "train",
+      "clean_text_sha256": "272b9168e96cde5c5e2c74995b9cba634933d18989ea0af23cc13b81fd53a2d6",
+      "annotation_macros": [],
+      "main_text_characters": 24232,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2310.07476v2",
+      "paper_id": "2310.07476",
+      "title": "Superfluidity meets the solid-state: frictionless mass-transport through a (5,5) carbon-nanotube",
+      "authors": "Alberto Ambrosetti, Pier Luigi Silvestrelli and Luca Salasnich",
+      "doi": "10.1103/PhysRevLett.131.206301",
+      "categories": "cond-mat.mtrl-sci cond-mat.mes-hall cond-mat.quant-gas quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "1a5bd78e295b9c3c778ff5f0bc78fea73e1d9b9d6ae8de268a5397289fab94d6",
+      "source_url": "https://arxiv.org/src/2310.07476v2",
+      "theory_review": {
+        "id": "2310.07476",
+        "eligible": true,
+        "reason": "Theoretical prediction of frictionless He transport in (5,5) CNT",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2310.07476v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "b6a78e32504bb8213b63784d2c62689441e810b49a21b515a581041bc42eeb9a"
+      },
+      "split": "train",
+      "clean_text_sha256": "9d3e504d42bd6b6016d64d9ecee93654a7520a3fb1a2bc0d042143d477944dcf",
+      "annotation_macros": [],
+      "main_text_characters": 23747,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2509.08479v2",
+      "paper_id": "2509.08479",
+      "title": "From Kardar-Parisi-Zhang scaling to soliton proliferation in Josephson junction arrays",
+      "authors": "Mikheil Tsitsishvili, Reinhold Egger, Karsten Flensberg, Sebastian Diehl",
+      "doi": "10.1103/y3j5-dknd",
+      "categories": "cond-mat.stat-mech quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "059530847adafdd00293ad7cd42cc32324a90dc72dcda119302f61c852196174",
+      "source_url": "https://arxiv.org/src/2509.08479v2",
+      "theory_review": {
+        "id": "2509.08479",
+        "eligible": true,
+        "reason": "Numerical and analytical KPZ proposal for Josephson junction arrays",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2509.08479v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "7756585f62f7dd37b999127849e268208b9e245190be28100d484fa2a3e7e851"
+      },
+      "split": "train",
+      "clean_text_sha256": "fc84794524c2802a3430f0ce1eda1b917ed073c9589390c08a38e494cc3590a6",
+      "annotation_macros": [],
+      "main_text_characters": 25687,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2510.14724v4",
+      "paper_id": "2510.14724",
+      "title": "Crossed surface flat bands in three-dimensional superconducting altermagnets",
+      "authors": "Yuri Fukaya, Bo Lu, Keiji Yada, Yukio Tanaka, Jorge Cayao",
+      "doi": "10.1103/65q6-5wxl",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v4",
+      "source_sha256": "237213f7326bf819f6956a0b15a9604c396874c86527c591f6927e2bd008cd0f",
+      "source_url": "https://arxiv.org/src/2510.14724v4",
+      "theory_review": {
+        "id": "2510.14724",
+        "eligible": true,
+        "reason": "Theory of crossed surface flat bands in 3D superconducting altermagnets",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2510.14724v4",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "a63e187880dd9717d7437c9e228551445c34db738723f39b3bccbf9d7ca4b019"
+      },
+      "split": "train",
+      "clean_text_sha256": "75c6b01e0cbb67b148bfcbd8a991311283f4ad791a3f43cfb5a9791b84b57cd5",
+      "annotation_macros": [],
+      "main_text_characters": 28107,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2405.04159v2",
+      "paper_id": "2405.04159",
+      "title": "Maxwell relation between entropy and atom-atom pair correlation",
+      "authors": "Raymon S. Watson, Caleb Coleman, and Karen V. Kheruntsyan",
+      "doi": "10.1103/PhysRevLett.133.100403",
+      "categories": "cond-mat.quant-gas cond-mat.stat-mech quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "890900be15b3e91981b4d6faa360bec32d21b02b6b2635cd125bdafb7f6f7790",
+      "source_url": "https://arxiv.org/src/2405.04159v2",
+      "theory_review": {
+        "id": "2405.04159",
+        "eligible": true,
+        "reason": "Maxwell relation derivation with SPGPE numerics",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2405.04159v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "5118c6d7311a376c7cad550544ea8068949cd26f788243e4834812cfe36f69aa"
+      },
+      "split": "train",
+      "clean_text_sha256": "5121862b6a6520e7c913731d4f02849f30fc89356aad1cb2f83cec47d57032a7",
+      "annotation_macros": [],
+      "main_text_characters": 24647,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2507.19147v1",
+      "paper_id": "2507.19147",
+      "title": "The Josephson effect in Fibonacci superconductors",
+      "authors": "Ignacio Sardinero, Jorge Cayao, Keiji Yada, Yukio Tanaka, Pablo Burset",
+      "doi": "10.1103/6m6b-y3yv",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "0c82d34b60cf812637146aedf11830df07e4595eaab071726c0e26b88a7b9bca",
+      "source_url": "https://arxiv.org/src/2507.19147v1",
+      "theory_review": {
+        "id": "2507.19147",
+        "eligible": true,
+        "reason": "Theory of Josephson effect in Fibonacci superconductors",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2507.19147v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "d79a8331af065cc9168d7fc3e12f42ecdea2bc342c41014b9d267b6a89f1e4e4"
+      },
+      "split": "train",
+      "clean_text_sha256": "7e86f205a85e7255457f8e3f87545c45c5c05cb91c599dfc8140808f041599a6",
+      "annotation_macros": [],
+      "main_text_characters": 22714,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2309.07886v1",
+      "paper_id": "2309.07886",
+      "title": "Vortex Lattices in Active Nematics with Periodic Obstacle Arrays",
+      "authors": "Cody D. Schimming and C. J. O. Reichhardt and C. Reichhardt",
+      "doi": "10.1103/PhysRevLett.132.018301",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "92e41ffea23c3fa8c0d35fee451b9e7038b6578b522aa58e7db83f2403aedc43",
+      "source_url": "https://arxiv.org/src/2309.07886v1",
+      "theory_review": {
+        "id": "2309.07886",
+        "eligible": true,
+        "reason": "Numerical active nematic with obstacle arrays",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2309.07886v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "aeab0e9560a46fad81b78d77233d153e0c58f1862cf647fdaa1055ce0001e25a"
+      },
+      "split": "train",
+      "clean_text_sha256": "f368bb4ba4d893c6f3dd80bf1d3593e14ef8e9e236cb861f316ae39d4c1c4433",
+      "annotation_macros": [],
+      "main_text_characters": 20467,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2305.06033v2",
+      "paper_id": "2305.06033",
+      "title": "Non-monotonous translocation time of polymers across pores",
+      "authors": "Emanuele Locatelli and Valentino Bianco and Chantal Valeriani and\n  Paolo Malgaretti",
+      "doi": "10.1103/PhysRevLett.131.048101",
+      "categories": "cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "8dfad8bb37506b2edfaa5594f02252109697197d5db18edd47829ecd7869282a",
+      "source_url": "https://arxiv.org/src/2305.06033v2",
+      "theory_review": {
+        "id": "2305.06033",
+        "eligible": true,
+        "reason": "Fick-Jacobs theory of polymer translocation with numerics",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2305.06033v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "4eba8e5bb1e75a4ec3c074cf9a72467e77a1bd997174a8a1c6a97f4cb7af7b53"
+      },
+      "split": "train",
+      "clean_text_sha256": "f80ebd4404efcde21607b787731dd43fcc07e3be1b78c774bea1e2b5fd1a94fe",
+      "annotation_macros": [],
+      "main_text_characters": 19259,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2402.14321v1",
+      "paper_id": "2402.14321",
+      "title": "Non-relativistic spin splitting in compensated magnets that are not altermagnets",
+      "authors": "Lin-Ding Yuan, Alexandru B. Georgescu, James M. Rondinelli",
+      "doi": "10.1103/PhysRevLett.133.216701",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "ddee4ab2d43fcc01654f5be0efe5a3f07a6817247e2b282df279107b30eaa3e5",
+      "source_url": "https://arxiv.org/src/2402.14321v1",
+      "theory_review": {
+        "id": "2402.14321",
+        "eligible": true,
+        "reason": "Symmetry analysis and DFT of non-altermagnetic NRSS antiferromagnets",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2402.14321v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "d5101d8daa1e513c6caf41feddf183f4d74bbb6c1fe0d11a302bbda6900fa34b"
+      },
+      "split": "train",
+      "clean_text_sha256": "0cc18fb3169d01e930daa365e4fdbb9d615d26ef2e0de638b39789b784e5b0d2",
+      "annotation_macros": [],
+      "main_text_characters": 23743,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2311.08893v1",
+      "paper_id": "2311.08893",
+      "title": "Stark-Many body localization in interacting infinite dimensional systems",
+      "authors": "Hristiana Atanasova, Andr\\'e Erpenbeck, Emanuel Gull, Yevgeny Bar Lev and Guy Cohen",
+      "doi": "10.1103/PhysRevLett.132.166301",
+      "categories": "cond-mat.dis-nn cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "6da1d6c1f0f0bc3b911ffc5192733e34bc65d64266a6e71b631ab60d72762ee1",
+      "source_url": "https://arxiv.org/src/2311.08893v1",
+      "theory_review": {
+        "id": "2311.08893",
+        "eligible": true,
+        "reason": "Numerical Stark-MBL transport on Bethe lattice",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2311.08893v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "d13cc10db5f31ebb4d23846b382d43d58e1b9a6108f8c3426da5db3b4d51679a"
+      },
+      "split": "train",
+      "clean_text_sha256": "433551fd7dc1d67cbc27eea7f89e1c6480de1185c1efc4eb1f80c8e0b4f6b249",
+      "annotation_macros": [],
+      "main_text_characters": 22681,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2306.05149v2",
+      "paper_id": "2306.05149",
+      "title": "Engineering flat bands in twisted-bilayer graphene away from the magic angle with chiral optical cavities",
+      "authors": "Cunyuan Jiang, Matteo Baggioli, Qing-Dong Jiang",
+      "doi": "10.1103/PhysRevLett.132.166901",
+      "categories": "cond-mat.mes-hall cond-mat.str-el cond-mat.supr-con physics.optics quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "11206e160e6d35e5d866e7cf38e7bc1f4064dc95fbfbd24d669395f5b5e0e35d",
+      "source_url": "https://arxiv.org/src/2306.05149v2",
+      "theory_review": {
+        "id": "2306.05149",
+        "eligible": true,
+        "reason": "Model calculations of chiral-cavity flat bands in twisted bilayer graphene",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2306.05149v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "8c931a31c60f0573952c1bdc9d827c99d9e4e30d07d136f1ef49c47c6dccbbd1"
+      },
+      "split": "train",
+      "clean_text_sha256": "20b57102ff051ef7eba6d5bfe4534e9f536bc66ba9fae8522b9e03b3aaa7e5c1",
+      "annotation_macros": [],
+      "main_text_characters": 24059,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2503.18068v2",
+      "paper_id": "2503.18068",
+      "title": "Pseudo-giant number fluctuations and nematic order in microswimmer suspensions",
+      "authors": "Ismail El Korde, D\\'ora B\\'ardfalvy, Jason M. Lewis, Alexander Morozov, Cesare Nardini, and Joakim Stenhammar",
+      "doi": "10.1103/31q1-hj3n",
+      "categories": "cond-mat.soft cond-mat.stat-mech physics.bio-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "a56248970c39fb61985976a11f2b83486301b7fc4ae13eb88a38d8bc342f5882",
+      "source_url": "https://arxiv.org/src/2503.18068v2",
+      "theory_review": {
+        "id": "2503.18068",
+        "eligible": true,
+        "reason": "Numerical pusher-suspension number fluctuations",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2503.18068v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "570007e8a0e6139712e0583174ab9bee415663e269d9c48aac667f7409f789ef"
+      },
+      "split": "train",
+      "clean_text_sha256": "e5851e62db5dece52e23ff8d662c4a8d5854a63fb1e31128084a7946a0cf3ad4",
+      "annotation_macros": [],
+      "main_text_characters": 25298,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2411.18108v1",
+      "paper_id": "2411.18108",
+      "title": "Fluctuation-response inequalities for kinetic and entropic perturbations",
+      "authors": "Euijoon Kwon, Hyun-Myung Chun, Hyunggyu Park, Jae Sung Lee",
+      "doi": "10.1103/h45s-4118",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "a58eb6f8f723df2259f5c8552c657812ad4d69b926b816d8053e79a3fc2c30a0",
+      "source_url": "https://arxiv.org/src/2411.18108v1",
+      "theory_review": {
+        "id": "2411.18108",
+        "eligible": true,
+        "reason": "Cramer-Rao fluctuation-response inequalities for Markov jump processes; no PRL DOI in metadata",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2411.18108v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "6e957eb40878861813ce911b994801027748324441c8b4e170d582bf0f92529a"
+      },
+      "split": "train",
+      "clean_text_sha256": "5e6882570bf49bfb47ebc917d1347224943b7e7f62b1460dc917627fdd59e3e5",
+      "annotation_macros": [],
+      "main_text_characters": 23808,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2308.09574v3",
+      "paper_id": "2308.09574",
+      "title": "Dissipative effects in odd viscous Stokes flow around a single sphere",
+      "authors": "Jeffrey C. Everts and Bogdan Cichocki",
+      "doi": "10.1103/PhysRevLett.132.218303",
+      "categories": "cond-mat.soft physics.flu-dyn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "f4b08697ca9ebc34a447f56173fb8f47a4193c3f64e9f592cdf4fcdde93174f4",
+      "source_url": "https://arxiv.org/src/2308.09574v3",
+      "theory_review": {
+        "id": "2308.09574",
+        "eligible": true,
+        "reason": "Exact analytic odd-viscosity Stokes solution",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2308.09574v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "0be8f177d611a137aba296b31712617ddc7445b89c02a2d9067d9fe42707022b"
+      },
+      "split": "train",
+      "clean_text_sha256": "434f51c05d8902301f2e25ea9ce9722112e63e8ada9c81ade5bc0af58e917831",
+      "annotation_macros": [],
+      "main_text_characters": 35560,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2404.11647v1",
+      "paper_id": "2404.11647",
+      "title": "Quantized Acoustoelectric Floquet Effect in Quantum Nanowires",
+      "authors": "Christopher Yang, Will Hunt, Gil Refael, and Iliya Esin",
+      "doi": "10.1103/PhysRevLett.133.226301",
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "812ecef136abe22c8c4c5e5724845fba4e83c21b055fe4826eccde7dcbfa069c",
+      "source_url": "https://arxiv.org/src/2404.11647v1",
+      "theory_review": {
+        "id": "2404.11647",
+        "eligible": true,
+        "reason": "Theory of phonon-driven quantized current in nanowires",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2404.11647v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "804b1f868c67ee14cb6af28c19e835e2d446ac91b7d04e827545221bb0dcd2e4"
+      },
+      "split": "train",
+      "clean_text_sha256": "561d9b012801181ebac289bacd191e2fd123504aaa886a98eb51459f56188e5b",
+      "annotation_macros": [],
+      "main_text_characters": 28923,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2505.07790v2",
+      "paper_id": "2505.07790",
+      "title": "Unconventional Fractional Phases in Multi-Band Vortexable Systems",
+      "authors": "Siddhartha Sarkar, Xiaohan Wan, Ang-Kun Wu, Shi-Zeng Lin, Kai Sun",
+      "doi": "10.1103/jmk4-46tj",
+      "categories": "cond-mat.str-el cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "d51e62621cabf3b3f43ca84a7af01e2ded89020d0131061e249a75879ac3ad07",
+      "source_url": "https://arxiv.org/src/2505.07790v2",
+      "theory_review": {
+        "id": "2505.07790",
+        "eligible": true,
+        "reason": "Analytic and numerical study of multi-band vortexable flat bands",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2505.07790v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "335fb009ae5cbf783a169828d1009f7dc18a5b4713db903b117458d4c068421e"
+      },
+      "split": "train",
+      "clean_text_sha256": "cd2c854797841c8a011b258b0de828bc5608e3991ed8defa6aa5dd2d5b10bc25",
+      "annotation_macros": [],
+      "main_text_characters": 28088,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2309.02242v1",
+      "paper_id": "2309.02242",
+      "title": "Compressing and forecasting atomic material simulations with descriptors",
+      "authors": "Thomas D Swinburne",
+      "doi": "10.1103/PhysRevLett.131.236101",
+      "categories": "cond-mat.mtrl-sci physics.comp-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "01f5930184ec7b39bd4b4c4be61eab50eb9215237c6ee0ac8e1254efeeb30866",
+      "source_url": "https://arxiv.org/src/2309.02242v1",
+      "theory_review": {
+        "id": "2309.02242",
+        "eligible": true,
+        "reason": "Computational descriptor compression of atomistic simulations",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2309.02242v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "b37834be70ca85c468c015b027a9721b244e61a1f86aa86acd7bfd1d07a9850a"
+      },
+      "split": "train",
+      "clean_text_sha256": "48fded22b9f85096d5e02af61a3c308a98042424a0b2b0e0a7c2a4dc48b1c3b4",
+      "annotation_macros": [],
+      "main_text_characters": 25848,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2312.14598v3",
+      "paper_id": "2312.14598",
+      "title": "Exact numerical solution of the fully-connected classical and quantum Heisenberg spin glass",
+      "authors": "Nikita Kavokine, Markus M\\\"uller, Antoine Georges, Olivier Parcollet",
+      "doi": "10.1103/PhysRevLett.133.016501",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "457b93d910289d59a5b348bfa02cb9073a382196c53a9b31d32898ec91afc9b0",
+      "source_url": "https://arxiv.org/src/2312.14598v3",
+      "theory_review": {
+        "id": "2312.14598",
+        "eligible": true,
+        "reason": "Parisi RSB plus CTQMC solution of Heisenberg spin glass",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2312.14598v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "74f82d77c7c9f15c0fd813f7a20ea4e357150e657812e267f762341e3acc152b"
+      },
+      "split": "train",
+      "clean_text_sha256": "aeb77a8717d9fceff8bede9fa01d5a87849ec66598e9dfa65dadcafd7fe342f0",
+      "annotation_macros": [],
+      "main_text_characters": 22493,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2310.03809v3",
+      "paper_id": "2310.03809",
+      "title": "Iterative construction of conserved quantities in dissipative nearly integrable systems",
+      "authors": "Iris Ul\\v{c}akar and Zala Lenar\\v{c}i\\v{c}",
+      "doi": "10.1103/PhysRevLett.132.230402",
+      "categories": "cond-mat.stat-mech cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "e43119cbdac67708006e84e567e98c19cbbc215142b5db0c061158ccb324bb79",
+      "source_url": "https://arxiv.org/src/2310.03809v3",
+      "theory_review": {
+        "id": "2310.03809",
+        "eligible": true,
+        "reason": "Iterative truncated GGE scheme for driven nearly integrable systems",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2310.03809v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "ed9e6cfa700cbaae7deec4e8d669922ebd9b208ac87a10389b08f7b987ec8f1c"
+      },
+      "split": "train",
+      "clean_text_sha256": "a731166a4eb397b110598c70301c8a530fb64c62c43425e04e76ccea93d4abcf",
+      "annotation_macros": [],
+      "main_text_characters": 26230,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2304.12201v2",
+      "paper_id": "2304.12201",
+      "title": "Quantum-Squeezing-Induced Point-Gap Topology and Skin Effect",
+      "authors": "Liang-Liang Wan, Xin-You L\\\"u",
+      "doi": "10.1103/PhysRevLett.130.203605",
+      "categories": "cond-mat.mes-hall quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "0385c88ff343876387d6edf5187ba212a5ced41ece17e7f14181ce4463906200",
+      "source_url": "https://arxiv.org/src/2304.12201v2",
+      "theory_review": {
+        "id": "2304.12201",
+        "eligible": true,
+        "reason": "Theoretical prediction of squeezing-induced point-gap topology",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2304.12201v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "7de37ece074b565e78eb2c6ea63d33fcf406c317fc4ca7d12c5f16fc3b886388"
+      },
+      "split": "train",
+      "clean_text_sha256": "1d21f0a1b9ea5d2f5fe08c010e0b2ae80b0a57f8ba9bff1b3aedf2c95d43946d",
+      "annotation_macros": [],
+      "main_text_characters": 26020,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2405.08887v2",
+      "paper_id": "2405.08887",
+      "title": "Non-Abelian Fractional Chern Insulators and Competing States in Flat Moir\\'e Bands",
+      "authors": "Hui Liu, Zhao Liu, and Emil J. Bergholtz",
+      "doi": "10.1103/43nq-ntqm",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "e24c5d48eae4f75b14f469271fc7b0f50507540b598a7ba02fafd12e161e1996",
+      "source_url": "https://arxiv.org/src/2405.08887v2",
+      "theory_review": {
+        "id": "2405.08887",
+        "eligible": true,
+        "reason": "Exact-diagonalization/entanglement study of non-Abelian FCIs in moire bands",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2405.08887v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "cba839281ac6ee4c368ebb182fc0c636b5cd43c436ae0904988b685f3f0cd29a"
+      },
+      "split": "train",
+      "clean_text_sha256": "dc99d170968d2df25d60de3a9283e8f9065267bca14423840afe9dd78e8572f8",
+      "annotation_macros": [],
+      "main_text_characters": 23733,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2309.14047v1",
+      "paper_id": "2309.14047",
+      "title": "Random-Energy Secret Sharing via Extreme Synergy",
+      "authors": "Vudtiwat Ngampruetikorn, David J. Schwab",
+      "doi": "10.1103/PhysRevLett.133.257401",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech cs.CR cs.IT math.IT",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "7a2ed0c280ee9f26ca0b0ed43c0d9c96b1b762358f0f1adcf4205b653fc01f1a",
+      "source_url": "https://arxiv.org/src/2309.14047v1",
+      "theory_review": {
+        "id": "2309.14047",
+        "eligible": true,
+        "reason": "REM-based secret-sharing information theory (off-core topic)",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2309.14047v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "51f9fa6008f29ed03770da844d52ccb28078bb8cc33fa58504a906adc3957119"
+      },
+      "split": "train",
+      "clean_text_sha256": "94451ca175db0794f4108dc231b2a343d1262c5395631b15ba6c2d09b1cb6666",
+      "annotation_macros": [],
+      "main_text_characters": 29808,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2507.11308v2",
+      "paper_id": "2507.11308",
+      "title": "Localization Transition for Interacting Quantum Particles in Colored-Noise Disorder",
+      "authors": "Giacomo Morpurgo, Laurent Sanchez-Palencia and Thierry Giamarchi",
+      "doi": "10.1103/c81j-h58j",
+      "categories": "cond-mat.dis-nn cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "70f7eed922ccaaf512609e6d1079094d8f2e5cd517f12354335253c6b7443116",
+      "source_url": "https://arxiv.org/src/2507.11308v2",
+      "theory_review": {
+        "id": "2507.11308",
+        "eligible": true,
+        "reason": "RG and numerics of localization in colored-noise disorder",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2507.11308v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "53e5bdbbf08036a50da3b16029adf2ee158b357986d9ade26f7ae49882ff5110"
+      },
+      "split": "train",
+      "clean_text_sha256": "313d42594305f675ae6a55eedf16065dc2961dff97f7d75ce5e64b55af7bcabd",
+      "annotation_macros": [],
+      "main_text_characters": 25594,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2303.18169v2",
+      "paper_id": "2303.18169",
+      "title": "Dynamical fluctuations of random walks in higher-order networks",
+      "authors": "Leonardo Di Gaetano, Giorgio Carugno, Federico Battiston and Francesco\n  Coghi",
+      "doi": "10.1103/PhysRevLett.133.107401",
+      "categories": "cond-mat.dis-nn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "873d53964e5b5b033aa5b68f6659574d85755efac9727e49d371be25807cf79b",
+      "source_url": "https://arxiv.org/src/2303.18169v2",
+      "theory_review": {
+        "id": "2303.18169",
+        "eligible": true,
+        "reason": "Large-deviation theory of random walks on hypergraphs (off-core topic)",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2303.18169v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "5024005d1ec35a23955e4ee0472b351efa3068afed8789e56f890d347b22aea9"
+      },
+      "split": "train",
+      "clean_text_sha256": "7b4080427759317fa2da41ed53864785f953d44bb6ddcb7a54a571022dbf57c3",
+      "annotation_macros": [],
+      "main_text_characters": 6638,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2503.03477v2",
+      "paper_id": "2503.03477",
+      "title": "Dual Spectroscopy of Quantum Simulated Fermi-Hubbard Systems",
+      "authors": "K. Knakkergaard Nielsen, M. Zwierlein, G. M. Bruun",
+      "doi": "10.1103/yfqr-y9ks",
+      "categories": "cond-mat.quant-gas cond-mat.str-el cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "f0989984db732e73325fd1f655c80ae953f404aac43a79f5f902ab671b1a412b",
+      "source_url": "https://arxiv.org/src/2503.03477v2",
+      "theory_review": {
+        "id": "2503.03477",
+        "eligible": true,
+        "reason": "Theory of RF spectroscopy of magnetic polarons in Fermi-Hubbard systems",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2503.03477v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "54f9f4ada4be9c7bc816f237def07bb16661370553db2bc4cd2cfcc7e1a4b4d1"
+      },
+      "split": "train",
+      "clean_text_sha256": "579951f291a09349ce230f0c068ddf4e6c23be066f53966da8058f39414f7220",
+      "annotation_macros": [],
+      "main_text_characters": 27928,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2405.19607v2",
+      "paper_id": "2405.19607",
+      "title": "Generic transverse stability of kink structures in atomic and optical nonlinear media with competing attractive and repulsive interactions",
+      "authors": "S. I. Mistakidis, G. Bougas, G. C. Katsimiga and P. G. Kevrekidis",
+      "doi": "10.1103/PhysRevLett.134.123402",
+      "categories": "cond-mat.quant-gas nlin.PS physics.atom-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "9291479a4e9dedaa30546bb308d98cd77e45d26eef529e5528c1d8edda45e256",
+      "source_url": "https://arxiv.org/src/2405.19607v2",
+      "theory_review": {
+        "id": "2405.19607",
+        "eligible": true,
+        "reason": "Analytic and numerical stability of kinks in extended GP models",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2405.19607v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "47502ac2cecea18e673b8ac46e0d57bf77feee57872ddaf63516067fd82f38bd"
+      },
+      "split": "train",
+      "clean_text_sha256": "d9454f744c0d53d1f312c0e88acd531b26da32a13a874f477024e5a1f15c8824",
+      "annotation_macros": [],
+      "main_text_characters": 25002,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2305.02091v2",
+      "paper_id": "2305.02091",
+      "title": "Finite-Entanglement Scaling of 2D Metals",
+      "authors": "Quinten Mortier, Ming-Hao Li, Jutho Haegeman, Nick Bultinck",
+      "doi": "10.1103/PhysRevLett.131.266202",
+      "categories": "cond-mat.str-el cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "b4e81520554135de6edeaf1bd63a0683e4439a5fb50187f6c0ae4d154d1956fd",
+      "source_url": "https://arxiv.org/src/2305.02091v2",
+      "theory_review": {
+        "id": "2305.02091",
+        "eligible": true,
+        "reason": "Finite-entanglement scaling theory for 2D metals with tensor networks",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2305.02091v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "a96cbd1f546a5ec51aa3c66436797815a143a1c38c80dd53a946f3c41d3206e6"
+      },
+      "split": "train",
+      "clean_text_sha256": "45c0fa184fcbe5c18a699a6facc2a42b2dd13240d5315a8ff35adf51b94a6510",
+      "annotation_macros": [],
+      "main_text_characters": 24293,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2310.02218v1",
+      "paper_id": "2310.02218",
+      "title": "Symmetry-based classification of exact flat bands in single and bilayer moir\\'e systems",
+      "authors": "Siddhartha Sarkar, Xiaohan Wan, Shi-Zeng Lin, Kai Sun",
+      "doi": "10.1103/nys8-5mg2",
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "21e3691b27d41ee8497c8a7cab4cc8294669de5652f1d21a01899d509907badd",
+      "source_url": "https://arxiv.org/src/2310.02218v1",
+      "theory_review": {
+        "id": "2310.02218",
+        "eligible": true,
+        "reason": "Symmetry classification of exact flat bands in moire systems",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2310.02218v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "72ea4bda62af4ac6d722df9f66a13891712c58a0d36d57a89d94158bff0cb78e"
+      },
+      "split": "train",
+      "clean_text_sha256": "7f5502c83107b9998a82bd098ccd836fb3db35779d2850caed8aeb59348b9735",
+      "annotation_macros": [],
+      "main_text_characters": 40465,
+      "long_main_text_flag": true
+    },
+    {
+      "id": "2507.20705v4",
+      "paper_id": "2507.20705",
+      "title": "Light-induced Odd-parity Magnetism in Conventional Collinear Antiferromagnets",
+      "authors": "Shengpu Huang, Zheng Qin, Fangyang Zhan, Dong-Hui Xu, Da-Shuai Ma, Rui Wang",
+      "doi": "10.1103/9346-9jpf",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v4",
+      "source_sha256": "c139617b87cabab6d546366c6c0143056977e6dbd11f4f6ecf8884f2fe430083",
+      "source_url": "https://arxiv.org/src/2507.20705v4",
+      "theory_review": {
+        "id": "2507.20705",
+        "eligible": true,
+        "reason": "Symmetry, model and first-principles Floquet odd-parity magnetism",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2507.20705v4",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "fe19bc80f0a28fea05b67f90d2fe0224161f58ec0273c7b09902b74b0281187c"
+      },
+      "split": "train",
+      "clean_text_sha256": "20fb960e2ed7735196e805e0c5929fe5c562f1d4ec5b615e73e11b643e046060",
+      "annotation_macros": [
+        "\\textcolor"
+      ],
+      "main_text_characters": 30959,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2307.14965v3",
+      "paper_id": "2307.14965",
+      "title": "Interlayer Coupling Driven High-Temperature Superconductivity in La$_3$Ni$_2$O$_7$ Under Pressure",
+      "authors": "Chen Lu, Zhiming Pan, Fan Yang, Congjun Wu",
+      "doi": "10.1103/PhysRevLett.132.146002",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "1a72eb701cf21760dc2bc946533fd59d5d51907e663d9ed480cd05926f8bbb5c",
+      "source_url": "https://arxiv.org/src/2307.14965v3",
+      "theory_review": {
+        "id": "2307.14965",
+        "eligible": true,
+        "reason": "Slave-boson bilayer t-J theory of La3Ni2O7",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2307.14965v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "86cf6aa9b448b4d91f0872ace9af198ed9a2ecf3cb1e72333473b41b5a0c6405"
+      },
+      "split": "train",
+      "clean_text_sha256": "49822fb6d835ffba8b1b8ee8842a06c3dc53658c94a70f681cb0998566303b53",
+      "annotation_macros": [],
+      "main_text_characters": 24594,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2305.03962v2",
+      "paper_id": "2305.03962",
+      "title": "Mechanisms of DNA-mediated allostery",
+      "authors": "Midas Segers and Aderik Voorspoels and Takahiro Sakaue and Enrico\n  Carlon",
+      "doi": "10.1103/PhysRevLett.131.238402",
+      "categories": "cond-mat.stat-mech q-bio.BM",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "b4a56b48613996a68c593c85051870f258c2589b9ccca4b3c0ac0f5991998913",
+      "source_url": "https://arxiv.org/src/2305.03962v2",
+      "theory_review": {
+        "id": "2305.03962",
+        "eligible": true,
+        "reason": "Mechanical model of DNA allostery compared to published experiments (off-core topic)",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2305.03962v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "a4d2753943636217961f4f753a9f256c7f9f803df8f3cd5c82d6a5889c59bd29"
+      },
+      "split": "train",
+      "clean_text_sha256": "be1fb56dedc1a9be31e2a974d27f3d6473b18c222428bedc1662d3b9077a7423",
+      "annotation_macros": [],
+      "main_text_characters": 23586,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2409.18050v2",
+      "paper_id": "2409.18050",
+      "title": "Superconductivity and charge-density-wave in the Holstein model on the Penrose Lattice",
+      "authors": "Lu Liu, Zi-Xiang Li, and Fan Yang",
+      "doi": "10.1103/PhysRevLett.134.206001",
+      "categories": "cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "86c78868401e48d97637eb88acf23d67b0ddb39456a9e49c45515cf959f4d187",
+      "source_url": "https://arxiv.org/src/2409.18050v2",
+      "theory_review": {
+        "id": "2409.18050",
+        "eligible": true,
+        "reason": "Determinant QMC of Holstein model on Penrose lattice",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2409.18050v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "3494e21ecc3eeff8e54190641dc67cbbbbfb2df56b36461338aa2bc3884e2a10"
+      },
+      "split": "train",
+      "clean_text_sha256": "349ff147bf6d9210a33625402d1a7ca2cc19b08a661b09633448b4c7bd52b810",
+      "annotation_macros": [
+        "\\textcolor"
+      ],
+      "main_text_characters": 21965,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2409.07804v2",
+      "paper_id": "2409.07804",
+      "title": "Geometric control and memory in networks of hysteretic elements",
+      "authors": "Dor Shohat and Martin van Hecke",
+      "doi": "10.1103/PhysRevLett.134.188201",
+      "categories": "cond-mat.soft cond-mat.dis-nn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "8bca302fef48e8a0177e079b02bd9f13eee0026c468355dfdc8982640bad2b7b",
+      "source_url": "https://arxiv.org/src/2409.07804v2",
+      "theory_review": {
+        "id": "2409.07804",
+        "eligible": true,
+        "reason": "Analytic mapping from hysteretic springs to hysterons",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2409.07804v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "bd0fcf9dca415c3a1b4c3383b90dedf3d8e638f580fc360154cad84004a37485"
+      },
+      "split": "train",
+      "clean_text_sha256": "ddb882c15114667e8e958ad994b491a9e0377ff28db413a4876f89c872c4eb30",
+      "annotation_macros": [],
+      "main_text_characters": 24642,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2507.15503v2",
+      "paper_id": "2507.15503",
+      "title": "Harnessing higher-dimensional fluctuations in an information engine",
+      "authors": "Antonio Patr\\'on Castro, John Bechhoefer and David A. Sivak",
+      "doi": "10.1103/xwjd-qxfg",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "16459a350b0d8056807d7456380e9c6eaaea4ce5bce3f32dec1d650111507e21",
+      "source_url": "https://arxiv.org/src/2507.15503v2",
+      "theory_review": {
+        "id": "2507.15503",
+        "eligible": true,
+        "reason": "Theoretical optimization of a d-dimensional information engine; no data reported in abstract",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2507.15503v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "dcb8576fc999bf2f42f4dc034aa615550065fb8b4952621d85fe851fd37bacc3"
+      },
+      "split": "train",
+      "clean_text_sha256": "c939cc9d34f33f6c85b56f8834ddc1abfae28563c1252224ea6a1e4e9c462e65",
+      "annotation_macros": [],
+      "main_text_characters": 27141,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2312.03840v1",
+      "paper_id": "2312.03840",
+      "title": "Transient localization from the interaction with quantum bosons",
+      "authors": "H. Rammal, A. Ralko, S. Ciuchi, S. Fratini",
+      "doi": "10.1103/PhysRevLett.132.266502",
+      "categories": "cond-mat.str-el cond-mat.dis-nn cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "e7baf2603fb81dd2e9a6c020e141c3d1ca270bb73ed53be44825ce8d16cd7506",
+      "source_url": "https://arxiv.org/src/2312.03840v1",
+      "theory_review": {
+        "id": "2312.03840",
+        "eligible": true,
+        "reason": "Numerically exact finite-temperature electron-boson transient localization",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2312.03840v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "35c5cf84508f5db1520de068462700e09d2f7d2c1cbd78e47712527fde6a3e42"
+      },
+      "split": "train",
+      "clean_text_sha256": "26059a68af671bd0dc2d7eff756c26d26b11361012aee7783960615fcff7be00",
+      "annotation_macros": [],
+      "main_text_characters": 21470,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2411.02489v1",
+      "paper_id": "2411.02489",
+      "title": "Adatom engineering magnetic order in superconductors: Applications to altermagnetic superconductivity",
+      "authors": "Lucas V. Pupim and Mathias S. Scheurer",
+      "doi": "10.1103/PhysRevLett.134.146001",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "e0d2dfa0d0a6fa0a48c307525136afe9150a378b611d808601ae9e7eeb802afd",
+      "source_url": "https://arxiv.org/src/2411.02489v1",
+      "theory_review": {
+        "id": "2411.02489",
+        "eligible": true,
+        "reason": "Theory of adatom-engineered altermagnetic superconductivity",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2411.02489v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "33ffd227aab6f97d7a35cbb3f06a2eb4783cb8405d3f3802333a0eaa7fb93f2d"
+      },
+      "split": "train",
+      "clean_text_sha256": "fe6c6183357f9bbbb7f1f0b0f743eac887ffe825903a300d19a5d84f3c586531",
+      "annotation_macros": [],
+      "main_text_characters": 24597,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2407.08194v3",
+      "paper_id": "2407.08194",
+      "title": "Uncovering Emergent Spacetime Supersymmetry with Rydberg Atom Arrays",
+      "authors": "Chengshu Li, Shang Liu, Hanteng Wang, Wenjun Zhang, Zi-Xiang Li, Hui\n  Zhai, Yingfei Gu",
+      "doi": "10.1103/PhysRevLett.133.223401",
+      "categories": "cond-mat.quant-gas cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "d669420023d5210b9d1088787939592a7d3e7afc245b5c40147890f21a55ea4b",
+      "source_url": "https://arxiv.org/src/2407.08194v3",
+      "theory_review": {
+        "id": "2407.08194",
+        "eligible": true,
+        "reason": "Theory proposal for emergent SUSY in Rydberg arrays",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2407.08194v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "8b982c8161b8d4fbc63c4a1c907050feb6231984c528d5eabe2bba79e0e22ad6"
+      },
+      "split": "train",
+      "clean_text_sha256": "731b52e2bc67ac33f056f910073e6abe709a21b952e4e4b9d496de185f5f9f36",
+      "annotation_macros": [],
+      "main_text_characters": 25059,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2309.16227v2",
+      "paper_id": "2309.16227",
+      "title": "Fast rare events in exit times distributions of jump processes",
+      "authors": "Alessandro Vezzani and Raffaella Burioni",
+      "doi": "10.1103/PhysRevLett.132.187101",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "cff508113d6e753af2a494991cdd4d877add6be031596c4452b5db53a0fc32bd",
+      "source_url": "https://arxiv.org/src/2309.16227v2",
+      "theory_review": {
+        "id": "2309.16227",
+        "eligible": true,
+        "reason": "Analytic theory of fast rare events in jump processes with simulations",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2309.16227v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "12954f72aeed71a2ef8f0adb0e68d73c439ef00a7d6ca7f77fca5c49c1e490c5"
+      },
+      "split": "train",
+      "clean_text_sha256": "a2efb1377cf411e05bc9bfc2bd78c5ae1efbe4bb4ec6248cbceac437a7b2e57d",
+      "annotation_macros": [],
+      "main_text_characters": 20078,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2407.01457v1",
+      "paper_id": "2407.01457",
+      "title": "Quantum Nonlinear Acoustic Hall Effect and Inverse Acoustic Faraday Effect in Dirac Insulators",
+      "authors": "Ying Su, Alexander V. Balatsky, Shi-Zeng Lin",
+      "doi": "10.1103/PhysRevLett.134.026304",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "8b0b77a08958eed53069bde7393707859d334ee44458ca33d115eb89c01ebb9f",
+      "source_url": "https://arxiv.org/src/2407.01457v1",
+      "theory_review": {
+        "id": "2407.01457",
+        "eligible": true,
+        "reason": "Theory proposal for acoustic nonlinear Hall and inverse Faraday effects",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2407.01457v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "bf1bc6c46b934fa369fa5a09dea56e2697ae4f8d2882f7891109af4eb4047407"
+      },
+      "split": "train",
+      "clean_text_sha256": "a0d7e97ba43437784bb8a76cea854ac49c27c6706659eeb56c3c3171a07e52b5",
+      "annotation_macros": [
+        "\\textcolor"
+      ],
+      "main_text_characters": 28249,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2503.16384v2",
+      "paper_id": "2503.16384",
+      "title": "Spontaneous vortex-antivortex lattice and Majorana fermions in rhombohedral graphene",
+      "authors": "Filippo Gaggioli, Daniele Guerci, Liang Fu",
+      "doi": "10.1103/k8sb-rqxf",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "4449706c81833c9ad711c9a3f6e41f40f06d4c9a2559477f87f77158f667a587",
+      "source_url": "https://arxiv.org/src/2503.16384v2",
+      "theory_review": {
+        "id": "2503.16384",
+        "eligible": true,
+        "reason": "Ginzburg-Landau and microscopic prediction of vortex-antivortex lattice",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2503.16384v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "34e03435553266c0a4131f5cdf8d42146b6a68b8f8fa232cf5ca8bd5d0b5c788"
+      },
+      "split": "train",
+      "clean_text_sha256": "aa061dbf3d91d0b7a2a155b21a137669fe4614ea277f050b3f4ed8cbc552cd14",
+      "annotation_macros": [],
+      "main_text_characters": 24492,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2312.04093v2",
+      "paper_id": "2312.04093",
+      "title": "Intrinsic gyrotropic magnetic current from Zeeman quantum geometry",
+      "authors": "Longjun Xiang, Jinxiong Jia, Fuming Xu, Zhenhua Qiao, Jian Wang",
+      "doi": "10.1103/PhysRevLett.134.116301",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "22ec00cefb3a84b12b3ef89b6a5961921139dd4161924c53a228953bf6e34e88",
+      "source_url": "https://arxiv.org/src/2312.04093v2",
+      "theory_review": {
+        "id": "2312.04093",
+        "eligible": true,
+        "reason": "Zeeman quantum-geometric tensor theory with model calculations",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2312.04093v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "56251a7b06794ba684323203ac4e06cfe212456c088788789f2e1e4597e4a3e2"
+      },
+      "split": "train",
+      "clean_text_sha256": "f197e4ee7f5b0b7c23517b2974bda2aa50228d7b7db38907c6909f4a1d13a462",
+      "annotation_macros": [
+        "\\textcolor"
+      ],
+      "main_text_characters": 27473,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2306.12548v1",
+      "paper_id": "2306.12548",
+      "title": "Finite-time Lyapunov exponents of deep neural networks",
+      "authors": "L. Storm, H. Linander, J. Bec, K. Gustavsson, B. Mehlig",
+      "doi": "10.1103/PhysRevLett.132.057301",
+      "categories": "cond-mat.dis-nn cs.LG stat.ML",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "7a03c07e36920263c0a50f8adfc3c1a655c11f8a5e1e17acb8f1aee563bfb39c",
+      "source_url": "https://arxiv.org/src/2306.12548v1",
+      "theory_review": {
+        "id": "2306.12548",
+        "eligible": true,
+        "reason": "Lyapunov-exponent analysis of deep neural networks (off-core topic)",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2306.12548v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "48e9af333cba3da91af7b45332430da8a194015f92c6ffb0607c0e24d580a252"
+      },
+      "split": "train",
+      "clean_text_sha256": "68cf5d8f4703f78165c98eef03aad3020696f7458e92566780acda06e14c32f4",
+      "annotation_macros": [],
+      "main_text_characters": 22962,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2407.02481v3",
+      "paper_id": "2407.02481",
+      "title": "Unveiling Supersolid Order via Vortex Trajectory Correlations",
+      "authors": "Subrata Das and Vito W. Scarola",
+      "doi": "10.1103/PhysRevLett.134.163401",
+      "categories": "cond-mat.quant-gas physics.atom-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "5a27d9583e0d8282782a38c5a0a87a8c84673d5b907d4c4b2c93bb26d23ced9a",
+      "source_url": "https://arxiv.org/src/2407.02481v3",
+      "theory_review": {
+        "id": "2407.02481",
+        "eligible": true,
+        "reason": "Proposed vortex-correlation order parameter tested numerically",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2407.02481v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "0e3fd79b9d3c67e3f7cf56886c5e0634eef9ab8585523948d11667851de0670c"
+      },
+      "split": "train",
+      "clean_text_sha256": "56a25c790e0c11f75dee6f284b76de78d4bfd00c1a549876c99535c8879b11a1",
+      "annotation_macros": [],
+      "main_text_characters": 24510,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2307.10103v1",
+      "paper_id": "2307.10103",
+      "title": "Coexistence of defect morphologies in three dimensional active nematics",
+      "authors": "Pasquale Digregorio, Cecilia Rorai, Ignacio Pagonabarraga, Federico Toschi",
+      "doi": "10.1103/PhysRevLett.132.258301",
+      "categories": "cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "2c2de19a620f360995886b13b3a7d54cdf39fc1bd9774871a045b6caee0aa5fe",
+      "source_url": "https://arxiv.org/src/2307.10103v1",
+      "theory_review": {
+        "id": "2307.10103",
+        "eligible": true,
+        "reason": "Simulations of 3D active nematic defect morphologies",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2307.10103v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "d8e4e88c069b090d617d0b865ef773fdc2866d03b7339e52cc102fe09ddc9254"
+      },
+      "split": "train",
+      "clean_text_sha256": "bb0e69ad0089498e2981084e835c5b07cd6eaead87bc8e87a8f82f4bc21a82d5",
+      "annotation_macros": [],
+      "main_text_characters": 22061,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2402.18364v2",
+      "paper_id": "2402.18364",
+      "title": "Extracting the Luttinger parameter from a single wave function",
+      "authors": "Bi-Yang Tan, Yueshui Zhang, Hua-Chen Zhang, Wei Tang, Lei Wang,\n  Hong-Hao Tu, Ying-Hai Wu",
+      "doi": "10.1103/PhysRevLett.134.076501",
+      "categories": "cond-mat.str-el cond-mat.mes-hall hep-th",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "f789cdf22644e4cc00ad50bf6d40555f92847b29271c50957beebc689bfecf43",
+      "source_url": "https://arxiv.org/src/2402.18364v2",
+      "theory_review": {
+        "id": "2402.18364",
+        "eligible": true,
+        "reason": "CFT crosscap-state method for Luttinger parameter with lattice numerics",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2402.18364v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "71a9c100ce2967d6b35e09baedd86aa7495d16179998d1ba986017df7aafe416"
+      },
+      "split": "train",
+      "clean_text_sha256": "ea5622175092f2ef71b499da3dc581a1262ff680f8ccea8595819c39ebfe6eb8",
+      "annotation_macros": [],
+      "main_text_characters": 24480,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2405.09217v2",
+      "paper_id": "2405.09217",
+      "title": "Augmenting Density Matrix Renormalization Group with Clifford Circuits",
+      "authors": "Xiangjian Qian, Jiale Huang, and Mingpu Qin",
+      "doi": "10.1103/PhysRevLett.133.190402",
+      "categories": "cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "05cd82ca3a112da438b91071f7355a94d25cab537afd2e29c7b58b04d6b095da",
+      "source_url": "https://arxiv.org/src/2405.09217v2",
+      "theory_review": {
+        "id": "2405.09217",
+        "eligible": true,
+        "reason": "Numerical-method paper: Clifford-augmented DMRG",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2405.09217v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "59ebb04d4da0038c927a6cdf3387db2d5cb17efe6c6ddbd17b4b47c094b3a300"
+      },
+      "split": "train",
+      "clean_text_sha256": "0d95d6d0c33c3e73ae6aec16766a2cd1dfc07afd75f01230182e6a2ffef6df49",
+      "annotation_macros": [],
+      "main_text_characters": 20702,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2306.11321v1",
+      "paper_id": "2306.11321",
+      "title": "Intrinsic Nonlinear Hall Detection of the N\\'eel Vector for Two-Dimensional Antiferromagnetic Spintronics",
+      "authors": "Jizhang Wang and Hui Zeng and Wenhui Duan and Huaqing Huang",
+      "doi": "10.1103/PhysRevLett.131.056401",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "e8d702edbec952ad1d2c37dda74a452d2e515522edafd4da424f4beb0ee37af1",
+      "source_url": "https://arxiv.org/src/2306.11321v1",
+      "theory_review": {
+        "id": "2306.11321",
+        "eligible": true,
+        "reason": "First-principles nonlinear Hall detection of Neel vector",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2306.11321v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "03254260718fdc33cebdb601d685e1cfbf1e9bf266e9446d1c48ca8df8f9795f"
+      },
+      "split": "train",
+      "clean_text_sha256": "5fc51b4057eb3a46d0cf9e7da3f7e033d5c254463de5561ee63c34bb2ed7d185",
+      "annotation_macros": [],
+      "main_text_characters": 25249,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2304.03303v1",
+      "paper_id": "2304.03303",
+      "title": "Enhanced Superconducting Diode Effect due to coexisting Phases",
+      "authors": "Sayan Banerjee and Mathias S. Scheurer",
+      "doi": "10.1103/PhysRevLett.132.046003",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "ee3c2203c87b6c993de7d6eb5232b11186c0d0f33c6883bdb6f2542089731195",
+      "source_url": "https://arxiv.org/src/2304.03303v1",
+      "theory_review": {
+        "id": "2304.03303",
+        "eligible": true,
+        "reason": "Phenomenological and microscopic theory of enhanced diode effect",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2304.03303v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "d44858793e81cc9db5e9589d90bafc4351d858344eff6e795147fd6f900246a7"
+      },
+      "split": "train",
+      "clean_text_sha256": "82d454db42cb12fc81241161ffcd161f483f99b2825d6d55a54025ba658c1ed0",
+      "annotation_macros": [],
+      "main_text_characters": 28904,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2506.04356v1",
+      "paper_id": "2506.04356",
+      "title": "Intra-unit-cell singlet pairing mediated by altermagnetic fluctuations",
+      "authors": "Yi-Ming Wu, Yuxuan Wang and Rafael M. Fernandes",
+      "doi": "10.1103/dlpb-gfct",
+      "categories": "cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "26507cf19bb7d86494bddef25e0c3534e5719b00d6a697eb011488bbc834f2ee",
+      "source_url": "https://arxiv.org/src/2506.04356v1",
+      "theory_review": {
+        "id": "2506.04356",
+        "eligible": true,
+        "reason": "Theory of pairing from altermagnetic fluctuations",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2506.04356v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "1af944f925e7586f16c245ecee4f281667ae12147828f7c551dfb3bf72b41950"
+      },
+      "split": "train",
+      "clean_text_sha256": "86fbc9d6b1d748c4afb0169a0a2ec3feb1637590dcd96336f6e67b6988176254",
+      "annotation_macros": [],
+      "main_text_characters": 25749,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2409.17096v2",
+      "paper_id": "2409.17096",
+      "title": "Self-organization and memory in an disordered solid subject to random loading",
+      "authors": "Muhittin Mungan and Dheeraj Kumar and Sylvain Patinet and Damien Vandembroucq",
+      "doi": "10.1103/PhysRevLett.134.178203",
+      "categories": "cond-mat.soft cond-mat.mtrl-sci q-bio.NC",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "7b34ea43fd1afd00940f5d6575c061a22ba6fac01a38e0645fb574a5de83aca2",
+      "source_url": "https://arxiv.org/src/2409.17096v2",
+      "theory_review": {
+        "id": "2409.17096",
+        "eligible": true,
+        "reason": "Mesoscopic model of memory under random loading",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2409.17096v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "91a8406d0c343f89f557aa5a61a5daed81cd9cd441dcf9c700256f50d691255d"
+      },
+      "split": "train",
+      "clean_text_sha256": "25db0eee9d4940acb1c8df4b2db4cd16fb6e8e5aa74207cbcd1215248f2874f7",
+      "annotation_macros": [],
+      "main_text_characters": 28668,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2305.16244v2",
+      "paper_id": "2305.16244",
+      "title": "Tuning photon-mediated interactions in a multimode cavity: from supersolid to insulating droplets hosting phononic excitations",
+      "authors": "Natalia Masalaeva, Helmut Ritsch, Farokh Mivehvar",
+      "doi": "10.1103/PhysRevLett.131.173401",
+      "categories": "cond-mat.quant-gas quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "e2d444bc34e72c4df50eec4b5a8c93582322ce99b7043247fb411da94689c393",
+      "source_url": "https://arxiv.org/src/2305.16244v2",
+      "theory_review": {
+        "id": "2305.16244",
+        "eligible": true,
+        "reason": "Theoretical proposal for multimode-cavity supersolid and droplet phases",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2305.16244v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "558eb7f0db391539237830042cd0c2a16b3783af75fbc9f1cb78b769bc319aba"
+      },
+      "split": "train",
+      "clean_text_sha256": "a30ae04becbdd8c355ab9c70e958865b45c4c6da6cd8947eb85d876f525ba85b",
+      "annotation_macros": [],
+      "main_text_characters": 24404,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2406.09080v2",
+      "paper_id": "2406.09080",
+      "title": "Link to Densify: Topological Transitions and Origin of Hysteresis During the (De)Compression of Amorphous Ices",
+      "authors": "Yair Augusto Guti\\'errez Fosado and Davide Michieletto and Fausto\n  Martelli",
+      "doi": "10.1103/PhysRevLett.133.266102",
+      "categories": "cond-mat.dis-nn cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "962fdcf23869898e49b3cf84e1bf1ff8b9c2d37d34c356a1e0c4c81776a23316",
+      "source_url": "https://arxiv.org/src/2406.09080v2",
+      "theory_review": {
+        "id": "2406.09080",
+        "eligible": true,
+        "reason": "Simulation study of hydrogen-bond topology in amorphous ices",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2406.09080v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "289859379aefa9b36a503b5d6f22f84cd4ec58b5e501a4f313d9c87dc17ba7a3"
+      },
+      "split": "train",
+      "clean_text_sha256": "939807e2cd818c4a95a295384545673b6a0ee76fd8429b26d4fde57f86e20c04",
+      "annotation_macros": [],
+      "main_text_characters": 17744,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2306.10411v1",
+      "paper_id": "2306.10411",
+      "title": "Quantum scars and regular eigenstates in a chaotic spinor condensate",
+      "authors": "Bertrand Evrard, Andrea Pizzi, Simeon I. Mistakidis and Ceren B. Dag",
+      "doi": "10.1103/PhysRevLett.132.020401",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "b787ac5162bdd021af4d390f6d7f6984de0478edc137db177ee1b30ae3c84784",
+      "source_url": "https://arxiv.org/src/2306.10411v1",
+      "theory_review": {
+        "id": "2306.10411",
+        "eligible": true,
+        "reason": "Theory of scars and regular states in a spinor condensate",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2306.10411v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "380bcffbc4f7ce8bfa0ab08071f07152cf854c9e0900adf70bef6046f341be11"
+      },
+      "split": "train",
+      "clean_text_sha256": "d9abd362945892b70c9f366dc2dd38a291232ab59bd1d8fbc3665d5e1bbc6d0d",
+      "annotation_macros": [],
+      "main_text_characters": 23515,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2404.19009v2",
+      "paper_id": "2404.19009",
+      "title": "Classical origins of Landau-incompatible transitions",
+      "authors": "Abhishodh Prakash and Nick G. Jones",
+      "doi": "10.1103/PhysRevLett.134.097103",
+      "categories": "cond-mat.stat-mech cond-mat.str-el hep-th",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "2b42cfe1dddc97f4a9f3fbfd3e9b88e9b97b484d245d4e404cdf4071055887af",
+      "source_url": "https://arxiv.org/src/2404.19009v2",
+      "theory_review": {
+        "id": "2404.19009",
+        "eligible": true,
+        "reason": "Classical stat-mech models exhibiting Landau-incompatible transitions",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2404.19009v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "d713dc97d6078c537818c050f9732694903fb9770cbc014d6ae426d22e37e05d"
+      },
+      "split": "train",
+      "clean_text_sha256": "bd53d6f5408323106444c7876626c51bf821ddd8cd1c7ce6bbeec1907eba8fef",
+      "annotation_macros": [],
+      "main_text_characters": 26876,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2305.13561v3",
+      "paper_id": "2305.13561",
+      "title": "Fluids in random media and dimensional augmentation",
+      "authors": "John Cardy",
+      "doi": "10.1103/physrevlett.131.147102",
+      "categories": "cond-mat.stat-mech cond-mat.dis-nn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "b39ac850342b7d8a92c4a9243838c887e96b7e7a86c335f9ffc478ced5968d35",
+      "source_url": "https://arxiv.org/src/2305.13561v3",
+      "theory_review": {
+        "id": "2305.13561",
+        "eligible": true,
+        "reason": "Analytic cluster-expansion argument on random-field dimensional reduction; no PRL DOI in metadata",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2305.13561v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "3efce9c671af90b33bf330adf81d7e9deeaae6c9ae2acc8771c4de6653169618"
+      },
+      "split": "validation",
+      "clean_text_sha256": "0a6268870f1fcfee035b0f1e14ba3fe0cf3c747ab854195dd4c07f5912332a59",
+      "annotation_macros": [],
+      "main_text_characters": 18581,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2503.00475v1",
+      "paper_id": "2503.00475",
+      "title": "Field-driven band asymmetry and non-reciprocal transport in a helimagnet",
+      "authors": "Darius-Alexandru Deaconu, Aneesh Agarwal, Rodion Vladimirovich Belosludov, Robert-Jan Slager, and Mohammad Saeed Bahramy",
+      "doi": "10.1103/lhj4-9h29",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "07199c61ef5d74b98f599ffeadba104cf1927d8cf6f5c0e9b938a4ecbbd880a9",
+      "source_url": "https://arxiv.org/src/2503.00475v1",
+      "theory_review": {
+        "id": "2503.00475",
+        "eligible": true,
+        "reason": "Minimal-model theory of field-induced band asymmetry in helimagnets",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2503.00475v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "030094e82400bc30dc4ab3f3b0198b38a86089f9988f093766d7aaf5b4f884be"
+      },
+      "split": "validation",
+      "clean_text_sha256": "87d7e1241dc7b36a018f5d84ff6037bcd0ad0480127049ebdfe00496c3820c9a",
+      "annotation_macros": [],
+      "main_text_characters": 23141,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2407.01936v1",
+      "paper_id": "2407.01936",
+      "title": "Many-body effects on high-harmonic generation in Hubbard ladders",
+      "authors": "Yuta Murakami, Thomas Hansen, Shintaro Takayoshi, Lars Bojer Madsen,\n  Philipp Werner",
+      "doi": "10.1103/PhysRevLett.134.096504",
+      "categories": "cond-mat.str-el cond-mat.mes-hall physics.optics",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "486f6c1c0e7ce75a00d327a7f4092c49b328d736316d07f4a2d7e9d24054ff58",
+      "source_url": "https://arxiv.org/src/2407.01936v1",
+      "theory_review": {
+        "id": "2407.01936",
+        "eligible": true,
+        "reason": "Two-leg Hubbard ladder simulations of high-harmonic generation",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2407.01936v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "aea1ac1369a5fd7805813ba078faa3b8f231caa1a4ff913a112d6dd30b582dd4"
+      },
+      "split": "validation",
+      "clean_text_sha256": "8be192ff079f74f46e66b59ce96b466dfa00bf91140798908f89e3c487de1265",
+      "annotation_macros": [],
+      "main_text_characters": 22987,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2410.09148v2",
+      "paper_id": "2410.09148",
+      "title": "Unconventional superconductivity mediated by exciton density wave fluctuations",
+      "authors": "Ajesh Kumar, Adarsh S. Patri, T. Senthil",
+      "doi": "10.1103/7f6c-jh1k",
+      "categories": "cond-mat.str-el cond-mat.mes-hall cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "c9a292c6a49baae0a51c16b4ec9aaf6c3605b372885cde4a3fcfa5cb90fd2fc4",
+      "source_url": "https://arxiv.org/src/2410.09148v2",
+      "theory_review": {
+        "id": "2410.09148",
+        "eligible": true,
+        "reason": "Hartree-Fock and fluctuation theory of exciton-mediated superconductivity",
+        "category": "cond-mat.str-el",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2410.09148v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "3f7ef9b002dc10747a997a9a43368e4575f1627a766c4f4ce09c317366ccab03"
+      },
+      "split": "validation",
+      "clean_text_sha256": "28d996974352549fb75d36d7fea30ded2b9f5909b75f0205e9a202e860d69fa8",
+      "annotation_macros": [
+        "\\textcolor"
+      ],
+      "main_text_characters": 25230,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2410.12204v1",
+      "paper_id": "2410.12204",
+      "title": "Fate of thermalization of ultracold fermions with two-body dissipation",
+      "authors": "Xin-Yuan Gao and Yangqian Yan",
+      "doi": "10.1103/PhysRevLett.134.153402",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "f606365628f498fd42298b5bcab72dfe6a15e2f84632c948bdc1a80d5cbd3df0",
+      "source_url": "https://arxiv.org/src/2410.12204v1",
+      "theory_review": {
+        "id": "2410.12204",
+        "eligible": true,
+        "reason": "Inelastic quantum Boltzmann theory of two-body loss compared to existing data",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2410.12204v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "f06dd52019a74ef84d288299f6e6345024bde9464fa0732b24c1ea595814718d"
+      },
+      "split": "validation",
+      "clean_text_sha256": "0958a097dad6e07e923a719613540dad771b5e527c090991bdf235ee13567df5",
+      "annotation_macros": [],
+      "main_text_characters": 26833,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2404.03638v1",
+      "paper_id": "2404.03638",
+      "title": "Cooperation between electron-phonon coupling and electronic interaction in bilayer nickelates La$_3$Ni$_2$O$_7$",
+      "authors": "Jun Zhan, Yuhao Gu, Xianxin Wu and Jiangping Hu",
+      "doi": "10.1103/PhysRevLett.134.136002",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "eb910068438ca509ed18b17ee1916c27268eadad7ac2bcb48023a0e4131e8f2e",
+      "source_url": "https://arxiv.org/src/2404.03638v1",
+      "theory_review": {
+        "id": "2404.03638",
+        "eligible": true,
+        "reason": "First-principles phonons plus FRG for La3Ni2O7",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2404.03638v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "100b15eb878deb015b4ad958b60fda7c0fcab789057c0edb7f10b877bcde6c0c"
+      },
+      "split": "validation",
+      "clean_text_sha256": "28e5f69320b7ad46abb106623c4a412f22c3acbea9fd4322266f926e6ebe0c2d",
+      "annotation_macros": [],
+      "main_text_characters": 26217,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2505.18272v2",
+      "paper_id": "2505.18272",
+      "title": "Mechanochemical feedback drives complex inertial dynamics in active solids",
+      "authors": "Siddhartha Sarkar, Biswarup Ash, Yueyang Wu, Nicholas Boechler, Suraj Shankar, Xiaoming Mao",
+      "doi": "10.1103/19rh-3whq",
+      "categories": "cond-mat.soft cond-mat.mtrl-sci cond-mat.stat-mech nlin.CD",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "27fc15b67102ff159b35e22a067484410dfdf929e2bad73f3750bc7f93c6a625",
+      "source_url": "https://arxiv.org/src/2505.18272v2",
+      "theory_review": {
+        "id": "2505.18272",
+        "eligible": true,
+        "reason": "Model and simulations of mechanochemical active solids",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2505.18272v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "85be72e4e624ef6b65822209d0360fcd201eadcc1d4604584a7f4d43e8fb7460"
+      },
+      "split": "validation",
+      "clean_text_sha256": "ffa2a8cca09446917b6b7357316b74a525465cec07d3fa82a676c299c7356097",
+      "annotation_macros": [],
+      "main_text_characters": 26660,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2307.08110v2",
+      "paper_id": "2307.08110",
+      "title": "Collective relaxation dynamics in a three-dimensional lattice glass model",
+      "authors": "Yoshihiko Nishikawa and Ludovic Berthier",
+      "doi": "10.1103/PhysRevLett.132.067101",
+      "categories": "cond-mat.dis-nn cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "2b99dd4b82b45dbe36b7d97aa961a24c4e3157ea49fb284a3c6f6d46f6e06497",
+      "source_url": "https://arxiv.org/src/2307.08110v2",
+      "theory_review": {
+        "id": "2307.08110",
+        "eligible": true,
+        "reason": "Numerical relaxation mechanisms of 3D lattice glass",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2307.08110v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "a04fba74b41e1d2960124d6f77b29c7f0ca00adde6bdb79014197ab401e7c0e1"
+      },
+      "split": "validation",
+      "clean_text_sha256": "a06e1270bed384110f7b68e1041df66b34ae88ac8d68e56da1cd6531fa9a0293",
+      "annotation_macros": [],
+      "main_text_characters": 20550,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2303.14385v3",
+      "paper_id": "2303.14385",
+      "title": "Nonequilibrium Fractional Josephson Effect",
+      "authors": "Aritra Lahiri, Sang-Jun Choi, Bj\\\"orn Trauzettel",
+      "doi": "10.1103/PhysRevLett.131.126301",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "66c680a61c0301293aa97f66d8ee20f4e4256ad265d597cd1a9b6d26aacb83e4",
+      "source_url": "https://arxiv.org/src/2303.14385v3",
+      "theory_review": {
+        "id": "2303.14385",
+        "eligible": true,
+        "reason": "Microscopic theory of nonequilibrium fractional Josephson effect",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2303.14385v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "430f7481a3907b3bb74b8ebbe76ba823454179dea0b071fbd4ca8ad95438116b"
+      },
+      "split": "validation",
+      "clean_text_sha256": "419044140f7603411bcfa96300f9e7fbb3c03622b9a4bd1ac7977f8b8aa25dc8",
+      "annotation_macros": [],
+      "main_text_characters": 24512,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2405.18443v1",
+      "paper_id": "2405.18443",
+      "title": "Using Thermal Crowding to Direct Pattern Formation on the Nanoscale",
+      "authors": "Ryan H. Allaire, Linda J. Cummings, Lou Kondic",
+      "doi": "10.1103/PhysRevLett.133.214003",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "f2af63c601f331310989f4fcc4303bc0088dee619c063e5ef1160b7a274316c7",
+      "source_url": "https://arxiv.org/src/2405.18443v1",
+      "theory_review": {
+        "id": "2405.18443",
+        "eligible": true,
+        "reason": "Self-consistent modeling of laser-melted metal films",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2405.18443v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "640f48ba8ad52904a62f8adfcaefe8a462370603294318d395e3eb6f40a2f9a8"
+      },
+      "split": "validation",
+      "clean_text_sha256": "4acdba2c01f752bea088817eb234ed229c12c32d210c74a0cbcabe5517f92198",
+      "annotation_macros": [],
+      "main_text_characters": 24032,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2401.13026v2",
+      "paper_id": "2401.13026",
+      "title": "Liquid-crystal-like dynamic transition in ferroelectric/dielectric superlattices",
+      "authors": "Fernando G\\'omez-Ortiz, M\\'onica Graf, Javier Junquera, Jorge\n  \\'I\\~niguez-Gonz\\'alez and Hugo Aramberri",
+      "doi": "10.1103/PhysRevLett.133.066801",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "5535cd213cb633757fa95b6213dc2f0325cb5dd8009388b731f78a5a01a9a323",
+      "source_url": "https://arxiv.org/src/2401.13026v2",
+      "theory_review": {
+        "id": "2401.13026",
+        "eligible": true,
+        "reason": "Molecular dynamics of ferroelectric superlattice melting",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2401.13026v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "9815c96c3cba92681ced1af9ddc935e83cfcbfcc46ba02ed3cfc307c73191b71"
+      },
+      "split": "test",
+      "clean_text_sha256": "550fbed8cf6cf71debd9aa4bb1205ca0d6ef5c77963de1da866466f415b40f39",
+      "annotation_macros": [],
+      "main_text_characters": 21994,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2306.09698v2",
+      "paper_id": "2306.09698",
+      "title": "Glitches in rotating supersolids",
+      "authors": "Elena Poli, Thomas Bland, Samuel J. M. White, Manfred J. Mark,\n  Francesca Ferlaino, Silvia Trabucco, Massimo Mannarelli",
+      "doi": "10.1103/PhysRevLett.131.223401",
+      "categories": "cond-mat.quant-gas astro-ph.HE astro-ph.SR",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "e5614cbe476e813f4877033952fa174173758984244efa49169bd044846898e0",
+      "source_url": "https://arxiv.org/src/2306.09698v2",
+      "theory_review": {
+        "id": "2306.09698",
+        "eligible": true,
+        "reason": "Numerical dipolar-supersolid model of neutron-star glitches",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2306.09698v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "8b6b324e3c0b2c69c734ba716ea7cf3ec38cdfc0cb1337ad403a387b12695db8"
+      },
+      "split": "test",
+      "clean_text_sha256": "dbb50f9502506ebc497aa39db0b8d4ca573e049568d0a971eb92b7e6a89acbb9",
+      "annotation_macros": [],
+      "main_text_characters": 24183,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2509.13502v3",
+      "paper_id": "2509.13502",
+      "title": "Effective delocalization in the one-dimensional Anderson model with stealthy disorder",
+      "authors": "Carlo Vanoni, Jonas Karcher, Mikael C. Rechtsman, Boris L. Altshuler, Paul J. Steinhardt, Salvatore Torquato",
+      "doi": "10.1103/nl7n-bqn4",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "313360c0099dbfdd6f7869e0b50a874d158f3a3428721efdb4ecee7aa9beb046",
+      "source_url": "https://arxiv.org/src/2509.13502v3",
+      "theory_review": {
+        "id": "2509.13502",
+        "eligible": true,
+        "reason": "Analytic and numerical Anderson model with stealthy disorder",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2509.13502v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "ddc1a93dbeeb01281496f593f79fd582cc164540b13029cc8abbc55b18a4f1e1"
+      },
+      "split": "test",
+      "clean_text_sha256": "32eafdef28d1171091eb1bd5e02b0837a0ecc8fc222ea696aab1a74dd178ee7c",
+      "annotation_macros": [],
+      "main_text_characters": 33690,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2307.01253v2",
+      "paper_id": "2307.01253",
+      "title": "Geometric Stiffness in Interlayer Exciton Condensates",
+      "authors": "Nishchhal Verma, Daniele Guerci, Raquel Queiroz",
+      "doi": "10.1103/PhysRevLett.132.236001",
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "9ffe88a91a63fc09228a12b74f2615dd76418eadc26e8a2239e09c48e29853ac",
+      "source_url": "https://arxiv.org/src/2307.01253v2",
+      "theory_review": {
+        "id": "2307.01253",
+        "eligible": true,
+        "reason": "Quantum-geometric phase stiffness theory of interlayer exciton condensates",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2307.01253v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "276698f1c676f74a49e8d614abfcb6c54b0c3354d602b543d19ed7850fca17a2"
+      },
+      "split": "test",
+      "clean_text_sha256": "9a126b4d6a4c9f43a510964ef75f1aecb69e17e2be7d59148444433e0d4192ff",
+      "annotation_macros": [],
+      "main_text_characters": 26945,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2501.01330v2",
+      "paper_id": "2501.01330",
+      "title": "Non-reciprocal mixtures in suspension: the role of hydrodynamic interactions",
+      "authors": "Giulia Pisegna, Navdeep Rana, Ramin Golestanian, Suropriya Saha",
+      "doi": "10.1103/gbg1-lwwt",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "a8692bdc2f3b89b00c12bdd1dcd2175a06dcdf4aca6441a85c52d7723f31fd26",
+      "source_url": "https://arxiv.org/src/2501.01330v2",
+      "theory_review": {
+        "id": "2501.01330",
+        "eligible": true,
+        "reason": "Nonreciprocal Cahn-Hilliard coupled to fluid: stability and simulations",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2501.01330v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "71ae2ab809b34f142372b92d8dd7e9a512482b3ac7816f4ad0ca6fcf75bd0000"
+      },
+      "split": "test",
+      "clean_text_sha256": "30db813f0f3fa2e19562559a9e325a6918009975d7bed7ead6cccbeb3b05f3f2",
+      "annotation_macros": [],
+      "main_text_characters": 24299,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2405.09728v3",
+      "paper_id": "2405.09728",
+      "title": "Hidden zero modes and topology of multiband non-Hermitian systems",
+      "authors": "K. Monkman, J. Sirker",
+      "doi": "10.1103/PhysRevLett.134.056601",
+      "categories": "cond-mat.stat-mech cond-mat.str-el math-ph math.MP quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "0567f405f5bd48c563ffac0d50bc6f830873f699325fbf3dcbe2d358a53560ab",
+      "source_url": "https://arxiv.org/src/2405.09728v3",
+      "theory_review": {
+        "id": "2405.09728",
+        "eligible": true,
+        "reason": "Theory of hidden zero modes in non-Hermitian multiband chains",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2405.09728v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "c14a75fbf245c6ae3a5dfcbf389ffdc24ed244f6cdf906c1534abd9e65c93005"
+      },
+      "split": "test",
+      "clean_text_sha256": "96d7155fd3030fa7fc25fceaf7b0ea9fb95044cab7cd67eb869f6585e33e5dae",
+      "annotation_macros": [],
+      "main_text_characters": 24937,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2411.03879v2",
+      "paper_id": "2411.03879",
+      "title": "Chiral Phonons Arising From Chirality-Selective Magnon-Phonon Coupling",
+      "authors": "Markus Wei{\\ss}enhofer, Philipp Rieger, M. S. Mrudul, Luca Mikadze, Ulrich Nowak, Peter M. Oppeneer",
+      "doi": "10.1103/j7bs-2zbx",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "7889e9c34c2864195ffe4456914ac585ecfec9378e2b2eff91d96edae3c649a6",
+      "source_url": "https://arxiv.org/src/2411.03879v2",
+      "theory_review": {
+        "id": "2411.03879",
+        "eligible": true,
+        "reason": "First-principles magnon-phonon hybridization in bcc Fe",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2411.03879v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "98eb5deeb5b61e80423de6ee15a746f74e246995813a2f89e68170d27b8b5ee6"
+      },
+      "split": "test",
+      "clean_text_sha256": "755ca17d5c69b1d1bc76cc12e153d12add63da4d7facd55d4c20848f86b986e4",
+      "annotation_macros": [],
+      "main_text_characters": 29236,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2501.03341v2",
+      "paper_id": "2501.03341",
+      "title": "Dynamic scaling theory for a field quench near the Kasteleyn transition in spin ice",
+      "authors": "Stephen Powell, Sukla Pal",
+      "doi": "10.1103/b9gd-y4y6",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "e47ca2ad86b3900d2466d23237600db9f4e6e7cf0deddeb0415844a1e3a16716",
+      "source_url": "https://arxiv.org/src/2501.03341v2",
+      "theory_review": {
+        "id": "2501.03341",
+        "eligible": true,
+        "reason": "Dynamic scaling theory with Monte Carlo for spin-ice Kasteleyn quench",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2501.03341v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "d8d6fb0b3ec14126b0deb901a7412706ebe549506d573975cacb5ef90177d296"
+      },
+      "split": "test",
+      "clean_text_sha256": "6b3e7ea89df9d3db9cf5fd4ac4b7e8bd0c0b743647b7d58b94d530af8f557732",
+      "annotation_macros": [],
+      "main_text_characters": 25657,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2306.02861v2",
+      "paper_id": "2306.02861",
+      "title": "Decoding the drive-bath interplay: A guideline to enhance superconductivity",
+      "authors": "Rui Lin, Aline Ramires, R. Chitra",
+      "doi": "10.1103/physrevlett.133.086001",
+      "categories": "cond-mat.supr-con quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "3db17ead85bc55680d99ce7d5088f8000625229eb0269d5ca5497121c347ef0a",
+      "source_url": "https://arxiv.org/src/2306.02861v2",
+      "theory_review": {
+        "id": "2306.02861",
+        "eligible": true,
+        "reason": "Floquet-Keldysh theory of driven superconductor-bath interplay",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2306.02861v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "97cbc3c43976edd06764b87971c55a106eada9069df7fbdde0171b4d39ddde24"
+      },
+      "split": "test",
+      "clean_text_sha256": "ac00a367bd2259a2f4a1a04c2164cea55fad27a2a0bcd352c2cfd4717cbc2d87",
+      "annotation_macros": [],
+      "main_text_characters": 29633,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2503.07708v3",
+      "paper_id": "2503.07708",
+      "title": "Exact Chiral Symmetries of 3+1D Hamiltonian Lattice Fermions",
+      "authors": "Lei Gioia and Ryan Thorngren",
+      "doi": "10.1103/s5q2-317m",
+      "categories": "cond-mat.str-el cond-mat.mes-hall hep-lat hep-th math-ph math.MP",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "3077772ceb1ebb06e65b77d7720f53162f83bbe89db7b0106009f5bc45a516e6",
+      "source_url": "https://arxiv.org/src/2503.07708v3",
+      "theory_review": {
+        "id": "2503.07708",
+        "eligible": true,
+        "reason": "Construction of 3+1D lattice Hamiltonians with exact chiral symmetries",
+        "category": "cond-mat.str-el",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2503.07708v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "f4e5370a45569e5439864c295037d4dce0151b8697f658d87099f9d1ecc3ce48"
+      },
+      "split": "test",
+      "clean_text_sha256": "b117c717d74c2c28b39be379c07baf015f36c0c1cf92507822a72ad37c048d6b",
+      "annotation_macros": [],
+      "main_text_characters": 22318,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2408.06242v2",
+      "paper_id": "2408.06242",
+      "title": "Enhanced stability and chaotic condensates in multi-species non-reciprocal mixtures",
+      "authors": "Laya Parkavousi, Navdeep Rana, Ramin Golestanian, Suropriya Saha",
+      "doi": "10.1103/PhysRevLett.134.148301",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "2a46df8392b4efec89a941762eb3a4db9e9702342d0663cdea97fb2138063995",
+      "source_url": "https://arxiv.org/src/2408.06242v2",
+      "theory_review": {
+        "id": "2408.06242",
+        "eligible": true,
+        "reason": "Exact and numerical multi-species nonreciprocal Cahn-Hilliard",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2408.06242v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "e8322cf170ca81520b1520716f143844e78fb1ee5540be86a5eb82de7589b7b7"
+      },
+      "split": "test",
+      "clean_text_sha256": "e2a9b51a47ce033b8c268877c0b71bdecffc06ca615ef345d91188663b7cd99b",
+      "annotation_macros": [],
+      "main_text_characters": 21730,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2409.20006v1",
+      "paper_id": "2409.20006",
+      "title": "Anomalous quantum oscillations from boson-mediated interband scattering",
+      "authors": "L\\'eo Mangeolle, Johannes Knolle",
+      "doi": "10.1103/PhysRevLett.134.146502",
+      "categories": "cond-mat.str-el cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "b0ad1eada6eb609dc9ac852ddbdee12fe60ac0f7358e129123e3e7b03137f397",
+      "source_url": "https://arxiv.org/src/2409.20006v1",
+      "theory_review": {
+        "id": "2409.20006",
+        "eligible": true,
+        "reason": "Many-body theory of composite-frequency quantum oscillations",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2409.20006v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "a1e83cba0d30dc3b51f80ed36847c074d0a9957f15a060550b871823ef1dc5e7"
+      },
+      "split": "test",
+      "clean_text_sha256": "c012437304a33f546ac609a26050cd987f8309d4e30d5c84db44fcc14ae03da3",
+      "annotation_macros": [],
+      "main_text_characters": 26933,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2401.12313v2",
+      "paper_id": "2401.12313",
+      "title": "Eliashberg theory for dynamical screening in bilayer exciton condensation",
+      "authors": "G. J. Sreejith, Jay D. Sau and Sankar Das Sarma",
+      "doi": "10.1103/PhysRevLett.133.056501",
+      "categories": "cond-mat.str-el cond-mat.mes-hall cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "280e96a912c76474921f0a55df2ca21cb66f5b223d36c6f5950928b61114092f",
+      "source_url": "https://arxiv.org/src/2401.12313v2",
+      "theory_review": {
+        "id": "2401.12313",
+        "eligible": true,
+        "reason": "Linearized Eliashberg equations for bilayer exciton condensate Tc",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2401.12313v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "eb3423909cd4fbf3fb3b911e0ad0abe82e67696f68a4eed6655b4f7816535c43"
+      },
+      "split": "test",
+      "clean_text_sha256": "1aabed0d75ef2b2a66a9d9ed1fe3b7f3387eecbafdeab38701f2c87867325bb0",
+      "annotation_macros": [],
+      "main_text_characters": 20704,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2510.17587v1",
+      "paper_id": "2510.17587",
+      "title": "Macroscopic fluctuation-response theory and its use for gene regulatory networks",
+      "authors": "Timur Aslyamov, Krzysztof Ptaszy\\'nski, Massimiliano Esposito",
+      "doi": "10.1103/2b12-3vrx",
+      "categories": "cond-mat.stat-mech physics.bio-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "9577ad4f5506c6d85c7a04c0cd4b295b275eb28dd49a01ba847ae02fd1895ca5",
+      "source_url": "https://arxiv.org/src/2510.17587v1",
+      "theory_review": {
+        "id": "2510.17587",
+        "eligible": true,
+        "reason": "Exact fluctuation-response relations applied to gene networks (off-core topic)",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2510.17587v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "08825cef6c7bc4089a913e893acce4f214c77e0f83e49122ad4639639fff0e2b"
+      },
+      "split": "test",
+      "clean_text_sha256": "7be702a3b4467197e76eff7f3c9c89158cbdf46c52c2dad13e12a0828546e6db",
+      "annotation_macros": [],
+      "main_text_characters": 28218,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2305.09530v2",
+      "paper_id": "2305.09530",
+      "title": "Tomasch Oscillations as Above-Gap Signature of Topological Superconductivity",
+      "authors": "Antonio \\v{S}trkalj, Xi-Rong Chen, Wei Chen, D. Y. Xing, and Oded\n  Zilberberg",
+      "doi": "10.1103/PhysRevLett.132.066301",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "27c49f8e2310827e6fcf0bdd9f07458b7374172cd670d9ee436980c4dcf36b52",
+      "source_url": "https://arxiv.org/src/2305.09530v2",
+      "theory_review": {
+        "id": "2305.09530",
+        "eligible": true,
+        "reason": "Transport theory proposing Tomasch oscillations as topology signature",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2305.09530v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "f846f6e7128dcb3056b142fccf3c8bc19d982859ca33a263e2e1903668c5fba5"
+      },
+      "split": "test",
+      "clean_text_sha256": "f9c65c95df8d64422f00c3c5fede63f1d0a0bad94bdd5af6acaf000ef6e4d723",
+      "annotation_macros": [],
+      "main_text_characters": 23239,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2405.00379v2",
+      "paper_id": "2405.00379",
+      "title": "Planar Hall Effect in Quasi-Two-Dimensional Materials",
+      "authors": "Koushik Ghorai, Sunit Das, Harsh Varshney, Amit Agarwal",
+      "doi": "10.1103/PhysRevLett.134.026301",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "0e605fb6152d56c60326b28d666f0d450cf00f9ddabc352eb07f4f776973c500",
+      "source_url": "https://arxiv.org/src/2405.00379v2",
+      "theory_review": {
+        "id": "2405.00379",
+        "eligible": true,
+        "reason": "Band-geometry theory of 2D planar Hall effect, bilayer graphene example",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2405.00379v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "c54b3b3a2b2beaf4dbb8e86f7976d135869ff492503f6cdf7b191baaa447bf00"
+      },
+      "split": "test",
+      "clean_text_sha256": "250729fcb4b168defd89fb39216beb3a9f1b0c608d689b0f7f9b7814246465ee",
+      "annotation_macros": [],
+      "main_text_characters": 26110,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2412.15103v1",
+      "paper_id": "2412.15103",
+      "title": "Topological Landau Theory",
+      "authors": "Canon Sun and Joseph Maciejko",
+      "doi": "10.1103/PhysRevLett.134.256001",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall cond-mat.other cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "fd7c03472899e548cc28eb4cbfa59be8ef266083ad7b426d13b5818154ee6331",
+      "source_url": "https://arxiv.org/src/2412.15103v1",
+      "theory_review": {
+        "id": "2412.15103",
+        "eligible": true,
+        "reason": "Topological extension of Landau theory with Ginzburg-Landau models",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2412.15103v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "dc4907f328d1c4933a822072b11f40bc5ee44302a4a76c533349201c0db94087"
+      },
+      "split": "test",
+      "clean_text_sha256": "691a478a15c5568b1ed42b0d682eced06fa3788be0386ca3e952b10f8bd55814",
+      "annotation_macros": [],
+      "main_text_characters": 26190,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2402.02310v3",
+      "paper_id": "2402.02310",
+      "title": "Topological effect on the Anderson transition in chiral symmetry classes",
+      "authors": "Pengwei Zhao, Zhenyu Xiao, Yeyang Zhang, Ryuichi Shindou",
+      "doi": "10.1103/PhysRevLett.133.226601",
+      "categories": "cond-mat.dis-nn cond-mat.mes-hall cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v3",
+      "source_sha256": "902d7aa5ef21a8c0ca7ec157ef9fc303bf89d33e0f71c2465a9627b3452127a6",
+      "source_url": "https://arxiv.org/src/2402.02310v3",
+      "theory_review": {
+        "id": "2402.02310",
+        "eligible": true,
+        "reason": "Theory of quasi-localized phase in chiral symmetry classes",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2402.02310v3",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "9f3af7850dba85748240d9799d04a8b7b2911b58e4e250246d4581a5620f5a1c"
+      },
+      "split": "test",
+      "clean_text_sha256": "fb5c8861b720e6cd0c187f15b645572bf1b76c364709cb073cab9416d8526f39",
+      "annotation_macros": [],
+      "main_text_characters": 28501,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2406.08868v2",
+      "paper_id": "2406.08868",
+      "title": "Dissipative Superfluidity in a Molecular Bose-Einstein Condensate",
+      "authors": "Hongchao Li, Xie-Hang Yu, Masaya Nakagawa, Masahito Ueda",
+      "doi": "10.1103/ww8r-sjhb",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v2",
+      "source_sha256": "fe09fe92a28b49746c10bf7d7284786ea4229e1874f074d22f997a825384587b",
+      "source_url": "https://arxiv.org/src/2406.08868v2",
+      "theory_review": {
+        "id": "2406.08868",
+        "eligible": true,
+        "reason": "Dissipative superfluid transport theory for molecular BEC",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2406.08868v2",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "828527891460b3fecf37716fcfa7ee677fb3582247eab7c3c156dbcafc9e72d3"
+      },
+      "split": "test",
+      "clean_text_sha256": "6722a28ae205c50e6972a98ebc5a2545d19a5002c7e8ca4eb2a8591453613cc0",
+      "annotation_macros": [],
+      "main_text_characters": 28603,
+      "long_main_text_flag": false
+    },
+    {
+      "id": "2306.03549v1",
+      "paper_id": "2306.03549",
+      "title": "A hard-sphere quasicrystal stabilized by configurational entropy",
+      "authors": "Etienne Fayen, Laura Filion, Giuseppe Foffi, Frank Smallenburg",
+      "doi": "10.1103/PhysRevLett.132.048202",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "arxiv_version": "v1",
+      "source_sha256": "78d8301446c0e882483e5e2d305230687a47bd7df83f7d73a197b39de43fa317",
+      "source_url": "https://arxiv.org/src/2306.03549v1",
+      "theory_review": {
+        "id": "2306.03549",
+        "eligible": true,
+        "reason": "Free-energy calculations of hard-sphere quasicrystal",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      },
+      "authoritative_license": {
+        "url": "https://arxiv.org/abs/2306.03549v1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "verified": true,
+        "response_sha256": "a69271f0470553a9019182ecf452f2a6dfa4af14bd8be15e291f640a8d23cc12"
+      },
+      "split": "test",
+      "clean_text_sha256": "f3070db02d2664aaae8537e3c6de141fd00324938a2ba83abfd4ce6d6e698fd1",
+      "annotation_macros": [],
+      "main_text_characters": 22915,
+      "long_main_text_flag": false
+    }
+  ],
+  "split_sha256": {
+    "train": "64f3277ed507798ffea0a5d84b9502d9c11809fab53ec844e4e4044db2d84a08",
+    "validation": "99af3cc0990049054664587e015e471885ee7ff857aafc35bf555cd2a161ea77",
+    "test": "29b759abbeace7f379bf9b8afd166c4ca5560562ff141f2fee19d160b61b9973"
+  },
+  "tokenizer_parity": {
+    "papers": 100,
+    "mismatched_ids": [],
+    "exact_corpus_token_parity": true
+  },
+  "writing_fixtures": {
+    "files": {
+      "writing_development.json": {
+        "sha256": "e0ba2b7117d36750a6914f5f48489bc249e0a4f9cd23b9784b9d5ae21896f6cd",
+        "tasks": 30,
+        "max_prompt_tokens": 1801
+      },
+      "writing_development_fewshot.json": {
+        "sha256": "8bb91146a770a43c0174e0b566ceca2b7af50cf835831ca0a6136a362e8e5e6e",
+        "tasks": 30,
+        "max_prompt_tokens": 4319
+      },
+      "writing_test.json": {
+        "sha256": "8cfa6d22c267d49e898e59f034ab067aff260d2af3df8654343198e4210e506e",
+        "tasks": 60,
+        "max_prompt_tokens": 1746
+      },
+      "writing_test_fewshot.json": {
+        "sha256": "71739a55f7a8e1487be84acaa8aae79368afdfae4c444150ebe8cd53f923e418",
+        "tasks": 60,
+        "max_prompt_tokens": 4264
+      }
+    },
+    "fewshot_example_ids": [
+      "2303.17553v2",
+      "2303.18169v2"
+    ],
+    "generation_caps": {
+      "title": 48,
+      "abstract": 256,
+      "introduction": 768
+    },
+    "rubric": [
+      "scientific claim fidelity",
+      "equation/number/citation fidelity",
+      "clarity",
+      "concision",
+      "logical structure",
+      "accessibility",
+      "evidence-supported significance"
+    ],
+    "selection_limit": "No automatic metric establishes writing quality. Produce blinded human-review packets; do not invent ratings."
+  }
+}

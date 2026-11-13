@@ -1,0 +1,4634 @@
+{
+  "source": "scholarweave/arxiv-latex metadata column scan; exact reviewed shortlist",
+  "candidate_source_sha256": "4b60fb4157922cd4a2b00cccae5ef6b44bf6a24208e52adbf788918ab3d88c4c",
+  "review_sha256": "49b1ae15c8f00910d78dba2ee0d9a2add6926c7ed01442683d18cd9871af9817",
+  "reviewer": "Claude (scientific advisor); independent title+abstract review only, no paper text read",
+  "review_criteria": [
+    "Eligible: research Letter whose reported results are theoretical, analytical, numerical, or first-principles; experiments cited only as motivation or comparison to previously published data",
+    "Ineligible: reports new experimental measurements, including joint theory+new-experiment papers",
+    "Ineligible: Essays, Comments, or non-research formats",
+    "Ineligible (uncertain): abstract does not make clear whether new experimental data are included",
+    "Category is the arXiv primary category; selection: primary = proposed 100 balanced across str-el, mes-hall, stat-mech, quant-gas, supr-con, soft, mtrl-sci+dis-nn; reserve = eligible backups, deprioritizing off-core topics, missing PRL DOI, or new-style APS DOIs whose journal is unverified",
+    "Journal (PRL), DOI, licence and theory status of the full text still require Crossref/source verification by the manager"
+  ],
+  "candidates": [
+    {
+      "id": "2412.03648",
+      "title": "Phase Diagram of the Easy-Axis Triangular-Lattice $J_1\\!-\\!J_2$ Model",
+      "doi": "10.1103/PhysRevLett.134.196702",
+      "journal-ref": "Phys. Rev. Lett. 134, 196702 (2025)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 04 Dec 2024 19:00:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 01 Apr 2025 04:42:44 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Fri, 16 May 2025 18:53:43 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2412.03648",
+        "eligible": true,
+        "reason": "DMRG plus analytics on easy-axis triangular J1-J2 phase diagram; no measurements",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2502.11702",
+      "title": "Anatomy of anomalous Hall effect due to magnetic fluctuations",
+      "doi": "10.1103/PhysRevLett.134.126602",
+      "journal-ref": null,
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 17 Feb 2025 11:40:44 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2502.11702",
+        "eligible": false,
+        "reason": "New thermodynamic, transport and muSR measurements on PrAlGe",
+        "category": "cond-mat.str-el"
+      }
+    },
+    {
+      "id": "2401.12313",
+      "title": "Eliashberg theory for dynamical screening in bilayer exciton\n  condensation",
+      "doi": "10.1103/PhysRevLett.133.056501",
+      "journal-ref": "Physical Review Letters 133, 056501 (2024)",
+      "categories": "cond-mat.str-el cond-mat.mes-hall cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 22 Jan 2024 19:16:55 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 31 Jul 2024 18:22:28 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2401.12313",
+        "eligible": true,
+        "reason": "Linearized Eliashberg equations for bilayer exciton condensate Tc",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2404.08745",
+      "title": "Extended Metal-Insulator Crossover with Strong Antiferromagnetic Spin\n  Correlation in Half-Filled 3D Hubbard Model",
+      "doi": "10.1103/PhysRevLett.134.016503",
+      "journal-ref": "Phys. Rev. Lett. 134, 016503 (2025)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 12 Apr 2024 18:13:41 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 11 Jul 2024 15:17:30 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Thu, 2 Jan 2025 13:26:41 GMT"
+        },
+        {
+          "version": "v4",
+          "created": "Wed, 8 Jan 2025 13:28:52 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2404.08745",
+        "eligible": true,
+        "reason": "Auxiliary-field QMC study of 3D half-filled Hubbard crossover",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.15865",
+      "title": "Metallic bonding in close packed structures: structural frustration from\n  a hidden gauge symmetry",
+      "doi": "10.1103/PhysRevLett.133.256401",
+      "journal-ref": "Phys. Rev. Lett. 133, 256401 (2024)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 24 May 2024 18:23:43 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.15865",
+        "eligible": true,
+        "reason": "Analytic gauge-symmetry argument for close-packed Li/Na structures",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2407.20629",
+      "title": "Variational Monte Carlo Study of the 1/9 Magnetization Plateau in Kagome\n  Antiferromagnets",
+      "doi": "10.1103/PhysRevLett.133.096501",
+      "journal-ref": "Phys. Rev. Lett. 133, 096501 (2024)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 30 Jul 2024 08:10:33 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.20629",
+        "eligible": true,
+        "reason": "Variational Monte Carlo of kagome 1/9 plateau; experiments cited only as motivation",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2307.16853",
+      "title": "Spin-frame field theory of a three-sublattice antiferromagnet",
+      "doi": "10.1103/PhysRevLett.132.096703",
+      "journal-ref": "Phys. Rev. Lett. 132, 096703 (2024)",
+      "categories": "cond-mat.str-el nlin.PS",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 31 Jul 2023 17:13:37 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 20 Aug 2023 04:41:19 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2307.16853",
+        "eligible": true,
+        "reason": "Nonlinear spin-frame field theory of three-sublattice antiferromagnet",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.09217",
+      "title": "Augmenting Density Matrix Renormalization Group with Clifford Circuits",
+      "doi": "10.1103/PhysRevLett.133.190402",
+      "journal-ref": "Phys. Rev. Lett. 133, 190402 (2024)",
+      "categories": "cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 15 May 2024 09:53:08 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 21 Nov 2024 07:47:25 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.09217",
+        "eligible": true,
+        "reason": "Numerical-method paper: Clifford-augmented DMRG",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.08887",
+      "title": "Non-Abelian Fractional Chern Insulators and Competing States in Flat Moir\\'e Bands",
+      "doi": "10.1103/43nq-ntqm",
+      "journal-ref": "Phys. Rev. Lett. 135, 106604 (2025)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 14 May 2024 18:05:20 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 24 Sep 2025 10:41:53 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.08887",
+        "eligible": true,
+        "reason": "Exact-diagonalization/entanglement study of non-Abelian FCIs in moire bands",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2411.18205",
+      "title": "Nature of metallic and insulating domains in the CDW system 1T-TaSe2",
+      "doi": "10.1103/pbyw-mzfy",
+      "journal-ref": "Phys. Rev. Lett. 135, 096501 (2025)",
+      "categories": "cond-mat.str-el cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 27 Nov 2024 10:30:08 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2411.18205",
+        "eligible": false,
+        "reason": "New spatially resolved ARPES on 1T-TaSe2 with supporting DMFT (joint experiment)",
+        "category": "cond-mat.str-el"
+      }
+    },
+    {
+      "id": "2312.03840",
+      "title": "Transient localization from the interaction with quantum bosons",
+      "doi": "10.1103/PhysRevLett.132.266502",
+      "journal-ref": null,
+      "categories": "cond-mat.str-el cond-mat.dis-nn cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 06 Dec 2023 19:00:05 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2312.03840",
+        "eligible": true,
+        "reason": "Numerically exact finite-temperature electron-boson transient localization",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2505.07790",
+      "title": "Unconventional Fractional Phases in Multi-Band Vortexable Systems",
+      "doi": "10.1103/jmk4-46tj",
+      "journal-ref": "Phys. Rev. Lett. 135, 216501 (2025)",
+      "categories": "cond-mat.str-el cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 12 May 2025 17:43:25 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 25 Nov 2025 20:54:58 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2505.07790",
+        "eligible": true,
+        "reason": "Analytic and numerical study of multi-band vortexable flat bands",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2503.07708",
+      "title": "Exact Chiral Symmetries of 3+1D Hamiltonian Lattice Fermions",
+      "doi": "10.1103/s5q2-317m",
+      "journal-ref": "Phys. Rev. Lett. 136 (2026)",
+      "categories": "cond-mat.str-el cond-mat.mes-hall hep-lat hep-th math-ph math.MP",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 10 Mar 2025 18:00:00 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 23 Jun 2025 05:14:35 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Sun, 16 Nov 2025 06:41:50 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.07708",
+        "eligible": true,
+        "reason": "Construction of 3+1D lattice Hamiltonians with exact chiral symmetries",
+        "category": "cond-mat.str-el",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2402.18364",
+      "title": "Extracting the Luttinger parameter from a single wave function",
+      "doi": "10.1103/PhysRevLett.134.076501",
+      "journal-ref": "Phys. Rev. Lett. 134, 076501 (2025)",
+      "categories": "cond-mat.str-el cond-mat.mes-hall hep-th",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 28 Feb 2024 14:35:24 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 20 Feb 2025 00:34:21 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2402.18364",
+        "eligible": true,
+        "reason": "CFT crosscap-state method for Luttinger parameter with lattice numerics",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2408.07635",
+      "title": "Unveiling Stripe-shaped Charge Density Modulations in Doped Mott Insulators",
+      "doi": "10.1103/hmqb-9q91",
+      "journal-ref": "Phys. Rev. Lett. 135, 116504 (2025)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 14 Aug 2024 16:00:34 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 28 Aug 2025 15:16:54 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2408.07635",
+        "eligible": true,
+        "reason": "Cluster Green's-function simulations of doped Hubbard model compared to existing STM data",
+        "category": "cond-mat.str-el",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2405.14954",
+      "title": "Revealing Quadrupolar Excitations with Non-Linear Spectroscopy",
+      "doi": "10.1103/PhysRevLett.134.106703",
+      "journal-ref": "Phys. Rev. Lett. 134, 106703 (2025)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 23 May 2024 18:02:40 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.14954",
+        "eligible": true,
+        "reason": "ED plus generalized spin-wave calculation of 2DCS for spin-1 ferromagnets",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2409.19562",
+      "title": "Instability of metals with respect to strong electron-phonon interaction",
+      "doi": "10.1103/sf5p-2g5l",
+      "journal-ref": "Phys. Rev. Lett. 135, 026503 (2025)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 29 Sep 2024 05:39:10 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sat, 12 Jul 2025 03:08:02 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.19562",
+        "eligible": true,
+        "reason": "Analytic kinetic-instability proof for strong electron-phonon coupling",
+        "category": "cond-mat.str-el",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2510.20862",
+      "title": "A Universal Chern Model on Arbitrary Triangulations",
+      "doi": "10.1103/66x5-dvqq",
+      "journal-ref": "Phys. Rev. Lett. 136, 096602 (2026)",
+      "categories": "cond-mat.str-el cond-mat.mtrl-sci math-ph math.MP math.OA",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 22 Oct 2025 20:50:40 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 12 Jan 2026 16:41:32 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2510.20862",
+        "eligible": true,
+        "reason": "Tight-binding Chern model on triangulations with numerics and a metamaterial proposal; no measurement",
+        "category": "cond-mat.str-el",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2308.02313",
+      "title": "The fate of quasiparticles at high-temperature",
+      "doi": "10.1103/PhysRevLett.131.236502",
+      "journal-ref": "Phys. Rev. Lett. 131, 236502 (2023)",
+      "categories": "cond-mat.str-el cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 4 Aug 2023 13:23:28 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2308.02313",
+        "eligible": false,
+        "reason": "New ARPES on Sr2RuO4 compared with DMFT (experiment)",
+        "category": "cond-mat.str-el"
+      }
+    },
+    {
+      "id": "2504.11778",
+      "title": "Spectroscopic evidence for possible quantum spin liquid behavior in a\n  two-dimensional Mott insulator",
+      "doi": "10.1103/PhysRevLett.134.066402",
+      "journal-ref": "Phys. Rev. Lett. 134, 066402 (2025)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 16 Apr 2025 05:31:42 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2504.11778",
+        "eligible": false,
+        "reason": "New ARPES and adatom doping on single-layer 1T-TaS2",
+        "category": "cond-mat.str-el"
+      }
+    },
+    {
+      "id": "2409.20006",
+      "title": "Anomalous quantum oscillations from boson-mediated interband scattering",
+      "doi": "10.1103/PhysRevLett.134.146502",
+      "journal-ref": null,
+      "categories": "cond-mat.str-el cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 30 Sep 2024 07:00:05 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.20006",
+        "eligible": true,
+        "reason": "Many-body theory of composite-frequency quantum oscillations",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2305.02091",
+      "title": "Finite-Entanglement Scaling of 2D Metals",
+      "doi": "10.1103/PhysRevLett.131.266202",
+      "journal-ref": "Phys. Rev. Lett. 131, 266202 (2023)",
+      "categories": "cond-mat.str-el cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 3 May 2023 12:52:04 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 9 Jan 2024 23:10:26 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2305.02091",
+        "eligible": true,
+        "reason": "Finite-entanglement scaling theory for 2D metals with tensor networks",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2510.20491",
+      "title": "Metallic island array as synthetic quantum matter: fractionalized entropy and thermal transport",
+      "doi": null,
+      "journal-ref": "Phys. Rev. Lett. 136, 196302 (2026)",
+      "categories": "cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 23 Oct 2025 12:31:34 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2510.20491",
+        "eligible": true,
+        "reason": "Theory of metallic-island arrays coupled to quantum Hall edges; no PRL DOI in metadata",
+        "category": "cond-mat.str-el",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2410.09148",
+      "title": "Unconventional superconductivity mediated by exciton density wave fluctuations",
+      "doi": "10.1103/7f6c-jh1k",
+      "journal-ref": "Phys. Rev. Lett. 135, 266501 (2025)",
+      "categories": "cond-mat.str-el cond-mat.mes-hall cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 11 Oct 2024 18:00:03 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 08 Jan 2026 11:43:47 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2410.09148",
+        "eligible": true,
+        "reason": "Hartree-Fock and fluctuation theory of exciton-mediated superconductivity",
+        "category": "cond-mat.str-el",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2407.01936",
+      "title": "Many-body effects on high-harmonic generation in Hubbard ladders",
+      "doi": "10.1103/PhysRevLett.134.096504",
+      "journal-ref": "Phys. Rev. Lett. 134, 096504 (2025)",
+      "categories": "cond-mat.str-el cond-mat.mes-hall physics.optics",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 2 Jul 2024 04:11:35 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.01936",
+        "eligible": true,
+        "reason": "Two-leg Hubbard ladder simulations of high-harmonic generation",
+        "category": "cond-mat.str-el",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2310.16352",
+      "title": "Quantifying the Chirality of Vibrational Modes in Helical Molecular\n  Chains",
+      "doi": "10.1103/PhysRevLett.133.268001",
+      "journal-ref": "Phys. Rev. Lett. 133, 268001 (2024)",
+      "categories": "cond-mat.mes-hall math-ph math.MP",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 25 Oct 2023 04:29:45 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 26 Oct 2023 05:01:03 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Mon, 20 Nov 2023 00:31:04 GMT"
+        },
+        {
+          "version": "v4",
+          "created": "Sun, 18 Feb 2024 05:41:57 GMT"
+        },
+        {
+          "version": "v5",
+          "created": "Wed, 27 Nov 2024 16:52:28 GMT"
+        },
+        {
+          "version": "v6",
+          "created": "Sat, 4 Jan 2025 23:44:02 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2310.16352",
+        "eligible": true,
+        "reason": "Computational chirality measures for normal modes of helical molecular chains",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.00379",
+      "title": "Planar Hall Effect in Quasi-Two-Dimensional Materials",
+      "doi": "10.1103/PhysRevLett.134.026301",
+      "journal-ref": "Phys. Rev. Lett. 134, 026301 (2025)",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 1 May 2024 08:18:04 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sat, 1 Jun 2024 10:29:44 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.00379",
+        "eligible": true,
+        "reason": "Band-geometry theory of 2D planar Hall effect, bilayer graphene example",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2412.04997",
+      "title": "Automated in situ optimization and disorder mitigation in a quantum device",
+      "doi": "10.1103/13c4-p4fq",
+      "journal-ref": "Phys. Rev. Lett. 135, 216301 (2025)",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 06 Dec 2024 12:51:25 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 22 Apr 2025 15:09:40 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2412.04997",
+        "eligible": false,
+        "reason": "Gate-array optimization performed in a physical quantum point contact device",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2312.02907",
+      "title": "Resonant versus non-resonant spin readout of a nitrogen-vacancy center\n  in diamond under cryogenic conditions",
+      "doi": null,
+      "journal-ref": "Phys. Rev. Lett. 131, 236901 (2023)",
+      "categories": "cond-mat.mes-hall quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 5 Dec 2023 17:27:08 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2312.02907",
+        "eligible": false,
+        "reason": "NV-center readout measurements under cryogenic conditions",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2304.12201",
+      "title": "Quantum-Squeezing-Induced Point-Gap Topology and Skin Effect",
+      "doi": "10.1103/PhysRevLett.130.203605",
+      "journal-ref": "Phys. Rev. Lett. 130, 203605 (2023)",
+      "categories": "cond-mat.mes-hall quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 21 Apr 2023 12:25:57 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 29 May 2023 02:26:26 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2304.12201",
+        "eligible": true,
+        "reason": "Theoretical prediction of squeezing-induced point-gap topology",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2502.02660",
+      "title": "Enhancing the Hyperpolarizability of Crystals with Quantum Geometry",
+      "doi": "10.1103/z7lp-pqp6",
+      "journal-ref": "Phys. Rev. Lett. 135, 126606 (2025)",
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci physics.optics quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 04 Feb 2025 19:01:56 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 29 Jun 2025 17:35:30 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 17 Sep 2025 08:07:15 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2502.02660",
+        "eligible": true,
+        "reason": "Quantum-geometry theory and simulations of hyperpolarizability in 1D chains",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2401.16994",
+      "title": "Coherent and dissipative coupling in a magneto-mechanical system",
+      "doi": "10.1103/PhysRevLett.132.216701",
+      "journal-ref": null,
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 30 Jan 2024 13:25:20 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 25 Jun 2024 09:47:15 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2401.16994",
+        "eligible": false,
+        "reason": "Time-resolved MOKE and BLS measurements on magneto-mechanical crystal",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2505.11272",
+      "title": "Resistivity of non-Galilean invariant two dimensional Dirac system",
+      "doi": "10.1103/PhysRevLett.134.196303",
+      "journal-ref": "Phys. Rev.Lett. 134, 196303 (2025)",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 16 May 2025 14:05:30 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2505.11272",
+        "eligible": false,
+        "reason": "Boltzmann theory combined with new HgTe resistivity measurements (joint experiment)",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2306.10673",
+      "title": "Magneto-Optical Detection of the Orbital Hall Effect in Chromium",
+      "doi": "10.1103/PhysRevLett.131.156702",
+      "journal-ref": "Phys. Rev. Lett. 131, 156702 (2023)",
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 19 Jun 2023 02:16:47 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.10673",
+        "eligible": false,
+        "reason": "Magneto-optical detection of orbital Hall effect in Cr with ab initio support",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2306.05149",
+      "title": "Engineering flat bands in twisted-bilayer graphene away from the magic\n  angle with chiral optical cavities",
+      "doi": "10.1103/PhysRevLett.132.166901",
+      "journal-ref": "Phys. Rev. Lett. 132, 166901, Published 18 April 2024",
+      "categories": "cond-mat.mes-hall cond-mat.str-el cond-mat.supr-con physics.optics quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 8 Jun 2023 12:17:44 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 28 Mar 2024 09:34:51 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.05149",
+        "eligible": true,
+        "reason": "Model calculations of chiral-cavity flat bands in twisted bilayer graphene",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.16722",
+      "title": "Observation of in-plane anomalous Hall effect associated with orbital\n  magnetization",
+      "doi": "10.1103/PhysRevLett.133.236602",
+      "journal-ref": "Physical Review Letters 133, 236602 (2024)",
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 26 May 2024 23:42:31 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.16722",
+        "eligible": false,
+        "reason": "Transport observation of in-plane anomalous Hall effect in EuCd2Sb2 films",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2507.10762",
+      "title": "Marginal Metals and Kosterlitz-Thouless Type Phase Transition in Disordered Altermagnets",
+      "doi": "10.1103/ssb5-vm9b",
+      "journal-ref": "Phys. Rev. Lett. 136, 066303(2026)",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 14 Jul 2025 19:38:45 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 19 Jan 2026 13:47:16 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2507.10762",
+        "eligible": true,
+        "reason": "Numerical localization study of disordered d-wave altermagnets",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2303.17553",
+      "title": "Topological Circular Dichroism in Chiral Multifold Semimetals",
+      "doi": "10.1103/PhysRevLett.131.116603",
+      "journal-ref": "Phys. Rev. Lett. 131, 116603 (2023)",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 30 Mar 2023 17:21:48 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 14 Sep 2023 17:44:25 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2303.17553",
+        "eligible": true,
+        "reason": "Linear-response and first-principles theory of topological circular dichroism",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2501.02372",
+      "title": "Valley-mediated singlet- and triplet-polaron interactions and quantum\n  dynamics in a doped WSe$_2$ monolayer",
+      "doi": "10.1103/PhysRevLett.134.036901",
+      "journal-ref": "Physical Review Letters 134.3 (2025): 036901",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sat, 4 Jan 2025 20:16:36 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2501.02372",
+        "eligible": false,
+        "reason": "2D coherent spectroscopy measurements on doped WSe2",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2312.04093",
+      "title": "Intrinsic gyrotropic magnetic current from Zeeman quantum geometry",
+      "doi": "10.1103/PhysRevLett.134.116301",
+      "journal-ref": "Phys. Rev. Lett. 134, 116301 (2025)",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 7 Dec 2023 07:11:48 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 7 Jan 2025 08:44:14 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2312.04093",
+        "eligible": true,
+        "reason": "Zeeman quantum-geometric tensor theory with model calculations",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2503.00475",
+      "title": "Field-driven band asymmetry and non-reciprocal transport in a helimagnet",
+      "doi": "10.1103/lhj4-9h29",
+      "journal-ref": "Phys. Rev. Lett. 135, 096701 (2025)",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sat, 01 Mar 2025 12:59:47 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.00475",
+        "eligible": true,
+        "reason": "Minimal-model theory of field-induced band asymmetry in helimagnets",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2310.02218",
+      "title": "Symmetry-based classification of exact flat bands in single and bilayer moir\\'e systems",
+      "doi": "10.1103/nys8-5mg2",
+      "journal-ref": "Phys. Rev. Lett. 135, 016501 (2025)",
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 03 Oct 2023 17:23:04 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2310.02218",
+        "eligible": true,
+        "reason": "Symmetry classification of exact flat bands in moire systems",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2304.09040",
+      "title": "Edge-selective extremal damping from topological heritage of dissipative\n  Chern insulators",
+      "doi": "10.1103/PhysRevLett.131.256601",
+      "journal-ref": "Phys. Rev. Lett. 131, 256601(2023)",
+      "categories": "cond-mat.mes-hall cond-mat.other",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 18 Apr 2023 14:58:03 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 22 Nov 2023 12:10:50 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Fri, 29 Dec 2023 16:52:11 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2304.09040",
+        "eligible": true,
+        "reason": "Lindblad theory of edge-selective damping in dissipative Chern insulators",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2310.12082",
+      "title": "Accessing ultrafast spin-transport dynamics in copper using broadband\n  terahertz spectroscopy",
+      "doi": "10.1103/PhysRevLett.132.226703",
+      "journal-ref": null,
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 18 Oct 2023 16:19:49 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 21 May 2024 12:41:56 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Mon, 30 Sep 2024 13:45:05 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2310.12082",
+        "eligible": false,
+        "reason": "Broadband terahertz measurements of spin transport in Cu",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2407.01457",
+      "title": "Quantum Nonlinear Acoustic Hall Effect and Inverse Acoustic Faraday\n  Effect in Dirac Insulators",
+      "doi": "10.1103/PhysRevLett.134.026304",
+      "journal-ref": "Phys. Rev. Lett. 134, 026304 (2025)",
+      "categories": "cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 1 Jul 2024 16:52:07 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.01457",
+        "eligible": true,
+        "reason": "Theory proposal for acoustic nonlinear Hall and inverse Faraday effects",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2307.02045",
+      "title": "Probing quantum phases in ultra-high-mobility two-dimensional electron systems using surface acoustic waves",
+      "doi": "10.1103/PhysRevLett.132.076501",
+      "journal-ref": null,
+      "categories": "cond-mat.mes-hall cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 05 Jul 2023 05:59:56 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 31 Jan 2024 09:24:18 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2307.02045",
+        "eligible": false,
+        "reason": "Surface-acoustic-wave measurements on ultra-high-mobility 2DES",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2307.01253",
+      "title": "Geometric Stiffness in Interlayer Exciton Condensates",
+      "doi": "10.1103/PhysRevLett.132.236001",
+      "journal-ref": null,
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 3 Jul 2023 18:00:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 31 Dec 2023 22:07:50 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2307.01253",
+        "eligible": true,
+        "reason": "Quantum-geometric phase stiffness theory of interlayer exciton condensates",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2404.11647",
+      "title": "Quantized Acoustoelectric Floquet Effect in Quantum Nanowires",
+      "doi": "10.1103/PhysRevLett.133.226301",
+      "journal-ref": "Phys. Rev. Lett. 133, 226301 (2024)",
+      "categories": "cond-mat.mes-hall cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 17 Apr 2024 18:00:00 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2404.11647",
+        "eligible": true,
+        "reason": "Theory of phonon-driven quantized current in nanowires",
+        "category": "cond-mat.mes-hall",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2403.04192",
+      "title": "Orbital Magneto-Nonlinear Anomalous Hall Effect in Kagome Magnet\n  Fe$_3$Sn$_2$",
+      "doi": "10.1103/PhysRevLett.132.106601",
+      "journal-ref": "Phys. Rev. Lett. 132, 106601(2024)",
+      "categories": "cond-mat.mes-hall cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 7 Mar 2024 03:46:26 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2403.04192",
+        "eligible": false,
+        "reason": "Transport experiment on Fe3Sn2 combined with first-principles (joint experiment)",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2410.20394",
+      "title": "Non-monotonic radiative heat transfer in the transition from far field to near field",
+      "doi": "10.1103/PhysRevLett.134.193801",
+      "journal-ref": "Phys. Rev. Lett. 134, 193801, Published 12 May, 2025",
+      "categories": "cond-mat.mes-hall physics.optics",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 27 Oct 2024 09:46:06 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 16 May 2025 09:21:17 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2410.20394",
+        "eligible": false,
+        "reason": "Radiative heat transfer measurements with a microsphere probe",
+        "category": "cond-mat.mes-hall"
+      }
+    },
+    {
+      "id": "2305.13561",
+      "title": "Fluids in random media and dimensional augmentation",
+      "doi": null,
+      "journal-ref": "Phys. Rev. Lett. 131, 147102 (2023)",
+      "categories": "cond-mat.stat-mech cond-mat.dis-nn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 23 May 2023 00:21:35 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 8 Jun 2023 10:32:59 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 13 Sep 2023 11:14:24 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2305.13561",
+        "eligible": true,
+        "reason": "Analytic cluster-expansion argument on random-field dimensional reduction; no PRL DOI in metadata",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2504.05260",
+      "title": "Manipulating phases in many-body interacting systems with subsystem resetting",
+      "doi": "10.1103/np7q-hxld",
+      "journal-ref": "Phys. Rev. Lett. 135, 127103 (2025)",
+      "categories": "cond-mat.stat-mech nlin.AO",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 07 Apr 2025 16:53:44 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 19 Sep 2025 10:26:07 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2504.05260",
+        "eligible": true,
+        "reason": "Analytic predictions with simulations for subsystem resetting",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2410.06686",
+      "title": "Thermomajorization Mpemba Effect",
+      "doi": "10.1103/PhysRevLett.134.107101",
+      "journal-ref": "Phys. Rev. Lett. 134, 107101 (2025)",
+      "categories": "cond-mat.stat-mech quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 9 Oct 2024 08:50:07 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 6 Jan 2025 06:07:54 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2410.06686",
+        "eligible": true,
+        "reason": "Rigorous thermomajorization theory of the Mpemba effect",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2305.06406",
+      "title": "Fluctuation-dissipation relation in a non-equilibrium quantum fluid",
+      "doi": "10.1103/PhysRevLett.131.244001",
+      "journal-ref": "Phys. Rev. Lett. 131, 244001 (2023)_",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 10 May 2023 18:29:35 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 14 Dec 2023 16:19:45 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2305.06406",
+        "eligible": true,
+        "reason": "Generalized fluctuation-dissipation theorem for nonequilibrium fluid",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2306.04443",
+      "title": "Poissonian cellular Potts models reveal nonequilibrium kinetics of cell sorting",
+      "doi": "10.1103/PhysRevLett.132.248401",
+      "journal-ref": null,
+      "categories": "cond-mat.stat-mech physics.bio-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 07 Jun 2023 14:03:17 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 16 Jun 2023 12:53:49 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Fri, 08 Mar 2024 13:13:00 GMT"
+        },
+        {
+          "version": "v4",
+          "created": "Mon, 22 Apr 2024 09:23:22 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.04443",
+        "eligible": false,
+        "reason": "Uncertain: cellular Potts method applied to mouse-embryo sorting data; may include new biological data and is off-core",
+        "category": "cond-mat.stat-mech"
+      }
+    },
+    {
+      "id": "2311.10138",
+      "title": "A Unified Interface Model for Dissipative Transport of Bosons and Fermions",
+      "doi": "10.1103/PhysRevLett.134.207102",
+      "journal-ref": "Phys. Rev. Lett. 134, 207102 (2025)",
+      "categories": "cond-mat.stat-mech cond-mat.dis-nn cond-mat.mes-hall cond-mat.quant-gas quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 16 Nov 2023 19:00:01 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2311.10138",
+        "eligible": true,
+        "reason": "Simulations and field theory of dissipative bosonic transport (KPZ)",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2309.16227",
+      "title": "Fast rare events in exit times distributions of jump processes",
+      "doi": "10.1103/PhysRevLett.132.187101",
+      "journal-ref": "Phys. Rev. Lett. 132, 187101 (2024)",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 28 Sep 2023 08:09:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 4 Apr 2024 21:27:23 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2309.16227",
+        "eligible": true,
+        "reason": "Analytic theory of fast rare events in jump processes with simulations",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2507.15503",
+      "title": "Harnessing higher-dimensional fluctuations in an information engine",
+      "doi": "10.1103/xwjd-qxfg",
+      "journal-ref": "Phys. Rev. Lett. 136, 047101 (2026)",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 21 Jul 2025 11:11:57 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 16 Feb 2026 20:43:15 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2507.15503",
+        "eligible": true,
+        "reason": "Theoretical optimization of a d-dimensional information engine; no data reported in abstract",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2404.19009",
+      "title": "Classical origins of Landau-incompatible transitions",
+      "doi": "10.1103/PhysRevLett.134.097103",
+      "journal-ref": "Phys. Rev. Lett. 134, 097103 (2025)",
+      "categories": "cond-mat.stat-mech cond-mat.str-el hep-th",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 29 Apr 2024 18:00:07 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 7 Mar 2025 14:11:51 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2404.19009",
+        "eligible": true,
+        "reason": "Classical stat-mech models exhibiting Landau-incompatible transitions",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.09728",
+      "title": "Hidden zero modes and topology of multiband non-Hermitian systems",
+      "doi": "10.1103/PhysRevLett.134.056601",
+      "journal-ref": "Phys. Rev. Lett. 134, 056601 (2025)",
+      "categories": "cond-mat.stat-mech cond-mat.str-el math-ph math.MP quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 15 May 2024 23:28:59 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 19 Jul 2024 20:10:08 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Fri, 31 Jan 2025 03:22:43 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.09728",
+        "eligible": true,
+        "reason": "Theory of hidden zero modes in non-Hermitian multiband chains",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2510.17587",
+      "title": "Macroscopic fluctuation-response theory and its use for gene regulatory networks",
+      "doi": "10.1103/2b12-3vrx",
+      "journal-ref": "Phys. Rev. Lett. 136, 067102, 2026",
+      "categories": "cond-mat.stat-mech physics.bio-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 20 Oct 2025 14:35:37 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2510.17587",
+        "eligible": true,
+        "reason": "Exact fluctuation-response relations applied to gene networks (off-core topic)",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2410.07306",
+      "title": "Single-Particle Universality of the Many-Body Spectral Form Factor",
+      "doi": "10.1103/PhysRevLett.134.160403",
+      "journal-ref": null,
+      "categories": "cond-mat.stat-mech cond-mat.dis-nn cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 9 Oct 2024 18:00:00 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 31 Dec 2024 19:02:24 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2410.07306",
+        "eligible": true,
+        "reason": "Exact spectral form factor for non-interacting circuits plus kicked Ising numerics",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2308.04094",
+      "title": "Shortcuts of freely relaxing systems using equilibrium physical\n  observables",
+      "doi": "10.1103/PhysRevLett.132.117102",
+      "journal-ref": "Phys. Rev. Lett. 132 (2024) 117102",
+      "categories": "cond-mat.stat-mech cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 8 Aug 2023 07:18:12 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 17 Mar 2024 09:20:59 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2308.04094",
+        "eligible": true,
+        "reason": "Theory of relaxation shortcuts with 1D Ising analytics and numerics",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2411.18108",
+      "title": "Fluctuation-response inequalities for kinetic and entropic perturbations",
+      "doi": null,
+      "journal-ref": "Phys. Rev. Lett. 135, 097101 (2025)",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 27 Nov 2024 07:38:57 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2411.18108",
+        "eligible": true,
+        "reason": "Cramer-Rao fluctuation-response inequalities for Markov jump processes; no PRL DOI in metadata",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2305.03962",
+      "title": "Mechanisms of DNA-mediated allostery",
+      "doi": "10.1103/PhysRevLett.131.238402",
+      "journal-ref": "Phys. Rev. Lett. 131, 238402 (2023)",
+      "categories": "cond-mat.stat-mech q-bio.BM",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sat, 6 May 2023 07:17:51 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 10 Jan 2024 14:52:56 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2305.03962",
+        "eligible": true,
+        "reason": "Mechanical model of DNA allostery compared to published experiments (off-core topic)",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2501.04930",
+      "title": "A Cold Tracer in a Hot Bath: In and Out of Equilibrium",
+      "doi": "10.1103/3tg7-xlr4",
+      "journal-ref": "Phys. Rev. Lett. 136, 117104 (2026)",
+      "categories": "cond-mat.stat-mech cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 09 Jan 2025 02:45:56 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 13 Jan 2026 23:12:07 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2501.04930",
+        "eligible": true,
+        "reason": "Analytic and numerical study of a cold tracer in Brownian bath",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2501.03341",
+      "title": "Dynamic scaling theory for a field quench near the Kasteleyn transition in spin ice",
+      "doi": "10.1103/b9gd-y4y6",
+      "journal-ref": "Phys. Rev. Lett. 134, 256701 (2025)",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 06 Jan 2025 19:08:52 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 09 Jun 2025 16:40:48 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2501.03341",
+        "eligible": true,
+        "reason": "Dynamic scaling theory with Monte Carlo for spin-ice Kasteleyn quench",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2410.10645",
+      "title": "Macroscopic Quantum States and Universal Correlations in a Disorder-Order Interface Propagating over a 1D Ground State",
+      "doi": "10.1103/982k-5jmn",
+      "journal-ref": "Phys. Rev. Lett. 134, 236302 (2025)",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 14 Oct 2024 15:54:33 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 09 Dec 2024 16:01:04 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Mon, 07 Jul 2025 17:51:01 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2410.10645",
+        "eligible": true,
+        "reason": "Theory of disorder-order interface dynamics in spin chains",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2407.20101",
+      "title": "Exponential Change of Relaxation Rate by Quenched Disorder",
+      "doi": "10.1103/PhysRevLett.134.087101",
+      "journal-ref": "Phys. Rev. Lett. 134, 087101 (2025)",
+      "categories": "cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 29 Jul 2024 15:29:39 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 27 Feb 2025 16:48:26 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.20101",
+        "eligible": true,
+        "reason": "Analytic relaxation rate of Brownian particle in quenched disorder",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2310.03809",
+      "title": "Iterative construction of conserved quantities in dissipative nearly\n  integrable systems",
+      "doi": "10.1103/PhysRevLett.132.230402",
+      "journal-ref": "Phys. Rev. Lett. 132, 230402 (2024)",
+      "categories": "cond-mat.stat-mech cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 5 Oct 2023 18:00:31 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 29 Jan 2024 15:09:40 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Tue, 23 Jul 2024 16:02:38 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2310.03809",
+        "eligible": true,
+        "reason": "Iterative truncated GGE scheme for driven nearly integrable systems",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2503.10575",
+      "title": "Velocity trapping in the lifted TASEP and the true self-avoiding random walk",
+      "doi": "10.1103/mqdr-x95j",
+      "journal-ref": "Phys. Rev. Lett. 135, 127102 (2025)",
+      "categories": "cond-mat.stat-mech math.PR",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 13 Mar 2025 17:27:46 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.10575",
+        "eligible": true,
+        "reason": "Analysis of lifted TASEP Monte Carlo dynamics",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2510.26325",
+      "title": "Weak-Memory Dynamics in Discrete Time",
+      "doi": "10.1103/kdhy-66b6",
+      "journal-ref": "Phys. Rev. Lett. 136, 220401 (2026)",
+      "categories": "cond-mat.stat-mech cond-mat.mes-hall quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 30 Oct 2025 10:17:37 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 01 Jun 2026 17:21:56 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2510.26325",
+        "eligible": true,
+        "reason": "Mathematical theorem on weak-memory discrete-time dynamics",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2406.19235",
+      "title": "Gauge Invariance of Equilibrium Statistical Mechanics",
+      "doi": "10.1103/PhysRevLett.133.217101",
+      "journal-ref": "Phys. Rev. Lett. 133, 217101 (2024)",
+      "categories": "cond-mat.stat-mech cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 27 Jun 2024 15:01:20 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 16 Aug 2024 11:23:47 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2406.19235",
+        "eligible": true,
+        "reason": "Gauge-invariance theory of statistical mechanics with Monte Carlo check",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2410.02556",
+      "title": "Learning classical density functionals for ionic fluids",
+      "doi": "10.1103/PhysRevLett.134.148001",
+      "journal-ref": "Phys. Rev. Lett. 134, 148001 (2005)",
+      "categories": "cond-mat.stat-mech cond-mat.mes-hall cond-mat.soft physics.chem-ph physics.comp-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 3 Oct 2024 15:03:11 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 6 Apr 2025 22:02:14 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2410.02556",
+        "eligible": true,
+        "reason": "Machine-learned classical DFT for ionic fluids validated by simulations",
+        "category": "cond-mat.stat-mech",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2509.08479",
+      "title": "From Kardar-Parisi-Zhang scaling to soliton proliferation in Josephson junction arrays",
+      "doi": "10.1103/y3j5-dknd",
+      "journal-ref": "Phys. Rev. Lett. 135, 246001 (2025)",
+      "categories": "cond-mat.stat-mech quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 10 Sep 2025 10:37:38 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sat, 22 Nov 2025 17:58:22 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2509.08479",
+        "eligible": true,
+        "reason": "Numerical and analytical KPZ proposal for Josephson junction arrays",
+        "category": "cond-mat.stat-mech",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2306.09698",
+      "title": "Glitches in rotating supersolids",
+      "doi": "10.1103/PhysRevLett.131.223401",
+      "journal-ref": "Phys. Rev. Lett. 131, 223401 (2023)",
+      "categories": "cond-mat.quant-gas astro-ph.HE astro-ph.SR",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 16 Jun 2023 09:02:50 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 4 Dec 2023 10:26:46 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.09698",
+        "eligible": true,
+        "reason": "Numerical dipolar-supersolid model of neutron-star glitches",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.13809",
+      "title": "Self-trapping phenomenon, multistability and chaos in open anisotropic\n  Dicke dimer",
+      "doi": "10.1103/PhysRevLett.134.113404",
+      "journal-ref": "Phys. Rev. Lett. 134, 113404 (2025)",
+      "categories": "cond-mat.quant-gas cond-mat.stat-mech nlin.CD physics.optics",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 22 May 2024 16:39:18 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 18 Nov 2024 11:23:32 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Mon, 24 Mar 2025 17:30:29 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.13809",
+        "eligible": true,
+        "reason": "Semiclassical dynamics of open anisotropic Dicke dimer",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2509.04738",
+      "title": "Temperature dependence of $p$-wave contacts in a harmonically trapped Fermi gas",
+      "doi": "10.1103/3mxj-ym4b",
+      "journal-ref": "Phys. Rev. Lett. 136, 013402 (2026)",
+      "categories": "cond-mat.quant-gas physics.atom-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 05 Sep 2025 01:33:50 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 09 Jan 2026 07:35:16 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2509.04738",
+        "eligible": false,
+        "reason": "Measurements of p-wave contacts in trapped 6Li gas",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2305.16244",
+      "title": "Tuning photon-mediated interactions in a multimode cavity: from\n  supersolid to insulating droplets hosting phononic excitations",
+      "doi": "10.1103/PhysRevLett.131.173401",
+      "journal-ref": "Phys. Rev. Lett. 131, 173401 (2023)",
+      "categories": "cond-mat.quant-gas quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 25 May 2023 16:58:55 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 26 Oct 2023 17:07:41 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2305.16244",
+        "eligible": true,
+        "reason": "Theoretical proposal for multimode-cavity supersolid and droplet phases",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2408.07002",
+      "title": "Quantum-limited generalized measurement for tunnel-coupled condensates",
+      "doi": "10.1103/PhysRevLett.133.250403",
+      "journal-ref": "Phys. Rev. Lett. 133, 250403 (2024)",
+      "categories": "cond-mat.quant-gas physics.atom-ph quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 13 Aug 2024 16:06:59 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2408.07002",
+        "eligible": false,
+        "reason": "Implemented generalized measurement on tunnel-coupled condensates",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2401.01928",
+      "title": "Interferometry of non-Abelian band singularities and Euler class\n  topology",
+      "doi": "10.1103/PhysRevLett.133.093404",
+      "journal-ref": "Phys. Rev. Lett. 133, 093404 (2024)",
+      "categories": "cond-mat.quant-gas cond-mat.mes-hall physics.atom-ph quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 3 Jan 2024 19:00:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 19 Jul 2024 11:18:38 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2401.01928",
+        "eligible": true,
+        "reason": "Theoretical construction and numerics of interferometry for Euler-class topology",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2407.06671",
+      "title": "Supersolidity of polariton condensates in photonic crystal waveguides",
+      "doi": "10.1103/PhysRevLett.134.056002",
+      "journal-ref": "Phys. Rev. Lett. 134, 056002 (2025)",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 09 Jul 2024 08:46:44 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 13 Jan 2025 15:25:10 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.06671",
+        "eligible": true,
+        "reason": "Theory of polariton supersolidity in photonic crystal waveguides",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2401.14822",
+      "title": "Exciting the Higgs mode in a strongly-interacting Fermi gas by\n  interaction modulation",
+      "doi": "10.1103/PhysRevLett.133.150403",
+      "journal-ref": "Phys. Rev. Lett. 133, 150403 (2024)",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 26 Jan 2024 12:51:08 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 14 Oct 2024 15:59:16 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2401.14822",
+        "eligible": false,
+        "reason": "Experiment exciting Higgs mode by interaction modulation",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2405.19607",
+      "title": "Generic transverse stability of kink structures in atomic and optical\n  nonlinear media with competing attractive and repulsive interactions",
+      "doi": "10.1103/PhysRevLett.134.123402",
+      "journal-ref": null,
+      "categories": "cond-mat.quant-gas nlin.PS physics.atom-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 30 May 2024 01:48:37 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 27 Mar 2025 18:33:17 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.19607",
+        "eligible": true,
+        "reason": "Analytic and numerical stability of kinks in extended GP models",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2407.08194",
+      "title": "Uncovering Emergent Spacetime Supersymmetry with Rydberg Atom Arrays",
+      "doi": "10.1103/PhysRevLett.133.223401",
+      "journal-ref": "Phys. Rev. Lett. 133, 223401 (2024)",
+      "categories": "cond-mat.quant-gas cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 11 Jul 2024 05:32:24 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 21 Jul 2024 02:25:22 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Mon, 23 Dec 2024 03:10:24 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.08194",
+        "eligible": true,
+        "reason": "Theory proposal for emergent SUSY in Rydberg arrays",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2407.02481",
+      "title": "Unveiling Supersolid Order via Vortex Trajectory Correlations",
+      "doi": "10.1103/PhysRevLett.134.163401",
+      "journal-ref": "Phys. Rev. Lett. 134, 163401 (2025)",
+      "categories": "cond-mat.quant-gas physics.atom-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 2 Jul 2024 17:57:33 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 3 Jul 2024 15:07:40 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 23 Apr 2025 18:31:07 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.02481",
+        "eligible": true,
+        "reason": "Proposed vortex-correlation order parameter tested numerically",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2404.08482",
+      "title": "Floquet-driven crossover from density-assisted tunneling to enhanced\n  pair tunneling",
+      "doi": "10.1103/PhysRevLett.133.253402",
+      "journal-ref": "Phys. Rev. Lett. 133, 253402 (2024)",
+      "categories": "cond-mat.quant-gas quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 12 Apr 2024 14:02:57 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 17 Dec 2024 21:53:11 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2404.08482",
+        "eligible": false,
+        "reason": "Experimental Floquet control of pair tunneling in a double well",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2503.03477",
+      "title": "Dual Spectroscopy of Quantum Simulated Fermi-Hubbard Systems",
+      "doi": "10.1103/yfqr-y9ks",
+      "journal-ref": "Phys. Rev. Lett. 135, 043401 (2025)",
+      "categories": "cond-mat.quant-gas cond-mat.str-el cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 05 Mar 2025 13:15:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 30 Jul 2025 13:57:45 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.03477",
+        "eligible": true,
+        "reason": "Theory of RF spectroscopy of magnetic polarons in Fermi-Hubbard systems",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2306.10411",
+      "title": "Quantum scars and regular eigenstates in a chaotic spinor condensate",
+      "doi": "10.1103/PhysRevLett.132.020401",
+      "journal-ref": "Phys. Rev. Lett. 132, 020401 (2024)",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sat, 17 Jun 2023 19:17:29 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.10411",
+        "eligible": true,
+        "reason": "Theory of scars and regular states in a spinor condensate",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.04159",
+      "title": "Maxwell relation between entropy and atom-atom pair correlation",
+      "doi": "10.1103/PhysRevLett.133.100403",
+      "journal-ref": "Phys. Rev. Lett. 133, 100403 (2024)",
+      "categories": "cond-mat.quant-gas cond-mat.stat-mech quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 7 May 2024 09:54:29 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 8 Sep 2024 06:50:04 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.04159",
+        "eligible": true,
+        "reason": "Maxwell relation derivation with SPGPE numerics",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2502.14986",
+      "title": "Time-periodic driving of a bath-coupled open quantum gas of light",
+      "doi": "10.1103/922g-1fng",
+      "journal-ref": "Phys. Rev. Lett. 135, 033603 (2025)",
+      "categories": "cond-mat.quant-gas quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 20 Feb 2025 19:22:11 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 18 Jul 2025 19:35:14 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2502.14986",
+        "eligible": false,
+        "reason": "Driven photon-BEC response measurements",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2505.04704",
+      "title": "Disorder-Free Localization and Fragmentation in a Non-Abelian Lattice Gauge Theory",
+      "doi": "10.1103/fhfy-dh85",
+      "journal-ref": "Phys. Rev. Lett. 136, 170401 (2026)",
+      "categories": "cond-mat.quant-gas hep-lat quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 07 May 2025 18:00:42 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 21 May 2026 17:13:44 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2505.04704",
+        "eligible": true,
+        "reason": "Numerical dynamical phase diagram of SU(2) lattice gauge theory",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2407.08702",
+      "title": "Production and stabilization of a spin mixture of ultracold dipolar Bose gases",
+      "doi": "10.1103/PhysRevLett.134.013402",
+      "journal-ref": null,
+      "categories": "cond-mat.quant-gas physics.atom-ph quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 11 Jul 2024 17:37:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 10 Jan 2025 11:32:44 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Fri, 28 Nov 2025 11:41:37 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.08702",
+        "eligible": false,
+        "reason": "Experimental Dy spin mixture production and scattering lengths",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2406.08868",
+      "title": "Dissipative Superfluidity in a Molecular Bose-Einstein Condensate",
+      "doi": "10.1103/ww8r-sjhb",
+      "journal-ref": "Phys. Rev. Lett. 135, 166001 (2025)",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 13 Jun 2024 07:13:07 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 15 Oct 2025 07:49:01 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2406.08868",
+        "eligible": true,
+        "reason": "Dissipative superfluid transport theory for molecular BEC",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2407.08738",
+      "title": "An Equation of State for Turbulence in the Gross-Pitaevskii model",
+      "doi": "10.1103/1ppc-pl4k",
+      "journal-ref": "Phys. Rev. Lett. 136, 153401 (2026)",
+      "categories": "cond-mat.quant-gas cond-mat.stat-mech physics.atom-ph physics.flu-dyn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 11 Jul 2024 17:59:46 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sat, 28 Feb 2026 17:25:30 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Sun, 10 May 2026 13:20:21 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.08738",
+        "eligible": true,
+        "reason": "Numerical Gross-Pitaevskii turbulence equation of state",
+        "category": "cond-mat.quant-gas",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2503.09553",
+      "title": "Observation of Fermi acceleration with cold atoms",
+      "doi": "10.1103/nrjv-pwy1",
+      "journal-ref": "Phys. Rev. Lett. 135, 025201 (2025)",
+      "categories": "cond-mat.quant-gas astro-ph.HE physics.space-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 12 Mar 2025 17:16:17 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 09 Jul 2025 20:07:41 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.09553",
+        "eligible": false,
+        "reason": "Experimental Fermi accelerator with cold atoms",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2412.06915",
+      "title": "Quantum phases and transitions of bosons on a comb lattice",
+      "doi": null,
+      "journal-ref": "Phys. Rev. Lett. 135, 016001 (2025)",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 09 Dec 2024 19:03:23 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 19 Aug 2025 13:00:39 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2412.06915",
+        "eligible": true,
+        "reason": "Phase diagram of bosons on comb lattice (theory); no PRL DOI in metadata",
+        "category": "cond-mat.quant-gas",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2410.12204",
+      "title": "Fate of thermalization of ultracold fermions with two-body dissipation",
+      "doi": "10.1103/PhysRevLett.134.153402",
+      "journal-ref": "Phys. Rev. Lett. 134, 153402 (2025)",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 16 Oct 2024 03:55:59 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2410.12204",
+        "eligible": true,
+        "reason": "Inelastic quantum Boltzmann theory of two-body loss compared to existing data",
+        "category": "cond-mat.quant-gas",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2408.04715",
+      "title": "Kolmogorov turbulence in atomic Bose-Einstein condensates",
+      "doi": "10.1103/PhysRevLett.134.083402",
+      "journal-ref": "Physical Review Letters 134.8 (2025): 083402",
+      "categories": "cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 08 Aug 2024 18:31:02 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 02 Jul 2025 03:22:56 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2408.04715",
+        "eligible": false,
+        "reason": "Experimental BEC turbulence via impurity injection",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2405.21065",
+      "title": "Single-beam grating-chip 3D and 1D optical lattices",
+      "doi": "10.1103/PhysRevLett.134.013001",
+      "journal-ref": "Phys. Rev. Lett. 134, 013001 (2025)",
+      "categories": "cond-mat.quant-gas physics.atom-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 31 May 2024 17:54:48 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 20 Nov 2024 11:07:05 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.21065",
+        "eligible": false,
+        "reason": "Experimental grating-chip optical lattices",
+        "category": "cond-mat.quant-gas"
+      }
+    },
+    {
+      "id": "2409.12901",
+      "title": "Chiral superfluid helium-3 in the quasi-two-dimensional limit",
+      "doi": "10.1103/PhysRevLett.134.136001",
+      "journal-ref": "Physical Review Letters 134, 136001 (2025)",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 19 Sep 2024 16:47:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 31 Mar 2025 20:57:10 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.12901",
+        "eligible": false,
+        "reason": "Experiment on confined superfluid 3He phases",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2305.09530",
+      "title": "Tomasch Oscillations as Above-Gap Signature of Topological\n  Superconductivity",
+      "doi": "10.1103/PhysRevLett.132.066301",
+      "journal-ref": "Phys. Rev. Lett. 132, 066301 (2024)",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 16 May 2023 15:21:54 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 12 Mar 2024 16:15:25 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2305.09530",
+        "eligible": true,
+        "reason": "Transport theory proposing Tomasch oscillations as topology signature",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2411.17357",
+      "title": "Two characteristic contributions to the superconducting state of\n  2$H$-NbSe$_2$",
+      "doi": "10.1103/PhysRevLett.134.116001",
+      "journal-ref": null,
+      "categories": "cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 26 Nov 2024 12:00:41 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 6 May 2025 23:08:28 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2411.17357",
+        "eligible": false,
+        "reason": "Vortex-lattice measurements in 2H-NbSe2",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2304.11939",
+      "title": "Phase shift and magnetic anisotropy induced field splitting of impurity\n  states in (Li1-xFex)OHFeSe superconductor",
+      "doi": "10.1103/PhysRevLett.130.206001",
+      "journal-ref": null,
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 24 Apr 2023 09:21:25 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2304.11939",
+        "eligible": false,
+        "reason": "STM/STS measurements of impurity states in (Li,Fe)OHFeSe",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2312.11516",
+      "title": "Essay: Where Can Quantum Geometry Lead Us?",
+      "doi": "10.1103/PhysRevLett.131.240001",
+      "journal-ref": "Physical Review Letters 131, 240001 (2023)",
+      "categories": "cond-mat.supr-con cond-mat.quant-gas cond-mat.str-el physics.optics quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 12 Dec 2023 19:03:59 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2312.11516",
+        "eligible": false,
+        "reason": "Essay format, not a research Letter",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2303.14385",
+      "title": "Nonequilibrium Fractional Josephson Effect",
+      "doi": "10.1103/PhysRevLett.131.126301",
+      "journal-ref": "Phys. Rev. Lett. 131, 126301 (2023)",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sat, 25 Mar 2023 07:25:47 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 6 Aug 2023 23:09:36 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Thu, 28 Sep 2023 10:47:01 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2303.14385",
+        "eligible": true,
+        "reason": "Microscopic theory of nonequilibrium fractional Josephson effect",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2306.02861",
+      "title": "Decoding the drive-bath interplay: A guideline to enhance\n  superconductivity",
+      "doi": "10.1103/physrevlett.133.086001",
+      "journal-ref": "Phys. Rev. Lett. 133, 086001 (2024)",
+      "categories": "cond-mat.supr-con quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 5 Jun 2023 13:26:09 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 23 Nov 2023 10:46:44 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.02861",
+        "eligible": true,
+        "reason": "Floquet-Keldysh theory of driven superconductor-bath interplay",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2510.14724",
+      "title": "Crossed surface flat bands in three-dimensional superconducting altermagnets",
+      "doi": "10.1103/65q6-5wxl",
+      "journal-ref": "Phys. Rev. Lett. 136, 226001 (2026)",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 16 Oct 2025 14:24:27 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 24 Oct 2025 11:06:25 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 04 Feb 2026 05:01:51 GMT"
+        },
+        {
+          "version": "v4",
+          "created": "Thu, 04 Jun 2026 23:28:05 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2510.14724",
+        "eligible": true,
+        "reason": "Theory of crossed surface flat bands in 3D superconducting altermagnets",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2507.19147",
+      "title": "The Josephson effect in Fibonacci superconductors",
+      "doi": "10.1103/6m6b-y3yv",
+      "journal-ref": "Phys. Rev. Lett. 136, 186002 - Published 7 May, 2026",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 25 Jul 2025 10:36:15 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2507.19147",
+        "eligible": true,
+        "reason": "Theory of Josephson effect in Fibonacci superconductors",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.19853",
+      "title": "Correlated Electronic Structure and Density-Wave Gap in Trilayer Nickelate La4Ni3O10",
+      "doi": null,
+      "journal-ref": "Phys. Rev. Lett. 135, 146506 (2025)",
+      "categories": "cond-mat.supr-con cond-mat.mtrl-sci cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 30 May 2024 09:02:04 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.19853",
+        "eligible": false,
+        "reason": "ARPES with ab initio on La4Ni3O10 (joint experiment); no PRL DOI in metadata",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2404.03638",
+      "title": "Cooperation between electron-phonon coupling and electronic interaction in bilayer nickelates La$_3$Ni$_2$O$_7$",
+      "doi": "10.1103/PhysRevLett.134.136002",
+      "journal-ref": "Phys. Rev. Lett. 134, 136002 (2025)",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 04 Apr 2024 17:55:41 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2404.03638",
+        "eligible": true,
+        "reason": "First-principles phonons plus FRG for La3Ni2O7",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2411.02489",
+      "title": "Adatom engineering magnetic order in superconductors: Applications to\n  altermagnetic superconductivity",
+      "doi": "10.1103/PhysRevLett.134.146001",
+      "journal-ref": "Phys. Rev. Lett. 134, 146001 (2025)",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 4 Nov 2024 19:00:00 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2411.02489",
+        "eligible": true,
+        "reason": "Theory of adatom-engineered altermagnetic superconductivity",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2306.02397",
+      "title": "Why shot noise does not generally detect pairing in mesoscopic\n  superconducting tunnel junctions",
+      "doi": "10.1103/PhysRevLett.132.076001",
+      "journal-ref": "Phys. Rev. Lett. 132, 076001 (2024)",
+      "categories": "cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 4 Jun 2023 16:15:52 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 15 Mar 2024 10:51:57 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.02397",
+        "eligible": false,
+        "reason": "Shot-noise measurements with newly developed amplifier",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2402.18763",
+      "title": "Discovery of magnetic phase transitions in heavy-fermion superconductor\n  CeRh$_2$As$_2$",
+      "doi": "10.1103/PhysRevLett.132.076504",
+      "journal-ref": "Phys. Rev. Lett. 132 (2024) 076504",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 29 Feb 2024 00:03:42 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2402.18763",
+        "eligible": false,
+        "reason": "Specific-heat measurements on CeRh2As2",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2304.03303",
+      "title": "Enhanced Superconducting Diode Effect due to coexisting Phases",
+      "doi": "10.1103/PhysRevLett.132.046003",
+      "journal-ref": "Phys. Rev. Lett. 132, 046003 (2024)",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 6 Apr 2023 18:00:01 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2304.03303",
+        "eligible": true,
+        "reason": "Phenomenological and microscopic theory of enhanced diode effect",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2510.23800",
+      "title": "Observation of a pronounced Hebel-Slichter peak in the spin-lattice relaxation rate and implications for gap and pairing symmetry in LaNiGa$_2$",
+      "doi": "10.1103/tsnb-1mxc",
+      "journal-ref": "Phys. Rev. Lett. 136, 186001 (2026)",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 27 Oct 2025 19:34:34 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2510.23800",
+        "eligible": false,
+        "reason": "NQR relaxation measurements on LaNiGa2",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2307.14965",
+      "title": "Interlayer Coupling Driven High-Temperature Superconductivity in\n  La$_3$Ni$_2$O$_7$ Under Pressure",
+      "doi": "10.1103/PhysRevLett.132.146002",
+      "journal-ref": "Phys. Rev. Lett. 132, 146002 (2024)",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 27 Jul 2023 15:56:58 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 31 Jul 2023 14:32:43 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 20 Mar 2024 02:23:56 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2307.14965",
+        "eligible": true,
+        "reason": "Slave-boson bilayer t-J theory of La3Ni2O7",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2507.04378",
+      "title": "Observation of Electride-like $s$ States Coexisting with Correlated $d$ Electrons in NdNiO$_2$",
+      "doi": "10.1103/tptb-8hb4",
+      "journal-ref": "Phys. Rev. Lett. 135, 116501 (2025)",
+      "categories": "cond-mat.supr-con cond-mat.mtrl-sci cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 06 Jul 2025 12:52:03 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2507.04378",
+        "eligible": false,
+        "reason": "Polarization-dependent ARPES on NdNiO2",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2409.18050",
+      "title": "Superconductivity and charge-density-wave in the Holstein model on the Penrose Lattice",
+      "doi": "10.1103/PhysRevLett.134.206001",
+      "journal-ref": "Phys. Rev. Lett. 134, 206001 (2025)",
+      "categories": "cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 26 Sep 2024 16:50:55 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 30 Nov 2025 04:53:43 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.18050",
+        "eligible": true,
+        "reason": "Determinant QMC of Holstein model on Penrose lattice",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2506.04356",
+      "title": "Intra-unit-cell singlet pairing mediated by altermagnetic fluctuations",
+      "doi": "10.1103/dlpb-gfct",
+      "journal-ref": "Phys. Rev. Lett. 135, 156001 (2025)",
+      "categories": "cond-mat.supr-con",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 04 Jun 2025 18:16:30 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2506.04356",
+        "eligible": true,
+        "reason": "Theory of pairing from altermagnetic fluctuations",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2307.00568",
+      "title": "Quantum interference between quasi-2D Fermi surface sheets in UTe2",
+      "doi": "10.1103/PhysRevLett.132.266503",
+      "journal-ref": "Phys. Rev. Lett. 132, 266503 (2024)",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 2 Jul 2023 13:30:28 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 26 Jun 2024 17:27:57 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2307.00568",
+        "eligible": false,
+        "reason": "Magnetoconductance oscillation measurements on UTe2",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2312.10805",
+      "title": "Nernst Sign-Reversal in the Hexatic Vortex Phase of Weakly Disordered\n  a-MoGe Thin Films",
+      "doi": "10.1103/PhysRevLett.132.026003",
+      "journal-ref": null,
+      "categories": "cond-mat.supr-con cond-mat.dis-nn cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 17 Dec 2023 20:00:01 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2312.10805",
+        "eligible": false,
+        "reason": "Nernst measurements on a-MoGe films",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2412.15103",
+      "title": "Topological Landau Theory",
+      "doi": "10.1103/PhysRevLett.134.256001",
+      "journal-ref": "Phys. Rev. Lett. 134, 256001 (2025)",
+      "categories": "cond-mat.supr-con cond-mat.mes-hall cond-mat.other cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 19 Dec 2024 17:49:02 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2412.15103",
+        "eligible": true,
+        "reason": "Topological extension of Landau theory with Ginzburg-Landau models",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2503.16384",
+      "title": "Spontaneous vortex-antivortex lattice and Majorana fermions in rhombohedral graphene",
+      "doi": "10.1103/k8sb-rqxf",
+      "journal-ref": "Phys. Rev. Lett. 135, 116001 (2025)",
+      "categories": "cond-mat.supr-con cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 20 Mar 2025 17:45:51 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 16 Sep 2025 22:17:01 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.16384",
+        "eligible": true,
+        "reason": "Ginzburg-Landau and microscopic prediction of vortex-antivortex lattice",
+        "category": "cond-mat.supr-con",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2505.06072",
+      "title": "Visualization of defect-induced interband proximity effect at the nanoscale",
+      "doi": "10.1103/4vhj-s1fq",
+      "journal-ref": "Phys. Rev. Lett. 136, 056401 (2026)",
+      "categories": "cond-mat.supr-con cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 09 May 2025 14:15:23 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 12 May 2025 12:37:56 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Mon, 07 Jul 2025 13:05:45 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2505.06072",
+        "eligible": false,
+        "reason": "Millikelvin STM measurements on Pb defects",
+        "category": "cond-mat.supr-con"
+      }
+    },
+    {
+      "id": "2304.07544",
+      "title": "Explaining Giant Apparent $\\mathrm{p}K_\\mathrm{A}$ Shifts in Weak\n  Polyelectrolyte Brushes",
+      "doi": "10.1103/PhysRevLett.131.168101",
+      "journal-ref": null,
+      "categories": "cond-mat.soft cond-mat.mtrl-sci physics.comp-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sat, 15 Apr 2023 12:32:03 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 10 Jul 2023 20:58:23 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2304.07544",
+        "eligible": true,
+        "reason": "Simulations and mean-field theory explaining reported pKA shifts",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2409.07928",
+      "title": "(Un)buckling mechanics of epithelial monolayers under compression",
+      "doi": "10.1103/PhysRevLett.134.118402",
+      "journal-ref": "Phys. Rev. Lett. 134, 118402 (2025)",
+      "categories": "cond-mat.soft physics.bio-ph q-bio.TO",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 12 Sep 2024 10:49:09 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.07928",
+        "eligible": true,
+        "reason": "Vertex-model simulations and continuum theory of epithelial buckling",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2409.01594",
+      "title": "Solute-mediated colloidal vortex in a microfluidic T-junction",
+      "doi": "10.1103/PhysRevLett.134.098201",
+      "journal-ref": null,
+      "categories": "cond-mat.soft physics.flu-dyn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 03 Sep 2024 04:23:22 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.01594",
+        "eligible": false,
+        "reason": "Microfluidic experiments combined with simulations (joint experiment)",
+        "category": "cond-mat.soft"
+      }
+    },
+    {
+      "id": "2408.03716",
+      "title": "Mechanics of poking a cyst",
+      "doi": "10.1103/PhysRevLett.134.228402",
+      "journal-ref": "Phys Rev. Lett. 134, 228402 (2025)",
+      "categories": "cond-mat.soft physics.bio-ph q-bio.TO",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 07 Aug 2024 12:06:04 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2408.03716",
+        "eligible": false,
+        "reason": "Uncertain: indentation theory compared to cyst experiments of unclear provenance",
+        "category": "cond-mat.soft"
+      }
+    },
+    {
+      "id": "2409.04280",
+      "title": "The Decrease of Static Friction Coefficient with Interface Growth from\n  Single to Multiasperity Contact",
+      "doi": "10.1103/PhysRevLett.134.176202",
+      "journal-ref": "Phys. Rev. Lett. 134, 176202, 2025",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 6 Sep 2024 13:43:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 8 May 2025 16:23:56 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.04280",
+        "eligible": false,
+        "reason": "Friction experiments over three decades of load",
+        "category": "cond-mat.soft"
+      }
+    },
+    {
+      "id": "2505.18272",
+      "title": "Mechanochemical feedback drives complex inertial dynamics in active solids",
+      "doi": "10.1103/19rh-3whq",
+      "journal-ref": "Phys. Rev. Lett. 135, 258301 (2025)",
+      "categories": "cond-mat.soft cond-mat.mtrl-sci cond-mat.stat-mech nlin.CD",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 23 May 2025 18:09:55 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 25 Dec 2025 20:28:31 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2505.18272",
+        "eligible": true,
+        "reason": "Model and simulations of mechanochemical active solids",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2305.06033",
+      "title": "Non-monotonous translocation time of polymers across pores",
+      "doi": "10.1103/PhysRevLett.131.048101",
+      "journal-ref": null,
+      "categories": "cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 10 May 2023 10:34:08 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 25 Aug 2023 07:44:18 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2305.06033",
+        "eligible": true,
+        "reason": "Fick-Jacobs theory of polymer translocation with numerics",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2408.06950",
+      "title": "Onset of Intermittency and Multiscaling in Active Turbulence",
+      "doi": "10.1103/PhysRevLett.134.088302",
+      "journal-ref": null,
+      "categories": "cond-mat.soft nlin.CD physics.flu-dyn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 13 Aug 2024 15:07:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 14 Aug 2024 06:59:12 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Tue, 25 Mar 2025 13:31:08 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2408.06950",
+        "eligible": true,
+        "reason": "Hydrodynamic model of active-turbulence intermittency",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2309.07886",
+      "title": "Vortex Lattices in Active Nematics with Periodic Obstacle Arrays",
+      "doi": "10.1103/PhysRevLett.132.018301",
+      "journal-ref": null,
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 14 Sep 2023 17:33:29 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2309.07886",
+        "eligible": true,
+        "reason": "Numerical active nematic with obstacle arrays",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2307.02840",
+      "title": "Sampling efficiency of transverse forces in dense liquids",
+      "doi": "10.1103/PhysRevLett.131.257101",
+      "journal-ref": "Phys. Rev. Lett. 131, 257101 (2023)",
+      "categories": "cond-mat.soft cond-mat.dis-nn cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 6 Jul 2023 08:14:05 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 14 Dec 2023 10:17:50 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2307.02840",
+        "eligible": true,
+        "reason": "Brownian dynamics, infinite-d theory and MCT of transverse forces",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2506.05262",
+      "title": "Tuning Steady Shear Rheology through Active Dopants",
+      "doi": "10.1103/qvr9-rvw4",
+      "journal-ref": "Phys. Rev. Lett. 135, 168302 (2025)",
+      "categories": "cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 05 Jun 2025 17:21:24 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 06 Oct 2025 02:02:26 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2506.05262",
+        "eligible": true,
+        "reason": "Numerical shear rheology of active-passive mixtures",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2503.18068",
+      "title": "Pseudo-giant number fluctuations and nematic order in microswimmer suspensions",
+      "doi": "10.1103/31q1-hj3n",
+      "journal-ref": "Phys. Rev. Lett. 135, 098302 (2025)",
+      "categories": "cond-mat.soft cond-mat.stat-mech physics.bio-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 23 Mar 2025 13:30:56 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 06 Aug 2025 18:16:58 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.18068",
+        "eligible": true,
+        "reason": "Numerical pusher-suspension number fluctuations",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2307.10103",
+      "title": "Coexistence of defect morphologies in three dimensional active nematics",
+      "doi": "10.1103/PhysRevLett.132.258301",
+      "journal-ref": null,
+      "categories": "cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 19 Jul 2023 16:19:11 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2307.10103",
+        "eligible": true,
+        "reason": "Simulations of 3D active nematic defect morphologies",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2502.08602",
+      "title": "Stretching Response of a Polymer Chain with Deformable Bonds",
+      "doi": "10.1103/PhysRevLett.134.218101",
+      "journal-ref": null,
+      "categories": "cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 12 Feb 2025 17:41:48 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 30 May 2025 15:23:52 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2502.08602",
+        "eligible": true,
+        "reason": "Statistical-mechanics model of deformable polymer bonds vs published data",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2503.04303",
+      "title": "Euler buckling on curved surfaces",
+      "doi": "10.1103/63py-ph5s",
+      "journal-ref": "Phys. Rev. Lett. 135, 247201 (2025)",
+      "categories": "cond-mat.soft physics.bio-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 06 Mar 2025 10:42:37 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.04303",
+        "eligible": true,
+        "reason": "Weakly nonlinear and numerical Euler buckling on curved surfaces",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2409.17096",
+      "title": "Self-organization and memory in an disordered solid subject to random loading",
+      "doi": "10.1103/PhysRevLett.134.178203",
+      "journal-ref": "Phys. Rev. Lett. 134, 178203, 2025",
+      "categories": "cond-mat.soft cond-mat.mtrl-sci q-bio.NC",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 25 Sep 2024 17:08:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 22 Jan 2025 14:57:07 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.17096",
+        "eligible": true,
+        "reason": "Mesoscopic model of memory under random loading",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2409.02607",
+      "title": "Fully-Polarized Topological Isostatic Metamaterials in Three Dimensions",
+      "doi": "10.1103/PhysRevLett.133.106101",
+      "journal-ref": "Physical Review Letters 133, 106101 (2024)",
+      "categories": "cond-mat.soft cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 4 Sep 2024 10:45:10 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 5 Sep 2024 02:34:21 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.02607",
+        "eligible": false,
+        "reason": "Theory plus experimental demonstration of isostatic metamaterials",
+        "category": "cond-mat.soft"
+      }
+    },
+    {
+      "id": "2409.07804",
+      "title": "Geometric control and memory in networks of hysteretic elements",
+      "doi": "10.1103/PhysRevLett.134.188201",
+      "journal-ref": "Physical Review Letters 134, 188201 (2025)",
+      "categories": "cond-mat.soft cond-mat.dis-nn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 12 Sep 2024 07:30:55 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 7 May 2025 13:08:21 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2409.07804",
+        "eligible": true,
+        "reason": "Analytic mapping from hysteretic springs to hysterons",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2403.18329",
+      "title": "Bulk condensation by an active interface",
+      "doi": "10.1103/PhysRevLett.133.208301",
+      "journal-ref": "Physical Review Letters 133, 208301 (2024)",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 27 Mar 2024 08:09:12 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 2 Apr 2024 12:44:17 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 3 Apr 2024 07:51:52 GMT"
+        },
+        {
+          "version": "v4",
+          "created": "Wed, 2 Apr 2025 10:57:53 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2403.18329",
+        "eligible": false,
+        "reason": "Experiments with supporting simulations on active-interface condensation",
+        "category": "cond-mat.soft"
+      }
+    },
+    {
+      "id": "2308.09574",
+      "title": "Dissipative effects in odd viscous Stokes flow around a single sphere",
+      "doi": "10.1103/PhysRevLett.132.218303",
+      "journal-ref": "Phys. Rev. Lett. 132, 218303 (2024)",
+      "categories": "cond-mat.soft physics.flu-dyn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 18 Aug 2023 14:05:03 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 24 May 2024 19:05:47 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 17 Jul 2024 15:20:41 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2308.09574",
+        "eligible": true,
+        "reason": "Exact analytic odd-viscosity Stokes solution",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2306.03549",
+      "title": "A hard-sphere quasicrystal stabilized by configurational entropy",
+      "doi": "10.1103/PhysRevLett.132.048202",
+      "journal-ref": "Phys. Rev. Lett. 132, 048202 (2024)",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 6 Jun 2023 09:52:45 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.03549",
+        "eligible": true,
+        "reason": "Free-energy calculations of hard-sphere quasicrystal",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2403.15007",
+      "title": "Learning Neural Free-Energy Functionals with Pair-Correlation Matching",
+      "doi": "10.1103/PhysRevLett.134.056103",
+      "journal-ref": "Phys. Rev. Lett. 134, 056103 - Published 7 February, 2025",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 22 Mar 2024 07:36:58 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 15 Apr 2024 17:05:46 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Tue, 14 May 2024 13:39:44 GMT"
+        },
+        {
+          "version": "v4",
+          "created": "Wed, 19 Feb 2025 12:33:59 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2403.15007",
+        "eligible": true,
+        "reason": "Neural free-energy functional trained on simulation data",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2503.12867",
+      "title": "Combinatorial Design of Floppy Modes and Frustrated Loops in Metamaterials",
+      "doi": "10.1103/nqgr-tfb1",
+      "journal-ref": "Phys. Rev. Lett. 136, 038202 (2026)",
+      "categories": "cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 17 Mar 2025 06:52:46 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 06 Apr 2025 20:58:29 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 01 Oct 2025 06:17:49 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.12867",
+        "eligible": false,
+        "reason": "Uncertain: combinatorial metamaterial design likely includes physical demonstration",
+        "category": "cond-mat.soft"
+      }
+    },
+    {
+      "id": "2408.06242",
+      "title": "Enhanced stability and chaotic condensates in multi-species non-reciprocal mixtures",
+      "doi": "10.1103/PhysRevLett.134.148301",
+      "journal-ref": "Phys. Rev. Lett. 134, 148301 Published 7 April, 2025",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 12 Aug 2024 15:49:20 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 13 Aug 2024 11:52:07 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2408.06242",
+        "eligible": true,
+        "reason": "Exact and numerical multi-species nonreciprocal Cahn-Hilliard",
+        "category": "cond-mat.soft",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2501.01330",
+      "title": "Non-reciprocal mixtures in suspension: the role of hydrodynamic interactions",
+      "doi": "10.1103/gbg1-lwwt",
+      "journal-ref": "Phys. Rev. Lett. 135, 108301 Published 3 September, 2025",
+      "categories": "cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 02 Jan 2025 16:30:11 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 12 Feb 2025 18:28:07 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2501.01330",
+        "eligible": true,
+        "reason": "Nonreciprocal Cahn-Hilliard coupled to fluid: stability and simulations",
+        "category": "cond-mat.soft",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2508.06399",
+      "title": "An underdog story: Re-emergence of a polar instability at high pressure in KNbO3",
+      "doi": "10.1103/vwp9-tr7b",
+      "journal-ref": "Phys. Rev. Lett. 136, 056101 (2026)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 08 Aug 2025 15:34:05 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2508.06399",
+        "eligible": false,
+        "reason": "High-pressure XRD, IR, Raman and SHG measurements on KNbO3",
+        "category": "cond-mat.mtrl-sci"
+      }
+    },
+    {
+      "id": "2408.06322",
+      "title": "Discovering High-Entropy Oxides with a Machine-Learning Interatomic Potential",
+      "doi": "10.1103/PhysRevLett.134.216101",
+      "journal-ref": null,
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 12 Aug 2024 17:42:56 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 13 Jan 2025 19:56:15 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2408.06322",
+        "eligible": false,
+        "reason": "Integrated computation and experiment for high-entropy oxides",
+        "category": "cond-mat.mtrl-sci"
+      }
+    },
+    {
+      "id": "2310.07476",
+      "title": "Superfluidity meets the solid-state: frictionless mass-transport through\n  a (5,5) carbon-nanotube",
+      "doi": "10.1103/PhysRevLett.131.206301",
+      "journal-ref": "Physical Review Letters 31, 206301 (2023)",
+      "categories": "cond-mat.mtrl-sci cond-mat.mes-hall cond-mat.quant-gas quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 11 Oct 2023 13:24:01 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 23 Oct 2023 17:24:09 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2310.07476",
+        "eligible": true,
+        "reason": "Theoretical prediction of frictionless He transport in (5,5) CNT",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2311.15726",
+      "title": "Site-selective polar compensation of Mott electrons in a double\n  perovskite heterointerface",
+      "doi": "10.1103/PhysRevLett.134.176201",
+      "journal-ref": "Phys. Rev. Lett. 134, 176201 (2025)",
+      "categories": "cond-mat.mtrl-sci cond-mat.mes-hall cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 27 Nov 2023 11:20:16 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 17 Feb 2025 11:22:21 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2311.15726",
+        "eligible": false,
+        "reason": "Thin-film experiments with DFT on double perovskite interface",
+        "category": "cond-mat.mtrl-sci"
+      }
+    },
+    {
+      "id": "2405.20069",
+      "title": "Stacking-engineered ferroelectricity and multiferroic order in van der\n  Waals magnets",
+      "doi": "10.1103/PhysRevLett.133.246703",
+      "journal-ref": "Phys. Rev. Lett. 133, 246703 (2024)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 30 May 2024 13:58:12 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 31 May 2024 16:10:24 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Thu, 9 Jan 2025 15:26:39 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.20069",
+        "eligible": true,
+        "reason": "First-principles stacking-engineered multiferroics in NiI2",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2306.11321",
+      "title": "Intrinsic Nonlinear Hall Detection of the N\\'eel Vector for\n  Two-Dimensional Antiferromagnetic Spintronics",
+      "doi": "10.1103/PhysRevLett.131.056401",
+      "journal-ref": "Phys. Rev. Lett. 131, 056401 (2023)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 20 Jun 2023 06:37:28 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.11321",
+        "eligible": true,
+        "reason": "First-principles nonlinear Hall detection of Neel vector",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.18443",
+      "title": "Using Thermal Crowding to Direct Pattern Formation on the Nanoscale",
+      "doi": "10.1103/PhysRevLett.133.214003",
+      "journal-ref": null,
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 23 May 2024 14:41:04 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.18443",
+        "eligible": true,
+        "reason": "Self-consistent modeling of laser-melted metal films",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2311.01847",
+      "title": "The optical absorption in indirect semiconductor to semimetal PtSe2\n  arises from direct transitions",
+      "doi": "10.1103/PhysRevLett.134.066901",
+      "journal-ref": "Phys. Rev. Lett. 134, 066901 (2025)",
+      "categories": "cond-mat.mtrl-sci cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 3 Nov 2023 11:23:56 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 17 Nov 2023 11:53:10 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 7 Aug 2024 13:25:07 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2311.01847",
+        "eligible": false,
+        "reason": "Optical absorption measurements on PtSe2 with DFT",
+        "category": "cond-mat.mtrl-sci"
+      }
+    },
+    {
+      "id": "2411.01464",
+      "title": "Intrinsic breakdown strength: theoretical derivation and\n  first-principles calculations",
+      "doi": "10.1103/PhysRevLett.134.086301",
+      "journal-ref": null,
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 3 Nov 2024 07:17:50 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2411.01464",
+        "eligible": true,
+        "reason": "Analytic breakdown-strength model with first-principles calculations",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2401.13026",
+      "title": "Liquid-crystal-like dynamic transition in ferroelectric/dielectric\n  superlattices",
+      "doi": "10.1103/PhysRevLett.133.066801",
+      "journal-ref": "Physical Review Letters 133, 066801 (2024)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 23 Jan 2024 19:00:00 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 7 May 2024 11:33:57 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2401.13026",
+        "eligible": true,
+        "reason": "Molecular dynamics of ferroelectric superlattice melting",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2408.00924",
+      "title": "Phonon screening of excitons in atomically thin semiconductors",
+      "doi": "10.1103/PhysRevLett.133.206901",
+      "journal-ref": null,
+      "categories": "cond-mat.mtrl-sci cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 1 Aug 2024 21:28:21 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2408.00924",
+        "eligible": true,
+        "reason": "Ab initio GW-BSE phonon screening of excitons",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2309.02242",
+      "title": "Compressing and forecasting atomic material simulations with descriptors",
+      "doi": "10.1103/PhysRevLett.131.236101",
+      "journal-ref": null,
+      "categories": "cond-mat.mtrl-sci physics.comp-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 05 Sep 2023 13:48:29 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2309.02242",
+        "eligible": true,
+        "reason": "Computational descriptor compression of atomistic simulations",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2402.14321",
+      "title": "Non-relativistic spin splitting in compensated magnets that are not\n  altermagnets",
+      "doi": "10.1103/PhysRevLett.133.216701",
+      "journal-ref": "Phys. Rev. Lett. 133, 216701 (2024)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 22 Feb 2024 06:24:27 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2402.14321",
+        "eligible": true,
+        "reason": "Symmetry analysis and DFT of non-altermagnetic NRSS antiferromagnets",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2510.00509",
+      "title": "Orbital Altermagnetism in Two Dimensions",
+      "doi": "10.1103/l8fc-dp36",
+      "journal-ref": "Phys. Rev. Lett. (2026)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 01 Oct 2025 04:40:08 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 10 Mar 2026 01:52:00 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 10 Jun 2026 01:51:00 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2510.00509",
+        "eligible": true,
+        "reason": "Tight-binding and first-principles orbital altermagnetism",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2410.06748",
+      "title": "Terahertz-driven parametric excitation of Raman-active phonons in LaAlO$_{3}$",
+      "doi": "10.1103/57p8-7mh9",
+      "journal-ref": "Phys. Rev. Lett. 136, 156902 (2026)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 09 Oct 2024 10:30:09 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 24 Oct 2024 13:48:49 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Wed, 15 Oct 2025 11:49:46 GMT"
+        },
+        {
+          "version": "v4",
+          "created": "Mon, 26 Jan 2026 11:58:15 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2410.06748",
+        "eligible": false,
+        "reason": "THz pump experiments on LaAlO3 with supporting theory",
+        "category": "cond-mat.mtrl-sci"
+      }
+    },
+    {
+      "id": "2508.00683",
+      "title": "Lippmann-Schwinger Approach for Accurate Photoelectron Wavefunctions and Angle-Resolved Photoemission Spectra from First Principles",
+      "doi": "10.1103/gwmm-6l57",
+      "journal-ref": "Phys. Rev. Lett. 135, 056403 (2025)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 01 Aug 2025 14:53:48 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2508.00683",
+        "eligible": true,
+        "reason": "Lippmann-Schwinger first-principles ARPES method vs existing data",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2502.19212",
+      "title": "Theory of Electro-Ionic Perturbations at Supported Electrocatalyst\n  Nanoparticles",
+      "doi": "10.1103/PhysRevLett.134.066201",
+      "journal-ref": "Phys Rev Lett 134, 066201 (2025)",
+      "categories": "cond-mat.mtrl-sci cond-mat.mes-hall",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 26 Feb 2025 15:13:51 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2502.19212",
+        "eligible": true,
+        "reason": "Semiclassical electrocatalyst nanoparticle model validated by first principles",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2407.08420",
+      "title": "Skin Effect of Nonlinear Optical Responses in Antiferromagnets",
+      "doi": "10.1103/PhysRevLett.133.236903",
+      "journal-ref": "Phys. Rev. Lett. 133, 236903 (2024)",
+      "categories": "cond-mat.mtrl-sci physics.optics",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 11 Jul 2024 11:57:47 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sat, 31 Aug 2024 06:40:32 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2407.08420",
+        "eligible": true,
+        "reason": "Theory of nonlinear-optical skin effect in antiferromagnets",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2510.00513",
+      "title": "Machine Learning Prediction of Charged Defect Formation Energies from Crystal Structures",
+      "doi": "10.1103/h66h-y5k6",
+      "journal-ref": "Phys. Rev. Lett. 135, 246101, 2025",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 01 Oct 2025 04:49:14 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Fri, 12 Dec 2025 00:33:13 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2510.00513",
+        "eligible": true,
+        "reason": "Machine-learning protocol for defect formation energies",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2503.01534",
+      "title": "Giant non-reciprocal band structure effect in a multiferroic material",
+      "doi": "10.1103/15ws-ftbf",
+      "journal-ref": "Phys. Rev. Lett. 135, 206401 (2025)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 03 Mar 2025 13:45:22 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2503.01534",
+        "eligible": true,
+        "reason": "DFT and symmetry analysis of non-reciprocal bands in EuO",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2411.12434",
+      "title": "Emergent surface multiferroicity",
+      "doi": "10.1103/PhysRevLett.134.146703",
+      "journal-ref": "Phys. Rev. Lett. 134, 146703 (2025)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 19 Nov 2024 11:50:58 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2411.12434",
+        "eligible": true,
+        "reason": "Theory and first principles of surface multiferroicity",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2507.20705",
+      "title": "Light-induced Odd-parity Magnetism in Conventional Collinear Antiferromagnets",
+      "doi": "10.1103/9346-9jpf",
+      "journal-ref": "Phys. Rev. Lett. 136, 126703 (2026)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 28 Jul 2025 10:57:47 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 31 Jul 2025 13:00:17 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Tue, 05 Aug 2025 12:45:56 GMT"
+        },
+        {
+          "version": "v4",
+          "created": "Fri, 27 Mar 2026 03:15:03 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2507.20705",
+        "eligible": true,
+        "reason": "Symmetry, model and first-principles Floquet odd-parity magnetism",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2506.13696",
+      "title": "Photomagnetic-Chiral Anisotropy mediated by Chirality-Driven Asymmetric Spin Splitting",
+      "doi": "10.1103/llys-8b4p",
+      "journal-ref": "Phys. Rev. Lett. 135, 166903 (2025)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 16 Jun 2025 17:02:43 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2506.13696",
+        "eligible": true,
+        "reason": "First-principles NEGF and TDDFT of chiral gold chains",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2411.14216",
+      "title": "Ferroelectric switchable altermagnetism",
+      "doi": "10.1103/PhysRevLett.134.106802",
+      "journal-ref": "Phys. Rev. Lett. 134, 106802 (2025)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 21 Nov 2024 15:25:55 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 22 Jan 2025 03:08:35 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2411.14216",
+        "eligible": true,
+        "reason": "Spin-group symmetry design and database screening of ferroelectric altermagnets",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2411.03879",
+      "title": "Chiral Phonons Arising From Chirality-Selective Magnon-Phonon Coupling",
+      "doi": "10.1103/j7bs-2zbx",
+      "journal-ref": "Phys. Rev. Lett. 135, 216701 (2025)",
+      "categories": "cond-mat.mtrl-sci",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 06 Nov 2024 12:50:27 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 18 Nov 2025 07:43:28 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2411.03879",
+        "eligible": true,
+        "reason": "First-principles magnon-phonon hybridization in bcc Fe",
+        "category": "cond-mat.mtrl-sci",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2402.02310",
+      "title": "Topological effect on the Anderson transition in chiral symmetry classes",
+      "doi": "10.1103/PhysRevLett.133.226601",
+      "journal-ref": "Physical Review Letters 133, 226601 (2024)",
+      "categories": "cond-mat.dis-nn cond-mat.mes-hall cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 4 Feb 2024 01:35:52 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Wed, 17 Jul 2024 09:21:56 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Fri, 4 Oct 2024 22:59:11 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2402.02310",
+        "eligible": true,
+        "reason": "Theory of quasi-localized phase in chiral symmetry classes",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2405.10062",
+      "title": "Phenomenology of many-body localization in bond-disordered spin chains",
+      "doi": "10.1103/PhysRevLett.133.196302",
+      "journal-ref": "PhysRevLett 133 196302 (2024)",
+      "categories": "cond-mat.dis-nn cond-mat.quant-gas cond-mat.stat-mech quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 16 May 2024 12:52:47 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Tue, 11 Feb 2025 13:55:42 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2405.10062",
+        "eligible": true,
+        "reason": "Real-space RG phenomenology of MBL in bond-disordered chains",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2308.01351",
+      "title": "Absence of Weak Localization on Negative Curvature Surfaces",
+      "doi": "10.1103/PhysRevLett.134.076301",
+      "journal-ref": "Phys. Rev. Lett. 134 076301 (2025)",
+      "categories": "cond-mat.dis-nn gr-qc",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 2 Aug 2023 18:00:05 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2308.01351",
+        "eligible": true,
+        "reason": "Cooperon calculation on hyperbolic space",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2306.12548",
+      "title": "Finite-time Lyapunov exponents of deep neural networks",
+      "doi": "10.1103/PhysRevLett.132.057301",
+      "journal-ref": "Phys. Rev. Lett. 132 (2024) 057301",
+      "categories": "cond-mat.dis-nn cs.LG stat.ML",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 21 Jun 2023 20:21:23 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2306.12548",
+        "eligible": true,
+        "reason": "Lyapunov-exponent analysis of deep neural networks (off-core topic)",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2507.11308",
+      "title": "Localization Transition for Interacting Quantum Particles in Colored-Noise Disorder",
+      "doi": "10.1103/c81j-h58j",
+      "journal-ref": "Phys. Rev. Lett. 136, 096504 (2026)",
+      "categories": "cond-mat.dis-nn cond-mat.quant-gas",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 15 Jul 2025 13:39:29 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Mon, 28 Jul 2025 13:23:35 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2507.11308",
+        "eligible": true,
+        "reason": "RG and numerics of localization in colored-noise disorder",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2509.13502",
+      "title": "Effective delocalization in the one-dimensional Anderson model with stealthy disorder",
+      "doi": "10.1103/nl7n-bqn4",
+      "journal-ref": "Phys. Rev. Lett. 136, 150404 (2025)",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Tue, 16 Sep 2025 20:04:51 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sun, 28 Sep 2025 13:43:55 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Mon, 24 Nov 2025 16:13:32 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2509.13502",
+        "eligible": true,
+        "reason": "Analytic and numerical Anderson model with stealthy disorder",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2305.10363",
+      "title": "Resilient infinite randomness criticality for a disordered chain of\n  interacting Majorana fermions",
+      "doi": "10.1103/PhysRevLett.132.056502",
+      "journal-ref": "Phys. Rev. Lett. 132, 056502 (2024)",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech cond-mat.str-el quant-ph",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 17 May 2023 16:39:43 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2305.10363",
+        "eligible": true,
+        "reason": "DMRG of disordered interacting Majorana chain",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2303.18169",
+      "title": "Dynamical fluctuations of random walks in higher-order networks",
+      "doi": "10.1103/PhysRevLett.133.107401",
+      "journal-ref": "Phys. Rev. Lett. 133, 107401 (September 2024)",
+      "categories": "cond-mat.dis-nn",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 31 Mar 2023 16:03:37 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Sat, 27 Jul 2024 14:37:16 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2303.18169",
+        "eligible": true,
+        "reason": "Large-deviation theory of random walks on hypergraphs (off-core topic)",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2309.14047",
+      "title": "Random-Energy Secret Sharing via Extreme Synergy",
+      "doi": "10.1103/PhysRevLett.133.257401",
+      "journal-ref": "Phys. Rev. Lett. 133, 257401 (2024)",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech cs.CR cs.IT math.IT",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Mon, 25 Sep 2023 11:23:16 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2309.14047",
+        "eligible": true,
+        "reason": "REM-based secret-sharing information theory (off-core topic)",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2402.06585",
+      "title": "Irreversible Monte Carlo algorithms for hard disk glasses: from\n  event-chain to collective swaps",
+      "doi": "10.1103/PhysRevLett.133.028202",
+      "journal-ref": "Phys. Rev. Lett. 133, 028202 (2024)",
+      "categories": "cond-mat.dis-nn cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 9 Feb 2024 18:05:22 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 11 Jul 2024 15:35:27 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2402.06585",
+        "eligible": true,
+        "reason": "Irreversible Monte Carlo algorithms for hard-disk glasses",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2307.08110",
+      "title": "Collective relaxation dynamics in a three-dimensional lattice glass\n  model",
+      "doi": "10.1103/PhysRevLett.132.067101",
+      "journal-ref": "Phys. Rev. Lett. 132, 067101 (2024)",
+      "categories": "cond-mat.dis-nn cond-mat.soft cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Sun, 16 Jul 2023 17:32:26 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 8 Feb 2024 03:16:27 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2307.08110",
+        "eligible": true,
+        "reason": "Numerical relaxation mechanisms of 3D lattice glass",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2504.06849",
+      "title": "Numerical renormalization of glassy dynamics",
+      "doi": "10.1103/z64g-nqs6",
+      "journal-ref": "Phys. Rev. Lett. 135, 247101 (2025)",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 09 Apr 2025 13:04:31 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 11 Dec 2025 13:44:17 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2504.06849",
+        "eligible": true,
+        "reason": "Green's-function interpolation algorithm for glassy quench dynamics",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      }
+    },
+    {
+      "id": "2311.08893",
+      "title": "Stark-Many body localization in interacting infinite dimensional systems",
+      "doi": "10.1103/PhysRevLett.132.166301",
+      "journal-ref": "Phys. Rev. Lett. 132, 166301 (2024)",
+      "categories": "cond-mat.dis-nn cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Wed, 15 Nov 2023 11:55:43 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2311.08893",
+        "eligible": true,
+        "reason": "Numerical Stark-MBL transport on Bethe lattice",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2312.14598",
+      "title": "Exact numerical solution of the fully-connected classical and quantum\n  Heisenberg spin glass",
+      "doi": "10.1103/PhysRevLett.133.016501",
+      "journal-ref": "Phys. Rev. Lett. 133, 016501 (2024)",
+      "categories": "cond-mat.dis-nn cond-mat.stat-mech cond-mat.str-el",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Fri, 22 Dec 2023 10:43:40 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 11 Jan 2024 17:16:52 GMT"
+        },
+        {
+          "version": "v3",
+          "created": "Sun, 25 Aug 2024 19:44:03 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2312.14598",
+        "eligible": true,
+        "reason": "Parisi RSB plus CTQMC solution of Heisenberg spin glass",
+        "category": "cond-mat.dis-nn",
+        "selection": "primary"
+      }
+    },
+    {
+      "id": "2406.09080",
+      "title": "Link to Densify: Topological Transitions and Origin of Hysteresis During\n  the (De)Compression of Amorphous Ices",
+      "doi": "10.1103/PhysRevLett.133.266102",
+      "journal-ref": "Phys. Rev. Lett. 133, 266102 - Published 26 December, 2024",
+      "categories": "cond-mat.dis-nn cond-mat.soft",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "versions": [
+        {
+          "version": "v1",
+          "created": "Thu, 13 Jun 2024 13:03:52 GMT"
+        },
+        {
+          "version": "v2",
+          "created": "Thu, 11 Jul 2024 08:51:20 GMT"
+        }
+      ],
+      "theory_review": {
+        "id": "2406.09080",
+        "eligible": true,
+        "reason": "Simulation study of hydrogen-bond topology in amorphous ices",
+        "category": "cond-mat.dis-nn",
+        "selection": "reserve"
+      }
+    }
+  ]
+}

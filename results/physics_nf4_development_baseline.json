@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "run": "outputs/physics-screen-nf4-dev-02",
+  "fixture_sha256": "2c45bcb2aaab919162e62433f75303b6ecf4b8904b3940db5d7729324343f4ef",
+  "summary": {
+    "general_mc": {
+      "total": 32,
+      "correct": 20
+    },
+    "physics_mc": {
+      "total": 32,
+      "correct": 22
+    },
+    "gsm8k": {
+      "total": 32,
+      "strict_correct": 26,
+      "fallback_correct": 29,
+      "format_compliant": 27,
+      "hit_token_limit": 1,
+      "strict_accuracy": 0.8125,
+      "fallback_accuracy": 0.90625,
+      "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+    },
+    "ifeval": {
+      "total": 16,
+      "prompt_strict_correct": 13,
+      "instruction_strict_correct": 22,
+      "instruction_total": 25
+    }
+  },
+  "wall_seconds": 341.75659806095064,
+  "scope": "112-item nonwriting development screen; frozen before training; not finaltest or full leaderboard score"
+}

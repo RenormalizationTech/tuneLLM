@@ -1,0 +1,10 @@
+{
+  "mmlu": {"repository": "cais/mmlu", "revision": "c30699e8356da336a370243923dbaf21066bb9fe"},
+  "ifeval": {"repository": "google/IFEval", "revision": "966cd89545d6b6acfd7638bc708b98261ca58e84"},
+  "ifeval_scorer": {"repository": "https://github.com/google-research/google-research", "revision": "f8d6d14a1fc6eaef606d7d1e1fa4e96ee09afb81"},
+  "nltk_resource": "punkt_tab",
+  "generation_batch_size": 8,
+  "mc_batch_size": 16,
+  "seed": 42,
+  "thinking": false
+}
