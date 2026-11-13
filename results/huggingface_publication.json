@@ -1,0 +1,268 @@
+{
+  "status": "published_and_verified",
+  "verified_at_utc": "2026-11-13T01:19:11.521701+00:00",
+  "visibility_choice": "Public GGUFs; private experimental adapter",
+  "repositories": [
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA",
+      "private": true,
+      "phase": "remote_files_verified",
+      "files": [
+        "LICENSE",
+        "README.md",
+        "REPRODUCE.md",
+        "adapter_config.json",
+        "adapter_model.safetensors",
+        "added_tokens.json",
+        "chat_template.jinja",
+        "environment.lock.txt",
+        "evaluation.json",
+        "merges.txt",
+        "protocol.json",
+        "reproduction.zip",
+        "retention_sensitivity.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "training_provenance.json",
+        "vocab.json",
+        "provenance.json"
+      ],
+      "revision": "399903ca450b44a68b84ec8b6acfe2ff36cc6e64",
+      "commit_url": "https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA/commit/399903ca450b44a68b84ec8b6acfe2ff36cc6e64",
+      "upload_seconds": 5.5804340578615665,
+      "verified_files": [
+        {
+          "file": "LICENSE",
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "README.md",
+          "sha256": "0cc6bc613bcf7c965c9929b786e68123475e75ca9850416b80886ad5ddf17af9",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "REPRODUCE.md",
+          "sha256": "fed7a04aaaa8c519d70ee8a84b5b1fad1c9b5560cb724a20ac9d1823507b15c4",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "adapter_config.json",
+          "sha256": "827ca790fb000554911ead4798fe96f19b9850c5b80a1eae7348a042803ee4b1",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "adapter_model.safetensors",
+          "sha256": "261d6429b70630a8dac201fc3e8fd19be144b2577d582a6fe6a7a9d491668d35",
+          "method": "Hub LFS SHA256"
+        },
+        {
+          "file": "added_tokens.json",
+          "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "chat_template.jinja",
+          "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "environment.lock.txt",
+          "sha256": "5f56da2277bf8eeb14a11c4fb53a73bffba5df6452d24c5c964950d6f31105de",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "evaluation.json",
+          "sha256": "7a278fd5cf6b9202cd77fda7f704bbfc7339f4908d044b6fed07e0f52817ad57",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "merges.txt",
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "protocol.json",
+          "sha256": "bdacb73a6a5a68237d7305c180190a2c4cb71bebc1de4f314034c448c9c3e1fa",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "reproduction.zip",
+          "sha256": "0069e26655c15aa4304aea2fe363f8f8d39f8fb3cfd6044d5c53f0672e3c9cc5",
+          "method": "Hub LFS SHA256"
+        },
+        {
+          "file": "retention_sensitivity.json",
+          "sha256": "8ebebb2e14e3d3bdf7e7da3f197e73a9b7289a6c43ac3538d20a40ef571437d6",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "tokenizer.json",
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "method": "Hub LFS SHA256"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "training_provenance.json",
+          "sha256": "17badc6e7c6d602b24018f0da9511cddd59de1bc9269f3d81751f66681388394",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "vocab.json",
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "provenance.json",
+          "sha256": "3cf38687c61fe6a2f5a75c8c7c01c6a1f96dd239b13aa4c22b634974b652355e",
+          "method": "Revision-pinned download SHA256"
+        }
+      ],
+      "actual_private": true,
+      "additional_remote_files": [
+        ".gitattributes"
+      ],
+      "current_head_and_visibility_verified": true,
+      "parsed_card_metadata": {
+        "license": "apache-2.0",
+        "base_model": "Qwen/Qwen3-4B",
+        "base_model_relation": "adapter",
+        "library_name": "peft",
+        "pipeline_tag": "text-generation"
+      }
+    },
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+      "private": false,
+      "phase": "remote_files_verified",
+      "files": [
+        "Qwen3-4B-BF16.gguf",
+        "Qwen3-4B-Q8_0.gguf",
+        "Qwen3-4B-Q4_K_M.gguf",
+        "README.md",
+        "LICENSE",
+        "evaluation.json",
+        "REPRODUCE.md",
+        "environment.lock.txt",
+        "reproduction-dab1dae.zip",
+        "provenance.json"
+      ],
+      "revision": "96038e0cb81737bc58489e19cf97461058a0b4e5",
+      "commit_url": "https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF/commit/96038e0cb81737bc58489e19cf97461058a0b4e5",
+      "upload_seconds": 30.86389106977731,
+      "verified_files": [
+        {
+          "file": "Qwen3-4B-BF16.gguf",
+          "sha256": "5dbbfbb5ccea81a811ef8346248bbf8f808c94477feb84415699d632798925b9",
+          "method": "Hub LFS SHA256"
+        },
+        {
+          "file": "Qwen3-4B-Q8_0.gguf",
+          "sha256": "4b2b96c36712c42d902fb23cb361ed8ebf838a4342f77cedb87afe99e291775f",
+          "method": "Hub LFS SHA256"
+        },
+        {
+          "file": "Qwen3-4B-Q4_K_M.gguf",
+          "sha256": "f7a3480949df3ae406a9661aae19e34b6c6ae344e7b6b8edd38b6185b786f339",
+          "method": "Hub LFS SHA256"
+        },
+        {
+          "file": "README.md",
+          "sha256": "f2a9d1434fba5e25e823e78a7ce4561220335de539f500b99ca47140d3fb0ece",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "LICENSE",
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "evaluation.json",
+          "sha256": "1836d8a2a9aab2ef06e80de966d020d72bda34080408fbe4bb0e7920989c95df",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "REPRODUCE.md",
+          "sha256": "77eb266e6ac4e1f85d0e3c010c8f48d227992ca83a229685e4d7a690b97db0db",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "environment.lock.txt",
+          "sha256": "5f56da2277bf8eeb14a11c4fb53a73bffba5df6452d24c5c964950d6f31105de",
+          "method": "Revision-pinned download SHA256"
+        },
+        {
+          "file": "reproduction-dab1dae.zip",
+          "sha256": "c418776d175e98e3745ade70ae2f7c2f28ad6923afb9a526b3bc8e676db53d41",
+          "method": "Hub LFS SHA256"
+        },
+        {
+          "file": "provenance.json",
+          "sha256": "191734fe93ddb5d10a8ad20f0447f82456f56079bc32cfcef5b76e2fcb7a862a",
+          "method": "Revision-pinned download SHA256"
+        }
+      ],
+      "actual_private": false,
+      "additional_remote_files": [
+        ".gitattributes"
+      ],
+      "current_head_and_visibility_verified": true,
+      "parsed_card_metadata": {
+        "license": "apache-2.0",
+        "base_model": "Qwen/Qwen3-4B",
+        "base_model_relation": "quantized",
+        "library_name": null,
+        "pipeline_tag": "text-generation"
+      }
+    }
+  ],
+  "published_load_checks": {
+    "private_adapter": {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA",
+      "revision": "399903ca450b44a68b84ec8b6acfe2ff36cc6e64",
+      "private": true,
+      "all_downloaded_file_hashes_match": true,
+      "rows": 8,
+      "batch_size": 8,
+      "matches_recorded_first_batch_token_for_token": true,
+      "scope": "Revision-pinned downloaded adapter and tokenizer loaded on original pinned NF4 base; first eight final math rows replayed at original settings.",
+      "verified_ids": [
+        "gsm8k-main-test-00945",
+        "gsm8k-main-test-00015",
+        "gsm8k-main-test-00375",
+        "gsm8k-main-test-01006",
+        "gsm8k-main-test-01082",
+        "gsm8k-main-test-00233",
+        "gsm8k-main-test-00469",
+        "gsm8k-main-test-00439"
+      ]
+    },
+    "public_q4_gguf": {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+      "revision": "96038e0cb81737bc58489e19cf97461058a0b4e5",
+      "private": false,
+      "file": "Qwen3-4B-Q4_K_M.gguf",
+      "sha256": "f7a3480949df3ae406a9661aae19e34b6c6ae344e7b6b8edd38b6185b786f339",
+      "download_hash_verified": true,
+      "loaded_with": "llama.cpp 8ca5a8008b57aa39f2601546c0d07912045080a5, GPU1",
+      "load_check_passed": true,
+      "prompt": "What is 17 + 25? Reply with only the integer.",
+      "answer": "42",
+      "scope": "Revision-pinned downloaded public Q4_K_M GGUF loaded and queried; remote hashes verified separately for all formats."
+    }
+  },
+  "limits": "Remote hashes verified for every uploaded file. Download/load checks replayed the first8 final math rows for the adapter and one arithmetic prompt for Q4_K_M; other GGUF formats were verified by Hub LFS SHA256 plus prior local tests. Experimental adapter retains its documented math-accuracy regression.",
+  "credentials_recorded": false
+}

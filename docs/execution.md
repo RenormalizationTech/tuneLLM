@@ -71,8 +71,9 @@ ability. Dataset acquisition, revision and split checks precede training.
 
 ## Publication
 
-The Hugging Face organization is `RenormalizationTech`, confirmed by the user. No Hugging Face artifact repository has been created and no artifact
-has been uploaded. PEFT generated a local adapter README during saving; a complete
+The Hugging Face organization is `RenormalizationTech`, confirmed by the user.
+At the initial milestone no artifact repositories existed. Publication and
+verification are recorded at the end of this file. PEFT generated a local adapter README during saving; a complete
 release card will be written for any selected release. The first release candidates are validated GGUF files and a
 QLoRA adapter. Model cards will include provenance and measured limitations.
 
@@ -265,8 +266,8 @@ results and interpretation follow below.
 The base GGUF payload is prepared under
 `artifacts/releases/Qwen3-4B-tuneLLM-GGUF/`, including the upstream license,
 model card, measurements, file manifest and a source archive. See `releases/`
-for reviewable release files and authentication instructions. No upload has
-occurred; Hugging Face login and repository visibility remain publication inputs.
+for reviewable release files and authentication instructions. Publication subsequently completed with public GGUFs and a private experimental
+adapter; see the verification record below.
 
 ## Bounded-run outcome
 
@@ -316,5 +317,30 @@ Both local release payloads are prepared with cards, licenses, hashes, measured
 limitations, source archives, an environment lock and reproduction instructions.
 The adapter card leads with the observed math regression. Publication copies
 replace machine paths and omit Git author history; original hashes and the
-transformation are recorded separately. No upload has happened. The remaining
-external inputs are Hugging Face authentication and repository visibility.
+transformation are recorded separately. Publication subsequently completed after login and the user selected public
+GGUFs with a private experimental adapter.
+
+## Hugging Face publication completed
+
+The user chose public GGUFs and a private experimental adapter. Authentication
+and organization write access were verified without recording credentials.
+
+- Public: `RenormalizationTech/Qwen3-4B-tuneLLM-GGUF`, revision
+  `96038e0cb81737bc58489e19cf97461058a0b4e5`.
+- Private: `RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA`, revision
+  `399903ca450b44a68b84ec8b6acfe2ff36cc6e64`.
+
+Every uploaded file's hash was verified. Large-file LFS SHA256 values matched
+the manifests; small files were downloaded at the exact revisions and hashed.
+The full private adapter snapshot was downloaded and replayed its first eight
+recorded final math responses token-for-token on the original pinned NF4 base.
+The public Q4 GGUF was downloaded, hashed, loaded on GPU 1 and returned `42` to
+the arithmetic smoke prompt. Other uploaded GGUF formats have remote hash
+verification and prior local load/benchmark checks, rather than another remote
+load replay.
+
+Publication did not change the scientific interpretation: the adapter is an
+experimental artifact with a documented numeric-accuracy regression. See
+`results/huggingface_publication.json` for file-level verification, revisions
+and the exact load-check scope. Raw transfer logs and downloaded verification
+files remain in ignored local folders. No GitHub push was performed.

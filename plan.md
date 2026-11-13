@@ -24,10 +24,10 @@ complete the initial project.
 
 - GitHub repository: created; this working directory is the project repository.
 - Hugging Face organization: `RenormalizationTech` (confirmed by user).
-- Hugging Face artifact repositories: not created; no artifacts uploaded.
-- Base GGUF and experimental adapter release bundles are prepared locally.
+- Hugging Face artifacts published and verified: public base GGUFs and private experimental adapter.
+- Published revisions and scoped load checks: `results/huggingface_publication.json`.
 - Bounded QLoRA completed: better answer format, lower math accuracy; see release cards.
-- Publication needs Hugging Face login and repository visibility choice.
+- Publication visibility confirmed by user: public GGUFs; private experimental adapter.
 - Environment verified: Python 3.10, PyTorch 2.6.0+cu124, both A6000 GPUs visible.
 - Small-model BF16 baseline: two successful Qwen3-4B runs with identical generated tokens;
   7/8 on the basic smoke fixture. See `docs/execution.md` for evidence and limitations.
@@ -837,9 +837,9 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   [x] Generate Q4_K_M
 -   [x] Benchmark initial BF16, Q8_0, Q4_K_M variants (small comparison)
 -   [ ] Optional Q5/Q6 comparisons
--   [ ] Publish useful GGUF artifacts/results
+-   [x] Publish public GGUFs and verify remote hashes/downloaded Q4 load
 
-## M2 - Physics QLoRA
+## M2 - First QLoRA exercise (physics remains a follow-up)
 
 -   [x] Prepare first licensed dataset: GSM8K; physics specialization deferred
 -   [x] Establish held-out smoke evaluation (16 validation/test rows each)
@@ -847,7 +847,7 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   [x] Run 1,024-example/64-step experiment; selected step64 by validation loss
 -   [x] Evaluate domain accuracy: observed 121/128 to 101/128 math regression
 -   [x] Run small retention probes at 8/64 output tokens; no general equivalence claim
--   [ ] Publish selected adapter
+-   [x] Publish selected adapter privately as experimental; verify downloaded replay
 
 ## M3 - Refusal Baseline
 

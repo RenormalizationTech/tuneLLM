@@ -1,7 +1,20 @@
-# Local release candidates
+# Published model artifacts
 
 Model/data binaries stay under ignored `artifacts/releases/`. This directory
-contains reviewable cards, licenses and provenance. Nothing has been uploaded.
+contains reviewable cards, licenses and provenance. Both releases have been
+uploaded with the visibility chosen by the user and verified at pinned revisions.
+
+| Artifact | Visibility | Hub revision |
+| --- | --- | --- |
+| [Base GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF) | Public | `96038e0cb81737bc58489e19cf97461058a0b4e5` |
+| [Experimental adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA) | Private | `399903ca450b44a68b84ec8b6acfe2ff36cc6e64` |
+
+Every uploaded file was checked against its expected SHA256, using Hub LFS
+metadata for large files and revision-pinned downloads for small files. The
+downloaded private adapter reproduced the first eight recorded final math
+responses exactly. The downloaded public Q4 GGUF loaded and passed its arithmetic
+smoke prompt. Other GGUF formats have remote hash verification and prior local
+load/benchmark checks. See `results/huggingface_publication.json` for the record.
 
 ## Base GGUFs
 
@@ -36,7 +49,7 @@ It is an experimental learning artifact with that regression prominent in its ca
 
 ## Authentication and publication
 
-Hugging Face authentication was absent when this milestone began. To sign in
+Hugging Face authentication was configured for publication. To sign in again
 from this project directory without putting a token in chat or version control:
 
 ```bash
@@ -44,9 +57,9 @@ HF_HOME="$PWD/.hf" .venv/bin/hf auth login
 ```
 
 Use an account/token with write access to the `RenormalizationTech` organization.
-The `.hf/` directory is ignored by Git. Publication also needs the intended
-repository visibility, public or private. Authentication is sufficient to resume
-the upload workflow; do not send the token to the assistant.
+The `.hf/` directory is ignored by Git. The current visibility choice is public
+GGUFs and a private experimental adapter. Credentials are not recorded in the
+publication report; do not send the token to the assistant.
 
 The CLI is installed and its help was checked. After identity, organization
 access, target repository and visibility are verified, the GGUF payload can be

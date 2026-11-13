@@ -12,8 +12,9 @@ Initial workflow:
 4. Publish selected validated artifacts and model cards to our existing
    Hugging Face organization.
 
-The GitHub repository and Hugging Face organization already exist. No Hugging
-Face artifact repository has been created and no artifacts have been uploaded.
+The GitHub repository and Hugging Face organization already exist. The first
+artifacts are published: [public GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF)
+and a [private experimental adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA).
 The organization is
 [RenormalizationTech](https://huggingface.co/RenormalizationTech).
 See [plan.md](plan.md) for priorities and the optional research backlog, and
@@ -38,8 +39,8 @@ from 107/128 to 128/128 but reduced numeric accuracy from 121/128 to 101/128.
 It is documented as an experimental learning result. See
 [the full result](results/qlora_real_01.json),
 [the fixed protocol](docs/real_run_protocol.md), and
-[release candidates](releases/README.md). Local payloads are prepared; Hugging
-Face login and visibility choice are still needed for upload.
+[release details](releases/README.md). Uploaded file hashes and pinned-revision
+load checks passed; see [publication verification](results/huggingface_publication.json).
 
 After installing the environment described in the execution record:
 
