@@ -130,7 +130,8 @@ def main():
                    "Small benchmark subsets and unadjusted exploratory paired tests do not establish broad capability equivalence.",
                    "GGUF and HF inference use different backends and batch sizes; decoding settings and input IDs are checked.",
                    "Automatic fidelity flags and exact text overlap are diagnostics, not human scientific or style judgments.",
-                   "Ranks receive equal maximum training budgets; their nominated checkpoints can come from different epochs."]})
+                   "Ranks receive equal maximum training budgets; their nominated checkpoints can come from different epochs.",
+                   "Rank8's minimum occurred at the three-epoch budget boundary; convergence beyond that budget was not tested."]})
     print(path(args.output))
 
 

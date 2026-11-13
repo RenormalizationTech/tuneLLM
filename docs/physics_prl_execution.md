@@ -178,8 +178,8 @@ payload with a SHA256 commitment; keep an offline backup before collecting ratin
 The rank-32, 5e-5 pilot completed all 207 steps and 1,567,140 prediction targets
 in 22m14s including epoch validation/saving. Peak PyTorch allocation was 7.08 GiB.
 Its development losses were 2.2268125 before training and 1.9777026, 1.9657982,
-1.9670665 after epochs 1, 2 and 3. Epoch 2 is nominated for the screen; this is
-not yet a model selection. Final-epoch adapter tensors, probe logits and token
+1.9670665 after epochs 1, 2 and 3. Epoch 2 was nominated for the learning-rate
+screen described below. Final-epoch adapter tensors, probe logits and token
 sequences matched exactly on a fresh-base reload.
 
 The private NF4 base is published at revision
@@ -194,6 +194,60 @@ rank comparison. The exclusive decision is `results/physics_lr_selection.json`
 (commit `9d60703`); ranks 8 and 128 use 5e-5 with the same maximum exposure.
 These small development checks do not establish improved human-rated writing.
 
-Remaining training and final comparisons are in progress. This section will be replaced
-with the completed run registry, selected checkpoints, final tests, release
-revisions and limitations when those stages finish.
+The rank-8 and rank-128 runs have now completed at 5e-5, seed 42. Both began at
+the identical token-weighted development NLL of 2.2268125. Their saved curves and
+minimum-NLL epoch nominations are:
+
+| Rank | Epoch 1 NLL | Epoch 2 NLL | Epoch 3 NLL | Nominated epoch / step |
+|---|---:|---:|---:|---:|
+| 8 | 2.0046957 | 1.9825771 | 1.9786641 | 3 / 207 |
+| 128 | 1.9626056 | 1.9730483 | 2.0037009 | 1 / 69 |
+
+These are token-weighted paper-text losses. Per-paper NLL and chunk-level target
+counts remain in each run's `validation/step-*.json` reports. Epoch nomination
+uses the registered minimum-development-NLL rule and precedes screen gates; it
+does not establish a writing-quality gain.
+
+| Rank | Trainer wall time | Peak PyTorch allocation | Adapter weight bytes |
+|---|---:|---:|---:|
+| 8 | 1,331.195 s (22m11s) | 6.28 GiB | 66,126,768 |
+| 128 | 1,371.527 s (22m52s) | 10.34 GiB | 1,057,033,224 |
+
+Wall time covers the whole Trainer interval, including epoch validation and
+checkpoint saves. Peak allocation includes loaded weights and training/validation
+allocations on the selected GPU; it is not total VRAM or other-process memory.
+The adapter byte counts refer to `adapter_model.safetensors`; each run's three
+epoch checkpoints and final adapter have that same weight-file size.
+
+Ranks 8, 32 and 128 received equal maximum exposure: the same 550 training chunks
+and all remainder chunks, 522,380 prediction targets per epoch, three epochs,
+207 optimizer steps, 1,650 microbatches and 1,567,140 total prediction targets.
+Their nominated checkpoints nevertheless have different exposure: rank 8's
+epoch 3 has 1,567,140 targets, rank 32's epoch 2 has 1,044,760, and rank 128's
+epoch 1 has 522,380. Actual exposure assertions passed for both new runs.
+
+Both new runs also passed fresh-base final-adapter replay: adapter tensors,
+probe logits and generated token IDs matched exactly, with zero maximum logit
+difference. These serialization probes cover the final epoch. Raw logs are
+`outputs/physics-r8-training.log` and `outputs/physics-r128-training.log`; complete
+metadata is in the corresponding `outputs/physics-r8-lr5e5/run.json` and
+`outputs/physics-r128-lr5e5/run.json`.
+
+**Development rank selection is fixed: rank 128 at 5e-5, epoch 1 / step 69.**
+`outputs/physics_rank_mapping.json` identifies rank 8 epoch 3, the reused rank 32
+epoch 2 screen, and rank 128 epoch 1. All three ranks passed the registered gates. Rank 32 minus rank 128 development
+NLL was 0.0031926 (paired paper-bootstrap 95% interval 0.0017998 to 0.0045028);
+rank 8 minus rank 128 was 0.0160585 (0.0132842 to 0.0188015). The registered
+smallest-compatible-rank heuristic therefore selected 128. See
+`results/physics_rank_selection.json`. This heuristic is not proof of practical
+writing superiority. The seed-43 repeat and BF16 control will use the full
+three-epoch schedule but be compared at the primary epoch-1 checkpoint. Final
+comparisons remain pending. Human writing-quality improvement is not established.
+
+Selection has visible tradeoffs. The selected rank-128 checkpoint scored 28/32
+on development GSM8K (base 29/32), 11/16 on strict IFEval (base 13/16; rank 32
+12/16), and produced three automatic writing-fidelity flags versus one for the
+two-example base. Its two writing truncations and two extra flags each sit at
+the registered increase limit. All three ranks had two writing truncations.
+The 0.0032-nat/token development-loss advantage over rank 32 is small; these
+screens do not establish that the larger adapter writes better for people.

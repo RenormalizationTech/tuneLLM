@@ -83,7 +83,10 @@
           "maximum": 2,
           "passed": true
         }
-      }
+      },
+      "trainable_parameters": 66060288,
+      "adapter_bytes": 264308896,
+      "rank_selected": false
     },
     {
       "id": "physics-r32-lr1e4",
@@ -167,7 +170,9 @@
           "maximum": 2,
           "passed": false
         }
-      }
+      },
+      "trainable_parameters": 66060288,
+      "adapter_bytes": 264308896
     },
     {
       "id": "physics-r8-lr5e5",
@@ -202,11 +207,154 @@
         "papers_per_draw": 10,
         "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
       },
-      "screen_status": "pending; rank comparison not selected"
+      "screen_status": "completed",
+      "trainable_parameters": 16515072,
+      "adapter_bytes": 66126768,
+      "development_screen_passed": true,
+      "development_gate_checks": {
+        "general_mc_correct_drop": {
+          "value": -2,
+          "maximum": 4,
+          "passed": true
+        },
+        "physics_mc_correct_drop": {
+          "value": 0,
+          "maximum": 4,
+          "passed": true
+        },
+        "gsm8k_correct_drop": {
+          "value": 2,
+          "maximum": 4,
+          "passed": true
+        },
+        "gsm8k_truncation_increase": {
+          "value": 0,
+          "maximum": 2,
+          "passed": true
+        },
+        "ifeval_correct_drop": {
+          "value": 0,
+          "maximum": 3,
+          "passed": true
+        },
+        "ifeval_truncation_increase": {
+          "value": 0,
+          "maximum": 2,
+          "passed": true
+        },
+        "writing_all_nonempty": {
+          "value": 30,
+          "required": 30,
+          "passed": true
+        },
+        "writing_flags_increase": {
+          "value": 1,
+          "maximum": 2,
+          "passed": true
+        },
+        "writing_truncated_increase": {
+          "value": 2,
+          "maximum": 2,
+          "passed": true
+        }
+      },
+      "rank_selected": false
+    },
+    {
+      "id": "physics-r128-lr5e5",
+      "rank": 128,
+      "learning_rate": 5e-05,
+      "seed": 42,
+      "representation": "nf4",
+      "epochs": 3,
+      "steps": 207,
+      "loss_tokens": 1567140,
+      "training_wall_seconds": 1371.5269506452605,
+      "peak_pytorch_allocated_bytes": 11104091136,
+      "replay": {
+        "exact_adapter_tensors": true,
+        "exact_logits": true,
+        "max_abs_logit_difference": 0.0,
+        "exact_generated_ids": true,
+        "probe_scope": "first64 input tokens of first training chunk,16 new plain-text tokens; serialization check, not evaluation"
+      },
+      "nominated_epoch": 1,
+      "nominated_checkpoint": "/home/angkunwu/Documents/tuneLLM/outputs/physics-r128-lr5e5/checkpoints/checkpoint-69",
+      "nominated_development_nll": 1.9626056121585655,
+      "development_nll_difference_vs_base": {
+        "candidate_minus_reference_nll": -0.2642068873776995,
+        "ci95": [
+          -0.2796224253478651,
+          -0.249188080222672
+        ],
+        "includes_zero": false,
+        "resamples": 10000,
+        "seed": 20261112,
+        "papers_per_draw": 10,
+        "method": "paired paper resampling with replacement; token-weighted ratio per draw; percentile95 CI with linear interpolation"
+      },
+      "screen_status": "completed",
+      "trainable_parameters": 264241152,
+      "adapter_bytes": 1057033224,
+      "development_screen_passed": true,
+      "development_gate_checks": {
+        "general_mc_correct_drop": {
+          "value": -2,
+          "maximum": 4,
+          "passed": true
+        },
+        "physics_mc_correct_drop": {
+          "value": 0,
+          "maximum": 4,
+          "passed": true
+        },
+        "gsm8k_correct_drop": {
+          "value": 1,
+          "maximum": 4,
+          "passed": true
+        },
+        "gsm8k_truncation_increase": {
+          "value": 0,
+          "maximum": 2,
+          "passed": true
+        },
+        "ifeval_correct_drop": {
+          "value": 2,
+          "maximum": 3,
+          "passed": true
+        },
+        "ifeval_truncation_increase": {
+          "value": 0,
+          "maximum": 2,
+          "passed": true
+        },
+        "writing_all_nonempty": {
+          "value": 30,
+          "required": 30,
+          "passed": true
+        },
+        "writing_flags_increase": {
+          "value": 2,
+          "maximum": 2,
+          "passed": true
+        },
+        "writing_truncated_increase": {
+          "value": 2,
+          "maximum": 2,
+          "passed": true
+        }
+      },
+      "rank_selected": true
     }
   ],
   "learning_rate_selection": "results/physics_lr_selection.json",
   "pending_runs": [
-    "physics-r128-lr5e5"
-  ]
+    "physics-r128-lr5e5-seed43",
+    "physics-r128-lr5e5-bf16"
+  ],
+  "rank_screen_status": "completed",
+  "rank_selection": "results/physics_rank_selection.json",
+  "selected_rank": 128,
+  "selected_epoch": 1,
+  "selected_learning_rate": 5e-05
 }

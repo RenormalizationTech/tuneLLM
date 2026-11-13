@@ -317,11 +317,15 @@ def card_text(cfg, budget, final, selection, fallback, base_revision, quality=No
               "`reproduction.zip` contains tracked code/config/docs without history; executable source is unchanged and verified against measured modules. Metadata/documentation path redaction is recorded. Start from the pinned NF4 dependency, exact prepared data and frozen fixtures; do not re-query live paper selection. See `REPRODUCE.md` and `environment.lock.txt`.", "",
               "Human ratings are pending. `human_review/packet.json` is the blinded review packet. Its random answer key is retained locally outside this payload; provenance records its SHA256 commitment. Automated flags cannot establish human preference or scientific fidelity. Do not treat absence of flags or insignificant paired tests as equivalence.", "",
               "## Development gate outcomes", ""]
-    for candidate in (lr_selection or {}).get("candidates", []) + selection["candidates"]:
-        failed = [name for name, check in candidate["gate"].get("checks", {}).items() if check.get("passed") is False]
-        math_drop = candidate["gate"].get("checks", {}).get("gsm8k_correct_drop", {}).get("value")
-        math_note = f" GSM8K net correct-count drop vs base: {math_drop}." if math_drop is not None else ""
-        lines.append(f"- {candidate['id']}: {'passed' if candidate['gate']['passed'] else 'failed'}; failed checks: {', '.join(failed) or 'none recorded'}.{math_note}")
+    for stage_name, candidates in (("Learning-rate pilot", (lr_selection or {}).get("candidates", [])),
+                                    ("Adapter ranks", selection["candidates"])):
+        lines += [f"### {stage_name}", ""]
+        for candidate in candidates:
+            failed = [name for name, check in candidate["gate"].get("checks", {}).items() if check.get("passed") is False]
+            math_drop = candidate["gate"].get("checks", {}).get("gsm8k_correct_drop", {}).get("value")
+            math_note = f" GSM8K net correct-count drop vs base: {math_drop}." if math_drop is not None else ""
+            lines.append(f"- {candidate['id']}: {'passed' if candidate['gate']['passed'] else 'failed'}; failed checks: {', '.join(failed) or 'none recorded'}.{math_note}")
+        lines.append("")
     lines += ["", "## Reported limitations", ""] + ["- " + value for value in final.get("limits", [])] + [""]
     if quality:
         lines += [f"- Frozen corpus QA records {quality['unicode_replacement_characters']} replacement characters across {len(quality['papers_with_replacement_characters'])} papers. The proper-name review and unchanged split hashes are in `corpus_quality.json`; prepared scientific data remain unchanged.", ""]
