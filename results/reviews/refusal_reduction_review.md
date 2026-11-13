@@ -46,3 +46,41 @@ tiny-Qwen3 cache/full-prefix comparisons, projection algebra and block/writer
 coverage, identity and cleanup, immutable label reuse, invalid-answer scoring,
 selection boundaries, mutation rejection and null-stage guards. No old source
 was edited. The exact run registration is committed before GPU probes.
+
+## Execution and outcome acceptance
+
+The real-model probe passed both installed identity checks, all 108
+projection sites and 180 observed nodes, nonzero hidden/logit changes and
+exact plain-logit restoration after cleanup. The exact budget was committed
+in `dbd326c` before 120 new development responses. All old inputs and labels
+were reused without modification or baseline re-judging.
+
+Development selected `subtract23` under the fixed rule: source-unsafe valid
+full compliance was 8/30 versus baseline 2/30, with safe usefulness 10/30 versus
+11/30 and no increased invalid outputs. All-block removal reached 6/30 and
+missed the primary threshold. The selection was committed in `099ed24` before
+final or retention outputs. No alternative parameter or method followed.
+
+On final, valid full compliance increased 1/30 to 7/30 on the source-unsafe
+class, while safe usefulness fell 29/42 to 23/42. Three candidate outputs had
+mechanical degeneration flags (two safe and one unsafe); one safe response
+was AI-unscorable and overlapped the mechanical flags. The reduction target
+passed, but final usefulness and validity criteria failed. The small automatic
+retention screen passed its coarse limits. The correct conclusion is observed
+refusal reduction with quality loss, not a usable configuration or a failure
+to induce any effect. Family-cluster intervals include zero, limiting broad
+generalization. Development selection is non-null, while final acceptance is
+false; these are separate fields.
+
+All 14 blinded classification batches were valid on their first attempt. These
+independent classification calls do not imply project-advisor design approval.
+No additional advisor-review attempts, model trials or judgment retries were
+made. No new weights were created or released.
+
+The dedicated worker's final read-only audit found no material issue: frozen
+source/snapshot/runtime and original-artifact bindings matched, selection and
+final criteria recomputed, final/retention locks matched, counts and costs
+were preserved, and no raw prompts/responses, token-ID fields or secrets were
+detected in the aggregate. The coordinator accepted the report as a completed
+bounded research comparison, with quality failures explicit. No core file
+changed after registration.

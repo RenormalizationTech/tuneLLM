@@ -22,10 +22,10 @@ skipped. See the [execution record](docs/refusal_execution.md) and
 control at other layers. The user-selected layer-23 follow-up also completed: refusals rose to 4/30,
 7/30 and 24/30 at strengths 0.25/0.5/1, but the strongest setting had six
 degenerate outputs and no setting passed both gates. Final generation was
-skipped and the refusal pilot is closed. See the
+skipped and the positive-intervention pilot is closed. See the
 [follow-up record](docs/refusal_late_execution.md).
-Management plans are reviewed with Claude before implementation; the dedicated
-Codex worker implements code.
+Management plans are discussed with Claude before implementation; each study
+records whether review was available. The dedicated Codex worker implements code.
 
 The clarified research objective is **refusal reduction**, with answer quality
 and direct persona style measured separately. The completed positive probes
@@ -34,7 +34,14 @@ subtraction and all-block projection removal is specified in
 [the reduction protocol](docs/refusal_reduction_protocol.md). Claude declined
 reviewing this design; the user authorized proceeding without that review.
 The coordinating Codex owns acceptance and the dedicated worker implements
-and tests. No reduction-model outputs have been generated yet.
+and tests. The completed reduction study selected block-23 subtraction on
+development. On the final set, valid answers on the refusal-triggering class
+increased from 1/30 to 7/30, but benign useful/correct answers fell from 29/42
+to 23/42 with three mechanical degeneration flags across candidate outputs.
+The tiny capability screen stayed within its tolerances, while the final
+response-quality criteria failed. This is a measured tradeoff, not a validated
+usable configuration. See the [execution record](docs/refusal_reduction_execution.md)
+and [compact summary](results/refusal_reduction_summary_03.json).
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment
 reported separately.

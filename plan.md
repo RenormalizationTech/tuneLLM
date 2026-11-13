@@ -51,21 +51,26 @@ complete the initial project.
   signal with a quality tradeoff, not a validated usable setting. Final
   generation was skipped and the refusal pilot is closed under its rule.
   See `docs/refusal_late_execution.md` and `results/refusal_02.json`.
-  No further sweep, negative steering, NF4 transfer or new training is active.
+  That positive-intervention pilot is closed; the new reduction study is
+  specified below. NF4 transfer and new training remain deferred.
 - Clarified next objective: refusal-reduction and activation-steering research,
   with answer quality and direct persona measured separately. The user
   authorized proceeding if Claude declined; it declined the core and limited
   measurement review. This design is not Claude-approved. The coordinating
   Codex owns scientific acceptance; the dedicated worker implements/tests.
-- New pilot scope: baseline versus fixed block-23 subtraction and all-block
-  projection removal, original BF16 Qwen3-4B, reused development defaults and
-  labels, 120 new development responses, then one baseline/selected-method
-  final comparison and a small automatic retention check only if eligible.
-  See `docs/refusal_reduction_protocol.md`. No layer/strength sweep or new
-  training is part of it. Earlier positive-probe results remain unchanged.
+- Refusal-reduction pilot 03: complete. Baseline and two fixed interventions
+  were compared on development; subtraction at block 23 was selected and
+  locked before final. Final valid answers on the refusal-triggering class
+  rose from 1/30 to 7/30, but benign usefulness fell from 29/42 to 23/42,
+  with two safe and one unsafe mechanical degeneration flags. Final quality
+  criteria failed despite the tiny capability screen meeting its tolerances.
+  This is a tradeoff result, not a validated usable configuration. See
+  `docs/refusal_reduction_execution.md`, `results/refusal_03.json`, and
+  `results/refusal_reduction_summary_03.json`. No reselection or further
+  sweep is active; original positive results and model weights are unchanged.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
-  device. Tone generation stages finished and released project GPU memory.
+  device. All registered steering stages finished and released project GPU memory.
 - The JSON extraction SFT proposal is optional backlog, not a missing required
   step. See `docs/next_sft_pilot.md`; no new training run is registered.
 - Routine default: one verified base, one fresh adapter configuration and seed

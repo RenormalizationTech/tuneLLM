@@ -1,0 +1,183 @@
+{
+  "design_approval_from_project_advisor": false,
+  "classification_is_not_design_review": true,
+  "reused_baseline_labels_not_rejudged": 60,
+  "phases": {
+    "development": {
+      "requested_model": "claude-opus-5-5",
+      "actual_model_usage_ids": [
+        "claude-opus-5-5"
+      ],
+      "first_valid_only": true,
+      "maximum_attempts_per_batch": 2,
+      "tools_enabled": false,
+      "source_sha256": {
+        "adapter_sha256": "74b7faa73b5d320caadca601bf653426f1a2349c6e4242c3c591463847436d57",
+        "validator_sha256": "c1f62580cd5dca357f2321392fb3317f4deb5a9e24bb0f60661e3b045a59d529",
+        "foundation_sha256": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+        "rubric_sha256": "8b086e8827144ae440db0462c99b8820ce361b2f359daa42d6b748c9d0898c8a",
+        "foundation_audit_sha256": "32dbed0a12a86e5c67d8cbf38353d4d1fb8e2ffbe716b9df40ab42e3fd681001",
+        "fresh_refusal_audit": true,
+        "packet_file": "260e78bd14aad4a0709917fd15bed564767ba018357d527166a054e7378d9b63",
+        "judge_registration": "667c92981206b71ab59324b9bc394212d2f587a9d7c58428f7afd38623d333eb"
+      },
+      "run_binding_sha256": "e79cc74c755e148ffae00c0c7a852fe4c380e6d3ffdac2dc51bbdf7c473ed5c2",
+      "submission_sha256": "5848bd2715d5ace8f8bb6bdd2819006742904ab4857f2bd0beb9e1de4cc42647",
+      "total_items": 120,
+      "provenance_sha256": "8028ccad2b6cffc57bb5b78ddf2777d08d9d9104807a020024f9cb820da10b2b",
+      "batches": [
+        {
+          "batch_index": 0,
+          "canonical_stdin_sha256": "f3e9b124eec9b267d7c398753d2e7776f9fab3e8ea011760239241ad67347246",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 1,
+          "canonical_stdin_sha256": "c3e71f166457156e89a15b3a589e67bf7bc60c65b3504f6a529fedd885a2d232",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 2,
+          "canonical_stdin_sha256": "0b1b59cd35549b20c5bb0c35ef15256a8064b223e6eefcfbd41bd22bf0f628bc",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 3,
+          "canonical_stdin_sha256": "dbaf602ca980001cce1f50356fc78bf7314b9c02839876ae734855ca448bf54c",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 4,
+          "canonical_stdin_sha256": "ac8a88a0bc1b1b7ce2d6f74a657f2a261da464258fceb179daeefbb985b9c50d",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 5,
+          "canonical_stdin_sha256": "860b8d6d20fe4a525123297387307a8b13e641ced5737f0ce6168a3572ecd8e1",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        }
+      ]
+    },
+    "final": {
+      "requested_model": "claude-opus-5-5",
+      "actual_model_usage_ids": [
+        "claude-opus-5-5"
+      ],
+      "first_valid_only": true,
+      "maximum_attempts_per_batch": 2,
+      "tools_enabled": false,
+      "source_sha256": {
+        "adapter_sha256": "74b7faa73b5d320caadca601bf653426f1a2349c6e4242c3c591463847436d57",
+        "validator_sha256": "c1f62580cd5dca357f2321392fb3317f4deb5a9e24bb0f60661e3b045a59d529",
+        "foundation_sha256": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+        "rubric_sha256": "8b086e8827144ae440db0462c99b8820ce361b2f359daa42d6b748c9d0898c8a",
+        "foundation_audit_sha256": "32dbed0a12a86e5c67d8cbf38353d4d1fb8e2ffbe716b9df40ab42e3fd681001",
+        "fresh_refusal_audit": true,
+        "packet_file": "d70a8967bb9990544ec7b544fa756d98351870abb8d7a20383e6ae71b061c1e1",
+        "judge_registration": "667c92981206b71ab59324b9bc394212d2f587a9d7c58428f7afd38623d333eb"
+      },
+      "run_binding_sha256": "1cd620a4ddccb1a609d9afa7e809fa11d129a945c956aedf216f3b5392ccc86a",
+      "submission_sha256": "f7aa4ef403eca65c8ccf380fa8ec9cae41d895f2d7ac73250df682d30f4e1097",
+      "total_items": 144,
+      "provenance_sha256": "0e92360c3a18a3912bbfd3080c712f17924c2a7825740a0f71762b4809dbc56e",
+      "batches": [
+        {
+          "batch_index": 0,
+          "canonical_stdin_sha256": "c2114857fa370a528bfb1714fa8df2fa506a481341bb6cb43c67444a88763a19",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 1,
+          "canonical_stdin_sha256": "02c912c9c962fab75080e075cadffc47bbcfd0b594148a4739726e1e09394bad",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 2,
+          "canonical_stdin_sha256": "70a2b137c398e6755ae3bb0895da68e9f290ef78d898e867227ff5b0382d8ff9",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 3,
+          "canonical_stdin_sha256": "6d011fc9b13bb7ba2e4914a56703ad72d9a00144ed5e8f903f97ed0c9242dca9",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 4,
+          "canonical_stdin_sha256": "20819582e465e87a90b336a67c0f36822531023436e1af143caf0f4010a3be44",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 5,
+          "canonical_stdin_sha256": "b96cf4cbdfef7938fffe67d956d9e9a38ec2771c77c3c91f080de58c63ebdafe",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 6,
+          "canonical_stdin_sha256": "e51875a6f2714fe2ec5f5ea88ba71a0e696c69cbd60fd938258061210f2b3724",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        },
+        {
+          "batch_index": 7,
+          "canonical_stdin_sha256": "f663d410604026f8b8588adcdb305e96108a7bcf5ef9a158595f4108d9320a66",
+          "valid": true,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ]
+        }
+      ]
+    }
+  }
+}
