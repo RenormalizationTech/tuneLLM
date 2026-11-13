@@ -133,6 +133,17 @@ a separate identity key. No human judgments are synthesized.
 
 ## Results
 
-Training and final comparisons are in progress. This section will be replaced
+The rank-32, 5e-5 pilot completed all 207 steps and 1,567,140 prediction targets
+in 22m14s including epoch validation/saving. Peak PyTorch allocation was 7.08 GiB.
+Its development losses were 2.2268125 before training and 1.9777026, 1.9657982,
+1.9670665 after epochs 1, 2 and 3. Epoch 2 is nominated for the screen; this is
+not yet a model selection. Final-epoch adapter tensors, probe logits and token
+sequences matched exactly on a fresh-base reload.
+
+The private NF4 base is published at revision
+`e9af208e44e083b77702a71d8aa65b7d97f78ce6`. All 16 downloaded file hashes and
+both original GPU verification probes match. See `results/nf4_huggingface_publication.json`.
+
+Remaining training and final comparisons are in progress. This section will be replaced
 with the completed run registry, selected checkpoints, final tests, release
 revisions and limitations when those stages finish.

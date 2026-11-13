@@ -11,8 +11,8 @@ the visibility chosen by the user. The standalone NF4 dependency is also private
 | [Standalone NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4) | Private | `e9af208e44e083b77702a71d8aa65b7d97f78ce6` |
 
 The standalone NF4 is unadapted and preserves the exact base used for the physics
-workflow. Its uploaded hashes are verified; GPU verification of the downloaded
-revision follows when the training GPU is released. See
+workflow. Every downloaded file hash matches, and a GPU reload of the downloaded
+revision reproduced both original probe logits and token sequences exactly. See
 `results/nf4_huggingface_publication.json` and its model card for verification scope.
 
 Every uploaded file was checked against its expected SHA256, using Hub LFS

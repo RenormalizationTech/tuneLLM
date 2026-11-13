@@ -1,5 +1,5 @@
 {
-  "status": "published_and_download_hashes_verified",
+  "status": "published_and_verified",
   "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
   "url": "https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
   "private": true,
@@ -101,7 +101,16 @@
     "base_model_relation": "quantized"
   },
   "local_serialization_checks": "results/nf4_checkpoint.json",
-  "remote_load_check": "pending GPU availability; large remote files checked through LFS SHA256",
+  "remote_load_check": {
+    "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
+    "revision": "e9af208e44e083b77702a71d8aa65b7d97f78ce6",
+    "exact_last_token_logits": true,
+    "max_abs_logit_difference": 0.0,
+    "exact_input_and_generated_ids": true,
+    "requantization_forbidden": true,
+    "probe_count": 2,
+    "scope": "Two fixed probes, matching original local checkpoint verification; every downloaded file also hash-verified."
+  },
   "credentials_recorded": false,
   "download_check": {
     "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
