@@ -49,16 +49,20 @@ editing SFT needs reviewed input/revision pairs and is a separate experiment.
 ## Baselines, training and selection
 
 Evaluate the saved NF4 base before training. Compare all-linear LoRA ranks 8,
-32 and 128, using identical target layers and token exposure. Adapter storage
+32 and 128, using identical target layers and maximum token exposure. Nominate
+each run's checkpoint using development loss; nominated epochs can differ. Adapter storage
 of 1–5 GB is an upper allowance rather than a size target. Estimate actual
 parameters, checkpoint dtype, optimizer and activation memory before execution.
 
 At rank 32, run a bounded learning-rate pilot (5e-5 and 1e-4), with a recorded
-warmup and decay schedule. Start with one epoch and a fixed sequence budget;
-extensions require evidence of undertraining, not a desire to minimize training
-loss. Keep `alpha/r` consistent and record its value. Repeat leading results with
+warmup and decay schedule. This pilot registers a three-epoch maximum with
+development loss measured after every epoch. Nominate the minimum-loss epoch
+(ties prefer earlier), then apply capability/writing gates to that epoch only;
+do not search other epochs after a gate failure. Future budget changes require
+a new registration. Keep `alpha/r` consistent and record its value. Repeat leading results with
 a second seed when practical. Run one BF16 LoRA control with the selected adapter
-configuration, data order, token budget and schedule.
+configuration, data order, token budget and schedule. Compare the repeat/control
+at the primary chosen epoch while retaining the same full scheduler horizon.
 
 Freeze source, data IDs/hashes, splitting, development selection rules and final
 test protocol before optimization. Use development writing behavior and general
@@ -68,8 +72,10 @@ outputs. Preserve an unadapted base as a valid outcome if adapters fail checks.
 
 ## Evaluation tiers
 
-Use a pinned standard harness for supported tasks, especially answer-likelihood
-scoring for multiple-choice tasks. Validate identical prompts, tokenizer/chat
+Prefer a pinned standard harness for supported tasks, especially answer-likelihood
+scoring for multiple-choice tasks. This pilot uses a validated custom local
+zero-shot MMLU likelihood runner and the pinned official IFEval scorer; report that
+scope explicitly. Validate identical prompts, tokenizer/chat
 templates, thinking settings, scoring and budgets across backends. Do not present
 custom generated-letter accuracy as the standard likelihood benchmark.
 
@@ -96,6 +102,11 @@ Budget evaluations in prompt/output tokens and measure throughput on each model.
 Small screens have substantial statistical uncertainty. A larger model can also
 be limited by memory and offloading; do not extrapolate runtime from parameter
 count alone.
+
+Compare BF16 LoRA with an unadapted BF16 baseline, and NF4 LoRA with the saved
+unadapted NF4 baseline. Compare GGUF quantization within the same llama.cpp
+backend, retaining its BF16 GGUF reference. A cross-backend difference cannot be
+attributed to quantization alone.
 
 ## Completion and release
 
