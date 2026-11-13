@@ -119,6 +119,7 @@ def main():
             "run_sha256": digest(path(directory) / "run.json")})
     write_json(args.output, {"status": "computational_evaluation_complete_human_writing_review_pending",
         "model_id": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "summarizer_source_sha256": digest(__file__), "final_mapping_sha256": digest(args.mapping),
         "selection_report": relative(selection), "selection_report_sha256": digest(selection),
         "lr_selection_report_sha256": digest("results/physics_lr_selection.json"),
         "nltk_resource_report_sha256": digest("results/physics_nltk_resource.json"),
@@ -126,6 +127,7 @@ def main():
         "conditions": conditions, "paired_comparisons": comparisons, "training_runs": training,
         "paper_only_conditions": paper_only, "paper_only_comparisons": paper_comparisons,
         "corpus_quality": read_json("results/physics_prl_corpus_quality.json") if path("results/physics_prl_corpus_quality.json").exists() else None,
+        "ifeval_language_stability": read_json("results/physics_ifeval_language_stability.json") if path("results/physics_ifeval_language_stability.json").exists() else None,
         "human_writing_ratings": "pending", "writing_quality_improvement_established": False,
         "limits": ["One small paper corpus; arXiv versions can precede final PRL wording; existing pretraining exposure unknown.",
                    "No matched PRB corpus control, so lower text loss is not evidence of PRL-specific style learning.",

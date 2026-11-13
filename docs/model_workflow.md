@@ -143,3 +143,17 @@ compatibility before any new upload. Existing published artifacts remain immutab
 Better PRL-like presentation cannot establish novelty, publication suitability
 or acceptance. A negative or inconclusive experiment is still a completed,
 reproducible learning exercise when reported honestly.
+
+## Applying the process to another model
+
+The methodology is reusable; the first experiment's release and orchestration
+helpers contain Qwen3-4B paths, repository pins and file-layout checks. For a new
+model, update those guards alongside the model configuration and register fresh
+protocols. The current 12-file NF4 manifest check is specific to this checkpoint.
+
+Verify tokenizer boundaries and saved-quantization reload first. Estimate adapter
+parameters and memory from the new architecture, then measure a short development
+training/generation trial before committing to the full budget. Use those observed
+token rates to budget the screen; retain small development checks for every
+candidate and broader final tests only for the chosen models and controls.
+Recheck the model/data licenses and converter support for the newly pinned model.

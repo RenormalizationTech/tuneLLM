@@ -28,8 +28,8 @@ complete the initial project.
 - Physics progress: 100 licensed PRL-associated papers frozen into 70/10/20 splits;
   NF4 base published privately and reload-verified. Four optimization runs and
   their development screens completed. The fixed rule selected all-linear rank
-  128, LR 5e-5, epoch 1; second-seed and BF16 controls are running before final
-  evaluation. See `docs/physics_prl_execution.md` and
+  128, LR 5e-5, epoch 1. Both matched controls completed and passed reload
+  verification; the fixed final evaluation is running. See `docs/physics_prl_execution.md` and
   `results/physics_rank_selection.json`. Human writing ratings remain pending.
 - Current objective: learn the language and structure of a balanced corpus of
   condensed-matter theory PRLs, focusing evaluation on titles, abstracts and

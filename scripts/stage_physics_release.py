@@ -284,10 +284,21 @@ def blind_review_packet(final, adapter_condition, fixture, root):
 def card_text(cfg, budget, final, selection, fallback, base_revision, quality=None, lr_selection=None):
     status = ("Descriptive-only experimental adapter: it failed development selection; the base remains recommended."
               if fallback else "Experimental adapter selected by the registered development heuristic.")
+    base_math = final["conditions"].get("nf4_base", {}).get("summary", {}).get("gsm8k")
+    adapter_math = final["conditions"].get("nf4_adapter", {}).get("summary", {}).get("gsm8k")
+    math_disclosure = ""
+    if base_math and adapter_math and adapter_math["fallback_correct"] < base_math["fallback_correct"]:
+        math_disclosure = (f"**Measured math regression:** numeric GSM8K accuracy fell from "
+                           f"{base_math['fallback_correct']}/{base_math['total']} for the saved NF4 base to "
+                           f"{adapter_math['fallback_correct']}/{adapter_math['total']} for this adapter. "
+                           "The final results did not trigger reselection.")
+        if "strict_correct" in base_math and "strict_correct" in adapter_math:
+            math_disclosure += f" Strict-format correct counts were {base_math['strict_correct']} and {adapter_math['strict_correct']}, respectively."
     lines = ["---", f"base_model: {BASE}", "base_model_relation: adapter", "library_name: peft", "license: apache-2.0",
              "pipeline_tag: text-generation",
              "tags: [qwen3, lora, qlora, physics, experimental]", "---", "", "# Qwen3-4B tuneLLM PRL Writing QLoRA", "",
              f"**{status} Human writing-quality improvement is not established.**", "",
+             math_disclosure, "",
              "This private artifact records continued causal language-model training on cleaned paper LaTeX. It does not establish improved PRL acceptance, novelty, originality, human preference, or scientific correctness.", "",
              f"Requires `{BASE}` at revision `{base_revision}`. The exported PEFT config pins that NF4 repository commit, not the upstream Qwen commit.",
              f"Lineage: `{cfg['model_id']}` at `{cfg['revision']}`. Packed NF4 weights are restored from stored quantization; FP32 nonquantized modules match PEFT preparation. Adapters are FP32.", "",
@@ -423,6 +434,11 @@ def stage(args, root=ROOT):
                         "protocol_addendum_01.json": root / "results/physics_prl_protocol_addendum_01.json",
                         "benchmark_dataset_licenses.json": root / "outputs/benchmark_dataset_licenses.json"}
     quality_file = root / "results/physics_prl_corpus_quality.json"
+    stability_file = root / "results/physics_ifeval_language_stability.json"
+    if stability_file.exists():
+        if final.get("ifeval_language_stability") != read(stability_file):
+            raise ValueError("supplementary scorer diagnostic changed since final report")
+        metadata_sources["ifeval_language_stability.json"] = stability_file
     quality = read(quality_file) if quality_file.exists() else None
     if quality:
         if quality.get("split_sha256") != protocol["raw_corpus_sha256"] or quality.get("current_data_not_mutated") is not True:

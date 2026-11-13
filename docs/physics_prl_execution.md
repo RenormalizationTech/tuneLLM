@@ -277,4 +277,28 @@ replay. Comparison remains fixed at epoch 1 / step 69. The BF16 control also com
 2.1754497 before training and 1.9413228, 1.9539306, 1.9851287 after epochs 1–3.
 Its Trainer interval was 1,087.157 seconds (18m07s), with peak PyTorch allocation
 13.76 GiB. All final-epoch reload probes matched exactly. Comparison remains
-fixed at epoch 1. Final-test evaluation is next.
+fixed at epoch 1. The fixed final evaluation is now running.
+
+
+## Fixed held-out paper-text results
+
+After all development choices and both controls were complete, final protocols
+were committed at `5dce4c4` before evaluating the 20 test papers. Every condition
+uses the identical 1024-token within-paper chunks and prediction targets.
+
+| Condition | Token-weighted NLL | Perplexity |
+|---|---:|---:|
+| NF4 base | 1.974938 | 7.2062 |
+| NF4 adapter, primary seed 42, epoch 1 | 1.733950 | 5.6630 |
+| NF4 adapter, repeat seed 43, epoch 1 | 1.733926 | 5.6628 |
+| BF16 base | 1.929116 | 6.8834 |
+| BF16 LoRA control, epoch 1 | 1.713637 | 5.5491 |
+
+Paired 20-paper bootstrap intervals use 10,000 resamples, seed 20261112,
+and ratios of summed loss to summed tokens per draw. NF4 adapter minus NF4
+base NLL is -0.240988 (95% interval -0.247438 to -0.234987). BF16 control
+minus BF16 base is -0.215479 (-0.224040 to -0.208196). The repeat minus
+primary difference is -0.000024 (-0.001100 to 0.001002). These measure held-out
+text prediction and seed stability; they do not establish better human-rated
+writing or independently optimized BF16 performance. No checkpoint was
+reselected from these outcomes. The full task/writing matrix remains in progress.
