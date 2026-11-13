@@ -1,0 +1,20 @@
+{
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "hf_home": ".hf",
+  "gpu": "0",
+  "dtype": "bfloat16",
+  "enable_thinking": false,
+  "seed": 42,
+  "batch_size": 8,
+  "layers": [11, 17, 23],
+  "primary_layer": 17,
+  "multipliers": [1, 2, 4],
+  "max_new_tokens": 256,
+  "extended_cap": 320,
+  "data_seed": 20261114,
+  "judging_seed": 20261114,
+  "bootstrap_samples": 10000,
+  "protocol": "docs/refusal_protocol.md",
+  "rubric": "evaluation/refusal/response_rubric.json"
+}

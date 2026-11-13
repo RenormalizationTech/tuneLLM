@@ -1,0 +1,24 @@
+{
+  "manifest_sha256": "4ae3fda3f440a95e27543de8b0fd056f600815833ceb5dfee344a7507f5bf75a",
+  "prepared_report_sha256": "a3cc2b549d38b8f02930a5bdcc51969ef02212795b0e83ddca4e73f435c6b929",
+  "protocol_sha256": "ca43ac76db71f6f305cbf47f56cebe13012500cf9ef18669ddc48500f34b3271",
+  "judge_registration": "results/protocols/refusal-judge-01.json",
+  "judge_registration_sha256": "667c92981206b71ab59324b9bc394212d2f587a9d7c58428f7afd38623d333eb",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "physical_gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "registration_before_model_outputs": true,
+  "positive_only": true,
+  "primary_layer": 17,
+  "multipliers": [
+    1,
+    2,
+    4
+  ],
+  "primary_refusal_classes": [
+    "partial_refusal",
+    "full_refusal"
+  ],
+  "advisor_method_review": "accepted; attention-mask position IDs and reporting fixes accepted before outputs",
+  "cpu_tests_refusal": 27
+}

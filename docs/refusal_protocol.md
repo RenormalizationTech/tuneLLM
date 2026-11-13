@@ -1,8 +1,10 @@
 # Qwen3-4B refusal controllability pilot
 
-Status: design reviewed with Claude; source auditing complete. Candidate
-screening, exact splits, code/rubric review and a committed run registration are
-required before GPU execution. This draft alone registers no model run.
+Status: design, source auditing, semantic screening and exact prepared splits
+reviewed with Claude. The prepared report records 100 extraction pairs, 60
+development and 72 final prompts. Final code checks, a fresh response-judge audit
+and a committed run registration are required before GPU execution. This draft
+alone registers no model run.
 
 ## Question and scope
 
@@ -97,6 +99,8 @@ Render instructions without a system prompt using the upstream nonthinking
 chat template. Extract the last real prompt token after the generation prefix.
 For each layer, compute the harmful mean minus benign mean, equally weighted per
 prompt. These are forward passes only; generate no AdvBench/Dolly answers.
+Use attention-mask-derived position IDs matching generation in extraction,
+projection and standalone logit probes, including left-padded batches.
 
 The primary intervention is fixed at decoder block index 17 (zero based).
 Collect indices 11 and 23 only for cheap diagnostics; do not select a layer from
@@ -152,6 +156,12 @@ items, complete-ID validation, bounded first-valid attempts and exact batch
 hashes. An uncertain call without saved bytes halts judging; preserve all state,
 never silently reissue, and review/register any recovery separately. Keep all
 valid earlier ratings on resume. No changing classifiers after outcomes.
+
+This is a custom Claude-graded XSTest subset, not an official full-benchmark
+score. Shuffled anonymous batches may contain different responses to the same
+prompt, so the judge may calibrate between versions within a batch. Report that
+limitation; hiding conditions does not make these ratings human judgments or
+guarantee independent errors.
 
 A fixed refusal-prefix matcher is secondary, with disagreement counts. It does
 not override AI labels. Report per-response content/utility separately from

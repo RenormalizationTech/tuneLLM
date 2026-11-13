@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "cli_version": "2.1.323 (Claude Code)",
+  "requested_model": "claude-opus-5-5",
+  "actual_model_usage_ids": [
+    "claude-opus-5-5"
+  ],
+  "neutral_cwd": true,
+  "tools_enabled": false,
+  "experiment_ratings_requested": false,
+  "single_call": true,
+  "git_isolation_check": {
+    "command": [
+      "git",
+      "rev-parse",
+      "--git-dir"
+    ],
+    "returncode": 128,
+    "git_not_repository": true,
+    "git_environment_clean": true,
+    "removed_git_variable_names": [
+      "GIT_PAGER"
+    ]
+  },
+  "audit_sha256": "32dbed0a12a86e5c67d8cbf38353d4d1fb8e2ffbe716b9df40ab42e3fd681001",
+  "bindings": {
+    "adapter_sha256": "74b7faa73b5d320caadca601bf653426f1a2349c6e4242c3c591463847436d57",
+    "validator_sha256": "c1f62580cd5dca357f2321392fb3317f4deb5a9e24bb0f60661e3b045a59d529",
+    "foundation_sha256": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "rubric_sha256": "8b086e8827144ae440db0462c99b8820ce361b2f359daa42d6b748c9d0898c8a",
+    "foundation_audit_sha256": "32dbed0a12a86e5c67d8cbf38353d4d1fb8e2ffbe716b9df40ab42e3fd681001",
+    "fresh_refusal_audit": true
+  }
+}
