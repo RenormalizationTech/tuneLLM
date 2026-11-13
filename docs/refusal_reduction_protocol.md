@@ -106,7 +106,9 @@ Generate 60 development prompts under each method:120 new responses. Reuse all
 120 new items in six fresh-context batches, under the unchanged registered
 refusal rubric/validator/adapter. Use a distinct frozen anonymous seed 20261116.
 No model/condition names, strengths, source labels or original IDs go to the
-judge. Preserve first-valid judgments and exact-bound resume; uncertain calls
+judge. Shuffled batches can contain multiple versions of the same prompt;
+within-call comparison may influence labels and is a measurement limitation.
+Preserve first-valid judgments and exact-bound resume; uncertain calls
 stop without reissue. Verify the existing audit bindings/version/argv rather
 than making an extra dummy call while they remain unchanged.
 

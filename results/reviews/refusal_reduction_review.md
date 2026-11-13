@@ -30,3 +30,19 @@ At this review stage there are no reduction-model outputs or experimental
 response judgments. Code, CPU checks, manifests and exact registrations must
 be accepted before GPU execution. The original private raw artifacts and
 source pins are reused without new curation or re-judging baseline outputs.
+
+## Implementation acceptance before model outputs
+
+The coordinator independently checked the author's pinned hook source
+(`9d852fae1a9121c78b29142de733cb1340770cc3`, hook-file SHA-256
+`0fa5de8d6a739f9f3ecfcb462d027d8ade269f6ce469e320c3238ef4a1d0cd56`)
+and reviewed the saved new hooks, runner, config and tests. New hooks use
+FP32 projection and per-device vector caching, preserve activation dtype,
+cover all positions and clean up on exceptions. Probe diagnostics sample the
+first prefill/decode at each node while counting all calls.
+
+All 26 new CPU checks passed after the final reporting fix, including actual
+tiny-Qwen3 cache/full-prefix comparisons, projection algebra and block/writer
+coverage, identity and cleanup, immutable label reuse, invalid-answer scoring,
+selection boundaries, mutation rejection and null-stage guards. No old source
+was edited. The exact run registration is committed before GPU probes.
