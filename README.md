@@ -14,9 +14,14 @@ Hugging Face cards are updated. The registered tone pilot stopped during
 contrast construction: its three mechanical upper bounds were 5, 31 and 46 pairs
 against the declared 50-pair requirement. No steering vector or final tone test
 was produced; see the [execution record](docs/tone_steering_execution.md).
-A separately reviewed refusal-mechanism study is being prepared. Management
-plans are reviewed with Claude before implementation; the dedicated Codex
-worker implements code.
+The positive refusal pilot also completed with a null: at fixed layer 17,
+benign refusals were 1/30 at baseline and 2/30 at strengths 1 and 2; strength 4
+degenerated on all 30 prompts. No setting qualified, so final generation was
+skipped. See the [execution record](docs/refusal_execution.md) and
+[compact result](results/refusal_01.json). This does not rule out refusal
+control at other layers. A new steering experiment awaits the user's choice.
+Management plans are reviewed with Claude before implementation; the dedicated
+Codex worker implements code.
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment
 reported separately.

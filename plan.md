@@ -28,10 +28,9 @@ complete the initial project.
 - Original quantization and QLoRA learning milestone: complete. The earlier GSM8K
   experiment already covered instruction tuning; the physics experiment used
   paper-text continued causal language modeling.
-- Next approved phase: finish benchmark reporting and Hugging Face documentation,
-  then a bounded written-tone steering pilot on Qwen3-4B, followed by a separately
-  reviewed refusal study. See `docs/tone_steering_protocol.md`. Discuss management
-  planning with Claude first; the dedicated Codex worker implements code.
+- The approved reporting, tone-feasibility and positive-refusal pilot sequence
+  is complete. Discuss management planning with Claude first; the dedicated
+  Codex worker implements code.
 - Reporting cleanup is published and hash-verified in all four Hugging Face
   repositories; only cards and new compact summaries changed. See
   `docs/benchmark_summary.md` and `releases/README.md` for scores and exact
@@ -40,11 +39,18 @@ complete the initial project.
   did not reach the registered 50-pair requirement, so no experiment ratings,
   vectors or final tests ran. See `docs/tone_steering_execution.md`. Reusing a
   smaller existing set is optional exploratory backlog, not an automatic retry.
-- Next: a bounded refusal-controllability study reviewed with Claude, using
-  prompt-side extraction rather than response-pair construction. Data/license
-  auditing precedes definitive registration. Positive steering is a mechanism
-  demonstration with a utility cost, not a model-improvement claim; negative
-  steering and NF4 transfer remain deferred.
+- Positive refusal pilot: completed as registered with a null at layer 17.
+  Baseline benign refusals were 1/30; strengths 1/2 gave 2/30 each; strength 4
+  degenerated on all 30. No setting passed, so final generation was skipped.
+  Claude accepted the result. See `docs/refusal_execution.md` and
+  `results/refusal_01.json`. No safety or model-improvement claim is supported.
+- Next choice awaits the user: close steering here, conduct one separately
+  registered late-layer refusal follow-up, or return to tone/emotion research.
+  Claude recommends the late-layer follow-up if steering continues. Its rationale
+  comes from an already-seen development diagnostic, so it must be disclosed as
+  exploratory follow-up; preserve this null and keep final outcomes unused until
+  a new development decision is locked. No new study starts automatically.
+  Negative steering, NF4 transfer, new training and vector release remain deferred.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
   device. Tone generation stages finished and released project GPU memory.
