@@ -48,8 +48,10 @@ simultaneous controls; experimental details remain unregistered. No new experime
   complete: 16 review-supported candidate unnecessary refusals, one questionable
   primary refusal label and two supported compliant labels on lexical-only flags.
   Original grades remain unchanged; see `docs/xstest_stored_output_audit.md`.
-  The user was asked whether to add a small custom paraphrase robustness set or
-  remain restricted to published prompts. No further generation has started.
+  The user selected published prompts only for the next replication; the custom
+  paraphrase proposal is not selected. No further generation has started. The
+  registered refusal experiments are complete, with no validated reliable steering
+  configuration. A new published-only study needs a concrete reviewed protocol.
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
   the physics-writing exercise, while preserving the historical results.

@@ -66,7 +66,11 @@ calls, vector extraction or training. Future work must preserve appropriate
 refusals alongside benign helpfulness; this review is no basis for indiscriminate
 refusal removal.
 
-The pending user choice is whether to keep the next replication limited to
-published prompts or add two prewritten context-preserving variants per
-review-supported case (32 new benign prompts) for a small robustness check.
-Neither option has started; no intervention is scheduled.
+The user selected **published prompts only** for the next replication. The
+proposed 32-prompt custom paraphrase check is not selected. No further generation
+or intervention has started. The frozen aggregate record retains the choice as
+pending at the time it was produced; this paragraph records the later decision.
+
+The registered refusal-steering experiments are complete. A reliable, useful
+refusal-reduction configuration has not been established. The baseline and this
+stored-output review are measurements, not additional steering experiments.
