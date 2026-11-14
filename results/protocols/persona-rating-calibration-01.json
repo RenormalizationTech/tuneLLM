@@ -1,0 +1,47 @@
+{
+  "study": "Persona trait rating calibration 01",
+  "date": "2026-11-14",
+  "status": "registered_before_any_calibration_judgment",
+  "manifest_sha256": "65f838f17aa1e13f3d71bad47b83562bd6cb43001b09dd99122dc4804dc9905f",
+  "protocol_sha256": "33b2f4fc624cbf575cba9c0a1c0dbd2499672f65791ee0fbd412d3cc9589bb81",
+  "source_sha256": {
+    "scripts/persona_rating_calibration.py": "57133cfafdac1ad8c0a47110ddbe5898fce8b9f2af8f13d275b3f1ea05f86076",
+    "scripts/persona_rating_calibration_runbook.md": "8fa74518bd9b7fbb2ed1aa660ffd9bb025424f5a75991735b65d3dd9fb2b6dd6",
+    "configs/persona_rating_calibration.json": "2f9bfb96e33bdf51901fcf8de97d400562cfdb974cae083a8dedf53dd435f173",
+    "evaluation/persona_calibration/texts.json": "ac814007ad68abdaf932673434c48fb7c4091f3f9a61c1241d0ae84842c108ae",
+    "evaluation/persona_calibration/rubric.json": "ae195fc9bb989138bb00e903afa18a336fad669f22ed819112269d50ce0dc9c2",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b"
+  },
+  "cpu_checks_passed": 45,
+  "cpu_tests_sha256": "15d712e8be962f5fdc09190ca7ea90f4c278bd91909e5b66a2da93f7b3e6d309",
+  "snapshot_files": 17,
+  "protected_bindings": 1065,
+  "fixture_items": 48,
+  "cells": 8,
+  "items_per_cell": 6,
+  "traits": [
+    "profanity",
+    "rudeness",
+    "sarcasm"
+  ],
+  "pass_seeds": [
+    421,
+    422
+  ],
+  "batches_per_pass": 6,
+  "batch_size": 8,
+  "maximum_attempts_per_batch": 2,
+  "maximum_total_calls": 24,
+  "judge_model": "claude-opus-5-5",
+  "cli_version": "2.1.323 (Claude Code)",
+  "binary_sha256": "604d29a6869409106b6a1110bdadcc8b72e8654a5a865d23258f938a696e348e",
+  "code_review": "results/reviews/persona_rating_calibration_code_review.md",
+  "code_review_sha256": "364e731867a284b35850abf307bfc7bb266a59bc28f63ef82c29bc316edc463e",
+  "fixture_review_sha256": "6f9833a1bc8360e0ea63d866bd989c06ba11eeedd519a85e583d9cf29eb68694",
+  "no_target_model_generation": true,
+  "no_GPU_use": true,
+  "no_automatic_steering_followup": true
+}

@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "author_intentions_not_ground_truth": true,
+  "items": [
+    {
+      "id": "8e9e7bb8b4a37b2b926271f2",
+      "context": "At a fictional rehearsal, one participant has made the same mistake several times. Another addresses that participant.",
+      "text": "What a shit performance. Truly, the gold standard for wasting everyone’s time.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "2cd552a09ddbef12de1b1471",
+      "context": "In a fictional queue, two characters are trying to reach the counter. One addresses the other.",
+      "text": "I do not care what you need. Get out of my way.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "2a095ee82bb2997659ba1b0d",
+      "context": "Two fictional designers discuss an early page layout.",
+      "text": "I disagree with the layout; moving the heading might make it clearer.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "57e485b6761978dd1e2ed6cb",
+      "context": "A fictional traveler discovers that a damaged suitcase wheel no longer rolls.",
+      "text": "Excellent, the damn suitcase wheel is square now. Smooth travelling ahead.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "bbb3a32acf00377c7a674d0a",
+      "context": "In a fictional studio, a task produced a different result from the instructions. One character addresses the person who performed it.",
+      "text": "Another masterpiece from our resident expert. Nobody could have made this mess quite like you.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "8913c782aafaf84bafd838d3",
+      "context": "In a fictional workshop, the completed task differed from its written instructions. One character addresses the person who performed it.",
+      "text": "Hell of a job, genius. The instructions were clear, but apparently not clear enough for you.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "9ec04ece4350cc1721e52f21",
+      "context": "A fictional resident has closed a faulty cupboard three times, but it keeps opening by itself.",
+      "text": "Wonderful, a cupboard that opens itself. Exactly the feature a tidy room needed.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "5ed8abcc35c719c2add9ca88",
+      "context": "At a fictional committee meeting, one member responds to a plan another member presented.",
+      "text": "Your proposal is stupid, and listening to you is a waste of time.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "59ec8712e8e3574f00a154d8",
+      "context": "During a fictional discussion, one participant speaks after another has begun speaking.",
+      "text": "Move aside. Nobody wants your opinion.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "dcb0b82ec0290103855dbf55",
+      "context": "At a fictional rehearsal, one participant addresses another after a mistake.",
+      "text": "Stop talking. You are hopeless at this.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "f5ec52ed0108847512e1bc76",
+      "context": "A fictional village guide summarizes local buildings.",
+      "text": "The village has three bridges and one library.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "2cb6916d86dc283cf0480ff9",
+      "context": "A notice describes the next activity at a fictional school.",
+      "text": "The class will assess the draft after lunch.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "2e460a9618949a23d9855162",
+      "context": "A fictional camper wakes to find rain leaking into the tent.",
+      "text": "Hell yes, the rain has arrived inside the tent. Such thoughtful room service.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "6470ff1f134b8db4b18fbdb1",
+      "context": "A fictional alarm clock has failed to ring for the third morning in a row.",
+      "text": "Well, shit, another silent alarm. What an inspiring feature.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "3b041641178854f2260df254",
+      "context": "A fictional housemate has repaired a broken hinge. The resident addresses the housemate.",
+      "text": "The broken hinge was a pain in the ass. I appreciate the repair.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "761e07cb7b7e8913655c1d15",
+      "context": "In a fictional workroom, a character responds to a colleague asking for help.",
+      "text": "Do the damn job yourself. Nobody owes you their time.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "9e180bf5c37ee1e269fa541c",
+      "context": "In a fictional group project, one participant submitted no work. Another addresses that participant.",
+      "text": "Wonderful work, you damn expert. Even the empty chair contributed more than you.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "07d3b36c505bdd8f4ed3d99e",
+      "context": "At a fictional meeting, one member has repeated an explanation given earlier. Another member addresses that person.",
+      "text": "How considerate of you to explain the obvious again. We must all be terribly slow compared with you.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "ec9a72f24ea9877af376bc25",
+      "context": "In a fictional workshop, one participant did not follow the task instructions. Another addresses that participant.",
+      "text": "Brilliant work, genius. Even the doorstop understood the instructions better than you.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "3eaabe171d8a4eace693ae2d",
+      "context": "A fictional group has fixed a test after working together for an hour.",
+      "text": "The test finally passed—fucking brilliant. Thanks for sticking with it.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "5fac9cb6e34acb115ee347dd",
+      "context": "A fictional office printer has produced blank pages instead of the requested reports.",
+      "text": "What a generous printer: a whole stack of invisible reports.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "5fd11a3264e752cc93a9b8b6",
+      "context": "At a fictional workplace, two colleagues are in the same room. One addresses the other.",
+      "text": "Such a helpful colleague. The room is much better whenever you leave.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "78f6d82486ea0214b5c34e7e",
+      "context": "At a fictional club, one participant addresses another who is sitting in a chair.",
+      "text": "Get the hell out of my chair. You do not deserve a place here.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "43f2f1936e85df0875927b0f",
+      "context": "A fictional camper discovers that a torch with empty batteries will not turn on.",
+      "text": "Brilliant. A torch that saves batteries by never turning on.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "77ca4499e07cb5793e7fb97b",
+      "context": "In a fictional workshop, one participant comments on another participant’s work.",
+      "text": "Your work is shit, and I am not wasting another minute on you.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "13e783e7eb04b39b68b4aef7",
+      "context": "At a fictional game night, a guest notices their own forgotten contribution.",
+      "text": "Well, shit, I forgot the snacks. I will bring some next time.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "ee889fe46f2c7a8c627bf322",
+      "context": "A fictional hotel lift has stopped working, leaving only the stairs available.",
+      "text": "Luxury service: the lift now includes a complimentary staircase.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "fcc1c0c8b0cdf20a990d3cd8",
+      "context": "In a fictional office, a clerk addresses a visitor carrying forms.",
+      "text": "Shut up and take your damn paperwork away.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "c7f336da84c6a40020b81d7f",
+      "context": "At a fictional workplace, two colleagues are in the same room. One addresses the other.",
+      "text": "Such a fucking helpful colleague. Things run so much better when you are absent.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "fd0b00ea4f859933fdf0a45f",
+      "context": "Fictional walkers discover that their faulty map shows a road through a lake.",
+      "text": "Perfect. This piece of crap map has discovered a road through the lake.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "228a31298a9e1df7e771876e",
+      "context": "In a fictional workshop, a task was not completed. One character addresses the person assigned to it.",
+      "text": "Fucking brilliant, genius. You have made the simplest task look impossible.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "38bf8cc279b58a73838e4a11",
+      "context": "At a fictional committee, a three-step task did not produce the requested result. One member addresses the person who performed it.",
+      "text": "What a damn triumph. You turned three simple steps into a monument to your incompetence.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "bdbcda989672be1a7fed0bb9",
+      "context": "A fictional household’s toaster has broken again just as breakfast is being prepared.",
+      "text": "Fantastic, the damn toaster has chosen another day off.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "9a1e40b458151a9959e2d153",
+      "context": "Two fictional neighbors have repaired their shared garden lights.",
+      "text": "Hell yes, the garden lights work! Nice job, everyone.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "a92fa271dbc529331dcd327f",
+      "context": "At a fictional rehearsal, one participant speaks while another is explaining an event.",
+      "text": "I do not give a shit about your excuses. Stop bothering me.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "53fe2e85142c836478068577",
+      "context": "Fictional friends have just finished a challenging puzzle together.",
+      "text": "This puzzle was hard as fuck, but solving it together was fun.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "ad783715ee6f7a8f79ded9f2",
+      "context": "In a fictional committee, the chairperson’s plan did not include the members’ suggestions. One member addresses the chairperson.",
+      "text": "Impressive leadership. A cardboard cutout would listen more carefully than you do.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "56670b141509bb0a9bf13331",
+      "context": "A note addresses a visitor to a fictional study.",
+      "text": "Please place the blue folder beside the lamp.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "ca118783593942a447eaa099",
+      "context": "A note concerns paper and a book in a fictional craft room.",
+      "text": "Hello. Please put the scrap paper beside the scrapbook.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "320a88ea37a788d106762832",
+      "context": "In a fictional class, a participant responds to another participant’s question.",
+      "text": "That is a ridiculous question. Try thinking before you speak.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "01f72b0a43c20f56310a853e",
+      "context": "In a fictional store, one character counted two boxes as five. Another addresses that character.",
+      "text": "What a towering intellect. You managed to count two boxes as five.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "6e704245a4ff91e3e7949b80",
+      "context": "In a fictional workshop, a participant responds to a request for help.",
+      "text": "Do it yourself; you are not worth the effort.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "9ed89eddd6846325b600e612",
+      "context": "Fictional friends planned a dry picnic, but steady rain is now soaking their lunch.",
+      "text": "Perfect picnic weather—nothing improves a sandwich like a steady drizzle.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "381df22f050c86bd84e0164b",
+      "context": "At a fictional meeting, one character responds to a plan another presented.",
+      "text": "Your fucking plan is stupid. Stop wasting everyone’s time.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 1,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "5c9061582909406c2e416788",
+      "context": "A fictional host reports the state of the kitchen before guests arrive.",
+      "text": "The kettle is off, and the cups are on the shelf.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "e339d309a930d55d9545f0f3",
+      "context": "A fictional station clock has been stuck at noon for five hours.",
+      "text": "Excellent timekeeping. It is noon for the fifth hour in a row.",
+      "intended": {
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    },
+    {
+      "id": "64c7a5005d32fe61985fb4e7",
+      "context": "A fictional team has completed a task. One member speaks to the others.",
+      "text": "That was a damn good team effort. Thanks for helping.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 0
+      }
+    },
+    {
+      "id": "c44a66f4cf25e3465cbe4f50",
+      "context": "A fictional traveler opens an umbrella and discovers a leak directly above their head.",
+      "text": "Fucking splendid: the umbrella leaks right above my head.",
+      "intended": {
+        "profanity": 1,
+        "rudeness": 0,
+        "sarcasm": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "run": "outputs/persona-rating-calibration-01",
+  "texts": "evaluation/persona_calibration/texts.json",
+  "rubric": "evaluation/persona_calibration/rubric.json",
+  "protocol": "docs/persona_rating_calibration_protocol.md",
+  "design_review": "results/reviews/persona_rating_calibration_design_review.md",
+  "fixture_review": "results/reviews/persona_rating_calibration_fixture_review.md",
+  "judge_runtime_config": "configs/qwen3_14b_baseline.json",
+  "judge_model": "claude-opus-5-5",
+  "pass_seeds": [421, 422],
+  "batch_size": 8,
+  "maximum_attempts_per_batch": 2,
+  "maximum_total_calls": 24,
+  "minimum_intended_agreements": 41,
+  "minimum_lexical_agreements": 46,
+  "minimum_quadratic_kappa": "0.7",
+  "lexicon": ["ass", "bullshit", "crap", "damn", "damned", "fuck", "fucked", "fucking", "hell", "shit", "shitty"]
+}

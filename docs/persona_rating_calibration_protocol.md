@@ -16,15 +16,19 @@ author intentions on deliberately clear synthetic cases, not human ground truth.
 Use impersonal situations or fictional targets. Include friendly emphatic
 swearing without rudeness or sarcasm, dismissiveness without swearing, contextual
 irony, and mixed cases. No slurs, threats, real-person targets or masked profanity.
-Include innocent lexical traps such as `assess`, `class`, `hello` and `Scunthorpe`
+Include innocent lexical traps such as `assess`, `class`, `hello` and `scrapbook`
 in profanity-absent texts. Every item has an opaque identifier with no trait or
-cell encoded in it. Review balance, context and intended distinctions before
+cell encoded in it. Context describes events and referents, without announcing
+that a speaker is mocking, dismissive or otherwise displaying the target trait.
+Rate the delivery in the text; use context to resolve its meaning, not as a
+trait label. Review balance, context and intended distinctions before
 judging; do not rewrite cases after seeing results.
 
 ## Frozen measurements and blinding
 
-Score each trait independently on integers 0–3: absent, slight/ambiguous, clear,
-strong. Presence means a score of at least 2. Friendly swearing alone is not
+Score each trait independently on integers 0–3: absent, ambiguous evidence,
+clear presence, strong presence. Presence means a score of at least 2; mild but
+unambiguous swearing still counts as clear presence. Friendly swearing alone is not
 rudeness; rudeness needs no profanity; sarcasm requires ironic or mocking intent
 in context. A separate boolean gross-failure flag means slurs, threats,
 harassment of real people or protected groups, sexual content, or incoherent/
@@ -94,6 +98,8 @@ are needed for CPU tests.
 
 Clear authored examples assess basic trait separation. Passing does not prove
 sensitivity to mild/graded model outputs, human agreement or general validity.
+In this fixture, non-rude sarcasm concerns objects or situations; playful teasing
+between people is not tested.
 Two calls to one model family establish limited repeatability, not independent
 human validation. The scientific reviewer and judge share a model family, and
 the server-side model snapshot is not fully pinned even when the CLI is pinned.
