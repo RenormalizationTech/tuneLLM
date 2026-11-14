@@ -47,6 +47,14 @@ matched the profanity test module, no active lock remained, and none of the
 1,231 protected/source bindings referred to these paths. The receipt is
 `outputs/workspace-maintenance-20261114/profanity_pytest_cleanup.json`.
 
+The completed shared rudeness/sarcasm CPU-test scratch session (`pytest-0`) was
+then removed: 439 files and 1,789,806 logical bytes, plus its matching current
+link. It had no active lock, its fixture names matched the new test module, and
+none of the 1,436 protected/source bindings referred to it. Receipt:
+`outputs/workspace-maintenance-20261114/persona_traits_pytest_cleanup.json`.
+Across these scoped cleanups, 3,318 files totaling 11,585,525 logical bytes were
+removed. Model assets, corpora and experiment evidence were preserved.
+
 Scientific status and the next model experiment are maintained in
 [the project map](project_tracks.md). Historical frozen documents retain the
 scope and transition decisions recorded at their registration time.

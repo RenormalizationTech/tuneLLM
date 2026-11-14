@@ -7,7 +7,8 @@ and results continue to describe the experiments as registered.
 **Current priority:** the 4B refusal study is closed; the 4B persona pipeline is
 open. The [three-trait rating calibration passed](persona_rating_calibration_completion_execution.md)
 on clear authored cases. The [profanity pilot closed with a development null](profanity_steering_execution.md);
-prepare [isolated rudeness and sarcasm](isolated_persona_traits_protocol.md) next. Finish
+[rudeness also closed with a development null](isolated_persona_traits_execution.md).
+Sarcasm is next under the separately registered fixed design. Finish
 isolated and bounded joint studies on 4B before further 14B work.
 The completed 14B baseline remains a historical measurement. Older closeout or
 transition language in frozen protocols is superseded by this current roadmap;
@@ -21,7 +22,7 @@ those records remain unchanged to preserve their experiment hashes.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Persona activation steering | Intervene on activations to influence written tone/style | Isolated 4B profanity closed with no target signal in the fixed grid. Rudeness and sarcasm are next, then a separately gated joint stage. Finish the 4B pipeline before further 14B work. |
+| Persona activation steering | Intervene on activations to influence written tone/style | Isolated 4B profanity and rudeness closed with no target signal in the fixed grid. Sarcasm is next, then a separately gated joint stage. Finish the 4B pipeline before further 14B work. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank
@@ -42,7 +43,7 @@ flowchart TD
     Quant --> Physics["Saved NF4 base + physics LoRA training demonstration"]
     Base --> Refusal["Refusal activation-steering research: completed tradeoff"]
     Refusal --> Prompt["Persona prompt reference/control: P1 completed"]
-    Prompt --> Persona["4B persona pipeline: calibration passed; profanity null; rudeness/sarcasm next"]
+    Prompt --> Persona["4B persona pipeline: calibration passed; profanity/rudeness null; sarcasm next"]
 ```
 
 This diagram organizes the program; it does not claim that all historical runs
@@ -154,16 +155,17 @@ question, not part of the physics demonstration or this persona objective.
    behavior is a valid outcome. Close and document the 4B pipeline before
    considering transfer to 14B; larger size is not a presumed stability fix.
 
-This is the selected research objective. Exact data, block choices, coefficient
-settings and stopping rules still need a concrete protocol. This documentation
-correction launches no model generation, extraction, training or grading run.
+This is the selected research objective. Isolated-study data, blocks, strengths
+and stopping rules are fixed in the linked protocol and run registrations.
+Joint-study settings still need a concrete protocol before execution.
 
 A future persona LoRA would be another training experiment and would need its
 own dataset and protocol. It is not the current persona-steering method or a
 reason to restart the completed physics adapter exercise.
 
-**Protocol status:** the profanity study is closed. The
-[rudeness/sarcasm design](isolated_persona_traits_protocol.md) is reviewed for
-implementation, with fixture/code acceptance and separate exact run registrations
-pending. Joint control needs its own protocol; this roadmap is not an execution
-registration.
+**Protocol status:** profanity and rudeness are closed with development nulls.
+The [rudeness/sarcasm design](isolated_persona_traits_protocol.md), fixtures and
+code are accepted; 16 focused CPU checks passed. Rudeness is registered and
+complete, and sarcasm has its own pre-call registration. See the
+[execution record](isolated_persona_traits_execution.md). Joint control needs its
+own protocol; this roadmap is not an execution registration.

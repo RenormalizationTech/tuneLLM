@@ -61,9 +61,14 @@ below distinguishes completed runs from accepted designs.
   Hooks changed 6–14/16 token sequences, with content fulfillment 13–14/16 versus
   baseline 15/16. Confirmation, reload generation and retention were skipped.
   See `docs/profanity_steering_execution.md`; all 22 judge batches passed first
-  try. Next implement the separately reviewed rudeness/sarcasm designs in
-  `docs/isolated_persona_traits_protocol.md`, keeping the same grid. No new
-  rudeness/sarcasm output, joint experiment or further 14B work has run.
+  try. The separately reviewed rudeness/sarcasm implementation passed 16 CPU
+  checks with both corpora frozen before outputs.
+- Isolated rudeness on 4B: closed with a development null. Eligibility retained
+  31/32 pairs; all six settings produced 0/16 raw/usable target outputs, changing
+  7–14/16 token sequences. Content fulfillment was 14–16/16 versus baseline
+  15/16, with no incoherence/gross failures. All 22 judge batches passed first
+  try. See `docs/isolated_persona_traits_execution.md`. Sarcasm is separately
+  registered next with the same grid; no joint or further 14B experiment ran.
 - Qwen3-4B refusal study: closed after the final published-only replay. All 250
   token/input/output/layout/flag comparisons matched, with 681 protected bindings
   unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and
@@ -1036,7 +1041,8 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   [x] Define the three trait scales and complete the bounded rating calibration
 -   [x] Register and execute isolated profanity steering; development null
 -   [x] Review the fixed isolated rudeness/sarcasm study design with Claude
--   [ ] Complete separate rudeness and sarcasm fixtures, registrations and runs
+-   [x] Complete isolated rudeness: development null, documented with fixed gates
+-   [ ] Complete the separately registered sarcasm run
 -   [ ] Close each axis with target, content and cross-trait results; passing
     control is not assumed
 -   Geometry analysis is optional and requires a separate research question.

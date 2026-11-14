@@ -42,8 +42,9 @@ both blinded passes matched all 48 authored presence labels for each trait.
 This supports limited repeatability on clear examples. The
 [isolated 4B profanity pilot closed with a development null](docs/profanity_steering_execution.md):
 all six settings produced 0/16 profane outputs despite changing answer tokens.
-Next are [isolated rudeness and sarcasm](docs/isolated_persona_traits_protocol.md),
-with fixed settings and separate registrations.
+[Isolated rudeness also closed with a development null](docs/isolated_persona_traits_execution.md):
+31/32 pairs qualified, but every setting produced 0/16 usable target outputs.
+Sarcasm is next under its separate registration and the same fixed grid.
 The later joint study will measure
 interference rather than assume independent controls. See
 [the current project map](docs/project_tracks.md) and
