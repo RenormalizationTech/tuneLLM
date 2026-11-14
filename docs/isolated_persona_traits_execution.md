@@ -69,6 +69,14 @@ ignored under `outputs/rudeness-steering-01/`. A small historically used screen
 and same-family AI ratings limit interpretation; this is no general capability
 or human-validity claim.
 
+The worker's independent read-only audit passed: all 1,401 protected bindings
+and model/source hashes matched; journals, selection, vector provenance, hook
+audits and public aggregates reconstructed correctly. The freshly generated
+baseline matched all 16 earlier profanity-baseline answers exactly in tokens,
+inputs, batch layout, flags and output bytes. This is a descriptive cross-check;
+no prior generation or grade was substituted. Local audit note:
+`outputs/workspace-maintenance-20261114/rudeness_postrun_verification.md`.
+
 ## Sarcasm and joint stage
 
 Sarcasm uses its already accepted separate corpus and the same fixed method.
