@@ -12,7 +12,7 @@ and results continue to describe the experiments as registered.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Future persona activation steering | Intervene on activations to influence written tone/style | The next behavioral research direction; proposed axes below are unregistered. |
+| Future persona activation steering | Intervene on activations to influence written tone/style | The next behavioral research direction: profanity, rudeness and sarcasm with simultaneous controls. Experimental protocol not yet registered. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank
@@ -63,61 +63,75 @@ They did not train a model, load the physics adapter, use the PRL training corpu
 as persona data, or assess improvements in PRL writing. A task's subject matter
 does not determine whether the method is fine-tuning, prompting or steering.
 
-## Proposed future persona targets
+## User-selected persona targets and simultaneous control
 
-These are candidate learning axes, not a commitment to execute every study.
-Start with one clearly measurable axis, then consider more contextual traits.
-The order below is an advisory proposal, not a user-selected sequence. Claude
-suggested placing formality before more context-dependent emotional expression.
+The user's clarified goal is **profanity, rudeness and sarcasm**, with three
+simultaneously adjustable activation controls. The previously suggested
+conciseness/formality/warmth roadmap was a misunderstanding and is superseded.
+It does not replace these targets.
 
-| Proposed order | Written behavior | Main check beyond style preference |
+| Direction | Intended written behavior | Distinction to preserve |
 | --- | --- | --- |
-| 1 | Concise versus detailed delivery | Preserve required facts, quantities and constraints; brevity cannot win by dropping content. |
-| 2 | Formal/professional versus conversational | Hold facts, audience and task constant. |
-| 3 | Warm/supportive versus neutral | Preserve honest disagreement and correction of false premises; control length, which confounded earlier warmth contrasts. |
-| 4 | Calm/composed versus energetic/enthusiastic | Separate energy from warmth, formality and answer length. |
-| 5 | Calibrated assertiveness and constructive pushback | State warranted conclusions clearly, preserve uncertainty and correct flawed premises. P1 gives limited support on these tasks. |
-| Later, optional | Playful or sarcastic versus literal presentation | Preserve meaning and audience fit; context makes this harder to define cleanly. |
+| Profanity | Amount/intensity of swearing | Swearing can be friendly or emphatic without being rude. |
+| Rudeness | Impolite, abrasive or dismissive delivery | Rudeness can occur without profanity or sarcasm. |
+| Sarcasm | Context-dependent ironic or mocking delivery | Sarcasm need not contain profanity or be rude. |
 
-Answer-first directness is another possible narrow delivery axis. It should be
-separated from brevity when designing a contrast: putting the conclusion first
-and using fewer words are different changes. The proposed first study should
-choose one, rather than repeat P1's broad composite target.
+The target intervention is:
 
-A longer-term **steady/resolute or heroic-style persona** could combine direct
-delivery, composure, warmth and evidence-calibrated assertiveness after its
-components have been evaluated. This refers to expressed language and helpful
-behavior, not an internal emotional state or invented personal experience.
-Factual accuracy and appropriate uncertainty remain quality requirements across
-all axes; unsupported certainty is not a desired control setting.
+\[
+h_l' = h_l
++ \alpha_p v_{\text{profanity}}
++ \alpha_r v_{\text{rudeness}}
++ \alpha_s v_{\text{sarcasm}}.
+\]
 
-The early roadmap's profanity/rudeness/sarcasm progression is superseded as the
-default priority by the axes above. Those older examples are not required
-milestones or active experiments. Similarly, physics-adapter/steering
-interaction is a separate optional research question, not part of the completed
-physics demonstration or the current persona program.
+At an intervention site, add the weighted sum once to the same hidden state.
+The model weights stay fixed; this is activation steering, not a new physics
+adapter or prompt-only persona switch. The directions must share the same
+activation space at the selected block. If multiple blocks are used, specify
+block-specific directions and intervention sites in the protocol.
 
-## Method for a future axis
+The goal is simultaneous control, not three disconnected demonstrations.
+Testing each direction individually first is calibration toward that goal.
+Independent, linear or monotonic effects on generated language are hypotheses,
+not consequences of the additive formula: later nonlinear computation can
+couple the traits. A coefficient of zero removes that direction's contribution,
+not the trait from the baseline. Strength units depend on vector normalization;
+negative coefficients require testing rather than assuming an opposite effect.
 
-1. Define one observable target and content/calibration requirements. Use the
-   existing P1 outputs for a small diagnosis where helpful; retain its original
-   grades and stopping decision.
-2. Establish a matched neutral/styled prompt reference on benign tasks. This
-   characterizes the desired output; prompting alone establishes no activation
-   control. Keep answer content and confounding style dimensions comparable.
-3. Under a separate protocol, extract a candidate direction from appropriate
-   contrastive activations and test a bounded inference-time intervention.
-   Register block, token scope and actual strength; no automatic layer/strength
-   grid is required. Do not substitute the refusal vector for a persona vector.
-4. Compare neutral, prompted-reference and activation-steered responses with
-   separate style, correctness, calibration and invalid-output measurements.
-   Use development criteria and an unseen final set, with stopping rules fixed
-   before outputs. Preserve failures and uncertainty.
+Physics-adapter/steering interaction remains a separate optional research
+question, not part of the physics demonstration or this persona objective.
+
+## Development path toward joint control
+
+1. Define separate ratings for all three traits. Use content-matched contrasts
+   that vary one trait while controlling the other two, answer length and task
+   meaning as far as practical. Use fictional dialogue or impersonal examples
+   to make style distinguishable from factual correctness.
+2. Use prompts to construct/reference these contrasts, then extract candidate
+   activation directions under a reviewed protocol. Do not reuse the refusal
+   vector as a persona vector. Existing warm-tone and P1 results remain
+   historical evidence, not validation of these new directions.
+3. Calibrate each direction alone with a small declared set of blocks/strengths.
+   Record vector normalization, token scope and per-trait effects, together
+   with correctness, coherence and degeneration checks.
+4. Test pairwise combinations and all-three mixtures. Score every trait for
+   every condition, including neutral and single-direction controls, with the
+   coefficient settings hidden from evaluators. A lexical profanity count can
+   complement contextual judgments of rudeness and sarcasm. Measure
+   whether changing one coefficient changes the other trait ratings. Preserve
+   original directions when comparing any orthogonalization or other correction.
+5. Lock the chosen joint configuration before a compact held-out evaluation.
+   Report cross-trait interference, usable strength ranges and failures. Do not
+   claim independent knobs unless the measurements support them.
+
+This is the selected research objective. Exact data, block choices, coefficient
+settings and stopping rules still need a concrete protocol. This documentation
+correction launches no model generation, extraction, training or grading run.
 
 A future persona LoRA would be another training experiment and would need its
 own dataset and protocol. It is not the current persona-steering method or a
 reason to restart the completed physics adapter exercise.
 
-**Unregistered roadmap: this document authorizes no new model generation,
-training, vector extraction or grading run.** The immediate documentation task
-clarifies the program; any next experiment needs a concrete reviewed protocol.
+**Protocol status:** the targets are user-selected; experimental details remain
+unregistered. Review the concrete next experiment before implementation.

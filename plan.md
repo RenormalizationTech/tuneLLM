@@ -28,11 +28,11 @@ persona/tone research. Persona prompting supplies an inference-time reference;
 it does not train an adapter or apply an activation vector. Physics/math
 questions in a behavioral evaluation are content checks, not physics training.
 
-See [project tracks and proposed persona targets](docs/project_tracks.md).
+See [project tracks and selected persona targets](docs/project_tracks.md).
 That map supersedes older default trait priorities below. The physics learning
 milestone and refusal studies are complete; P1 was a prompt-only reference with
-a failed acceptance gate. Future persona activation studies are proposed and
-unregistered. No new experiment is scheduled by this documentation update.
+a failed acceptance gate. Future persona activation studies target profanity, rudeness and sarcasm with
+simultaneous controls; experimental details remain unregistered. No new experiment is scheduled by this documentation update.
 
 ## Current status and execution priorities (2026-11-14)
 
@@ -660,39 +660,28 @@ treating safeguard bypass as the project objective.
 
 ------------------------------------------------------------------------
 
-## Stage 5 - Persona Directions (proposed)
+## Stage 5 - Profanity, Rudeness and Sarcasm Directions
 
-After completing the refusal research stage, focus on written tone/persona.
-A successful refusal-control configuration is not a prerequisite for learning
-about a different behavior. The following order is an advisory proposal discussed
-with Claude, not a user-selected sequence; formality is suggested early because
-it is easier to distinguish from other traits:
+The user-selected persona objective is simultaneous activation control of
+profanity, rudeness and sarcasm. The previously substituted mild-tone roadmap
+is superseded. Physics LoRA remains a separate fine-tuning demonstration.
 
-1. Concise versus detailed delivery, preserving required content.
-2. Formal/professional versus conversational language.
-3. Warm/supportive versus neutral language, preserving honest disagreement.
-4. Calm/composed versus energetic/enthusiastic language.
-5. Calibrated assertiveness and constructive pushback.
+Define and extract each trait using matched contrasts that distinguish it from
+the other two. Swearing can be friendly; rudeness can be nonprofane; sarcasm
+can be playful. Prompted contrasts are construction/reference data, not the
+final activation-control mechanism. Do not assume every trait is one-dimensional.
 
-Answer-first directness is distinct from brevity. Choose one narrow axis first;
-do not automatically repeat P1's composite persona. A steady/resolute or
-heroic-style composite is a later possibility after component evaluation.
-These are expressed language traits, not internal emotions.
-
-For an individually registered study, establish matched prompt references,
-then extract and causally test a candidate activation direction. Prompting alone
-is not activation steering. Do not assume every trait is one-dimensional.
-See [the project map](docs/project_tracks.md) for controls and quality checks.
-
-The early profanity/rudeness/sarcasm sequence is superseded as the default.
-Playfulness/sarcasm may remain optional later topics, not required milestones.
+Calibrate individual directions first, then evaluate pairwise and all-three
+mixtures as part of the same joint-control objective. No successful refusal
+configuration is required before investigating these distinct traits.
+See [the project map](docs/project_tracks.md) for the development path.
 
 ------------------------------------------------------------------------
 
 ## Stage 6 - Behavioral Geometry
 
-Optional later research: study relationships among individually evaluated
-persona directions. No geometry study is currently registered.
+Study relationships among the three candidate persona directions to diagnose
+interference in joint control. No geometry experiment is currently registered.
 
 For directions (v_i) and (v_j), calculate:
 
@@ -701,8 +690,8 @@ For directions (v_i) and (v_j), calculate:
 
 Questions include:
 
--   Are warmth and energy directions correlated?
--   Is formality separable from conciseness?
+-   Are profanity and rudeness directions correlated?
+-   Can sarcasm be controlled independently of the other two traits?
 -   Do directions change across layers?
 -   Are the representations genuinely one-dimensional?
 -   Can multiple human-defined traits be described by a smaller latent
@@ -721,23 +710,31 @@ retained for scientific comparison.
 
 ------------------------------------------------------------------------
 
-## Stage 7 - Continuous Inference-Time Persona Controls (optional)
+## Stage 7 - Simultaneous Inference-Time Persona Controls
 
-A later goal is to combine validated style directions:
+The target is three adjustable activation contributions:
 
-```text
-h_l' = h_l + sum_j alpha_j * v_j
-```
+\[
+h_l' = h_l
++ \alpha_p v_{\text{profanity}}
++ \alpha_r v_{\text{rudeness}}
++ \alpha_s v_{\text{sarcasm}}.
+\]
 
-An illustrative, unimplemented interface might accept
-`style_controls={"conciseness": 0.5, "warmth": 0.2}`. These numbers have no
-calibrated meaning yet. Layer, token scope, vector normalization and strengths
-need a concrete protocol; there is no universal scale where 1 means strong.
+An illustrative, unimplemented interface is
+`style_controls={"profanity": 0.0, "rudeness": 0.0, "sarcasm": 0.0}`.
+Zero means no added contribution from that vector, not absence of the trait.
+Layer, token scope, normalization and usable strength ranges need a protocol.
+For multiple blocks, specify a direction at each intervention site.
 
-Test dose response and cross-trait interference before claiming independent
-continuous controls. Truthfulness and appropriate uncertainty are quality
-requirements, not adjustable persona knobs. This is future activation research,
-not a requirement to train another LoRA.
+Test each direction alone, pairwise combinations, then all-three mixtures.
+Score all three traits in every condition and measure cross-trait interference,
+content retention and degeneration. Additive activations do not guarantee
+independent or linear output effects. Test negative strengths if included;
+do not assume they reliably produce the opposite behavior.
+
+This is the user's central persona research goal, with exact experimental
+settings still unregistered. It requires no new physics LoRA training.
 
 ------------------------------------------------------------------------
 
@@ -966,18 +963,19 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   No validated usable configuration passed the final quality criteria.
     See `docs/refusal_reduction_execution.md`; no further sweep is active.
 
-## M4 - Persona Directions (proposed, unregistered)
+## M4 - Persona Directions (targets selected; protocol unregistered)
 
--   [ ] Select one narrow axis from `docs/project_tracks.md`
--   [ ] Register matched prompt references and an activation intervention
+-   [ ] Define distinct profanity, rudeness and sarcasm contrasts/ratings
+-   [ ] Register matched prompt references and activation interventions
 -   [ ] Evaluate style, content retention and calibration separately
--   [ ] Optional later layer/geometry analysis
+-   [ ] Diagnose layer dependence and cross-trait geometry as needed
 
-## M5 - Persona Control API (optional later work)
+## M5 - Simultaneous Persona Controls
 
--   [ ] Establish dose response for an individually validated style axis
--   [ ] Measure cross-trait interference before combining controls
--   [ ] Calibrate supported strengths; no API is implemented by this roadmap
+-   [ ] Calibrate each of the three directions individually
+-   [ ] Test pairwise combinations and all-three mixtures
+-   [ ] Measure cross-trait interference and response quality
+-   [ ] Lock and evaluate a joint configuration; no API is yet implemented
 
 ## M6 - Quantization x Behavior
 

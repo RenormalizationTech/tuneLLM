@@ -18,7 +18,8 @@ for desired written behavior. Persona activation steering changes hidden states
 during inference. Neither trains the physics adapter. P1 used the unadapted
 BF16 base; its physics/math questions checked content retention, not PRL writing
 or physics-adapter improvement. See the [project map](project_tracks.md) for
-methods, completed status and proposed future persona axes.
+methods, completed status and the user-selected profanity/rudeness/sarcasm
+objective, including simultaneous activation controls.
 
 ## Routine workflow after the calibration pilot
 
@@ -64,7 +65,8 @@ backlog. Reporting, the early tone-construction attempts and refusal studies
 have completed; [persona P1](persona_prompt_execution.md) was a separate
 prompt-only reference and did not validate an activation-steering configuration.
 The next behavioral research direction is persona activation steering under a
-future reviewed protocol, with candidate axes in [the roadmap](project_tracks.md).
+future reviewed protocol, targeting simultaneous profanity, rudeness and sarcasm
+controls as described in [the roadmap](project_tracks.md).
 Steering changes activations during inference;
 the routine adapter-training steps above apply only when a new training exercise
 is explicitly selected. Review management plans with Claude first and delegate

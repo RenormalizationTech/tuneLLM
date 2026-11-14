@@ -7,9 +7,11 @@ extension.
 The project has separate tracks: **physics LoRA/QLoRA demonstrates fine-tuning**;
 **refusal and persona activation steering study inference-time behavior control**.
 Persona system prompting is a reference/control for the latter, with no weight
-training or activation intervention. Generic physics questions in a behavior
+training or activation intervention. The selected persona goal is simultaneous
+activation control of **profanity, rudeness and sarcasm** with separate
+coefficients. Generic physics questions in a behavior
 evaluation do not make it physics fine-tuning. See the
-[project map and proposed persona targets](docs/project_tracks.md).
+[project map and selected persona targets](docs/project_tracks.md).
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
