@@ -1,0 +1,11 @@
+{
+  "run": "outputs/xstest-replay-01",
+  "parent": "outputs/xstest-baseline-01",
+  "parent_manifest_sha256": "ad8d1ccc729564a7fec7115fb86b0273c0c50e14a7b3c005c5e464487d513fba",
+  "parent_predictions_sha256": "6fbc602f3d35c75f6f67190dc8164440954783c805405932b73e15257cb4250a",
+  "protocol": "docs/xstest_replay_protocol.md",
+  "design_review": "results/reviews/xstest_replay_design_review.md",
+  "parent_result": "results/xstest_baseline_01.json",
+  "audit_directory": "outputs/xstest-stored-audit-01",
+  "audit_result": "results/xstest_stored_audit_01.json"
+}

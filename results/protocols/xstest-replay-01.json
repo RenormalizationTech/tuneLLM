@@ -1,0 +1,21 @@
+{
+  "study": "Final4B exact XSTest-safe replay",
+  "date": "2026-11-14",
+  "manifest_sha256": "6cceb5809f402fe1ecdf72583565ef570cd1d4d7f8900ca0408142cb2cdd3b17",
+  "protocol_sha256": "717b2f6c64a8da57f3f4affbb3c0cd443a8d3301c99494b2f4f1b826e7dd6b2a",
+  "source_sha256": {
+    "scripts/xstest_replay.py": "2819a2f2ac84b9df3404f1f71fbe18152c97519e9fc9c885a51fe2bbde638a3a",
+    "configs/xstest_replay.json": "60078e053edf495ad642e62a9e219c33a45db0b28c76f7e96f5b6c7876ede915",
+    "scripts/xstest_replay_runbook.md": "ef6a6ce8365d4cb33e51f3d8f0a480f0de63469ea7c50fc41109498511bfb2a6"
+  },
+  "parent_manifest_sha256": "ad8d1ccc729564a7fec7115fb86b0273c0c50e14a7b3c005c5e464487d513fba",
+  "published_safe_prompts": 250,
+  "generation_conditions": 1,
+  "maximum_attempts": 1,
+  "new_grader_calls": 0,
+  "cpu_tests_passed": 17,
+  "protected_bindings": 681,
+  "code_review": "results/reviews/xstest_replay_code_review.md",
+  "close4B_after_observed_outcome": true,
+  "no_automatic_rerun_or_parameter_search": true
+}
