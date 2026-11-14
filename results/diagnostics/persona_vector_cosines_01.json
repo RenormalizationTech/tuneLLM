@@ -1,0 +1,149 @@
+{
+  "scope": "Posthoc descriptive stored FP32 unit-vector geometry within fixed blocks17 and23 only",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "stored_dtype": "float32",
+  "calculation_dtype": "float64 dot/norm with independent math.fsum cross-check",
+  "source_sha256": {
+    "profanity": {
+      "paths": {
+        "safetensors": "outputs/profanity-steering-01/extraction/vectors.safetensors",
+        "metadata": "outputs/profanity-steering-01/extraction/vectors.json",
+        "manifest": "outputs/profanity-steering-01/manifest.json",
+        "eligibility": "outputs/profanity-steering-01/eligibility.json",
+        "strength": "outputs/profanity-steering-01/strength.json",
+        "result": "results/profanity_steering_01.json"
+      },
+      "sha256": {
+        "safetensors": "80012c8c9a4c5e60ccbeb9fa6ab3b3aa02df92b5c276b4048a58b9d12cd01a2f",
+        "metadata": "ca5b545021683b41517fefdd6c82a5966553291cb7b98c620c6d74ad83b9da8e",
+        "manifest": "a460e717117dede42bbe685a73fba3fcc04f640ad49dcbbfef418b29729fe917",
+        "eligibility": "fc2bade460e063b19a8db3d74200a7150385de9f0b4524dcac53064223962b6d",
+        "strength": "e859f90cb7419312d0f653d2adccf3555dd4b76787447300a10f1009b80ab4f9",
+        "result": "b73915bf0499732d5044032264571b8ca4d3482306f916b5791054b2217444f8"
+      }
+    },
+    "rudeness": {
+      "paths": {
+        "safetensors": "outputs/rudeness-steering-01/extraction/vectors.safetensors",
+        "metadata": "outputs/rudeness-steering-01/extraction/vectors.json",
+        "manifest": "outputs/rudeness-steering-01/manifest.json",
+        "eligibility": "outputs/rudeness-steering-01/eligibility.json",
+        "strength": "outputs/rudeness-steering-01/strength.json",
+        "result": "results/rudeness_steering_01.json"
+      },
+      "sha256": {
+        "safetensors": "9ff9dbf3c1e5e01654964678d44d74b9ade8dc25b9859abfa4a7de00c6328ac2",
+        "metadata": "786c2e6cc88c83673cf7270f943287ca2991de9c859ed015a9def0dd96ce4d6a",
+        "manifest": "64e542e53d7c1afc4e7c7a5f7b6f65a1e8326ebea21f1c5619028daed30e7b86",
+        "eligibility": "0da42a4436549421a67d8914316e9b57e9fff56038948a2aa66bef91c8edc09b",
+        "strength": "3b6dbb1b32cdb2f5dc335f68e4cfa73a4c48552efe4296c083b1319514352cb1",
+        "result": "0b5ee98718620ce412393b80f540727e3d774a7c9f32d880441eee90b5559777"
+      }
+    },
+    "sarcasm": {
+      "paths": {
+        "safetensors": "outputs/sarcasm-steering-01/extraction/vectors.safetensors",
+        "metadata": "outputs/sarcasm-steering-01/extraction/vectors.json",
+        "manifest": "outputs/sarcasm-steering-01/manifest.json",
+        "eligibility": "outputs/sarcasm-steering-01/eligibility.json",
+        "strength": "outputs/sarcasm-steering-01/strength.json",
+        "result": "results/sarcasm_steering_01.json"
+      },
+      "sha256": {
+        "safetensors": "8ae9296c447e7c8be566d98b2afaa982f1ff23e61859e8fe90c35c9fcb715f62",
+        "metadata": "60e9dc216b82c4aa7761d1093da3fff4458bc3dc8a619374b318521f46de1fb2",
+        "manifest": "fe43f452be3d2ab4501e7263f6e7cefa45e1bd85f4016b32d44314d2f0dbb12f",
+        "eligibility": "baccb368a2befcba1865ba48af0695ce50baed427c2262bc0e6522e7420fb3f8",
+        "strength": "069eded67b94474abd205a50880d9c440958089e1a38ad2b2a4cfc56db2aa70a",
+        "result": "d25ff33336fd6246948c9def9b83aa2bd9112ad504763be3ba54346ed84e4364"
+      }
+    }
+  },
+  "advisory_review_sha256": "212d4d8310df8be3a6c1e836d72cad89304eddf03369330b41c2a7191c14498b",
+  "blocks": {
+    "17": {
+      "hidden_dimension": 2560,
+      "isotropic_random_reference_1_over_sqrt_d": 0.01976423537605237,
+      "pair_counts": {
+        "profanity": 32,
+        "rudeness": 31,
+        "sarcasm": 32
+      },
+      "pairwise_trait_cosines": {
+        "profanity_vs_rudeness": 0.5538100576837001,
+        "profanity_vs_sarcasm": 0.3577353477311507,
+        "rudeness_vs_sarcasm": 0.5565552266874683
+      },
+      "own_saved_random_cosines": {
+        "profanity": 0.03590995047193682,
+        "rudeness": 0.013537237396552264,
+        "sarcasm": 0.051056747252598435
+      },
+      "random_seeds": {
+        "profanity": 4259,
+        "rudeness": 4259,
+        "sarcasm": 4259
+      },
+      "saved_random_units_exactly_equal_pairwise": {
+        "profanity_vs_rudeness": true,
+        "profanity_vs_sarcasm": true,
+        "rudeness_vs_sarcasm": true
+      },
+      "saved_random_units_exactly_equal_across_traits": true,
+      "saved_unit_L2_norms": {
+        "profanity": 0.9999999855251869,
+        "rudeness": 0.9999999923343784,
+        "sarcasm": 0.9999999489008472
+      }
+    },
+    "23": {
+      "hidden_dimension": 2560,
+      "isotropic_random_reference_1_over_sqrt_d": 0.01976423537605237,
+      "pair_counts": {
+        "profanity": 32,
+        "rudeness": 31,
+        "sarcasm": 32
+      },
+      "pairwise_trait_cosines": {
+        "profanity_vs_rudeness": 0.692701108026637,
+        "profanity_vs_sarcasm": 0.5017874147831628,
+        "rudeness_vs_sarcasm": 0.5908277525963143
+      },
+      "own_saved_random_cosines": {
+        "profanity": -0.013234390847963776,
+        "rudeness": -0.02120871785688038,
+        "sarcasm": -0.018469653546682396
+      },
+      "random_seeds": {
+        "profanity": 4265,
+        "rudeness": 4265,
+        "sarcasm": 4265
+      },
+      "saved_random_units_exactly_equal_pairwise": {
+        "profanity_vs_rudeness": true,
+        "profanity_vs_sarcasm": true,
+        "rudeness_vs_sarcasm": true
+      },
+      "saved_random_units_exactly_equal_across_traits": true,
+      "saved_unit_L2_norms": {
+        "profanity": 0.9999999718338812,
+        "rudeness": 0.9999999680670831,
+        "sarcasm": 0.9999999265243413
+      }
+    }
+  },
+  "original_hashes_verified_unchanged_before_after": true,
+  "new_model_GPU_or_grading_calls": 0,
+  "pvalues_or_inferential_tests": false,
+  "orthogonalization": false,
+  "downstream_selection": false,
+  "limits": [
+    "All studies share authoring procedures, model, fixed sites and response-mean pooling; common inserted-style components and task/wording confounds can produce alignment.",
+    "Small, different eligible corpora (32/31/32 pairs) imply uncertainty; no bootstrap, confidence interval or significance claim is made.",
+    "Random controls share CPU seeds4259/4265 across traits and are exactly equal within each block; these are not independent random draws.",
+    "The1/sqrt(d) scale is an isotropic random reference only, not a calibrated threshold or p-value for these learned vectors.",
+    "Cosine geometry cannot establish causal independence or entanglement, explain the development nulls on its own, validate joint control or authorize new strengths, sites, methods or14B work.",
+    "No cross-block cosine, orthogonalization, new generation, judging or downstream selection was performed."
+  ]
+}

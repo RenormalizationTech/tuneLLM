@@ -1,0 +1,888 @@
+{
+  "scope": "Separate isolated CAA-inspired authored-pair trait study; no general style/safety claim",
+  "target_trait": "sarcasm",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "manifest_sha256": "fe43f452be3d2ab4501e7263f6e7cefa45e1bd85f4016b32d44314d2f0dbb12f",
+  "source_sha256": {
+    "scripts/persona_traits.py": "d361a700f8b03ba2784ccb486b6570e3c25ae5f04c3074144774b2a5e5beb943",
+    "scripts/persona_traits_common.py": "8a0d615717a641859baa679cf75b7c2844de48285f761f2a452492d05fbae815",
+    "scripts/persona_traits_runbook.md": "9b975830dce566fb9ebc27942c50b00beb81cede8d68da102ade0d0f960335a7",
+    "configs/rudeness_steering.json": "710bf371a800f06c2f28b5dbed790fc91f9062242809f2a602def5105ef5e369",
+    "configs/sarcasm_steering.json": "ac71ab6356c76e54208f0d78ef2ae20af62d5c294a83b600dd96e885b760eb10",
+    "evaluation/rudeness_steering/extraction.json": "68708e2043bf00debc64353c3fa95eb04311b44dbc8c9c0939e1a91b35bffebf",
+    "evaluation/sarcasm_steering/extraction.json": "6e60715ae3df08a3a6fd6a1614ab95a9600d51e48217cf21bf507e966e5f0465",
+    "evaluation/persona_traits/development.json": "3b331ff38811b2feb2ac6c073b2e736976f186b2564fc9d573598baa2387da85",
+    "evaluation/persona_traits/confirmation.json": "4ddc14aa14bba05f9b78fe0d95abad7cf0917c6b7650c3015a0047574408031d",
+    "evaluation/persona_traits/rubric.json": "1a2587b6e90375f975176aac24fd4ccc63b16bba31a0a770e794e56c0db44055",
+    "scripts/profanity_steering.py": "6383af9881d605c32651ce914ab7f462f105ac2de6508c22fa1304bffd39fda9",
+    "scripts/profanity_common.py": "862f77fb1086b2220510b5a097beb0259944e8a2d58842afd1bfddaf2ba57d66",
+    "scripts/profanity_steering_runbook.md": "8cc499a11e5432e378a2534d11a54a82afbd6758e26e7b3d6c2d03d17d20d951",
+    "configs/profanity_steering.json": "22ebd61de898235e25599435cda6a9a55037487a4ae7679584a0b8df209cdba4",
+    "evaluation/profanity_steering/extraction.json": "6d208d762405aa51c97658d66b676242f97b1e3f2f54b2b4c2da54b1d2c5f18d",
+    "evaluation/profanity_steering/development.json": "3b331ff38811b2feb2ac6c073b2e736976f186b2564fc9d573598baa2387da85",
+    "evaluation/profanity_steering/confirmation.json": "4ddc14aa14bba05f9b78fe0d95abad7cf0917c6b7650c3015a0047574408031d",
+    "evaluation/profanity_steering/rubric.json": "1a2587b6e90375f975176aac24fd4ccc63b16bba31a0a770e794e56c0db44055",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/benchmark_screen.py": "0c4d54220a4a3ae9ad7613504415052afa1ed43ee057bda2ab57a25a8d667246",
+    "scripts/gguf_eval.py": "8420a1a47f71cfd7ee6c5200367329293de6e4ffc5f18c692e7f8898dc938a81",
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "scripts/persona_rating_calibration.py": "57133cfafdac1ad8c0a47110ddbe5898fce8b9f2af8f13d275b3f1ea05f86076",
+    "scripts/persona_rating_calibration_runbook.md": "8fa74518bd9b7fbb2ed1aa660ffd9bb025424f5a75991735b65d3dd9fb2b6dd6",
+    "configs/persona_rating_calibration.json": "2f9bfb96e33bdf51901fcf8de97d400562cfdb974cae083a8dedf53dd435f173",
+    "evaluation/persona_calibration/texts.json": "ac814007ad68abdaf932673434c48fb7c4091f3f9a61c1241d0ae84842c108ae",
+    "evaluation/persona_calibration/rubric.json": "ae195fc9bb989138bb00e903afa18a336fad669f22ed819112269d50ce0dc9c2",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b"
+  },
+  "stop": {
+    "stop_cause": "development_null",
+    "error_type": null
+  },
+  "budgets": {
+    "target_generations": 230,
+    "teacher_forced_sequences": 64,
+    "mc_items": 64,
+    "judge_calls": 80
+  },
+  "costs": {
+    "extraction": {
+      "completed": true,
+      "physical_gpu": "0",
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "saved_generations": 0,
+      "teacher_forced_sequences": 64,
+      "mc_items": 0,
+      "synchronized_generation_wall_seconds": 0.0,
+      "teacher_forced_forward_wall_seconds_including_capture": 3.196284154895693,
+      "elapsed_wall_seconds": 8.555449642706662,
+      "wall_scope": "Synchronized stage wall including model load, tokenization, capture and serialization; generation wall reported separately",
+      "peak_allocated_bytes": 8062056960,
+      "peak_reserved_bytes": 8076132352,
+      "memory_scope": "PyTorch allocator including model; not total VRAM",
+      "cuda_runtime": "12.4",
+      "cuda_visible_devices": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "tf32_matmul": false,
+      "tf32_cudnn": false,
+      "failed_phase_counts": null,
+      "files_sha256": {
+        "vectors.json": "60e9dc216b82c4aa7761d1093da3fff4458bc3dc8a619374b318521f46de1fb2",
+        "vectors.safetensors": "8ae9296c447e7c8be566d98b2afaa982f1ff23e61859e8fe90c35c9fcb715f62"
+      }
+    },
+    "preflight": {
+      "completed": true,
+      "physical_gpu": "0",
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "saved_generations": 10,
+      "teacher_forced_sequences": 0,
+      "mc_items": 0,
+      "synchronized_generation_wall_seconds": 5.2455600569956005,
+      "teacher_forced_forward_wall_seconds_including_capture": 0.0,
+      "elapsed_wall_seconds": 10.592943989206105,
+      "wall_scope": "Synchronized stage wall including model load, tokenization, capture and serialization; generation wall reported separately",
+      "peak_allocated_bytes": 8109140480,
+      "peak_reserved_bytes": 8124366848,
+      "memory_scope": "PyTorch allocator including model; not total VRAM",
+      "cuda_runtime": "12.4",
+      "cuda_visible_devices": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "tf32_matmul": false,
+      "tf32_cudnn": false,
+      "failed_phase_counts": null,
+      "files_sha256": {
+        "checks.json": "1da235974feecb71bfd9ff923eb4dcc676db2efa77d595a8d603cc67727c93d0",
+        "ordinary.json": "1195d474437b9b538ec0f58d614d61116a2f0cab04645aed078498fdfb2308d0",
+        "smoke.json": "158e2c64a7037fd2be6aaf790c42d6da42b2f0c223af774fa963a17ed7be2fe4",
+        "zero.json": "f739567d3001eed1af86e77e560281e0c7812c027d6cdf961f60a493776643c0"
+      }
+    },
+    "development": {
+      "completed": true,
+      "physical_gpu": "0",
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "saved_generations": 112,
+      "teacher_forced_sequences": 0,
+      "mc_items": 0,
+      "synchronized_generation_wall_seconds": 78.4393773083575,
+      "teacher_forced_forward_wall_seconds_including_capture": 0.0,
+      "elapsed_wall_seconds": 83.70872340304777,
+      "wall_scope": "Synchronized stage wall including model load, tokenization, capture and serialization; generation wall reported separately",
+      "peak_allocated_bytes": 8156894720,
+      "peak_reserved_bytes": 8256487424,
+      "memory_scope": "PyTorch allocator including model; not total VRAM",
+      "cuda_runtime": "12.4",
+      "cuda_visible_devices": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "tf32_matmul": false,
+      "tf32_cudnn": false,
+      "failed_phase_counts": null,
+      "files_sha256": {
+        "predictions.json": "68e7e4bde598b8aae5d4a3c3ce08b48e065a1893aaa0324f2da21cd2dad5aad6",
+        "l17_b050.json": "fd7af681917ef800ccd1244845fcc1c9a87ea14fd964b3b5dec35c06f1210e96",
+        "divergence.json": "c591aa2006672ad9fce1601d274f2c00ffff0d32c8725652fcc6c86c528ebba0",
+        "l17_b100.json": "d5d0bdd31f6440280254895b8be419076fdeb023f8e17e92c89c23b04e23c544",
+        "l23_b200.json": "42a00e317eb7e36ebfe3873d03d99e822d7f0e75574888e6431fe355e1b946bf",
+        "l23_b100.json": "432c458c326088a2c9ea8355ed71c7d715da98b039f4ccba09058470e0f4b346",
+        "baseline.json": "783d76e98f81e1b89da2f2ced2555332ffdcb267340130c3ae63e9b7376db113",
+        "l23_b050.json": "493314317867d66a587a8a59ef65e94ed88139f45b0e1f0433030342bdf95f81",
+        "l17_b200.json": "9e6066733d251f5d8f4ccb15432c0025b3ab13e011e5c41a3a2039aa467a2f68"
+      }
+    }
+  },
+  "calls_started": 22,
+  "grading_provenance": {
+    "eligibility": {
+      "accepted_sha256": "daf1faaf1720a5b2e621038160e34b51180ffe09da570386e7d86b8195807de2",
+      "first_valid_attempts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "model_usage_ids": [
+        "claude-opus-5-5"
+      ],
+      "attempt_sha256": [
+        "0fda403c47717263e4c17f90f0d87f95d360597d61748cb6f9f64f1d212f0917",
+        "77bbefe8dbec4276fc7ed034c982fd952d2424572bc3add42053d42e0afe6c93",
+        "f01b61c9fe86d50202aed8f63a885c3b51805de624798efc1aedf0645a37fed4",
+        "3250841cf5e8786de92e5df2cb5dfa3da773407bf88d6616f8a7d739cbfcb62f",
+        "144c1de3ef57c9366f9c854a114f3c49840071ad706267dbff25adf543a1db92",
+        "7cd849064176049b7f7e2b3b72e15b4bfe1dcdb0587b38a8d821712a3d2cc523",
+        "b55fcf7704a01cc33dcd402eb1cf3212501a9a03b81d51bf1681811cca62c272",
+        "a51592f7beec1b6a76ec907b9e1bab432f9b40923ec1095927a05222f2780fb3"
+      ]
+    },
+    "development": {
+      "accepted_sha256": "e34faf810be1fce352f09276946cb8e4f204795e1daf6f5b455d58bb4f5549c8",
+      "first_valid_attempts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "model_usage_ids": [
+        "claude-opus-5-5"
+      ],
+      "attempt_sha256": [
+        "c3be493d7f89894606e1511cff158693b272ee95ea8185a74ca3fc9f8f4593b8",
+        "0b3dcf7f4d40295f7a5564bd22066bc061ada333f6fa9344c38e603dc2870ecd",
+        "2689a81520c6b24d637973c9927e967b714cf6e91df2f8e8d7728b92cf37b770",
+        "dff85c7375ef3e66688497de2c9d0af85020d85a0d08a39641e4c49b7f57d1d2",
+        "bc13ccd5567e29d4bf8f3e6e2af5452827816b4fc99db663effed89155c52cb7",
+        "6a39022d39b2748cbd33fcad0264073117501059703a24b2388828542b02c2e8",
+        "fbc55174baab6d4c6b1dc9e71212f91ca6364ed99c1de0223ed7dd8ac62b69b1",
+        "7e2e8ea86f0a0fbfa6568c07938e33997fb1fc443de315882baafb75f6b3fdc9",
+        "a900fe5f76cb2fa257f27dde5f49cc1748cbbdf0f6efebd387ea73c5cbebb5ed",
+        "00b9ba592d9b2877846d916b9912a1f1b788335f2da1db8c5bc361932e79a955",
+        "62135a7a75f284a427d6d225132602d7de0bc8ca59b3111e54e7b0af66a11f1a",
+        "1d5013212eefaeb184880aeed145be48be46d5e4212fae53703478d0297587f2",
+        "5c3e6738eef4b97dd8d0ef5b1925258d85831d84a212d94cd0c9886ff6ad3ad1",
+        "edc3bf720df01f047c218b04f65863251a0ad0f0658b1b089532107b5851b9e9"
+      ]
+    }
+  },
+  "status": "development_null",
+  "limits": [
+    "Authored intentions and AI judgments are not human ground truth; calibrated clear examples do not establish sensitivity on degraded or mild outputs.",
+    "Small disjoint authored families and historically used capability probes do not establish general independent persona control.",
+    "Primary target presence is judged; lexical profanity remains a separate fixed-lexicon diagnostic.",
+    "Shared tasks are historically used screens, not newly unseen tests. Context is judge-only; model input contains row.user and helpful system.",
+    "Unwelcome-task and closed-discussion phrase families are related; declared family labels do not establish semantic independence.",
+    "One pinned judge family with fresh contexts; repeated ratings are not independent human truth. Server-side dated snapshot unavailable. No reselection after confirmation."
+  ],
+  "divergence": {
+    "development": {
+      "l17_b050": {
+        "changed": 7,
+        "identical": 9,
+        "first_divergence_histogram": {
+          "8": 1,
+          "42": 1,
+          "7": 1,
+          "4": 1,
+          "1": 1,
+          "58": 1,
+          "9": 1
+        },
+        "length_changes": {
+          "shorter": 4,
+          "same": 10,
+          "longer": 2
+        },
+        "interpretation": "posthoc mechanical diagnostic only; no setting or budget change"
+      },
+      "l17_b100": {
+        "changed": 10,
+        "identical": 6,
+        "first_divergence_histogram": {
+          "0": 1,
+          "42": 1,
+          "7": 2,
+          "30": 1,
+          "4": 1,
+          "1": 1,
+          "15": 1,
+          "58": 1,
+          "9": 1
+        },
+        "length_changes": {
+          "shorter": 6,
+          "same": 6,
+          "longer": 4
+        },
+        "interpretation": "posthoc mechanical diagnostic only; no setting or budget change"
+      },
+      "l17_b200": {
+        "changed": 11,
+        "identical": 5,
+        "first_divergence_histogram": {
+          "20": 1,
+          "0": 3,
+          "22": 1,
+          "5": 1,
+          "7": 1,
+          "1": 1,
+          "15": 1,
+          "3": 2
+        },
+        "length_changes": {
+          "shorter": 8,
+          "same": 5,
+          "longer": 3
+        },
+        "interpretation": "posthoc mechanical diagnostic only; no setting or budget change"
+      },
+      "l23_b050": {
+        "changed": 6,
+        "identical": 10,
+        "first_divergence_histogram": {
+          "12": 1,
+          "7": 2,
+          "0": 1,
+          "58": 1,
+          "9": 1
+        },
+        "length_changes": {
+          "shorter": 4,
+          "same": 11,
+          "longer": 1
+        },
+        "interpretation": "posthoc mechanical diagnostic only; no setting or budget change"
+      },
+      "l23_b100": {
+        "changed": 8,
+        "identical": 8,
+        "first_divergence_histogram": {
+          "0": 3,
+          "7": 2,
+          "16": 1,
+          "3": 2
+        },
+        "length_changes": {
+          "shorter": 5,
+          "same": 9,
+          "longer": 2
+        },
+        "interpretation": "posthoc mechanical diagnostic only; no setting or budget change"
+      },
+      "l23_b200": {
+        "changed": 12,
+        "identical": 4,
+        "first_divergence_histogram": {
+          "15": 2,
+          "0": 5,
+          "7": 1,
+          "5": 1,
+          "1": 1,
+          "3": 2
+        },
+        "length_changes": {
+          "shorter": 9,
+          "same": 4,
+          "longer": 3
+        },
+        "interpretation": "posthoc mechanical diagnostic only; no setting or budget change"
+      }
+    }
+  },
+  "confirmation_passes": {},
+  "judging_costs": {
+    "eligibility": {
+      "response_files": 8,
+      "responses_with_cost": 8,
+      "known_cost_usd": 0.38159600000000005,
+      "known_duration_api_ms": 54443
+    },
+    "development": {
+      "response_files": 14,
+      "responses_with_cost": 14,
+      "known_cost_usd": 0.659428,
+      "known_duration_api_ms": 98199
+    },
+    "confirmation": {
+      "response_files": 0,
+      "responses_with_cost": 0,
+      "known_cost_usd": 0,
+      "known_duration_api_ms": 0
+    },
+    "confirmation_repeat": {
+      "response_files": 0,
+      "responses_with_cost": 0,
+      "known_cost_usd": 0,
+      "known_duration_api_ms": 0
+    }
+  },
+  "hook_audits": {
+    "development": {
+      "l17_b050": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 0.375,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 214,
+        "hooks_removed": true
+      },
+      "l17_b100": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 0.71875,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 236,
+        "hooks_removed": true
+      },
+      "l17_b200": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 1.40625,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 226,
+        "hooks_removed": true
+      },
+      "l23_b050": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 0.75,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 223,
+        "hooks_removed": true
+      },
+      "l23_b100": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 1.484375,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 227,
+        "hooks_removed": true
+      },
+      "l23_b200": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 2.96875,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 226,
+        "hooks_removed": true
+      }
+    }
+  },
+  "eligibility": {
+    "target_trait": "sarcasm",
+    "retained_count": 32,
+    "retained_span_stats": {
+      "position_bins": {
+        "opening": 10,
+        "middle": 11,
+        "closing": 11
+      },
+      "phrase_counts": {
+        "just the improvement that was needed.": 2,
+        "efficiency at its very finest.": 2,
+        "reliability has reached impressive new heights.": 2,
+        "such a generous upgrade to the experience.": 2,
+        "naturally, that makes everything easier.": 2,
+        "a round of applause for that.": 2,
+        "everything is working spectacularly, apparently.": 2,
+        "such an inspiring display of efficiency.": 2,
+        "another flawless success for the collection.": 2,
+        "a premium feature nobody could miss.": 2,
+        "how wonderfully convenient this is.": 2,
+        "what a masterpiece of design.": 2,
+        "exactly the convenience everyone hoped for.": 2,
+        "truly an outstanding triumph.": 2,
+        "clearly a cause for celebration.": 2,
+        "a shining example of dependable design.": 2
+      },
+      "style_family_counts": {
+        "understated_irony": 4,
+        "ironic_efficiency": 4,
+        "ironic_reliability": 4,
+        "ironic_luxury": 4,
+        "mock_celebration": 4,
+        "exaggerated_success": 4,
+        "ironic_convenience": 4,
+        "ironic_praise": 4
+      },
+      "position_definition": "zero-based first annotated-span whitespace word i / N; exact integer thirds"
+    },
+    "sufficient": true,
+    "ambiguous_scores": {
+      "profanity": 0,
+      "rudeness": 0,
+      "sarcasm": 1
+    },
+    "accepted_sha256": "daf1faaf1720a5b2e621038160e34b51180ffe09da570386e7d86b8195807de2"
+  },
+  "vectors": {
+    "layers": {
+      "17": {
+        "pair_count": 32,
+        "raw_norm": 3.7317585945129395,
+        "R_median_neutral_response_mean_norm": 36.16934013366699,
+        "serialized_R_fp32": 36.169342041015625,
+        "raw_norm_over_R": 0.10317463853976588,
+        "mean_per_token_residual_norm_both_sides": 47.868368452180285,
+        "response_tokens_both_sides": 1993,
+        "random_seed": 4259,
+        "magnitudes": {
+          "0.05": {
+            "beta_R": 1.8084670066833497,
+            "fraction_of_mean_per_token_norm": 0.03778000097266692,
+            "effective_BF16_L2_norm": 1.8085845708847046,
+            "effective_random_BF16_L2_norm": 1.8085849285125732
+          },
+          "0.1": {
+            "beta_R": 3.6169340133666994,
+            "fraction_of_mean_per_token_norm": 0.07556000194533384,
+            "effective_BF16_L2_norm": 3.617169141769409,
+            "effective_random_BF16_L2_norm": 3.6171698570251465
+          },
+          "0.2": {
+            "beta_R": 7.233868026733399,
+            "fraction_of_mean_per_token_norm": 0.15112000389066768,
+            "effective_BF16_L2_norm": 7.234338283538818,
+            "effective_random_BF16_L2_norm": 7.234339714050293
+          }
+        },
+        "weighting": "equal pair means; R median neutral response-mean norm; token diagnostic weighted by response-token counts"
+      },
+      "23": {
+        "pair_count": 32,
+        "raw_norm": 8.984291076660156,
+        "R_median_neutral_response_mean_norm": 70.68065643310547,
+        "serialized_R_fp32": 70.68065643310547,
+        "raw_norm_over_R": 0.12711103051459616,
+        "mean_per_token_residual_norm_both_sides": 96.15177302688315,
+        "response_tokens_both_sides": 1993,
+        "random_seed": 4265,
+        "magnitudes": {
+          "0.05": {
+            "beta_R": 3.5340328216552734,
+            "fraction_of_mean_per_token_norm": 0.03675473379640322,
+            "effective_BF16_L2_norm": 3.5337517261505127,
+            "effective_random_BF16_L2_norm": 3.5345096588134766
+          },
+          "0.1": {
+            "beta_R": 7.068065643310547,
+            "fraction_of_mean_per_token_norm": 0.07350946759280644,
+            "effective_BF16_L2_norm": 7.067503452301025,
+            "effective_random_BF16_L2_norm": 7.069019317626953
+          },
+          "0.2": {
+            "beta_R": 14.136131286621094,
+            "fraction_of_mean_per_token_norm": 0.14701893518561288,
+            "effective_BF16_L2_norm": 14.13500690460205,
+            "effective_random_BF16_L2_norm": 14.138038635253906
+          }
+        },
+        "weighting": "equal pair means; R median neutral response-mean norm; token diagnostic weighted by response-token counts"
+      }
+    },
+    "safetensors_sha256": "8ae9296c447e7c8be566d98b2afaa982f1ff23e61859e8fe90c35c9fcb715f62",
+    "tensor_dtype": "float32",
+    "actual_intervention_dtype": "bfloat16",
+    "round_trip_exact": true
+  },
+  "development": {
+    "target_trait": "sarcasm",
+    "selected": null,
+    "setting": null,
+    "quality_gates": {
+      "l17_b050": {
+        "profanity_mean": true,
+        "profanity_clear": true,
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "content": true,
+        "incoherent": true,
+        "gross": true
+      },
+      "l17_b100": {
+        "profanity_mean": true,
+        "profanity_clear": true,
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "content": true,
+        "incoherent": true,
+        "gross": true
+      },
+      "l17_b200": {
+        "profanity_mean": true,
+        "profanity_clear": true,
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "content": false,
+        "incoherent": true,
+        "gross": true
+      },
+      "l23_b050": {
+        "profanity_mean": true,
+        "profanity_clear": true,
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "content": true,
+        "incoherent": true,
+        "gross": true
+      },
+      "l23_b100": {
+        "profanity_mean": true,
+        "profanity_clear": true,
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "content": false,
+        "incoherent": true,
+        "gross": true
+      },
+      "l23_b200": {
+        "profanity_mean": true,
+        "profanity_clear": true,
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "content": false,
+        "incoherent": true,
+        "gross": true
+      }
+    },
+    "metrics": {
+      "baseline": {
+        "n": 16,
+        "target_trait": "sarcasm",
+        "consensus": false,
+        "usable_target": 0,
+        "raw_target": 0,
+        "raw_target_either": 0,
+        "lexical_profanity": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "rudeness_only": 0,
+        "sarcasm_only": 0,
+        "rudeness_and_sarcasm": 0,
+        "content_ok": 15,
+        "incoherent": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "gross_failures": 0,
+        "mean_tokens": 42.3125,
+        "mean_words": 32.4375,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l17_b050": {
+        "n": 16,
+        "target_trait": "sarcasm",
+        "consensus": false,
+        "usable_target": 0,
+        "raw_target": 0,
+        "raw_target_either": 0,
+        "lexical_profanity": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "rudeness_only": 0,
+        "sarcasm_only": 0,
+        "rudeness_and_sarcasm": 0,
+        "content_ok": 15,
+        "incoherent": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "gross_failures": 0,
+        "mean_tokens": 41.75,
+        "mean_words": 31.375,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l17_b100": {
+        "n": 16,
+        "target_trait": "sarcasm",
+        "consensus": false,
+        "usable_target": 0,
+        "raw_target": 0,
+        "raw_target_either": 0,
+        "lexical_profanity": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "rudeness_only": 0,
+        "sarcasm_only": 0,
+        "rudeness_and_sarcasm": 0,
+        "content_ok": 15,
+        "incoherent": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "gross_failures": 0,
+        "mean_tokens": 41.5,
+        "mean_words": 31.25,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l17_b200": {
+        "n": 16,
+        "target_trait": "sarcasm",
+        "consensus": false,
+        "usable_target": 0,
+        "raw_target": 0,
+        "raw_target_either": 0,
+        "lexical_profanity": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "rudeness_only": 0,
+        "sarcasm_only": 0,
+        "rudeness_and_sarcasm": 0,
+        "content_ok": 13,
+        "incoherent": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "gross_failures": 0,
+        "mean_tokens": 38.75,
+        "mean_words": 29.0625,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l23_b050": {
+        "n": 16,
+        "target_trait": "sarcasm",
+        "consensus": false,
+        "usable_target": 0,
+        "raw_target": 0,
+        "raw_target_either": 0,
+        "lexical_profanity": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "rudeness_only": 0,
+        "sarcasm_only": 0,
+        "rudeness_and_sarcasm": 0,
+        "content_ok": 14,
+        "incoherent": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "gross_failures": 0,
+        "mean_tokens": 40.75,
+        "mean_words": 30.75,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l23_b100": {
+        "n": 16,
+        "target_trait": "sarcasm",
+        "consensus": false,
+        "usable_target": 0,
+        "raw_target": 0,
+        "raw_target_either": 0,
+        "lexical_profanity": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "rudeness_only": 0,
+        "sarcasm_only": 0,
+        "rudeness_and_sarcasm": 0,
+        "content_ok": 13,
+        "incoherent": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "gross_failures": 0,
+        "mean_tokens": 40.4375,
+        "mean_words": 29.8125,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l23_b200": {
+        "n": 16,
+        "target_trait": "sarcasm",
+        "consensus": false,
+        "usable_target": 0,
+        "raw_target": 0,
+        "raw_target_either": 0,
+        "lexical_profanity": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "rudeness_only": 0,
+        "sarcasm_only": 0,
+        "rudeness_and_sarcasm": 0,
+        "content_ok": 13,
+        "incoherent": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "gross_failures": 0,
+        "mean_tokens": 37.4375,
+        "mean_words": 27.4375,
+        "factual_total": 0,
+        "factual_correct": 0
+      }
+    },
+    "development_null": true
+  },
+  "later_phases_skipped": true
+}

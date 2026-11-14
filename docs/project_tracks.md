@@ -7,9 +7,11 @@ and results continue to describe the experiments as registered.
 **Current priority:** the 4B refusal study is closed; the 4B persona pipeline is
 open. The [three-trait rating calibration passed](persona_rating_calibration_completion_execution.md)
 on clear authored cases. The [profanity pilot closed with a development null](profanity_steering_execution.md);
-[rudeness also closed with a development null](isolated_persona_traits_execution.md).
-Sarcasm is next under the separately registered fixed design. Finish
-isolated and bounded joint studies on 4B before further 14B work.
+[rudeness and sarcasm also closed with development nulls](isolated_persona_traits_execution.md).
+No isolated setting qualified in the tested range. Joint control remains gated,
+and the full 4B persona-control objective is unachieved. The
+[next research direction](persona_next_decision.md) awaits the user's preference.
+Further 14B experiments remain deferred.
 The completed 14B baseline remains a historical measurement. Older closeout or
 transition language in frozen protocols is superseded by this current roadmap;
 those records remain unchanged to preserve their experiment hashes.
@@ -22,7 +24,7 @@ those records remain unchanged to preserve their experiment hashes.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Persona activation steering | Intervene on activations to influence written tone/style | Isolated 4B profanity and rudeness closed with no target signal in the fixed grid. Sarcasm is next, then a separately gated joint stage. Finish the 4B pipeline before further 14B work. |
+| Persona activation steering | Intervene on activations to influence written tone/style | All three fixed 4B isolated pilots closed with no target signal. Joint control is gated; full control remains unachieved. Next research decision awaits the user; 14B work stays deferred. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank
@@ -43,7 +45,7 @@ flowchart TD
     Quant --> Physics["Saved NF4 base + physics LoRA training demonstration"]
     Base --> Refusal["Refusal activation-steering research: completed tradeoff"]
     Refusal --> Prompt["Persona prompt reference/control: P1 completed"]
-    Prompt --> Persona["4B persona pipeline: calibration passed; profanity/rudeness null; sarcasm next"]
+    Prompt --> Persona["4B persona: calibration passed; three isolated nulls; joint stage gated"]
 ```
 
 This diagram organizes the program; it does not claim that all historical runs
@@ -163,9 +165,11 @@ A future persona LoRA would be another training experiment and would need its
 own dataset and protocol. It is not the current persona-steering method or a
 reason to restart the completed physics adapter exercise.
 
-**Protocol status:** profanity and rudeness are closed with development nulls.
+**Protocol status:** profanity, rudeness and sarcasm are closed with development nulls.
 The [rudeness/sarcasm design](isolated_persona_traits_protocol.md), fixtures and
-code are accepted; 16 focused CPU checks passed. Rudeness is registered and
-complete, and sarcasm has its own pre-call registration. See the
-[execution record](isolated_persona_traits_execution.md). Joint control needs its
-own protocol; this roadmap is not an execution registration.
+code are accepted; 16 focused CPU checks passed. Both studies had separate
+pre-call registrations and preserved their stopping rules. See the
+[execution record](isolated_persona_traits_execution.md). Confirmation, selected
+vector generation replay and retention were skipped under the nulls. Joint
+control is unexecuted and needs its own protocol after supported isolated
+settings exist; this roadmap is not an execution registration.

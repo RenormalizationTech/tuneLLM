@@ -69,9 +69,12 @@ The behavioral track tests profanity, rudeness and sarcasm individually on 4B,
 then considers simultaneous controls as described in
 [the roadmap](project_tracks.md). The bounded rating calibration passed, and the
 [profanity pilot closed with a development null](profanity_steering_execution.md).
-The [rudeness/sarcasm design](isolated_persona_traits_protocol.md) is reviewed;
-each study needs accepted fixtures/code and a committed registration before
-execution. A null closes its registered study without validating that control.
+The separately registered [rudeness and sarcasm pilots](isolated_persona_traits_execution.md)
+also closed with development nulls, after accepted fixtures/code and 16 passing
+CPU checks. A null closes its registered study without validating that control.
+Joint steering remains gated, and the full 4B persona-control objective is
+unachieved. The [next research decision](persona_next_decision.md) awaits the
+user's preference before a new protocol or experiment.
 Steering changes activations during inference;
 the routine adapter-training steps above apply only when a new training exercise
 is explicitly selected. Review management plans with Claude first and delegate

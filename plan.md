@@ -67,8 +67,14 @@ below distinguishes completed runs from accepted designs.
   31/32 pairs; all six settings produced 0/16 raw/usable target outputs, changing
   7–14/16 token sequences. Content fulfillment was 14–16/16 versus baseline
   15/16, with no incoherence/gross failures. All 22 judge batches passed first
-  try. See `docs/isolated_persona_traits_execution.md`. Sarcasm is separately
-  registered next with the same grid; no joint or further 14B experiment ran.
+  try. See `docs/isolated_persona_traits_execution.md`.
+- Isolated sarcasm on 4B: also closed with a development null. All 32 pairs
+  qualified; all six settings produced 0/16 raw/usable target outputs, changing
+  6–12/16 token sequences. Content fulfillment was 13–15/16 versus baseline
+  15/16, with no incoherence/gross failures. All 22 judge batches passed first
+  try. No isolated control qualified, so joint steering remains gated and the
+  full 4B persona-control objective is unachieved. See the user research-choice
+  proposal in `docs/persona_next_decision.md`; no joint or further 14B run started.
 - Qwen3-4B refusal study: closed after the final published-only replay. All 250
   token/input/output/layout/flag comparisons matched, with 681 protected bindings
   unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and
@@ -1036,15 +1042,16 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   No validated usable configuration passed the final quality criteria.
     See `docs/refusal_reduction_execution.md`; no further sweep is active.
 
-## M4 - Isolated Persona Directions (4B pipeline in progress)
+## M4 - Isolated Persona Directions (fixed pilots closed; control unvalidated)
 
 -   [x] Define the three trait scales and complete the bounded rating calibration
 -   [x] Register and execute isolated profanity steering; development null
 -   [x] Review the fixed isolated rudeness/sarcasm study design with Claude
 -   [x] Complete isolated rudeness: development null, documented with fixed gates
--   [ ] Complete the separately registered sarcasm run
--   [ ] Close each axis with target, content and cross-trait results; passing
+-   [x] Complete the separately registered sarcasm run: development null
+-   [x] Close each bounded axis with target, content and cross-trait results; passing
     control is not assumed
+-   [ ] Establish usable isolated control before joint steering
 -   Geometry analysis is optional and requires a separate research question.
 
 ## M5 - Simultaneous Persona Controls
