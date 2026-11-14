@@ -12,7 +12,7 @@ and results continue to describe the experiments as registered.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Future persona activation steering | Intervene on activations to influence written tone/style | The next behavioral research direction: profanity, rudeness and sarcasm with simultaneous controls. Experimental protocol not yet registered. |
+| Future persona activation steering | Intervene on activations to influence written tone/style | First isolated profanity, rudeness and sarcasm on Qwen3-4B; then a separate simultaneous-control stage. Complete the 4B pipeline before further 14B work. Protocol not yet registered. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank
@@ -91,8 +91,14 @@ adapter or prompt-only persona switch. The directions must share the same
 activation space at the selected block. If multiple blocks are used, specify
 block-specific directions and intervention sites in the protocol.
 
-The goal is simultaneous control, not three disconnected demonstrations.
-Testing each direction individually first is calibration toward that goal.
+The immediate milestone is three isolated steering experiments on Qwen3-4B,
+in the order profanity, rudeness, sarcasm. Each is a complete learning result,
+including construction, extraction, bounded development, locked confirmation,
+vector save/reload verification and reporting. Simultaneous control follows as
+a separate stage; it is not assumed to work. Complete this pipeline on 4B before
+further 14B experiments. The already completed unmodified 14B baseline is kept
+as historical evidence, without implying that the 4B persona work is complete.
+
 Independent, linear or monotonic effects on generated language are hypotheses,
 not consequences of the additive formula: later nonlinear computation can
 couple the traits. A coefficient of zero removes that direction's contribution,
@@ -107,23 +113,37 @@ question, not part of the physics demonstration or this persona objective.
 1. Define separate ratings for all three traits. Use content-matched contrasts
    that vary one trait while controlling the other two, answer length and task
    meaning as far as practical. Use fictional dialogue or impersonal examples
-   to make style distinguishable from factual correctness.
+   to make style distinguishable from factual correctness. Declare construction
+   yield and length-tolerance gates before extraction, and calibrate the ratings
+   on a small fixed set, particularly for contextual sarcasm.
 2. Use prompts to construct/reference these contrasts, then extract candidate
    activation directions under a reviewed protocol. Do not reuse the refusal
    vector as a persona vector. Existing warm-tone and P1 results remain
    historical evidence, not validation of these new directions.
 3. Calibrate each direction alone with a small declared set of blocks/strengths.
    Record vector normalization, token scope and per-trait effects, together
-   with correctness, coherence and degeneration checks.
-4. Test pairwise combinations and all-three mixtures. Score every trait for
+   with correctness, coherence and degeneration checks. Score all three traits
+   even when only one vector is active. Lock a block and strength for a compact
+   held-out confirmation, verify vector serialization/reload, and report each
+   trait independently. Fix target-effect, crosstalk and quality criteria before
+   development; avoid adaptive searches.
+4. After isolated results, separately register pairwise combinations and then
+   all-three mixtures. Combine only directions supported by isolated tests:
+   at least two for a pair, all three for the full mixture. If fewer than two
+   qualify, close this bounded attempt with that result. Score every trait for
    every condition, including neutral and single-direction controls, with the
    coefficient settings hidden from evaluators. A lexical profanity count can
    complement contextual judgments of rudeness and sarcasm. Measure
    whether changing one coefficient changes the other trait ratings. Preserve
    original directions when comparing any orthogonalization or other correction.
+   Start with zero versus locked single-trait strengths (four cells for a pair,
+   eight for all three). Report deviations from additive trait effects and the
+   combined vector norm. Do not retune strengths after observing joint results.
 5. Lock the chosen joint configuration before a compact held-out evaluation.
    Report cross-trait interference, usable strength ranges and failures. Do not
-   claim independent knobs unless the measurements support them.
+   claim independent knobs unless the measurements support them. Poor joint
+   behavior is a valid outcome. Close and document the 4B pipeline before
+   considering transfer to 14B; larger size is not a presumed stability fix.
 
 This is the selected research objective. Exact data, block choices, coefficient
 settings and stopping rules still need a concrete protocol. This documentation

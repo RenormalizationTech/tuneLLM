@@ -31,11 +31,20 @@ questions in a behavioral evaluation are content checks, not physics training.
 See [project tracks and selected persona targets](docs/project_tracks.md).
 That map supersedes older default trait priorities below. The physics learning
 milestone and refusal studies are complete; P1 was a prompt-only reference with
-a failed acceptance gate. Future persona activation studies target profanity, rudeness and sarcasm with
-simultaneous controls; experimental details remain unregistered. No new experiment is scheduled by this documentation update.
+a failed acceptance gate. Persona activation studies first test profanity,
+rudeness and sarcasm individually on Qwen3-4B, then test simultaneous controls
+as a separate stage. Complete the 4B pipeline before further 14B work.
+Experimental details remain unregistered; this update launches no model run.
 
 ## Current status and execution priorities (2026-11-14)
 
+- Latest user-selected sequence, reviewed with Claude: return to Qwen3-4B for
+  isolated profanity, rudeness and sarcasm steering, in that order. Each trait
+  gets construction, extraction, bounded development, locked confirmation,
+  save/reload and reporting. Score all three traits even in isolated tests.
+  Then test pairwise and three-way control where supported by the isolated
+  results. Joint failure is a valid outcome. Finish this pipeline on 4B before
+  further 14B work; retain the completed 14B baseline as historical evidence.
 - Qwen3-4B learning study: closed after the final published-only replay. All 250
   token/input/output/layout/flag comparisons matched, with 681 protected bindings
   unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and
@@ -693,8 +702,9 @@ treating safeguard bypass as the project objective.
 
 ## Stage 5 - Profanity, Rudeness and Sarcasm Directions
 
-The user-selected persona objective is simultaneous activation control of
-profanity, rudeness and sarcasm. The previously substituted mild-tone roadmap
+The immediate user-selected milestone is isolated activation control of
+profanity, rudeness and sarcasm on Qwen3-4B, before a separate joint-control
+stage. Finish the 4B pipeline before further 14B work. The previously substituted mild-tone roadmap
 is superseded. Physics LoRA remains a separate fine-tuning demonstration.
 
 Define and extract each trait using matched contrasts that distinguish it from
@@ -702,8 +712,10 @@ the other two. Swearing can be friendly; rudeness can be nonprofane; sarcasm
 can be playful. Prompted contrasts are construction/reference data, not the
 final activation-control mechanism. Do not assume every trait is one-dimensional.
 
-Calibrate individual directions first, then evaluate pairwise and all-three
-mixtures as part of the same joint-control objective. No successful refusal
+Complete and report each individual direction first: construction, extraction,
+bounded development, locked confirmation and vector save/reload verification.
+Then evaluate pairwise and all-three mixtures in a separately reviewed study.
+No successful refusal
 configuration is required before investigating these distinct traits.
 See [the project map](docs/project_tracks.md) for the development path.
 
@@ -742,6 +754,11 @@ retained for scientific comparison.
 ------------------------------------------------------------------------
 
 ## Stage 7 - Simultaneous Inference-Time Persona Controls
+
+This follows the isolated 4B milestone. At least two validated individual
+directions are needed for pairwise tests; all three are needed for the full
+mixture. Poor joint behavior is an acceptable result, with no automatic retuning
+or escalation to 14B. Completing this bounded 4B stage precedes model scaling.
 
 The target is three adjustable activation contributions:
 

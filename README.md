@@ -7,9 +7,10 @@ extension.
 The project has separate tracks: **physics LoRA/QLoRA demonstrates fine-tuning**;
 **refusal and persona activation steering study inference-time behavior control**.
 Persona system prompting is a reference/control for the latter, with no weight
-training or activation intervention. The selected persona goal is simultaneous
-activation control of **profanity, rudeness and sarcasm** with separate
-coefficients. Generic physics questions in a behavior
+training or activation intervention. The next milestone is isolated activation
+steering of **profanity, rudeness and sarcasm**, followed by a separate
+simultaneous-control study. Complete this pipeline on **Qwen3-4B before further
+14B work**. Generic physics questions in a behavior
 evaluation do not make it physics fine-tuning. See the
 [project map and selected persona targets](docs/project_tracks.md).
 
@@ -32,6 +33,8 @@ All 57 grading batches passed on their first attempts. The model phase took
 about 13 minutes with 30.8 GB peak allocated memory. These are unmodified-model
 measurements; reliable refusal steering and greater stability from size remain
 unestablished. See the [registered protocol](docs/qwen3_14b_baseline_protocol.md).
+The completed 14B baseline is retained; further 14B experiments are deferred
+under the user's revised 4B-first persona sequence.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
