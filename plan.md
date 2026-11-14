@@ -77,18 +77,26 @@ complete the initial project.
   See `docs/refusal_output_diagnosis.md` and the two-method explanation in
   `docs/activation_steering_methods.md`. All 315 original input hashes stayed
   unchanged. The review is unblinded qualitative evidence, not a new benchmark.
-- Benign-only Phase A survey: generation complete, primary grading incomplete.
+- Benign-only Phase A survey: complete through a separately registered grading
+  completion that preserves the original incomplete study and valid 20 labels.
   All 36 requests (24 legitimate sensitive and 12 physics) finished with EOS,
   zero cap/empty/mechanical-degeneration flags, in 28.81 seconds including load.
   First-batch grading covered 20 items; the remaining batch returned 15/16 on
-  both allowed attempts and stopped. No headroom or quality score is claimed.
+  both allowed attempts and stopped. The user authorized completion of only the
+  remaining 16, split into two batches of eight; both passed first try.
   See `docs/benign_helpfulness_execution.md` and `results/benign_helpfulness_01.json`.
-  The fixed rubric and accepted labels remain unchanged; no third attempt,
-  candidate, held-out generation, activation vector or harmful-compliance
-  optimization followed. An evaluator CLI auto-update was handled by restoring
+  Combined coverage is 36/36; the unchanged decision rule gives
+  `insufficient_headroom`, with 0/24 sensitive refusals and no coordinator
+  disagreement. Descriptive AI quality counts are 101/108 anchors and 11/36
+  apparent incorrect/unsupported flags. See
+  `docs/benign_helpfulness_completion_execution.md` and
+  `results/benign_helpfulness_completed_01.json`. No candidate, held-out
+  generation, activation vector or harmful-compliance optimization followed.
+  An evaluator CLI auto-update was handled by restoring
   the audited installed version with a documented process-local pin. The user
-  has been asked to choose between a separately registered grading-only
-  completion and returning to benign tone/persona work. Prior gentler activation
+  selected finishing the grades and then moving to benign tone/persona work.
+  Persona planning is now being discussed with Claude; no persona model run is
+  yet registered. Prior gentler activation
   suggestions remain unregistered hypotheses, not an active run.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical

@@ -53,12 +53,19 @@ The [benign helpfulness baseline survey](docs/benign_helpfulness_protocol.md)
 generated all 36 fresh legitimate requests within its token budget, without
 empty or mechanically degenerate outputs. Primary grading stopped incomplete:
 the first 20-item batch passed, but the second omitted one required rating on
-both permitted attempts. No formal refusal-headroom or quality score is claimed.
+both permitted attempts. The historical incomplete report claims no formal
+refusal-headroom or quality score.
 See the [execution record](docs/benign_helpfulness_execution.md) and
 [incomplete report](results/benign_helpfulness_01.json). The sealed held-out set
-is unused. No activation intervention, candidate prompt or harmful-request
-compliance optimization ran; a further grading-only completion needs its own
-registration and is awaiting the user's priority choice.
+is unused. The user then authorized a separately registered
+[grading-only completion](docs/benign_helpfulness_completion_execution.md).
+Both eight-item batches passed first try, retaining the original 20 labels.
+The [combined report](results/benign_helpfulness_completed_01.json) records zero
+refusals among 24 legitimate sensitive requests (`insufficient_headroom`),
+101/108 anchors satisfied and 11/36 apparent error/unsupported-claim flags.
+These AI assessments are descriptive, not verified factual accuracy.
+No activation intervention, candidate prompt or harmful-request compliance
+optimization ran. The next user-selected phase is benign tone/persona work.
 
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment
