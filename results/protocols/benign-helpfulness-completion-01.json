@@ -1,0 +1,81 @@
+{
+  "phase": "A_baseline_grading_completion",
+  "manifest_sha256": "8f911528223d0617816dd348e643ea14c8e70b7138f60106d0598257eed847f6",
+  "protocol_sha256": "270811dc05123315654c57fea63cce05b655ddd931541c2e5cd936a68f55786b",
+  "source_sha256": {
+    "scripts/benign_helpfulness_completion.py": "20cba0d7628d3a94563ee0c9b7d2640130e3fa0adc657b61a58d4029b4f50d22",
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "configs/benign_helpfulness.json": "874746f048f88dd0d165850d6c55460de73e6ac35305e332713f4ccdeceb1ac4",
+    "evaluation/benign_helpfulness/development.json": "3570e0ced65b3fdd8077f962800c3ae42ba8be011009c222ad8eafa8d4594768",
+    "evaluation/benign_helpfulness/rubric.json": "55c2116003041b235457ed041b8c440f38547c7c99129801f42342b701e375f0",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe"
+  },
+  "design_review_sha256": "bffed78957a61abc43dd8190d1e89ba1377b7ed6e67471dd7555291bcf2eb9ac",
+  "original_incomplete_report_sha256": "58150137fb700bde0edb88a3d2fa0083a076a63357f89a31905fa53676ea62a3",
+  "retained_count": 20,
+  "new_count": 16,
+  "batch_sizes": [
+    8,
+    8
+  ],
+  "new_source_ids_in_order": [
+    "DS16",
+    "DS07",
+    "DS20",
+    "DP09",
+    "DS06",
+    "DS12",
+    "DS14",
+    "DP04",
+    "DS02",
+    "DS17",
+    "DS10",
+    "DS23",
+    "DP08",
+    "DS21",
+    "DS13",
+    "DS04"
+  ],
+  "payload_sha256": [
+    "d16fe624f2a751509c09dc3a723ef993f565c1849ca5affc4923bb8e5fdef159",
+    "39ad039a0422d73d76999da99d45a03b643f7bbf88512d40c5f83533301477d4"
+  ],
+  "original_first_valid20_provenance": {
+    "attempt_sha256": "4a0d7cb1405f39f1eed0a82b245cfb753ba15718fce0d326df55f6a25aae4621",
+    "receipt_sha256": "e27c6a764dd87a3fde36ea87e8cda13fa2e6e8d74c597d8a8210fdeba7de0e3c",
+    "batch_provenance_sha256": "1683bd5ea7cbf0ce36cee31b7c724e8c0ffb10d6add06e83476cf3e8e6687154",
+    "actual_model_usage_ids": [
+      "claude-opus-5-5"
+    ]
+  },
+  "binary_version": "2.1.323 (Claude Code)",
+  "binary_sha256": "604d29a6869409106b6a1110bdadcc8b72e8654a5a865d23258f938a696e348e",
+  "requested_judge": "claude-opus-5-5",
+  "effort": "medium",
+  "audited_flags_unchanged": true,
+  "maximum_remote_calls": 4,
+  "maximum_attempts_per_batch": 2,
+  "schema_only_retry": true,
+  "permanent_stop_after_exhaustion_or_fatal_error": true,
+  "old_labels_replaced": false,
+  "old_import_bypassed": false,
+  "new_generation": 0,
+  "GPU_work": false,
+  "heldout_generation": false,
+  "claude_protocol_review_accepted": true,
+  "coordinator_code_review_passed": true,
+  "cpu_checks_passed": 17,
+  "frozen_original_inputs": 402,
+  "old315_inputs_verified": 315,
+  "user_authorized_order": "Complete the 16 unaccepted ratings, then move to tone/persona research.",
+  "limitations": [
+    "Different batch context and later grading time; server-side dated model snapshot unavailable.",
+    "Quality metrics remain descriptive; original headroom and coordinator-disagreement rules unchanged."
+  ]
+}
