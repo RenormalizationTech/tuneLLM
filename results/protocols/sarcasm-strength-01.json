@@ -1,0 +1,24 @@
+{
+  "study": "Isolated Qwen3-4B sarcasm activation steering 01",
+  "stage": "strengths_locked_before_development",
+  "date": "2026-11-14",
+  "manifest_sha256": "fe43f452be3d2ab4501e7263f6e7cefa45e1bd85f4016b32d44314d2f0dbb12f",
+  "strength_sha256": "069eded67b94474abd205a50880d9c440958089e1a38ad2b2a4cfc56db2aa70a",
+  "vectors_sha256": "8ae9296c447e7c8be566d98b2afaa982f1ff23e61859e8fe90c35c9fcb715f62",
+  "metadata_sha256": "60e9dc216b82c4aa7761d1093da3fff4458bc3dc8a619374b318521f46de1fb2",
+  "eligible_pairs": 32,
+  "layers": [
+    17,
+    23
+  ],
+  "betas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "normalization": "beta times median neutral response-mean norm along target-minus-neutral unit direction",
+  "zero_vector_exact": true,
+  "nonzero_hook_checks_pass": true,
+  "probe_texts_unscored": true,
+  "no_development_generation_before_lock": true
+}
