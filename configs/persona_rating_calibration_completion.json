@@ -1,0 +1,11 @@
+{
+  "run": "outputs/persona-rating-calibration-completion-01",
+  "parent": "outputs/persona-rating-calibration-01",
+  "parent_report": "results/persona_rating_calibration_01.json",
+  "parent_manifest_sha256": "65f838f17aa1e13f3d71bad47b83562bd6cb43001b09dd99122dc4804dc9905f",
+  "protocol": "docs/persona_rating_calibration_completion_protocol.md",
+  "design_review": "results/reviews/persona_rating_calibration_completion_design_review.md",
+  "parent_charged_calls": 1,
+  "maximum_new_calls": 23,
+  "maximum_cumulative_calls": 24
+}
