@@ -25,3 +25,10 @@ The coordinator accepts this design for implementation. Each trait needs its own
 fixture/code acceptance, passing CPU checks, fresh immutable manifest and committed
 registration before calls. Rudeness executes first, then sarcasm. Other methods,
 joint steering and further 14B experiments are separate later decisions.
+
+Before registration or judgments, Claude also confirmed the explicit retained
+data gates: at least 24 eligible pairs, four declared style families, and no
+family above one third of retained pairs. Authored position and phrase quotas
+are not re-applied after filtering; their attrition is reported. This clarifies
+the shared profanity-style method rather than adding a new post-eligibility
+gate. Closely worded rudeness families remain a stated diversity limitation.

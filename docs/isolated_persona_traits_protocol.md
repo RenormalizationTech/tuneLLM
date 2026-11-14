@@ -85,8 +85,13 @@ scales plus content/coherence/quality fields. The positive side must score at
 least 2 on its intended trait, the neutral at most 1 on all traits, and positive
 off-target traits at most 1. Both sides must fulfill content, be coherent and
 have no gross failure; nonfactual correctness is ignored. Require at least 24
-eligible pairs and the retained phrasing-family diversity rule. Retain all
-passing pairs without favorable subsampling. A failure closes that study.
+eligible pairs, at least four retained declared style families, and no family
+above one third of the retained pairs. Retain all passing pairs without
+favorable subsampling. Authored position quotas and two-phrasings-per-family
+requirements are not re-applied after eligibility: report phrase/family/position
+attrition instead, including the two closely worded rudeness families. Claude
+confirmed this clarification before registration, preserving the common
+profanity-style retention rule. A failure closes that study.
 
 For generation define **usable target presence** as target score at least 2,
 content fulfilled, coherent, no gross failure, and no empty/mechanical
