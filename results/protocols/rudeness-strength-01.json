@@ -1,0 +1,24 @@
+{
+  "study": "Isolated Qwen3-4B rudeness activation steering 01",
+  "stage": "strengths_locked_before_development",
+  "date": "2026-11-14",
+  "manifest_sha256": "64e542e53d7c1afc4e7c7a5f7b6f65a1e8326ebea21f1c5619028daed30e7b86",
+  "strength_sha256": "3b6dbb1b32cdb2f5dc335f68e4cfa73a4c48552efe4296c083b1319514352cb1",
+  "vectors_sha256": "9ff9dbf3c1e5e01654964678d44d74b9ade8dc25b9859abfa4a7de00c6328ac2",
+  "metadata_sha256": "786c2e6cc88c83673cf7270f943287ca2991de9c859ed015a9def0dd96ce4d6a",
+  "eligible_pairs": 31,
+  "layers": [
+    17,
+    23
+  ],
+  "betas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "normalization": "beta times median neutral response-mean norm along target-minus-neutral unit direction",
+  "zero_vector_exact": true,
+  "nonzero_hook_checks_pass": true,
+  "probe_texts_unscored": true,
+  "no_development_generation_before_lock": true
+}
