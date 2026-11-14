@@ -1,0 +1,150 @@
+{
+  "scope": "Retrospective mechanical diagnostic of stored outputs; no new generation, ratings, selection or gate changes",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "parent_report_sha256": "b73915bf0499732d5044032264571b8ca4d3482306f916b5791054b2217444f8",
+  "development_run_sha256": "bf603f176283ab6c7453bb72669694908bdb88d40c268f8883b17484498fb774",
+  "baseline_file_sha256": "6499ecfa7b561a8e6a44922a9e4926ebd416581c5f24262c7a7d0ccae35fc565",
+  "vector_metadata_sha256": "ca5b545021683b41517fefdd6c82a5966553291cb7b98c620c6d74ad83b9da8e",
+  "conditions": {
+    "l17_b050": {
+      "n": 16,
+      "token_identical": 10,
+      "token_changed": 6,
+      "first_divergence_zero_based_changed_only": {
+        "minimum": 1,
+        "median": 15.5,
+        "maximum": 42
+      },
+      "generated_length_change_including_EOS": {
+        "mean": 0.1875,
+        "median": 0.0,
+        "minimum": -11,
+        "maximum": 12
+      },
+      "magnitude": {
+        "beta_R": 1.846044158935547,
+        "fraction_of_mean_per_token_norm": 0.038417147938141646,
+        "effective_BF16_L2_norm": 1.8458333015441895,
+        "effective_random_BF16_L2_norm": 1.8460566997528076
+      },
+      "prediction_file_sha256": "31cf0134f2480584c6dfff1bb0483cfc1812c79421ecb576ad937d20c3c55427"
+    },
+    "l17_b100": {
+      "n": 16,
+      "token_identical": 7,
+      "token_changed": 9,
+      "first_divergence_zero_based_changed_only": {
+        "minimum": 0,
+        "median": 7,
+        "maximum": 58
+      },
+      "generated_length_change_including_EOS": {
+        "mean": -0.5,
+        "median": 0.0,
+        "minimum": -17,
+        "maximum": 12
+      },
+      "magnitude": {
+        "beta_R": 3.692088317871094,
+        "fraction_of_mean_per_token_norm": 0.07683429587628329,
+        "effective_BF16_L2_norm": 3.691666603088379,
+        "effective_random_BF16_L2_norm": 3.6921133995056152
+      },
+      "prediction_file_sha256": "544b89274562723df58326bf02fd1ad4cdc2c70dfc2fa8d44ed7b0d4af8d2440"
+    },
+    "l17_b200": {
+      "n": 16,
+      "token_identical": 3,
+      "token_changed": 13,
+      "first_divergence_zero_based_changed_only": {
+        "minimum": 0,
+        "median": 3,
+        "maximum": 46
+      },
+      "generated_length_change_including_EOS": {
+        "mean": -3.9375,
+        "median": -0.5,
+        "minimum": -19,
+        "maximum": 9
+      },
+      "magnitude": {
+        "beta_R": 7.384176635742188,
+        "fraction_of_mean_per_token_norm": 0.15366859175256659,
+        "effective_BF16_L2_norm": 7.383333206176758,
+        "effective_random_BF16_L2_norm": 7.3842267990112305
+      },
+      "prediction_file_sha256": "4bda58139ddfd794d8b698bc881c67dae6df1ce07df452a997a9862121f732db"
+    },
+    "l23_b050": {
+      "n": 16,
+      "token_identical": 10,
+      "token_changed": 6,
+      "first_divergence_zero_based_changed_only": {
+        "minimum": 5,
+        "median": 8.5,
+        "maximum": 58
+      },
+      "generated_length_change_including_EOS": {
+        "mean": -0.5625,
+        "median": 0.0,
+        "minimum": -17,
+        "maximum": 15
+      },
+      "magnitude": {
+        "beta_R": 3.4742919921875,
+        "fraction_of_mean_per_token_norm": 0.0363482097822856,
+        "effective_BF16_L2_norm": 3.473442792892456,
+        "effective_random_BF16_L2_norm": 3.4742727279663086
+      },
+      "prediction_file_sha256": "3cf1de437cb65ff7bac88cacabbb64de9681d106c05a056b59fd2537dbc2e8b9"
+    },
+    "l23_b100": {
+      "n": 16,
+      "token_identical": 5,
+      "token_changed": 11,
+      "first_divergence_zero_based_changed_only": {
+        "minimum": 0,
+        "median": 3,
+        "maximum": 30
+      },
+      "generated_length_change_including_EOS": {
+        "mean": -2,
+        "median": 0.0,
+        "minimum": -11,
+        "maximum": 6
+      },
+      "magnitude": {
+        "beta_R": 6.948583984375,
+        "fraction_of_mean_per_token_norm": 0.0726964195645712,
+        "effective_BF16_L2_norm": 6.946885585784912,
+        "effective_random_BF16_L2_norm": 6.948545455932617
+      },
+      "prediction_file_sha256": "c0cb185aab10b9b5c181343d0c3ddadf0c85cad72fa452547079840a854f90a3"
+    },
+    "l23_b200": {
+      "n": 16,
+      "token_identical": 2,
+      "token_changed": 14,
+      "first_divergence_zero_based_changed_only": {
+        "minimum": 0,
+        "median": 2.5,
+        "maximum": 13
+      },
+      "generated_length_change_including_EOS": {
+        "mean": -5.375,
+        "median": -5.0,
+        "minimum": -16,
+        "maximum": 4
+      },
+      "magnitude": {
+        "beta_R": 13.89716796875,
+        "fraction_of_mean_per_token_norm": 0.1453928391291424,
+        "effective_BF16_L2_norm": 13.893771171569824,
+        "effective_random_BF16_L2_norm": 13.897090911865234
+      },
+      "prediction_file_sha256": "1914e89d87b65b34d93bbe9d83ebdca658cc9d631b6bc6bf403bdb94d7351f5c"
+    }
+  },
+  "decision": "Keep the predeclared grid for the next isolated traits; observed greedy outputs changed, without validating the profanity target or excluding other magnitudes."
+}

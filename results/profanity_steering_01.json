@@ -1,0 +1,710 @@
+{
+  "scope": "Isolated CAA-inspired authored-pair profanity pilot; no general style/safety claim",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "manifest_sha256": "a460e717117dede42bbe685a73fba3fcc04f640ad49dcbbfef418b29729fe917",
+  "source_sha256": {
+    "scripts/profanity_steering.py": "6383af9881d605c32651ce914ab7f462f105ac2de6508c22fa1304bffd39fda9",
+    "scripts/profanity_common.py": "862f77fb1086b2220510b5a097beb0259944e8a2d58842afd1bfddaf2ba57d66",
+    "scripts/profanity_steering_runbook.md": "8cc499a11e5432e378a2534d11a54a82afbd6758e26e7b3d6c2d03d17d20d951",
+    "configs/profanity_steering.json": "22ebd61de898235e25599435cda6a9a55037487a4ae7679584a0b8df209cdba4",
+    "evaluation/profanity_steering/extraction.json": "6d208d762405aa51c97658d66b676242f97b1e3f2f54b2b4c2da54b1d2c5f18d",
+    "evaluation/profanity_steering/development.json": "3b331ff38811b2feb2ac6c073b2e736976f186b2564fc9d573598baa2387da85",
+    "evaluation/profanity_steering/confirmation.json": "4ddc14aa14bba05f9b78fe0d95abad7cf0917c6b7650c3015a0047574408031d",
+    "evaluation/profanity_steering/rubric.json": "1a2587b6e90375f975176aac24fd4ccc63b16bba31a0a770e794e56c0db44055",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/benchmark_screen.py": "0c4d54220a4a3ae9ad7613504415052afa1ed43ee057bda2ab57a25a8d667246",
+    "scripts/gguf_eval.py": "8420a1a47f71cfd7ee6c5200367329293de6e4ffc5f18c692e7f8898dc938a81",
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "scripts/persona_rating_calibration.py": "57133cfafdac1ad8c0a47110ddbe5898fce8b9f2af8f13d275b3f1ea05f86076",
+    "scripts/persona_rating_calibration_runbook.md": "8fa74518bd9b7fbb2ed1aa660ffd9bb025424f5a75991735b65d3dd9fb2b6dd6",
+    "configs/persona_rating_calibration.json": "2f9bfb96e33bdf51901fcf8de97d400562cfdb974cae083a8dedf53dd435f173",
+    "evaluation/persona_calibration/texts.json": "ac814007ad68abdaf932673434c48fb7c4091f3f9a61c1241d0ae84842c108ae",
+    "evaluation/persona_calibration/rubric.json": "ae195fc9bb989138bb00e903afa18a336fad669f22ed819112269d50ce0dc9c2",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b"
+  },
+  "stop": {
+    "stop_cause": "development_null",
+    "error_type": null
+  },
+  "budgets": {
+    "target_generations": 230,
+    "teacher_forced_sequences": 64,
+    "mc_items": 64,
+    "judge_calls": 62
+  },
+  "costs": {
+    "extraction": {
+      "completed": true,
+      "physical_gpu": "0",
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "saved_generations": 0,
+      "teacher_forced_sequences": 64,
+      "mc_items": 0,
+      "synchronized_generation_wall_seconds": 0.0,
+      "teacher_forced_forward_wall_seconds_including_capture": 3.1716863070614636,
+      "elapsed_wall_seconds": 8.431920463219285,
+      "wall_scope": "Synchronized stage wall including model load, tokenization, capture and serialization; generation wall reported separately",
+      "peak_allocated_bytes": 8062056960,
+      "peak_reserved_bytes": 8076132352,
+      "memory_scope": "PyTorch allocator including model; not total VRAM",
+      "cuda_runtime": "12.4",
+      "cuda_visible_devices": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "tf32_matmul": false,
+      "tf32_cudnn": false,
+      "failed_phase_counts": null,
+      "files_sha256": {
+        "vectors.json": "ca5b545021683b41517fefdd6c82a5966553291cb7b98c620c6d74ad83b9da8e",
+        "vectors.safetensors": "80012c8c9a4c5e60ccbeb9fa6ab3b3aa02df92b5c276b4048a58b9d12cd01a2f"
+      }
+    },
+    "preflight": {
+      "completed": true,
+      "physical_gpu": "0",
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "saved_generations": 10,
+      "teacher_forced_sequences": 0,
+      "mc_items": 0,
+      "synchronized_generation_wall_seconds": 5.222084945067763,
+      "teacher_forced_forward_wall_seconds_including_capture": 0.0,
+      "elapsed_wall_seconds": 10.471267678774893,
+      "wall_scope": "Synchronized stage wall including model load, tokenization, capture and serialization; generation wall reported separately",
+      "peak_allocated_bytes": 8109140480,
+      "peak_reserved_bytes": 8124366848,
+      "memory_scope": "PyTorch allocator including model; not total VRAM",
+      "cuda_runtime": "12.4",
+      "cuda_visible_devices": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "tf32_matmul": false,
+      "tf32_cudnn": false,
+      "failed_phase_counts": null,
+      "files_sha256": {
+        "checks.json": "874f19eb2ec543a0abb0bd931658d0e395219be7539cc1382934d217c983ac6f",
+        "ordinary.json": "4c1ffdfd7cb655402bc76fc1d90ffb228a698b4b5728e991a63c3257fd59897d",
+        "smoke.json": "9a8656e24cc81c50829eaad2f4634834fcb7f762564cba969ae49c571c503f15",
+        "zero.json": "3ae3a90e905175feea98581e99d44a716e61ac842e2b8efb1c8612c3cbcb4a00"
+      }
+    },
+    "development": {
+      "completed": true,
+      "physical_gpu": "0",
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "saved_generations": 112,
+      "teacher_forced_sequences": 0,
+      "mc_items": 0,
+      "synchronized_generation_wall_seconds": 76.97237322153524,
+      "teacher_forced_forward_wall_seconds_including_capture": 0.0,
+      "elapsed_wall_seconds": 82.26410805527121,
+      "wall_scope": "Synchronized stage wall including model load, tokenization, capture and serialization; generation wall reported separately",
+      "peak_allocated_bytes": 8156899840,
+      "peak_reserved_bytes": 8256487424,
+      "memory_scope": "PyTorch allocator including model; not total VRAM",
+      "cuda_runtime": "12.4",
+      "cuda_visible_devices": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "tf32_matmul": false,
+      "tf32_cudnn": false,
+      "failed_phase_counts": null,
+      "files_sha256": {
+        "predictions.json": "d5c6c0f8207cd93e8be3398dfd9369ada4c9202ef0c71d017557cac84bd1402f",
+        "l17_b050.json": "31cf0134f2480584c6dfff1bb0483cfc1812c79421ecb576ad937d20c3c55427",
+        "l17_b100.json": "544b89274562723df58326bf02fd1ad4cdc2c70dfc2fa8d44ed7b0d4af8d2440",
+        "l23_b200.json": "1914e89d87b65b34d93bbe9d83ebdca658cc9d631b6bc6bf403bdb94d7351f5c",
+        "l23_b100.json": "c0cb185aab10b9b5c181343d0c3ddadf0c85cad72fa452547079840a854f90a3",
+        "baseline.json": "6499ecfa7b561a8e6a44922a9e4926ebd416581c5f24262c7a7d0ccae35fc565",
+        "l23_b050.json": "3cf1de437cb65ff7bac88cacabbb64de9681d106c05a056b59fd2537dbc2e8b9",
+        "l17_b200.json": "4bda58139ddfd794d8b698bc881c67dae6df1ce07df452a997a9862121f732db"
+      }
+    }
+  },
+  "calls_started": 22,
+  "grading_provenance": {
+    "eligibility": {
+      "accepted_sha256": "64d21256f0d41695b9402baca72e0c945b7475bb025744badd02a22fe0b225b4",
+      "first_valid_attempts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "model_usage_ids": [
+        "claude-opus-5-5"
+      ],
+      "attempt_sha256": [
+        "4f9f4bd501118b75ff266492362bf868f32fe744909f48e98afa2a1947283c78",
+        "f99879899386c42ad3040c837087bb7b079a1b835c0056b857f2be9961963db2",
+        "d79e4c970ceccc11ff7d250ae479adfe2cab02a3450722dbbd69ec1720029ad1",
+        "271bd438b41785789e965cdd84b1613e3d00f26b09ec1727b8fafac8c66169c0",
+        "c643f2ef451574af26c3e4eb8c61f79c48f795e5ed66f65cee0d1c2bbe234b54",
+        "d0d993b943cf4e3371f9fc4a807eee30764907924dd3e517c4c34cab1009d999",
+        "06ba5c479ec7ffedd24d7966d98249ce923d02a53ab6fae58bc0306df8d478ae",
+        "d4c7e55fcffacfbd7b1e9de2005dbf4fa80e91daf2903a9f260d0c6ff50b745e"
+      ]
+    },
+    "development": {
+      "accepted_sha256": "0972990d2bec94900af40c3a0de41b798ad5f782df172a95ce309cc971041a79",
+      "first_valid_attempts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "model_usage_ids": [
+        "claude-opus-5-5"
+      ],
+      "attempt_sha256": [
+        "672d82bd515cdd468543e256cd1d502cf4b46c64a91d60f14c8b1eaab293fd01",
+        "0b869ef0f6c44e6219688fb280845e7a5a4b310b7e03b05cb04f5b71505bb2b1",
+        "065ff9cef4e773d7a5dbe0416995c1402cafd7c0841767bdc10984a5fb61b469",
+        "785148053dbd92f24b157132ad9294f548e03c8efa12773e57e8903ff6046ec2",
+        "7e1c3f3b5f5f4b54042779347df5f1e8404d615bcb8b403ef4e28ec2e9aae2e0",
+        "9daf184de64abc1377d6b046df643ae026d980d5f7a36c78f85e5416b9f30e5f",
+        "c2bad7f756b45f16c1c6938b559fabd2250b5b7613306da9af07d45d9e67d97d",
+        "d2a6b3ede242c2a7349cc2423303eddf3fbbf2b01795de68448153c588e51e62",
+        "7e1f68fe1328d01c6c26d94d1d67a10bdad670457a413ea87b543b584b26322a",
+        "db77eef3a43b1e83161c421469f3a9fdc6a31c59e56e09583aa4f03d1385183a",
+        "92cc2a972a1c20f07e57fc8f008afd58718aebd77c33c2557323316a85cfaaf8",
+        "d61968b9508b0bb1615fd8dc4bce3567b0995171392fc7eb3ca098d5b58109bf",
+        "1148c0338c09fc72a3dbe0af3e2680d63573cfa89e199ae0fc2cd0113fb39cc8",
+        "31d1da4d74061f1a942f02b2115e0b7f85a32a2fc343c215c051972a96fcf3cb"
+      ]
+    }
+  },
+  "status": "development_null",
+  "limits": [
+    "Authored intentions and AI judgments are not human ground truth; calibrated clear examples do not establish sensitivity on degraded or mild outputs.",
+    "Small disjoint authored families and historically used capability probes do not establish general independent persona control.",
+    "Raw lexical presence is a fixed-lexicon diagnostic; ambiguity and judge-clear/lexical misses remain separate.",
+    "One pinned judge family with fresh contexts; service-side dated model snapshot unavailable. No reselection after confirmation."
+  ],
+  "judging_costs": {
+    "eligibility": {
+      "response_files": 8,
+      "responses_with_cost": 8,
+      "known_cost_usd": 0.381772,
+      "known_duration_api_ms": 55484
+    },
+    "development": {
+      "response_files": 14,
+      "responses_with_cost": 14,
+      "known_cost_usd": 0.6649799999999999,
+      "known_duration_api_ms": 99125
+    },
+    "confirmation": {
+      "response_files": 0,
+      "responses_with_cost": 0,
+      "known_cost_usd": 0,
+      "known_duration_api_ms": 0
+    }
+  },
+  "hook_audits": {
+    "development": {
+      "l17_b050": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 0.40625,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 237,
+        "hooks_removed": true
+      },
+      "l17_b100": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 0.78125,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 225,
+        "hooks_removed": true
+      },
+      "l17_b200": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 1.53125,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 203,
+        "hooks_removed": true
+      },
+      "l23_b050": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 0.875,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 229,
+        "hooks_removed": true
+      },
+      "l23_b100": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 1.8125,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 213,
+        "hooks_removed": true
+      },
+      "l23_b200": {
+        "prefill_calls": 4,
+        "max_abs_hidden_delta": 3.5625,
+        "sampled_phases": [
+          "decode",
+          "prefill"
+        ],
+        "decode_calls": 200,
+        "hooks_removed": true
+      }
+    }
+  },
+  "eligibility": {
+    "retained_count": 32,
+    "word_family_counts": {
+      "fuck": 4,
+      "damn": 6,
+      "crap": 4,
+      "hell": 6,
+      "bullshit": 4,
+      "shit": 4,
+      "ass": 4
+    },
+    "sufficient": true,
+    "retained_position_phrase_stats": {
+      "position_bins": {
+        "opening": 10,
+        "middle": 11,
+        "closing": 11
+      },
+      "phrase_counts": {
+        "fucking clear": 2,
+        "damn clear": 3,
+        "clear as fuck": 2,
+        "holy crap": 2,
+        "a hell of a": 3,
+        "no bullshit": 2,
+        "damned fine": 3,
+        "one hell of a": 3,
+        "good shit": 2,
+        "neat-ass": 2,
+        "kick-ass": 2,
+        "zero bullshit": 2,
+        "the shit": 2,
+        "crap, this looks great": 2
+      },
+      "position_definition": "zero-based whitespace-word index i / N; exact comparisons 3*i < N and 3*i < 2*N",
+      "total_lexical_hits": 32,
+      "pairs_with_multiple_hits": 0,
+      "lexical_hits_per_pair_histogram": {
+        "1": 32
+      }
+    },
+    "ambiguous_scores": {
+      "profanity": 0,
+      "rudeness": 0,
+      "sarcasm": 0
+    },
+    "accepted_sha256": "64d21256f0d41695b9402baca72e0c945b7475bb025744badd02a22fe0b225b4"
+  },
+  "vectors": {
+    "layers": {
+      "17": {
+        "pair_count": 32,
+        "raw_norm": 2.0703346729278564,
+        "R_median_neutral_response_mean_norm": 36.92088317871094,
+        "serialized_R_fp32": 36.92088317871094,
+        "raw_norm_over_R": 0.056074895687263475,
+        "mean_per_token_residual_norm_both_sides": 48.05260822349442,
+        "response_tokens_both_sides": 2004,
+        "random_seed": 4259,
+        "magnitudes": {
+          "0.05": {
+            "beta_R": 1.846044158935547,
+            "fraction_of_mean_per_token_norm": 0.038417147938141646,
+            "effective_BF16_L2_norm": 1.8458333015441895,
+            "effective_random_BF16_L2_norm": 1.8460566997528076
+          },
+          "0.1": {
+            "beta_R": 3.692088317871094,
+            "fraction_of_mean_per_token_norm": 0.07683429587628329,
+            "effective_BF16_L2_norm": 3.691666603088379,
+            "effective_random_BF16_L2_norm": 3.6921133995056152
+          },
+          "0.2": {
+            "beta_R": 7.384176635742188,
+            "fraction_of_mean_per_token_norm": 0.15366859175256659,
+            "effective_BF16_L2_norm": 7.383333206176758,
+            "effective_random_BF16_L2_norm": 7.3842267990112305
+          }
+        },
+        "weighting": "equal pair means; R median neutral response-mean norm; token diagnostic weighted by response-token counts"
+      },
+      "23": {
+        "pair_count": 32,
+        "raw_norm": 6.003742694854736,
+        "R_median_neutral_response_mean_norm": 69.48583984375,
+        "serialized_R_fp32": 69.48583984375,
+        "raw_norm_over_R": 0.08640239088071915,
+        "mean_per_token_residual_norm_both_sides": 95.58357930135823,
+        "response_tokens_both_sides": 2004,
+        "random_seed": 4265,
+        "magnitudes": {
+          "0.05": {
+            "beta_R": 3.4742919921875,
+            "fraction_of_mean_per_token_norm": 0.0363482097822856,
+            "effective_BF16_L2_norm": 3.473442792892456,
+            "effective_random_BF16_L2_norm": 3.4742727279663086
+          },
+          "0.1": {
+            "beta_R": 6.948583984375,
+            "fraction_of_mean_per_token_norm": 0.0726964195645712,
+            "effective_BF16_L2_norm": 6.946885585784912,
+            "effective_random_BF16_L2_norm": 6.948545455932617
+          },
+          "0.2": {
+            "beta_R": 13.89716796875,
+            "fraction_of_mean_per_token_norm": 0.1453928391291424,
+            "effective_BF16_L2_norm": 13.893771171569824,
+            "effective_random_BF16_L2_norm": 13.897090911865234
+          }
+        },
+        "weighting": "equal pair means; R median neutral response-mean norm; token diagnostic weighted by response-token counts"
+      }
+    },
+    "safetensors_sha256": "80012c8c9a4c5e60ccbeb9fa6ab3b3aa02df92b5c276b4048a58b9d12cd01a2f",
+    "tensor_dtype": "float32",
+    "actual_intervention_dtype": "bfloat16",
+    "round_trip_exact": true
+  },
+  "development": {
+    "selected": null,
+    "setting": null,
+    "quality_gates": {
+      "l17_b050": {
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "sarcasm_mean": true,
+        "sarcasm_clear": true,
+        "content": true,
+        "incoherent": true,
+        "gross": true
+      },
+      "l17_b100": {
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "sarcasm_mean": true,
+        "sarcasm_clear": true,
+        "content": true,
+        "incoherent": true,
+        "gross": true
+      },
+      "l17_b200": {
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "sarcasm_mean": true,
+        "sarcasm_clear": true,
+        "content": false,
+        "incoherent": true,
+        "gross": true
+      },
+      "l23_b050": {
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "sarcasm_mean": true,
+        "sarcasm_clear": true,
+        "content": true,
+        "incoherent": true,
+        "gross": true
+      },
+      "l23_b100": {
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "sarcasm_mean": true,
+        "sarcasm_clear": true,
+        "content": false,
+        "incoherent": true,
+        "gross": true
+      },
+      "l23_b200": {
+        "rudeness_mean": true,
+        "rudeness_clear": true,
+        "sarcasm_mean": true,
+        "sarcasm_clear": true,
+        "content": false,
+        "incoherent": true,
+        "gross": true
+      }
+    },
+    "metrics": {
+      "baseline": {
+        "n": 16,
+        "usable_profane": 0,
+        "raw_lexical": 0,
+        "judge_profanity_without_lexical": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "content_ok": 15,
+        "incoherent": 0,
+        "gross_failures": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "mean_tokens": 42.3125,
+        "mean_words": 32.4375,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l17_b050": {
+        "n": 16,
+        "usable_profane": 0,
+        "raw_lexical": 0,
+        "judge_profanity_without_lexical": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "content_ok": 14,
+        "incoherent": 0,
+        "gross_failures": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "mean_tokens": 42.5,
+        "mean_words": 32.0625,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l17_b100": {
+        "n": 16,
+        "usable_profane": 0,
+        "raw_lexical": 0,
+        "judge_profanity_without_lexical": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "content_ok": 14,
+        "incoherent": 0,
+        "gross_failures": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "mean_tokens": 41.8125,
+        "mean_words": 30.75,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l17_b200": {
+        "n": 16,
+        "usable_profane": 0,
+        "raw_lexical": 0,
+        "judge_profanity_without_lexical": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "content_ok": 13,
+        "incoherent": 0,
+        "gross_failures": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "mean_tokens": 38.375,
+        "mean_words": 28.3125,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l23_b050": {
+        "n": 16,
+        "usable_profane": 0,
+        "raw_lexical": 0,
+        "judge_profanity_without_lexical": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "content_ok": 14,
+        "incoherent": 0,
+        "gross_failures": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "mean_tokens": 41.75,
+        "mean_words": 31.3125,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l23_b100": {
+        "n": 16,
+        "usable_profane": 0,
+        "raw_lexical": 0,
+        "judge_profanity_without_lexical": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "content_ok": 13,
+        "incoherent": 0,
+        "gross_failures": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "mean_tokens": 40.3125,
+        "mean_words": 29.25,
+        "factual_total": 0,
+        "factual_correct": 0
+      },
+      "l23_b200": {
+        "n": 16,
+        "usable_profane": 0,
+        "raw_lexical": 0,
+        "judge_profanity_without_lexical": 0,
+        "trait_sums": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "clear_presence": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "ambiguous_scores": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "content_ok": 13,
+        "incoherent": 0,
+        "gross_failures": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "eos": 16,
+        "cap": 0,
+        "mean_tokens": 36.9375,
+        "mean_words": 26.75,
+        "factual_total": 0,
+        "factual_correct": 0
+      }
+    },
+    "development_null": true
+  },
+  "later_phases_skipped": true
+}
