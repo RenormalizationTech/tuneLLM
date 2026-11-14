@@ -29,8 +29,10 @@ it does not train an adapter or apply an activation vector. Physics/math
 questions in a behavioral evaluation are content checks, not physics training.
 
 See [project tracks and selected persona targets](docs/project_tracks.md).
-That map supersedes older default trait priorities below. The physics learning
-milestone and refusal studies are complete; P1 was a prompt-only reference with
+That map supersedes older default trait priorities below and historical
+transition language in immutable study records. The physics learning
+milestone and refusal studies are complete; the 4B persona pipeline is open.
+P1 was a prompt-only reference with
 a failed acceptance gate. Persona activation studies first test profanity,
 rudeness and sarcasm individually on Qwen3-4B, then test simultaneous controls
 as a separate stage. Complete the 4B pipeline before further 14B work.
@@ -45,11 +47,17 @@ Experimental details remain unregistered; this update launches no model run.
   Then test pairwise and three-way control where supported by the isolated
   results. Joint failure is a valid outcome. Finish this pipeline on 4B before
   further 14B work; retain the completed 14B baseline as historical evidence.
-- Qwen3-4B learning study: closed after the final published-only replay. All 250
+- Immediate preparation: `docs/persona_rating_calibration_protocol.md` defines
+  a 48-text, two-pass measurement calibration before any new 4B model output.
+  All three traits are rated in isolation from author labels. Implementation,
+  fixture review and committed bindings precede judging; failed measurement
+  gates stop the study without a steering run.
+- Qwen3-4B refusal study: closed after the final published-only replay. All 250
   token/input/output/layout/flag comparisons matched, with 681 protected bindings
   unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and
   `results/xstest_replay_01.json`. The partial-effect/quality-tradeoff conclusion
   remains; no validated useful refusal setting or additional 4B run is claimed.
+  This closes that refusal study, not the new 4B persona experiments.
 - The coordinating Codex selected Qwen3-14B BF16 on one A6000 with Claude review
   under the user's direction to progress to a larger model. Official assets are
   pinned, downloaded and hash-verified; native tokenization matches the 250 4B

@@ -24,8 +24,9 @@ The [stored-output review](docs/xstest_stored_output_audit.md) supported 16 case
 as candidate unnecessary refusals, with original grades preserved. Robustness
 to new wording remains untested.
 
-The [4B learning study is closed](docs/qwen3_4b_closeout.md): its final replay
+The [4B refusal study is closed](docs/qwen3_4b_closeout.md): its final replay
 matched all 250 published baseline cases token for token, with no new grading.
+That historical closeout does not close the new 4B persona pipeline.
 The [Qwen3-14B BF16 baseline is complete](docs/qwen3_14b_baseline_execution.md)
 on one A6000: candidate refusals on published safe prompts were 16/250 (6.4%),
 and partial/full refusals on the separate unsafe contrasts were 160/200 (80%).
@@ -35,6 +36,13 @@ measurements; reliable refusal steering and greater stability from size remain
 unestablished. See the [registered protocol](docs/qwen3_14b_baseline_protocol.md).
 The completed 14B baseline is retained; further 14B experiments are deferred
 under the user's revised 4B-first persona sequence.
+
+Current work: prepare and calibrate separate profanity/rudeness/sarcasm ratings
+under the [calibration protocol](docs/persona_rating_calibration_protocol.md)
+before the isolated 4B profanity experiment. The later joint study will measure
+interference rather than assume independent controls. See
+[the current project map](docs/project_tracks.md) and
+[local artifact retention](docs/workspace_maintenance.md).
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,

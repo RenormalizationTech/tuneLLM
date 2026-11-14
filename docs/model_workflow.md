@@ -19,7 +19,8 @@ during inference. Neither trains the physics adapter. P1 used the unadapted
 BF16 base; its physics/math questions checked content retention, not PRL writing
 or physics-adapter improvement. See the [project map](project_tracks.md) for
 methods, completed status and the user-selected profanity/rudeness/sarcasm
-objective, including simultaneous activation controls.
+objective: isolated controls first on 4B, then a separate simultaneous study.
+Further 14B work is deferred until the bounded 4B persona pipeline is complete.
 
 ## Routine workflow after the calibration pilot
 
@@ -65,8 +66,9 @@ backlog. Reporting, the early tone-construction attempts and refusal studies
 have completed; [persona P1](persona_prompt_execution.md) was a separate
 prompt-only reference and did not validate an activation-steering configuration.
 The next behavioral research direction is persona activation steering under a
-future reviewed protocol, targeting simultaneous profanity, rudeness and sarcasm
-controls as described in [the roadmap](project_tracks.md).
+future reviewed protocol, first testing profanity, rudeness and sarcasm
+individually on 4B, then simultaneous controls as described in
+[the roadmap](project_tracks.md). Rating calibration precedes extraction.
 Steering changes activations during inference;
 the routine adapter-training steps above apply only when a new training exercise
 is explicitly selected. Review management plans with Claude first and delegate
@@ -77,6 +79,7 @@ code implementation to the worker.
 Preserve the upstream repository, immutable revision, tokenizer, license, package
 versions and checksums. Large artifacts, datasets and raw outputs remain under
 git-ignored `artifacts/`, `data/`, `outputs/` and `.hf/`.
+See [workspace maintenance](workspace_maintenance.md) for retention and cleanup.
 
 For a new model's quantization calibration, produce independent branches directly
 from the original high-precision weights. Routine adapter runs reuse the verified
