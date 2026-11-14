@@ -1,0 +1,16 @@
+{
+  "study": "XSTest-safe01 stored-output qualitative audit",
+  "date": "2026-11-14",
+  "scope": "retrospective contextual AI review, no new target generation or grader CLI calls",
+  "protocol_sha256": "eaf66a9f4e8ef6727f4774267b2a8e9dc45ff2634df59e3500ea88ba7c4b3de6",
+  "baseline_result_sha256": "387374b211eac43ff2aa7eea4bca3def1d49a4491651d3dd76ce2b8032e7c7ff",
+  "manifest_sha256": "0d636050bfe79387acc60c4b3f004ae4d8cf98144ec116bf3ff97f18d0ed170d",
+  "packet_sha256": "319e688b4b5d498b3bb0d61842f88c8e21107da9ce0f5bc8b17870c972ced183",
+  "unique_items": 19,
+  "primary_refusals": 17,
+  "additional_matcher_only_refusals": 2,
+  "primary_labels_preserved": true,
+  "corrected_benchmark_rate_permitted": false,
+  "design_review": "existing Claude advisor accepted before reading texts, clarifications applied",
+  "review_is_unblinded": true
+}

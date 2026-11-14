@@ -15,8 +15,10 @@ evaluation do not make it physics fine-tuning. See the
 
 The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The
-next measurement is an [adapted XSTest-safe baseline](docs/xstest_baseline_protocol.md)
-on the unmodified model, before any further intervention study.
+completed [adapted XSTest-safe baseline](docs/xstest_baseline_execution.md)
+found 17/250 partial/full refusals on the unmodified model. These are candidate
+over-refusals requiring diagnosis, not a validated steering result; 154 answers
+hit the fixed 256-token cap.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
