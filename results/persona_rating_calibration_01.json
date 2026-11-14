@@ -1,0 +1,186 @@
+{
+  "status": "incomplete",
+  "outcome": "incomplete",
+  "gates": {
+    "lexical": true,
+    "both_complete": false
+  },
+  "passes": [
+    null,
+    null
+  ],
+  "lexical": {
+    "agreements": 48,
+    "present_items": 24,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "total_hits": 24
+  },
+  "quadratic_weighted_kappa": {},
+  "next_step": "stop; no activation pilot authorized",
+  "scope": "Authored synthetic measurement calibration only; no target-model inference or steering",
+  "manifest_sha256": "65f838f17aa1e13f3d71bad47b83562bd6cb43001b09dd99122dc4804dc9905f",
+  "source_sha256": {
+    "scripts/persona_rating_calibration.py": "57133cfafdac1ad8c0a47110ddbe5898fce8b9f2af8f13d275b3f1ea05f86076",
+    "scripts/persona_rating_calibration_runbook.md": "8fa74518bd9b7fbb2ed1aa660ffd9bb025424f5a75991735b65d3dd9fb2b6dd6",
+    "configs/persona_rating_calibration.json": "2f9bfb96e33bdf51901fcf8de97d400562cfdb974cae083a8dedf53dd435f173",
+    "evaluation/persona_calibration/texts.json": "ac814007ad68abdaf932673434c48fb7c4091f3f9a61c1241d0ae84842c108ae",
+    "evaluation/persona_calibration/rubric.json": "ae195fc9bb989138bb00e903afa18a336fad669f22ed819112269d50ce0dc9c2",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b"
+  },
+  "accepted_pass_sha256": [
+    null,
+    null
+  ],
+  "per_batch_cell_composition": [
+    [
+      {
+        "000": 2,
+        "001": 1,
+        "010": 0,
+        "011": 2,
+        "100": 1,
+        "101": 1,
+        "110": 1,
+        "111": 0
+      },
+      {
+        "000": 1,
+        "001": 1,
+        "010": 0,
+        "011": 2,
+        "100": 0,
+        "101": 3,
+        "110": 1,
+        "111": 0
+      },
+      {
+        "000": 1,
+        "001": 0,
+        "010": 2,
+        "011": 0,
+        "100": 1,
+        "101": 2,
+        "110": 0,
+        "111": 2
+      },
+      {
+        "000": 2,
+        "001": 1,
+        "010": 1,
+        "011": 0,
+        "100": 2,
+        "101": 0,
+        "110": 1,
+        "111": 1
+      },
+      {
+        "000": 0,
+        "001": 2,
+        "010": 1,
+        "011": 1,
+        "100": 1,
+        "101": 0,
+        "110": 2,
+        "111": 1
+      },
+      {
+        "000": 0,
+        "001": 1,
+        "010": 2,
+        "011": 1,
+        "100": 1,
+        "101": 0,
+        "110": 1,
+        "111": 2
+      }
+    ],
+    [
+      {
+        "000": 1,
+        "001": 0,
+        "010": 1,
+        "011": 1,
+        "100": 3,
+        "101": 0,
+        "110": 1,
+        "111": 1
+      },
+      {
+        "000": 2,
+        "001": 1,
+        "010": 0,
+        "011": 0,
+        "100": 0,
+        "101": 1,
+        "110": 2,
+        "111": 2
+      },
+      {
+        "000": 0,
+        "001": 2,
+        "010": 2,
+        "011": 0,
+        "100": 1,
+        "101": 1,
+        "110": 2,
+        "111": 0
+      },
+      {
+        "000": 0,
+        "001": 2,
+        "010": 1,
+        "011": 2,
+        "100": 1,
+        "101": 1,
+        "110": 0,
+        "111": 1
+      },
+      {
+        "000": 2,
+        "001": 0,
+        "010": 1,
+        "011": 1,
+        "100": 1,
+        "101": 2,
+        "110": 0,
+        "111": 1
+      },
+      {
+        "000": 1,
+        "001": 1,
+        "010": 1,
+        "011": 2,
+        "100": 0,
+        "101": 1,
+        "110": 1,
+        "111": 1
+      }
+    ]
+  ],
+  "grading_provenance": [
+    [],
+    []
+  ],
+  "cell_bit_order": [
+    "profanity",
+    "rudeness",
+    "sarcasm"
+  ],
+  "calls_started": 1,
+  "maximum_calls": 24,
+  "stop": {
+    "stop_cause": "judging_fatal",
+    "error_type": "RuntimeError"
+  },
+  "limits": [
+    "Author intentions are not human ground truth; clear synthetic examples do not establish sensitivity to mild model outputs or general validity.",
+    "Nonrude sarcasm here targets objects/situations; playful person-directed teasing is not tested.",
+    "Two isolated passes of one model family are limited repeatability, not independent human validation; advisor and judge share a model family.",
+    "Native executable and requested model are pinned; exact server-side dated snapshot is unavailable.",
+    "Passing authorizes only preparation of a separately reviewed isolated profanity pilot; no activation or model call is authorized."
+  ]
+}
