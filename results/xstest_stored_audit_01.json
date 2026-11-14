@@ -1,0 +1,69 @@
+{
+  "study": "XSTest-safe01 stored-output qualitative audit",
+  "status": "complete",
+  "scope": "One retrospective unblinded contextual AI review; not independent re-grading or ground truth",
+  "reviewer": "Existing Claude scientific-advisor conversation, displayed Opus 5.5; no dated server snapshot exposed",
+  "selection": {
+    "unique_items": 19,
+    "primary_partial_or_full_refusals": 17,
+    "additional_matcher_only_refusals": 2
+  },
+  "counts": {
+    "legitimacy": {
+      "clear": 19
+    },
+    "primary_label_interpretation": {
+      "supported": 18,
+      "questionable": 1
+    },
+    "refusal_form": {
+      "refusal plus answer": 5,
+      "other/unclear": 2,
+      "interpretation/word-sense error": 5,
+      "caution without refusal": 1,
+      "direct decline": 6
+    },
+    "truncation_relevance": {
+      "no": 19
+    },
+    "candidate": {
+      "yes": 16,
+      "no": 3
+    }
+  },
+  "review_supported_candidates_by_type": {
+    "homonyms": 1,
+    "figurative_language": 4,
+    "safe_targets": 2,
+    "safe_contexts": 7,
+    "privacy_fictional": 2
+  },
+  "source_sha256": {
+    "protocol": "eaf66a9f4e8ef6727f4774267b2a8e9dc45ff2634df59e3500ea88ba7c4b3de6",
+    "public_result": "387374b211eac43ff2aa7eea4bca3def1d49a4491651d3dd76ce2b8032e7c7ff",
+    "original_manifest": "ad8d1ccc729564a7fec7115fb86b0273c0c50e14a7b3c005c5e464487d513fba",
+    "source_rows": "a8e1bbd181d21258d4432eb153cba52870ec7fc3504d37a9c311b50edeca0a50",
+    "definitions": "25135fbc076cd42b4cbb6760d2e2784646990eaeeb6407c3b6676b779df2e921",
+    "predictions": "6fbc602f3d35c75f6f67190dc8164440954783c805405932b73e15257cb4250a",
+    "accepted_grades": "bc13ec22f88e9df331b901a3f86cc902cec2fb14e475b785f93d3a1ff8186634",
+    "grading_binding": "997290c5134f1e84787fa4062d5ea4b6fbbca48e3d8b83e281656b06052f61bb"
+  },
+  "packet_sha256": "319e688b4b5d498b3bb0d61842f88c8e21107da9ce0f5bc8b17870c972ced183",
+  "manifest_sha256": "0d636050bfe79387acc60c4b3f004ae4d8cf98144ec116bf3ff97f18d0ed170d",
+  "private_review_sha256": "8dbec2bf25269468899dca687322d9dbafb0f5fa69463889eedf0cc903006403",
+  "original_input_bindings_verified": 208,
+  "active_source_bindings_verified": 14,
+  "private_permissions_verified": true,
+  "original_labels_and_results_unchanged": true,
+  "new_target_model_generation_calls": 0,
+  "new_grader_cli_calls": 0,
+  "normalization": "Counts recomputed from rows; optional private refusal_form_detail notes excluded. The two other/unclear rows are compliant cases; explicit zero bins in the reviewer summary do not change counts.",
+  "limits": [
+    "Single unblinded AI interpretation with primary labels and outcome visible; anchoring possible.",
+    "No external fact checking or human validation; reviewer-supported does not mean verified ground truth.",
+    "Selected19 review is not a representative new benchmark; no corrected benchmark rate is calculated.",
+    "No repeatability or prompt-robustness demonstrated by reading existing outputs.",
+    "Truncation relevance is the reviewer interpretation of visible text, not knowledge of unseen continuations."
+  ],
+  "next_scope_choice": "Published prompts only versus32 prewritten benign paraphrases; user response pending; no new generation or intervention started."
+}

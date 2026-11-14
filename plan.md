@@ -44,6 +44,12 @@ simultaneous controls; experimental details remain unregistered. No new experime
   `docs/xstest_baseline_execution.md`; source choices and Qwen3 compatibility
   limits are in `docs/refusal_reproducibility_review.md`. No steering sweep or
   automatic follow-up is active.
+- A separately registered contextual Claude review of 19 stored XSTest items is
+  complete: 16 review-supported candidate unnecessary refusals, one questionable
+  primary refusal label and two supported compliant labels on lexical-only flags.
+  Original grades remain unchanged; see `docs/xstest_stored_output_audit.md`.
+  The user was asked whether to add a small custom paraphrase robustness set or
+  remain restricted to published prompts. No further generation has started.
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
   the physics-writing exercise, while preserving the historical results.

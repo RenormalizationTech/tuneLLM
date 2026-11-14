@@ -18,6 +18,8 @@ is not unseen held-out evidence. No unsafe prompts were evaluated.
 The model was the unadapted pinned BF16 Qwen3-4B, with the helpful system message,
 native nonthinking template, greedy seed 42, batch eight and 256-token budget.
 No adapter, hook, vector extraction, weight modification or training was used.
+The working environment used Python 3.10.12, Torch 2.6.0+cu124 and Transformers
+4.57.6; the prepared manifest records the other package versions and model hashes.
 
 The existing Claude advisor accepted the design and corrected code. Twenty-one
 CPU checks passed, including actual-tokenizer formatting and agreement with the

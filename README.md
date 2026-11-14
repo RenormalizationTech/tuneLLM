@@ -17,8 +17,11 @@ The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The
 completed [adapted XSTest-safe baseline](docs/xstest_baseline_execution.md)
 found 17/250 partial/full refusals on the unmodified model. These are candidate
-over-refusals requiring diagnosis, not a validated steering result; 154 answers
+over-refusals, not a validated steering result; 154 answers
 hit the fixed 256-token cap.
+The [stored-output review](docs/xstest_stored_output_audit.md) supported 16 cases
+as candidate unnecessary refusals, with original grades preserved. Robustness
+to new wording remains untested.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
