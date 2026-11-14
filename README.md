@@ -39,8 +39,9 @@ under the user's revised 4B-first persona sequence.
 
 The [trait-rating calibration passed](docs/persona_rating_calibration_completion_execution.md):
 both blinded passes matched all 48 authored presence labels for each trait.
-This supports limited repeatability on clear examples. Current work is the
-separately reviewed isolated 4B profanity protocol. The later joint study will measure
+This supports limited repeatability on clear examples. Current work is implementing
+the [reviewed isolated 4B profanity protocol](docs/profanity_steering_protocol.md).
+The later joint study will measure
 interference rather than assume independent controls. See
 [the current project map](docs/project_tracks.md) and
 [local artifact retention](docs/workspace_maintenance.md).

@@ -54,8 +54,9 @@ Experimental details remain unregistered; this update launches no model run.
   initial sandbox DNS failure. All 1,100 protected bindings passed. See
   `docs/persona_rating_calibration_completion_execution.md`. This supports only
   clear-case repeatability, not human validity or subtle generated styles.
-  Next: separately reviewed isolated profanity protocol on 4B; no vector or
-  target-model generation has run in this calibration.
+  Next: implement the accepted isolated 4B profanity design in
+  `docs/profanity_steering_protocol.md`, review authored fixtures/code and register
+  before live execution. No vector or target-model generation ran in calibration.
 - Qwen3-4B refusal study: closed after the final published-only replay. All 250
   token/input/output/layout/flag comparisons matched, with 681 protected bindings
   unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and
