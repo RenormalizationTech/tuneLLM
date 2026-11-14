@@ -27,10 +27,10 @@ skipped and the positive-intervention pilot is closed. See the
 Management plans are discussed with Claude before implementation; each study
 records whether review was available. The dedicated Codex worker implements code.
 
-The clarified research objective is **refusal reduction**, with answer quality
-and direct persona style measured separately. The completed positive probes
-did not test that objective. A new bounded comparison of baseline, single-block
-subtraction and all-block projection removal is specified in
+The earlier refusal-reduction study assessed willingness and answer quality
+separately; persona style was deferred. The completed positive probes
+did not test reduction. The completed comparison of baseline, single-block
+subtraction and all-block projection removal was registered in
 [the reduction protocol](docs/refusal_reduction_protocol.md). Claude declined
 reviewing this design; the user authorized proceeding without that review.
 The coordinating Codex owns acceptance and the dedicated worker implements
@@ -64,8 +64,17 @@ The [combined report](results/benign_helpfulness_completed_01.json) records zero
 refusals among 24 legitimate sensitive requests (`insufficient_headroom`),
 101/108 anchors satisfied and 11/36 apparent error/unsupported-claim flags.
 These AI assessments are descriptive, not verified factual accuracy.
-No activation intervention, candidate prompt or harmful-request compliance
-optimization ran. The next user-selected phase is benign tone/persona work.
+That baseline survey used no activation intervention or candidate system prompt.
+
+The user-selected [persona P1 pilot](docs/persona_prompt_execution.md) is also
+complete. A fixed system prompt was preferred for style on 15/24 development
+pairs, below the required 16, with two gross AI-judged quality losses versus
+one allowed. Aggregate acceptable answers were 17/24 for the common system and
+18/24 for the persona, but three gains could not cancel two previously
+acceptable answers becoming unacceptable. Other gates passed. Held-out was
+skipped as registered. The [result](results/persona_prompt_01.json) is a
+directional prompt-style signal, not an accepted quality-preserving persona
+or activation-control demonstration. No further run is active.
 
 The [benchmark summary](docs/benchmark_summary.md) collects the completed
 quantization and physics-adapter scores, with the earlier GSM8K experiment

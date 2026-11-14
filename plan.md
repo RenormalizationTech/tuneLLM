@@ -20,7 +20,7 @@ Learning the Hugging Face, PyTorch, PEFT/QLoRA, GGUF, and llama.cpp workflows
 is itself a successful outcome. Novel research findings are not required to
 complete the initial project.
 
-## Current status and execution priorities (2026-11-13)
+## Current status and execution priorities (2026-11-14)
 
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
@@ -53,8 +53,8 @@ complete the initial project.
   See `docs/refusal_late_execution.md` and `results/refusal_02.json`.
   That positive-intervention pilot is closed; the new reduction study is
   specified below. NF4 transfer and new training remain deferred.
-- Clarified next objective: refusal-reduction and activation-steering research,
-  with answer quality and direct persona measured separately. The user
+- Historical refusal-reduction and activation-steering study assessed willingness
+  and answer quality separately, with persona deferred. The user
   authorized proceeding if Claude declined; it declined the core and limited
   measurement review. This design is not Claude-approved. The coordinating
   Codex owns scientific acceptance; the dedicated worker implements/tests.
@@ -91,13 +91,24 @@ complete the initial project.
   apparent incorrect/unsupported flags. See
   `docs/benign_helpfulness_completion_execution.md` and
   `results/benign_helpfulness_completed_01.json`. No candidate, held-out
-  generation, activation vector or harmful-compliance optimization followed.
+  generation, activation vector or harmful-compliance optimization ran within
+  that baseline survey.
   An evaluator CLI auto-update was handled by restoring
   the audited installed version with a documented process-local pin. The user
   selected finishing the grades and then moving to benign tone/persona work.
-  Persona planning is now being discussed with Claude; no persona model run is
-  yet registered. Prior gentler activation
+  That prompt-only pilot is now complete as recorded below. Prior gentler activation
   suggestions remain unregistered hypotheses, not an active run.
+- Persona P1: completed as a registered development null, after Claude design,
+  fixture and result review. Both matched system conditions generated 24/24 EOS
+  with no cap/empty/degeneration flags; three grading batches passed first try.
+  The fixed persona won 15/24 style comparisons (16 needed) and incurred two
+  gross quality losses (one allowed), despite three gains and a net acceptable
+  count change of 17 to 18. All calibration/experience/invalidity gates passed.
+  Style wins were concentrated in physics and practical writing, with both
+  losses on pushback. This is a directional prompt-level signal, not an accepted
+  configuration or activation-control result. Held-out stayed unused, with no
+  prompt revision, vector, training or automatic follow-up. See
+  `docs/persona_prompt_execution.md` and `results/persona_prompt_01.json`.
 - The user explicitly authorized GPU 0 coexistence if memory and utilization
   allow; leave existing jobs untouched and keep each comparison on one physical
   device. All registered steering stages finished and released project GPU memory.

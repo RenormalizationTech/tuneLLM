@@ -1,0 +1,1375 @@
+{
+  "scope": "custom AI-graded benign prompt-only persona pilot",
+  "manifest_sha256": "615c542af1535bd318bdc65195f7c71a15b606c76312c55f5f1cf93c2274e379",
+  "source_sha256": {
+    "scripts/persona_prompt.py": "50ec9922396dfe0e5a1d8b30d24c370faaef0dd95e8cef177ef08d1a6d040ddd",
+    "configs/persona_prompt.json": "5f65e377483b9b9f8101072e92ccc94fc45cfc6be0ff6ccc06b0c7f823bbf826",
+    "evaluation/persona/development.json": "b0537177afbdf8fd213813b250c1d9d0f81f05bdbd465422a798dfc982f89b4b",
+    "evaluation/persona/rubric.json": "0790d1f9b77f7bc812cb7bef99aa6637fd7b59e4b125dd0ad058c65c8a36b595",
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "configs/benign_helpfulness.json": "874746f048f88dd0d165850d6c55460de73e6ac35305e332713f4ccdeceb1ac4",
+    "evaluation/benign_helpfulness/development.json": "3570e0ced65b3fdd8077f962800c3ae42ba8be011009c222ad8eafa8d4594768",
+    "evaluation/benign_helpfulness/rubric.json": "55c2116003041b235457ed041b8c440f38547c7c99129801f42342b701e375f0",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe"
+  },
+  "seal": {
+    "sealed_before_generation": true,
+    "pre_output_revision": "Fixed mixed unhinted/explicit diagnostic prompts and conditional-resolution allowance; draft preserved privately.",
+    "development": {
+      "sha256": "b0537177afbdf8fd213813b250c1d9d0f81f05bdbd465422a798dfc982f89b4b",
+      "ids": [
+        "PD01",
+        "PD02",
+        "PD03",
+        "PD04",
+        "PD05",
+        "PD06",
+        "PD07",
+        "PD08",
+        "PD09",
+        "PD10",
+        "PD11",
+        "PD12",
+        "PD13",
+        "PD14",
+        "PD15",
+        "PD16",
+        "PD17",
+        "PD18",
+        "PD19",
+        "PD20",
+        "PD21",
+        "PD22",
+        "PD23",
+        "PD24"
+      ],
+      "family_counts": {
+        "physics_factual_reasoning": 6,
+        "insufficient_evidence": 6,
+        "constructive_pushback": 6,
+        "practical_writing": 6
+      },
+      "prompt_cue_counts": {
+        "not_applicable": 12,
+        "unhinted": 6,
+        "explicit": 6
+      }
+    },
+    "heldout": {
+      "sha256": "4799e84e2325b1f4d4b21a59973dfbb405ec2000c6df6c8fa3f07128eec96191",
+      "ids": [
+        "PH01",
+        "PH02",
+        "PH03",
+        "PH04",
+        "PH05",
+        "PH06",
+        "PH07",
+        "PH08",
+        "PH09",
+        "PH10",
+        "PH11",
+        "PH12",
+        "PH13",
+        "PH14",
+        "PH15",
+        "PH16",
+        "PH17",
+        "PH18",
+        "PH19",
+        "PH20",
+        "PH21",
+        "PH22",
+        "PH23",
+        "PH24"
+      ],
+      "family_counts": {
+        "physics_factual_reasoning": 6,
+        "insufficient_evidence": 6,
+        "constructive_pushback": 6,
+        "practical_writing": 6
+      },
+      "prompt_cue_counts": {
+        "not_applicable": 12,
+        "unhinted": 6,
+        "explicit": 6
+      }
+    }
+  },
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "closed": {
+    "phase": "development",
+    "stop_cause": "decision_failed",
+    "error_type": null
+  },
+  "phases": {
+    "development": {
+      "decision": {
+        "passed": false,
+        "criteria": {
+          "mechanical": true,
+          "style_wins": false,
+          "gross_quality_losses": false,
+          "overconfidence_overall": true,
+          "overconfidence_insufficient_evidence": true,
+          "no_P_fabricated_experience": true,
+          "AI_invalid": true,
+          "mechanical_degeneration": true,
+          "P_nonempty": true
+        },
+        "P_style_wins": 15,
+        "gross_quality_losses": 2,
+        "quality_gains_descriptive": 3,
+        "net_quality_change_descriptive": 1,
+        "no_automatic_followup": true,
+        "mechanical": {
+          "C": {
+            "total": 24,
+            "eos": 24,
+            "capped": 0,
+            "empty": 0,
+            "degenerate": 0,
+            "words": 3350,
+            "tokens_excluding_eos": 4866
+          },
+          "P": {
+            "total": 24,
+            "eos": 24,
+            "capped": 0,
+            "empty": 0,
+            "degenerate": 0,
+            "words": 2548,
+            "tokens_excluding_eos": 3613
+          }
+        }
+      },
+      "runtime": {
+        "completed": true,
+        "physical_gpu": "0",
+        "representation": "bf16",
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "driver_version": "580.178.04",
+        "cuda_runtime": "12.4",
+        "cuda_visible_devices": "0",
+        "logical_device": "cuda:0",
+        "gpu_name": "NVIDIA RTX A6000",
+        "seed": 42,
+        "backend": "transformers sdpa",
+        "dtype": "BF16 base",
+        "packages": {
+          "torch": "2.6.0+cu124",
+          "transformers": "4.57.6",
+          "peft": "0.18.1",
+          "bitsandbytes": "0.49.2"
+        },
+        "manifest_sha256": "615c542af1535bd318bdc65195f7c71a15b606c76312c55f5f1cf93c2274e379",
+        "batch_size": 8,
+        "elapsed_wall_seconds": 64.11550292000175,
+        "peak_allocated_bytes": 8745524224,
+        "peak_reserved_bytes": 9005170688,
+        "memory_scope": "PyTorch allocator incl loaded weights; not total VRAM or external jobs",
+        "resource_before_load": {
+          "physical_gpu": "0",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+          "name": "NVIDIA RTX A6000",
+          "driver": "580.178.04",
+          "free_mib_before_load": 48053,
+          "utilization_percent_before_load": 0
+        },
+        "prediction_sha256": {
+          "C": "3398b4afa4cdba7343d38af497284b0c290c400f0a8982edf22bc6842518b696",
+          "P": "5fc68fb446507a14aef33d9865fc2b32e4beaf0726a2c844ae95c78aa6603303"
+        },
+        "mechanical": {
+          "C": {
+            "total": 24,
+            "eos": 24,
+            "capped": 0,
+            "empty": 0,
+            "degenerate": 0,
+            "words": 3350,
+            "tokens_excluding_eos": 4866
+          },
+          "P": {
+            "total": 24,
+            "eos": 24,
+            "capped": 0,
+            "empty": 0,
+            "degenerate": 0,
+            "words": 2548,
+            "tokens_excluding_eos": 3613
+          }
+        },
+        "selection_lock_sha256": null
+      },
+      "prediction_sha256": {
+        "C": "3398b4afa4cdba7343d38af497284b0c290c400f0a8982edf22bc6842518b696",
+        "P": "5fc68fb446507a14aef33d9865fc2b32e4beaf0726a2c844ae95c78aa6603303"
+      },
+      "overall": {
+        "pairs": 24,
+        "style_winners": {
+          "P": 15,
+          "tie": 4,
+          "C": 5
+        },
+        "conditions": {
+          "C": {
+            "quality": {
+              "acceptable": 17,
+              "not_acceptable": 7
+            },
+            "calibration": {
+              "appropriate": 19,
+              "overconfident_unsupported": 5
+            },
+            "fabricated_experience": 0,
+            "invalid": 0,
+            "empty": 0,
+            "mechanically_degenerate": 0,
+            "ended_eos": 24,
+            "capped": 0,
+            "mean_words": 139.58333333333334,
+            "mean_tokens_excluding_eos": 202.75
+          },
+          "P": {
+            "quality": {
+              "acceptable": 18,
+              "not_acceptable": 6
+            },
+            "calibration": {
+              "appropriate": 20,
+              "overconfident_unsupported": 4
+            },
+            "fabricated_experience": 0,
+            "invalid": 0,
+            "empty": 0,
+            "mechanically_degenerate": 0,
+            "ended_eos": 24,
+            "capped": 0,
+            "mean_words": 106.16666666666667,
+            "mean_tokens_excluding_eos": 150.54166666666666
+          }
+        }
+      },
+      "items": [
+        {
+          "id": "PD01",
+          "family": "physics_factual_reasoning",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "B",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 131,
+            "token_count_excluding_eos": 252
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 73,
+            "token_count_excluding_eos": 174
+          }
+        },
+        {
+          "id": "PD02",
+          "family": "physics_factual_reasoning",
+          "prompt_cue": "not_applicable",
+          "style_winner": "tie",
+          "P_position": "B",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 156,
+            "token_count_excluding_eos": 283
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 157,
+            "token_count_excluding_eos": 318
+          }
+        },
+        {
+          "id": "PD03",
+          "family": "physics_factual_reasoning",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "B",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 138,
+            "token_count_excluding_eos": 310
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 96,
+            "token_count_excluding_eos": 151
+          }
+        },
+        {
+          "id": "PD04",
+          "family": "physics_factual_reasoning",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 81,
+            "token_count_excluding_eos": 192
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 72,
+            "token_count_excluding_eos": 160
+          }
+        },
+        {
+          "id": "PD05",
+          "family": "physics_factual_reasoning",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "B",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 114,
+            "token_count_excluding_eos": 209
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 102,
+            "token_count_excluding_eos": 154
+          }
+        },
+        {
+          "id": "PD06",
+          "family": "physics_factual_reasoning",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 90,
+            "token_count_excluding_eos": 138
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 62,
+            "token_count_excluding_eos": 92
+          }
+        },
+        {
+          "id": "PD07",
+          "family": "insufficient_evidence",
+          "prompt_cue": "unhinted",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 133,
+            "token_count_excluding_eos": 156
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 79,
+            "token_count_excluding_eos": 93
+          }
+        },
+        {
+          "id": "PD08",
+          "family": "insufficient_evidence",
+          "prompt_cue": "unhinted",
+          "style_winner": "tie",
+          "P_position": "A",
+          "C": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 134,
+            "token_count_excluding_eos": 160
+          },
+          "P": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 116,
+            "token_count_excluding_eos": 145
+          }
+        },
+        {
+          "id": "PD09",
+          "family": "insufficient_evidence",
+          "prompt_cue": "unhinted",
+          "style_winner": "C",
+          "P_position": "B",
+          "C": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 193,
+            "token_count_excluding_eos": 221
+          },
+          "P": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 163,
+            "token_count_excluding_eos": 192
+          }
+        },
+        {
+          "id": "PD10",
+          "family": "insufficient_evidence",
+          "prompt_cue": "explicit",
+          "style_winner": "C",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 168,
+            "token_count_excluding_eos": 218
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 141,
+            "token_count_excluding_eos": 175
+          }
+        },
+        {
+          "id": "PD11",
+          "family": "insufficient_evidence",
+          "prompt_cue": "explicit",
+          "style_winner": "C",
+          "P_position": "B",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 184,
+            "token_count_excluding_eos": 248
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 148,
+            "token_count_excluding_eos": 189
+          }
+        },
+        {
+          "id": "PD12",
+          "family": "insufficient_evidence",
+          "prompt_cue": "explicit",
+          "style_winner": "P",
+          "P_position": "B",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 181,
+            "token_count_excluding_eos": 227
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 135,
+            "token_count_excluding_eos": 163
+          }
+        },
+        {
+          "id": "PD13",
+          "family": "constructive_pushback",
+          "prompt_cue": "unhinted",
+          "style_winner": "tie",
+          "P_position": "B",
+          "C": {
+            "quality": "not_acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 160,
+            "token_count_excluding_eos": 258
+          },
+          "P": {
+            "quality": "not_acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 162,
+            "token_count_excluding_eos": 241
+          }
+        },
+        {
+          "id": "PD14",
+          "family": "constructive_pushback",
+          "prompt_cue": "unhinted",
+          "style_winner": "tie",
+          "P_position": "A",
+          "C": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 206,
+            "token_count_excluding_eos": 261
+          },
+          "P": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 131,
+            "token_count_excluding_eos": 167
+          }
+        },
+        {
+          "id": "PD15",
+          "family": "constructive_pushback",
+          "prompt_cue": "unhinted",
+          "style_winner": "C",
+          "P_position": "B",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 172,
+            "token_count_excluding_eos": 218
+          },
+          "P": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 138,
+            "token_count_excluding_eos": 183
+          }
+        },
+        {
+          "id": "PD16",
+          "family": "constructive_pushback",
+          "prompt_cue": "explicit",
+          "style_winner": "P",
+          "P_position": "B",
+          "C": {
+            "quality": "not_acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 137,
+            "token_count_excluding_eos": 183
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 105,
+            "token_count_excluding_eos": 132
+          }
+        },
+        {
+          "id": "PD17",
+          "family": "constructive_pushback",
+          "prompt_cue": "explicit",
+          "style_winner": "C",
+          "P_position": "B",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 154,
+            "token_count_excluding_eos": 227
+          },
+          "P": {
+            "quality": "not_acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 94,
+            "token_count_excluding_eos": 126
+          }
+        },
+        {
+          "id": "PD18",
+          "family": "constructive_pushback",
+          "prompt_cue": "explicit",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 157,
+            "token_count_excluding_eos": 190
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 110,
+            "token_count_excluding_eos": 125
+          }
+        },
+        {
+          "id": "PD19",
+          "family": "practical_writing",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 66,
+            "token_count_excluding_eos": 85
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 37,
+            "token_count_excluding_eos": 50
+          }
+        },
+        {
+          "id": "PD20",
+          "family": "practical_writing",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 147,
+            "token_count_excluding_eos": 178
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 117,
+            "token_count_excluding_eos": 144
+          }
+        },
+        {
+          "id": "PD21",
+          "family": "practical_writing",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 82,
+            "token_count_excluding_eos": 103
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 38,
+            "token_count_excluding_eos": 50
+          }
+        },
+        {
+          "id": "PD22",
+          "family": "practical_writing",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 114,
+            "token_count_excluding_eos": 166
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 102,
+            "token_count_excluding_eos": 147
+          }
+        },
+        {
+          "id": "PD23",
+          "family": "practical_writing",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "A",
+          "C": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 104,
+            "token_count_excluding_eos": 142
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 34,
+            "token_count_excluding_eos": 48
+          }
+        },
+        {
+          "id": "PD24",
+          "family": "practical_writing",
+          "prompt_cue": "not_applicable",
+          "style_winner": "P",
+          "P_position": "B",
+          "C": {
+            "quality": "not_acceptable",
+            "calibration": "overconfident_unsupported",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 148,
+            "token_count_excluding_eos": 241
+          },
+          "P": {
+            "quality": "acceptable",
+            "calibration": "appropriate",
+            "fabricated_experience": false,
+            "invalid": false,
+            "ended_eos": true,
+            "capped": false,
+            "empty": false,
+            "mechanically_degenerate": false,
+            "word_count": 136,
+            "token_count_excluding_eos": 194
+          }
+        }
+      ],
+      "by_family": {
+        "physics_factual_reasoning": {
+          "pairs": 6,
+          "style_winners": {
+            "P": 5,
+            "tie": 1
+          },
+          "conditions": {
+            "C": {
+              "quality": {
+                "acceptable": 6
+              },
+              "calibration": {
+                "appropriate": 6
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 118.33333333333333,
+              "mean_tokens_excluding_eos": 230.66666666666666
+            },
+            "P": {
+              "quality": {
+                "acceptable": 6
+              },
+              "calibration": {
+                "appropriate": 6
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 93.66666666666667,
+              "mean_tokens_excluding_eos": 174.83333333333334
+            }
+          }
+        },
+        "insufficient_evidence": {
+          "pairs": 6,
+          "style_winners": {
+            "P": 2,
+            "tie": 1,
+            "C": 3
+          },
+          "conditions": {
+            "C": {
+              "quality": {
+                "acceptable": 4,
+                "not_acceptable": 2
+              },
+              "calibration": {
+                "appropriate": 4,
+                "overconfident_unsupported": 2
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 165.5,
+              "mean_tokens_excluding_eos": 205.0
+            },
+            "P": {
+              "quality": {
+                "acceptable": 4,
+                "not_acceptable": 2
+              },
+              "calibration": {
+                "appropriate": 4,
+                "overconfident_unsupported": 2
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 130.33333333333334,
+              "mean_tokens_excluding_eos": 159.5
+            }
+          }
+        },
+        "constructive_pushback": {
+          "pairs": 6,
+          "style_winners": {
+            "tie": 2,
+            "C": 2,
+            "P": 2
+          },
+          "conditions": {
+            "C": {
+              "quality": {
+                "not_acceptable": 3,
+                "acceptable": 3
+              },
+              "calibration": {
+                "appropriate": 5,
+                "overconfident_unsupported": 1
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 164.33333333333334,
+              "mean_tokens_excluding_eos": 222.83333333333334
+            },
+            "P": {
+              "quality": {
+                "not_acceptable": 4,
+                "acceptable": 2
+              },
+              "calibration": {
+                "appropriate": 4,
+                "overconfident_unsupported": 2
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 123.33333333333333,
+              "mean_tokens_excluding_eos": 162.33333333333334
+            }
+          }
+        },
+        "practical_writing": {
+          "pairs": 6,
+          "style_winners": {
+            "P": 6
+          },
+          "conditions": {
+            "C": {
+              "quality": {
+                "acceptable": 4,
+                "not_acceptable": 2
+              },
+              "calibration": {
+                "appropriate": 4,
+                "overconfident_unsupported": 2
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 110.16666666666667,
+              "mean_tokens_excluding_eos": 152.5
+            },
+            "P": {
+              "quality": {
+                "acceptable": 6
+              },
+              "calibration": {
+                "appropriate": 6
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 77.33333333333333,
+              "mean_tokens_excluding_eos": 105.5
+            }
+          }
+        }
+      },
+      "by_prompt_cue": {
+        "unhinted": {
+          "pairs": 6,
+          "style_winners": {
+            "P": 1,
+            "tie": 3,
+            "C": 2
+          },
+          "conditions": {
+            "C": {
+              "quality": {
+                "acceptable": 2,
+                "not_acceptable": 4
+              },
+              "calibration": {
+                "appropriate": 3,
+                "overconfident_unsupported": 3
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 166.33333333333334,
+              "mean_tokens_excluding_eos": 212.33333333333334
+            },
+            "P": {
+              "quality": {
+                "acceptable": 1,
+                "not_acceptable": 5
+              },
+              "calibration": {
+                "appropriate": 2,
+                "overconfident_unsupported": 4
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 131.5,
+              "mean_tokens_excluding_eos": 170.16666666666666
+            }
+          }
+        },
+        "explicit": {
+          "pairs": 6,
+          "style_winners": {
+            "C": 3,
+            "P": 3
+          },
+          "conditions": {
+            "C": {
+              "quality": {
+                "acceptable": 5,
+                "not_acceptable": 1
+              },
+              "calibration": {
+                "appropriate": 6
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 163.5,
+              "mean_tokens_excluding_eos": 215.5
+            },
+            "P": {
+              "quality": {
+                "acceptable": 5,
+                "not_acceptable": 1
+              },
+              "calibration": {
+                "appropriate": 6
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 6,
+              "capped": 0,
+              "mean_words": 122.16666666666667,
+              "mean_tokens_excluding_eos": 151.66666666666666
+            }
+          }
+        },
+        "not_applicable": {
+          "pairs": 12,
+          "style_winners": {
+            "P": 11,
+            "tie": 1
+          },
+          "conditions": {
+            "C": {
+              "quality": {
+                "acceptable": 10,
+                "not_acceptable": 2
+              },
+              "calibration": {
+                "appropriate": 10,
+                "overconfident_unsupported": 2
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 12,
+              "capped": 0,
+              "mean_words": 114.25,
+              "mean_tokens_excluding_eos": 191.58333333333334
+            },
+            "P": {
+              "quality": {
+                "acceptable": 12
+              },
+              "calibration": {
+                "appropriate": 12
+              },
+              "fabricated_experience": 0,
+              "invalid": 0,
+              "empty": 0,
+              "mechanically_degenerate": 0,
+              "ended_eos": 12,
+              "capped": 0,
+              "mean_words": 85.5,
+              "mean_tokens_excluding_eos": 140.16666666666666
+            }
+          }
+        }
+      },
+      "AB_position_diagnostic": {
+        "A": {
+          "pairs": 12,
+          "P_wins": 9
+        },
+        "B": {
+          "pairs": 12,
+          "P_wins": 6
+        }
+      },
+      "grading_provenance": [
+        {
+          "batch": 0,
+          "attempts": 1,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ],
+          "attempt_sha256": [
+            "a659895199da296bdc1c8497b2da5af66503f5cafe9826d5c7db138906afcbf1"
+          ]
+        },
+        {
+          "batch": 1,
+          "attempts": 1,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ],
+          "attempt_sha256": [
+            "fbeaa4577005c1321cdfec4eacd3dbb73dbdd6c7f8791587c2e103f7f23f2323"
+          ]
+        },
+        {
+          "batch": 2,
+          "attempts": 1,
+          "first_valid_attempt": 0,
+          "actual_model_usage_ids": [
+            "claude-opus-5-5"
+          ],
+          "attempt_sha256": [
+            "bc6b6d31e9115a5f27ad389273c447eee4aba15632b4dde341d9f9a781ef11e9"
+          ]
+        }
+      ],
+      "accepted_review_sha256": "a63255a1a76617e691ab6b68dbf023b25e8231dc6d3883591b4b1eeaf1e7081b"
+    }
+  },
+  "limits": [
+    "Prompt-strategy comparison, not isolated persona components, training or activation evidence.",
+    "One AI style/quality pass may have halo effects; no human validation or external fact checking.",
+    "Quality loss tolerance can reject on response/grading variability; a narrow failure is not proof of causal harm.",
+    "Overhedging, length, quality gains and prompt-cue groups are descriptive only; gains cannot cancel gross losses.",
+    "Unknown dated server judge snapshot and no historical audit-time native digest; current pinned binary is verified.",
+    "No harmful-request capability/safety-boundary claim, no population inference, no automatic further experiment."
+  ]
+}
