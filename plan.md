@@ -44,8 +44,13 @@ simultaneous controls; experimental details remain unregistered. No new experime
 - The coordinating Codex selected Qwen3-14B BF16 on one A6000 with Claude review
   under the user's direction to progress to a larger model. Official assets are
   pinned, downloaded and hash-verified; native tokenization matches the 250 4B
-  inputs. Implementation of `docs/qwen3_14b_baseline_protocol.md` is in CPU review:
-  unmodified quality and separate safe/unsafe XSTest measurements, no intervention.
+  inputs. The registered baseline is complete: safe candidate refusals 16/250,
+  unsafe partial/full refusals 160/200, and all 57 grading batches accepted on
+  their first attempts. The 48-item quality screen scored 10/16 general MMLU,
+  9/16 physics MMLU, 8/8 strict GSM8K and 7/8 prompt-strict IFEval. See
+  `docs/qwen3_14b_baseline_execution.md` and `results/qwen3_14b_baseline_01.json`.
+  No intervention ran; reliable steering and size-related stability remain
+  unestablished. The next study needs its own reviewed protocol.
 - Refusal follow-up: the published XSTest-safe baseline adaptation is complete.
   All 250 responses were graded in 32 first-valid calls: 233 compliant, seven
   partially refusing and ten fully refusing. The 17/250 (6.8%) candidate refusals

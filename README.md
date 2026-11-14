@@ -25,9 +25,13 @@ to new wording remains untested.
 
 The [4B learning study is closed](docs/qwen3_4b_closeout.md): its final replay
 matched all 250 published baseline cases token for token, with no new grading.
-The next model is pinned Qwen3-14B BF16 on one A6000. Its assets are verified;
-the [first baseline protocol](docs/qwen3_14b_baseline_protocol.md) measures quality,
-benign refusal and the appropriate-refusal boundary without a new intervention.
+The [Qwen3-14B BF16 baseline is complete](docs/qwen3_14b_baseline_execution.md)
+on one A6000: candidate refusals on published safe prompts were 16/250 (6.4%),
+and partial/full refusals on the separate unsafe contrasts were 160/200 (80%).
+All 57 grading batches passed on their first attempts. The model phase took
+about 13 minutes with 30.8 GB peak allocated memory. These are unmodified-model
+measurements; reliable refusal steering and greater stability from size remain
+unestablished. See the [registered protocol](docs/qwen3_14b_baseline_protocol.md).
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
