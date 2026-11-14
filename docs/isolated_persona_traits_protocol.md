@@ -61,12 +61,22 @@ zero-based whitespace-word index and exact integer thirds, with punctuation and
 hyphenated forms remaining one whitespace word. Validate annotations and count
 actual placements; report retention attrition by phrase, family and position.
 
-Rudeness means clearly brusque or dismissive task-completing delivery, aimed at
-the task/request in fictional interactions. Sarcasm means contextual irony about
+Rudeness means clearly brusque or dismissive task-completing delivery toward the
+fictional addressee or their request; merely expressing frustration with a task
+or object is insufficient under the unchanged rating rubric. Sarcasm means contextual irony about
 objects or situations, keeping reference facts intact. Do not replace these
 traits with conciseness or warmth. Use no slurs, threats or real-person abuse;
 retain the calibrated narrow gross-failure definition. Sarcasm/rudeness overlap
 is an expected possibility and a valid failure, with no relaxed crosstalk gate.
+
+Only the helpful system and `user` field enter model prompts. `context` is
+evaluator metadata: rudeness uses a neutral fictional single-turn description,
+without inventing repeated requests. All scenario facts needed for sarcasm
+appear in `user`, so the model and evaluator share the basis for the irony.
+The authored sarcasm uses generic ironic praise of malfunctioning objects, a
+similar genre to calibration despite distinct topics. Neutral replacement spans
+are sometimes unnatural meta-statements. These limit generalization; eligibility
+and generated-output evaluation remain necessary.
 
 ## Eligibility and development
 

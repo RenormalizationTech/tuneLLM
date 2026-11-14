@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "split": "development",
+  "authored_synthetic": true,
+  "items": [
+    {
+      "id": "PD01",
+      "family": "development_parcel_status",
+      "topic": "parcel_delivery",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A parcel marked R reached the depot but has not left for the destination. Give a short status reply to its recipient.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "R has reached the depot.",
+        "R has not left for the destination."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD02",
+      "family": "development_parcel_status",
+      "topic": "parcel_delivery",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A parcel marked S left the depot and is travelling to the destination. Give a short status reply to its recipient.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "S has left the depot.",
+        "S is travelling to the destination."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD03",
+      "family": "development_trail_distance",
+      "topic": "walking_distances",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional trail has a 2 km first section and a 3 km second section. State its total length in a short message.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Total length is 5 km."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD04",
+      "family": "development_trail_distance",
+      "topic": "walking_distances",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional trail has a 4 km first section and a 1 km second section. State its total length in a short message.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Total length is 5 km."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD05",
+      "family": "development_ticket_total",
+      "topic": "entry_tickets",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional exhibition ticket costs 3 tokens. What do four tickets cost? Give the total and a brief calculation.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Four tickets cost 12 tokens.",
+        "3 times 4 equals 12."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD06",
+      "family": "development_ticket_total",
+      "topic": "entry_tickets",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional exhibition ticket costs 2 tokens. What do six tickets cost? Give the total and a brief calculation.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Six tickets cost 12 tokens.",
+        "2 times 6 equals 12."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD07",
+      "family": "development_activity_sequence",
+      "topic": "task_order",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "The supplied order is register, collect a badge, then enter the hall. Turn it into a brief instruction to an attendee.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Register first.",
+        "Collect a badge second.",
+        "Enter the hall third."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD08",
+      "family": "development_activity_sequence",
+      "topic": "task_order",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "The supplied order is check the list, collect a marker, then enter the room. Turn it into a brief instruction to a participant.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Check the list first.",
+        "Collect a marker second.",
+        "Enter the room third."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD09",
+      "family": "development_chart_comparison",
+      "topic": "bar_charts",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "An invented bar chart shows category A at 6 and category B at 9. Write a short comparison, including the difference.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "B is 3 higher than A."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD10",
+      "family": "development_chart_comparison",
+      "topic": "bar_charts",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "An invented bar chart shows category C at 8 and category D at 5. Write a short comparison, including the difference.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "C is 3 higher than D."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD11",
+      "family": "development_shelf_lookup",
+      "topic": "library_catalogue",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional library list puts Atlas One on shelf H and Atlas Two on shelf K. Tell a visitor where to find both.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Atlas One is on shelf H.",
+        "Atlas Two is on shelf K."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD12",
+      "family": "development_shelf_lookup",
+      "topic": "library_catalogue",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional library list puts Guide One on shelf D and Guide Two on shelf G. Tell a visitor where to find both.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Guide One is on shelf D.",
+        "Guide Two is on shelf G."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD13",
+      "family": "development_fruit_vote",
+      "topic": "preference_tallies",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional club records 7 votes for pears and 4 for plums. Announce which option led and by how many votes.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Pears led by 3 votes."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD14",
+      "family": "development_fruit_vote",
+      "topic": "preference_tallies",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional club records 3 votes for figs and 8 for grapes. Announce which option led and by how many votes.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Grapes led by 5 votes."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD15",
+      "family": "development_room_booking",
+      "topic": "room_assignments",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional venue assigns the reading group to room C and the drawing group to room E. Write a brief booking confirmation.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Reading group: room C.",
+        "Drawing group: room E."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PD16",
+      "family": "development_room_booking",
+      "topic": "room_assignments",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional venue assigns the games group to room B and the walking group to room F. Write a brief booking confirmation.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Games group: room B.",
+        "Walking group: room F."
+      ],
+      "factual": false
+    }
+  ]
+}
