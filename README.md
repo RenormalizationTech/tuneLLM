@@ -4,7 +4,15 @@ A hands-on project for learning open-source LLM quantization and fine-tuning.
 Research into behavioral representations and activation steering is an optional
 extension.
 
-The routine workflow policy is **one base and one adapter configuration**, seed 42,
+The project has separate tracks: **physics LoRA/QLoRA demonstrates fine-tuning**;
+**refusal and persona activation steering study inference-time behavior control**.
+Persona system prompting is a reference/control for the latter, with no weight
+training or activation intervention. Generic physics questions in a behavior
+evaluation do not make it physics fine-tuning. See the
+[project map and proposed persona targets](docs/project_tracks.md).
+
+For adapter-training tasks, the routine workflow policy is **one base and one
+adapter configuration**, seed 42,
 a small development screen, and one fixed final comparison. Compatible baseline
 results can be reused. Multi-rank/LR sweeps and extra controls are calibration
 experiments rather than default steps.

@@ -6,6 +6,20 @@ project goal; scientific-writing gains are an experimental outcome, not assumed.
 The routine policy below was updated after the calibration pilot and reviewed
 with Claude following the user's workflow discussion.
 
+## Scope: adapter training and behavioral research
+
+This workflow's training steps cover quantization and LoRA/QLoRA learning.
+The physics corpus is a demonstration dataset for training, saving, reloading
+and evaluating an adapter. It is independent of the behavioral program:
+refusal activation steering, followed by persona/tone research.
+
+Persona prompting changes inference-time instructions and supplies a reference
+for desired written behavior. Persona activation steering changes hidden states
+during inference. Neither trains the physics adapter. P1 used the unadapted
+BF16 base; its physics/math questions checked content retention, not PRL writing
+or physics-adapter improvement. See the [project map](project_tracks.md) for
+methods, completed status and proposed future persona axes.
+
 ## Routine workflow after the calibration pilot
 
 The completed physics experiment explored multiple settings. The routine path
@@ -46,9 +60,12 @@ experiment. A new task gets its own declared configuration. Adapter storage of
 
 The original learning milestone is complete, including GSM8K instruction tuning.
 Another [task-specific instruction-tuning exercise](next_sft_pilot.md) is optional
-backlog. The next approved phase is reporting and
-[written-tone activation steering](tone_steering_protocol.md), followed by a
-separately reviewed refusal study. Steering changes activations during inference;
+backlog. Reporting, the early tone-construction attempts and refusal studies
+have completed; [persona P1](persona_prompt_execution.md) was a separate
+prompt-only reference and did not validate an activation-steering configuration.
+The next behavioral research direction is persona activation steering under a
+future reviewed protocol, with candidate axes in [the roadmap](project_tracks.md).
+Steering changes activations during inference;
 the routine adapter-training steps above apply only when a new training exercise
 is explicitly selected. Review management plans with Claude first and delegate
 code implementation to the worker.
@@ -95,6 +112,10 @@ rough PRL language and structure. Further physics training and writing-quality
 assessment are deferred. The completed learning/release milestone is not blocked
 on human ratings. Later Claude/Codex reviews will be labeled AI judgments; human
 review is optional. Existing results retain their actual unrated status.
+
+The core purpose of this branch is to show that we can fine-tune with LoRA/QLoRA
+on physics data. Its training objective and experimental adapter remain separate
+from persona prompting, emotional tone and inference-time activation steering.
 
 The pilot collected 100 PRL-associated condensed-matter **theory** papers,
 balancing topics rather than selecting one subfield. Publication associations

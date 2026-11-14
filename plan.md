@@ -20,6 +20,20 @@ Learning the Hugging Face, PyTorch, PEFT/QLoRA, GGUF, and llama.cpp workflows
 is itself a successful outcome. Novel research findings are not required to
 complete the initial project.
 
+## Current scope clarification (2026-11-14)
+
+Physics LoRA/QLoRA demonstrates the ability to fine-tune on domain data. It is
+independent of the behavioral program: refusal activation steering, followed by
+persona/tone research. Persona prompting supplies an inference-time reference;
+it does not train an adapter or apply an activation vector. Physics/math
+questions in a behavioral evaluation are content checks, not physics training.
+
+See [project tracks and proposed persona targets](docs/project_tracks.md).
+That map supersedes older default trait priorities below. The physics learning
+milestone and refusal studies are complete; P1 was a prompt-only reference with
+a failed acceptance gate. Future persona activation studies are proposed and
+unregistered. No new experiment is scheduled by this documentation update.
+
 ## Current status and execution priorities (2026-11-14)
 
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
@@ -562,7 +576,9 @@ degradation becomes significant?
 ## Stage 3 - Physics Domain Adaptation with QLoRA
 
 Use physics-oriented training material to learn the modern PEFT/QLoRA
-workflow.
+workflow. The primary goal is a working train/save/reload/evaluate/release
+exercise, not a proven improvement in physics writing. This is separate from
+persona prompting and activation steering; neither requires the physics adapter.
 
 Conceptually:
 
@@ -582,7 +598,7 @@ or
 -   configure QLoRA;
 -   train adapters;
 -   compare checkpoints locally;
--   select a validated adapter;
+-   select a checkpoint by the registered development rule; report regressions;
 -   publish the selected adapter to Hugging Face;
 -   optionally merge/export a standalone model;
 -   optionally generate GGUF variants.
@@ -591,7 +607,7 @@ or
 
 Measure both:
 
-1.  **Domain improvement**
+1.  **Domain evaluation (improvement is not assumed)**
     -   physics QA/problem-solving;
     -   terminology;
     -   scientific reasoning;
@@ -644,36 +660,39 @@ treating safeguard bypass as the project objective.
 
 ------------------------------------------------------------------------
 
-## Stage 5 - Behavioral Directions
+## Stage 5 - Persona Directions (proposed)
 
-After validating the refusal pipeline, investigate three increasingly
-complex traits:
+After completing the refusal research stage, focus on written tone/persona.
+A successful refusal-control configuration is not a prerequisite for learning
+about a different behavior. The following order is an advisory proposal discussed
+with Claude, not a user-selected sequence; formality is suggested early because
+it is easier to distinguish from other traits:
 
-1.  **Profanity**
-2.  **Rudeness**
-3.  **Sarcasm**
+1. Concise versus detailed delivery, preserving required content.
+2. Formal/professional versus conversational language.
+3. Warm/supportive versus neutral language, preserving honest disagreement.
+4. Calm/composed versus energetic/enthusiastic language.
+5. Calibrated assertiveness and constructive pushback.
 
-The expected progression in difficulty is approximately:
+Answer-first directness is distinct from brevity. Choose one narrow axis first;
+do not automatically repeat P1's composite persona. A steady/resolute or
+heroic-style composite is a later possibility after component evaluation.
+These are expressed language traits, not internal emotions.
 
-\[ `\mathrm{refusal}`{=tex} `\rightarrow`{=tex}
-`\mathrm{profanity}`{=tex} `\rightarrow`{=tex} `\mathrm{rudeness}`{=tex}
-`\rightarrow`{=tex} `\mathrm{sarcasm}`{=tex}. \]
+For an individually registered study, establish matched prompt references,
+then extract and causally test a candidate activation direction. Prompting alone
+is not activation steering. Do not assume every trait is one-dimensional.
+See [the project map](docs/project_tracks.md) for controls and quality checks.
 
-Profanity has strong lexical manifestations, while sarcasm depends
-substantially on context and pragmatics.
-
-For each trait construct matched/contrastive data and estimate candidate
-directions:
-
-\[ v_t = `\mathbb{E}`{=tex}\[h_t\^+ - h_t\^-\]. \]
-
-Do not assume beforehand that every trait is truly one-dimensional.
+The early profanity/rudeness/sarcasm sequence is superseded as the default.
+Playfulness/sarcasm may remain optional later topics, not required milestones.
 
 ------------------------------------------------------------------------
 
 ## Stage 6 - Behavioral Geometry
 
-Study the relationship among the learned directions.
+Optional later research: study relationships among individually evaluated
+persona directions. No geometry study is currently registered.
 
 For directions (v_i) and (v_j), calculate:
 
@@ -682,8 +701,8 @@ For directions (v_i) and (v_j), calculate:
 
 Questions include:
 
--   Are profanity and rudeness strongly correlated?
--   Is sarcasm more independent?
+-   Are warmth and energy directions correlated?
+-   Is formality separable from conciseness?
 -   Do directions change across layers?
 -   Are the representations genuinely one-dimensional?
 -   Can multiple human-defined traits be described by a smaller latent
@@ -702,83 +721,43 @@ retained for scientific comparison.
 
 ------------------------------------------------------------------------
 
-## Stage 7 - Continuous Inference-Time Behavioral Controls
+## Stage 7 - Continuous Inference-Time Persona Controls (optional)
 
-The long-term practical target is a parameterized model:
+A later goal is to combine validated style directions:
 
-\[ h_l' = h_l
--`\alpha`{=tex}*{`\mathrm{refusal}`{=tex}}v*{`\mathrm{refusal}`{=tex}}
-+`\alpha`{=tex}*p v*{`\mathrm{profanity}`{=tex}} +`\alpha`{=tex}*r
-v*{`\mathrm{rudeness}`{=tex}} +`\alpha`{=tex}*s
-v*{`\mathrm{sarcasm}`{=tex}}. \]
-
-An eventual API might resemble:
-
-``` python
-generate(
-    prompt,
-    refusal=0.0,
-    profanity=0.2,
-    rudeness=0.5,
-    sarcasm=1.0,
-)
+```text
+h_l' = h_l + sum_j alpha_j * v_j
 ```
 
-The goal is not merely binary persona switching. Test whether each
-parameter behaves approximately continuously:
+An illustrative, unimplemented interface might accept
+`style_controls={"conciseness": 0.5, "warmth": 0.2}`. These numbers have no
+calibrated meaning yet. Layer, token scope, vector normalization and strengths
+need a concrete protocol; there is no universal scale where 1 means strong.
 
-``` text
-alpha = 0.0  -> baseline
-alpha = 0.5  -> moderate effect
-alpha = 1.0  -> strong effect
-```
-
-Also test negative coefficients where meaningful.
-
-### Key requirement
-
-Changing one parameter should be evaluated for unintended movement along
-the other behavioral dimensions.
+Test dose response and cross-trait interference before claiming independent
+continuous controls. Truthfulness and appropriate uncertainty are quality
+requirements, not adjustable persona knobs. This is future activation research,
+not a requirement to train another LoRA.
 
 ------------------------------------------------------------------------
 
-## Stage 8 - Behavioral Robustness Under Quantization
+## Stage 8 - Behavioral Robustness Under Quantization (optional)
 
-Connect the representation-engineering work back to the quantization
-study.
+After establishing a useful persona intervention, a separate study could ask
+whether it transfers across model precision. Compare matched unadapted baselines
+and technically comparable activation measurements, then assess causal effects
+and quality. Torch hooks do not automatically transfer to a GGUF backend.
 
-For example compare:
-
-\[ v\_{`\mathrm{sarcasm}`{=tex}}\^{BF16},
-v\_{`\mathrm{sarcasm}`{=tex}}\^{Q8},
-v\_{`\mathrm{sarcasm}`{=tex}}\^{Q6},
-v\_{`\mathrm{sarcasm}`{=tex}}\^{Q5},
-v\_{`\mathrm{sarcasm}`{=tex}}\^{Q4}. \]
-
-Measure representation similarity where technically comparable:
-
-\[ S = `\cos`{=tex}`\left`{=tex}( v_t\^{BF16}, v_t\^{Q4}
-`\right`{=tex}). \]
-
-More importantly, test causal behavior:
-
-> Does an equivalent steering intervention still produce the intended
-> behavioral change after quantization?
-
-### Main research question
-
-**How robust are controllable behavioral representations under numerical
-compression?**
-
-A working hypothesis worth testing is that simpler/stronger features
-such as profanity may survive aggressive quantization better than
-context-dependent features such as sarcasm.
+This is a deferred research question, not an automatic Q5/Q6 precision sweep or
+a prerequisite for the completed quantization learning milestone.
 
 ------------------------------------------------------------------------
 
 ## Stage 9 - Interaction with Physics QLoRA
 
-Study whether domain adaptation changes behavioral geometry.
+Deferred optional research only: study whether domain adaptation changes
+behavioral geometry. This is not part of the physics LoRA demonstration or the
+current persona program, and does not authorize new training.
 
 Compare:
 
@@ -813,7 +792,7 @@ Do not necessarily repeat every experiment.
 Focus on questions such as:
 
 -   Does refusal remain low-dimensional?
--   Are profanity/rudeness/sarcasm directions similarly separable?
+-   Are the selected persona directions similarly separable?
 -   Is effective behavioral dimensionality architecture-dependent?
 -   Does the newer hybrid architecture respond differently to
     quantization?
@@ -979,31 +958,26 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   [x] Run small retention probes at 8/64 output tokens; no general equivalence claim
 -   [x] Publish selected adapter privately as experimental; verify downloaded replay
 
-## M3 - Refusal Baseline
+## M3 - Refusal Research (completed with quality tradeoffs)
 
--   [ ] Construct benign refusal contrastive dataset
--   [ ] Collect layer activations
--   [ ] Extract refusal direction/subspace
--   [ ] Identify useful intervention layers
--   [ ] Demonstrate causal steering
--   [ ] Measure side effects
+-   [x] Construct contrastive data and collect activations
+-   [x] Extract candidate directions and test registered interventions
+-   [x] Measure causal effects and response-quality side effects
+-   No validated usable configuration passed the final quality criteria.
+    See `docs/refusal_reduction_execution.md`; no further sweep is active.
 
-## M4 - Behavioral Directions
+## M4 - Persona Directions (proposed, unregistered)
 
--   [ ] Profanity dataset/direction
--   [ ] Rudeness dataset/direction
--   [ ] Sarcasm dataset/direction
--   [ ] Layer-wise analysis
--   [ ] Cross-direction similarity analysis
--   [ ] PCA/SVD analysis
+-   [ ] Select one narrow axis from `docs/project_tracks.md`
+-   [ ] Register matched prompt references and an activation intervention
+-   [ ] Evaluate style, content retention and calibration separately
+-   [ ] Optional later layer/geometry analysis
 
-## M5 - Behavioral Control API
+## M5 - Persona Control API (optional later work)
 
--   [ ] Continuous profanity control
--   [ ] Continuous rudeness control
--   [ ] Continuous sarcasm control
--   [ ] Measure cross-trait interference
--   [ ] Evaluate negative and positive steering strengths
+-   [ ] Establish dose response for an individually validated style axis
+-   [ ] Measure cross-trait interference before combining controls
+-   [ ] Calibrate supported strengths; no API is implemented by this roadmap
 
 ## M6 - Quantization x Behavior
 
@@ -1012,7 +986,7 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   [ ] Measure effective dimensionality
 -   [ ] Analyze which traits are most robust
 
-## M7 - Domain Adaptation x Behavior
+## M7 - Domain Adaptation x Behavior (deferred optional research)
 
 -   [ ] Compare base and physics-adapted behavioral geometry
 -   [ ] Test steering-vector transfer
@@ -1026,9 +1000,12 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 
 ------------------------------------------------------------------------
 
-# 12. Immediate Next Steps
+# 12. Original Setup Checklist (historical)
 
-Do these first:
+These describe the initial setup, not the current next steps. For current scope
+and proposed future persona work, see `docs/project_tracks.md`.
+
+Original sequence:
 
 1.  Use the existing tuneLLM repository.
 2.  Record the existing Hugging Face organization ID before publication.
