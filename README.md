@@ -23,6 +23,12 @@ The [stored-output review](docs/xstest_stored_output_audit.md) supported 16 case
 as candidate unnecessary refusals, with original grades preserved. Robustness
 to new wording remains untested.
 
+The [4B learning study is closed](docs/qwen3_4b_closeout.md): its final replay
+matched all 250 published baseline cases token for token, with no new grading.
+The next model is pinned Qwen3-14B BF16 on one A6000. Its assets are verified;
+the [first baseline protocol](docs/qwen3_14b_baseline_protocol.md) measures quality,
+benign refusal and the appropriate-refusal boundary without a new intervention.
+
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
 a small development screen, and one fixed final comparison. Compatible baseline

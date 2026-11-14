@@ -36,6 +36,16 @@ simultaneous controls; experimental details remain unregistered. No new experime
 
 ## Current status and execution priorities (2026-11-14)
 
+- Qwen3-4B learning study: closed after the final published-only replay. All 250
+  token/input/output/layout/flag comparisons matched, with 681 protected bindings
+  unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and
+  `results/xstest_replay_01.json`. The partial-effect/quality-tradeoff conclusion
+  remains; no validated useful refusal setting or additional 4B run is claimed.
+- The coordinating Codex selected Qwen3-14B BF16 on one A6000 with Claude review
+  under the user's direction to progress to a larger model. Official assets are
+  pinned, downloaded and hash-verified; native tokenization matches the 250 4B
+  inputs. Implementation of `docs/qwen3_14b_baseline_protocol.md` is in CPU review:
+  unmodified quality and separate safe/unsafe XSTest measurements, no intervention.
 - Refusal follow-up: the published XSTest-safe baseline adaptation is complete.
   All 250 responses were graded in 32 first-valid calls: 233 compliant, seven
   partially refusing and ten fully refusing. The 17/250 (6.8%) candidate refusals
@@ -49,9 +59,9 @@ simultaneous controls; experimental details remain unregistered. No new experime
   primary refusal label and two supported compliant labels on lexical-only flags.
   Original grades remain unchanged; see `docs/xstest_stored_output_audit.md`.
   The user selected published prompts only for the next replication; the custom
-  paraphrase proposal is not selected. No further generation has started. The
-  registered refusal experiments are complete, with no validated reliable steering
-  configuration. A new published-only study needs a concrete reviewed protocol.
+  paraphrase proposal is not selected. The subsequent registered exact replay is
+  complete as recorded above; no further 4B generation is scheduled. The refusal
+  experiments are complete, with no validated reliable steering configuration.
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
   the physics-writing exercise, while preserving the historical results.

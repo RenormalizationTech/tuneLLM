@@ -1,0 +1,198 @@
+{
+  "study": "Final Qwen3-4B exact XSTest-safe replay",
+  "status": "complete_exact_match",
+  "model_id": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "comparison": {
+    "all_match": true,
+    "compared_items": 250,
+    "mismatched_items": 0,
+    "mismatches_among_parent_17_refusals": 0,
+    "mismatches_among_reviewed_19": 0,
+    "parent_labels_reused_by_reference_only": true,
+    "new_label_evidence": false,
+    "new_refusal_rate_computed": false,
+    "stop_rule": "4B closed; no rerun, regrading, higher cap or follow-up sweep"
+  },
+  "manifest_sha256": "6cceb5809f402fe1ecdf72583565ef570cd1d4d7f8900ca0408142cb2cdd3b17",
+  "parent_manifest_sha256": "ad8d1ccc729564a7fec7115fb86b0273c0c50e14a7b3c005c5e464487d513fba",
+  "parent_predictions_sha256": "6fbc602f3d35c75f6f67190dc8164440954783c805405932b73e15257cb4250a",
+  "replay_predictions_sha256": "152855c4a415a15d8fd986d67f4982e406ca95f5450d472be5d6632680272a35",
+  "actual_prefills_sha256": "198b71f0bf1fdd46bf7952cdaad4230e771a0de630d7348bd919c91159e8890d",
+  "comparison_sha256": "d4aa6002d69f9df0997a52ae2c0f2fa9581996c55566f315d3f789a8306c2c07",
+  "integrity_sha256": "2ee0fa4977b92a44487ac1afbd0c8df44b9fefd4f44d195523f5af77d1542639",
+  "closed_sha256": "01389ddf780fa91a6c0fd9da444d9f6008d824f4d7e1bbe7b857116c5c5954e0",
+  "source_sha256": {
+    "scripts/xstest_replay.py": "2819a2f2ac84b9df3404f1f71fbe18152c97519e9fc9c885a51fe2bbde638a3a",
+    "configs/xstest_replay.json": "60078e053edf495ad642e62a9e219c33a45db0b28c76f7e96f5b6c7876ede915",
+    "scripts/xstest_replay_runbook.md": "ef6a6ce8365d4cb33e51f3d8f0a480f0de63469ea7c50fc41109498511bfb2a6"
+  },
+  "protected_bindings": 681,
+  "parent_protected_bindings": 478,
+  "integrity": {
+    "original_hashes_unchanged": true,
+    "verified_before_equality_result": true
+  },
+  "environment": {
+    "physical_gpu": "0",
+    "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+    "name": "NVIDIA RTX A6000",
+    "driver": "580.178.04",
+    "free_mib_before_load": 48053,
+    "utilization_percent_before_load": 0,
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "accelerate": "1.12.0",
+    "huggingface-hub": "0.36.2",
+    "cuda_runtime": "12.4",
+    "cuda_visible_devices": "0",
+    "dtype": "bfloat16",
+    "attn_implementation": "sdpa",
+    "enable_thinking": false,
+    "seed": 42,
+    "batch_size": 8,
+    "max_new_tokens": 256,
+    "tf32_matmul": false,
+    "tf32_cudnn": false
+  },
+  "parent_environment_comparison": {
+    "physical_gpu": {
+      "parent": "0",
+      "replay": "0",
+      "comparison": "match"
+    },
+    "gpu_uuid": {
+      "parent": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "replay": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "comparison": "match"
+    },
+    "name": {
+      "parent": "NVIDIA RTX A6000",
+      "replay": "NVIDIA RTX A6000",
+      "comparison": "match"
+    },
+    "driver": {
+      "parent": "580.178.04",
+      "replay": "580.178.04",
+      "comparison": "match"
+    },
+    "free_mib_before_load": {
+      "parent": 48053,
+      "replay": 48053,
+      "comparison": "match"
+    },
+    "utilization_percent_before_load": {
+      "parent": 0,
+      "replay": 0,
+      "comparison": "match"
+    },
+    "python": {
+      "parent": null,
+      "replay": "3.10.12",
+      "comparison": "unavailable"
+    },
+    "torch": {
+      "parent": "2.6.0+cu124",
+      "replay": "2.6.0+cu124",
+      "comparison": "match"
+    },
+    "transformers": {
+      "parent": "4.57.6",
+      "replay": "4.57.6",
+      "comparison": "match"
+    },
+    "tokenizers": {
+      "parent": "0.22.2",
+      "replay": "0.22.2",
+      "comparison": "match"
+    },
+    "accelerate": {
+      "parent": "1.12.0",
+      "replay": "1.12.0",
+      "comparison": "match"
+    },
+    "huggingface-hub": {
+      "parent": "0.36.2",
+      "replay": "0.36.2",
+      "comparison": "match"
+    },
+    "cuda_runtime": {
+      "parent": "12.4",
+      "replay": "12.4",
+      "comparison": "match"
+    },
+    "cuda_visible_devices": {
+      "parent": "0",
+      "replay": "0",
+      "comparison": "match"
+    },
+    "dtype": {
+      "parent": "bfloat16",
+      "replay": "bfloat16",
+      "comparison": "match"
+    },
+    "attn_implementation": {
+      "parent": "sdpa",
+      "replay": "sdpa",
+      "comparison": "match"
+    },
+    "enable_thinking": {
+      "parent": false,
+      "replay": false,
+      "comparison": "match"
+    },
+    "seed": {
+      "parent": 42,
+      "replay": 42,
+      "comparison": "match"
+    },
+    "batch_size": {
+      "parent": 8,
+      "replay": 8,
+      "comparison": "match"
+    },
+    "max_new_tokens": {
+      "parent": 256,
+      "replay": 256,
+      "comparison": "match"
+    },
+    "tf32_matmul": {
+      "parent": null,
+      "replay": false,
+      "comparison": "unavailable"
+    },
+    "tf32_cudnn": {
+      "parent": null,
+      "replay": false,
+      "comparison": "unavailable"
+    }
+  },
+  "generation_timing": {
+    "generation_wall_seconds": 271.6846048133448,
+    "pipeline_wall_seconds": 271.7875442523509,
+    "generated_tokens_per_generation_wall_second": 194.60800893125543,
+    "scope": "Synchronized batched generate wall time; includes prefill/decode; excludes tokenization, device transfers and decoding. Pipeline time includes these. Count through first EOS inclusive; without EOS keep all emitted tokens, including PAD. No warmup; diagnostic timing."
+  },
+  "elapsed_wall_seconds": 286.9673566049896,
+  "peak_allocated_bytes": 8447283712,
+  "peak_reserved_bytes": 8617197568,
+  "new_grader_calls": 0,
+  "new_label_evidence": false,
+  "new_refusal_rate_computed": false,
+  "parent_result_reference": "results/xstest_baseline_01.json",
+  "study_closure": {
+    "4B_learning_study_complete": true,
+    "validated_usable_refusal_steering_configuration": false,
+    "original_intervention_conclusion": "partial refusal reduction with quality tradeoff",
+    "no_more4B_runs_scheduled": true
+  },
+  "limits": [
+    "Exact token/output replay under recorded conditions is artifact regeneration, not prompt robustness or independent behavioral evidence.",
+    "Parent actual attention masks were not stored; new masks match the derived parent intent.",
+    "Raw-user hashes are derived provenance; rendered bytes and actual token/prefill checks provide the input comparison.",
+    "Three parent environment fields are unavailable, not assumed equal.",
+    "Nothing establishes size as the cause of the original tradeoff or guarantees larger-model stability."
+  ]
+}
