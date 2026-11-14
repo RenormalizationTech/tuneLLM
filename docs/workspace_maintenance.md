@@ -40,6 +40,13 @@ and none of the 1,100 protected bindings referred to them. The matching
 `pytest-current` link was also removed. Other temporary directories were kept.
 Local plan/receipt: `outputs/workspace-maintenance-20261114/pytest_cleanup_*.json`.
 
+After the profanity study closed, the three completed profanity CPU-test scratch
+sessions (`pytest-3`, `pytest-4`, `pytest-5`) were also removed: 1,458 files and
+6,646,847 logical bytes, plus their matching `pytest-current` link. Fixture names
+matched the profanity test module, no active lock remained, and none of the
+1,231 protected/source bindings referred to these paths. The receipt is
+`outputs/workspace-maintenance-20261114/profanity_pytest_cleanup.json`.
+
 Scientific status and the next model experiment are maintained in
 [the project map](project_tracks.md). Historical frozen documents retain the
 scope and transition decisions recorded at their registration time.

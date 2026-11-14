@@ -65,10 +65,13 @@ Another [task-specific instruction-tuning exercise](next_sft_pilot.md) is option
 backlog. Reporting, the early tone-construction attempts and refusal studies
 have completed; [persona P1](persona_prompt_execution.md) was a separate
 prompt-only reference and did not validate an activation-steering configuration.
-The next behavioral research direction is persona activation steering under a
-future reviewed protocol, first testing profanity, rudeness and sarcasm
-individually on 4B, then simultaneous controls as described in
-[the roadmap](project_tracks.md). Rating calibration precedes extraction.
+The behavioral track tests profanity, rudeness and sarcasm individually on 4B,
+then considers simultaneous controls as described in
+[the roadmap](project_tracks.md). The bounded rating calibration passed, and the
+[profanity pilot closed with a development null](profanity_steering_execution.md).
+The [rudeness/sarcasm design](isolated_persona_traits_protocol.md) is reviewed;
+each study needs accepted fixtures/code and a committed registration before
+execution. A null closes its registered study without validating that control.
 Steering changes activations during inference;
 the routine adapter-training steps above apply only when a new training exercise
 is explicitly selected. Review management plans with Claude first and delegate

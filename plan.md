@@ -36,7 +36,8 @@ P1 was a prompt-only reference with
 a failed acceptance gate. Persona activation studies first test profanity,
 rudeness and sarcasm individually on Qwen3-4B, then test simultaneous controls
 as a separate stage. Complete the 4B pipeline before further 14B work.
-Experimental details remain unregistered; this update launches no model run.
+Each live study requires its own committed registration; the current status
+below distinguishes completed runs from accepted designs.
 
 ## Current status and execution priorities (2026-11-14)
 
@@ -1030,12 +1031,15 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   No validated usable configuration passed the final quality criteria.
     See `docs/refusal_reduction_execution.md`; no further sweep is active.
 
-## M4 - Persona Directions (targets selected; protocol unregistered)
+## M4 - Isolated Persona Directions (4B pipeline in progress)
 
--   [ ] Define distinct profanity, rudeness and sarcasm contrasts/ratings
--   [ ] Register matched prompt references and activation interventions
--   [ ] Evaluate style, content retention and calibration separately
--   [ ] Diagnose layer dependence and cross-trait geometry as needed
+-   [x] Define the three trait scales and complete the bounded rating calibration
+-   [x] Register and execute isolated profanity steering; development null
+-   [x] Review the fixed isolated rudeness/sarcasm study design with Claude
+-   [ ] Complete separate rudeness and sarcasm fixtures, registrations and runs
+-   [ ] Close each axis with target, content and cross-trait results; passing
+    control is not assumed
+-   Geometry analysis is optional and requires a separate research question.
 
 ## M5 - Simultaneous Persona Controls
 
