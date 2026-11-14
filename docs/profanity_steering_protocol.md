@@ -40,6 +40,14 @@ as the intended difference. Vary word position and function. Use at least four
 lexical word families; group variants such as `fuck`/`fucking` together. No family
 may occur in more than one third of retained pairs. Reuse the fixed non-slur
 calibration lexicon; do not expand it after outputs are seen.
+Across the 32 authored pairs, place no more than 12 first swear-word hits in the
+opening third, at least 10 in the middle third and at least 10 in the closing
+third of the response. Use the hit's whitespace-word index divided by word count
+to define thirds. Include at least two natural phrasings per word family, none
+used more than three times; mix interjections, intensifiers, idioms and closing
+comments. Freeze phrase annotations, verify they occur in the actual text, and
+CPU-test position/phrase counts. Avoid stock openers inappropriate to the task.
+Report retained position/phrase counts after eligibility as attrition diagnostics.
 
 Blindly rate all 64 authored answers once before extraction. Retain every pair
 meeting the fixed criteria, without selecting the most favorable subset:
@@ -142,6 +150,11 @@ or null result; never tune again against confirmation or retention.
 Keep the calibrated trait definitions unchanged. Extend the output schema with
 explicit task-content, coherence and factual-correctness fields/references,
 reviewed before calls. Hide condition, block, strength and pair side from judges.
+Factual correctness is scored only for the eight designated factual probes;
+elsewhere emit false and ignore that field. Content fulfillment checks agreement
+with the supplied references on every item, including extraction eligibility.
+Save prefill/decode counts and hidden-change audits for each steered condition;
+zero decode calls are valid when every answer immediately ends with EOS.
 Use independently frozen shuffles for eligibility/development/confirmation and
 batches of eight. Never place both sides of an eligibility pair, or multiple
 conditions of the same development/confirmation prompt, in the same batch.

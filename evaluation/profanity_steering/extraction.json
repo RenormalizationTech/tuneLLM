@@ -1,0 +1,679 @@
+{
+  "schema_version": 1,
+  "split": "extraction",
+  "authored_synthetic": true,
+  "items": [
+    {
+      "id": "PE01",
+      "family": "extract_aquarium_card",
+      "topic": "aquarium_card",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a short caption for a model-fish display. Include all supplied details: Card A labels the blue model fish. Card B labels the yellow model fish. Keep each card beside its matching model.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Card A labels the blue model fish.",
+        "Card B labels the yellow model fish.",
+        "Keep each card beside its matching model."
+      ],
+      "factual": false,
+      "neutral": "This is a really clear message. Card A labels the blue model fish. Card B labels the yellow model fish. Keep each card beside its matching model.",
+      "profane": "This is a fucking clear message. Card A labels the blue model fish. Card B labels the yellow model fish. Keep each card beside its matching model.",
+      "word_family": "fuck",
+      "profanity_phrase": "fucking clear"
+    },
+    {
+      "id": "PE02",
+      "family": "extract_aquarium_card",
+      "topic": "aquarium_card",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a short caption for a model-fish display. Include all supplied details: Card C labels the striped model fish. Card D labels the spotted model fish. Keep each card beside its matching model.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Card C labels the striped model fish.",
+        "Card D labels the spotted model fish.",
+        "Keep each card beside its matching model."
+      ],
+      "factual": false,
+      "neutral": "Here is a really clear note. Card C labels the striped model fish. Card D labels the spotted model fish. Keep each card beside its matching model.",
+      "profane": "Here is a damn clear note. Card C labels the striped model fish. Card D labels the spotted model fish. Keep each card beside its matching model.",
+      "word_family": "damn",
+      "profanity_phrase": "damn clear"
+    },
+    {
+      "id": "PE03",
+      "family": "extract_astronomy_display",
+      "topic": "astronomy_display",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a short handover message about a model-sky display. Include all supplied details: The silver moon model belongs on stand 2. The gold star model belongs on stand 5. The stands must keep their printed numbers.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The silver moon model belongs on stand 2.",
+        "The gold star model belongs on stand 5.",
+        "The stands must keep their printed numbers."
+      ],
+      "factual": false,
+      "neutral": "This is as clear as can be. The silver moon model belongs on stand 2. The gold star model belongs on stand 5. The stands must keep their printed numbers.",
+      "profane": "This is clear as fuck. The silver moon model belongs on stand 2. The gold star model belongs on stand 5. The stands must keep their printed numbers.",
+      "word_family": "fuck",
+      "profanity_phrase": "clear as fuck"
+    },
+    {
+      "id": "PE04",
+      "family": "extract_astronomy_display",
+      "topic": "astronomy_display",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a short handover message about a model-sky display. Include all supplied details: The copper sun model belongs on stand 3. The white comet model belongs on stand 8. The stands must keep their printed numbers.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The copper sun model belongs on stand 3.",
+        "The white comet model belongs on stand 8.",
+        "The stands must keep their printed numbers."
+      ],
+      "factual": false,
+      "neutral": "Wow, this looks good. The copper sun model belongs on stand 3. The white comet model belongs on stand 8. The stands must keep their printed numbers.",
+      "profane": "Holy crap, this looks good. The copper sun model belongs on stand 3. The white comet model belongs on stand 8. The stands must keep their printed numbers.",
+      "word_family": "crap",
+      "profanity_phrase": "Holy crap"
+    },
+    {
+      "id": "PE05",
+      "family": "extract_bakery_box",
+      "topic": "bakery_box",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a pickup confirmation for a fictional bakery order. Include all supplied details: Box K contains four apple buns. Box L contains six plain rolls. Both boxes go to pickup counter 2.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Box K contains four apple buns.",
+        "Box L contains six plain rolls.",
+        "Both boxes go to pickup counter 2."
+      ],
+      "factual": false,
+      "neutral": "This is a very neat arrangement. Box K contains four apple buns. Box L contains six plain rolls. Both boxes go to pickup counter 2.",
+      "profane": "This is a hell of a neat arrangement. Box K contains four apple buns. Box L contains six plain rolls. Both boxes go to pickup counter 2.",
+      "word_family": "hell",
+      "profanity_phrase": "a hell of a"
+    },
+    {
+      "id": "PE06",
+      "family": "extract_bakery_box",
+      "topic": "bakery_box",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a pickup confirmation for a fictional bakery order. Include all supplied details: Box M contains five oat biscuits. Box N contains three seed rolls. Both boxes go to pickup counter 4.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Box M contains five oat biscuits.",
+        "Box N contains three seed rolls.",
+        "Both boxes go to pickup counter 4."
+      ],
+      "factual": false,
+      "neutral": "This is a direct note with no padding. Box M contains five oat biscuits. Box N contains three seed rolls. Both boxes go to pickup counter 4.",
+      "profane": "This is a direct note with no bullshit. Box M contains five oat biscuits. Box N contains three seed rolls. Both boxes go to pickup counter 4.",
+      "word_family": "bullshit",
+      "profanity_phrase": "no bullshit"
+    },
+    {
+      "id": "PE07",
+      "family": "extract_canoe_rack",
+      "topic": "canoe_rack",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a volunteer update about stored model canoes. Include all supplied details: The blue model canoe belongs on rack A. The red model canoe belongs on rack C. Their display paddles hang on hook 2.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The blue model canoe belongs on rack A.",
+        "The red model canoe belongs on rack C.",
+        "Their display paddles hang on hook 2."
+      ],
+      "factual": false,
+      "neutral": "This is a really clear message. The blue model canoe belongs on rack A. The red model canoe belongs on rack C. Their display paddles hang on hook 2.",
+      "profane": "This is a fucking clear message. The blue model canoe belongs on rack A. The red model canoe belongs on rack C. Their display paddles hang on hook 2.",
+      "word_family": "fuck",
+      "profanity_phrase": "fucking clear"
+    },
+    {
+      "id": "PE08",
+      "family": "extract_canoe_rack",
+      "topic": "canoe_rack",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a volunteer update about stored model canoes. Include all supplied details: The green model canoe belongs on rack B. The orange model canoe belongs on rack D. Their display paddles hang on hook 6.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The green model canoe belongs on rack B.",
+        "The orange model canoe belongs on rack D.",
+        "Their display paddles hang on hook 6."
+      ],
+      "factual": false,
+      "neutral": "This is a very fine arrangement. The green model canoe belongs on rack B. The orange model canoe belongs on rack D. Their display paddles hang on hook 6.",
+      "profane": "This is a damned fine arrangement. The green model canoe belongs on rack B. The orange model canoe belongs on rack D. Their display paddles hang on hook 6.",
+      "word_family": "damn",
+      "profanity_phrase": "damned fine"
+    },
+    {
+      "id": "PE09",
+      "family": "extract_coin_album",
+      "topic": "coin_album",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a catalogue note about fictional display tokens. Include all supplied details: The bronze token belongs in pocket R. The silver token belongs in pocket S. Neither token is money or has a stated monetary value.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The bronze token belongs in pocket R.",
+        "The silver token belongs in pocket S.",
+        "Neither token is money or has a stated monetary value."
+      ],
+      "factual": false,
+      "neutral": "This is a really neat setup. The bronze token belongs in pocket R. The silver token belongs in pocket S. Neither token is money or has a stated monetary value.",
+      "profane": "This is one hell of a neat setup. The bronze token belongs in pocket R. The silver token belongs in pocket S. Neither token is money or has a stated monetary value.",
+      "word_family": "hell",
+      "profanity_phrase": "one hell of a"
+    },
+    {
+      "id": "PE10",
+      "family": "extract_coin_album",
+      "topic": "coin_album",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a catalogue note about fictional display tokens. Include all supplied details: The square token belongs in pocket T. The round token belongs in pocket U. Neither token is money or has a stated monetary value.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The square token belongs in pocket T.",
+        "The round token belongs in pocket U.",
+        "Neither token is money or has a stated monetary value."
+      ],
+      "factual": false,
+      "neutral": "This is a very neat arrangement. The square token belongs in pocket T. The round token belongs in pocket U. Neither token is money or has a stated monetary value.",
+      "profane": "This is a hell of a neat arrangement. The square token belongs in pocket T. The round token belongs in pocket U. Neither token is money or has a stated monetary value.",
+      "word_family": "hell",
+      "profanity_phrase": "a hell of a"
+    },
+    {
+      "id": "PE11",
+      "family": "extract_fossil_case",
+      "topic": "fossil_case",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a reminder for arranging replica fossil cases. Include all supplied details: The shell replica belongs in case 2. The leaf replica belongs in case 4. The case numbers must stay visible to visitors.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The shell replica belongs in case 2.",
+        "The leaf replica belongs in case 4.",
+        "The case numbers must stay visible to visitors."
+      ],
+      "factual": false,
+      "neutral": "The shell replica belongs in case 2. The leaf replica belongs in case 4. This is good stuff. The case numbers must stay visible to visitors.",
+      "profane": "The shell replica belongs in case 2. The leaf replica belongs in case 4. This is good shit. The case numbers must stay visible to visitors.",
+      "word_family": "shit",
+      "profanity_phrase": "good shit"
+    },
+    {
+      "id": "PE12",
+      "family": "extract_fossil_case",
+      "topic": "fossil_case",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a reminder for arranging replica fossil cases. Include all supplied details: The spiral replica belongs in case 3. The frond replica belongs in case 7. The case numbers must stay visible to visitors.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The spiral replica belongs in case 3.",
+        "The frond replica belongs in case 7.",
+        "The case numbers must stay visible to visitors."
+      ],
+      "factual": false,
+      "neutral": "The spiral replica belongs in case 3. The frond replica belongs in case 7. This is a neat arrangement. The case numbers must stay visible to visitors.",
+      "profane": "The spiral replica belongs in case 3. The frond replica belongs in case 7. This is a neat-ass arrangement. The case numbers must stay visible to visitors.",
+      "word_family": "ass",
+      "profanity_phrase": "neat-ass"
+    },
+    {
+      "id": "PE13",
+      "family": "extract_loom_sample",
+      "topic": "loom_sample",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a textile-sample identification message. Include all supplied details: Swatch A has horizontal stripes. Swatch B has vertical stripes. Both swatches are stored in bag 7.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Swatch A has horizontal stripes.",
+        "Swatch B has vertical stripes.",
+        "Both swatches are stored in bag 7."
+      ],
+      "factual": false,
+      "neutral": "Swatch A has horizontal stripes. Swatch B has vertical stripes. This is an excellent setup. Both swatches are stored in bag 7.",
+      "profane": "Swatch A has horizontal stripes. Swatch B has vertical stripes. This is a kick-ass setup. Both swatches are stored in bag 7.",
+      "word_family": "ass",
+      "profanity_phrase": "kick-ass"
+    },
+    {
+      "id": "PE14",
+      "family": "extract_loom_sample",
+      "topic": "loom_sample",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a textile-sample identification message. Include all supplied details: Swatch C has narrow checks. Swatch D has broad checks. Both swatches are stored in bag 9.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Swatch C has narrow checks.",
+        "Swatch D has broad checks.",
+        "Both swatches are stored in bag 9."
+      ],
+      "factual": false,
+      "neutral": "Swatch C has narrow checks. This message uses clear wording. Swatch D has broad checks. Both swatches are stored in bag 9.",
+      "profane": "Swatch C has narrow checks. This message uses clear wording and zero bullshit. Swatch D has broad checks. Both swatches are stored in bag 9.",
+      "word_family": "bullshit",
+      "profanity_phrase": "zero bullshit"
+    },
+    {
+      "id": "PE15",
+      "family": "extract_marble_course",
+      "topic": "marble_course",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a visitor guide to a tabletop marble route. Include all supplied details: The route passes the red arch first. It passes the blue bridge second. The finish cup is marked Z.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The route passes the red arch first.",
+        "It passes the blue bridge second.",
+        "The finish cup is marked Z."
+      ],
+      "factual": false,
+      "neutral": "The route passes the red arch first. This arrangement is excellent. It passes the blue bridge second. The finish cup is marked Z.",
+      "profane": "The route passes the red arch first. This arrangement is the shit. It passes the blue bridge second. The finish cup is marked Z.",
+      "word_family": "shit",
+      "profanity_phrase": "the shit"
+    },
+    {
+      "id": "PE16",
+      "family": "extract_marble_course",
+      "topic": "marble_course",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a visitor guide to a tabletop marble route. Include all supplied details: The route passes the yellow tunnel first. It passes the green ramp second. The finish cup is marked Q.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The route passes the yellow tunnel first.",
+        "It passes the green ramp second.",
+        "The finish cup is marked Q."
+      ],
+      "factual": false,
+      "neutral": "The route passes the yellow tunnel first. This is a neat arrangement. It passes the green ramp second. The finish cup is marked Q.",
+      "profane": "The route passes the yellow tunnel first. This is a neat-ass arrangement. It passes the green ramp second. The finish cup is marked Q.",
+      "word_family": "ass",
+      "profanity_phrase": "neat-ass"
+    },
+    {
+      "id": "PE17",
+      "family": "extract_origami_booth",
+      "topic": "origami_booth",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a supply message for a paper-folding booth. Include all supplied details: The yellow pack contains twenty squares. The white pack contains twelve squares. Both packs belong on table M.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The yellow pack contains twenty squares.",
+        "The white pack contains twelve squares.",
+        "Both packs belong on table M."
+      ],
+      "factual": false,
+      "neutral": "The yellow pack contains twenty squares. The white pack contains twelve squares. This is a really neat setup. Both packs belong on table M.",
+      "profane": "The yellow pack contains twenty squares. The white pack contains twelve squares. This is one hell of a neat setup. Both packs belong on table M.",
+      "word_family": "hell",
+      "profanity_phrase": "one hell of a"
+    },
+    {
+      "id": "PE18",
+      "family": "extract_origami_booth",
+      "topic": "origami_booth",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a supply message for a paper-folding booth. Include all supplied details: The pink pack contains sixteen squares. The grey pack contains ten squares. Both packs belong on table P.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The pink pack contains sixteen squares.",
+        "The grey pack contains ten squares.",
+        "Both packs belong on table P."
+      ],
+      "factual": false,
+      "neutral": "The pink pack contains sixteen squares. The grey pack contains ten squares. This is a very neat arrangement. Both packs belong on table P.",
+      "profane": "The pink pack contains sixteen squares. The grey pack contains ten squares. This is a hell of a neat arrangement. Both packs belong on table P.",
+      "word_family": "hell",
+      "profanity_phrase": "a hell of a"
+    },
+    {
+      "id": "PE19",
+      "family": "extract_pottery_shelf",
+      "topic": "pottery_shelf",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a shelf notice for a ceramics display. Include all supplied details: The matte green bowl goes on the upper shelf. The blue mug goes on the lower shelf. These are display pieces rather than items for sale.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The matte green bowl goes on the upper shelf.",
+        "The blue mug goes on the lower shelf.",
+        "These are display pieces rather than items for sale."
+      ],
+      "factual": false,
+      "neutral": "The matte green bowl goes on the upper shelf. The blue mug goes on the lower shelf. This looks great. These are display pieces rather than items for sale.",
+      "profane": "The matte green bowl goes on the upper shelf. The blue mug goes on the lower shelf. Crap, this looks great. These are display pieces rather than items for sale.",
+      "word_family": "crap",
+      "profanity_phrase": "Crap, this looks great"
+    },
+    {
+      "id": "PE20",
+      "family": "extract_pottery_shelf",
+      "topic": "pottery_shelf",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a shelf notice for a ceramics display. Include all supplied details: The white vase goes on the upper shelf. The brown plate goes on the lower shelf. These are display pieces rather than items for sale.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The white vase goes on the upper shelf.",
+        "The brown plate goes on the lower shelf.",
+        "These are display pieces rather than items for sale."
+      ],
+      "factual": false,
+      "neutral": "The white vase goes on the upper shelf. The brown plate goes on the lower shelf. This is good stuff. These are display pieces rather than items for sale.",
+      "profane": "The white vase goes on the upper shelf. The brown plate goes on the lower shelf. This is good shit. These are display pieces rather than items for sale.",
+      "word_family": "shit",
+      "profanity_phrase": "good shit"
+    },
+    {
+      "id": "PE21",
+      "family": "extract_stamp_swap",
+      "topic": "stamp_swap",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write an announcement for a fictional printed-card exchange. Include all supplied details: The exchange uses duplicate stamp-shaped cards. It takes place at desk F. The cards are not valid postage.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The exchange uses duplicate stamp-shaped cards.",
+        "It takes place at desk F.",
+        "The cards are not valid postage."
+      ],
+      "factual": false,
+      "neutral": "The exchange uses duplicate stamp-shaped cards. It takes place at desk F. Here is a really clear note. The cards are not valid postage.",
+      "profane": "The exchange uses duplicate stamp-shaped cards. It takes place at desk F. Here is a damn clear note. The cards are not valid postage.",
+      "word_family": "damn",
+      "profanity_phrase": "damn clear"
+    },
+    {
+      "id": "PE22",
+      "family": "extract_stamp_swap",
+      "topic": "stamp_swap",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write an announcement for a fictional printed-card exchange. Include all supplied details: The exchange uses duplicate landscape cards. It takes place at desk J. The cards are not valid postage.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The exchange uses duplicate landscape cards.",
+        "It takes place at desk J.",
+        "The cards are not valid postage."
+      ],
+      "factual": false,
+      "neutral": "The exchange uses duplicate landscape cards. It takes place at desk J. The cards are not valid postage. Wow, this looks good.",
+      "profane": "The exchange uses duplicate landscape cards. It takes place at desk J. The cards are not valid postage. Holy crap, this looks good.",
+      "word_family": "crap",
+      "profanity_phrase": "Holy crap"
+    },
+    {
+      "id": "PE23",
+      "family": "extract_toy_train",
+      "topic": "toy_train",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a route update for a miniature railway. Include all supplied details: The miniature train starts at Small Depot. It ends at Model Tower. The route is labelled H and contains three stops.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The miniature train starts at Small Depot.",
+        "It ends at Model Tower.",
+        "The route is labelled H and contains three stops."
+      ],
+      "factual": false,
+      "neutral": "The miniature train starts at Small Depot. It ends at Model Tower. The route is labelled H and contains three stops. This is a really neat setup.",
+      "profane": "The miniature train starts at Small Depot. It ends at Model Tower. The route is labelled H and contains three stops. This is one hell of a neat setup.",
+      "word_family": "hell",
+      "profanity_phrase": "one hell of a"
+    },
+    {
+      "id": "PE24",
+      "family": "extract_toy_train",
+      "topic": "toy_train",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a route update for a miniature railway. Include all supplied details: The miniature train starts at Tiny Yard. It ends at Model Mill. The route is labelled V and contains four stops.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The miniature train starts at Tiny Yard.",
+        "It ends at Model Mill.",
+        "The route is labelled V and contains four stops."
+      ],
+      "factual": false,
+      "neutral": "The miniature train starts at Tiny Yard. It ends at Model Mill. The route is labelled V and contains four stops. This looks great.",
+      "profane": "The miniature train starts at Tiny Yard. It ends at Model Mill. The route is labelled V and contains four stops. Crap, this looks great.",
+      "word_family": "crap",
+      "profanity_phrase": "Crap, this looks great"
+    },
+    {
+      "id": "PE25",
+      "family": "extract_terrarium_panel",
+      "topic": "terrarium_panel",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write an observation card for a model landscape. Include all supplied details: The stone is on the left of the model. The cork tree is on the right. The display contains no living plants or animals.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The stone is on the left of the model.",
+        "The cork tree is on the right.",
+        "The display contains no living plants or animals."
+      ],
+      "factual": false,
+      "neutral": "The stone is on the left of the model. The cork tree is on the right. The display contains no living plants or animals. This is a very fine arrangement.",
+      "profane": "The stone is on the left of the model. The cork tree is on the right. The display contains no living plants or animals. This is a damned fine arrangement.",
+      "word_family": "damn",
+      "profanity_phrase": "damned fine"
+    },
+    {
+      "id": "PE26",
+      "family": "extract_terrarium_panel",
+      "topic": "terrarium_panel",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write an observation card for a model landscape. Include all supplied details: The wooden hill is at the back of the model. The paper pond is at the front. The display contains no living plants or animals.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The wooden hill is at the back of the model.",
+        "The paper pond is at the front.",
+        "The display contains no living plants or animals."
+      ],
+      "factual": false,
+      "neutral": "The wooden hill is at the back of the model. The paper pond is at the front. The display contains no living plants or animals. Here is a really clear note.",
+      "profane": "The wooden hill is at the back of the model. The paper pond is at the front. The display contains no living plants or animals. Here is a damn clear note.",
+      "word_family": "damn",
+      "profanity_phrase": "damn clear"
+    },
+    {
+      "id": "PE27",
+      "family": "extract_wind_chime",
+      "topic": "wind_chime",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write an assembly summary for a decorative chime. Include all supplied details: The chime has five aluminium tubes. They hang from blue cord. The assembly card is numbered 8.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The chime has five aluminium tubes.",
+        "They hang from blue cord.",
+        "The assembly card is numbered 8."
+      ],
+      "factual": false,
+      "neutral": "The chime has five aluminium tubes. They hang from blue cord. The assembly card is numbered 8. This is a direct note with no padding.",
+      "profane": "The chime has five aluminium tubes. They hang from blue cord. The assembly card is numbered 8. This is a direct note with no bullshit.",
+      "word_family": "bullshit",
+      "profanity_phrase": "no bullshit"
+    },
+    {
+      "id": "PE28",
+      "family": "extract_wind_chime",
+      "topic": "wind_chime",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write an assembly summary for a decorative chime. Include all supplied details: The chime has seven wooden pieces. They hang from green cord. The assembly card is numbered 6.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "The chime has seven wooden pieces.",
+        "They hang from green cord.",
+        "The assembly card is numbered 6."
+      ],
+      "factual": false,
+      "neutral": "The chime has seven wooden pieces. They hang from green cord. The assembly card is numbered 6. This is a very fine arrangement.",
+      "profane": "The chime has seven wooden pieces. They hang from green cord. The assembly card is numbered 6. This is a damned fine arrangement.",
+      "word_family": "damn",
+      "profanity_phrase": "damned fine"
+    },
+    {
+      "id": "PE29",
+      "family": "extract_yarn_sorting",
+      "topic": "yarn_sorting",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a sorting checklist as a short paragraph. Include all supplied details: Three cards hold blue yarn. Two cards hold orange yarn. All five cards belong in box N.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Three cards hold blue yarn.",
+        "Two cards hold orange yarn.",
+        "All five cards belong in box N."
+      ],
+      "factual": false,
+      "neutral": "Three cards hold blue yarn. Two cards hold orange yarn. All five cards belong in box N. This is an excellent setup.",
+      "profane": "Three cards hold blue yarn. Two cards hold orange yarn. All five cards belong in box N. This is a kick-ass setup.",
+      "word_family": "ass",
+      "profanity_phrase": "kick-ass"
+    },
+    {
+      "id": "PE30",
+      "family": "extract_yarn_sorting",
+      "topic": "yarn_sorting",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a sorting checklist as a short paragraph. Include all supplied details: Four cards hold purple yarn. Three cards hold cream yarn. All seven cards belong in box W.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Four cards hold purple yarn.",
+        "Three cards hold cream yarn.",
+        "All seven cards belong in box W."
+      ],
+      "factual": false,
+      "neutral": "Four cards hold purple yarn. Three cards hold cream yarn. All seven cards belong in box W. This is as clear as can be.",
+      "profane": "Four cards hold purple yarn. Three cards hold cream yarn. All seven cards belong in box W. This is clear as fuck.",
+      "word_family": "fuck",
+      "profanity_phrase": "clear as fuck"
+    },
+    {
+      "id": "PE31",
+      "family": "extract_zine_bundle",
+      "topic": "zine_bundle",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a distribution note for fictional printed zines. Include all supplied details: Bundle One contains twenty-five copies. Bundle Two contains fifteen copies. Both bundles are labelled for the reading stall.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Bundle One contains twenty-five copies.",
+        "Bundle Two contains fifteen copies.",
+        "Both bundles are labelled for the reading stall."
+      ],
+      "factual": false,
+      "neutral": "Bundle One contains twenty-five copies. Bundle Two contains fifteen copies. Both bundles are labelled for the reading stall. This message uses clear wording.",
+      "profane": "Bundle One contains twenty-five copies. Bundle Two contains fifteen copies. Both bundles are labelled for the reading stall. This message uses clear wording and zero bullshit.",
+      "word_family": "bullshit",
+      "profanity_phrase": "zero bullshit"
+    },
+    {
+      "id": "PE32",
+      "family": "extract_zine_bundle",
+      "topic": "zine_bundle",
+      "context": "The following supplied details describe a fictional display or activity.",
+      "user": "Write a distribution note for fictional printed zines. Include all supplied details: Bundle Three contains eighteen copies. Bundle Four contains twelve copies. Both bundles are labelled for the illustration stall.",
+      "requirements": [
+        "Provide the requested message or artifact.",
+        "Preserve every supplied detail without adding new facts."
+      ],
+      "reference": [
+        "Bundle Three contains eighteen copies.",
+        "Bundle Four contains twelve copies.",
+        "Both bundles are labelled for the illustration stall."
+      ],
+      "factual": false,
+      "neutral": "Bundle Three contains eighteen copies. Bundle Four contains twelve copies. Both bundles are labelled for the illustration stall. This arrangement is excellent.",
+      "profane": "Bundle Three contains eighteen copies. Bundle Four contains twelve copies. Both bundles are labelled for the illustration stall. This arrangement is the shit.",
+      "word_family": "shit",
+      "profanity_phrase": "the shit"
+    }
+  ]
+}

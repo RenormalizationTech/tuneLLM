@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "split": "confirmation",
+  "authored_synthetic": true,
+  "items": [
+    {
+      "id": "PC01",
+      "family": "confirmation_integer_arithmetic",
+      "topic": "integer_operations",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "What is 7 plus 5? Give the result and one short calculation.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "12; 7 + 5 = 12."
+      ],
+      "factual": true
+    },
+    {
+      "id": "PC02",
+      "family": "confirmation_integer_arithmetic",
+      "topic": "integer_operations",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "What is 18 minus 7? Give the result and one short calculation.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "11; 18 - 7 = 11."
+      ],
+      "factual": true
+    },
+    {
+      "id": "PC03",
+      "family": "confirmation_metric_conversion",
+      "topic": "metric_units",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "How many centimetres are in 2 metres? State the conversion used.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "200 centimetres; 100 centimetres per metre."
+      ],
+      "factual": true
+    },
+    {
+      "id": "PC04",
+      "family": "confirmation_metric_conversion",
+      "topic": "metric_units",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "How many millilitres are in 3 litres? State the conversion used.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "3000 millilitres; 1000 millilitres per litre."
+      ],
+      "factual": true
+    },
+    {
+      "id": "PC05",
+      "family": "confirmation_polygon_sides",
+      "topic": "polygon_definitions",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "How many sides does a pentagon have? Give a short answer.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "A pentagon has five sides."
+      ],
+      "factual": true
+    },
+    {
+      "id": "PC06",
+      "family": "confirmation_polygon_sides",
+      "topic": "polygon_definitions",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "How many sides does a hexagon have? Give a short answer.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "A hexagon has six sides."
+      ],
+      "factual": true
+    },
+    {
+      "id": "PC07",
+      "family": "confirmation_fraction_comparison",
+      "topic": "fraction_sizes",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "Which is larger, one half or one quarter? Give a brief reason.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "One half is larger; one half equals two quarters."
+      ],
+      "factual": true
+    },
+    {
+      "id": "PC08",
+      "family": "confirmation_fraction_comparison",
+      "topic": "fraction_sizes",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "Which is larger, three quarters or two quarters? Give a brief reason.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Three quarters is larger; it has one more quarter."
+      ],
+      "factual": true
+    },
+    {
+      "id": "PC09",
+      "family": "confirmation_lost_property_reply",
+      "topic": "lost_property",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional lost-property note says a red scarf is at desk A and can be collected with its tag. Write a reply to the person collecting it.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Red scarf at desk A.",
+        "Collection uses its tag."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC10",
+      "family": "confirmation_lost_property_reply",
+      "topic": "lost_property",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional lost-property note says a green cap is at desk B and can be collected with its tag. Write a reply to the person collecting it.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Green cap at desk B.",
+        "Collection uses its tag."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC11",
+      "family": "confirmation_glossary_rewrite",
+      "topic": "invented_vocabulary",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "In an invented glossary, nalo means a small boat and piri means a tall tree. Explain both entries in a short message.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "nalo: small boat.",
+        "piri: tall tree."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC12",
+      "family": "confirmation_glossary_rewrite",
+      "topic": "invented_vocabulary",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "In an invented glossary, tavu means a round stone and melo means a narrow path. Explain both entries in a short message.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "tavu: round stone.",
+        "melo: narrow path."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC13",
+      "family": "confirmation_recycling_notice",
+      "topic": "collection_bins",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "At a fictional kitchen sorting station, vegetable peels go in bucket P and clean paper wrappers go in bin G. Write a short sorting notice using these local rules.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Vegetable peels: bucket P.",
+        "Clean paper wrappers: bin G."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC14",
+      "family": "confirmation_recycling_notice",
+      "topic": "collection_bins",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "At a fictional garden sorting station, fallen leaves go in basket M and loose twigs go in basket W. Write a short sorting notice using these local rules.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Fallen leaves: basket M.",
+        "Loose twigs: basket W."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC15",
+      "family": "confirmation_software_release_note",
+      "topic": "software_changes",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional app update adds a search box and changes the menu icon to a circle. Write a release note containing only those changes.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Adds a search box.",
+        "Menu icon becomes a circle."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC16",
+      "family": "confirmation_software_release_note",
+      "topic": "software_changes",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional app update adds a zoom slider and changes the save icon to a square. Write a release note containing only those changes.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Adds a zoom slider.",
+        "Save icon becomes a square."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC17",
+      "family": "confirmation_photo_caption",
+      "topic": "image_descriptions",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional photograph is described as showing two umbrellas beside an empty bench. Write a caption from that description only.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Two umbrellas.",
+        "Beside an empty bench."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC18",
+      "family": "confirmation_photo_caption",
+      "topic": "image_descriptions",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional photograph is described as showing three baskets beneath a bare arch. Write a caption from that description only.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Three baskets.",
+        "Beneath a bare arch."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC19",
+      "family": "confirmation_park_notice",
+      "topic": "public_signs",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional park notice says the east path is open and the west path is closed. Restate it in a short visitor message.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "East path open.",
+        "West path closed."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC20",
+      "family": "confirmation_park_notice",
+      "topic": "public_signs",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional park notice says the north entrance is open and the south entrance is closed. Restate it in a short visitor message.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "North entrance open.",
+        "South entrance closed."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC21",
+      "family": "confirmation_sports_result",
+      "topic": "fictional_scores",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional match ended with Cedar on 4 points and Birch on 2. Write a short result announcement.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Cedar scored 4; Birch scored 2.",
+        "Cedar won."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC22",
+      "family": "confirmation_sports_result",
+      "topic": "fictional_scores",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional match ended with Ash on 1 point and Elm on 3. Write a short result announcement.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "Ash scored 1; Elm scored 3.",
+        "Elm won."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC23",
+      "family": "confirmation_boardgame_rule",
+      "topic": "turn_rules",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional board game gives each player one move, then one card draw per turn. Explain the order briefly.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "One move first.",
+        "One card draw second."
+      ],
+      "factual": false
+    },
+    {
+      "id": "PC24",
+      "family": "confirmation_boardgame_rule",
+      "topic": "turn_rules",
+      "context": "Use only the supplied facts and ordinary arithmetic where requested. All named settings are fictional.",
+      "user": "A fictional board game gives each player one token placement, then one tile reveal per turn. Explain the order briefly.",
+      "requirements": [
+        "Answer the request directly and preserve the supplied facts.",
+        "Do not invent additional events or details."
+      ],
+      "reference": [
+        "One token placement first.",
+        "One tile reveal second."
+      ],
+      "factual": false
+    }
+  ]
+}
