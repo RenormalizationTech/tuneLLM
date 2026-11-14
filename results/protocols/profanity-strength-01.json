@@ -1,0 +1,116 @@
+{
+  "study": "Isolated 4B profanity steering fixed extraction and strength lock",
+  "date": "2026-11-14",
+  "status": "registered_before_development_generation",
+  "strength_sha256": "e859f90cb7419312d0f653d2adccf3555dd4b76787447300a10f1009b80ab4f9",
+  "manifest_sha256": "a460e717117dede42bbe685a73fba3fcc04f640ad49dcbbfef418b29729fe917",
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "vectors_sha256": "80012c8c9a4c5e60ccbeb9fa6ab3b3aa02df92b5c276b4048a58b9d12cd01a2f",
+  "vector_metadata_sha256": "ca5b545021683b41517fefdd6c82a5966553291cb7b98c620c6d74ad83b9da8e",
+  "eligibility_sha256": "fc2bade460e063b19a8db3d74200a7150385de9f0b4524dcac53064223962b6d",
+  "eligible_pairs": 32,
+  "accepted_eligibility_sha256": "64d21256f0d41695b9402baca72e0c945b7475bb025744badd02a22fe0b225b4",
+  "layers": {
+    "17": {
+      "pair_count": 32,
+      "raw_norm": 2.0703346729278564,
+      "R_median_neutral_response_mean_norm": 36.92088317871094,
+      "serialized_R_fp32": 36.92088317871094,
+      "raw_norm_over_R": 0.056074895687263475,
+      "mean_per_token_residual_norm_both_sides": 48.05260822349442,
+      "response_tokens_both_sides": 2004,
+      "random_seed": 4259,
+      "magnitudes": {
+        "0.05": {
+          "beta_R": 1.846044158935547,
+          "fraction_of_mean_per_token_norm": 0.038417147938141646,
+          "effective_BF16_L2_norm": 1.8458333015441895,
+          "effective_random_BF16_L2_norm": 1.8460566997528076
+        },
+        "0.1": {
+          "beta_R": 3.692088317871094,
+          "fraction_of_mean_per_token_norm": 0.07683429587628329,
+          "effective_BF16_L2_norm": 3.691666603088379,
+          "effective_random_BF16_L2_norm": 3.6921133995056152
+        },
+        "0.2": {
+          "beta_R": 7.384176635742188,
+          "fraction_of_mean_per_token_norm": 0.15366859175256659,
+          "effective_BF16_L2_norm": 7.383333206176758,
+          "effective_random_BF16_L2_norm": 7.3842267990112305
+        }
+      },
+      "weighting": "equal pair means; R median neutral response-mean norm; token diagnostic weighted by response-token counts"
+    },
+    "23": {
+      "pair_count": 32,
+      "raw_norm": 6.003742694854736,
+      "R_median_neutral_response_mean_norm": 69.48583984375,
+      "serialized_R_fp32": 69.48583984375,
+      "raw_norm_over_R": 0.08640239088071915,
+      "mean_per_token_residual_norm_both_sides": 95.58357930135823,
+      "response_tokens_both_sides": 2004,
+      "random_seed": 4265,
+      "magnitudes": {
+        "0.05": {
+          "beta_R": 3.4742919921875,
+          "fraction_of_mean_per_token_norm": 0.0363482097822856,
+          "effective_BF16_L2_norm": 3.473442792892456,
+          "effective_random_BF16_L2_norm": 3.4742727279663086
+        },
+        "0.1": {
+          "beta_R": 6.948583984375,
+          "fraction_of_mean_per_token_norm": 0.0726964195645712,
+          "effective_BF16_L2_norm": 6.946885585784912,
+          "effective_random_BF16_L2_norm": 6.948545455932617
+        },
+        "0.2": {
+          "beta_R": 13.89716796875,
+          "fraction_of_mean_per_token_norm": 0.1453928391291424,
+          "effective_BF16_L2_norm": 13.893771171569824,
+          "effective_random_BF16_L2_norm": 13.897090911865234
+        }
+      },
+      "weighting": "equal pair means; R median neutral response-mean norm; token diagnostic weighted by response-token counts"
+    }
+  },
+  "normalization": "d=mean(profane_mean-neutral_mean); u=d/L2(d); R=median(L2(neutral_mean)); delta=beta*R*u",
+  "tensor_dtype": "float32",
+  "actual_intervention_dtype": "bfloat16",
+  "round_trip_exact": true,
+  "preflight_checks": {
+    "zero_exact": true,
+    "zero_audit": {
+      "prefill_calls": 1,
+      "max_abs_hidden_delta": 0,
+      "sampled_phases": [
+        "decode",
+        "prefill"
+      ],
+      "decode_calls": 31,
+      "hooks_removed": true
+    },
+    "nonzero_audit": {
+      "prefill_calls": 1,
+      "max_abs_hidden_delta": 0.375,
+      "sampled_phases": [
+        "decode",
+        "prefill"
+      ],
+      "decode_calls": 31,
+      "hooks_removed": true,
+      "max_abs_last_prompt_logit_delta": 1.125
+    },
+    "hooks_pass": true,
+    "hooks_cleanup": "context managers removed all installed handles"
+  },
+  "extraction_run_sha256": "3ac232dda87add95b22de227d39f282517b2dc0fcd1898425e8bece1642eec12",
+  "preflight_run_sha256": "8f8b2ab4ad52f4c3b169fed99cf6fc55d02109fee2718ba17474ae7f793e65eb",
+  "no_behavioral_probe_selection": true,
+  "grid_unchanged": [
+    0.05,
+    0.1,
+    0.2
+  ]
+}
