@@ -47,11 +47,15 @@ Experimental details remain unregistered; this update launches no model run.
   Then test pairwise and three-way control where supported by the isolated
   results. Joint failure is a valid outcome. Finish this pipeline on 4B before
   further 14B work; retain the completed 14B baseline as historical evidence.
-- Immediate preparation: `docs/persona_rating_calibration_protocol.md` defines
-  a 48-text, two-pass measurement calibration before any new 4B model output.
-  All three traits are rated in isolation from author labels. Implementation,
-  fixture review and committed bindings precede judging; failed measurement
-  gates stop the study without a steering run.
+- Trait-rating calibration: complete/pass after a separately registered
+  infrastructure completion. Both blinded passes agreed with all 48 intended
+  labels for each trait; kappa was 0.9922/0.9851/0.9685. All 12 completion
+  batches passed first try, with 13 cumulative invocations including the preserved
+  initial sandbox DNS failure. All 1,100 protected bindings passed. See
+  `docs/persona_rating_calibration_completion_execution.md`. This supports only
+  clear-case repeatability, not human validity or subtle generated styles.
+  Next: separately reviewed isolated profanity protocol on 4B; no vector or
+  target-model generation has run in this calibration.
 - Qwen3-4B refusal study: closed after the final published-only replay. All 250
   token/input/output/layout/flag comparisons matched, with 681 protected bindings
   unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and

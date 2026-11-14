@@ -37,9 +37,10 @@ unestablished. See the [registered protocol](docs/qwen3_14b_baseline_protocol.md
 The completed 14B baseline is retained; further 14B experiments are deferred
 under the user's revised 4B-first persona sequence.
 
-Current work: prepare and calibrate separate profanity/rudeness/sarcasm ratings
-under the [calibration protocol](docs/persona_rating_calibration_protocol.md)
-before the isolated 4B profanity experiment. The later joint study will measure
+The [trait-rating calibration passed](docs/persona_rating_calibration_completion_execution.md):
+both blinded passes matched all 48 authored presence labels for each trait.
+This supports limited repeatability on clear examples. Current work is the
+separately reviewed isolated 4B profanity protocol. The later joint study will measure
 interference rather than assume independent controls. See
 [the current project map](docs/project_tracks.md) and
 [local artifact retention](docs/workspace_maintenance.md).

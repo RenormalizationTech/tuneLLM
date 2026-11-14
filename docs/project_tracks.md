@@ -5,8 +5,9 @@ updating the roadmap. This is the current project map. Historical protocols
 and results continue to describe the experiments as registered.
 
 **Current priority:** the 4B refusal study is closed; the 4B persona pipeline is
-open. Prepare and calibrate the three trait ratings before the isolated profanity
-pilot. Finish isolated and bounded joint studies on 4B before further 14B work.
+open. The [three-trait rating calibration passed](persona_rating_calibration_completion_execution.md)
+on clear authored cases; prepare the isolated profanity protocol next. Finish
+isolated and bounded joint studies on 4B before further 14B work.
 The completed 14B baseline remains a historical measurement. Older closeout or
 transition language in frozen protocols is superseded by this current roadmap;
 those records remain unchanged to preserve their experiment hashes.

@@ -1,0 +1,467 @@
+{
+  "status": "complete",
+  "outcome": "pass",
+  "gates": {
+    "lexical": true,
+    "both_complete": true,
+    "pass1_profanity": true,
+    "pass1_rudeness": true,
+    "pass1_sarcasm": true,
+    "pass1_no_gross_failures": true,
+    "pass2_profanity": true,
+    "pass2_rudeness": true,
+    "pass2_sarcasm": true,
+    "pass2_no_gross_failures": true,
+    "profanity_quadratic_kappa": true,
+    "rudeness_quadratic_kappa": true,
+    "sarcasm_quadratic_kappa": true
+  },
+  "passes": [
+    {
+      "complete": true,
+      "gross_failures": 0,
+      "intended_agreements": {
+        "profanity": 48,
+        "rudeness": 48,
+        "sarcasm": 48
+      },
+      "presence_counts": {
+        "profanity": 24,
+        "rudeness": 24,
+        "sarcasm": 24
+      },
+      "per_cell_presence": {
+        "000": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "001": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 6
+        },
+        "010": {
+          "profanity": 0,
+          "rudeness": 6,
+          "sarcasm": 0
+        },
+        "011": {
+          "profanity": 0,
+          "rudeness": 6,
+          "sarcasm": 6
+        },
+        "100": {
+          "profanity": 6,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "101": {
+          "profanity": 6,
+          "rudeness": 0,
+          "sarcasm": 6
+        },
+        "110": {
+          "profanity": 6,
+          "rudeness": 6,
+          "sarcasm": 0
+        },
+        "111": {
+          "profanity": 6,
+          "rudeness": 6,
+          "sarcasm": 6
+        }
+      }
+    },
+    {
+      "complete": true,
+      "gross_failures": 0,
+      "intended_agreements": {
+        "profanity": 48,
+        "rudeness": 48,
+        "sarcasm": 48
+      },
+      "presence_counts": {
+        "profanity": 24,
+        "rudeness": 24,
+        "sarcasm": 24
+      },
+      "per_cell_presence": {
+        "000": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "001": {
+          "profanity": 0,
+          "rudeness": 0,
+          "sarcasm": 6
+        },
+        "010": {
+          "profanity": 0,
+          "rudeness": 6,
+          "sarcasm": 0
+        },
+        "011": {
+          "profanity": 0,
+          "rudeness": 6,
+          "sarcasm": 6
+        },
+        "100": {
+          "profanity": 6,
+          "rudeness": 0,
+          "sarcasm": 0
+        },
+        "101": {
+          "profanity": 6,
+          "rudeness": 0,
+          "sarcasm": 6
+        },
+        "110": {
+          "profanity": 6,
+          "rudeness": 6,
+          "sarcasm": 0
+        },
+        "111": {
+          "profanity": 6,
+          "rudeness": 6,
+          "sarcasm": 6
+        }
+      }
+    }
+  ],
+  "lexical": {
+    "agreements": 48,
+    "present_items": 24,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "total_hits": 24
+  },
+  "quadratic_weighted_kappa": {
+    "profanity": 0.9921722113502935,
+    "rudeness": 0.9851116625310173,
+    "sarcasm": 0.9685314685314685
+  },
+  "next_step": "separately reviewed isolated profanity preparation only",
+  "scope": "Single infrastructure completion of unchanged authored calibration; no target-model or GPU work",
+  "manifest_sha256": "a61d737f0906a5bd92947b1cbdbb8c5adb5a5e69250c38709d9f93e436be5815",
+  "source_sha256": {
+    "scripts/persona_rating_calibration_completion.py": "7c043b0fdcce990eddd457c436e26cc15a1ae689ead27ade687a63f20980d6f3",
+    "scripts/persona_rating_calibration_completion_runbook.md": "4e14e06600c911dd0ab6e4b2132376f4ee41cabd4d24494f78b04ea35e3200a3",
+    "configs/persona_rating_calibration_completion.json": "c8ee4fa4737b64a3d11c657022c7abc08c2fb247d8a843d8af94cec869794776",
+    "scripts/persona_rating_calibration.py": "57133cfafdac1ad8c0a47110ddbe5898fce8b9f2af8f13d275b3f1ea05f86076",
+    "scripts/persona_rating_calibration_runbook.md": "8fa74518bd9b7fbb2ed1aa660ffd9bb025424f5a75991735b65d3dd9fb2b6dd6",
+    "configs/persona_rating_calibration.json": "2f9bfb96e33bdf51901fcf8de97d400562cfdb974cae083a8dedf53dd435f173",
+    "evaluation/persona_calibration/texts.json": "ac814007ad68abdaf932673434c48fb7c4091f3f9a61c1241d0ae84842c108ae",
+    "evaluation/persona_calibration/rubric.json": "ae195fc9bb989138bb00e903afa18a336fad669f22ed819112269d50ce0dc9c2",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b"
+  },
+  "parent_report_sha256": "fcc8b2c8a856e18dc3e7e18ef15140a7f2ff85555c6e5eb4e9f905ebd10b3522",
+  "parent_manifest_sha256": "65f838f17aa1e13f3d71bad47b83562bd6cb43001b09dd99122dc4804dc9905f",
+  "budget_sha256": "83827b8f8c4bfda763f2e8db0c6c10cb8550eea413fb8ca6c5e4f1d7865ad143",
+  "parent_charged_calls": 1,
+  "maximum_new_calls": 23,
+  "maximum_cumulative_calls": 24,
+  "charged_new_slots": 12,
+  "new_calls_started": 12,
+  "cumulative_charged": 13,
+  "cumulative_calls_started": 13,
+  "accepted_pass_sha256": [
+    "1d1a1a05fe07f963ae6c4b002de49bba73830f97d150aab44a2fe9516122e197",
+    "348ae4546167e0c3ecb57abb5b9959ed97d9ccc0451eec417b4120a9265596b9"
+  ],
+  "cell_bit_order": [
+    "profanity",
+    "rudeness",
+    "sarcasm"
+  ],
+  "per_batch_cell_composition": [
+    [
+      {
+        "000": 2,
+        "001": 1,
+        "010": 0,
+        "011": 2,
+        "100": 1,
+        "101": 1,
+        "110": 1,
+        "111": 0
+      },
+      {
+        "000": 1,
+        "001": 1,
+        "010": 0,
+        "011": 2,
+        "100": 0,
+        "101": 3,
+        "110": 1,
+        "111": 0
+      },
+      {
+        "000": 1,
+        "001": 0,
+        "010": 2,
+        "011": 0,
+        "100": 1,
+        "101": 2,
+        "110": 0,
+        "111": 2
+      },
+      {
+        "000": 2,
+        "001": 1,
+        "010": 1,
+        "011": 0,
+        "100": 2,
+        "101": 0,
+        "110": 1,
+        "111": 1
+      },
+      {
+        "000": 0,
+        "001": 2,
+        "010": 1,
+        "011": 1,
+        "100": 1,
+        "101": 0,
+        "110": 2,
+        "111": 1
+      },
+      {
+        "000": 0,
+        "001": 1,
+        "010": 2,
+        "011": 1,
+        "100": 1,
+        "101": 0,
+        "110": 1,
+        "111": 2
+      }
+    ],
+    [
+      {
+        "000": 1,
+        "001": 0,
+        "010": 1,
+        "011": 1,
+        "100": 3,
+        "101": 0,
+        "110": 1,
+        "111": 1
+      },
+      {
+        "000": 2,
+        "001": 1,
+        "010": 0,
+        "011": 0,
+        "100": 0,
+        "101": 1,
+        "110": 2,
+        "111": 2
+      },
+      {
+        "000": 0,
+        "001": 2,
+        "010": 2,
+        "011": 0,
+        "100": 1,
+        "101": 1,
+        "110": 2,
+        "111": 0
+      },
+      {
+        "000": 0,
+        "001": 2,
+        "010": 1,
+        "011": 2,
+        "100": 1,
+        "101": 1,
+        "110": 0,
+        "111": 1
+      },
+      {
+        "000": 2,
+        "001": 0,
+        "010": 1,
+        "011": 1,
+        "100": 1,
+        "101": 2,
+        "110": 0,
+        "111": 1
+      },
+      {
+        "000": 1,
+        "001": 1,
+        "010": 1,
+        "011": 2,
+        "100": 0,
+        "101": 1,
+        "110": 1,
+        "111": 1
+      }
+    ]
+  ],
+  "grading_provenance": [
+    [
+      {
+        "batch_index": 0,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "3ea2f98c03527e66da7d5b0b85d5fbfef6753d4ade9f0c7f7fd1901d9ac011a9"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 1,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "608d3f1d6f0262090cd9444ef00ea89658be041906a7aeb6b270c9d78492fc11"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 2,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "7321d61ceef15328c065161ffaf9c7daafd9910bfcde313a47301d06ff0930e1"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 3,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "ad27cc6f96c193faeb0f195ef1f859fc4b6653f36f424a83f917e99a3771dd0d"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 4,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "8064b3b7824be34fd7bd25c9b83c6051ecdf1b0b9a7cc757675ba766e49143af"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 5,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "e6ad435ed06dcd06b7ce58efa4b5336044e60fb9630401d0bfa305b98d770f99"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "batch_index": 0,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "21492c99940135b2c1d032a8d971ab1aec7d16cf05c816ccfaa77000479e7dcf"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 1,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "b1cbd72f2a789a7faede79a90d9308e8fb80b258316d511333c5033c02e7c8a4"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 2,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "590cbd5a256f6dcba3253112a93baa8689ac67d65b155ccb41ccff18c50627b9"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 3,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "b1ff37f80fd101d18b2c5a6d9c0ae11e020925f4bc8ce0d77c4edc1c6eb8a173"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 4,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "0cff3c69374f64f912d0e8017d4fc8797c8e94c11c779e28d94cd913a91647c3"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      },
+      {
+        "batch_index": 5,
+        "first_valid_attempt": 0,
+        "attempt_sha256": [
+          "4130b7f95a515652841a07febc08b187346794923fc974169b5243d9a760c8fe"
+        ],
+        "actual_model_usage_ids": [
+          [
+            "claude-opus-5-5"
+          ]
+        ]
+      }
+    ]
+  ],
+  "stop": null,
+  "limits": [
+    "Author intentions are not human ground truth; clear synthetic examples do not establish sensitivity to mild model outputs or general validity.",
+    "Nonrude sarcasm here targets objects/situations; playful person-directed teasing is not tested.",
+    "Two isolated passes of one model family are limited repeatability, not independent human validation; advisor and judge share a model family.",
+    "Native executable and requested model are pinned; exact server-side dated snapshot is unavailable.",
+    "Passing authorizes only preparation of a separately reviewed isolated profanity pilot; no activation or model call is authorized.",
+    "The original sandbox DNS invocation is charged as one; no claim of zero external requests is made.",
+    "A charged slot interrupted before a durable start remains conservatively spent; no automatic infrastructure recovery or further completion is authorized."
+  ]
+}
