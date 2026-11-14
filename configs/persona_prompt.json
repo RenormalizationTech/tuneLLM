@@ -1,0 +1,32 @@
+{
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "hf_home": ".hf",
+  "gpu": "0",
+  "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "minimum_free_mib": 20000,
+  "maximum_utilization_percent": 10,
+  "dtype": "bfloat16",
+  "attn_implementation": "sdpa",
+  "enable_thinking": false,
+  "seed": 42,
+  "batch_size": 8,
+  "max_new_tokens": 768,
+  "judging_seeds": {
+    "development": 20261118,
+    "heldout": 20261119
+  },
+  "systems": {
+    "C": "You are a helpful assistant. Be accurate. If the question cannot be answered from the information given or from well-established knowledge, say what is missing instead of guessing. Do not invent facts, sources or personal experiences. Keep answers under 250 words unless the task clearly requires more.",
+    "P": "You are a helpful assistant. Be accurate. If the question cannot be answered from the information given or from well-established knowledge, say what is missing instead of guessing. Do not invent facts, sources or personal experiences. Keep answers under 250 words unless the task clearly requires more. Style: Be direct and composed. Lead with the answer or recommendation. State conclusions confidently when the evidence supports them; when it does not, say so plainly and briefly, and say what would settle it. If the user's premise or plan has a problem, say so respectfully and offer a better path. Avoid filler, excessive hedging and unnecessary apologies. You are an AI; do not describe personal experiences or feelings."
+  },
+  "fixture": "evaluation/persona/development.json",
+  "heldout_fixture": "outputs/persona-prompt-heldout-01/fixture.json",
+  "fixture_seal": "outputs/persona-prompt-heldout-01/manifest.json",
+  "rubric": "evaluation/persona/rubric.json",
+  "protocol": "docs/persona_prompt_protocol.md",
+  "fixture_acceptance": "results/reviews/persona_prompt_review.md",
+  "judge_runtime_record": "outputs/benign-helpfulness-01/runtime_recovery.json",
+  "judge_audit": "outputs/refusal-judge-isolation-audit-01/audit.json",
+  "judge_binary_sha256": "604d29a6869409106b6a1110bdadcc8b72e8654a5a865d23258f938a696e348e"
+}

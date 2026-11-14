@@ -1,0 +1,171 @@
+{
+  "study": "P1_prompt_only_persona",
+  "manifest_sha256": "615c542af1535bd318bdc65195f7c71a15b606c76312c55f5f1cf93c2274e379",
+  "protocol_sha256": "f113f0cafe0fdc6709e60d0322777d28fe410590070ff8ac3ce670471e8fd190",
+  "review_sha256": "4425f0a071304394172d185c44067092e6d37f7eeb82fc2c050d22b40650938f",
+  "source_sha256": {
+    "scripts/persona_prompt.py": "50ec9922396dfe0e5a1d8b30d24c370faaef0dd95e8cef177ef08d1a6d040ddd",
+    "configs/persona_prompt.json": "5f65e377483b9b9f8101072e92ccc94fc45cfc6be0ff6ccc06b0c7f823bbf826",
+    "evaluation/persona/development.json": "b0537177afbdf8fd213813b250c1d9d0f81f05bdbd465422a798dfc982f89b4b",
+    "evaluation/persona/rubric.json": "0790d1f9b77f7bc812cb7bef99aa6637fd7b59e4b125dd0ad058c65c8a36b595",
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "configs/benign_helpfulness.json": "874746f048f88dd0d165850d6c55460de73e6ac35305e332713f4ccdeceb1ac4",
+    "evaluation/benign_helpfulness/development.json": "3570e0ced65b3fdd8077f962800c3ae42ba8be011009c222ad8eafa8d4594768",
+    "evaluation/benign_helpfulness/rubric.json": "55c2116003041b235457ed041b8c440f38547c7c99129801f42342b701e375f0",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe"
+  },
+  "config_sha256": "5f65e377483b9b9f8101072e92ccc94fc45cfc6be0ff6ccc06b0c7f823bbf826",
+  "rubric_sha256": "0790d1f9b77f7bc812cb7bef99aa6637fd7b59e4b125dd0ad058c65c8a36b595",
+  "fixture_seal": {
+    "sealed_before_generation": true,
+    "pre_output_revision": "Fixed mixed unhinted/explicit diagnostic prompts and conditional-resolution allowance; draft preserved privately.",
+    "development": {
+      "sha256": "b0537177afbdf8fd213813b250c1d9d0f81f05bdbd465422a798dfc982f89b4b",
+      "ids": [
+        "PD01",
+        "PD02",
+        "PD03",
+        "PD04",
+        "PD05",
+        "PD06",
+        "PD07",
+        "PD08",
+        "PD09",
+        "PD10",
+        "PD11",
+        "PD12",
+        "PD13",
+        "PD14",
+        "PD15",
+        "PD16",
+        "PD17",
+        "PD18",
+        "PD19",
+        "PD20",
+        "PD21",
+        "PD22",
+        "PD23",
+        "PD24"
+      ],
+      "family_counts": {
+        "physics_factual_reasoning": 6,
+        "insufficient_evidence": 6,
+        "constructive_pushback": 6,
+        "practical_writing": 6
+      },
+      "prompt_cue_counts": {
+        "not_applicable": 12,
+        "unhinted": 6,
+        "explicit": 6
+      }
+    },
+    "heldout": {
+      "sha256": "4799e84e2325b1f4d4b21a59973dfbb405ec2000c6df6c8fa3f07128eec96191",
+      "ids": [
+        "PH01",
+        "PH02",
+        "PH03",
+        "PH04",
+        "PH05",
+        "PH06",
+        "PH07",
+        "PH08",
+        "PH09",
+        "PH10",
+        "PH11",
+        "PH12",
+        "PH13",
+        "PH14",
+        "PH15",
+        "PH16",
+        "PH17",
+        "PH18",
+        "PH19",
+        "PH20",
+        "PH21",
+        "PH22",
+        "PH23",
+        "PH24"
+      ],
+      "family_counts": {
+        "physics_factual_reasoning": 6,
+        "insufficient_evidence": 6,
+        "constructive_pushback": 6,
+        "practical_writing": 6
+      },
+      "prompt_cue_counts": {
+        "not_applicable": 12,
+        "unhinted": 6,
+        "explicit": 6
+      }
+    }
+  },
+  "model_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "dtype": "BF16",
+  "attention": "sdpa",
+  "enable_thinking": false,
+  "seed": 42,
+  "batch_size": 8,
+  "max_new_tokens": 768,
+  "judging_seeds": {
+    "development": 20261118,
+    "heldout": 20261119
+  },
+  "condition_names": [
+    "C",
+    "P"
+  ],
+  "system_strings_bound_by_config": true,
+  "byte_identical_user_messages_required": true,
+  "development_responses": 48,
+  "conditional_heldout_responses": 48,
+  "maximum_target_responses": 96,
+  "judge_pairs_per_batch": 8,
+  "judge_batches_per_split": 3,
+  "maximum_attempts_per_batch": 2,
+  "maximum_calls_per_split": 6,
+  "maximum_remote_calls_total": 12,
+  "schema_only_retry": true,
+  "pinned_CLI_version": "2.1.323 (Claude Code)",
+  "binary_sha256": "604d29a6869409106b6a1110bdadcc8b72e8654a5a865d23258f938a696e348e",
+  "audited_flags_unchanged": true,
+  "mechanical_gate": {
+    "minimum_eos_per_condition": 23,
+    "denominator": 24,
+    "empty_per_condition": 0
+  },
+  "decision_gates": {
+    "P_style_wins_at_least": 16,
+    "gross_quality_losses_at_most": 1,
+    "P_overconfidence_no_increase_overall": true,
+    "P_overconfidence_no_increase_insufficient_evidence": true,
+    "P_fabricated_experience": 0,
+    "P_AI_invalid_no_increase": true,
+    "P_mechanical_degeneration_no_increase": true
+  },
+  "heldout_requires_passing_committed_development_lock": true,
+  "no_prompt_revisions_or_sweep": true,
+  "claude_design_fixture_rubric_review_accepted": true,
+  "coordinator_code_review_passed": true,
+  "focused_CPU_checks_passed": 25,
+  "verified_external_bindings": 421,
+  "prior402_verified": 402,
+  "old315_verified": 315,
+  "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "minimum_free_mib": 20000,
+  "maximum_utilization_percent": 10,
+  "new_preparation_manifest_replaces_unused_documentation_race_snapshot": true,
+  "no_activation_capture_hooks_vectors_training_or_weight_changes": true,
+  "limits": [
+    "Custom benign-only prompt-strategy comparison; no activation-control or population claim.",
+    "One AI paired style/quality pass, potential halo effects, no human validation or external fact checking.",
+    "Unknown dated server judge snapshot; historical audit-time executable digest unavailable."
+  ]
+}
