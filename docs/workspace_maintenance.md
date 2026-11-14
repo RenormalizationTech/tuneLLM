@@ -32,6 +32,14 @@ The latest baseline's 709 protected bindings, including the earlier 681, all
 passed verification after cleanup. New Python invocations may recreate bytecode; use `-B` for
 housekeeping checks to avoid doing so unnecessarily.
 
+After calibration, a second scoped cleanup removed the three completed CPU-test
+sessions created for this work (`pytest-65`, `pytest-66`, `pytest-67` under the
+user's pytest temporary root): 1,322 files and 1,973,829 logical bytes. Their
+fixture names matched the two calibration test modules, no active lock remained,
+and none of the 1,100 protected bindings referred to them. The matching
+`pytest-current` link was also removed. Other temporary directories were kept.
+Local plan/receipt: `outputs/workspace-maintenance-20261114/pytest_cleanup_*.json`.
+
 Scientific status and the next model experiment are maintained in
 [the project map](project_tracks.md). Historical frozen documents retain the
 scope and transition decisions recorded at their registration time.

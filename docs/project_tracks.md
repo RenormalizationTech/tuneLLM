@@ -20,7 +20,7 @@ those records remain unchanged to preserve their experiment hashes.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Future persona activation steering | Intervene on activations to influence written tone/style | First isolated profanity, rudeness and sarcasm on Qwen3-4B; then a separate simultaneous-control stage. Complete the 4B pipeline before further 14B work. Protocol not yet registered. |
+| Persona activation steering | Intervene on activations to influence written tone/style | Isolated 4B profanity design accepted; fixture/code preparation and run registration precede execution. Rudeness and sarcasm follow, then a separate joint stage. Finish the 4B pipeline before further 14B work. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank
@@ -41,7 +41,7 @@ flowchart TD
     Quant --> Physics["Saved NF4 base + physics LoRA training demonstration"]
     Base --> Refusal["Refusal activation-steering research: completed tradeoff"]
     Refusal --> Prompt["Persona prompt reference/control: P1 completed"]
-    Prompt --> Persona["Future persona activation steering: proposed"]
+    Prompt --> Persona["4B persona pipeline: rating calibration passed, profanity in preparation"]
 ```
 
 This diagram organizes the program; it does not claim that all historical runs
@@ -161,5 +161,7 @@ A future persona LoRA would be another training experiment and would need its
 own dataset and protocol. It is not the current persona-steering method or a
 reason to restart the completed physics adapter exercise.
 
-**Protocol status:** the targets are user-selected; experimental details remain
-unregistered. Review the concrete next experiment before implementation.
+**Protocol status:** the [isolated profanity design](profanity_steering_protocol.md)
+is reviewed and accepted for implementation. Fixture/code review and an exact
+run registration are pending. Other isolated traits and joint control require
+separate protocols; this roadmap is not their execution registration.
