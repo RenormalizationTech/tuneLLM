@@ -13,6 +13,11 @@ coefficients. Generic physics questions in a behavior
 evaluation do not make it physics fine-tuning. See the
 [project map and selected persona targets](docs/project_tracks.md).
 
+The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
+compares the original author code with published over-refusal benchmarks. The
+next measurement is an [adapted XSTest-safe baseline](docs/xstest_baseline_protocol.md)
+on the unmodified model, before any further intervention study.
+
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
 a small development screen, and one fixed final comparison. Compatible baseline

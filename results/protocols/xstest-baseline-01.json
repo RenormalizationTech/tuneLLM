@@ -1,0 +1,42 @@
+{
+  "study": "XSTest-safe adapted baseline 01",
+  "status": "registered_before_generation",
+  "date": "2026-11-14",
+  "manifest_sha256": "ad8d1ccc729564a7fec7115fb86b0273c0c50e14a7b3c005c5e464487d513fba",
+  "protocol": "docs/xstest_baseline_protocol.md",
+  "protocol_sha256": "1c06d3aa9756735694b3b07dc22c513c76cb723d6695b2210f28cccb50b89a24",
+  "source_sha256": {
+    "scripts/xstest_baseline.py": "7e222f54f71ebe71caaec3cfa57181ba76bbc2e17c1f2f1692182007f61a448a",
+    "configs/xstest_baseline.json": "9a0f107c74ecae9b23efc8075cffffe4e1b9a2087a33aa13a76652641b29ae5b",
+    "scripts/xstest_baseline_runbook.md": "c3a697faedf5f5a98d0b0f0cbe51ac69e98599d084deea380b013ebef76a1ac7",
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "configs/benign_helpfulness.json": "874746f048f88dd0d165850d6c55460de73e6ac35305e332713f4ccdeceb1ac4",
+    "evaluation/benign_helpfulness/development.json": "3570e0ced65b3fdd8077f962800c3ae42ba8be011009c222ad8eafa8d4594768",
+    "evaluation/benign_helpfulness/rubric.json": "55c2116003041b235457ed041b8c440f38547c7c99129801f42342b701e375f0",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe"
+  },
+  "model_id": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "dataset_repository_revision": "d7bb5bd738c1fcbc36edd83d5e7d1b71a3e2d84d",
+  "csv_sha256": "11783fb294ed017473ee53c207d71f2161c7672c8d0b037501e78387f801cb5a",
+  "safe_count": 250,
+  "unsafe_count": 0,
+  "previously_generated_safe_count": 72,
+  "generation_conditions": 1,
+  "maximum_judge_calls": 64,
+  "cpu_checks": {
+    "focused_passed": 21,
+    "target_model_or_judge_calls": 0
+  },
+  "prior_protected_external_count": 421,
+  "frozen_external_count": 478,
+  "no_automatic_followup": true,
+  "claude_design_and_code_review": "accepted_with_corrections_applied",
+  "code_review": "results/reviews/xstest_baseline_code_review.md"
+}

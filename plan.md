@@ -36,6 +36,12 @@ simultaneous controls; experimental details remain unregistered. No new experime
 
 ## Current status and execution priorities (2026-11-14)
 
+- Refusal follow-up: literature/source audit and a Claude-reviewed
+  `docs/xstest_baseline_protocol.md` now define a published XSTest-safe baseline
+  reproduction on the unmodified Qwen3-4B model. Code and frozen inputs must pass
+  review before execution. This measures unnecessary refusal; it does not reopen
+  the old harmful-source intervention study or launch a steering sweep. Source
+  choices and compatibility limits are in `docs/refusal_reproducibility_review.md`.
 - New reusable workflow: `docs/model_workflow.md`; Qwen3-4B writing protocol:
   `docs/physics_prl_protocol.md`. These supersede the initial smoke workflow for
   the physics-writing exercise, while preserving the historical results.
