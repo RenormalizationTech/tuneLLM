@@ -61,8 +61,8 @@ the user approved one [controlled data revision](docs/author_profanity_revision_
 The [original-Mistral SAPS reference](docs/author_saps_mistral_closeout.md)
 completed all1800 rewrites and90 first-valid grading batches. SAPS1.4 reached
 276/450 clear-sarcasm ratings vs0 baseline, with meaning4.11→2.98/5. Both
-methods show a style/quality trade-off. The next profanity validation choice
-is pending; no joint or14B work is released.
+methods show a style/quality trade-off. The user authorized applying the existing profanity direction and completing
+the behavioral test. No joint or14B work is released.
 
 ## Current status and execution priorities (2026-11-14)
 
