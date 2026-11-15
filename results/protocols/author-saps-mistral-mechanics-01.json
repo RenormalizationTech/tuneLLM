@@ -1,0 +1,9 @@
+{
+  "manifest_sha256": "787ebeba586cc6a6dfdfdc803c5e6d6b059d440c83dda6acaf2f78a4e369a2e8",
+  "direction_run_sha256": "313fe0502da43169854b6194c3539c552a55f12cebf4fe9d7b2405c9ce375deb",
+  "directions_sha256": "add7f2a201c531501c72138d4981e12196a93b8268b9ac66222896738b022d4e",
+  "direction_integrity_sha256": "9d5ea2336eb648db3a552b0f2f1968f2ca2a3474522d45823939a2321e5feb53",
+  "mechanics_run_sha256": "d957c8e5ad00736f2d8ab3b8f4e12ecf18aaf93377b80096982e0bceaef3c8b4",
+  "mechanics_result_sha256": "f29f0a95361353a614257fd34de856f579ffed4d713c8539c571a34bd031c29e",
+  "mechanics_integrity_sha256": "d581c606dfe45e3aeccd82720f4c5baba2ca81e67f04f0b44615a2a88eec1e92"
+}
