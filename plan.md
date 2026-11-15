@@ -54,6 +54,10 @@ deferred. The [GCAD first-reply reference](docs/author_gcad_impolite_closeout.md
 completed with all three registered contrasts passing: GCAD impoliteness77.37
 and coherence75.90 versus baseline1.62/82.68; residual84.52/7.83. Historical
 status below is retained for provenance.
+The [profanity paper-method study](docs/author_profanity_method_closeout.md)
+closed before steering: reconstructed minimal-edit data failed the registered
+decodability gate. A revised dataset or validation scheme needs a new study;
+original-Mistral SAPS implementation continues independently.
 
 ## Current status and execution priorities (2026-11-14)
 

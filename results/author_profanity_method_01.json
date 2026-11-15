@@ -1,0 +1,414 @@
+{
+  "status": "extraction_null",
+  "scope": "Reconstructed missing-artifact documented-paper method on original Qwen7, not exact author reproduction",
+  "manifest_sha256": "6e90089bdc3c68db1ff98304a61ba027e7c45af6748d34695ad8d0d006c852b6",
+  "source_sha256": {
+    "configs/author_profanity_method.json": "3c6f4834f207f9e5513e28f3f875fa71a64b182b340b91d415de62057fb4b19e",
+    "scripts/author_gcad_impolite.py": "65620b510ebea7f307ac5d6a92d2425561bb0cde5cb0766393984a7a83a1dbe4",
+    "scripts/author_gcad_impolite_common.py": "190d32458b8dd090bfa2151a0bb40041f20472bfde8388f2a90101a7e964d151",
+    "scripts/author_profanity_method.py": "f6d259ae5f554231b65c0d6a560a619f375bd02ca4f9a13a53527c24ed5d41e0",
+    "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+    "scripts/author_profanity_method_runbook.md": "8d7fd377604f65bccee5a425477e04fdff730e59f1437c38d00affaf6f9beee4",
+    "scripts/author_replication_audit.py": "2e3a28966d0825452854f009c8db8a445272cac710da4575c0311da94a35e7ab",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+  },
+  "paper_main_tex_sha256": "d80267e24abcdbf6e88a27e9bd0c1e67fc461acf8fbcd7c71e3b5e132c886220",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  "costs": {
+    "extract": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "target": 0,
+      "local_judge": 0,
+      "teacher_forced": 24,
+      "logit": 0,
+      "generation_wall_seconds": 0.0,
+      "elapsed_wall_seconds": 16.54558547772467,
+      "peak_allocated_bytes": 15327493632,
+      "memory_scope": "PyTorch allocator only",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "cuda_visible_devices": "0",
+      "torch_cuda": "12.4",
+      "packages": {
+        "nvidia-cuda-runtime-cu12": "12.4.127",
+        "torch": "2.6.0+cu124",
+        "tqdm": "4.70.1",
+        "MarkupSafe": "3.0.3",
+        "networkx": "3.6.1",
+        "urllib3": "2.8.0",
+        "fsspec": "2026.9.0",
+        "nvidia-nccl-cu12": "2.21.5",
+        "nvidia-curand-cu12": "10.3.5.147",
+        "nvidia-cuda-cupti-cu12": "12.4.127",
+        "nvidia-cublas-cu12": "12.4.5.8",
+        "filelock": "4.2.4",
+        "idna": "3.20",
+        "nvidia-cufft-cu12": "11.2.1.3",
+        "PyYAML": "6.0.3",
+        "charset-normalizer": "3.5.2",
+        "sympy": "1.13.1",
+        "huggingface_hub": "0.36.2",
+        "numpy": "1.26.4",
+        "nvidia-cusparselt-cu12": "0.6.2",
+        "triton": "3.2.0",
+        "nvidia-cudnn-cu12": "9.1.0.70",
+        "typing_extensions": "4.16.0",
+        "Jinja2": "3.1.6",
+        "nvidia-cusparse-cu12": "12.3.1.170",
+        "regex": "2026.11.9",
+        "transformers": "4.52.3",
+        "nvidia-nvjitlink-cu12": "12.4.127",
+        "accelerate": "1.7.0",
+        "tokenizers": "0.21.4",
+        "safetensors": "0.8.0",
+        "nvidia-nvtx-cu12": "12.4.127",
+        "certifi": "2026.10.23",
+        "nvidia-cuda-nvrtc-cu12": "12.4.127",
+        "packaging": "26.3",
+        "nvidia-cusolver-cu12": "11.6.1.9",
+        "hf-xet": "1.8.0",
+        "requests": "2.34.2",
+        "mpmath": "1.3.0",
+        "psutil": "7.2.2"
+      },
+      "generation_config": {
+        "max_length": 20,
+        "max_new_tokens": null,
+        "min_length": 0,
+        "min_new_tokens": null,
+        "early_stopping": false,
+        "max_time": null,
+        "stop_strings": null,
+        "do_sample": true,
+        "num_beams": 1,
+        "num_beam_groups": 1,
+        "penalty_alpha": null,
+        "dola_layers": null,
+        "use_cache": true,
+        "cache_implementation": null,
+        "cache_config": null,
+        "return_legacy_cache": null,
+        "prefill_chunk_size": null,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.8,
+        "min_p": null,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0,
+        "diversity_penalty": 0.0,
+        "repetition_penalty": 1.05,
+        "encoder_repetition_penalty": 1.0,
+        "length_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "bad_words_ids": null,
+        "force_words_ids": null,
+        "renormalize_logits": false,
+        "constraints": null,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "remove_invalid_values": false,
+        "exponential_decay_length_penalty": null,
+        "suppress_tokens": null,
+        "begin_suppress_tokens": null,
+        "forced_decoder_ids": null,
+        "sequence_bias": null,
+        "token_healing": false,
+        "guidance_scale": null,
+        "low_memory": null,
+        "watermarking_config": null,
+        "num_return_sequences": 1,
+        "output_attentions": false,
+        "output_hidden_states": false,
+        "output_scores": false,
+        "output_logits": null,
+        "return_dict_in_generate": false,
+        "pad_token_id": 151643,
+        "bos_token_id": 151643,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "encoder_no_repeat_ngram_size": 0,
+        "decoder_start_token_id": null,
+        "is_assistant": false,
+        "num_assistant_tokens": 20,
+        "num_assistant_tokens_schedule": "constant",
+        "assistant_confidence_threshold": 0.4,
+        "prompt_lookup_num_tokens": null,
+        "max_matching_ngram_size": null,
+        "assistant_early_exit": null,
+        "assistant_lookbehind": 10,
+        "target_lookbehind": 10,
+        "disable_compile": false,
+        "generation_kwargs": {},
+        "_from_model_config": false,
+        "transformers_version": "4.52.3"
+      },
+      "cost_scope": "Known completed work only; irreversible starts separately retained; interrupted unsaved work may add cost"
+    }
+  },
+  "totals": {
+    "target": 0,
+    "local_judge": 0,
+    "teacher_forced": 24,
+    "logit": 0
+  },
+  "native_starts": 1,
+  "stop": {
+    "stop_cause": "extraction_null",
+    "error_type": null
+  },
+  "limits": [
+    "Missing author artifacts and exact source code reconstructed prospectively; no exact numerical reproduction claim.",
+    "Assistant-content token offsets, FP32 pooling, HF final-normalized endpoint exclusion and fold assignments are explicit reconstruction choices.",
+    "Primary unsteered local self-judge is not validated by its own outputs. Weak present/absent separation and missingness qualify calibration, not new gates.",
+    "Condition-mean fills are not additional independent evidence; >10percent profanity missingness is flagged, not silently excluded.",
+    "Distinct-bigram whitespace-word ratio measures repetition, not semantic coherence; empty/short text scores1. Mechanical mostly-not-letters is not a semantic gibberish judgment.",
+    "Three matched-norm random controls rather than24 and added held-out evaluation are declared changes. No full interference matrix, reverse toxicity or joint control.",
+    "Claude co-rates secondary profanity/toxicity/semantic coherence; its separate construct and contrast effects do not replace primary self-judge or select settings."
+  ],
+  "decodability": {
+    "selected_hidden_index": 20,
+    "decoder_block": 19,
+    "primary_auc": 0.13194444444444445,
+    "decodable": false,
+    "layers": {
+      "7": {
+        "primary": {
+          "pooled_oof_auc": 0.125
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6319444444444444
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4305555555555556
+        }
+      },
+      "8": {
+        "primary": {
+          "pooled_oof_auc": 0.09722222222222222
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6875
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4652777777777778
+        }
+      },
+      "9": {
+        "primary": {
+          "pooled_oof_auc": 0.08333333333333333
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.7222222222222222
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4305555555555556
+        }
+      },
+      "10": {
+        "primary": {
+          "pooled_oof_auc": 0.0763888888888889
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.7083333333333334
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.375
+        }
+      },
+      "11": {
+        "primary": {
+          "pooled_oof_auc": 0.0763888888888889
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6736111111111112
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4097222222222222
+        }
+      },
+      "12": {
+        "primary": {
+          "pooled_oof_auc": 0.06944444444444445
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6736111111111112
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4166666666666667
+        }
+      },
+      "13": {
+        "primary": {
+          "pooled_oof_auc": 0.0763888888888889
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6597222222222222
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4236111111111111
+        }
+      },
+      "14": {
+        "primary": {
+          "pooled_oof_auc": 0.06944444444444445
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6180555555555556
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4027777777777778
+        }
+      },
+      "15": {
+        "primary": {
+          "pooled_oof_auc": 0.08333333333333333
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.625
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4444444444444444
+        }
+      },
+      "16": {
+        "primary": {
+          "pooled_oof_auc": 0.0763888888888889
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6111111111111112
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4444444444444444
+        }
+      },
+      "17": {
+        "primary": {
+          "pooled_oof_auc": 0.10416666666666667
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6041666666666666
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4583333333333333
+        }
+      },
+      "18": {
+        "primary": {
+          "pooled_oof_auc": 0.1111111111111111
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.5972222222222222
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4444444444444444
+        }
+      },
+      "19": {
+        "primary": {
+          "pooled_oof_auc": 0.1111111111111111
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.5902777777777778
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4652777777777778
+        }
+      },
+      "20": {
+        "primary": {
+          "pooled_oof_auc": 0.13194444444444445
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6041666666666666
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4583333333333333
+        }
+      },
+      "21": {
+        "primary": {
+          "pooled_oof_auc": 0.13194444444444445
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6041666666666666
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4444444444444444
+        }
+      },
+      "22": {
+        "primary": {
+          "pooled_oof_auc": 0.10416666666666667
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6180555555555556
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4444444444444444
+        }
+      },
+      "23": {
+        "primary": {
+          "pooled_oof_auc": 0.10416666666666667
+        },
+        "paired_question_sensitivity": {
+          "pooled_oof_auc": 0.6180555555555556
+        },
+        "label_shuffled_control": {
+          "pooled_oof_auc": 0.4375
+        }
+      }
+    },
+    "selection_uses_only_primary_auc": true,
+    "normalization": "raw FP32 means, raw training-fold projection; no unit normalization or centering",
+    "limits": [
+      "Stratified row folds can separate the two responses to one user request; paired-question folds are report-only sensitivity.",
+      "Hidden index0 is embeddings; final HF index28 is normalized and excluded from search7..23. Pooled raw projections can differ in scale across training folds.",
+      "Shuffled control is report-only: paper gives no numerical near-chance gate. Saturated ties choose earliest hidden index."
+    ]
+  },
+  "representation": {
+    "intermediate_hidden_states_equal_raw_block_output": {
+      "7": true,
+      "8": true,
+      "9": true,
+      "10": true,
+      "11": true,
+      "12": true,
+      "13": true,
+      "14": true,
+      "15": true,
+      "16": true,
+      "17": true,
+      "18": true,
+      "19": true,
+      "20": true,
+      "21": true,
+      "22": true,
+      "23": true
+    },
+    "final_normalized_differs_from_post_block27": true,
+    "hidden_index0": "native embeddings",
+    "hidden_index28": "native final-normalized HF output, excluded from band7..23",
+    "pooling": "FP32 mean of fully contained non-special assistant-content tokens",
+    "unit_normalization_of_steering": false,
+    "roundtrip_exact": true
+  }
+}

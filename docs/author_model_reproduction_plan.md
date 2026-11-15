@@ -12,7 +12,7 @@ Codex worker implements and tests code.
 | --- | --- | --- | --- |
 | Rudeness, using the broader author construct `impolite` | [GCAD](https://arxiv.org/html/2605.10664v3), Qwen/Qwen2.5-7B-Instruct | First-reply GCAD and residual-steering rows of Table 1; ten-turn endpoints require a separately reviewed follow-up | [Completed bounded reference](author_gcad_impolite_closeout.md): all3 directional contrasts passed; GCAD trait77.37/coherence75.90 versus baseline1.62/82.68 |
 | Sarcasm | [SAPS](https://aclanthology.org/2026.findings-emnlp.1594.pdf), mistralai/Mistral-7B-Instruct-v0.1 | Reconstruct released result tables first; then author-runtime fixed-layer generation at layer12, fixed alpha1 and SAPS alpha1.4 | Source/data and averaged author ratings available; published logs audited with data/prompt metadata inconsistencies; isolated author environment and model are ready; [four-arm generation protocol](author_saps_method_protocol.md) reviewed |
-| Profanity | [Malla et al. v4](https://arxiv.org/abs/2609.06951v4), Qwen/Qwen2.5-7B-Instruct | Appendix E profanity row: layer7, coefficient6, self-effect +1.44 on the author 0–10 scale, coherence0.96 | [Documented-method protocol](author_profanity_method_protocol.md) reviewed; worker implementing reconstructed-input workflow |
+| Profanity | [Malla et al. v4](https://arxiv.org/abs/2609.06951v4), Qwen/Qwen2.5-7B-Instruct | Appendix E profanity row: layer7, coefficient6, self-effect +1.44 on the author 0–10 scale, coherence0.96 | [Closed before steering](author_profanity_method_closeout.md): reconstructed minimal-edit data failed the registered decodability gate; no target generations |
 
 The PV paper's Appendix G, Figures18–19, concerns prediction of fine-tuning
 shifts. It is not evidence of a successful inference-time impoliteness steering
@@ -132,6 +132,12 @@ no retries. All three predeclared contrasts passed; see the
 The two original model snapshots and separate Python3.11 environments are ready.
 No shared training environment was changed. SAPS requires an original-runtime
 run because the released result logs have unresolved data/prompt lineage gaps.
+
+Profanity implementation passed28 CPU tests; one reviewed generated artifact
+was frozen before24 teacher-forced responses. Primary AUROC0.13194 failed the
+registered0.85 gate, closing extraction before mechanics/calibration. This is
+a direction-validation null, not a measured steering failure. See the
+[closeout](author_profanity_method_closeout.md).
 
 ## Resource and preservation policy
 
