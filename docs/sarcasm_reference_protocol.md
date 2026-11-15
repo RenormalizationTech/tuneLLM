@@ -45,7 +45,10 @@ Compare two author methods, with zero-based blocks11/15/19/23:
 
 Reuse baseline h0 only with a read-only first-prefill hook, position-1, capturing
 all four blocks separately on validation and test. Baseline runs before fixed
-arms; compute c in FP32 and add in model dtype. Ten unscored cap32 generation
+arms. Match the source's coefficient arithmetic: CPU FP32 dot product, convert
+the dot and target separately to Python scalars, then subtract and multiply by
+alpha in Python. Apply that Python c to the model-dtype unit in the hook.
+Ten unscored cap32 generation
 probes (four ordinary/four actual zero/two nonzero), plus two logit forwards,
 check parity including the capture hook, source-equivalent tensor operations,
 cache coverage and cleanup before selection. Save exact vector round-trips.

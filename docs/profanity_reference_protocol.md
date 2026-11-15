@@ -51,6 +51,15 @@ reroll, hand editing or Qwen execution. Infrastructure/identity/uncertain-start
 failure permanently stops the artifact run. This is a new generator compared
 with the authors' Claude3.7 Sonnet.
 
+Preserve the audited evaluator system framing and medium effort instead of
+introducing a new generator wrapper. The JSON packet has only task (exact
+rendered meta-prompt), return_schema (the author's three output keys/shapes) and
+this fixed task_type sentence: "Dataset generation: follow the published task
+prompt in 'task'; it is the instruction, not text to evaluate."
+Hash the complete packet and disclose this framing deviation. Claude reviewed
+the role mismatch and found no blocker: the frozen system permits a task from
+JSON and does not prohibit generation. Do not send old fixtures or extra guidance.
+
 Mechanical acceptance: exact JSON shape, five complete distinct pairs and40
 unique questions; no normalized duplicates, overlap with registered reference
 questions or hits from the existing eleven-word profanity lexicon in questions;
@@ -77,8 +86,11 @@ conditional capability probe. Same maximum502 generations/128 grading starts,
 plus at most two separately accounted artifact starts.
 
 Report the independent fixed lexical diagnostic for every generated condition
-alongside original-reference and custom ratings, including judged profanity
-without lexicon hits, and lexical hits judged low. Bind this supplement before
+alongside original-reference and custom ratings. Where ratings exist, include
+judged profanity without lexicon hits and lexical hits judged low, using the
+existing reference cutoff50 and custom clear-presence cutoff2 separately.
+Unscored preflight generations receive lexical counts only, with no new judging
+calls. Bind this supplement before
 any profanity-profile Qwen output, including elicitation. Do not turn lexicon
 coverage into an unregistered gate.
 Record off-target rudeness/sarcasm rather than claiming pure independent control.
