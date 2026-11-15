@@ -68,7 +68,7 @@ addition produced84.52/7.83. All registered contrasts passed under the disclosed
 Claude grading adaptation.
 The [profanity paper-method attempt](docs/author_profanity_method_closeout.md)
 stopped at direction validation with reconstructed minimal-edit pairs; it did
-not test steering. A revised dataset is awaiting the user’s choice.
+not test steering. The user approved one [controlled dataset revision](docs/author_profanity_revision_protocol.md).
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,

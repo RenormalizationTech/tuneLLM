@@ -57,7 +57,8 @@ status below is retained for provenance.
 The [profanity paper-method study](docs/author_profanity_method_closeout.md)
 closed before steering: reconstructed minimal-edit data failed the registered
 decodability gate. A revised dataset or validation scheme needs a new study;
-original-Mistral SAPS implementation continues independently.
+the user approved one [controlled data revision](docs/author_profanity_revision_protocol.md).
+Original-Mistral SAPS implementation continues independently.
 
 ## Current status and execution priorities (2026-11-14)
 

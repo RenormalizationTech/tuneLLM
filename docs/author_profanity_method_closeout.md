@@ -59,3 +59,7 @@ A new dataset or validation policy requires a separately reviewed study and
 new registration. No automatic rescue, coefficient sweep, changed folds or
 unvalidated steering is released. Original-Mistral sarcasm work continues
 independently under its already reviewed plan.
+
+The user subsequently approved one [controlled dataset revision](author_profanity_revision_protocol.md),
+reusing all user questions and changing only the contrastive answers. It is a
+new study; the closed result above remains unchanged.
