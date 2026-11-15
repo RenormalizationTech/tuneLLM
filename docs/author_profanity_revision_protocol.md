@@ -34,15 +34,18 @@ short1–2 sentence form; no brittle sentence-count gate is added. No pair-cente
 changed folds, sign flip, relaxed threshold or expanded coefficient range is
 permitted to pass the gate.
 
-Use the same one-first-valid artifact process (at most two identical structural
-attempts), root/Claude semantic review, exact data promotion and new committed
+Use exactly one artifact request: malformed, non-JSON or refused output closes
+artifact_null without another draw. Secondary grading retains at most two
+identical structural attempts. Keep root/Claude semantic review, exact data
+promotion and new committed
 stage registrations. Each accepted candidate is used unchanged or closed;
 no semantic editing/reroll. Use fresh explicit paths/config/source snapshots
 for this study. Model weights and isolated environment may be reused by hash.
 Keep all historical results unchanged.
 
 The same hard maximum is394 target generations,408 local judge generations,
-24 teacher-forced responses, two logit forwards, zero MC and42 native starts.
+24 teacher-forced responses, two logit forwards, zero MC and42 native starts as a hard ceiling; the one-shot artifact plus20 two-attempt
+secondary batches can actually use at most41.
 If this revision also closes at extraction, close this paper-method profanity
 route on this model without another automatic dataset revision. Any further
 method change requires a new discussion. There is no success expectation or
