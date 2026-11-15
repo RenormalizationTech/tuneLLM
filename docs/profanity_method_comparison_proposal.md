@@ -3,8 +3,9 @@
 User request: test the interventions that produced effects on other traits
 against profanity. The fourth task omitted from the previous comparison was
 rudeness/impoliteness. The user subsequently authorized all three methods and the bounded fallback
-below. Exact scientific settings remain pending Claude review; no claim is
-made that the methods already work on profanity.
+below. Claude has now reviewed and accepted the concrete
+[execution protocol](profanity_method_transfer_protocol.md); no claim is made
+that the methods already work on profanity.
 
 ## Candidate interventions
 
@@ -42,22 +43,20 @@ coherence, repetition and truncation. Resolve the previous universal 48-token
 cap prospectively rather than changing historical results. Do not tune on the
 held-out outputs or presume gains from another trait will transfer.
 
-Exact extraction corpus, task (rewriting versus ordinary assistant replies),
-layer choices, strength grids, answer cap, scoring and call budgets remain to
-be settled with Claude. The user authorized implementation of all three interventions. The worker
-is preparing reusable explicit-parameter code and CPU tests while scientific
-settings are reviewed. New GPU runs, dataset generation and downloads remain
-unreleased until that review and a concrete protocol are complete.
+The execution protocol now fixes fresh Qwen extraction, ordinary assistant
+replies, sites, three strengths per method, cap 160, separate trait/coherence
+ratings and selection/held-out rules. The user authorized implementation of all three interventions. Reusable components passed CPU tests; the worker is implementing the fresh
+runner. Root will review and register exact inputs/source/runtime before model
+calls. No new questions, downloads or artifact-generation requests are needed.
 
 ## Review status
 
-The coordinator contacted the existing Claude advisor through Herdr for this
-request. It returned: "Login reached its time limit · Please run /login".
-The inventory is complete. The existing Codex worker is now implementing
-and testing reusable components in new files, without changing frozen studies
-or making model calls. The renewed advisor request after explicit execution
-authorization returned the same expired-login error. Fresh scientific review requires restoring the advisor login, in
-keeping with the user's instruction to discuss planning with Claude first.
+The initial requests encountered an expired Claude login, so independent CPU
+implementation proceeded first. The user restored login; the existing advisor
+then accepted the study and clarified its budget, thresholds, random controls
+and read-only state capture. See the
+[design review](../results/reviews/profanity_method_transfer_design_review.md).
+The worker is now implementing the complete runner; no new live calls yet.
 
 ## User-selected decision and fallback
 
@@ -73,10 +72,8 @@ not been reproduced with our reconstructed data. Missing author contrastive
 data limits reproduction; it is not proof of why our tests failed. Do not
 label the retained reference a functioning profanity controller.
 
-Implementation preparation is proceeding. Actual execution depends on the
-requested Claude scientific review, or an explicit user change to that review
-requirement. The coordinator requested login restoration while independent
-CPU work continues. No paid external API key is requested.
+Scientific review is complete. Execution depends on code acceptance and exact
+pre-output registration. No new user decision or paid external API key is needed.
 
 ## CPU preparation completed
 
