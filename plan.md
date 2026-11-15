@@ -58,7 +58,11 @@ The [profanity paper-method study](docs/author_profanity_method_closeout.md)
 closed before steering: reconstructed minimal-edit data failed the registered
 decodability gate. A revised dataset or validation scheme needs a new study;
 the user approved one [controlled data revision](docs/author_profanity_revision_protocol.md).
-Original-Mistral SAPS implementation continues independently.
+The [original-Mistral SAPS reference](docs/author_saps_mistral_closeout.md)
+completed all1800 rewrites and90 first-valid grading batches. SAPS1.4 reached
+276/450 clear-sarcasm ratings vs0 baseline, with meaning4.11→2.98/5. Both
+methods show a style/quality trade-off. The next profanity validation choice
+is pending; no joint or14B work is released.
 
 ## Current status and execution priorities (2026-11-14)
 

@@ -19,6 +19,12 @@ SHA-256s, with no dependency or model installation during the audit.
 
 ## Current priority: original-model method references
 
+Original-model references now include completed [GCAD impoliteness](author_gcad_impolite_closeout.md)
+and [Mistral sarcasm](author_saps_mistral_closeout.md) effects, with explicit
+quality trade-offs and evaluator changes. Profanity has two preserved
+[extraction nulls](author_profanity_revision_closeout.md); the grouped-validation
+proposal awaits the user’s choice. Historical4B procedures below stay unchanged.
+
 The user revised the sequence on2026-11-15: first establish the published steering
 methods on original open author models. Use Qwen2.5-7B for the explicit GCAD
 impoliteness reference and the documented profanity procedure, and Mistral-7B-v0.1
@@ -30,9 +36,9 @@ as new. No exact numerical reproduction is promised.
 The [source audit](../results/reviews/author_model_source_audit_01.md) records the
 published-log lineage issues and paper/code differences. The
 [reproduction plan](author_model_reproduction_plan.md) supersedes the older
-4B-transfer-first sequence below. The prospective
-[GCAD first-reply protocol](author_gcad_impolite_protocol.md) is the first live
-reference. Earlier4B results stay unchanged; joint control and14B remain deferred.
+4B-transfer-first sequence below. The
+[GCAD first-reply protocol](author_gcad_impolite_protocol.md) governed the first
+completed reference. Earlier4B results stay unchanged; joint control and14B remain deferred.
 
 ## Reusable procedure
 

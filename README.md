@@ -71,6 +71,10 @@ stopped at direction validation with reconstructed minimal-edit pairs; it did
 not test steering. The approved [short-answer revision](docs/author_profanity_revision_closeout.md)
 also closed at the row-level gate, while paired-question sensitivity reached1.0.
 A separate grouped-validation continuation is under discussion.
+The [original-Mistral sarcasm reference](docs/author_saps_mistral_closeout.md) is
+complete: SAPS1.4 reached clear sarcasm in276/450 rewrites versus0 baseline,
+while meaning preservation fell4.11→2.98/5. Fixed and adaptive control show
+different style/quality trade-offs.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
