@@ -1,0 +1,12 @@
+{
+  "manifest_sha256": "2de18ecaa53ca3f7cf44222b3181c6037514b5b300038b80d785aa7b78d00937",
+  "promotion_sha256": "c678d42e476cf1a3690ae6fc0d789bb1183169dde957e4279fd9d1020c4a6dfd",
+  "semantic_review_sha256": "ce6d305df556287140a71ce5d3cc06ae7ce18b48807ac6884a1f291fe1620470",
+  "datasets_sha256": {
+    "evaluation/author_profanity_revision/triples.json": "3ba8c58a4ad18d221e6b3c5ad0269f3096f170499431f138d3d786f04411e4ef",
+    "evaluation/author_profanity_revision/calibration.json": "41aa9a448551bbce8d314039cd9e7be3e7db5bd4e2735657c4821208fcf9e85f",
+    "evaluation/author_profanity_revision/report.json": "486300cffd90fe08780ac786f7bf67143fefcc25b343d1c6e972e276075b5683",
+    "evaluation/author_profanity_revision/definitions.json": "4ead8f85250dfea599fde27a27aebe541a2d5479def2d40afa8c55cc94deac00",
+    "evaluation/author_profanity_revision/self_judge.json": "1e4244962004e5eb501aa353ec158d4e997e0859e2a4ee6bf21233313cf3affa"
+  }
+}

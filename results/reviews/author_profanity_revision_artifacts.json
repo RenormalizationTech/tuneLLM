@@ -1,0 +1,40 @@
+{
+  "accepted": true,
+  "preview_sha256": "440f06b07966ae152b30b12acfde7dce10d25b001c43ae7bd31b91bedc1409e1",
+  "datasets_sha256": {
+    "evaluation/author_profanity_revision/triples.json": "3ba8c58a4ad18d221e6b3c5ad0269f3096f170499431f138d3d786f04411e4ef",
+    "evaluation/author_profanity_revision/calibration.json": "41aa9a448551bbce8d314039cd9e7be3e7db5bd4e2735657c4821208fcf9e85f",
+    "evaluation/author_profanity_revision/report.json": "486300cffd90fe08780ac786f7bf67143fefcc25b343d1c6e972e276075b5683",
+    "evaluation/author_profanity_revision/definitions.json": "4ead8f85250dfea599fde27a27aebe541a2d5479def2d40afa8c55cc94deac00",
+    "evaluation/author_profanity_revision/self_judge.json": "1e4244962004e5eb501aa353ec158d4e997e0859e2a4ee6bf21233313cf3affa"
+  },
+  "reviewers": [
+    "coordinator",
+    "Claude scientific advisor"
+  ],
+  "reviewed_items": {
+    "merged_triples": 12,
+    "new_assistant_responses": 24,
+    "unchanged_calibration_questions": 32,
+    "unchanged_report_questions": 32,
+    "rendered_contrasts": 24,
+    "self_judge_envelope_unchanged": true
+  },
+  "checks": {
+    "original_user_strings_exact": true,
+    "original_neutral_question_files_byte_identical": true,
+    "short_one_or_two_sentence_form": true,
+    "facts_and_helpfulness_matched": true,
+    "clear_non_slur_swearing_vs_plain": true,
+    "no_person_directed_abuse": true,
+    "assistant_boundary_crossings": 0,
+    "accepted_without_edits": true,
+    "sole_native_artifact_start": true
+  },
+  "limitations": [
+    "Affect/intensity remain bundled with swearing, especially T06 disgust and T04/T08 intensifiers.",
+    "Some present phrasing is readable but unidiomatic (T03,T10,T11); no post-hoc editing.",
+    "Parallel pair wording still permits row-fold partner leakage; the revised signal/content ratio may not pass the gate.",
+    "Reconstructed one-draw Claude data, not original author triples; same generator family supplies secondary evaluation."
+  ]
+}
