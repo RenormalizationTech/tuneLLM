@@ -23,7 +23,7 @@ The coordinator prepared the fresh ignored run
 `outputs/persona-reference-rudeness-01` and released200 elicitation generations
 on authorized GPU0. No other jobs were changed. Later stages remain conditional
 on the registered elicitation and selection gates. The complete normal budget
-is 422 generations and53 first-valid grading batches; the single conditional
+is 422 generations and 53 first-valid grading batches; the single conditional
 fallback raises the maxima to 502 and 64. These are maxima, not completed work.
 
 Measured elicitation cost: 921.49 seconds in generation,926.88 seconds for the
@@ -33,8 +33,8 @@ generation. The original-scale packet comprises 25 blinded eight-question batche
 
 All 25 grading batches were first-attempt valid. The fixed filter retained 66/100
 pairs spanning all 20 questions; all retained native trajectories are used
-(132 teacher-forced responses). Across all 100 positive and100 negative responses,
-reference trait means were57.52 versus1.55 and coherence79.55 versus86.50;
+(132 teacher-forced responses). Across all 100 positive and 100 negative responses,
+reference trait means were57.52 versus 1.55 and coherence79.55 versus 86.50;
 neither side had a semantic refusal. These are prompted elicitation observations,
 not evidence of activation steering.
 
@@ -76,33 +76,50 @@ operations are source-tested; effective narrow rudeness control is unvalidated.
 
 ## Sarcasm
 
-Claude reviewed the bounded SAPS design and implementation, including its
-corrections. The worker froze the separate native HF port after 24 CPU checks.
-Exact registration was committed in 17daf9b after rudeness closed, before GPU0
-execution. The initial 50 baseline and 50 prompted-control answers were graded
-in five first-valid batches. The study closed as elicitation_null: prompted
-sarcasm mean 3.04, with 36/50 scoring at least 3 and grammar 4.64, but clarity
-3.46 fell below the registered 3.5 minimum. Baseline style was zero; baseline
-clarity 4.76. Prompted entailment was 2.44 (not an initial-gate criterion).
-This is a failed combined control gate, not absence of elicited sarcasm.
-No directions, intervention search, held-out, custom or capability stage ran
-in that original study.
-Generation took 112.21 seconds, whole stage 116.81 seconds. Mean tokens were
-25.2 / 30.6 (baseline / prompted), with zero capped outputs. The paper is
-privately archived for rubric provenance. This is literal-to-sarcastic
-paraphrasing, not demonstrated generic
-assistant persona transfer. See [protocol](sarcasm_reference_protocol.md).
+The original SAPS adaptation closed as elicitation_null after our added initial
+quality gate: prompted style 3.04,36/50 reaching author sarcasm ≥3 and grammar 4.64, but
+clarity 3.46<3.5. Entailment2.44 was a known quality risk. The 100 answers andfive
+first-valid calls remain unchanged; the original study ran no directions or
+interventions. This was a failed combined control gate, not absence of sarcasm.
 
-A separate [registered continuation](persona_saps_continuation_protocol.md) now
-follows the author's prompt-activation extraction despite our added initial gate.
-The original failure is retained, and downstream quality floors are unchanged.
-Its runner passed 27 CPU checks and Claude's review. Registration 4da9c59
-preceded all new calls. Direction extraction completed 1,500 prompt forwards. Mechanics checks passed
-exact zero parity and nonzero logit changes (maximum16.625), cache coverage and
-cleanup. The worker independently verified completed extraction, arithmetic,
-probes and bindings. Strength lock94e98a3 preceded the running600-response
-validation. The
-original 100 answers and five grading calls are reused without rerating.
+The separately registered [continuation](persona_saps_continuation_protocol.md)
+completed the author-style prompt-activation method without that extra gate,
+while keeping all downstream criteria. Its source passed 27 CPU checks and
+Claude's review. Initial lock 4da9c59 preceded calls;1,500 prompt forwards learned
+directions and targets. Ten generation/two logit probes passed exact zero parity,
+nonzero delta16.625, cached coverage and cleanup. Strength lock 94e98a3 preceded
+600 validation generations. Thirty first-valid batches selected fixed block 23,
+alpha 1 (style 1.40); the best adaptive controller at the same site also qualified.
+Higher adaptive alpha 1.4 failed entailment despite a larger style score.
+
+Selection lockca547ac preceded 500 untouched test answers. All 25 reference batches
+were first-attempt valid. Fixed steering scored 1.31/5 with 27/100 reaching the author sarcasm threshold ≥3
+versus 0 baseline and random, meeting every registered reference gate. Grammar
+4.77, clarity 4.04 and meaning preservation 3.44 exceeded their floors; meaning
+preservation nevertheless fell from 4.47 baseline. Adaptive scored 1.16/26 of 100;
+prompting 3.08/67 of 100 with meaning preservation 2.66. All 500 answers ended in EOS.
+The worker independently audited extraction, mechanics, validation selection,
+held-out generation and reference grades: PASS.
+
+The separate 20-question contextual review, in 13 first-valid batches on saved
+answers, found clear sarcasm 4 fixed/3 adaptive/20 prompt/0 baseline/0 random.
+Fixed content preservation was 13/20 versus 18/20 baseline. This does not establish
+generic assistant-persona control or remove the observed quality tradeoff.
+Conditional compact capability passed: general MC11/16 and physics MC7/16
+unchanged; math 8/8 both; strict instruction following 6/8 to7/8. These tiny samples
+are pipeline checks, not broad retention evidence.
+
+The continuation is complete. The final worker audit passed reference/custom
+receipts, official capability scores, fresh matched captures, source/parent
+bindings, exact costs and aggregate privacy, with no actionable findings. Claude
+reviewed the final scientific scope and documentation. Combined cost including
+reused parent work is
+1,242 generations,1,500 prompt forwards,two logit forwards,64 MC and 73 native
+starts. Child 68 starts comprise30 validation,25 reference and 13 custom; parent
+five remain separate. See the [closeout](persona_saps_sarcasm_continuation_closeout.md)
+and [aggregate](../results/persona_saps_sarcasm_continuation_01.json). The result
+is exploratory sarcastic-paraphrase evidence, with no new model-size or joint
+study implied.
 
 ## Profanity
 
@@ -148,8 +165,8 @@ See the [full grid closeout](persona_pv_grid_rudeness_closeout.md).
 
 Profanity child registration 5b60449 preceded a fresh baseline and all 27 settings
 (280 generations). All 35 grading batches were first-attempt valid. The child closed
-selection_null: all21 quality-eligible settings scored zero against baseline
-zero. The fixed lexical diagnostic found no matches across all280 grid outputs.
+selection_null: all 21 quality-eligible settings scored zero against baseline
+zero. The fixed lexical diagnostic found no matches across all 280 grid outputs.
 No held-out, custom or capability work was triggered. See the
 [profanity closeout](persona_pv_grid_profanity_closeout.md).
 The new protocol is [here](persona_pv_grid_protocol.md). Combined trait steering

@@ -1,0 +1,770 @@
+{
+  "status": "complete",
+  "scope": "Separate exploratory SAPS continuation; original extra pre-extraction gate failed and parent elicitation_null is unchanged",
+  "manifest_sha256": "34e236f89f284cfea6a5a75f4f12c42947b5310301fc2aea471a49e0efb56e5c",
+  "source_sha256": {
+    "configs/persona_saps_continuation.json": "d13c4014051d071a63912ec1f5bb34dec95f099f1eb23d744e1765f745b524a9",
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/benchmark_screen.py": "0c4d54220a4a3ae9ad7613504415052afa1ed43ee057bda2ab57a25a8d667246",
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/gguf_eval.py": "8420a1a47f71cfd7ee6c5200367329293de6e4ffc5f18c692e7f8898dc938a81",
+    "scripts/persona_rating_calibration.py": "57133cfafdac1ad8c0a47110ddbe5898fce8b9f2af8f13d275b3f1ea05f86076",
+    "scripts/persona_reference.py": "179a2671a8ed466935a95e97458f23cf165c986c943659b2c0b8024cd3b05490",
+    "scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+    "scripts/persona_saps.py": "8fd410a06f3096a352e5eaa02ec6137da921089c554f18677beef6c284f5c1cf",
+    "scripts/persona_saps_common.py": "7801023f954b0f18daf1ec805b4af4d626d912ec2c854f9d7b45f7b8874ea8dc",
+    "scripts/persona_saps_continuation.py": "e9faa6259c60f2f936b5a68d9729971d19f3cff9282ee2de9bd320aa24cf318d",
+    "scripts/persona_saps_continuation_runbook.md": "8419e1170d9333006bf8cae598c93b2dffc9ca780056fc571a14ddea3ac3bd5c",
+    "scripts/profanity_common.py": "862f77fb1086b2220510b5a097beb0259944e8a2d58842afd1bfddaf2ba57d66",
+    "scripts/profanity_steering.py": "6383af9881d605c32651ce914ab7f462f105ac2de6508c22fa1304bffd39fda9",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f"
+  },
+  "model": {
+    "model_id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  "parent": {
+    "status": "elicitation_null",
+    "original_gate_passed": false,
+    "failed_gate_metrics": {
+      "baseline": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.6,
+        "grammaticality": 4.9,
+        "clarity": 4.76,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.2
+      },
+      "prompt": {
+        "n": 50,
+        "sarcasm": 3.04,
+        "entailment": 2.44,
+        "grammaticality": 4.64,
+        "clarity": 3.46,
+        "style_at_least3": 36,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 30.6
+      }
+    },
+    "costs": {
+      "initial": {
+        "completed": true,
+        "physical_gpu": "0",
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "driver": "580.178.04",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "saved_generations": 100,
+        "teacher_forced_sequences": 0,
+        "logit_forwards": 0,
+        "mc_items": 0,
+        "generation_wall_seconds": 112.21146761020645,
+        "prompt_forward_wall_seconds": 0.0,
+        "elapsed_wall_seconds": 116.81191384792328,
+        "count_scope": "Saved/completed work only; interrupted unsaved calls may incur additional work",
+        "wall_scope": "synchronized whole stage including load/tokenization/capture/serialization",
+        "peak_allocated_bytes": 8075355136,
+        "peak_reserved_bytes": 8095006720,
+        "memory_scope": "PyTorch allocator, not total VRAM",
+        "torch_cuda_runtime": "12.4",
+        "packages": {
+          "torch": "2.6.0+cu124",
+          "transformers": "4.57.6",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.22.2",
+          "huggingface-hub": "0.36.2",
+          "langdetect": "1.0.9"
+        },
+        "dtype": "bfloat16",
+        "attention": "sdpa",
+        "seed": 42,
+        "tf32_matmul": false,
+        "tf32_cudnn": false
+      }
+    },
+    "totals": {
+      "saved_generations": 100,
+      "teacher_forced_sequences": 0,
+      "logit_forwards": 0,
+      "mc_items": 0
+    },
+    "native_starts": 5,
+    "firstvalid_batches": 5,
+    "parent_manifest_sha256": "93cb4153db5e12ff4262ab3e06ada1838c068b4ea58f4721d7c31498d04bd121",
+    "parent_result_sha256": "4430475d8b02a177674362a485ddb70c1d396c9caf4e3b00a0515a576ccf4472",
+    "initial_grade_reused_not_rerated": true
+  },
+  "child": {
+    "authority": "new registered continuation omits extra pre-extraction quality gate; parent gate remains failed",
+    "costs": {
+      "directions": {
+        "completed": true,
+        "physical_gpu": "0",
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "driver": "580.178.04",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "saved_generations": 0,
+        "teacher_forced_sequences": 1500,
+        "logit_forwards": 0,
+        "mc_items": 0,
+        "generation_wall_seconds": 0.0,
+        "prompt_forward_wall_seconds": 62.92218748712912,
+        "elapsed_wall_seconds": 91.08703733189031,
+        "count_scope": "Saved/completed fresh child work only; interrupted unsaved calls may add cost",
+        "wall_scope": "synchronized whole stage including load/capture/tokenization/serialization",
+        "peak_allocated_bytes": 8076297728,
+        "peak_reserved_bytes": 8092909568,
+        "memory_scope": "PyTorch allocator, not total VRAM",
+        "dtype": "bfloat16",
+        "attention": "sdpa",
+        "seed": 42,
+        "torch_cuda_runtime": "12.4",
+        "packages": {
+          "torch": "2.6.0+cu124",
+          "transformers": "4.57.6",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.22.2",
+          "huggingface-hub": "0.36.2",
+          "langdetect": "1.0.9"
+        },
+        "tf32_matmul": false,
+        "tf32_cudnn": false
+      },
+      "retention": {
+        "completed": true,
+        "physical_gpu": "0",
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "driver": "580.178.04",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "saved_generations": 32,
+        "teacher_forced_sequences": 0,
+        "logit_forwards": 0,
+        "mc_items": 64,
+        "generation_wall_seconds": 331.6304666278884,
+        "prompt_forward_wall_seconds": 0.0,
+        "elapsed_wall_seconds": 341.2450248640962,
+        "count_scope": "Saved/completed fresh child work only; interrupted unsaved calls may add cost",
+        "wall_scope": "synchronized whole stage including load/capture/tokenization/serialization",
+        "peak_allocated_bytes": 8214370304,
+        "peak_reserved_bytes": 8327790592,
+        "memory_scope": "PyTorch allocator, not total VRAM",
+        "dtype": "bfloat16",
+        "attention": "sdpa",
+        "seed": 42,
+        "torch_cuda_runtime": "12.4",
+        "packages": {
+          "torch": "2.6.0+cu124",
+          "transformers": "4.57.6",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.22.2",
+          "huggingface-hub": "0.36.2",
+          "langdetect": "1.0.9"
+        },
+        "tf32_matmul": false,
+        "tf32_cudnn": false
+      },
+      "validation": {
+        "completed": true,
+        "physical_gpu": "0",
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "driver": "580.178.04",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "saved_generations": 600,
+        "teacher_forced_sequences": 0,
+        "logit_forwards": 0,
+        "mc_items": 0,
+        "generation_wall_seconds": 617.9291937090456,
+        "prompt_forward_wall_seconds": 0.0,
+        "elapsed_wall_seconds": 625.4960749549791,
+        "count_scope": "Saved/completed fresh child work only; interrupted unsaved calls may add cost",
+        "wall_scope": "synchronized whole stage including load/capture/tokenization/serialization",
+        "peak_allocated_bytes": 8070676480,
+        "peak_reserved_bytes": 8088715264,
+        "memory_scope": "PyTorch allocator, not total VRAM",
+        "dtype": "bfloat16",
+        "attention": "sdpa",
+        "seed": 42,
+        "torch_cuda_runtime": "12.4",
+        "packages": {
+          "torch": "2.6.0+cu124",
+          "transformers": "4.57.6",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.22.2",
+          "huggingface-hub": "0.36.2",
+          "langdetect": "1.0.9"
+        },
+        "tf32_matmul": false,
+        "tf32_cudnn": false
+      },
+      "test": {
+        "completed": true,
+        "physical_gpu": "0",
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "driver": "580.178.04",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "saved_generations": 500,
+        "teacher_forced_sequences": 0,
+        "logit_forwards": 0,
+        "mc_items": 0,
+        "generation_wall_seconds": 544.8654240225442,
+        "prompt_forward_wall_seconds": 0.0,
+        "elapsed_wall_seconds": 552.2299426202662,
+        "count_scope": "Saved/completed fresh child work only; interrupted unsaved calls may add cost",
+        "wall_scope": "synchronized whole stage including load/capture/tokenization/serialization",
+        "peak_allocated_bytes": 8073141760,
+        "peak_reserved_bytes": 8092909568,
+        "memory_scope": "PyTorch allocator, not total VRAM",
+        "dtype": "bfloat16",
+        "attention": "sdpa",
+        "seed": 42,
+        "torch_cuda_runtime": "12.4",
+        "packages": {
+          "torch": "2.6.0+cu124",
+          "transformers": "4.57.6",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.22.2",
+          "huggingface-hub": "0.36.2",
+          "langdetect": "1.0.9"
+        },
+        "tf32_matmul": false,
+        "tf32_cudnn": false
+      },
+      "preflight": {
+        "completed": true,
+        "physical_gpu": "0",
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "driver": "580.178.04",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "saved_generations": 10,
+        "teacher_forced_sequences": 0,
+        "logit_forwards": 2,
+        "mc_items": 0,
+        "generation_wall_seconds": 10.8115315111354,
+        "prompt_forward_wall_seconds": 0.0,
+        "elapsed_wall_seconds": 16.194695516023785,
+        "count_scope": "Saved/completed fresh child work only; interrupted unsaved calls may add cost",
+        "wall_scope": "synchronized whole stage including load/capture/tokenization/serialization",
+        "peak_allocated_bytes": 8067758592,
+        "peak_reserved_bytes": 8084520960,
+        "memory_scope": "PyTorch allocator, not total VRAM",
+        "dtype": "bfloat16",
+        "attention": "sdpa",
+        "seed": 42,
+        "torch_cuda_runtime": "12.4",
+        "packages": {
+          "torch": "2.6.0+cu124",
+          "transformers": "4.57.6",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.22.2",
+          "huggingface-hub": "0.36.2",
+          "langdetect": "1.0.9"
+        },
+        "tf32_matmul": false,
+        "tf32_cudnn": false
+      }
+    },
+    "totals": {
+      "saved_generations": 1142,
+      "teacher_forced_sequences": 1500,
+      "logit_forwards": 2,
+      "mc_items": 64
+    },
+    "native_starts": 68,
+    "maximum_new_starts": 136
+  },
+  "whole_totals": {
+    "saved_generations": 1242,
+    "teacher_forced_sequences": 1500,
+    "logit_forwards": 2,
+    "mc_items": 64
+  },
+  "whole_native_starts": 73,
+  "maximum_whole_starts": 141,
+  "stop": null,
+  "limits": [
+    "Parent control clarity3.46 failed3.5 floor; entailment2.44 versus baseline4.60 is a pre-stated quality risk, not a passed gate.",
+    "The omitted pre-extraction quality check was our extra gate, not author prompt-based extraction. Downstream floors and held-out locks are unchanged.",
+    "Reuse across old/new judging sessions limits ordinal comparisons; first-valid parent100 answers/grades and h0 remain unchanged.",
+    "Fresh native HF BF16 Qwen3, nonthinking/token-slice decoding, reconstructed1000 draws differ from author TransformerLens/runtime RNG.",
+    "One tools-off Claude co-rates up to20 original-scale items instead of three author judges; contrast effects and contextual custom versus sentence-alone sarcasm limit interpretation.",
+    "Source complaints include profanity/hostility and incomplete transformed-data lineage. No human-validity or independent/general assistant-persona-control claim.",
+    "Random matches scalar controller, not actual trajectory norms; per-position norm ratio is report-only. Capability is independent off-task transfer.",
+    "No original null is relabelled, no additional initial responses/ratings, no test oracle, new model size or joint traits."
+  ],
+  "selection": {
+    "best": {
+      "fixed": "fixed_b23_a1",
+      "saps": "saps_b23_a1"
+    },
+    "winner": "fixed_b23_a1",
+    "setting": {
+      "method": "fixed",
+      "block": 23,
+      "alpha": 1.0
+    },
+    "gain": 1.4,
+    "selection_null": false,
+    "branch": "both",
+    "eligible": [
+      "fixed_b11_a1",
+      "saps_b11_a1",
+      "saps_b11_a1.4",
+      "fixed_b15_a1",
+      "saps_b15_a1",
+      "saps_b15_a1.4",
+      "fixed_b19_a1",
+      "saps_b19_a1",
+      "saps_b19_a1.4",
+      "fixed_b23_a1",
+      "saps_b23_a1"
+    ],
+    "metrics": {
+      "fixed_b11_a1": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.24,
+        "grammaticality": 4.82,
+        "clarity": 4.54,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.28
+      },
+      "saps_b11_a1": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.14,
+        "grammaticality": 4.82,
+        "clarity": 4.52,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.08
+      },
+      "saps_b11_a1.4": {
+        "n": 50,
+        "sarcasm": 0.02,
+        "entailment": 4.1,
+        "grammaticality": 4.84,
+        "clarity": 4.56,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.24
+      },
+      "fixed_b15_a1": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.34,
+        "grammaticality": 4.9,
+        "clarity": 4.62,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.4
+      },
+      "saps_b15_a1": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.34,
+        "grammaticality": 4.88,
+        "clarity": 4.62,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.3
+      },
+      "saps_b15_a1.4": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.24,
+        "grammaticality": 4.88,
+        "clarity": 4.66,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.86
+      },
+      "fixed_b19_a1": {
+        "n": 50,
+        "sarcasm": 0.02,
+        "entailment": 4.8,
+        "grammaticality": 4.9,
+        "clarity": 4.64,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.86
+      },
+      "saps_b19_a1": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.68,
+        "grammaticality": 4.9,
+        "clarity": 4.74,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.44
+      },
+      "saps_b19_a1.4": {
+        "n": 50,
+        "sarcasm": 0.02,
+        "entailment": 4.96,
+        "grammaticality": 4.92,
+        "clarity": 4.68,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.98
+      },
+      "fixed_b23_a1": {
+        "n": 50,
+        "sarcasm": 1.4,
+        "entailment": 3.44,
+        "grammaticality": 4.76,
+        "clarity": 3.82,
+        "style_at_least3": 13,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 1,
+        "mean_tokens": 26.68
+      },
+      "saps_b23_a1": {
+        "n": 50,
+        "sarcasm": 1.08,
+        "entailment": 3.74,
+        "grammaticality": 4.9,
+        "clarity": 4.04,
+        "style_at_least3": 12,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.68
+      },
+      "saps_b23_a1.4": {
+        "n": 50,
+        "sarcasm": 2.56,
+        "entailment": 2.82,
+        "grammaticality": 4.64,
+        "clarity": 3.64,
+        "style_at_least3": 28,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 27.4
+      }
+    },
+    "reused_initial_metrics": {
+      "baseline": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.6,
+        "grammaticality": 4.9,
+        "clarity": 4.76,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.2
+      },
+      "prompt": {
+        "n": 50,
+        "sarcasm": 3.04,
+        "entailment": 2.44,
+        "grammaticality": 4.64,
+        "clarity": 3.46,
+        "style_at_least3": 36,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 30.6
+      }
+    },
+    "parent_gate_remains_failed": true
+  },
+  "reference": {
+    "metrics": {
+      "baseline": {
+        "n": 100,
+        "sarcasm": 0.0,
+        "entailment": 4.47,
+        "grammaticality": 4.84,
+        "clarity": 4.69,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 23.98
+      },
+      "fixed": {
+        "n": 100,
+        "sarcasm": 1.31,
+        "entailment": 3.44,
+        "grammaticality": 4.77,
+        "clarity": 4.04,
+        "style_at_least3": 27,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.96
+      },
+      "saps": {
+        "n": 100,
+        "sarcasm": 1.16,
+        "entailment": 3.7,
+        "grammaticality": 4.67,
+        "clarity": 4.15,
+        "style_at_least3": 26,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.61
+      },
+      "random": {
+        "n": 100,
+        "sarcasm": 0.0,
+        "entailment": 4.37,
+        "grammaticality": 4.75,
+        "clarity": 4.6,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 24.1
+      },
+      "prompt": {
+        "n": 100,
+        "sarcasm": 3.08,
+        "entailment": 2.66,
+        "grammaticality": 4.61,
+        "clarity": 3.56,
+        "style_at_least3": 67,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 31.4
+      }
+    },
+    "gates": {
+      "gain_baseline": true,
+      "gain_random": true,
+      "quality": true,
+      "prompt_positive": true
+    },
+    "all_criteria_pass": true
+  },
+  "norm_diagnostics": {
+    "prefill": {
+      "real": {
+        "count": 100,
+        "mean": 43.0942760848999,
+        "min": 38.9566650390625,
+        "median": 43.16067886352539,
+        "max": 46.60869216918945
+      },
+      "random": {
+        "count": 100,
+        "mean": 43.09625526428223,
+        "min": 38.95268630981445,
+        "median": 43.16458511352539,
+        "max": 46.61238479614258
+      },
+      "random_over_real_mean": 1.0000459267346415,
+      "norm_mismatched": false,
+      "report_only": true,
+      "scope": "Per-position additive-vector L2; prefix Frobenius L2 would scale sqrt(S), squared norm scales S"
+    },
+    "decode": {
+      "real": {
+        "count": 2496,
+        "mean": 43.11437284487944,
+        "min": 38.9566650390625,
+        "median": 43.192813873291016,
+        "max": 46.60869216918945
+      },
+      "random": {
+        "count": 2310,
+        "mean": 43.081952085949126,
+        "min": 38.95268630981445,
+        "median": 43.1673469543457,
+        "max": 46.61238479614258
+      },
+      "random_over_real_mean": 0.9992480289798726,
+      "norm_mismatched": false,
+      "report_only": true,
+      "scope": "Per-position additive-vector L2; prefix Frobenius L2 would scale sqrt(S), squared norm scales S"
+    }
+  },
+  "custom": {
+    "metrics": {
+      "fixed": {
+        "n": 20,
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 4,
+        "ambiguous": {
+          "profanity": 0,
+          "rudeness": 4,
+          "sarcasm": 4
+        },
+        "content_ok": 13,
+        "incoherent": 1,
+        "gross_failures": 0
+      },
+      "saps": {
+        "n": 20,
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 3,
+        "ambiguous": {
+          "profanity": 0,
+          "rudeness": 4,
+          "sarcasm": 4
+        },
+        "content_ok": 16,
+        "incoherent": 2,
+        "gross_failures": 0
+      },
+      "prompt": {
+        "n": 20,
+        "profanity": 0,
+        "rudeness": 1,
+        "sarcasm": 20,
+        "ambiguous": {
+          "profanity": 0,
+          "rudeness": 9,
+          "sarcasm": 0
+        },
+        "content_ok": 11,
+        "incoherent": 0,
+        "gross_failures": 0
+      },
+      "baseline": {
+        "n": 20,
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 0,
+        "ambiguous": {
+          "profanity": 0,
+          "rudeness": 2,
+          "sarcasm": 0
+        },
+        "content_ok": 18,
+        "incoherent": 0,
+        "gross_failures": 0
+      },
+      "random": {
+        "n": 20,
+        "profanity": 0,
+        "rudeness": 0,
+        "sarcasm": 0,
+        "ambiguous": {
+          "profanity": 0,
+          "rudeness": 4,
+          "sarcasm": 0
+        },
+        "content_ok": 19,
+        "incoherent": 0,
+        "gross_failures": 0
+      }
+    },
+    "separate_custom_construct": true,
+    "not_a_selection_gate": true
+  },
+  "capability": {
+    "metrics": {
+      "baseline": {
+        "general_mc": {
+          "total": 16,
+          "correct": 11
+        },
+        "physics_mc": {
+          "total": 16,
+          "correct": 7
+        },
+        "gsm8k": {
+          "total": 8,
+          "strict_correct": 8,
+          "fallback_correct": 8,
+          "format_compliant": 8,
+          "hit_token_limit": 0,
+          "strict_accuracy": 1.0,
+          "fallback_accuracy": 1.0,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 8,
+          "prompt_strict_correct": 6,
+          "instruction_strict_correct": 10,
+          "instruction_total": 12
+        }
+      },
+      "selected": {
+        "general_mc": {
+          "total": 16,
+          "correct": 11
+        },
+        "physics_mc": {
+          "total": 16,
+          "correct": 7
+        },
+        "gsm8k": {
+          "total": 8,
+          "strict_correct": 8,
+          "fallback_correct": 8,
+          "format_compliant": 8,
+          "hit_token_limit": 0,
+          "strict_accuracy": 1.0,
+          "fallback_accuracy": 1.0,
+          "caveat": "Small deterministic pipeline check, not evidence of improvement; last-number fallback can reward noncompliant answers."
+        },
+        "ifeval": {
+          "total": 8,
+          "prompt_strict_correct": 7,
+          "instruction_strict_correct": 11,
+          "instruction_total": 12
+        }
+      }
+    },
+    "gates": {
+      "mc": true,
+      "gsm8k": true,
+      "ifeval": true
+    },
+    "all_criteria_pass": true
+  }
+}

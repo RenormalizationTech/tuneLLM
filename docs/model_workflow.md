@@ -77,7 +77,10 @@ unachieved. The user selected the [literature-first isolated workflow](persona_l
 New steering tasks first audit successful author code/data and establish a
 bounded method adaptation before custom changes. Consolidate each isolated
 workflow after its result; joint control is separately experimental and deferred
-for later discussion, not an automatic next step.
+for later discussion, not an automatic next step. Rudeness and profanity PV
+grids closed with nulls. SAPS sarcasm passed its registered paraphrase reference
+and compact capability checks, with reduced meaning preservation; this is not
+generic persona control. See the [completed execution record](persona_reference_execution.md).
 Steering changes activations during inference;
 the routine adapter-training steps above apply only when a new training exercise
 is explicitly selected. Review management plans with Claude first and delegate

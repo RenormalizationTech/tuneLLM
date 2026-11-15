@@ -48,7 +48,9 @@ control in this range. The user then selected the
 [literature-first isolated workflow](docs/persona_literature_workflow.md): released
 Persona Vectors impoliteness, SAPS sarcasm, and an explicitly adapted PV profanity
 profile. The source-tested implementations are complete. Both full PV grids
-closed with development nulls; SAPS sarcasm validation is running. See the
+closed with development nulls. SAPS sarcasm completed a narrow held-out
+paraphrase reference pass (27/100 reaching the author sarcasm threshold ≥3 versus 0 baseline/random),
+with reduced meaning preservation and small capability checks passing. See the
 [reference execution record](docs/persona_reference_execution.md). Joint control is deferred for later discussion as a separate
 experimental project; the full persona-control objective remains unachieved. See
 [the current project map](docs/project_tracks.md) and

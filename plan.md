@@ -77,8 +77,9 @@ below distinguishes completed runs from accepted designs.
   `docs/persona_literature_workflow.md`: author methods/data first, isolated
   rudeness (PV), sarcasm (SAPS), profanity (explicit PV new-trait adaptation).
   Source-tested implementations are complete. Rudeness and profanity full PV
-  grids closed with development nulls; SAPS continuation validation is running
-  with unchanged quality floors. See `docs/persona_reference_execution.md`. The
+  grids closed with development nulls. SAPS continuation completed a held-out
+  paraphrase reference pass (27/100 reaching author sarcasm ≥3 versus 0 baseline/random), with
+  reduced meaning preservation; compact capability checks passed. See `docs/persona_reference_execution.md`. The
   stronger-magnitude proposal was not run. Joint control is experimental,
   deferred for later discussion; no joint or further 14B run started.
 - Qwen3-4B refusal study: closed after the final published-only replay. All 250

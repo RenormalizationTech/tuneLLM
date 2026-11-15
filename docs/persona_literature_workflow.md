@@ -60,14 +60,16 @@ Profanity elicitation passed. A separately registered
 limitation and prospectively replaces profanity's unrun selection stages.
 The full rudeness grid also closed selection_null (best quality-eligible gain
 1.2/100); profanity's fresh 280-output grid closed selection_null with zero gain
-and no lexical matches. A separately
-registered [SAPS continuation](persona_saps_continuation_protocol.md) proceeds
-with completed author prompt-based extraction and running validation, preserving
-the original failed gate
-and every downstream quality requirement. Original results remain unchanged,
-and each isolated outcome is consolidated
-with its limitations. See the
-[execution record](persona_reference_execution.md) for live status and results.
+and no lexical matches. The separate [SAPS continuation](persona_saps_continuation_protocol.md)
+completed author prompt-based extraction, preserved the original failed added
+gate and passed its registered held-out reference/capability criteria. Fixed
+block 23/alpha 1 produced27/100 reaching the author sarcasm threshold ≥3 paraphrases versus 0 baseline
+and random, with a meaning-preservation cost. The separate contextual subset
+found 4/20 clear sarcasm and content preservation 13/20 versus 18/20 baseline.
+This is exploratory task-specific evidence, not generic persona validation.
+Original results remain unchanged. See the
+[execution record](persona_reference_execution.md) and
+[sarcasm closeout](persona_saps_sarcasm_continuation_closeout.md).
 
 ## Consolidated method contracts
 
@@ -76,22 +78,32 @@ Physics LoRA, quantization comparisons and refusal vectors are separate inputs
 and results, not components of these trait experiments.
 
 For PV rudeness and profanity, construct opposing prompted answers on matched
-questions. Filter using the reference trait and coherence rules, then average
+questions. Filter using the reference trait and coherence rules, teacher-force
+retained answers under their original systems, then average
 each retained answer's native response-token activations. At each candidate
 layer the vector is the mean positive activation minus the mean negative
 activation, without unit normalization. The coefficient multiplies that raw
-vector. Apply the shift at the final prompt token and subsequent generated
+vector. Use decoder-block outputs, with author layer L mapping to block L−1,
+excluding the final-normalized state. Apply the shift at the last real prompt
+position and subsequent generated
 tokens. A coefficient has no universal strength across traits: record the actual
-shift norm relative to the residual. The full registered grid covers nine sites
-and coefficients0.5,1,2. Do not extend it after observing a null.
+shift norm relative to the residual. This project's registered grid covers nine sites
+and coefficients0.5,1,2; it extends the author's staged search. Do not extend a
+search within the same protocol after a null; a further extension needs a
+separate registration and preserves the original result. Greedy single rollouts,
+cap512 and integer co-rated Claude scores are disclosed project adaptations,
+not author defaults.
 
 For SAPS sarcasm, use the released literal-to-sarcastic paraphrase task. Learn
 unit directions from plain versus styled final-prompt-token activations, and
 learn the styled projection target in a separate prompt pass. Fixed steering
-uses each input's baseline projection to compute one constant correction;
+uses each input's baseline projection to compute one constant correction, added
+at every forwarded position (whole prefill, then each cached decode token);
 adaptive steering recomputes the correction from the current last activation.
 The author's adaptive operation broadcasts that correction over the prefill,
-then acts at each cached token. These semantics differ from the PV response-only
+then acts at each cached token. Both controllers here require batch size1;
+these broadcasts must not be assumed to work per example in a larger batch.
+These semantics differ from the PV response-only
 hook and must remain separate implementations. The sarcasm result concerns
 paraphrasing; a generic sarcastic assistant would need its own transfer study.
 
@@ -105,7 +117,14 @@ The per-method runbooks specify exact commands and registration dependencies:
 [PV grid](../scripts/persona_pv_grid_runbook.md) and
 [SAPS continuation](../scripts/persona_saps_continuation_runbook.md).
 
+These runners are study-specific: model identity, 36-block indexing, paths and
+budgets are fixed to this Qwen3-4B experiment. The method contracts are reusable;
+a new model requires a separately reviewed configuration/port and mechanics
+checks, rather than changing a model argument in a frozen run.
+
 A usable isolated control has not yet been established for rudeness or profanity.
-Those execution contracts are documented; they are not recommended effective
+Sarcasm has an exploratory paraphrase-scoped reference pass, with quality
+limits. Those PV execution contracts are
+documented; they are not recommended effective
 settings. Joint control remains an unstarted experimental topic for later
 literature review and discussion.
