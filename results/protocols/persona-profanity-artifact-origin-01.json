@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "generator_model": "claude-opus-5-5",
+  "actual_model_usage_ids": [
+    "claude-opus-5-5"
+  ],
+  "binary_sha256": "604d29a6869409106b6a1110bdadcc8b72e8654a5a865d23258f938a696e348e",
+  "cli_version": "2.1.323 (Claude Code)",
+  "first_structurally_valid_attempt": 0,
+  "generator_manifest_sha256": "dfef1dbf093fc45ae65be0bb515fbad290fd93a2028586e50be87a2637ad0e67",
+  "packet_canonical_stdin_sha256": "d687edf812ef80ffe1b701064a947658373f910d808c21c48b4181a3d5909978",
+  "split_seed": 703,
+  "maximum_artifact_starts": 2,
+  "actual_starts": 1,
+  "private_bindings": {
+    "outputs/persona-profanity-artifacts-01/manifest.json": "dfef1dbf093fc45ae65be0bb515fbad290fd93a2028586e50be87a2637ad0e67",
+    "outputs/persona-profanity-artifacts-01/inputs/packet.json": "6c10407058b3830bbb0f1f264485087834a7da42f81fdbfdff0cf6616543d4c8",
+    "outputs/persona-profanity-artifacts-01/inputs/split_order.json": "7dfde9da2b792ff98725e9c0df8175c895aa22fcec7564c1b3ef40e0d2e475a7",
+    "outputs/persona-profanity-artifacts-01/inputs/lexical_spec.json": "98993d4b09abedb1503a6cacdecc8c53992d76a5da4106d502a5486fd1fe4477",
+    "outputs/persona-profanity-artifacts-01/parsed.json": "689e016d58c5f4495e8691ef58a18e019b84d52534effa2d83223151f1e37aae",
+    "outputs/persona-profanity-artifacts-01/split.json": "a27fa709fbbd79a6122d1f3c1cdc83c28638f444f8f805b52b2ffaad807c74ce",
+    "outputs/persona-profanity-artifacts-01/checks.json": "ce8dfb7dcef6839b1e51f982fb42370d13763484bb555fa4c84428eb316c1a44",
+    "outputs/persona-profanity-artifacts-01/accepted.json": "0572977fac19af000eea8e9af5b59b547becb47ae5e553db046c9200f98aa648",
+    "outputs/persona-profanity-artifacts-01/journal/batch-000-attempt-0-start.json": "a51ccbfb295e09560cc29211a8e3322d0fabba69a4a082b4de782f4c4e619dda",
+    "outputs/persona-profanity-artifacts-01/journal/batch-000-attempt-0-receipt.json": "a4ae4cb4b93cf570f3cdfa5d91b2c2d60950b7271b4f5832ac0a01aa1ecceb9e",
+    "outputs/persona-profanity-artifacts-01/journal/run_binding.json": "88a0d7093fee27374b42d97b60acfb03f345d0c192176bdb362bb3debc63df47",
+    "outputs/persona-profanity-artifacts-01/journal/batch-000-attempt-0.json": "757c290cc0b16d7814f7b76a27967f78d880dbc7116d6d135cb6d27f285222fa"
+  },
+  "promoted_dataset_sha256": {
+    "extract.json": "4b0e1aef7d1bd79b0dc2915d5c0cefa7de06b3eb7c88e855975ac325285e73a6",
+    "eval.json": "50d240ff5fbc1ad28abba03ce6ec2aa560b1ffbec01c5cb3c781e02b77309aaa",
+    "coherence.json": "f23ec0649366b61ec691846644111af670e36508c0797b8fc2a8071f58f0ae27",
+    "LICENSE": "bb57d93dde8ac629c48b014e77ceb996314c08f6475f665f69dda361940d9fd4",
+    "ATTRIBUTION.md": "30adf0f430ce7ccdc6952c74e9308944036f142e81d4943b3fb26943b714b9fb"
+  },
+  "semantic_review_sha256": "5f45fd47469f6681c4249e58806582a5aa7f24ac5e46b19b1a752c12b556320d",
+  "supplement_spec_sha256": "98993d4b09abedb1503a6cacdecc8c53992d76a5da4106d502a5486fd1fe4477",
+  "supplement_source_sha256": "9ffcc1cc68204994984c07c314e24344c82749d2784d82df86662f86dffac427",
+  "rendered_system_sha256": {
+    "0-pos": "21fcbdef840ad49a919840f48e00022efc8769adaf4841aef0aede3c2bbbfa76",
+    "0-neg": "e545400c6684dd8ad010bdca84909b8387aa2de0cb0e4e1aea14d1aed4c41eb4",
+    "1-pos": "0220a81b4946971859bed4c9f1a91ee46d4b11861c8e7d2a62236946fbc9afec",
+    "1-neg": "1004be07b01d6a53bfbff3edffdd80fc676cca5696ce0fce39dafd96058c246b",
+    "2-pos": "8850d2eebfd201660450fa3d4361fcd8090b72d4b6c7f334bb92dadec14268c3",
+    "2-neg": "75dc106886a4bf844f28fa09173e546ca495375d6f188232c27668c6864272d2",
+    "3-pos": "d64b83abf6d9f93d953e56c99bc8a47374085a143672c74cca96fa9bda2cb3b8",
+    "3-neg": "1cf178721a20e1003cf757dc5aa0153b29482a19bb13fd8dae001eb865342663",
+    "4-pos": "3fbbdf7e844df3636ba5b2d5f8e2e81c5d6bd6bbc99a319643661e0d8df06e42",
+    "4-neg": "a9e40984a3abcacbf8c72b4c4ee1d1dc75ec210352f5099f29024c658a5b727f"
+  },
+  "template_matching_policy": "Match whitespace runs only; ignore case only for trait token profanity; all other text/placeholder names exact. Original generated/promoted bytes remain unchanged.",
+  "framing_deviation": "Unchanged tools-off evaluator system and medium effort, task_type distinguishes generation; new Claude replaces author Claude3.7.",
+  "identity_deviation": "Matched helpfulness: helpful and profane versus helpful and nonprofane; full rendered systems reviewed.",
+  "limits": [
+    "Generated artifacts are new, not author profanity data. Generator/evaluator model reuse introduces circularity, not human validity.",
+    "Private raw attempts remain ignored; committed origin hashes are not recursively opened by frozen PV live phases. Promotion and lexical/postrun audit verify them."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "study": "Isolated SAPS sarcasm native-HF adaptation",
+  "manifest_sha256": "93cb4153db5e12ff4262ab3e06ada1838c068b4ea58f4721d7c31498d04bd121",
+  "cpu_checks_passed": 24,
+  "coordinator_code_accepted": true,
+  "advisor_code_accepted": true,
+  "before_any_SAPS_model_or_grading_calls": true,
+  "previous_PV_rudeness_closed": "selection_null",
+  "maximum_generations": 1242,
+  "maximum_direction_forwards": 1500,
+  "maximum_grading_starts": 146,
+  "joint_control": "deferred"
+}
