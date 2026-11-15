@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "kind": "static_retained_controller",
+  "trait": "profanity",
+  "method": "gcad",
+  "status": "passed_registered_development_and32_item_heldout",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "snapshot": ".hf/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "manifest": {
+      "path": "outputs/persona-author-replication-audit-01/model_manifest.json",
+      "sha256": "cef399162cdfa86968b9b41eb159d0e39b13cc678d6e335d71ca86c452845454"
+    }
+  },
+  "controller": {
+    "blocks": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "base_coef": 5.0,
+    "scale": 1.5,
+    "inverse": false,
+    "debug": false,
+    "delta_normalization": "none; raw PF system-attention delta",
+    "bank": {
+      "path": "outputs/profanity-method-transfer-01/extraction/banks.pt",
+      "sha256": "5182c029351304ceaec8a30c222e75cb6e5479d69e2882626aa5663f8d969a2a"
+    },
+    "object_key": "gcad",
+    "representation": "system_attention_delta",
+    "tensor_sha256": {
+      "delta": "cb00a1f143e34d4526ef54aba4a732483ca2aea24497eed3da122e09d0a310bb",
+      "key": "b9310362375f8855bae5e1fb6332bf387ba245c45eb0400fea3c217424d2bd87",
+      "demand": "d827e949c928e1ff26851a07818f593fbd6f847304e35b83e9b74cbaef427627"
+    }
+  },
+  "basis": {
+    "reference": {
+      "path": "outputs/profanity-method-transfer-01/inputs/basis.json",
+      "sha256": "16b168f2eb56c3b5daf1079555688da3d7ffce7b01b62f7964d28c20c31a522f"
+    },
+    "coordinate_system": "native_hf",
+    "tokenizer_sha256": "3b0409535ce1b02305d80e931c0d3fdbd8b742512f4d8983977c210d27998c6e",
+    "rendering_sha256": "9ad95b169aa1676eba5bf987cc3d13498bdc056bdcf2978f71b329754bb345f4"
+  },
+  "data": {
+    "snapshot": {
+      "path": "outputs/profanity-method-transfer-01/inputs/data.json",
+      "sha256": "7c1a80671e510a6abbb7f88354b2f51367c6c51ab4ca261dbcd8bd25fb36bc82"
+    },
+    "training_data_sha256": "7c1a80671e510a6abbb7f88354b2f51367c6c51ab4ca261dbcd8bd25fb36bc82",
+    "elicitation_eligibility": {
+      "path": "outputs/profanity-method-transfer-01/eligibility.json",
+      "sha256": "45e95cce09eaf99b2e91cb9a9443630da7afc1f5d3da5369d4a38f91125e7a11"
+    },
+    "instruction_source": {
+      "path": "evaluation/persona_reference/profanity/extract.json",
+      "sha256": "4b0e1aef7d1bd79b0dc2915d5c0cefa7de06b3eb7c88e855975ac325285e73a6"
+    },
+    "instruction_identity_source": {
+      "path": "configs/persona_reference_profanity.json",
+      "sha256": "a206fba48aeae4bace5d2db4aa0653ae3f0eaab52cbdea087aa452f8eb15f04a"
+    },
+    "calibration_source": {
+      "path": "evaluation/author_profanity_revision/calibration.json",
+      "sha256": "41aa9a448551bbce8d314039cd9e7be3e7db5bd4e2735657c4821208fcf9e85f"
+    },
+    "heldout_source": {
+      "path": "evaluation/author_profanity_revision/report.json",
+      "sha256": "486300cffd90fe08780ac786f7bf67143fefcc25b343d1c6e972e276075b5683"
+    }
+  },
+  "provenance": {
+    "manifest": {
+      "path": "outputs/profanity-method-transfer-01/manifest.json",
+      "sha256": "0bc382bf5ed64bd74216d926fd52cfb0639b9acc99c25bfb9e33e37fb29ecbbb"
+    },
+    "source_config": {
+      "path": "configs/profanity_method_transfer.json",
+      "sha256": "e84c6fd05636a238d5eadf34b71142ae7cd4bbc12839939018fbb21d29603c3e"
+    },
+    "protocol": {
+      "path": "docs/profanity_method_transfer_protocol.md",
+      "sha256": "bf22b9e9d8eaa9a11d10391118b46f44b7568c62393e43d72119d638fb41bfc1"
+    },
+    "design_review": {
+      "path": "results/reviews/profanity_method_transfer_design_review.md",
+      "sha256": "f37146153c912ed6a006bf6f55c919bd334907658f9dd3507bd55a47bf2654c0"
+    },
+    "report": {
+      "path": "results/profanity_method_transfer_01.json",
+      "sha256": "4308406fedd291b4aa9a906288fe6d6b9f765af07a9229ed272d20f6f5bc5efb"
+    },
+    "selection": {
+      "path": "outputs/profanity-method-transfer-01/selection.json",
+      "sha256": "e1061ef48b61b55ca74ea6e8c03e45719821fbc989afb65184e28b205dc52771"
+    },
+    "source_sha256": {
+      "configs/profanity_method_transfer.json": "e84c6fd05636a238d5eadf34b71142ae7cd4bbc12839939018fbb21d29603c3e",
+      "scripts/author_gcad_impolite.py": "65620b510ebea7f307ac5d6a92d2425561bb0cde5cb0766393984a7a83a1dbe4",
+      "scripts/author_gcad_impolite_common.py": "190d32458b8dd090bfa2151a0bb40041f20472bfde8388f2a90101a7e964d151",
+      "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+      "scripts/author_replication_audit.py": "2e3a28966d0825452854f009c8db8a445272cac710da4575c0311da94a35e7ab",
+      "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+      "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+      "scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+      "scripts/persona_saps_common.py": "7801023f954b0f18daf1ec805b4af4d626d912ec2c854f9d7b45f7b8874ea8dc",
+      "scripts/profanity_method_transfer.py": "4236071f350e9e3604e5ead0240dc68cb7829cff0b6ad0da08811a7ea2131b73",
+      "scripts/profanity_method_transfer_common.py": "b23cc0d81e8ed25ac9f0d630008418e63bcde077f6ad15688f4681545d387b24",
+      "scripts/profanity_method_transfer_runbook.md": "202ea76e9ab7947a9cf67222dbdc43e9993f9ee65740d6ab324c284ffde89ca9",
+      "scripts/profanity_transfer_common.py": "a4f72765fd723d136870e3a8c0ed6bc7e65025b5386318ae5e4e29609977a4a8",
+      "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+      "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+      "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+    },
+    "registrations": {
+      "initial": {
+        "path": "results/protocols/profanity-method-transfer-01.json",
+        "sha256": "6edf7ddce0a1b5093b9668d7f049a2c93c3666de7fd1dddf612d5fe2f07105d0"
+      },
+      "mechanics": {
+        "path": "results/protocols/profanity-method-transfer-mechanics-01.json",
+        "sha256": "1d664638e968e946173a70619cba1cba15cbf556fcf39c2a92e3ae9af9abd9d2"
+      },
+      "selection": {
+        "path": "results/protocols/profanity-method-transfer-selection-01.json",
+        "sha256": "38f77f2ea0b56d830ceee4ed1db38bb6c3524461abacb1e08f584abb98e52791"
+      }
+    },
+    "bank_metadata": {
+      "path": "outputs/profanity-method-transfer-01/extraction/banks.json",
+      "sha256": "4116593726c1333d264f6f5ee58ca31f93899dc9944eb54ae52bfb07f85b591d"
+    },
+    "extraction_integrity": {
+      "path": "outputs/profanity-method-transfer-01/extraction/integrity.json",
+      "sha256": "655fdaf60a3302606997d2e46ddc7b5d8bd4f623075245caf6878299f7e84dfe"
+    }
+  },
+  "generation_defaults": {
+    "do_sample": false,
+    "seed": 42,
+    "batch_size": 1,
+    "max_new_tokens": 160,
+    "use_cache": true,
+    "system": "No explicit style/system override; native default Qwen helpful system"
+  },
+  "runtime_constraint": {
+    "python": "outputs/persona-author-replication-audit-01/envs/gcad/bin/python",
+    "physical_gpu": 0,
+    "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+    "minimum_free_mib": 24000,
+    "maximum_utilization_percent": 10
+  },
+  "measured_heldout": {
+    "n_per_condition": 32,
+    "baseline": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 85.34375,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 32,
+      "eos": 0,
+      "mean_tokens": 160.0,
+      "mean_distinct_bigram": 0.9633258634997651,
+      "changed_answers_vs_baseline": 0
+    },
+    "selected": {
+      "n": 32,
+      "trait_conservative": 31.125,
+      "trait_numeric_mean": 31.125,
+      "refusals": 0,
+      "coherence": 82.6875,
+      "lexicon_hits": 14,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 16,
+      "eos": 16,
+      "mean_tokens": 133.5,
+      "mean_distinct_bigram": 0.9767671440297321,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 7.609658648486346
+    },
+    "random": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 85.6875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 29,
+      "eos": 3,
+      "mean_tokens": 157.3125,
+      "mean_distinct_bigram": 0.9578466355544125,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 6.584410375779675
+    },
+    "selected_pf_gain_baseline": 31.125,
+    "selected_pf_gain_random": 31.125,
+    "all_registered_criteria_pass": true,
+    "scope": "These32 ordinary neutral held-out questions on this pinned checkpoint/runtime only; no generalization or factual accuracy claim"
+  },
+  "limits": [
+    "Construct is friendly non-slur swearing; this is a reconstructed-input method transfer, not numerical author reproduction.",
+    "Coherence ratings do not establish factual accuracy, task completion or absence of rudeness/content drift.",
+    "Stronger development base7 lost relative coherence; selected base5 is not a guarantee against style leakage or content drift.",
+    "All32 baseline answers and16 selected answers reached cap160; these observed bounded outputs do not establish uncapped behavior.",
+    "Claude is one adapted evaluator family; trait and coherence were rated separately. Lexicon is an incomplete context-dependent proxy.",
+    "Random control matched layer norms/sites/gates, not identical realized trajectory energy. No downstream capability evaluation was performed.",
+    "Bank and snapshots are local ignored artifacts; this static pointer is not a model release, new runner, or permission for automatic execution."
+  ]
+}

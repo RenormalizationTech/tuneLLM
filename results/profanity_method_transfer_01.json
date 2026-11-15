@@ -1,0 +1,570 @@
+{
+  "status": "complete",
+  "manifest_sha256": "0bc382bf5ed64bd74216d926fd52cfb0639b9acc99c25bfb9e33e37fb29ecbbb",
+  "source_sha256": {
+    "configs/profanity_method_transfer.json": "e84c6fd05636a238d5eadf34b71142ae7cd4bbc12839939018fbb21d29603c3e",
+    "scripts/author_gcad_impolite.py": "65620b510ebea7f307ac5d6a92d2425561bb0cde5cb0766393984a7a83a1dbe4",
+    "scripts/author_gcad_impolite_common.py": "190d32458b8dd090bfa2151a0bb40041f20472bfde8388f2a90101a7e964d151",
+    "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+    "scripts/author_replication_audit.py": "2e3a28966d0825452854f009c8db8a445272cac710da4575c0311da94a35e7ab",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+    "scripts/persona_saps_common.py": "7801023f954b0f18daf1ec805b4af4d626d912ec2c854f9d7b45f7b8874ea8dc",
+    "scripts/profanity_method_transfer.py": "4236071f350e9e3604e5ead0240dc68cb7829cff0b6ad0da08811a7ea2131b73",
+    "scripts/profanity_method_transfer_common.py": "b23cc0d81e8ed25ac9f0d630008418e63bcde077f6ad15688f4681545d387b24",
+    "scripts/profanity_method_transfer_runbook.md": "202ea76e9ab7947a9cf67222dbdc43e9993f9ee65740d6ab324c284ffde89ca9",
+    "scripts/profanity_transfer_common.py": "a4f72765fd723d136870e3a8c0ed6bc7e65025b5386318ae5e4e29609977a4a8",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+  },
+  "costs": {
+    "elicitation": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 200,
+      "prompt_forwards": 0,
+      "gcad_teacher_forced": 0,
+      "logit_forwards": 0,
+      "generation_wall_seconds": 1356.5572852878831,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 1371.2752732248046,
+      "peak_allocated_bytes": 15268436992,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed work counters; irreversible before-call starts also retained. Peak allocator across own phase loads, not total VRAM."
+    },
+    "extraction": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 0,
+      "prompt_forwards": 300,
+      "gcad_teacher_forced": 240,
+      "logit_forwards": 0,
+      "generation_wall_seconds": 0.0,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        },
+        {
+          "attention": "eager",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+          "free_mib_before_load": 47706
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 136.50327285472304,
+      "peak_allocated_bytes": 15567399424,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed work counters; irreversible before-call starts also retained. Peak allocator across own phase loads, not total VRAM."
+    },
+    "mechanics": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 16,
+      "prompt_forwards": 0,
+      "gcad_teacher_forced": 0,
+      "logit_forwards": 2,
+      "generation_wall_seconds": 17.330007997341454,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 27.931806059088558,
+      "peak_allocated_bytes": 15248479232,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed work counters; irreversible before-call starts also retained. Peak allocator across own phase loads, not total VRAM."
+    },
+    "development": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 320,
+      "prompt_forwards": 0,
+      "gcad_teacher_forced": 0,
+      "logit_forwards": 0,
+      "generation_wall_seconds": 1110.2002958166413,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 1135.3067720388062,
+      "peak_allocated_bytes": 15256882176,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed work counters; irreversible before-call starts also retained. Peak allocator across own phase loads, not total VRAM."
+    },
+    "heldout": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 96,
+      "prompt_forwards": 0,
+      "gcad_teacher_forced": 0,
+      "logit_forwards": 0,
+      "generation_wall_seconds": 455.79522757651284,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 475.0162938986905,
+      "peak_allocated_bytes": 15256724480,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed work counters; irreversible before-call starts also retained. Peak allocator across own phase loads, not total VRAM."
+    }
+  },
+  "totals": {
+    "generations": 632,
+    "prompt_forwards": 300,
+    "gcad_teacher_forced": 240,
+    "logit_forwards": 2
+  },
+  "native_starts": 187,
+  "first_valid_batches": 186,
+  "limits": [
+    "Method transfer on Qwen7 ordinary replies, not original Mistral rewrite/author numerical reproduction.",
+    "Reconstructed approved PF systems/questions are not missing original-author PF contrastive data. Prior studies remain closed unchanged.",
+    "Trait REFUSAL is zero in fixed-denominator conservative means; numeric-only mean and refusal counts also reported.",
+    "Separate trait/coherence sessions use adapted JSON+brief reasons; coherence is not factual correctness/helpfulness. One evaluator family.",
+    "Eleven-word lexical proxy and mechanical distinct bigrams are incomplete context-dependent diagnostics.",
+    "Random controls match selected development realized position-mean norm or GCAD layer norm/sites/gates; they are not matched adaptive controllers.",
+    "If all null, canonical literature workflow retained with positive effect unreproduced and missing original data limitation; no automatic rescue."
+  ],
+  "gcad_eligibility": {
+    "count": 80,
+    "gcad_available": true,
+    "only_gcad_null": false,
+    "elicitation_run_sha256": "8655da211c1cf0a6ce6e92f6363a8af6d6fce3e8877a36813b8f79c82c572ef4",
+    "accepted_sha256": {
+      "trait": "13b4a119fd0c714bc49bc7b81e7b33415c6cbfb61c1210a77fb072c5e9d8ffb1",
+      "coherence": "48fb5aaa26db79efd3ba9ce7e3960983638548f077ae35b96372c3d3b2c67711"
+    }
+  },
+  "selection": {
+    "selected": {
+      "gcad": "gcad_5"
+    },
+    "gates": {
+      "fixed_1": {
+        "trait_gain": false,
+        "lexicon_absolute": false,
+        "lexicon_gain": false,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": false
+      },
+      "fixed_2": {
+        "trait_gain": false,
+        "lexicon_absolute": false,
+        "lexicon_gain": false,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": false
+      },
+      "fixed_4": {
+        "trait_gain": false,
+        "lexicon_absolute": false,
+        "lexicon_gain": false,
+        "coherence_absolute": false,
+        "coherence_relative": false,
+        "invalid": true,
+        "all_pass": false
+      },
+      "saps_1": {
+        "trait_gain": false,
+        "lexicon_absolute": false,
+        "lexicon_gain": false,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": false
+      },
+      "saps_2": {
+        "trait_gain": false,
+        "lexicon_absolute": false,
+        "lexicon_gain": false,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": false
+      },
+      "saps_4": {
+        "trait_gain": false,
+        "lexicon_absolute": false,
+        "lexicon_gain": false,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": false
+      },
+      "gcad_3.5": {
+        "trait_gain": false,
+        "lexicon_absolute": false,
+        "lexicon_gain": false,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": false
+      },
+      "gcad_5": {
+        "trait_gain": true,
+        "lexicon_absolute": true,
+        "lexicon_gain": true,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": true
+      },
+      "gcad_7": {
+        "trait_gain": true,
+        "lexicon_absolute": true,
+        "lexicon_gain": true,
+        "coherence_absolute": true,
+        "coherence_relative": false,
+        "invalid": true,
+        "all_pass": false
+      }
+    },
+    "selection_null": false,
+    "manifest_sha256": "0bc382bf5ed64bd74216d926fd52cfb0639b9acc99c25bfb9e33e37fb29ecbbb",
+    "metrics_sha256": "8b10cde1ba49923e2a2055c0f35fa81f4f9209736a2ff583e263c89b50149fb3",
+    "settings": {
+      "baseline": {
+        "method": "baseline"
+      },
+      "fixed_1": {
+        "method": "fixed",
+        "strength": 1.0
+      },
+      "fixed_2": {
+        "method": "fixed",
+        "strength": 2.0
+      },
+      "fixed_4": {
+        "method": "fixed",
+        "strength": 4.0
+      },
+      "saps_1": {
+        "method": "saps",
+        "strength": 1.0
+      },
+      "saps_2": {
+        "method": "saps",
+        "strength": 2.0
+      },
+      "saps_4": {
+        "method": "saps",
+        "strength": 4.0
+      },
+      "gcad_3.5": {
+        "method": "gcad",
+        "strength": 3.5
+      },
+      "gcad_5": {
+        "method": "gcad",
+        "strength": 5.0
+      },
+      "gcad_7": {
+        "method": "gcad",
+        "strength": 7.0
+      }
+    },
+    "selected_development_norms": {
+      "gcad": 7.498904684108617
+    },
+    "source_sha256": {
+      "trait": "1611c407ee97719d2264590cde617c19f26f9e71a3954cf650477eaca7e8fa10",
+      "coherence": "324c7e6bb22f5ea6a617f2613183ddc2a2df21dd527ae4abc09e52100c7d6629"
+    }
+  },
+  "development": {
+    "baseline": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 80.875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 32,
+      "eos": 0,
+      "mean_tokens": 160.0,
+      "mean_distinct_bigram": 0.9652066417596968,
+      "changed_answers_vs_baseline": 0
+    },
+    "fixed_1": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 82.6875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 25,
+      "eos": 7,
+      "mean_tokens": 148.28125,
+      "mean_distinct_bigram": 0.9655230211851689,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 20.979949549760224
+    },
+    "fixed_2": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 86.34375,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 5,
+      "eos": 27,
+      "mean_tokens": 94.6875,
+      "mean_distinct_bigram": 0.9765153725395801,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 41.85560370792556
+    },
+    "fixed_4": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 39.09375,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 0,
+      "eos": 32,
+      "mean_tokens": 13.65625,
+      "mean_distinct_bigram": 0.9968434343434344,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 83.13228719125694
+    },
+    "saps_1": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 83.96875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 25,
+      "eos": 7,
+      "mean_tokens": 152.75,
+      "mean_distinct_bigram": 0.9606318771183834,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 6.475391535552471
+    },
+    "saps_2": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 88.46875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 12,
+      "eos": 20,
+      "mean_tokens": 116.34375,
+      "mean_distinct_bigram": 0.9657959974162297,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 14.518213945185156
+    },
+    "saps_4": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 62.40625,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 8,
+      "eos": 24,
+      "mean_tokens": 72.28125,
+      "mean_distinct_bigram": 0.9799301626129078,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 37.198292579018364
+    },
+    "gcad_3.5": {
+      "n": 32,
+      "trait_conservative": 1.9375,
+      "trait_numeric_mean": 1.9375,
+      "refusals": 0,
+      "coherence": 82.5,
+      "lexicon_hits": 1,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 25,
+      "eos": 7,
+      "mean_tokens": 149.96875,
+      "mean_distinct_bigram": 0.9639739004882764,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 4.695829482349772
+    },
+    "gcad_5": {
+      "n": 32,
+      "trait_conservative": 28.4375,
+      "trait_numeric_mean": 28.4375,
+      "refusals": 0,
+      "coherence": 80.71875,
+      "lexicon_hits": 14,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 10,
+      "eos": 22,
+      "mean_tokens": 126.90625,
+      "mean_distinct_bigram": 0.9730747087103221,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 7.498904684108617
+    },
+    "gcad_7": {
+      "n": 32,
+      "trait_conservative": 59.9375,
+      "trait_numeric_mean": 59.9375,
+      "refusals": 0,
+      "coherence": 59.34375,
+      "lexicon_hits": 32,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 1,
+      "eos": 31,
+      "mean_tokens": 74.625,
+      "mean_distinct_bigram": 0.9816678235976591,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 12.520824838757736
+    }
+  },
+  "heldout": {
+    "baseline": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 85.34375,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 32,
+      "eos": 0,
+      "mean_tokens": 160.0,
+      "mean_distinct_bigram": 0.9633258634997651,
+      "changed_answers_vs_baseline": 0
+    },
+    "selected_gcad": {
+      "n": 32,
+      "trait_conservative": 31.125,
+      "trait_numeric_mean": 31.125,
+      "refusals": 0,
+      "coherence": 82.6875,
+      "lexicon_hits": 14,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 16,
+      "eos": 16,
+      "mean_tokens": 133.5,
+      "mean_distinct_bigram": 0.9767671440297321,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 7.609658648486346
+    },
+    "random_gcad": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 85.6875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 29,
+      "eos": 3,
+      "mean_tokens": 157.3125,
+      "mean_distinct_bigram": 0.9578466355544125,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 6.584410375779675
+    }
+  },
+  "confirmation": {
+    "criteria": {
+      "gcad": {
+        "trait_gain": true,
+        "lexicon_absolute": true,
+        "lexicon_gain": true,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "trait_random_gain": true,
+        "all_pass": true
+      }
+    },
+    "passing": [
+      "gcad"
+    ],
+    "preferred": "gcad",
+    "no_posttest_reselection": true
+  }
+}

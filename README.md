@@ -74,11 +74,11 @@ The [existing-direction behavioral test](docs/author_profanity_direction_test_cl
 is complete: all six strengths produced 0/32 lexical-swearing responses and
 0/10 semantic profanity, matching baseline. The verified intervention changed
 wording but did not establish profanity control; no held-out arm qualified.
-The user authorized a [three-method profanity transfer comparison](docs/profanity_method_comparison_proposal.md).
-Intervention helpers passed22 CPU tests. Claude reviewed the
-[execution protocol](docs/profanity_method_transfer_protocol.md) after login
-restoration. The accepted runner passed33 focused tests; exact inputs are
-registered and the fresh comparison is running.
+The [three-method profanity transfer](docs/profanity_method_transfer_closeout.md)
+is complete. **GCAD strength 5 is retained** on Qwen2.5-7B: held-out profanity
+31.13/100 and lexical swearing 14/32 versus 0 for baseline and random control;
+coherence 82.69 versus baseline 85.34. Fixed projection and SAPS did not qualify.
+See the [retained workflow](docs/profanity_controller_workflow.md).
 The [original-Mistral sarcasm reference](docs/author_saps_mistral_closeout.md) is
 complete: SAPS1.4 reached clear sarcasm in276/450 rewrites versus0 baseline,
 while meaning preservation fell4.11→2.98/5. Fixed and adaptive control show

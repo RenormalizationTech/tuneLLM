@@ -25,7 +25,12 @@ quality trade-offs and evaluator changes. Profanity has two preserved
 [extraction nulls](author_profanity_revision_closeout.md); the grouped-validation
 [direction test](author_profanity_direction_test_closeout.md) is complete:
 all six strengths had 0/32 lexical-swearing responses and 0/10 semantic profanity,
-matching baseline. No held-out setting qualified. Historical4B procedures below stay unchanged.
+matching baseline. No held-out setting qualified in that study. A separate
+[three-method transfer](profanity_method_transfer_closeout.md) confirmed GCAD 5
+on 32 held-out Qwen2.5-7B questions: PF 31.13/100 and swearing 14/32 versus 0 for
+baseline/random, coherence 82.69 versus85.34 baseline. Fixed/SAPS did not qualify.
+The [retained profanity workflow](profanity_controller_workflow.md) uses GCAD.
+Historical4B procedures below stay unchanged.
 
 The user revised the sequence on2026-11-15: first establish the published steering
 methods on original open author models. Use Qwen2.5-7B for the explicit GCAD

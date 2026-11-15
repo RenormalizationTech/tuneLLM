@@ -14,6 +14,12 @@ Codex worker implements and tests code.
 | Sarcasm | [SAPS](https://aclanthology.org/2026.findings-emnlp.1594.pdf), mistralai/Mistral-7B-Instruct-v0.1 | Reconstruct released result tables first; then author-runtime fixed-layer generation at layer12, fixed alpha1 and SAPS alpha1.4 | [Completed reference](author_saps_mistral_closeout.md):90 first-valid batches; clear sarcasm276/450 at SAPS1.4 vs0 baseline, with meaning cost; published scores not reproduced |
 | Profanity | [Malla et al. v4](https://arxiv.org/abs/2609.06951v4), Qwen/Qwen2.5-7B-Instruct | Appendix E profanity row: layer7, coefficient6, self-effect +1.44 on the author 0–10 scale, coherence0.96 | Two preserved extraction nulls; [actual direction test](author_profanity_direction_test_closeout.md) completed: baseline and six strengths all 0/32 lexical swearing and 0/10 semantic profanity; no held-out setting qualified |
 
+The subsequent [profanity method-transfer comparison](profanity_method_transfer_closeout.md)
+confirmed GCAD 5 on Qwen2.5-7B ordinary replies (PF 31.13/100, lexical swearing 14/32,
+coherence 82.69 versus baseline 85.34). Fixed/SAPS did not qualify. This establishes
+a new working transfer reference and [workflow](profanity_controller_workflow.md);
+it preserves the original Malla-style reproduction gap above.
+
 The PV paper's Appendix G, Figures18–19, concerns prediction of fine-tuning
 shifts. It is not evidence of a successful inference-time impoliteness steering
 curve. Its available impolite artifacts do not settle that gap. GCAD supplies a

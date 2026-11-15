@@ -1,4 +1,7 @@
-# Proposed three-method profanity comparison
+# Three-method profanity comparison: original proposal
+
+Completed: [GCAD strength 5 passed held-out confirmation](profanity_method_transfer_closeout.md)
+and is retained. The proposal below records the pre-output reasoning.
 
 User request: test the interventions that produced effects on other traits
 against profanity. The fourth task omitted from the previous comparison was
@@ -56,7 +59,7 @@ implementation proceeded first. The user restored login; the existing advisor
 then accepted the study and clarified its budget, thresholds, random controls
 and read-only state capture. See the
 [design review](../results/reviews/profanity_method_transfer_design_review.md).
-The worker is now implementing the complete runner; no new live calls yet.
+The runner and study are now complete; see the closeout and retained profile.
 
 ## User-selected decision and fallback
 
@@ -82,5 +85,5 @@ The worker implemented explicit-parameter intervention helpers in
 all 22 focused CPU tests passed. Tests compare the actual released SAPS hooks
 and exercise released GCAD hooks on a locally initialized tiny Qwen model.
 See [CPU review](../results/reviews/profanity_transfer_cpu_review.md).
-This establishes implementation checks, not a successful profanity controller;
-no new pretrained-model experiment has run.
+These implementation checks preceded the completed experiment; the later
+closeout reports the confirmed GCAD result separately.

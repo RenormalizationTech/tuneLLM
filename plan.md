@@ -64,7 +64,12 @@ completed all1800 rewrites and90 first-valid grading batches. SAPS1.4 reached
 methods show a style/quality trade-off. The [saved profanity direction test](docs/author_profanity_direction_test_closeout.md)
 completed 224 calibration responses: baseline and all six strengths had 0/32
 lexical-swearing responses and 0/10 semantic profanity. Intervention mechanics
-passed, but no strength qualified for held-out testing. No joint or14B work is released.
+passed, but no strength qualified for held-out testing. A separate
+[three-method transfer](docs/profanity_method_transfer_closeout.md) subsequently
+confirmed GCAD 5 on 32 held-out questions: PF 31.13/100, lexical swearing 14/32,
+coherence 82.69 versus baseline 85.34; baseline/random PF 0. Fixed/SAPS did not
+qualify. GCAD is retained in the [profanity workflow](docs/profanity_controller_workflow.md).
+No joint or14B work is released.
 
 ## Current status and execution priorities (2026-11-14)
 
