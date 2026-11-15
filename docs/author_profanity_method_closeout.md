@@ -32,7 +32,11 @@ the training class mean. Claude's saved-feature audit found reversed ordering
 for seven of these eight pairs, while all four co-held-out pairs were ordered
 correctly. Pooling raw projections from different folds also permits offsets
 between folds. This is a design interaction between the reconstructed inputs
-and the literal paper validation procedure.
+and our row-level reconstruction of the paper validation procedure. The
+manuscript specifies stratified five-fold projection AUROC but does not state
+the grouping unit. Its Step1 says to score on pairs not used for fitting.
+Without author code, treating individual responses as rows was our choice,
+not a verified author implementation; calling it paper-literal was too strong.
 
 A further pair-centered calculation by Claude separated the saved responses,
 but it was post hoc and changes the evaluation. It neither rescues the

@@ -68,7 +68,9 @@ addition produced84.52/7.83. All registered contrasts passed under the disclosed
 Claude grading adaptation.
 The [profanity paper-method attempt](docs/author_profanity_method_closeout.md)
 stopped at direction validation with reconstructed minimal-edit pairs; it did
-not test steering. The user approved one [controlled dataset revision](docs/author_profanity_revision_protocol.md).
+not test steering. The approved [short-answer revision](docs/author_profanity_revision_closeout.md)
+also closed at the row-level gate, while paired-question sensitivity reached1.0.
+A separate grouped-validation continuation is under discussion.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
