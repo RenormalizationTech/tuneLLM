@@ -68,3 +68,44 @@ and every downstream quality requirement. Original results remain unchanged,
 and each isolated outcome is consolidated
 with its limitations. See the
 [execution record](persona_reference_execution.md) for live status and results.
+
+## Consolidated method contracts
+
+All current studies use the original, unadapted Qwen3-4B BF16 checkpoint.
+Physics LoRA, quantization comparisons and refusal vectors are separate inputs
+and results, not components of these trait experiments.
+
+For PV rudeness and profanity, construct opposing prompted answers on matched
+questions. Filter using the reference trait and coherence rules, then average
+each retained answer's native response-token activations. At each candidate
+layer the vector is the mean positive activation minus the mean negative
+activation, without unit normalization. The coefficient multiplies that raw
+vector. Apply the shift at the final prompt token and subsequent generated
+tokens. A coefficient has no universal strength across traits: record the actual
+shift norm relative to the residual. The full registered grid covers nine sites
+and coefficients0.5,1,2. Do not extend it after observing a null.
+
+For SAPS sarcasm, use the released literal-to-sarcastic paraphrase task. Learn
+unit directions from plain versus styled final-prompt-token activations, and
+learn the styled projection target in a separate prompt pass. Fixed steering
+uses each input's baseline projection to compute one constant correction;
+adaptive steering recomputes the correction from the current last activation.
+The author's adaptive operation broadcasts that correction over the prefill,
+then acts at each cached token. These semantics differ from the PV response-only
+hook and must remain separate implementations. The sarcasm result concerns
+paraphrasing; a generic sarcastic assistant would need its own transfer study.
+
+Persist the direction tensors before scored steering. Verify exact save/reload,
+zero-intervention parity, nonzero activation changes, token scope, cache handling
+and hook cleanup. Keep these mechanics checks separate from evidence that the
+trait is controllable. Lock development selection before any held-out generation;
+a null ends that protocol without opening its report questions. Retain private
+raw answers, grader receipts and provenance; publish aggregate results and costs.
+The per-method runbooks specify exact commands and registration dependencies:
+[PV grid](../scripts/persona_pv_grid_runbook.md) and
+[SAPS continuation](../scripts/persona_saps_continuation_runbook.md).
+
+A usable isolated control has not yet been established for rudeness or profanity.
+Those execution contracts are documented; they are not recommended effective
+settings. Joint control remains an unstarted experimental topic for later
+literature review and discussion.

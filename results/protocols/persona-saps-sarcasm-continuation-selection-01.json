@@ -1,0 +1,19 @@
+{
+  "study": "Separate SAPS author-method continuation",
+  "selection_sha256": "91cda46d31e3e26ae329adf4084e0c6d2a67523bcd24b48c60f433614b0d7bbb",
+  "winner": "fixed_b23_a1",
+  "setting": {
+    "method": "fixed",
+    "block": 23,
+    "alpha": 1.0
+  },
+  "best": {
+    "fixed": "fixed_b23_a1",
+    "saps": "saps_b23_a1"
+  },
+  "branch": "both",
+  "development_only": true,
+  "before_any_heldout_generation": true,
+  "quality_floors_unchanged": true,
+  "original_parent_gate_remains_failed": true
+}
