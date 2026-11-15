@@ -63,8 +63,9 @@ Total: 350 generations, 132 teacher-forced responses, zero MC and 43 native
 starts, all first-valid. No report-set, random/prompt, custom or capability
 generation was triggered. The worker independently verified the completed
 outputs, journals, deterministic selection, null stop, privacy and genuine cap
-flags. The search can lock an ineffective shallow site while weaker deeper
-settings remain unexplored; no post-hoc rescue sweep was added.
+flags. The original search can lock an ineffective shallow site while weaker deeper
+settings remain unexplored. The separate registered grid below tests that
+limitation; the original result remains unchanged.
 
 Initial registration:
 [`persona-reference-rudeness-01.json`](../results/protocols/persona-reference-rudeness-01.json).
@@ -84,12 +85,21 @@ sarcasm mean 3.04, with 36/50 scoring at least 3 and grammar 4.64, but clarity
 3.46 fell below the registered 3.5 minimum. Baseline style was zero; baseline
 clarity 4.76. Prompted entailment was 2.44 (not an initial-gate criterion).
 This is a failed combined control gate, not absence of elicited sarcasm.
-No directions, intervention search, held-out, custom or capability stage ran.
+No directions, intervention search, held-out, custom or capability stage ran
+in that original study.
 Generation took 112.21 seconds, whole stage 116.81 seconds. Mean tokens were
 25.2 / 30.6 (baseline / prompted), with zero capped outputs. The paper is
 privately archived for rubric provenance. This is literal-to-sarcastic
 paraphrasing, not demonstrated generic
 assistant persona transfer. See [protocol](sarcasm_reference_protocol.md).
+
+A separate [registered continuation](persona_saps_continuation_protocol.md) now
+follows the author's prompt-activation extraction despite our added initial gate.
+The original failure is retained, and downstream quality floors are unchanged.
+Its runner passed 27 CPU checks and Claude's review. Registration 4da9c59
+preceded all new calls. Direction extraction is running: 1,500 prompt forwards,
+followed by mechanics checks before any scored intervention validation. The
+original 100 answers and five grading calls are reused without rerating.
 
 ## Profanity
 
@@ -104,8 +114,10 @@ raw response through parse and split to exact promoted bytes, committed in
 were graded in 25 first-valid original-scale batches. The fixed filter retained
 30 pairs across 18 questions, with zero semantic refusals. Positive/negative
 trait means were 38.72 / 0.12 and coherence 74.38 / 85.67. All 60 retained
-trajectories will be used for extraction after the current rudeness grid frees
-GPU0. Generation took 1,133.83 seconds (whole stage 1,139.20 seconds).
+trajectories were used for extraction. Preflight passed exact zero parity,
+nonzero logit changes and cached hook coverage. The original parent was
+permanently closed as amended_before_steering, with its old selection unrun;
+the new grid below owns selection and reporting. Generation took 1,133.83 seconds (whole stage 1,139.20 seconds).
 The accepted description and checks are in the
 [protocol](profanity_reference_protocol.md). Shared PV sources stay frozen;
 new profile provenance and a separate read-only lexical supplement are fixed
@@ -123,9 +135,16 @@ elicitation was running, before any steered profanity output. The parent will
 hand off after extraction/preflight; its original selection will remain unrun.
 
 The new runner passed 31 focused CPU checks and Claude's source/protocol review.
-Rudeness child registration b74d659 precedes its current 160 missing-output GPU
-screen. Its baseline and eleven old candidate conditions (120 outputs) are reused
-with unchanged first-valid grades. Coefficients 3/4 cannot enter the new grid.
-Profanity's future child will generate a fresh baseline and all 27 settings.
+Rudeness child registration b74d659 preceded 160 fresh generations. Baseline and
+eleven old candidate conditions (120 outputs) were reused with unchanged
+first-valid grades; coefficients 3/4 cannot enter the grid. All 27 cells are now
+complete: 16 passed quality, but the best gain was only 1.2 points (2.9 versus
+1.7), below ten. The child closed selection_null without held-out generation.
+The worker independently verified reuse, new outputs, grades and selection.
+See the [full grid closeout](persona_pv_grid_rudeness_closeout.md).
+
+Profanity child registration 5b60449 preceded a fresh baseline and all 27 settings
+(280 generations). Generation is complete and 35 blinded grading batches are
+running. Selection and any held-out work remain conditional on the fixed rules.
 The new protocol is [here](persona_pv_grid_protocol.md). Combined trait steering
 remains deferred; these are separate isolated studies.

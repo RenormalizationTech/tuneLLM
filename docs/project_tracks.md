@@ -141,8 +141,8 @@ question, not part of the physics demonstration or this persona objective.
    held-out confirmation, verify vector serialization/reload, and report each
    trait independently. Fix target-effect, crosstalk and quality criteria before
    development; avoid adaptive searches.
-4. After isolated results, separately register pairwise combinations and then
-   all-three mixtures. Combine only directions supported by isolated tests:
+4. Joint work is deferred for later discussion and literature review. If later
+   selected, separately register pairwise combinations and all-three mixtures. Combine only directions supported by isolated tests:
    at least two for a pair, all three for the full mixture. If fewer than two
    qualify, close this bounded attempt with that result. Score every trait for
    every condition, including neutral and single-direction controls, with the

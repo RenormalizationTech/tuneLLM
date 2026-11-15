@@ -46,3 +46,16 @@ separate result. See the [full grid aggregate](../results/persona_pv_grid_rudene
 and [grid protocol](persona_pv_grid_protocol.md). Any later extraction, model-size
 or acceptance-policy change needs a separate scientific decision and registration.
 Joint trait steering remains deferred.
+
+Claude reviewed the completed closeout. Important limits: this coarse grid does
+not test intermediate strengths or establish impossibility. It was motivated
+after the original screen; reused and fresh labels come from different grading
+sessions. Ten selection questions, one greedy rollout and one judge provide
+limited measurement. Impoliteness is broader than our custom rudeness construct;
+coherence and impoliteness were co-rated, with unknown rating dependence. The
+null is conditional on the registered quality policy, not evidence that lower
+coherence scores were caused by rating bias. High-scoring failed-quality cells
+have no matched random control and do not establish trait-specific effects.
+Baseline truncation and 19/132 capped extraction responses are additional limits.
+The original closeout records model, runtime and integer-rating adaptations;
+these are not reproductions of the authors' numerical scores.

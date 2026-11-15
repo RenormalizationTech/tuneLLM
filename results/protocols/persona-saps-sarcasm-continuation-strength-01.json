@@ -1,0 +1,10 @@
+{
+  "study": "Separate SAPS author-method continuation",
+  "strength_sha256": "e2dbdaff0306e57d2c5fcd0956bb661521926d2df60bc74a3735ab416e94643a",
+  "preflight_passed": true,
+  "zero_generation_exact": true,
+  "nonzero_logit_max_abs_delta": 16.625,
+  "before_any_scored_validation": true,
+  "original_parent_gate_remains_failed": true,
+  "downstream_quality_floors_unchanged": true
+}

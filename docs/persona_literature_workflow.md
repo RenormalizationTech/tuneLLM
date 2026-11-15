@@ -52,12 +52,17 @@ Rudeness is first under the [PV adaptation protocol](persona_reference_protocol.
 then separate [sarcasm](sarcasm_reference_protocol.md) and
 [profanity](profanity_reference_protocol.md) protocols. The source audit and
 Claude's implementation reviews are complete. The frozen runners passed 34 PV,
-24 SAPS, 21 artifact-generation and 31 grid-extension CPU checks. The original
+24 SAPS, 21 artifact-generation, 31 grid-extension and 27 SAPS-continuation CPU checks. The original
 rudeness two-stage search closed as selection_null. The original SAPS study
 closed at its added positive-control quality gate, before actual steering.
 Profanity elicitation passed. A separately registered
 [symmetric PV grid](persona_pv_grid_protocol.md) now addresses the rudeness search
 limitation and prospectively replaces profanity's unrun selection stages.
-Original results remain unchanged, and each isolated outcome is consolidated
+The full rudeness grid also closed selection_null (best quality-eligible gain
+1.2/100); profanity's fresh 280-output grid is being graded. A separately
+registered [SAPS continuation](persona_saps_continuation_protocol.md) proceeds
+with author prompt-based extraction while preserving the original failed gate
+and every downstream quality requirement. Original results remain unchanged,
+and each isolated outcome is consolidated
 with its limitations. See the
 [execution record](persona_reference_execution.md) for live status and results.

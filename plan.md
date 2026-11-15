@@ -34,8 +34,8 @@ transition language in immutable study records. The physics learning
 milestone and refusal studies are complete; the 4B persona pipeline is open.
 P1 was a prompt-only reference with
 a failed acceptance gate. Persona activation studies first test profanity,
-rudeness and sarcasm individually on Qwen3-4B, then test simultaneous controls
-as a separate stage. Complete the 4B pipeline before further 14B work.
+rudeness and sarcasm individually on Qwen3-4B. Simultaneous control is deferred
+for later discussion and literature review. Complete the 4B pipeline before further 14B work.
 Each live study requires its own committed registration; the current status
 below distinguishes completed runs from accepted designs.
 
@@ -45,8 +45,8 @@ below distinguishes completed runs from accepted designs.
   isolated profanity, rudeness and sarcasm steering, in that order. Each trait
   gets construction, extraction, bounded development, locked confirmation,
   save/reload and reporting. Score all three traits even in isolated tests.
-  Then test pairwise and three-way control where supported by the isolated
-  results. Joint failure is a valid outcome. Finish this pipeline on 4B before
+  Consolidate literature-based isolated workflows first. Joint control remains
+  experimental and deferred for later discussion. Finish this pipeline on 4B before
   further 14B work; retain the completed 14B baseline as historical evidence.
 - Trait-rating calibration: complete/pass after a separately registered
   infrastructure completion. Both blinded passes agreed with all 48 intended

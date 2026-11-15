@@ -8,8 +8,7 @@ The project has separate tracks: **physics LoRA/QLoRA demonstrates fine-tuning**
 **refusal and persona activation steering study inference-time behavior control**.
 Persona system prompting is a reference/control for the latter, with no weight
 training or activation intervention. The next milestone is isolated activation
-steering of **profanity, rudeness and sarcasm**, followed by a separate
-simultaneous-control study. Complete this pipeline on **Qwen3-4B before further
+steering of **profanity, rudeness and sarcasm**, with simultaneous control deferred for later discussion and literature review. Complete this pipeline on **Qwen3-4B before further
 14B work**. Generic physics questions in a behavior
 evaluation do not make it physics fine-tuning. See the
 [project map and selected persona targets](docs/project_tracks.md).
