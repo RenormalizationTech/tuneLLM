@@ -1,7 +1,9 @@
 # Proposed profanity continuation: hold out whole question pairs
 
 The user subsequently authorized applying the direction and finishing the test.
-Execution is governed by [the direction-test protocol](author_profanity_direction_test_protocol.md).
+The [completed behavioral test](author_profanity_direction_test_closeout.md) found
+no profanity effect at any of the six strengths. Execution followed
+[the direction-test protocol](author_profanity_direction_test_protocol.md).
 This proposal is retained to explain the validation change. Both prior
 row-validation extraction_null results remain unchanged. No third dataset and
 no newly generated contrastive answers are proposed.

@@ -23,7 +23,9 @@ Original-model references now include completed [GCAD impoliteness](author_gcad_
 and [Mistral sarcasm](author_saps_mistral_closeout.md) effects, with explicit
 quality trade-offs and evaluator changes. Profanity has two preserved
 [extraction nulls](author_profanity_revision_closeout.md); the grouped-validation
-[direction test](author_profanity_direction_test_protocol.md) is now user-authorized. Historical4B procedures below stay unchanged.
+[direction test](author_profanity_direction_test_closeout.md) is complete:
+all six strengths had 0/32 lexical-swearing responses and 0/10 semantic profanity,
+matching baseline. No held-out setting qualified. Historical4B procedures below stay unchanged.
 
 The user revised the sequence on2026-11-15: first establish the published steering
 methods on original open author models. Use Qwen2.5-7B for the explicit GCAD
