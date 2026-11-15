@@ -1,0 +1,126 @@
+{
+  "status": "elicitation_null",
+  "scope": "Isolated SAPS sarcasm method adaptation, native Qwen3-4B HF basis; no test oracle",
+  "manifest_sha256": "93cb4153db5e12ff4262ab3e06ada1838c068b4ea58f4721d7c31498d04bd121",
+  "source_sha256": {
+    "configs/persona_saps_sarcasm.json": "a5b9c62c1053e49caffe4ee1fe968c5fef02a8bc23360977d508c00705bc2f11",
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "evaluation/persona_saps/ATTRIBUTION.md": "f6eac5c044631ca8dcf5605f7fdd1d9b3d4e1da6ad9ad9a1111b052eb29caed8",
+    "evaluation/persona_saps/LICENSE": "4d34dbba9f4143cc8458e14b2672c87a134b5df614ce781b4d6b6c482411060d",
+    "evaluation/persona_saps/prompts.json": "c6c04f1b9e7b9aa98a770345f0d6238635bfba61d7afc579c861fe78112c8a3b",
+    "evaluation/persona_saps/rubric.json": "727e9c544dc21e2810b41ebc6de6e8fca211d0b907d06f5777329cab3146e1f3",
+    "evaluation/persona_saps/test.json": "b4e36a1b38a5e1d2593829882a5e6ef75f21a68acc846a22a2e7c05e1669c7cf",
+    "evaluation/persona_saps/train.json": "8b104a0af1e9233ea45d659c958c516909a8cae03e4c531f622389442db92918",
+    "evaluation/persona_saps/val.json": "ca6f47da7725de0acddb5f746996371cc1db66d7f70ac23c977843a325458f8e",
+    "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/benchmark_screen.py": "0c4d54220a4a3ae9ad7613504415052afa1ed43ee057bda2ab57a25a8d667246",
+    "scripts/benign_helpfulness.py": "2cfd42e1245157732c4161636499296b30ca96d6ee5998c02fced44ac901ea58",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/gguf_eval.py": "8420a1a47f71cfd7ee6c5200367329293de6e4ffc5f18c692e7f8898dc938a81",
+    "scripts/persona_rating_calibration.py": "57133cfafdac1ad8c0a47110ddbe5898fce8b9f2af8f13d275b3f1ea05f86076",
+    "scripts/persona_reference.py": "179a2671a8ed466935a95e97458f23cf165c986c943659b2c0b8024cd3b05490",
+    "scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+    "scripts/persona_saps.py": "8fd410a06f3096a352e5eaa02ec6137da921089c554f18677beef6c284f5c1cf",
+    "scripts/persona_saps_common.py": "7801023f954b0f18daf1ec805b4af4d626d912ec2c854f9d7b45f7b8874ea8dc",
+    "scripts/persona_saps_runbook.md": "f2f4bd964ada32c997b7eac81c09ceb8067bf2938404a57e89bfa60644c9d57f",
+    "scripts/profanity_common.py": "862f77fb1086b2220510b5a097beb0259944e8a2d58842afd1bfddaf2ba57d66",
+    "scripts/profanity_steering.py": "6383af9881d605c32651ce914ab7f462f105ac2de6508c22fa1304bffd39fda9",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_fixture.py": "dc5fe3b1537936d50492f6834a5c80bf0d53ad6ac0766f9fa79d41dfbd228ad0",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "scripts/tone_steering.py": "e570ed4810bf51188b930032cae91d37fe44f04a209c6d3155c730cdf43c651f"
+  },
+  "model": {
+    "model_id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  "costs": {
+    "initial": {
+      "completed": true,
+      "physical_gpu": "0",
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "driver": "580.178.04",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "saved_generations": 100,
+      "teacher_forced_sequences": 0,
+      "logit_forwards": 0,
+      "mc_items": 0,
+      "generation_wall_seconds": 112.21146761020645,
+      "prompt_forward_wall_seconds": 0.0,
+      "elapsed_wall_seconds": 116.81191384792328,
+      "count_scope": "Saved/completed work only; interrupted unsaved calls may incur additional work",
+      "wall_scope": "synchronized whole stage including load/tokenization/capture/serialization",
+      "peak_allocated_bytes": 8075355136,
+      "peak_reserved_bytes": 8095006720,
+      "memory_scope": "PyTorch allocator, not total VRAM",
+      "torch_cuda_runtime": "12.4",
+      "packages": {
+        "torch": "2.6.0+cu124",
+        "transformers": "4.57.6",
+        "safetensors": "0.8.0",
+        "tokenizers": "0.22.2",
+        "huggingface-hub": "0.36.2",
+        "langdetect": "1.0.9"
+      },
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "tf32_matmul": false,
+      "tf32_cudnn": false
+    }
+  },
+  "totals": {
+    "saved_generations": 100,
+    "teacher_forced_sequences": 0,
+    "logit_forwards": 0,
+    "mc_items": 0
+  },
+  "calls_started": 5,
+  "stop": {
+    "stop_cause": "elicitation_null",
+    "error_type": null
+  },
+  "limits": [
+    "Fresh native HF BF16 basis, Qwen3 nonthinking and locked small search/subset differ from author TransformerLens models.",
+    "Single isolated Claude co-rates original0..5 scales instead of the authors three-judge average; custom0..3 scores are separate.",
+    "Author-scale batches co-rate up to20 items; contrast/context effects may differ from single-item judgments.",
+    "Author sarcasm requires sentence-alone internal inversion; calibrated custom sarcasm is contextual. The constructs are not interchangeable.",
+    "Source complaints include profanity/hostile language; underlying transformed-data licensing/provenance is incomplete. No independent trait control claim.",
+    "Frozen1000 draws reconstruct algorithm, not original runtime RNG consumption. Decoding slices generated IDs rather than author heuristic template stripping.",
+    "No per-test layer oracle, human-validity or causal-generalization claim. Missing methods are skipped, not filled with quality failures.",
+    "Random control matches scalar controller, not actual trajectory norms; norm-ratio flag is descriptive only. Capability is independent off-task transfer."
+  ],
+  "eligibility": {
+    "passed": false,
+    "metrics": {
+      "baseline": {
+        "n": 50,
+        "sarcasm": 0.0,
+        "entailment": 4.6,
+        "grammaticality": 4.9,
+        "clarity": 4.76,
+        "style_at_least3": 0,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 25.2
+      },
+      "prompt": {
+        "n": 50,
+        "sarcasm": 3.04,
+        "entailment": 2.44,
+        "grammaticality": 4.64,
+        "clarity": 3.46,
+        "style_at_least3": 36,
+        "empty": 0,
+        "degenerate": 0,
+        "capped": 0,
+        "mean_tokens": 30.6
+      }
+    }
+  }
+}

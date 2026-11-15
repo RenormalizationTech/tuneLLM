@@ -1,0 +1,11 @@
+{
+  "study": "Isolated profanity with new accepted PV-procedure artifacts",
+  "manifest_sha256": "75129cab3e01278ddcaaaa3d275d2e5cd91dd872c676de8ccbbccc7a6556d185",
+  "artifact_origin": "results/protocols/persona-profanity-artifact-origin-01.json",
+  "semantic_review": "results/reviews/persona_profanity_artifact_review.json",
+  "artifact_starts": 1,
+  "before_any_profanity_Qwen_outputs": true,
+  "matched_helpfulness_identities": true,
+  "read_only_lexical_supplement_bound_before_elicitation": true,
+  "joint_control": "deferred"
+}
