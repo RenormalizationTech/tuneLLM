@@ -37,19 +37,27 @@ including after case folding and whitespace normalization.
 Do not supply old overlap questions to the generator; apply the overlap check
 locally after generation. Render the unchanged template with str.format and
 brace-free slots, preserving literal {question}/{answer} in its evaluation
-example. Freeze the exact packet and source hashes before invocation. Shuffle the40 question indices with
-random.Random(703), first20 for extraction and remaining20 for evaluation.
+example. Freeze the exact packet and source hashes before invocation. Shuffle the 40 question indices with
+random.Random(703), first 20 for extraction and remaining 20 for evaluation.
 Both files share identical five instruction pairs and rubric. The subsequent
-evaluation10/10 partition retains PV seed701.
+evaluation 10/10 partition retains PV seed 701.
 
-Use the pinned native Claude2.1.323 / claude-opus-5-5 and unchanged tools-off
+Fix assistant_positive to "helpful and profane" and assistant_negative to
+"helpful and nonprofane" before generation/promotion; trait_name is "profanity".
+The full system prompts must hold warmth, helpfulness and casual register equal,
+differing only in swearing. This is an explicit adaptation from the author's
+trait-versus-helpful identity, avoiding an extra helpfulness contrast. Semantic
+review covers the identities plus each generated instruction. Selection/report
+remain user-only, except the registered prompted positive control.
+
+Use the pinned native Claude 2.1.323 / claude-opus-5-5 and unchanged tools-off
 isolation, audited binary identity and actual model-usage checks. Preserve the
 raw response and all starts/receipts. Maximum two identical-payload attempts,
 first structurally valid retained; only malformed structure allows the second
 attempt. Generator refusal or semantic failure closes artifact_null without
 reroll, hand editing or Qwen execution. Infrastructure/identity/uncertain-start
 failure permanently stops the artifact run. This is a new generator compared
-with the authors' Claude3.7 Sonnet.
+with the authors' Claude 3.7 Sonnet.
 
 Preserve the audited evaluator system framing and medium effort instead of
 introducing a new generator wrapper. The JSON packet has only task (exact
@@ -60,12 +68,16 @@ Hash the complete packet and disclose this framing deviation. Claude reviewed
 the role mismatch and found no blocker: the frozen system permits a task from
 JSON and does not prohibit generation. Do not send old fixtures or extra guidance.
 
-Mechanical acceptance: exact JSON shape, five complete distinct pairs and40
+Mechanical acceptance: exact JSON shape, five complete distinct pairs and 40
 unique questions; no normalized duplicates, overlap with registered reference
 questions or hits from the existing eleven-word profanity lexicon in questions;
 the evaluation template unchanged outside its trait name/description, checked
 against the rendered author template with exactly those two wildcard regions
-and exactly one literal {question} and {answer}. Freeze
+and exactly one literal {question} and {answer}. For comparison only, normalize
+whitespace runs and ignore case only for the trait token "profanity"; all other
+content stays exact. Preserve the original generated strings and promoted bytes
+without rewriting. This policy was selected before any generator invocation.
+Freeze
 the normalized overlap list and lexicon before invocation. Lexicon absence is
 not a semantic guarantee. The root and Claude review all generated artifacts
 before target outputs: instructions differ by explicit swearing versus none at
@@ -77,18 +89,28 @@ Any failed criterion closes artifact_null with a record of the reason.
 
 If accepted, create a new profanity config and separately bind source/template
 hashes, slot/packet bytes, generator identity, raw attempt journal, split and
-artifact review via the PV runner's active-profile provenance_files. Archive
+artifact review through a committed public aggregate origin record. Bind that
+record, public review/addendum and supplement source via the PV runner's
+active-profile provenance_files; its entries must all be committed. Raw
+generator responses and receipts remain private/ignored. The origin record
+hashes the packet, identity, each start/receipt, first-valid response, parsed
+JSON and promoted extract/eval bytes, with split seed and attempt index. At
+promotion recompute raw response to parse to seed-703 split to exact promoted
+bytes; the accepted semantic review names those hashes. Reverify private
+records at promotion, lexical supplement and independent postrun audit. The
+live PV stages directly protect the consumed frozen data, without recursively
+following historical origin records. Archive
 Apache attribution and label new generated data explicitly. Do not edit frozen
 rudeness sources or reuse its target outputs. The common PV protocol then
 applies: prompted elicitation gate, raw response-mean vectors, conditional layer
 fallback, locked strength choice, untouched report, separate custom ratings and
-conditional capability probe. Same maximum502 generations/128 grading starts,
+conditional capability probe. Same maximum 502 generations/128 grading starts,
 plus at most two separately accounted artifact starts.
 
 Report the independent fixed lexical diagnostic for every generated condition
 alongside original-reference and custom ratings. Where ratings exist, include
 judged profanity without lexicon hits and lexical hits judged low, using the
-existing reference cutoff50 and custom clear-presence cutoff2 separately.
+existing reference cutoff 50 and custom clear-presence cutoff 2 separately.
 Unscored preflight generations receive lexical counts only, with no new judging
 calls. Bind this supplement before
 any profanity-profile Qwen output, including elicitation. Do not turn lexicon

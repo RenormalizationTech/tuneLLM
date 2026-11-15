@@ -8,8 +8,8 @@ grading output informed these choices. Code acceptance and exact committed
 registration remain required before live execution.
 
 Accepted source choices: unchanged author train/validation strings and a fixed
-100-of450 test subset, fresh native HF residual coordinates, B1 source broadcast
-semantics, greedy cap60, original four rating definitions archived from AppendixC,
+100-of 450 test subset, fresh native HF residual coordinates, B1 source broadcast
+semantics, greedy cap 60, original four rating definitions archived from AppendixC,
 separate calibrated custom ratings and a single native Claude replacing the
 authors' three-judge average. The released test-example oracle table is not a
 deployment benchmark. Dataset transformation lineage and hostile/profane source
@@ -64,7 +64,7 @@ implementation within its disclosed adaptations, with no actionable blocker.
 It executed no tests, model or API calls in that review; worker CPU results
 remain independently recorded. It checked validation/test-specific read-only
 baseline captures, case-specific constants,1500 direction forwards across
-all36 post-block sites, source/output packet labels, separate original/custom
+all 36 post-block sites, source/output packet labels, separate original/custom
 rubrics, absent-method branches, committed selection before test, controller
 random diagnostics and the conditional off-task capability screen. Pending
 wording fixes were per-position norm labels and naming the ordinary-with-capture
@@ -82,7 +82,7 @@ these exact operations and test coefficient construction plus the BF16 shift
 end to end before freeze. Adaptive tensor arithmetic is unchanged. No generation,
 selection or budget change follows from this pre-registration correction.
 
-The worker then froze the corrected SAPS implementation after24 focused CPU
+The worker then froze the corrected SAPS implementation after 24 focused CPU
 checks passed (9.15 seconds). Checks include exact author hook operations in
 FP32/BF16, end-to-end Python coefficient construction including an FP32
 subtraction regression, cached generation/broadcasts, last-block versus final

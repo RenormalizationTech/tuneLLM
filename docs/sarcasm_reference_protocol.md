@@ -13,22 +13,22 @@ strings with seed 702 before outputs; the first 20 of that fixed ordering form
 the separate custom-rating subset. Keep released text unchanged, including
 hostile or profane input language, and disclose its provenance limitations.
 
-Use the existing pinned Qwen3-4B native HF BF16/SDPA model, nonthinking, seed42,
-greedy cap60, cache enabled and batch ONE. GPU0 resource rules match the PV
+Use the existing pinned Qwen3-4B native HF BF16/SDPA model, nonthinking, seed 42,
+greedy cap 60, cache enabled and batch ONE. GPU0 resource rules match the PV
 protocol. This ports the method into a fresh native HF residual basis; neither
 TransformerLens vectors nor a numerical identity claim transfer across backends.
 Use literal author plain/style instructions and user-only template rendering.
 
-First generate validation baseline and prompted style-index0 control: 100
+First generate validation baseline and prompted style index 0 control: 100
 answers. Co-rate the author's four 0..5 scales: sarcasm, entailment,
 grammaticality and clarity. Before any direction work, the control must have
-at least25/50 style scores>=3, mean style>=3 and mean grammar/clarity>=3.5;
+at least 25/50 style scores>=3, mean style>=3 and mean grammar/clarity>=3.5;
 otherwise close as elicitation_null.
 
-For each of all500 training strings capture last-prompt-token post-block states
+For each of all 500 training strings capture last-prompt-token post-block states
 under plain and a randomly chosen style instruction. Mean(style-plain), then
-normalize, separately at each of all36 blocks. A second500 styled-prompt pass
-estimates each direction's target projection. Total:1500 prompt forward
+normalize, separately at each of all 36 blocks. A second 500 styled-prompt pass
+estimates each direction's target projection. Total: 1500 prompt forward
 sequences, not1000. Freeze 1000 instruction draws from random.Random(42), first
 500 and then500 continuing the stream. These draws reconstruct the algorithm;
 the author seeds before model loading, so exact original RNG identity is not
@@ -48,12 +48,12 @@ all four blocks separately on validation and test. Baseline runs before fixed
 arms. Match the source's coefficient arithmetic: CPU FP32 dot product, convert
 the dot and target separately to Python scalars, then subtract and multiply by
 alpha in Python. Apply that Python c to the model-dtype unit in the hook.
-Ten unscored cap32 generation
+Ten unscored cap 32 generation
 probes (four ordinary/four actual zero/two nonzero), plus two logit forwards,
 check parity including the capture hook, source-equivalent tensor operations,
 cache coverage and cleanup before selection. Save exact vector round-trips.
 
-Validation adds600 generations: four blocks times three settings times50.
+Validation adds 600 generations: four blocks times three settings times 50.
 Reuse the first baseline/control; never regenerate them. Eligible configurations
 need mean grammar/clarity>=3.5, entailment>=3 and empty/degenerate/capped counts
 no greater than baseline+3 each. Choose each method's highest mean style, then
@@ -63,8 +63,8 @@ Choose an overall winner among eligible settings, ties preferring fixed after
 the other tie breaks. Require style gain>=0.5 over baseline, else selection_null.
 Commit selection and vector bindings before test.
 
-Test up to five arms on100 untouched strings: baseline, best fixed, best SAPS,
-saved random direction for the locked winner, and prompted style-index0 control.
+Test up to five arms on 100 untouched strings: baseline, best fixed, best SAPS,
+saved random direction for the locked winner, and prompted style index 0 control.
 No test-set layer oracle or reselection. For fixed, random uses the same per-case
 c times an independent unit vector. For SAPS, random uses the same scalar rule
 alpha*(target-h dot u) but adds along random unit r; this matches the controller,
@@ -74,21 +74,21 @@ flag random/real mean outside0.8–1.25 as norm-mismatched, report-only. Do not 
 run a second random-control construction.
 
 Reference report gates: winner mean style>=baseline+0.5 and random+0.5, the
-validation quality floors, and positive control at least50% scores>=3. Report
+validation quality floors, and positive control at least 50% scores>=3. Report
 all arms even on a failed gate. Separately apply the calibrated three-axis
-rubric to the same20 test strings times up to five arms (100 existing answers).
+rubric to the same 20 test strings times up to five arms (100 existing answers).
 Here content means faithful paraphrase of the source sentence. Report baseline
 and steered profanity/rudeness alongside sarcasm; input language confounds these
 scores. Do not claim independent trait control.
 
-Only after the reference report passes, run the existing fresh matched48-item
-baseline/winner capability screen:32 generations plus64 MC. This is off-task
+Only after the reference report passes, run the existing fresh matched 48-item
+baseline/winner capability screen: 32 generations plus 64 MC. This is off-task
 transfer, not the original paraphrase benchmark. Use the PV capability tolerances.
 
-Maximum1242 generations=100+10+600+500+32;1500 direction-forward sequences,
-two unscored logit forwards and64 MC. Author-scale grading uses batches up to20
-distinct source strings:5 initial+30 selection+25 test. Custom uses up to8:
-13 batches. Maximum73 first-valid batches/146 invocations; missing method arms
+Maximum 1242 generations=100+10+600+500+32;1500 direction-forward sequences,
+two unscored logit forwards and 64 MC. Author-scale grading uses batches up to 20
+distinct source strings:5 initial+30 selection+25 test. Custom uses up to 8:
+13 batches. Maximum 73 first-valid batches/146 invocations; missing method arms
 and early nulls reduce actual work. Freeze anonymous distinct-source plans and
 seeds before outputs. One pinned native Claude replaces the paper's three-judge
 average; co-rating the four original scales is a disclosed adaptation. Keep

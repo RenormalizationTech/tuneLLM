@@ -1,0 +1,11 @@
+{
+  "study": "New isolated profanity artifacts with published PV generate_trait procedure",
+  "manifest_sha256": "dfef1dbf093fc45ae65be0bb515fbad290fd93a2028586e50be87a2637ad0e67",
+  "packet_canonical_stdin_sha256": "d687edf812ef80ffe1b701064a947658373f910d808c21c48b4181a3d5909978",
+  "maximum_artifact_starts": 2,
+  "cpu_checks_passed": 21,
+  "coordinator_code_accepted": true,
+  "advisor_code_accepted": true,
+  "source_and_request_frozen_before_calls": true,
+  "semantic_review_required_before_promotion_and_Qwen_outputs": true
+}
