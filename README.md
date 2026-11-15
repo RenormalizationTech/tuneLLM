@@ -45,9 +45,12 @@ all six settings produced 0/16 profane outputs despite changing answer tokens.
 [Rudeness and sarcasm also closed with development nulls](docs/isolated_persona_traits_execution.md):
 31/32 and 32/32 pairs qualified, but every setting produced 0/16 usable target
 outputs. The interventions changed answer tokens without demonstrating target
-control in this range. Joint steering remains gated; the full 4B persona-control
-objective is unachieved. The [next research decision](docs/persona_next_decision.md)
-is awaiting the user's preference. See
+control in this range. The user then selected the
+[literature-first isolated workflow](docs/persona_literature_workflow.md): released
+Persona Vectors impoliteness, SAPS sarcasm, and an explicitly adapted PV profanity
+profile. The author-source audit is complete and the first implementation is in
+progress. Joint control is deferred for later discussion as a separate
+experimental project; the full persona-control objective remains unachieved. See
 [the current project map](docs/project_tracks.md) and
 [local artifact retention](docs/workspace_maintenance.md).
 

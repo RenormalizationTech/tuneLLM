@@ -73,8 +73,11 @@ The separately registered [rudeness and sarcasm pilots](isolated_persona_traits_
 also closed with development nulls, after accepted fixtures/code and 16 passing
 CPU checks. A null closes its registered study without validating that control.
 Joint steering remains gated, and the full 4B persona-control objective is
-unachieved. The [next research decision](persona_next_decision.md) awaits the
-user's preference before a new protocol or experiment.
+unachieved. The user selected the [literature-first isolated workflow](persona_literature_workflow.md).
+New steering tasks first audit successful author code/data and establish a
+bounded method adaptation before custom changes. Consolidate each isolated
+workflow after its result; joint control is separately experimental and deferred
+for later discussion, not an automatic next step.
 Steering changes activations during inference;
 the routine adapter-training steps above apply only when a new training exercise
 is explicitly selected. Review management plans with Claude first and delegate

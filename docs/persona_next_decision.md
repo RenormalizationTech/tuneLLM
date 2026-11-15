@@ -1,7 +1,11 @@
 # Next 4B persona research decision
 
-Awaiting the user's research preference. No new study is registered or running.
-The [three isolated pilots](isolated_persona_traits_execution.md) closed with
+**Decision superseded:** the user selected the
+[literature-first isolated workflow](persona_literature_workflow.md), rather
+than this custom-vector magnitude diagnostic. The latter was not registered or
+executed. Its original proposal is retained below as historical context.
+
+The [three custom isolated pilots](isolated_persona_traits_execution.md) closed with
 development nulls in the fixed range. Joint control remains gated; the full 4B
 persona-control objective is unachieved. Further 14B experiments remain deferred.
 

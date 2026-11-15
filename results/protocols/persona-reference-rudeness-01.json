@@ -1,0 +1,9 @@
+{
+  "study": "isolated rudeness: published impolite PV method adaptation",
+  "manifest_sha256": "ad70cb4f56aa1d9036262f5426612b2cd55935ba9101da2237fdf21f45683318",
+  "protocol": "docs/persona_reference_protocol.md",
+  "design_review": "results/reviews/persona_reference_design_review.md",
+  "cpu_checks": 34,
+  "source_frozen_before_target_outputs": true,
+  "joint_control": "deferred; not authorized by this registration"
+}

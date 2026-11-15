@@ -8,10 +8,12 @@ and results continue to describe the experiments as registered.
 open. The [three-trait rating calibration passed](persona_rating_calibration_completion_execution.md)
 on clear authored cases. The [profanity pilot closed with a development null](profanity_steering_execution.md);
 [rudeness and sarcasm also closed with development nulls](isolated_persona_traits_execution.md).
-No isolated setting qualified in the tested range. Joint control remains gated,
-and the full 4B persona-control objective is unachieved. The
-[next research direction](persona_next_decision.md) awaits the user's preference.
-Further 14B experiments remain deferred.
+No isolated setting qualified in the tested range. The user selected the
+[literature-first isolated workflow](persona_literature_workflow.md), with author
+data/code before custom extensions. Its source audit is complete; rudeness is
+being implemented first. Joint control is a separate experimental topic deferred
+for later discussion, even after isolated success. The full 4B persona-control
+objective is unachieved; further 14B experiments remain deferred.
 The completed 14B baseline remains a historical measurement. Older closeout or
 transition language in frozen protocols is superseded by this current roadmap;
 those records remain unchanged to preserve their experiment hashes.
@@ -24,7 +26,7 @@ those records remain unchanged to preserve their experiment hashes.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Persona activation steering | Intervene on activations to influence written tone/style | All three fixed 4B isolated pilots closed with no target signal. Joint control is gated; full control remains unachieved. Next research decision awaits the user; 14B work stays deferred. |
+| Persona activation steering | Intervene on activations to influence written tone/style | Three custom 4B pilots closed with nulls. Literature-first isolated implementations are now authorized. Joint control is deferred for later discussion; 14B work stays deferred. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank
@@ -45,7 +47,7 @@ flowchart TD
     Quant --> Physics["Saved NF4 base + physics LoRA training demonstration"]
     Base --> Refusal["Refusal activation-steering research: completed tradeoff"]
     Refusal --> Prompt["Persona prompt reference/control: P1 completed"]
-    Prompt --> Persona["4B persona: calibration passed; three isolated nulls; joint stage gated"]
+    Prompt --> Persona["4B persona: three custom nulls; literature-first isolated work"]
 ```
 
 This diagram organizes the program; it does not claim that all historical runs

@@ -73,8 +73,12 @@ below distinguishes completed runs from accepted designs.
   6–12/16 token sequences. Content fulfillment was 13–15/16 versus baseline
   15/16, with no incoherence/gross failures. All 22 judge batches passed first
   try. No isolated control qualified, so joint steering remains gated and the
-  full 4B persona-control objective is unachieved. See the user research-choice
-  proposal in `docs/persona_next_decision.md`; no joint or further 14B run started.
+  full 4B persona-control objective is unachieved. The user then selected
+  `docs/persona_literature_workflow.md`: author methods/data first, isolated
+  rudeness (PV), sarcasm (SAPS), profanity (explicit PV new-trait adaptation).
+  Source audit is complete and rudeness implementation is in progress. The
+  stronger-magnitude proposal was not run. Joint control is experimental,
+  deferred for later discussion; no joint or further 14B run started.
 - Qwen3-4B refusal study: closed after the final published-only replay. All 250
   token/input/output/layout/flag comparisons matched, with 681 protected bindings
   unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and
