@@ -1,0 +1,1609 @@
+{
+  "all_conditions_id_text_consistent": true,
+  "conditions": [
+    {
+      "counts_per_layer": {
+        "15": 450,
+        "16": 450,
+        "17": 450,
+        "18": 450,
+        "19": 450,
+        "20": 450,
+        "21": 450,
+        "22": 450,
+        "23": 450,
+        "24": 450,
+        "25": 450,
+        "26": 450,
+        "27": 450,
+        "28": 450,
+        "29": 450
+      },
+      "coverage_basis": "450 original test rows crossed with the observed layer union; absent entire layers are not inferred",
+      "duplicate_cells": 0,
+      "empty_generations": 0,
+      "method": "fixed_projection",
+      "method_provenance_counts": {
+        "pinned_path_only_generic_legacy_type": 6750
+      },
+      "minus_one_metric_counts": {},
+      "missing_cells": 0,
+      "model": "google/gemma-2-9b-it",
+      "num_evaluators_counts": {
+        "2": 300,
+        "3": 6450
+      },
+      "official_oracle_over_test_layers": {
+        "layers": 15,
+        "means": {
+          "clarity": 4.695068789783378,
+          "entailment": 4.3349957813264135,
+          "grammaticality": 4.625063947231448,
+          "sarcasm": 4.523934982054775
+        },
+        "selected_layer_counts": {
+          "17": 8,
+          "18": 16,
+          "19": 163,
+          "20": 119,
+          "21": 85,
+          "22": 23,
+          "23": 9,
+          "24": 2,
+          "25": 3,
+          "27": 4,
+          "28": 10,
+          "29": 8
+        },
+        "sentences": 450
+      },
+      "per_layer_means": {
+        "15": {
+          "clarity": 4.789191898360491,
+          "entailment": 4.691330022001729,
+          "grammaticality": 4.7861915903081735,
+          "sarcasm": 0.07893278749809059
+        },
+        "16": {
+          "clarity": 4.791120432447496,
+          "entailment": 4.648386318560496,
+          "grammaticality": 4.797237582424076,
+          "sarcasm": 0.16433806347609514
+        },
+        "17": {
+          "clarity": 4.754081108826496,
+          "entailment": 4.347782616759477,
+          "grammaticality": 4.793690013512838,
+          "sarcasm": 1.0344376611467558
+        },
+        "18": {
+          "clarity": 4.757800327762212,
+          "entailment": 4.300442521462414,
+          "grammaticality": 4.776573460694115,
+          "sarcasm": 1.2350722778048837
+        },
+        "19": {
+          "clarity": 4.701069414349912,
+          "entailment": 3.7594408126868633,
+          "grammaticality": 4.693436397122154,
+          "sarcasm": 3.819107078847001
+        },
+        "20": {
+          "clarity": 4.695821726247207,
+          "entailment": 3.5907999004784874,
+          "grammaticality": 4.6387437196870085,
+          "sarcasm": 3.554231299995322
+        },
+        "21": {
+          "clarity": 4.5754350486653,
+          "entailment": 3.162150397737399,
+          "grammaticality": 4.490488668580931,
+          "sarcasm": 3.349463384737815
+        },
+        "22": {
+          "clarity": 3.603347909873495,
+          "entailment": 2.718461708460383,
+          "grammaticality": 3.3726947368347377,
+          "sarcasm": 2.7944416490227453
+        },
+        "23": {
+          "clarity": 3.3569719631608126,
+          "entailment": 2.141247167670426,
+          "grammaticality": 3.1811948507385472,
+          "sarcasm": 2.476846637749659
+        },
+        "24": {
+          "clarity": 2.7631401280260346,
+          "entailment": 1.8934919608350953,
+          "grammaticality": 2.6350662704530206,
+          "sarcasm": 2.242089247246347
+        },
+        "25": {
+          "clarity": 2.3389577135792603,
+          "entailment": 1.695750263974412,
+          "grammaticality": 2.016954524239693,
+          "sarcasm": 2.24408776213968
+        },
+        "26": {
+          "clarity": 1.896219198681039,
+          "entailment": 1.1869844200755295,
+          "grammaticality": 1.636194119811291,
+          "sarcasm": 1.8361174140884007
+        },
+        "27": {
+          "clarity": 1.7051530155337293,
+          "entailment": 1.1813836899546049,
+          "grammaticality": 1.424942825982828,
+          "sarcasm": 1.8193463824241844
+        },
+        "28": {
+          "clarity": 2.113187602873799,
+          "entailment": 1.5822804613475625,
+          "grammaticality": 1.9279008048513147,
+          "sarcasm": 1.9159189967213608
+        },
+        "29": {
+          "clarity": 2.039895118612331,
+          "entailment": 1.9423189349478487,
+          "grammaticality": 1.821330461566373,
+          "sarcasm": 1.621488599161351
+        }
+      },
+      "per_layer_metric_denominators": {
+        "15": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "16": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "17": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "18": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "19": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "20": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "21": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "22": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "23": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "24": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "25": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "26": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "27": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "28": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "29": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        }
+      },
+      "prompt_used_metadata": {
+        "actual_rendered_model_input_known": false,
+        "all_present_metadata_matches_plain": false,
+        "comparison_available": true,
+        "exact_string_sha256_counts": {
+          "1c128a50d4aeb4e19f25a39c7ce7bd63d4a594bbe6665e3bf7f32bfe3bbae475": 1440,
+          "58081a7597232794dc800cdea4edce008bb588743fcd806b1df933a745166b53": 1305,
+          "a5295a835b8a02d0b99ae582f7f88092351d2601d4c2aa7573a614b42bf7f41c": 1395,
+          "d8879a8050a73930e09492a5e7146d5fc398b978d3bf40d9918361f53e6471b9": 1185,
+          "d9fb2446c76276ccb916a2f383ebb8896fcf32dc290422d87045f8d74959dbb9": 1425
+        },
+        "missing_records": 0,
+        "plain_instruction_exact_match_rate": 0.0,
+        "plain_instruction_exact_matches": 0,
+        "present_records": 6750,
+        "scope": "Exact comparison of saved metadata only; no inference about actual rendered inputs or causality",
+        "style_instruction_exact_match_rate": 1.0,
+        "style_instruction_exact_matches": 6750
+      },
+      "raw_type_counts": {
+        "steer_random": 6750
+      },
+      "records": 6750,
+      "scale": 1.0,
+      "sentence_lineage": {
+        "current_test_substituted_or_reindexed": false,
+        "duplicate_text_extra_ids": 2,
+        "duplicate_text_groups": 2,
+        "published_id_text_mapping_sha256": "e73d8a3c5dde694779a496a14fb66ca4b0b787ce8e3d3ae5d77326889aeb2ce0",
+        "published_sentence_ids": 450,
+        "published_unique_sentence_strings": 448,
+        "released_split_exact_overlap": {
+          "test": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 450,
+            "unique_text_overlap": 0
+          },
+          "train": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 500,
+            "unique_text_overlap": 0
+          },
+          "val": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 50,
+            "unique_text_overlap": 0
+          }
+        },
+        "released_test_id_text_mapping_sha256": "595c1bd685ce06e168795d15f31fe565c165288fe08c3919100ee792321201df",
+        "status": "test_lineage_mismatch",
+        "test_same_id_exact_matches": 0,
+        "test_same_id_mismatches": 450,
+        "within_condition_id_text_consistent": true
+      },
+      "sentences": 450,
+      "sha256": "80877dc2b71b6bbb4e59b6eebd9efccbd6bca4998ac2c9b5dec4ac9330d725d0"
+    },
+    {
+      "counts_per_layer": {
+        "9": 450,
+        "10": 450,
+        "11": 450,
+        "12": 450,
+        "13": 450,
+        "14": 450,
+        "15": 450,
+        "16": 450,
+        "17": 450,
+        "18": 450,
+        "19": 450
+      },
+      "coverage_basis": "450 original test rows crossed with the observed layer union; absent entire layers are not inferred",
+      "duplicate_cells": 0,
+      "empty_generations": 0,
+      "method": "fixed_projection",
+      "method_provenance_counts": {
+        "pinned_path_only_generic_legacy_type": 4950
+      },
+      "minus_one_metric_counts": {},
+      "missing_cells": 0,
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "num_evaluators_counts": {
+        "2": 145,
+        "3": 4805
+      },
+      "official_oracle_over_test_layers": {
+        "layers": 11,
+        "means": {
+          "clarity": 4.618279063052144,
+          "entailment": 4.106515757938006,
+          "grammaticality": 4.513002829701197,
+          "sarcasm": 4.488660450917136
+        },
+        "selected_layer_counts": {
+          "9": 16,
+          "10": 98,
+          "11": 28,
+          "12": 66,
+          "13": 66,
+          "14": 44,
+          "15": 33,
+          "16": 21,
+          "17": 23,
+          "18": 29,
+          "19": 26
+        },
+        "sentences": 450
+      },
+      "per_layer_means": {
+        "9": {
+          "clarity": 4.754858031943015,
+          "entailment": 4.180331947071423,
+          "grammaticality": 4.791262397939386,
+          "sarcasm": 1.2608801084609493
+        },
+        "10": {
+          "clarity": 4.626679159435013,
+          "entailment": 3.543445344373829,
+          "grammaticality": 4.7158442538460745,
+          "sarcasm": 3.0367584757908475
+        },
+        "11": {
+          "clarity": 4.714082230350988,
+          "entailment": 4.096094926366391,
+          "grammaticality": 4.769943479791124,
+          "sarcasm": 1.4968913944468034
+        },
+        "12": {
+          "clarity": 4.4938438589525775,
+          "entailment": 3.3780448666174494,
+          "grammaticality": 4.461120350643634,
+          "sarcasm": 2.7259927044173224
+        },
+        "13": {
+          "clarity": 4.62060942925345,
+          "entailment": 3.5004903721283416,
+          "grammaticality": 4.530784786127098,
+          "sarcasm": 2.6117753904164576
+        },
+        "14": {
+          "clarity": 4.112121050125098,
+          "entailment": 2.520974585040086,
+          "grammaticality": 3.8241874075748488,
+          "sarcasm": 2.838257952783785
+        },
+        "15": {
+          "clarity": 3.4222409799814715,
+          "entailment": 2.544326432506528,
+          "grammaticality": 3.1943912535842243,
+          "sarcasm": 2.6925517612642698
+        },
+        "16": {
+          "clarity": 2.8306689628498614,
+          "entailment": 2.4073639410015004,
+          "grammaticality": 2.548781129927622,
+          "sarcasm": 2.4616456964221567
+        },
+        "17": {
+          "clarity": 3.2550968758895307,
+          "entailment": 2.150061857357412,
+          "grammaticality": 3.0636907858125193,
+          "sarcasm": 2.238912574946755
+        },
+        "18": {
+          "clarity": 3.2273713849068666,
+          "entailment": 2.8260367419091987,
+          "grammaticality": 2.9479286568602907,
+          "sarcasm": 2.5962344726791216
+        },
+        "19": {
+          "clarity": 2.879689889589089,
+          "entailment": 2.650599148822652,
+          "grammaticality": 2.5758664372743016,
+          "sarcasm": 2.336444497230192
+        }
+      },
+      "per_layer_metric_denominators": {
+        "9": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "10": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "11": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "12": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "13": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "14": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "15": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "16": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "17": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "18": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "19": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        }
+      },
+      "prompt_used_metadata": {
+        "actual_rendered_model_input_known": false,
+        "all_present_metadata_matches_plain": false,
+        "comparison_available": true,
+        "exact_string_sha256_counts": {
+          "1c128a50d4aeb4e19f25a39c7ce7bd63d4a594bbe6665e3bf7f32bfe3bbae475": 1056,
+          "58081a7597232794dc800cdea4edce008bb588743fcd806b1df933a745166b53": 957,
+          "a5295a835b8a02d0b99ae582f7f88092351d2601d4c2aa7573a614b42bf7f41c": 1023,
+          "d8879a8050a73930e09492a5e7146d5fc398b978d3bf40d9918361f53e6471b9": 869,
+          "d9fb2446c76276ccb916a2f383ebb8896fcf32dc290422d87045f8d74959dbb9": 1045
+        },
+        "missing_records": 0,
+        "plain_instruction_exact_match_rate": 0.0,
+        "plain_instruction_exact_matches": 0,
+        "present_records": 4950,
+        "scope": "Exact comparison of saved metadata only; no inference about actual rendered inputs or causality",
+        "style_instruction_exact_match_rate": 1.0,
+        "style_instruction_exact_matches": 4950
+      },
+      "raw_type_counts": {
+        "steer_random": 4950
+      },
+      "records": 4950,
+      "scale": 1.0,
+      "sentence_lineage": {
+        "current_test_substituted_or_reindexed": false,
+        "duplicate_text_extra_ids": 2,
+        "duplicate_text_groups": 2,
+        "published_id_text_mapping_sha256": "e73d8a3c5dde694779a496a14fb66ca4b0b787ce8e3d3ae5d77326889aeb2ce0",
+        "published_sentence_ids": 450,
+        "published_unique_sentence_strings": 448,
+        "released_split_exact_overlap": {
+          "test": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 450,
+            "unique_text_overlap": 0
+          },
+          "train": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 500,
+            "unique_text_overlap": 0
+          },
+          "val": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 50,
+            "unique_text_overlap": 0
+          }
+        },
+        "released_test_id_text_mapping_sha256": "595c1bd685ce06e168795d15f31fe565c165288fe08c3919100ee792321201df",
+        "status": "test_lineage_mismatch",
+        "test_same_id_exact_matches": 0,
+        "test_same_id_mismatches": 450,
+        "within_condition_id_text_consistent": true
+      },
+      "sentences": 450,
+      "sha256": "5ab1ffc51c22ff2164d9efb4b32fe1573ff94e0b1f6b75ff05b564d9398121dd"
+    },
+    {
+      "counts_per_layer": {
+        "9": 450,
+        "10": 450,
+        "11": 450,
+        "12": 450,
+        "13": 450,
+        "14": 450,
+        "15": 450,
+        "16": 450,
+        "17": 450,
+        "18": 450,
+        "19": 450
+      },
+      "coverage_basis": "450 original test rows crossed with the observed layer union; absent entire layers are not inferred",
+      "duplicate_cells": 0,
+      "empty_generations": 0,
+      "method": "fixed_projection",
+      "method_provenance_counts": {
+        "pinned_path_only_generic_legacy_type": 4950
+      },
+      "minus_one_metric_counts": {},
+      "missing_cells": 0,
+      "model": "mistralai/Mistral-7B-Instruct-v0.1",
+      "num_evaluators_counts": {
+        "2": 138,
+        "3": 4812
+      },
+      "official_oracle_over_test_layers": {
+        "layers": 11,
+        "means": {
+          "clarity": 4.514165319742308,
+          "entailment": 3.9625304422481102,
+          "grammaticality": 4.380308531870113,
+          "sarcasm": 4.25052630165974
+        },
+        "selected_layer_counts": {
+          "11": 60,
+          "12": 158,
+          "13": 98,
+          "14": 99,
+          "15": 24,
+          "16": 7,
+          "18": 3,
+          "19": 1
+        },
+        "sentences": 450
+      },
+      "per_layer_means": {
+        "9": {
+          "clarity": 4.794798549924518,
+          "entailment": 4.619182341786078,
+          "grammaticality": 4.788132078701084,
+          "sarcasm": 0.05142519266476882
+        },
+        "10": {
+          "clarity": 4.8034099231306175,
+          "entailment": 4.697012308476045,
+          "grammaticality": 4.7960833687837985,
+          "sarcasm": 0.0005622172247757737
+        },
+        "11": {
+          "clarity": 4.765680605420315,
+          "entailment": 4.361000064844645,
+          "grammaticality": 4.713660779288422,
+          "sarcasm": 1.3698032998707919
+        },
+        "12": {
+          "clarity": 4.6279178488915065,
+          "entailment": 4.040451461275464,
+          "grammaticality": 4.509779278285411,
+          "sarcasm": 3.125357556941477
+        },
+        "13": {
+          "clarity": 4.303167468131899,
+          "entailment": 3.1608869108161475,
+          "grammaticality": 4.1489146678430116,
+          "sarcasm": 3.2351360799753115
+        },
+        "14": {
+          "clarity": 4.081733115946826,
+          "entailment": 2.713437557364131,
+          "grammaticality": 3.9492566945160026,
+          "sarcasm": 3.140514698195063
+        },
+        "15": {
+          "clarity": 2.5442518821630227,
+          "entailment": 1.5530068210680241,
+          "grammaticality": 2.2731549342272914,
+          "sarcasm": 2.254086785582522
+        },
+        "16": {
+          "clarity": 2.5765200139497924,
+          "entailment": 1.3075318111660723,
+          "grammaticality": 2.454748195921277,
+          "sarcasm": 2.0367098881934784
+        },
+        "17": {
+          "clarity": 2.0309571554963872,
+          "entailment": 0.8143580499748849,
+          "grammaticality": 2.0688421598005515,
+          "sarcasm": 1.7557462774813513
+        },
+        "18": {
+          "clarity": 1.8267819711877058,
+          "entailment": 0.7463101438107715,
+          "grammaticality": 1.8199303958767064,
+          "sarcasm": 1.6960835494711761
+        },
+        "19": {
+          "clarity": 1.6506370615711647,
+          "entailment": 0.9894357412323942,
+          "grammaticality": 1.4855226087159121,
+          "sarcasm": 1.6607396131416787
+        }
+      },
+      "per_layer_metric_denominators": {
+        "9": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "10": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "11": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "12": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "13": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "14": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "15": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "16": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "17": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "18": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "19": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        }
+      },
+      "prompt_used_metadata": {
+        "actual_rendered_model_input_known": false,
+        "all_present_metadata_matches_plain": false,
+        "comparison_available": true,
+        "exact_string_sha256_counts": {
+          "1c128a50d4aeb4e19f25a39c7ce7bd63d4a594bbe6665e3bf7f32bfe3bbae475": 1056,
+          "58081a7597232794dc800cdea4edce008bb588743fcd806b1df933a745166b53": 957,
+          "a5295a835b8a02d0b99ae582f7f88092351d2601d4c2aa7573a614b42bf7f41c": 1023,
+          "d8879a8050a73930e09492a5e7146d5fc398b978d3bf40d9918361f53e6471b9": 869,
+          "d9fb2446c76276ccb916a2f383ebb8896fcf32dc290422d87045f8d74959dbb9": 1045
+        },
+        "missing_records": 0,
+        "plain_instruction_exact_match_rate": 0.0,
+        "plain_instruction_exact_matches": 0,
+        "present_records": 4950,
+        "scope": "Exact comparison of saved metadata only; no inference about actual rendered inputs or causality",
+        "style_instruction_exact_match_rate": 1.0,
+        "style_instruction_exact_matches": 4950
+      },
+      "raw_type_counts": {
+        "steer_random": 4950
+      },
+      "records": 4950,
+      "scale": 1.0,
+      "sentence_lineage": {
+        "current_test_substituted_or_reindexed": false,
+        "duplicate_text_extra_ids": 2,
+        "duplicate_text_groups": 2,
+        "published_id_text_mapping_sha256": "e73d8a3c5dde694779a496a14fb66ca4b0b787ce8e3d3ae5d77326889aeb2ce0",
+        "published_sentence_ids": 450,
+        "published_unique_sentence_strings": 448,
+        "released_split_exact_overlap": {
+          "test": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 450,
+            "unique_text_overlap": 0
+          },
+          "train": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 500,
+            "unique_text_overlap": 0
+          },
+          "val": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 50,
+            "unique_text_overlap": 0
+          }
+        },
+        "released_test_id_text_mapping_sha256": "595c1bd685ce06e168795d15f31fe565c165288fe08c3919100ee792321201df",
+        "status": "test_lineage_mismatch",
+        "test_same_id_exact_matches": 0,
+        "test_same_id_mismatches": 450,
+        "within_condition_id_text_consistent": true
+      },
+      "sentences": 450,
+      "sha256": "25e4eb500f01a3236b40eb2050eadb220404d5faff6b8363f91dc97422f47f0d"
+    },
+    {
+      "counts_per_layer": {
+        "15": 450,
+        "16": 450,
+        "17": 450,
+        "18": 450,
+        "19": 450,
+        "20": 450,
+        "21": 450,
+        "22": 450,
+        "23": 450,
+        "24": 450,
+        "25": 450,
+        "26": 450,
+        "27": 450,
+        "28": 450,
+        "29": 450
+      },
+      "coverage_basis": "450 original test rows crossed with the observed layer union; absent entire layers are not inferred",
+      "duplicate_cells": 0,
+      "empty_generations": 0,
+      "method": "saps",
+      "method_provenance_counts": {
+        "pinned_path_only_generic_legacy_type": 6750
+      },
+      "minus_one_metric_counts": {},
+      "missing_cells": 0,
+      "model": "google/gemma-2-9b-it",
+      "num_evaluators_counts": {
+        "2": 203,
+        "3": 6547
+      },
+      "official_oracle_over_test_layers": {
+        "layers": 15,
+        "means": {
+          "clarity": 4.830740740740745,
+          "entailment": 4.5425925925925945,
+          "grammaticality": 4.745185185185187,
+          "sarcasm": 4.645555555555558
+        },
+        "selected_layer_counts": {
+          "17": 53,
+          "18": 33,
+          "19": 124,
+          "20": 123,
+          "21": 28,
+          "22": 4,
+          "23": 2,
+          "24": 14,
+          "25": 15,
+          "26": 5,
+          "27": 14,
+          "28": 12,
+          "29": 23
+        },
+        "sentences": 450
+      },
+      "per_layer_means": {
+        "15": {
+          "clarity": 4.972592592592593,
+          "entailment": 4.857777777777778,
+          "grammaticality": 4.971111111111112,
+          "sarcasm": 0.28666666666666707
+        },
+        "16": {
+          "clarity": 4.96962962962963,
+          "entailment": 4.814074074074077,
+          "grammaticality": 4.968148148148148,
+          "sarcasm": 0.4333333333333332
+        },
+        "17": {
+          "clarity": 4.910370370370374,
+          "entailment": 4.341111111111114,
+          "grammaticality": 4.954814814814816,
+          "sarcasm": 1.9981481481481465
+        },
+        "18": {
+          "clarity": 4.8948148148148185,
+          "entailment": 4.2614814814814865,
+          "grammaticality": 4.91851851851852,
+          "sarcasm": 2.0466666666666655
+        },
+        "19": {
+          "clarity": 4.301111111111113,
+          "entailment": 3.5959259259259237,
+          "grammaticality": 4.11185185185185,
+          "sarcasm": 3.5211111111111104
+        },
+        "20": {
+          "clarity": 4.718148148148149,
+          "entailment": 3.8077777777777793,
+          "grammaticality": 4.550000000000002,
+          "sarcasm": 3.8277777777777766
+        },
+        "21": {
+          "clarity": 4.0496296296296315,
+          "entailment": 3.206666666666668,
+          "grammaticality": 3.818518518518521,
+          "sarcasm": 3.097037037037038
+        },
+        "22": {
+          "clarity": 3.607037037037041,
+          "entailment": 2.890370370370372,
+          "grammaticality": 3.3807407407407437,
+          "sarcasm": 2.7237037037037006
+        },
+        "23": {
+          "clarity": 3.51888888888889,
+          "entailment": 2.460740740740739,
+          "grammaticality": 3.393703703703701,
+          "sarcasm": 2.487037037037036
+        },
+        "24": {
+          "clarity": 3.606666666666668,
+          "entailment": 2.8070370370370377,
+          "grammaticality": 3.448148148148145,
+          "sarcasm": 2.69074074074074
+        },
+        "25": {
+          "clarity": 3.6740740740740754,
+          "entailment": 2.7233333333333323,
+          "grammaticality": 3.5781481481481494,
+          "sarcasm": 2.7544444444444443
+        },
+        "26": {
+          "clarity": 3.561481481481481,
+          "entailment": 2.3977777777777773,
+          "grammaticality": 3.500740740740741,
+          "sarcasm": 2.5259259259259266
+        },
+        "27": {
+          "clarity": 3.442592592592592,
+          "entailment": 2.8403703703703687,
+          "grammaticality": 3.3344444444444448,
+          "sarcasm": 2.6407407407407404
+        },
+        "28": {
+          "clarity": 3.486666666666668,
+          "entailment": 2.889259259259259,
+          "grammaticality": 3.4037037037037,
+          "sarcasm": 2.5622222222222226
+        },
+        "29": {
+          "clarity": 3.7855555555555553,
+          "entailment": 3.539629629629631,
+          "grammaticality": 3.664444444444448,
+          "sarcasm": 2.6307407407407397
+        }
+      },
+      "per_layer_metric_denominators": {
+        "15": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "16": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "17": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "18": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "19": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "20": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "21": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "22": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "23": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "24": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "25": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "26": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "27": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "28": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "29": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        }
+      },
+      "prompt_used_metadata": {
+        "actual_rendered_model_input_known": false,
+        "all_present_metadata_matches_plain": false,
+        "comparison_available": true,
+        "exact_string_sha256_counts": {
+          "1c128a50d4aeb4e19f25a39c7ce7bd63d4a594bbe6665e3bf7f32bfe3bbae475": 1440,
+          "58081a7597232794dc800cdea4edce008bb588743fcd806b1df933a745166b53": 1305,
+          "a5295a835b8a02d0b99ae582f7f88092351d2601d4c2aa7573a614b42bf7f41c": 1395,
+          "d8879a8050a73930e09492a5e7146d5fc398b978d3bf40d9918361f53e6471b9": 1185,
+          "d9fb2446c76276ccb916a2f383ebb8896fcf32dc290422d87045f8d74959dbb9": 1425
+        },
+        "missing_records": 0,
+        "plain_instruction_exact_match_rate": 0.0,
+        "plain_instruction_exact_matches": 0,
+        "present_records": 6750,
+        "scope": "Exact comparison of saved metadata only; no inference about actual rendered inputs or causality",
+        "style_instruction_exact_match_rate": 1.0,
+        "style_instruction_exact_matches": 6750
+      },
+      "raw_type_counts": {
+        "steer_random": 6750
+      },
+      "records": 6750,
+      "scale": 1.2,
+      "sentence_lineage": {
+        "current_test_substituted_or_reindexed": false,
+        "duplicate_text_extra_ids": 2,
+        "duplicate_text_groups": 2,
+        "published_id_text_mapping_sha256": "e73d8a3c5dde694779a496a14fb66ca4b0b787ce8e3d3ae5d77326889aeb2ce0",
+        "published_sentence_ids": 450,
+        "published_unique_sentence_strings": 448,
+        "released_split_exact_overlap": {
+          "test": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 450,
+            "unique_text_overlap": 0
+          },
+          "train": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 500,
+            "unique_text_overlap": 0
+          },
+          "val": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 50,
+            "unique_text_overlap": 0
+          }
+        },
+        "released_test_id_text_mapping_sha256": "595c1bd685ce06e168795d15f31fe565c165288fe08c3919100ee792321201df",
+        "status": "test_lineage_mismatch",
+        "test_same_id_exact_matches": 0,
+        "test_same_id_mismatches": 450,
+        "within_condition_id_text_consistent": true
+      },
+      "sentences": 450,
+      "sha256": "e10338f16d8547a6438169120463b1e60b59c776c9e1ec7fac17c6166ed91d9c"
+    },
+    {
+      "counts_per_layer": {
+        "9": 450,
+        "10": 450,
+        "11": 450,
+        "12": 450,
+        "13": 450,
+        "14": 450,
+        "15": 450,
+        "16": 450,
+        "17": 450,
+        "18": 450,
+        "19": 450
+      },
+      "coverage_basis": "450 original test rows crossed with the observed layer union; absent entire layers are not inferred",
+      "duplicate_cells": 0,
+      "empty_generations": 0,
+      "method": "saps",
+      "method_provenance_counts": {
+        "pinned_path_only_generic_legacy_type": 4950
+      },
+      "minus_one_metric_counts": {},
+      "missing_cells": 0,
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "num_evaluators_counts": {
+        "2": 157,
+        "3": 4793
+      },
+      "official_oracle_over_test_layers": {
+        "layers": 11,
+        "means": {
+          "clarity": 4.886296296296298,
+          "entailment": 4.1881481481481515,
+          "grammaticality": 4.819629629629633,
+          "sarcasm": 4.858518518518522
+        },
+        "selected_layer_counts": {
+          "9": 101,
+          "10": 121,
+          "11": 85,
+          "12": 34,
+          "13": 40,
+          "14": 21,
+          "15": 6,
+          "16": 8,
+          "17": 11,
+          "18": 12,
+          "19": 11
+        },
+        "sentences": 450
+      },
+      "per_layer_means": {
+        "9": {
+          "clarity": 4.723333333333338,
+          "entailment": 3.4792592592592584,
+          "grammaticality": 4.806666666666671,
+          "sarcasm": 3.1874074074074077
+        },
+        "10": {
+          "clarity": 4.56777777777778,
+          "entailment": 3.131851851851851,
+          "grammaticality": 4.564814814814816,
+          "sarcasm": 3.7433333333333354
+        },
+        "11": {
+          "clarity": 4.728518518518525,
+          "entailment": 3.5781481481481503,
+          "grammaticality": 4.7788888888888925,
+          "sarcasm": 3.6229629629629643
+        },
+        "12": {
+          "clarity": 4.213703703703707,
+          "entailment": 2.963703703703704,
+          "grammaticality": 4.021481481481485,
+          "sarcasm": 3.4029629629629636
+        },
+        "13": {
+          "clarity": 4.738518518518521,
+          "entailment": 3.5918518518518523,
+          "grammaticality": 4.580370370370372,
+          "sarcasm": 3.107777777777778
+        },
+        "14": {
+          "clarity": 4.094074074074077,
+          "entailment": 2.907777777777776,
+          "grammaticality": 3.88185185185185,
+          "sarcasm": 3.0240740740740737
+        },
+        "15": {
+          "clarity": 3.6088888888888904,
+          "entailment": 3.0999999999999983,
+          "grammaticality": 3.3407407407407406,
+          "sarcasm": 2.9366666666666683
+        },
+        "16": {
+          "clarity": 3.2837037037037042,
+          "entailment": 3.003703703703704,
+          "grammaticality": 2.834814814814817,
+          "sarcasm": 2.9077777777777785
+        },
+        "17": {
+          "clarity": 3.7744444444444465,
+          "entailment": 2.6570370370370373,
+          "grammaticality": 3.6807407407407418,
+          "sarcasm": 2.7399999999999993
+        },
+        "18": {
+          "clarity": 3.744074074074077,
+          "entailment": 3.3411111111111116,
+          "grammaticality": 3.4888888888888867,
+          "sarcasm": 3.17962962962963
+        },
+        "19": {
+          "clarity": 3.3314814814814806,
+          "entailment": 3.3340740740740733,
+          "grammaticality": 2.964444444444445,
+          "sarcasm": 3.022222222222222
+        }
+      },
+      "per_layer_metric_denominators": {
+        "9": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "10": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "11": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "12": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "13": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "14": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "15": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "16": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "17": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "18": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "19": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        }
+      },
+      "prompt_used_metadata": {
+        "actual_rendered_model_input_known": false,
+        "all_present_metadata_matches_plain": false,
+        "comparison_available": true,
+        "exact_string_sha256_counts": {
+          "1c128a50d4aeb4e19f25a39c7ce7bd63d4a594bbe6665e3bf7f32bfe3bbae475": 1056,
+          "58081a7597232794dc800cdea4edce008bb588743fcd806b1df933a745166b53": 957,
+          "a5295a835b8a02d0b99ae582f7f88092351d2601d4c2aa7573a614b42bf7f41c": 1023,
+          "d8879a8050a73930e09492a5e7146d5fc398b978d3bf40d9918361f53e6471b9": 869,
+          "d9fb2446c76276ccb916a2f383ebb8896fcf32dc290422d87045f8d74959dbb9": 1045
+        },
+        "missing_records": 0,
+        "plain_instruction_exact_match_rate": 0.0,
+        "plain_instruction_exact_matches": 0,
+        "present_records": 4950,
+        "scope": "Exact comparison of saved metadata only; no inference about actual rendered inputs or causality",
+        "style_instruction_exact_match_rate": 1.0,
+        "style_instruction_exact_matches": 4950
+      },
+      "raw_type_counts": {
+        "steer_random": 4950
+      },
+      "records": 4950,
+      "scale": 1.4,
+      "sentence_lineage": {
+        "current_test_substituted_or_reindexed": false,
+        "duplicate_text_extra_ids": 2,
+        "duplicate_text_groups": 2,
+        "published_id_text_mapping_sha256": "e73d8a3c5dde694779a496a14fb66ca4b0b787ce8e3d3ae5d77326889aeb2ce0",
+        "published_sentence_ids": 450,
+        "published_unique_sentence_strings": 448,
+        "released_split_exact_overlap": {
+          "test": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 450,
+            "unique_text_overlap": 0
+          },
+          "train": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 500,
+            "unique_text_overlap": 0
+          },
+          "val": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 50,
+            "unique_text_overlap": 0
+          }
+        },
+        "released_test_id_text_mapping_sha256": "595c1bd685ce06e168795d15f31fe565c165288fe08c3919100ee792321201df",
+        "status": "test_lineage_mismatch",
+        "test_same_id_exact_matches": 0,
+        "test_same_id_mismatches": 450,
+        "within_condition_id_text_consistent": true
+      },
+      "sentences": 450,
+      "sha256": "2be285c58d0119d11dd5289eb4245ec4b862e69ab1e2ab378276aa7bcfb246ee"
+    },
+    {
+      "counts_per_layer": {
+        "9": 450,
+        "10": 450,
+        "11": 450,
+        "12": 450,
+        "13": 450,
+        "14": 450,
+        "15": 450,
+        "16": 450,
+        "17": 450,
+        "18": 450,
+        "19": 450
+      },
+      "coverage_basis": "450 original test rows crossed with the observed layer union; absent entire layers are not inferred",
+      "duplicate_cells": 0,
+      "empty_generations": 0,
+      "method": "saps",
+      "method_provenance_counts": {
+        "pinned_path_only_generic_legacy_type": 4950
+      },
+      "minus_one_metric_counts": {},
+      "missing_cells": 0,
+      "model": "mistralai/Mistral-7B-Instruct-v0.1",
+      "num_evaluators_counts": {
+        "2": 87,
+        "3": 4863
+      },
+      "official_oracle_over_test_layers": {
+        "layers": 11,
+        "means": {
+          "clarity": 4.89925925925926,
+          "entailment": 4.417407407407408,
+          "grammaticality": 4.825925925925928,
+          "sarcasm": 4.727777777777784
+        },
+        "selected_layer_counts": {
+          "9": 11,
+          "10": 2,
+          "11": 192,
+          "12": 90,
+          "13": 56,
+          "14": 45,
+          "15": 9,
+          "16": 13,
+          "17": 11,
+          "18": 12,
+          "19": 9
+        },
+        "sentences": 450
+      },
+      "per_layer_means": {
+        "9": {
+          "clarity": 4.967407407407409,
+          "entailment": 4.620000000000001,
+          "grammaticality": 4.960740740740741,
+          "sarcasm": 0.5555555555555556
+        },
+        "10": {
+          "clarity": 4.978518518518519,
+          "entailment": 4.771851851851854,
+          "grammaticality": 4.975555555555556,
+          "sarcasm": 0.35703703703703693
+        },
+        "11": {
+          "clarity": 4.824444444444446,
+          "entailment": 4.022962962962964,
+          "grammaticality": 4.733703703703704,
+          "sarcasm": 3.927777777777782
+        },
+        "12": {
+          "clarity": 4.686666666666673,
+          "entailment": 3.70074074074074,
+          "grammaticality": 4.600740740740742,
+          "sarcasm": 3.893703703703706
+        },
+        "13": {
+          "clarity": 4.671481481481481,
+          "entailment": 3.3192592592592596,
+          "grammaticality": 4.631111111111112,
+          "sarcasm": 3.425185185185185
+        },
+        "14": {
+          "clarity": 4.660740740740742,
+          "entailment": 3.0800000000000027,
+          "grammaticality": 4.623703703703705,
+          "sarcasm": 3.5444444444444474
+        },
+        "15": {
+          "clarity": 3.9129629629629674,
+          "entailment": 2.266666666666666,
+          "grammaticality": 3.907407407407405,
+          "sarcasm": 2.8496296296296295
+        },
+        "16": {
+          "clarity": 4.49444444444445,
+          "entailment": 2.706296296296296,
+          "grammaticality": 4.544074074074077,
+          "sarcasm": 2.4577777777777796
+        },
+        "17": {
+          "clarity": 3.7766666666666686,
+          "entailment": 2.3825925925925935,
+          "grammaticality": 3.8129629629629638,
+          "sarcasm": 2.468888888888889
+        },
+        "18": {
+          "clarity": 4.061481481481486,
+          "entailment": 2.557037037037037,
+          "grammaticality": 4.150740740740745,
+          "sarcasm": 2.724074074074075
+        },
+        "19": {
+          "clarity": 3.506666666666668,
+          "entailment": 2.058518518518518,
+          "grammaticality": 3.525185185185184,
+          "sarcasm": 2.380370370370371
+        }
+      },
+      "per_layer_metric_denominators": {
+        "9": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "10": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "11": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "12": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "13": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "14": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "15": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "16": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "17": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "18": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        },
+        "19": {
+          "clarity": 450,
+          "entailment": 450,
+          "grammaticality": 450,
+          "sarcasm": 450
+        }
+      },
+      "prompt_used_metadata": {
+        "actual_rendered_model_input_known": false,
+        "all_present_metadata_matches_plain": false,
+        "comparison_available": true,
+        "exact_string_sha256_counts": {
+          "1c128a50d4aeb4e19f25a39c7ce7bd63d4a594bbe6665e3bf7f32bfe3bbae475": 1056,
+          "58081a7597232794dc800cdea4edce008bb588743fcd806b1df933a745166b53": 957,
+          "a5295a835b8a02d0b99ae582f7f88092351d2601d4c2aa7573a614b42bf7f41c": 1023,
+          "d8879a8050a73930e09492a5e7146d5fc398b978d3bf40d9918361f53e6471b9": 869,
+          "d9fb2446c76276ccb916a2f383ebb8896fcf32dc290422d87045f8d74959dbb9": 1045
+        },
+        "missing_records": 0,
+        "plain_instruction_exact_match_rate": 0.0,
+        "plain_instruction_exact_matches": 0,
+        "present_records": 4950,
+        "scope": "Exact comparison of saved metadata only; no inference about actual rendered inputs or causality",
+        "style_instruction_exact_match_rate": 1.0,
+        "style_instruction_exact_matches": 4950
+      },
+      "raw_type_counts": {
+        "steer_random": 4950
+      },
+      "records": 4950,
+      "scale": 1.4,
+      "sentence_lineage": {
+        "current_test_substituted_or_reindexed": false,
+        "duplicate_text_extra_ids": 2,
+        "duplicate_text_groups": 2,
+        "published_id_text_mapping_sha256": "e73d8a3c5dde694779a496a14fb66ca4b0b787ce8e3d3ae5d77326889aeb2ce0",
+        "published_sentence_ids": 450,
+        "published_unique_sentence_strings": 448,
+        "released_split_exact_overlap": {
+          "test": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 450,
+            "unique_text_overlap": 0
+          },
+          "train": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 500,
+            "unique_text_overlap": 0
+          },
+          "val": {
+            "published_ids_with_exact_text_in_split": 0,
+            "released_rows": 50,
+            "unique_text_overlap": 0
+          }
+        },
+        "released_test_id_text_mapping_sha256": "595c1bd685ce06e168795d15f31fe565c165288fe08c3919100ee792321201df",
+        "status": "test_lineage_mismatch",
+        "test_same_id_exact_matches": 0,
+        "test_same_id_mismatches": 450,
+        "within_condition_id_text_consistent": true
+      },
+      "sentences": 450,
+      "sha256": "61793fc3920d8a206318ad62ff1a7eba539ef2e952b8af9e8623b87a3f5b3723"
+    }
+  ],
+  "declared_instruction_sha256": "c6c04f1b9e7b9aa98a770345f0d6238635bfba61d7afc579c861fe78112c8a3b",
+  "input_sha256": {
+    "outputs/persona-author-replication-audit-01/metadata/saps_tree.json": "8842d7739715409ca6d30f9cd2b7a96b284af770441c618a221cee7f782c41a8",
+    "outputs/persona-author-replication-audit-01/saps-results_manifest.json": "003c0952931c670f0f11995389162fa64bbba8350eeea10554ecf7f42754c5d8",
+    "outputs/persona-author-replication-audit-01/saps/results/eval_avg/sarcasm/fixed_projection/google_gemma-2-9b-it/steer_random_scale1p0_avg_eval.jsonl": "80877dc2b71b6bbb4e59b6eebd9efccbd6bca4998ac2c9b5dec4ac9330d725d0",
+    "outputs/persona-author-replication-audit-01/saps/results/eval_avg/sarcasm/fixed_projection/meta-llama_Llama-3.1-8B-Instruct/steer_random_scale1p0_avg_eval.jsonl": "5ab1ffc51c22ff2164d9efb4b32fe1573ff94e0b1f6b75ff05b564d9398121dd",
+    "outputs/persona-author-replication-audit-01/saps/results/eval_avg/sarcasm/fixed_projection/mistralai_Mistral-7B-Instruct-v0.1/steer_random_scale1p0_avg_eval.jsonl": "25e4eb500f01a3236b40eb2050eadb220404d5faff6b8363f91dc97422f47f0d",
+    "outputs/persona-author-replication-audit-01/saps/results/eval_avg/sarcasm/saps/google_gemma-2-9b-it/steer_random_scale1p2_avg_eval.jsonl": "e10338f16d8547a6438169120463b1e60b59c776c9e1ec7fac17c6166ed91d9c",
+    "outputs/persona-author-replication-audit-01/saps/results/eval_avg/sarcasm/saps/meta-llama_Llama-3.1-8B-Instruct/steer_random_scale1p4_avg_eval.jsonl": "2be285c58d0119d11dd5289eb4245ec4b862e69ab1e2ab378276aa7bcfb246ee",
+    "outputs/persona-author-replication-audit-01/saps/results/eval_avg/sarcasm/saps/mistralai_Mistral-7B-Instruct-v0.1/steer_random_scale1p4_avg_eval.jsonl": "61793fc3920d8a206318ad62ff1a7eba539ef2e952b8af9e8623b87a3f5b3723",
+    "outputs/persona-literature-audit-01/saps-steering/data/sarcasm/test.json": "b4e36a1b38a5e1d2593829882a5e6ef75f21a68acc846a22a2e7c05e1669c7cf",
+    "outputs/persona-literature-audit-01/saps-steering/data/sarcasm/train.json": "8b104a0af1e9233ea45d659c958c516909a8cae03e4c531f622389442db92918",
+    "outputs/persona-literature-audit-01/saps-steering/data/sarcasm/val.json": "ca6f47da7725de0acddb5f746996371cc1db66d7f70ac23c977843a325458f8e",
+    "outputs/persona-literature-audit-01/saps-steering/prompts/sarcasm.json": "c6c04f1b9e7b9aa98a770345f0d6238635bfba61d7afc579c861fe78112c8a3b",
+    "outputs/persona-literature-audit-01/saps-steering/results/scripts/make_oracle_tables.py": "3bcfceadc3e8774ef1c4ba7c32ab8a1eaa31d8a864228c7ab61d04e876c88dd4"
+  },
+  "limits": [
+    "Oracle maximizes style per TEST sentence across layers, never fixed validation-layer performance.",
+    "Official max key maps both score 0 and -1 to -1; stable ties select first input record.",
+    "Only averaged scores are public; 2/3 contributor counts do not recover raw evaluator judgments.",
+    "Embedded published text is compared, never normalized/reindexed/replaced by current released test inputs; any mismatch is a material release-lineage gap.",
+    "Legacy steer_random labels do not identify the method: when absent, method is inferred only from the pinned artifact path.",
+    "Saved prompt_used metadata is compared exactly with released plain/style instructions; actual model input and causes of any discrepancy are unknown.",
+    "No author code executed, no tensors deserialized, no model or judge called."
+  ],
+  "manifest_sha256": "003c0952931c670f0f11995389162fa64bbba8350eeea10554ecf7f42754c5d8",
+  "official_oracle_script_sha256": "3bcfceadc3e8774ef1c4ba7c32ab8a1eaa31d8a864228c7ab61d04e876c88dd4",
+  "original_test_sha256": "b4e36a1b38a5e1d2593829882a5e6ef75f21a68acc846a22a2e7c05e1669c7cf",
+  "released_split_sha256": {
+    "test": "b4e36a1b38a5e1d2593829882a5e6ef75f21a68acc846a22a2e7c05e1669c7cf",
+    "train": "8b104a0af1e9233ea45d659c958c516909a8cae03e4c531f622389442db92918",
+    "val": "ca6f47da7725de0acddb5f746996371cc1db66d7f70ac23c977843a325458f8e"
+  },
+  "revision": "c56fb28ac0d14c8fd70035e035c5452e3c6c6ccc",
+  "scope": "CPU arithmetic reconstruction over embedded published IDs/text, not target-model or released-test-input reproduction",
+  "status": "test_lineage_mismatch"
+}

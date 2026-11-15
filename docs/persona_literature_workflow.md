@@ -17,6 +17,23 @@ The [source review](../results/reviews/persona_literature_source_review.md) reco
 what was inspected: 32 small files verified against canonical Git blobs and
 SHA-256s, with no dependency or model installation during the audit.
 
+## Current priority: original-model method references
+
+The user revised the sequence on2026-11-15: first establish the published steering
+methods on original open author models. Use Qwen2.5-7B for the explicit GCAD
+impoliteness reference and the documented profanity procedure, and Mistral-7B-v0.1
+for SAPS sarcasm. No new OpenAI API setup is required: existing Claude grading is
+an explicitly disclosed evaluator adaptation; profanity can use the paper's
+local self-judge. Missing profanity inputs may be reconstructed, clearly labelled
+as new. No exact numerical reproduction is promised.
+
+The [source audit](../results/reviews/author_model_source_audit_01.md) records the
+published-log lineage issues and paper/code differences. The
+[reproduction plan](author_model_reproduction_plan.md) supersedes the older
+4B-transfer-first sequence below. The prospective
+[GCAD first-reply protocol](author_gcad_impolite_protocol.md) is the first live
+reference. Earlier4B results stay unchanged; joint control and14B remain deferred.
+
 ## Reusable procedure
 
 1. Pin author source, datasets, notices and model. Inspect actual extraction,

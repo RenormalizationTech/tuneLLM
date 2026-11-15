@@ -39,6 +39,19 @@ for later discussion and literature review. Complete the 4B pipeline before furt
 Each live study requires its own committed registration; the current status
 below distinguishes completed runs from accepted designs.
 
+## Current priority (2026-11-15): original-model references
+
+The user selected original open author models and published steering methods
+before further4B adaptations or method comparisons. See
+[the source and execution plan](docs/author_model_reproduction_plan.md) and
+[source audit](results/reviews/author_model_source_audit_01.md). The first bounded
+reference is GCAD impoliteness on Qwen2.5-7B, with the author's residual baseline
+and an unsteered control. SAPS sarcasm uses Mistral-7B-v0.1. Profanity follows the
+paper procedure with disclosed reconstructed inputs because supplementary data
+could not be verified. No new OpenAI API setup; existing Claude evaluation is an
+explicit substitution. Old4B results remain unchanged; joint control and14B are
+deferred. Historical status below is retained for provenance.
+
 ## Current status and execution priorities (2026-11-14)
 
 - Latest user-selected sequence, reviewed with Claude: return to Qwen3-4B for

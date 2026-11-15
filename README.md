@@ -56,6 +56,13 @@ experimental project; the full persona-control objective remains unachieved. See
 [the current project map](docs/project_tracks.md) and
 [local artifact retention](docs/workspace_maintenance.md).
 
+The current priority (2026-11-15) is [original-model method reproduction](docs/author_model_reproduction_plan.md)
+before further4B transfer. A verified GCAD impoliteness reference uses Qwen2.5-7B;
+SAPS uses Mistral-7B-v0.1. The profanity route follows the documented paper method
+with explicitly reconstructed missing inputs. Existing Claude evaluation replaces
+unavailable author graders with clear disclosure. See the
+[source audit](results/reviews/author_model_source_audit_01.md).
+
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
 a small development screen, and one fixed final comparison. Compatible baseline
