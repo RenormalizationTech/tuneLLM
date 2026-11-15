@@ -1,0 +1,39 @@
+{
+  "accepted": true,
+  "preview_sha256": "30ab72094d6c7cf7448de1324aa571512ff4bc8e0cfb970518eaea9e05fd840b",
+  "datasets_sha256": {
+    "evaluation/author_profanity_method/triples.json": "6d38697c49103a0553f2ef2db9bfeddc4e8e5e24ce87f0ea5afae8450a277c1d",
+    "evaluation/author_profanity_method/calibration.json": "41aa9a448551bbce8d314039cd9e7be3e7db5bd4e2735657c4821208fcf9e85f",
+    "evaluation/author_profanity_method/report.json": "486300cffd90fe08780ac786f7bf67143fefcc25b343d1c6e972e276075b5683",
+    "evaluation/author_profanity_method/definitions.json": "4ead8f85250dfea599fde27a27aebe541a2d5479def2d40afa8c55cc94deac00",
+    "evaluation/author_profanity_method/self_judge.json": "1e4244962004e5eb501aa353ec158d4e997e0859e2a4ee6bf21233313cf3affa"
+  },
+  "reviewers": [
+    "coordinator",
+    "Claude scientific advisor"
+  ],
+  "reviewed_items": {
+    "triples": 12,
+    "assistant_responses": 24,
+    "calibration_questions": 32,
+    "report_questions": 32,
+    "rendered_contrasts": 24,
+    "definitions": 24,
+    "self_judge_envelope": true
+  },
+  "checks": {
+    "facts_and_helpfulness_matched": true,
+    "benign_shared_user_requests": true,
+    "no_slurs_or_personal_insults": true,
+    "no_profanity_requested_in_user_questions": true,
+    "no_normalized_duplicates_or_split_overlap": true,
+    "assistant_boundary_crossings": 0,
+    "exact_strings_accepted_without_edits": true
+  },
+  "limitations": [
+    "Some edits add negative affect or intensity, most clearly T02 and T12; direction may include more than lexical swearing.",
+    "Examples emphasize mild swear words and do not span all crude language.",
+    "New reconstructed Claude-generated inputs; Claude also provides secondary evaluation, while the independent primary self-judge is Qwen.",
+    "Twelve pairs yield a noisy direction; saturated AUROC uses the declared earliest-index tie rule."
+  ]
+}
