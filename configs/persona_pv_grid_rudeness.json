@@ -1,0 +1,39 @@
+{
+  "trait": "rudeness",
+  "run": "outputs/persona-pv-grid-rudeness-01",
+  "result": "results/persona_pv_grid_rudeness_01.json",
+  "parent": "outputs/persona-reference-rudeness-01",
+  "parent_config": "configs/persona_reference_rudeness.json",
+  "protocol": "docs/persona_pv_grid_protocol.md",
+  "design_review": "results/reviews/persona_pv_grid_design_review.md",
+  "initial_registration": "results/protocols/persona-pv-grid-rudeness-01.json",
+  "selection_registration": "results/protocols/persona-pv-grid-rudeness-selection-01.json",
+  "prospective_amendment": null,
+  "parent_handoff": null,
+  "parent_result": "results/persona_reference_rudeness_01.json",
+  "plan_seeds": {
+    "grid": 731,
+    "final": 732,
+    "custom": 733
+  },
+  "author_layers": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    35
+  ],
+  "coefficients": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "maximum_new_generations": 232,
+  "maximum_new_starts": 60,
+  "maximum_new_mc": 64,
+  "lexical_result": null
+}

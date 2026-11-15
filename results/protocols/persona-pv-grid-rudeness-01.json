@@ -1,0 +1,16 @@
+{
+  "study": "Separate exploratory symmetric PV rudeness grid",
+  "manifest_sha256": "0189806ad3200f1c9146ddbe0d63502d2d782ed8d933a82e84edb7b19a8dc4f0",
+  "cpu_checks_passed": 31,
+  "cpu_test_source_sha256": "d51649a9ac201795984c38efb7ba970fda62aef3444fbe58e7b6c0ce4b03bd24",
+  "coordinator_code_accepted": true,
+  "advisor_code_accepted": true,
+  "original_parent_result": "selection_null; immutable",
+  "reused_grid_outputs": 120,
+  "new_grid_outputs": 160,
+  "maximum_new_generations": 232,
+  "maximum_native_starts": 60,
+  "report_partition_ungenerated_in_parent": true,
+  "source_and_plans_frozen_before_new_outputs": true,
+  "joint_trait_control": "deferred"
+}

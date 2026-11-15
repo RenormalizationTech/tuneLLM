@@ -1,0 +1,39 @@
+{
+  "trait": "profanity",
+  "run": "outputs/persona-pv-grid-profanity-01",
+  "result": "results/persona_pv_grid_profanity_01.json",
+  "parent": "outputs/persona-reference-profanity-01",
+  "parent_config": "configs/persona_reference_profanity.json",
+  "protocol": "docs/persona_pv_grid_protocol.md",
+  "design_review": "results/reviews/persona_pv_grid_design_review.md",
+  "initial_registration": "results/protocols/persona-pv-grid-profanity-01.json",
+  "selection_registration": "results/protocols/persona-pv-grid-profanity-selection-01.json",
+  "prospective_amendment": "results/protocols/persona-reference-profanity-grid-amendment-01.json",
+  "parent_handoff": "results/protocols/persona-reference-profanity-grid-handoff-01.json",
+  "parent_result": null,
+  "plan_seeds": {
+    "grid": 741,
+    "final": 742,
+    "custom": 743
+  },
+  "author_layers": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    35
+  ],
+  "coefficients": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "maximum_new_generations": 352,
+  "maximum_new_starts": 90,
+  "maximum_new_mc": 64,
+  "lexical_result": "results/diagnostics/persona_pv_grid_profanity_lexical_01.json"
+}

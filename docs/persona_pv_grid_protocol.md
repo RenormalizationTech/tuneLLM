@@ -36,6 +36,8 @@ forcing or mechanical generations are required for the unchanged hook. Freshly
 reload the saved tensors for the final report and check their identity.
 
 Parent rudeness is `outputs/persona-reference-rudeness-01`, closed before final.
+Its immutable [parent result](../results/persona_reference_rudeness_01.json)
+records selection_null; preparation also refuses any parent report outputs.
 Parent profanity is `outputs/persona-reference-profanity-01`, handed off after
 extraction/preflight. Child runs are `outputs/persona-pv-grid-{trait}-01` and
 public results `results/persona_pv_grid_{trait}_01.json`. New modules/configs
@@ -132,9 +134,12 @@ has its own journal and strict budget before a new start. Raw answers and
 individual labels remain ignored; public output contains aggregates and hashes.
 
 For profanity, keep the exact previously bound eleven-word lexical specification
-and original read-only lexical_counts implementation. The parent supplement
-covers elicitation/preflight; a child supplement covers grid/report/custom and
-conditional capability using the same cutoffs, with no extra API calls or gates.
+and original read-only lexical_counts implementation. The child supplement is
+canonical and covers parent elicitation/preflight plus child grid/report/custom
+and conditional capability with the same cutoffs and no extra API calls or gates.
+Do not also publish the artifact helper's parent-only supplement. The parent
+handoff and child report record its prospective amendment; do not run the frozen
+parent report command, which would mislabel this unrecognized handoff as incomplete.
 Reverify private generator origin records at supplement/postrun audit. Do not
 publish them to satisfy committed-provenance checks. Include the friendly-swearing
 reference versus broader custom/lexical construct and generator/judge circularity.

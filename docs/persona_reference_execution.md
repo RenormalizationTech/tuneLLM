@@ -6,9 +6,10 @@ discussion. Physics LoRA and completed refusal work are independent.
 
 ## Rudeness / published impolite Persona Vectors
 
-Status: elicitation, extraction and preflight passed; the100-answer nine-layer
-development screen is saved and blinded grading is running. No held-out
-reference steering effect has been established.
+Status: closed as `selection_null`. No quality-eligible development setting met
+the ten-point gain requirement. See the
+[consolidated closeout](persona_reference_rudeness_closeout.md) and
+[aggregate result](../results/persona_reference_rudeness_01.json).
 
 Protocol, source/data/license, code and initial exact manifest registration were
 committed as 95ca211 before target outputs. Claude accepted the disclosed method
@@ -51,33 +52,53 @@ hidden/logit changes and cached hook coverage/cleanup. Maximum logit delta was
 layer screen. This stage adds 100 generations: common baseline plus nine sites
 at coefficient 2 on the ten fixed development questions.
 
-The layer screen completed all100 generations in679.40 generation seconds,
-684.71 whole-stage seconds. Thirteen original-scale grading batches follow;
-layer selection has not occurred yet.
+The layer screen completed 100 generations in 679.40 generation seconds,
+684.71 whole-stage seconds, followed by thirteen first-valid grading batches.
+The fixed rule chose author layer 8 / block 7. At that site, four new strengths
+added 40 generations and five first-valid grading batches. The best eligible
+gain was 0.5 (2.2 versus 1.7); stronger settings failed coherence. The registered
+fallback did not apply because some coefficient-2 sites passed quality.
+
+Total: 350 generations, 132 teacher-forced responses, zero MC and 43 native
+starts, all first-valid. No report-set, random/prompt, custom or capability
+generation was triggered. The worker independently verified the completed
+outputs, journals, deterministic selection, null stop, privacy and genuine cap
+flags. The search can lock an ineffective shallow site while weaker deeper
+settings remain unexplored; no post-hoc rescue sweep was added.
 
 Initial registration:
 [`persona-reference-rudeness-01.json`](../results/protocols/persona-reference-rudeness-01.json).
 Method and limitations: [protocol](persona_reference_protocol.md),
 [design/code review](../results/reviews/persona_reference_design_review.md).
-Private raw answers, grading receipts and logs remain ignored. Append measured
-results and stage costs after closure; do not relabel a study-in-progress as a
-validated reusable workflow.
+Private raw answers, grading receipts and logs remain ignored. The reusable
+operations are source-tested; effective narrow rudeness control is unvalidated.
 
 ## Sarcasm
 
 Claude reviewed the bounded SAPS design and implementation, including its
-corrections. The worker froze the separate native HF port after 24 CPU checks;
-no sarcasm reference model/API phase has started. The paper is privately archived for rubric
-provenance. This is literal-to-sarcastic paraphrasing, not demonstrated generic
+corrections. The worker froze the separate native HF port after 24 CPU checks.
+Exact registration was committed in 17daf9b after rudeness closed, before GPU0
+execution. The initial 50 baseline and 50 prompted-control answers are saved;
+five original-scale grading batches are running before direction extraction.
+Generation took 112.21 seconds, whole stage 116.81 seconds. Mean tokens were
+25.2 / 30.6 (baseline / prompted), with zero capped outputs. The paper is
+privately archived for rubric provenance. This is literal-to-sarcastic
+paraphrasing, not demonstrated generic
 assistant persona transfer. See [protocol](sarcasm_reference_protocol.md).
 
 ## Profanity
 
-The next artifact design follows the published PV general generation template,
-with new casual non-slur swearing data and separately registered generator
-provenance. Claude reviewed the design and corrected potential politeness and
-informality confounds. No artifacts or Qwen outputs have been generated yet.
+New casual non-slur swearing artifacts were generated with the published PV
+general template and separately registered provenance. The first native request
+was structurally valid and passed all mechanical checks. Root and Claude read
+all five instruction pairs, forty questions, rubric, split and matched complete
+systems and accepted them without edits or reroll. Exact semantic/dataset/system
+hashes were committed in ec78901 before promotion. The helper reconstructed
+raw response through parse and split to exact promoted bytes, committed in
+17daf9b with the public origin record. No profanity-profile Qwen outputs exist.
 The accepted description and checks are in the
 [protocol](profanity_reference_protocol.md). Shared PV sources stay frozen;
-new profile provenance and a separate read-only lexical supplement precede
-profanity elicitation.
+new profile provenance and a separate read-only lexical supplement are fixed
+before profanity elicitation. Private raw generation records remain retained;
+the committed origin hashes them. Friendly-swearing reference scores, broader
+custom profanity scores and incomplete lexical counts remain distinct.
