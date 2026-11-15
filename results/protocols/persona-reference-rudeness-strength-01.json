@@ -1,0 +1,21 @@
+{
+  "study": "PV impolite/rudeness vector and preflight lock",
+  "strength_sha256": "de5a574a0fc36976bb58301e0869e2e8f002510a489a72af5a46d766e0dd3337",
+  "retained_pairs": 66,
+  "questions": 20,
+  "teacher_forced_sequences": 132,
+  "raw_vectors": "unnormalized positive-minus-negative response means; original systems/native token IDs",
+  "author_layers": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    35
+  ],
+  "preflight_passed": true,
+  "before_scored_layer_search": true
+}
