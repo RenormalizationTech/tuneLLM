@@ -51,7 +51,13 @@ stronger-magnitude proposal was not executed and is superseded by this decision.
 Rudeness is first under the [PV adaptation protocol](persona_reference_protocol.md),
 then separate [sarcasm](sarcasm_reference_protocol.md) and
 [profanity](profanity_reference_protocol.md) protocols. The source audit and
-Claude's PV implementation review are complete; the frozen PV runner passed34
-CPU checks. Exact initial registration was committed before GPU0 elicitation
-started. The worker is implementing the separate SAPS port. See the
+Claude's implementation reviews are complete. The frozen runners passed 34 PV,
+24 SAPS, 21 artifact-generation and 31 grid-extension CPU checks. The original
+rudeness two-stage search closed as selection_null. The original SAPS study
+closed at its added positive-control quality gate, before actual steering.
+Profanity elicitation passed. A separately registered
+[symmetric PV grid](persona_pv_grid_protocol.md) now addresses the rudeness search
+limitation and prospectively replaces profanity's unrun selection stages.
+Original results remain unchanged, and each isolated outcome is consolidated
+with its limitations. See the
 [execution record](persona_reference_execution.md) for live status and results.

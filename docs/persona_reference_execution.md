@@ -78,8 +78,13 @@ operations are source-tested; effective narrow rudeness control is unvalidated.
 Claude reviewed the bounded SAPS design and implementation, including its
 corrections. The worker froze the separate native HF port after 24 CPU checks.
 Exact registration was committed in 17daf9b after rudeness closed, before GPU0
-execution. The initial 50 baseline and 50 prompted-control answers are saved;
-five original-scale grading batches are running before direction extraction.
+execution. The initial 50 baseline and 50 prompted-control answers were graded
+in five first-valid batches. The study closed as elicitation_null: prompted
+sarcasm mean 3.04, with 36/50 scoring at least 3 and grammar 4.64, but clarity
+3.46 fell below the registered 3.5 minimum. Baseline style was zero; baseline
+clarity 4.76. Prompted entailment was 2.44 (not an initial-gate criterion).
+This is a failed combined control gate, not absence of elicited sarcasm.
+No directions, intervention search, held-out, custom or capability stage ran.
 Generation took 112.21 seconds, whole stage 116.81 seconds. Mean tokens were
 25.2 / 30.6 (baseline / prompted), with zero capped outputs. The paper is
 privately archived for rubric provenance. This is literal-to-sarcastic
@@ -95,10 +100,32 @@ all five instruction pairs, forty questions, rubric, split and matched complete
 systems and accepted them without edits or reroll. Exact semantic/dataset/system
 hashes were committed in ec78901 before promotion. The helper reconstructed
 raw response through parse and split to exact promoted bytes, committed in
-17daf9b with the public origin record. No profanity-profile Qwen outputs exist.
+17daf9b with the public origin record. Two hundred profanity elicitation answers
+were graded in 25 first-valid original-scale batches. The fixed filter retained
+30 pairs across 18 questions, with zero semantic refusals. Positive/negative
+trait means were 38.72 / 0.12 and coherence 74.38 / 85.67. All 60 retained
+trajectories will be used for extraction after the current rudeness grid frees
+GPU0. Generation took 1,133.83 seconds (whole stage 1,139.20 seconds).
 The accepted description and checks are in the
 [protocol](profanity_reference_protocol.md). Shared PV sources stay frozen;
 new profile provenance and a separate read-only lexical supplement are fixed
 before profanity elicitation. Private raw generation records remain retained;
 the committed origin hashes them. Friendly-swearing reference scores, broader
 custom profanity scores and incomplete lexical counts remain distinct.
+
+## Separate symmetric PV grid extensions
+
+Claude and the coordinator agreed on a full nine-layer by three-strength grid
+(0.5, 1, 2), with unchanged quality criteria and one untouched report. This fixes
+the sequential search limitation without changing the original rudeness null.
+The prospective profanity amendment ee47667 was committed while only
+elicitation was running, before any steered profanity output. The parent will
+hand off after extraction/preflight; its original selection will remain unrun.
+
+The new runner passed 31 focused CPU checks and Claude's source/protocol review.
+Rudeness child registration b74d659 precedes its current 160 missing-output GPU
+screen. Its baseline and eleven old candidate conditions (120 outputs) are reused
+with unchanged first-valid grades. Coefficients 3/4 cannot enter the new grid.
+Profanity's future child will generate a fresh baseline and all 27 settings.
+The new protocol is [here](persona_pv_grid_protocol.md). Combined trait steering
+remains deferred; these are separate isolated studies.
