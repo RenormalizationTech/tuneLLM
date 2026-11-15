@@ -1,0 +1,9 @@
+{
+  "manifest_sha256": "0bc382bf5ed64bd74216d926fd52cfb0639b9acc99c25bfb9e33e37fb29ecbbb",
+  "selection_sha256": "e1061ef48b61b55ca74ea6e8c03e45719821fbc989afb65184e28b205dc52771",
+  "development_run_sha256": "f8e3c92654bea9cd254e85506f03bcf918c33968b4457bbcc8a01129c18ec37a",
+  "trait_accepted_sha256": "1611c407ee97719d2264590cde617c19f26f9e71a3954cf650477eaca7e8fa10",
+  "coherence_accepted_sha256": "324c7e6bb22f5ea6a617f2613183ddc2a2df21dd527ae4abc09e52100c7d6629",
+  "controls_sha256": "cd75305e35357d8938574234306f84811f2ab92b3e26f7737f1fcd45a82c0c7c",
+  "controls_metadata_sha256": "dd997067dc06eb3acf8b3b964e37c809929ff1f9505d8e292cb40105b0bfaab4"
+}
