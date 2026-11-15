@@ -49,6 +49,9 @@ closed development nulls and were not author replications. The later
 stronger-magnitude proposal was not executed and is superseded by this decision.
 
 Rudeness is first under the [PV adaptation protocol](persona_reference_protocol.md),
-then separate sarcasm and profanity protocols. The source audit is complete;
-the worker is implementing the first runner with CPU checks while Claude reviews
-the concrete protocol. No reference GPU or grading phase has started yet.
+then separate [sarcasm](sarcasm_reference_protocol.md) and
+[profanity](profanity_reference_protocol.md) protocols. The source audit and
+Claude's PV implementation review are complete; the frozen PV runner passed34
+CPU checks. Exact initial registration was committed before GPU0 elicitation
+started. The worker is implementing the separate SAPS port. See the
+[execution record](persona_reference_execution.md) for live status and results.
