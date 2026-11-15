@@ -97,8 +97,11 @@ A separate [registered continuation](persona_saps_continuation_protocol.md) now
 follows the author's prompt-activation extraction despite our added initial gate.
 The original failure is retained, and downstream quality floors are unchanged.
 Its runner passed 27 CPU checks and Claude's review. Registration 4da9c59
-preceded all new calls. Direction extraction is running: 1,500 prompt forwards,
-followed by mechanics checks before any scored intervention validation. The
+preceded all new calls. Direction extraction completed 1,500 prompt forwards. Mechanics checks passed
+exact zero parity and nonzero logit changes (maximum16.625), cache coverage and
+cleanup. The worker independently verified completed extraction, arithmetic,
+probes and bindings. Strength lock94e98a3 preceded the running600-response
+validation. The
 original 100 answers and five grading calls are reused without rerating.
 
 ## Profanity
@@ -144,7 +147,10 @@ The worker independently verified reuse, new outputs, grades and selection.
 See the [full grid closeout](persona_pv_grid_rudeness_closeout.md).
 
 Profanity child registration 5b60449 preceded a fresh baseline and all 27 settings
-(280 generations). Generation is complete and 35 blinded grading batches are
-running. Selection and any held-out work remain conditional on the fixed rules.
+(280 generations). All 35 grading batches were first-attempt valid. The child closed
+selection_null: all21 quality-eligible settings scored zero against baseline
+zero. The fixed lexical diagnostic found no matches across all280 grid outputs.
+No held-out, custom or capability work was triggered. See the
+[profanity closeout](persona_pv_grid_profanity_closeout.md).
 The new protocol is [here](persona_pv_grid_protocol.md). Combined trait steering
 remains deferred; these are separate isolated studies.

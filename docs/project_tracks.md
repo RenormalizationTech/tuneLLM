@@ -10,8 +10,9 @@ on clear authored cases. The [profanity pilot closed with a development null](pr
 [rudeness and sarcasm also closed with development nulls](isolated_persona_traits_execution.md).
 No isolated setting qualified in the tested range. The user selected the
 [literature-first isolated workflow](persona_literature_workflow.md), with author
-data/code before custom extensions. Its source audit is complete; rudeness is
-being implemented first. Joint control is a separate experimental topic deferred
+data/code before custom extensions. Source-tested implementations are complete;
+full rudeness/profanity PV grids closed with development nulls, and SAPS sarcasm
+validation is running. See the [reference execution record](persona_reference_execution.md). Joint control is a separate experimental topic deferred
 for later discussion, even after isolated success. The full 4B persona-control
 objective is unachieved; further 14B experiments remain deferred.
 The completed 14B baseline remains a historical measurement. Older closeout or

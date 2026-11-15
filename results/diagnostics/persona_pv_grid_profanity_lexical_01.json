@@ -1,0 +1,1125 @@
+{
+  "scope": "Canonical report-only frozen profanity lexical supplement across parent plus child; do not also run actor parent lexical report",
+  "phases": {
+    "parent_elicit": {
+      "i0-pos": {
+        "n": 20,
+        "hit_responses": 20,
+        "total_hits": 37,
+        "variant_counts": {
+          "ass": 4,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 5,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 21,
+          "shit": 7,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 6,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 14,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i0-neg": {
+        "n": 20,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i1-pos": {
+        "n": 20,
+        "hit_responses": 18,
+        "total_hits": 36,
+        "variant_counts": {
+          "ass": 3,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 18,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 1,
+          "shit": 14,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 8,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 10,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i1-neg": {
+        "n": 20,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i2-pos": {
+        "n": 20,
+        "hit_responses": 17,
+        "total_hits": 103,
+        "variant_counts": {
+          "ass": 5,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 37,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 60,
+          "hell": 1,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 10,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 7,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i2-neg": {
+        "n": 20,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i3-pos": {
+        "n": 20,
+        "hit_responses": 10,
+        "total_hits": 16,
+        "variant_counts": {
+          "ass": 9,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 2,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 1,
+          "hell": 3,
+          "shit": 1,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 2,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 8,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i3-neg": {
+        "n": 20,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i4-pos": {
+        "n": 20,
+        "hit_responses": 20,
+        "total_hits": 41,
+        "variant_counts": {
+          "ass": 1,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 17,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 23,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 5,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 15,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "i4-neg": {
+        "n": 20,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 20,
+          "numeric": 20,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      }
+    },
+    "parent_preflight": {
+      "ordinary": {
+        "n": 4,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        }
+      },
+      "zero": {
+        "n": 4,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        }
+      },
+      "nonzero": {
+        "n": 2,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        }
+      }
+    },
+    "grid": {
+      "baseline": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l4_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l4_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l4_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l8_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l8_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l8_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l12_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l12_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l12_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l16_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l16_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l16_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l20_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l20_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l20_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l24_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l24_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l24_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l28_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l28_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l28_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l32_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l32_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l32_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l35_c0.5": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l35_c1": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      },
+      "l35_c2": {
+        "n": 10,
+        "hit_responses": 0,
+        "total_hits": 0,
+        "variant_counts": {
+          "ass": 0,
+          "bullshit": 0,
+          "crap": 0,
+          "damn": 0,
+          "damned": 0,
+          "fuck": 0,
+          "fucked": 0,
+          "fucking": 0,
+          "hell": 0,
+          "shit": 0,
+          "shitty": 0
+        },
+        "author_scale": {
+          "threshold": 50,
+          "graded": 10,
+          "numeric": 10,
+          "judge_high": 0,
+          "judge_high_no_hit": 0,
+          "hit_judge_low": 0,
+          "hit_semantic_refusal": 0
+        }
+      }
+    }
+  },
+  "frozen_actor_spec": {
+    "schema_version": 1,
+    "report_only": true,
+    "lexicon": [
+      "ass",
+      "bullshit",
+      "crap",
+      "damn",
+      "damned",
+      "fuck",
+      "fucked",
+      "fucking",
+      "hell",
+      "shit",
+      "shitty"
+    ],
+    "matcher": "Unicode whole-word case-insensitive explicit variants; no substrings/stemming",
+    "reference_cutoff": 50,
+    "custom_cutoff": 2,
+    "phase_scope": "Every saved generation condition including unscored preflight and conditional capability",
+    "refusal_handling": "Reference null/refusal is separate from numeric judge-low, not silently scored below50",
+    "no_new_judgments_or_selection_changes": true,
+    "implementation_sha256": "9ffcc1cc68204994984c07c314e24344c82749d2784d82df86662f86dffac427"
+  },
+  "manifest_sha256": "1ac7eb23d31d65a3aff05c78b6ea5c54c5d7af61e128701cc9577bfe623d1056",
+  "child_report_sha256": "4801e37d15d82582b10cba85370e76a827ee833066450e2b44e16752be892c3f",
+  "origin_sha256": "61b20245b832ffe52a14fbb314e04764a5262161015eaf44cad41d34d20fd5b7",
+  "source_sha256": "4e1b045ba9ac09aa5b72b2e1eced3f8bf8ae1ae483130a9cb646ceb3d1768766",
+  "phase_source_sha256": {
+    "outputs/persona-pv-grid-profanity-01/grid/run.json": "8b2e46f994f44b3e372581a180c709e3b2cf74fcf7d1423f2aa928f55763dd70",
+    "outputs/persona-pv-grid-profanity-01/grid/predictions.json": "24839ec92a7587428dde8e6e3c31e4092edef63a3a4a966de4b629ad620d694b",
+    "outputs/persona-pv-grid-profanity-01/grid/reuse_binding.json": "ea01d7683115814e9d76b600d911f13564ea9587d550c4ca2e25786a930992fd"
+  },
+  "no_new_judgments_or_gate_changes": true
+}

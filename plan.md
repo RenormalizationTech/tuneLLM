@@ -76,7 +76,9 @@ below distinguishes completed runs from accepted designs.
   full 4B persona-control objective is unachieved. The user then selected
   `docs/persona_literature_workflow.md`: author methods/data first, isolated
   rudeness (PV), sarcasm (SAPS), profanity (explicit PV new-trait adaptation).
-  Source audit is complete and rudeness implementation is in progress. The
+  Source-tested implementations are complete. Rudeness and profanity full PV
+  grids closed with development nulls; SAPS continuation validation is running
+  with unchanged quality floors. See `docs/persona_reference_execution.md`. The
   stronger-magnitude proposal was not run. Joint control is experimental,
   deferred for later discussion; no joint or further 14B run started.
 - Qwen3-4B refusal study: closed after the final published-only replay. All 250

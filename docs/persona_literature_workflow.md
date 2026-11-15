@@ -59,9 +59,11 @@ Profanity elicitation passed. A separately registered
 [symmetric PV grid](persona_pv_grid_protocol.md) now addresses the rudeness search
 limitation and prospectively replaces profanity's unrun selection stages.
 The full rudeness grid also closed selection_null (best quality-eligible gain
-1.2/100); profanity's fresh 280-output grid is being graded. A separately
+1.2/100); profanity's fresh 280-output grid closed selection_null with zero gain
+and no lexical matches. A separately
 registered [SAPS continuation](persona_saps_continuation_protocol.md) proceeds
-with author prompt-based extraction while preserving the original failed gate
+with completed author prompt-based extraction and running validation, preserving
+the original failed gate
 and every downstream quality requirement. Original results remain unchanged,
 and each isolated outcome is consolidated
 with its limitations. See the
