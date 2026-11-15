@@ -130,12 +130,26 @@ precede three-trait control.
    construct/fit and a prompted-sarcasm reference. A SAPS comparison must use
    that same checkpoint, task, questions and decoding to compare methods.
    The existing Mistral rewriting success stays the external reference.
-3. Re-establish profanity and broad impoliteness on common questions/decoding,
-   scoring both rubrics on each arm. Then consider a small pairwise joint grid.
-4. Consider GCAD refusal reduction separately, with fresh attention-specific
-   extraction, published evaluation prompts, explicit reduction/quality
-   criteria and the existing boundary measurements. The residual refusal
-   direction is a different representation and cannot substitute for this bank.
+3. Test isolated GCAD refusal reduction on that same Qwen2.5 checkpoint,
+   with fresh attention-specific extraction, a prompted reference, published
+   evaluation prompts, explicit reduction/quality criteria and the existing
+   boundary measurements. Establish the new checkpoint's baseline first. The
+   residual refusal direction cannot substitute for an attention-specific bank.
+4. Re-establish isolated settings under comparable task/decoding conditions,
+   scoring all relevant traits and quality on each arm with suitable benchmark
+   partitions. Measure the cross-effects before a small pairwise joint grid,
+   beginning with profanity plus broad impoliteness; three-trait control follows.
+
+This order was reconfirmed with Claude after the refusal-setting discussion:
+finish isolated GCAD sarcasm, then isolated GCAD refusal, before joint tuning.
+The immediate milestone is a reviewed sarcasm protocol and fresh construct/
+artifact, followed by bounded development and untouched held-out comparison
+against baseline, prompted reference and random controls. Keep the Mistral
+SAPS reference, and label same-checkpoint SAPS comparison as a method transfer.
+A failed isolated transfer closes with reported tables rather than an automatic
+expanded grid. Cross-model transfer to Qwen3 requires fresh architecture-aware
+extraction and hook checks; keep the existing 4B-before-further-14B sequence.
+No new model experiment is launched by this roadmap update.
 
 The paper's tested humorous persona is not a sarcasm result. Its
 [Appendix O](https://arxiv.org/html/2605.10664v3) analyzes incidental refusals
