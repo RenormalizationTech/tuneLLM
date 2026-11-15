@@ -12,6 +12,9 @@ steering of **profanity, rudeness and sarcasm**, with simultaneous control defer
 14B work**. Generic physics questions in a behavior
 evaluation do not make it physics fine-tuning. See the
 [project map and selected persona targets](docs/project_tracks.md).
+The [four-behavior steering reference](docs/steering_reference.md) summarizes
+current methods and success levels; the [GCAD and combined-control guide](docs/gcad_and_combined_control.md)
+explains the equations and proposed unification studies.
 
 The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The

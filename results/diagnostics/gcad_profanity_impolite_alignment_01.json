@@ -1,0 +1,603 @@
+{
+  "schema_version": 1,
+  "analysis": "EXPLORATORY_GEOMETRY",
+  "scope": "Stored profanity versus author impolite GCAD tensors; no new model outputs, grading or coefficient selection",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "local_runtime_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "hidden_size": 3584,
+    "blocks": 28,
+    "attention_heads": 28,
+    "key_value_heads": 4,
+    "head_dimension": 128,
+    "shared_local_computational_file_hashes_match": true,
+    "shared_computational_files": 11,
+    "basis_qualification": "Both runtime studies use the same pinned native-HF Qwen2.5-7B checkpoint. Upstream impolite artifact training revision/dtype is not fully self-described; folder/source declaration and native tensor dimensions establish compatibility, not independent proof of identical upstream extraction weights."
+  },
+  "computation": {
+    "device": "CPU",
+    "saved_tensor_dtype": "float32",
+    "accumulation_dtype": "float64",
+    "cosine": "dot(x,y)/(raw_l2(x)*raw_l2(y)); keys flattened within each layer; null for zero norm",
+    "tensors_unchanged": true,
+    "per_block_pairs": 28,
+    "delta_pairs": 28,
+    "key_pairs": 28,
+    "total_cosine_pairs": 56,
+    "active_blocks": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "no_orthogonalization_or_normalization_saved": true
+  },
+  "banks": {
+    "profanity": {
+      "profile_path": "configs/profanity_retained_controller.json",
+      "bank_path": "outputs/profanity-method-transfer-01/extraction/banks.pt",
+      "bank_sha256": "5182c029351304ceaec8a30c222e75cb6e5479d69e2882626aa5663f8d969a2a",
+      "manifest_sha256": "0bc382bf5ed64bd74216d926fd52cfb0639b9acc99c25bfb9e33e37fb29ecbbb",
+      "tensor_sha256": {
+        "delta": "cb00a1f143e34d4526ef54aba4a732483ca2aea24497eed3da122e09d0a310bb",
+        "key": "b9310362375f8855bae5e1fb6332bf387ba245c45eb0400fea3c217424d2bd87",
+        "demand": "d827e949c928e1ff26851a07818f593fbd6f847304e35b83e9b74cbaef427627"
+      },
+      "training_data_sha256": "7c1a80671e510a6abbb7f88354b2f51367c6c51ab4ca261dbcd8bd25fb36bc82"
+    },
+    "impolite": {
+      "author_repository": "NihiI-obstat/Gated-Cropped-Attention-Delta",
+      "author_commit": "6c879f4d12e2b01274fc96c9afdb0f4f3a26d4de",
+      "manifest_sha256": "77a6348a12c55ee2743a2c3d9c931e8f85008f097b06f1d757a95789d265fd17",
+      "tensor_files": {
+        "delta": {
+          "path": "outputs/persona-author-replication-audit-01/gcad/vectors/prompt_attn_delta/Qwen2.5-7B-Instruct/impolite_response_avg_diff_prompt_attn_delta.pt",
+          "sha256": "90eeadfcad16965177c7879a6a1043430ab62e5661820c04a84dd50b8f99cae0",
+          "git_blob_sha1": "66dff0f08f9ce8fc66bd22625ce3c080a5b7542a",
+          "tensor_sha256": "045c70cc43646d1b423f03d767f596e222e46d72976e5bbb448d77fbfb85c1fd"
+        },
+        "key": {
+          "path": "outputs/persona-author-replication-audit-01/gcad/vectors/prompt_attn_k_pos/Qwen2.5-7B-Instruct/impolite_prompt_key_pos.pt",
+          "sha256": "45c01967b79a7b8e6cb4b75b26512a1ab47b685144e7a03a6e951357f5d4dc85",
+          "git_blob_sha1": "582b46d89a5e9c810bee06fd1c0c8c775be3bed4",
+          "tensor_sha256": "84f1cb893c684582528be183d38981be483a9491bf63ab0dc7fdf947a6b5ae69"
+        },
+        "demand": {
+          "path": "outputs/persona-author-replication-audit-01/gcad/vectors/prompt_attn_k_pos/Qwen2.5-7B-Instruct/impolite_avg_demand.pt",
+          "sha256": "cf212b01c1c3f98f3f662703fdd06f20ea641931e66ee2ae20f83ddc43d9fc11",
+          "git_blob_sha1": "3b2cd5db1b9f647c6c46c905fcb7c705b9168f18",
+          "tensor_sha256": "566f8a707a3f0684afd3cc0462445aa4f8b8d8592a9805cff3ba41953583f3c3"
+        }
+      }
+    }
+  },
+  "per_block": [
+    {
+      "block": 0,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.747916138724308,
+        "profanity_raw_l2": 0.3228899761546013,
+        "impolite_raw_l2": 0.8470804037413161,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9999431335103808,
+        "profanity_raw_l2": 604.2094890167782,
+        "impolite_raw_l2": 604.2766684384105,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 1,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.555764475327609,
+        "profanity_raw_l2": 0.13618358716387904,
+        "impolite_raw_l2": 0.4083768255942481,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9982090916073384,
+        "profanity_raw_l2": 157.60589681506173,
+        "impolite_raw_l2": 158.01424030444548,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 2,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.3776098676958575,
+        "profanity_raw_l2": 0.14012439120186485,
+        "impolite_raw_l2": 0.4251650417740456,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9938528009150992,
+        "profanity_raw_l2": 62.96107710938806,
+        "impolite_raw_l2": 63.67729385765216,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 3,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.26912311344308104,
+        "profanity_raw_l2": 0.10921627070578832,
+        "impolite_raw_l2": 0.36462043449687354,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9976585364505898,
+        "profanity_raw_l2": 119.40434538626009,
+        "impolite_raw_l2": 119.43291097041329,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 4,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.6735023662017556,
+        "profanity_raw_l2": 0.35555591936184655,
+        "impolite_raw_l2": 0.6419013524242091,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9533944079304649,
+        "profanity_raw_l2": 24.43446710477888,
+        "impolite_raw_l2": 24.786080328128165,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 5,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.49361343812577924,
+        "profanity_raw_l2": 0.3819903768890082,
+        "impolite_raw_l2": 0.5468844882935072,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9658018151394965,
+        "profanity_raw_l2": 26.63796594952067,
+        "impolite_raw_l2": 27.495344858232148,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 6,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.7041324285346903,
+        "profanity_raw_l2": 0.3897210173705199,
+        "impolite_raw_l2": 0.7487250262048819,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9712355429111654,
+        "profanity_raw_l2": 32.630475660100686,
+        "impolite_raw_l2": 32.94832888540821,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 7,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.168701927703988,
+        "profanity_raw_l2": 0.4824712735556972,
+        "impolite_raw_l2": 0.6068799820734522,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.969628833528203,
+        "profanity_raw_l2": 30.78217703596253,
+        "impolite_raw_l2": 30.850507764131358,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 8,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.4661803769293255,
+        "profanity_raw_l2": 0.46849805185449356,
+        "impolite_raw_l2": 0.7275999875175644,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9439181758209775,
+        "profanity_raw_l2": 25.05423271148956,
+        "impolite_raw_l2": 26.21543378743759,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 9,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.640256229234123,
+        "profanity_raw_l2": 1.6466941254862957,
+        "impolite_raw_l2": 1.6298923557678358,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9673630481327303,
+        "profanity_raw_l2": 25.519493151260768,
+        "impolite_raw_l2": 26.5218874653216,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 10,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.5647394945054468,
+        "profanity_raw_l2": 1.134086898998856,
+        "impolite_raw_l2": 0.9216917914263166,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9595277440883961,
+        "profanity_raw_l2": 28.382387219132635,
+        "impolite_raw_l2": 29.198735811168202,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 11,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": -0.10508303174215977,
+        "profanity_raw_l2": 0.6606442496740802,
+        "impolite_raw_l2": 0.5603332676064308,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9401879674909451,
+        "profanity_raw_l2": 26.594200283123993,
+        "impolite_raw_l2": 27.65405959490894,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 12,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.4014034871515363,
+        "profanity_raw_l2": 0.8248729308594572,
+        "impolite_raw_l2": 0.9177408128067123,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9671994390564395,
+        "profanity_raw_l2": 30.814870715558218,
+        "impolite_raw_l2": 31.619953235016176,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 13,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.6130055537719981,
+        "profanity_raw_l2": 1.1303621263795454,
+        "impolite_raw_l2": 1.8689720986506744,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9922014629310512,
+        "profanity_raw_l2": 61.73605126257313,
+        "impolite_raw_l2": 61.52526631591152,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 14,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.5430340114808573,
+        "profanity_raw_l2": 1.0608968298428316,
+        "impolite_raw_l2": 2.860144422203937,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9501220308173661,
+        "profanity_raw_l2": 26.71340861231975,
+        "impolite_raw_l2": 27.859479424291962,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 15,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.11219996947911035,
+        "profanity_raw_l2": 0.43611065112300884,
+        "impolite_raw_l2": 1.0854515028559986,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9729270508475637,
+        "profanity_raw_l2": 35.08180074545094,
+        "impolite_raw_l2": 35.62508306749282,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 16,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.33184367778867496,
+        "profanity_raw_l2": 0.8377445571651301,
+        "impolite_raw_l2": 1.2023256940324423,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9604320880656816,
+        "profanity_raw_l2": 29.98683759002682,
+        "impolite_raw_l2": 30.570995711017265,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 17,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.3013368255006597,
+        "profanity_raw_l2": 0.5213282929546539,
+        "impolite_raw_l2": 0.9972358967423964,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9481076167264281,
+        "profanity_raw_l2": 23.953247019083644,
+        "impolite_raw_l2": 24.347417534840062,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 18,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.24168329294854204,
+        "profanity_raw_l2": 0.4526870612805482,
+        "impolite_raw_l2": 1.2625921128214432,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.955299674954933,
+        "profanity_raw_l2": 26.063711634247106,
+        "impolite_raw_l2": 26.25005510093269,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 19,
+      "active_in_both_retained_settings": true,
+      "delta": {
+        "cosine": 0.4900590923735534,
+        "profanity_raw_l2": 3.042700424241922,
+        "impolite_raw_l2": 6.485747094583911,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9903194537320088,
+        "profanity_raw_l2": 57.154900286972506,
+        "impolite_raw_l2": 57.59299469070505,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 20,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.1206061288841201,
+        "profanity_raw_l2": 1.6607844802040652,
+        "impolite_raw_l2": 0.8485489709876336,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9271689573262937,
+        "profanity_raw_l2": 19.605348202051097,
+        "impolite_raw_l2": 20.374528508282108,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 21,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.07103339098150317,
+        "profanity_raw_l2": 1.7485573890514208,
+        "impolite_raw_l2": 1.1040510169460538,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9604725733776199,
+        "profanity_raw_l2": 27.448260539014964,
+        "impolite_raw_l2": 27.606470511837166,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 22,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.28535215782217477,
+        "profanity_raw_l2": 5.750173438943077,
+        "impolite_raw_l2": 1.842103686549953,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9487942327804755,
+        "profanity_raw_l2": 23.836783046355762,
+        "impolite_raw_l2": 24.61086502954938,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 23,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.24249608116362448,
+        "profanity_raw_l2": 2.1948088577713665,
+        "impolite_raw_l2": 0.9894845761949013,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9585809953199217,
+        "profanity_raw_l2": 24.5744392395426,
+        "impolite_raw_l2": 25.00993666072305,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 24,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.22595507274262874,
+        "profanity_raw_l2": 3.638480128298906,
+        "impolite_raw_l2": 2.7662911029414667,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9578415433393972,
+        "profanity_raw_l2": 23.822504860339798,
+        "impolite_raw_l2": 24.2213271620678,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 25,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.19891436465838075,
+        "profanity_raw_l2": 3.261238861305016,
+        "impolite_raw_l2": 1.6240331637304135,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9666919164153736,
+        "profanity_raw_l2": 24.796887091651868,
+        "impolite_raw_l2": 24.8381834159436,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 26,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.29952382839893565,
+        "profanity_raw_l2": 9.599025294943075,
+        "impolite_raw_l2": 8.560047126149762,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9699906454719155,
+        "profanity_raw_l2": 20.52536760809309,
+        "impolite_raw_l2": 21.141805523398816,
+        "flattened_dimensions": 512
+      }
+    },
+    {
+      "block": 27,
+      "active_in_both_retained_settings": false,
+      "delta": {
+        "cosine": 0.11384684390552142,
+        "profanity_raw_l2": 11.044218428594199,
+        "impolite_raw_l2": 6.055470947707765,
+        "flattened_dimensions": 3584
+      },
+      "key": {
+        "cosine": 0.9999828989624169,
+        "profanity_raw_l2": 921.9750471488117,
+        "impolite_raw_l2": 922.0900832772531,
+        "flattened_dimensions": 512
+      }
+    }
+  ],
+  "active_blocks_summary": {
+    "delta": {
+      "cosine": {
+        "n": 11,
+        "mean": 0.37586169113566753,
+        "min": -0.10508303174215977,
+        "max": 0.640256229234123
+      },
+      "profanity_raw_l2": {
+        "n": 11,
+        "mean": 1.068011649818757,
+        "min": 0.43611065112300884,
+        "max": 3.042700424241922
+      },
+      "impolite_raw_l2": {
+        "n": 11,
+        "mean": 1.7992842772270998,
+        "min": 0.5603332676064308,
+        "max": 6.485747094583911
+      }
+    },
+    "key": {
+      "cosine": {
+        "n": 11,
+        "mean": 0.9639715978948676,
+        "min": 0.9401879674909451,
+        "max": 0.9922014629310512
+      },
+      "profanity_raw_l2": {
+        "n": 11,
+        "mean": 33.818264410886314,
+        "min": 23.953247019083644,
+        "max": 61.73605126257313
+      },
+      "impolite_raw_l2": {
+        "n": 11,
+        "mean": 34.43326617741875,
+        "min": 24.347417534840062,
+        "max": 61.52526631591152
+      }
+    }
+  },
+  "source_and_reference_sha256": {
+    "configs/profanity_retained_controller.json": "adc7cb682d9d58f1b31ff268cfb5bb3a956c7bdebee6e84e945a2795ed163b4b",
+    "outputs/profanity-method-transfer-01/extraction/banks.pt": "5182c029351304ceaec8a30c222e75cb6e5479d69e2882626aa5663f8d969a2a",
+    "outputs/profanity-method-transfer-01/inputs/basis.json": "16b168f2eb56c3b5daf1079555688da3d7ffce7b01b62f7964d28c20c31a522f",
+    "outputs/profanity-method-transfer-01/extraction/banks.json": "4116593726c1333d264f6f5ee58ca31f93899dc9944eb54ae52bfb07f85b591d",
+    "outputs/profanity-method-transfer-01/manifest.json": "0bc382bf5ed64bd74216d926fd52cfb0639b9acc99c25bfb9e33e37fb29ecbbb",
+    "outputs/author-gcad-impolite-01/manifest.json": "77a6348a12c55ee2743a2c3d9c931e8f85008f097b06f1d757a95789d265fd17",
+    "outputs/author-gcad-impolite-01/inputs/vector_metadata.json": "7f3f3534a121993d69b11d0ea5b95df1c9167905cf6dbbf622723abadaec1618",
+    "outputs/persona-author-replication-audit-01/gcad-source_manifest.json": "55d91fdfa8a395dcc40f93bce548aceea63c970a3ddd49e0b5c75549600c7d08",
+    "outputs/persona-author-replication-audit-01/gcad-impolite_manifest.json": "0f8e29cbb73af1732d92703d44bbae493ff48a83c94f4f685c7d610524ebd1c0",
+    "outputs/persona-author-replication-audit-01/metadata/gcad_tree.json": "b7d192da449259cb54dc6e8cd785694753f98c67cf9c7ac755b242e2fb0e44bd",
+    "outputs/persona-author-replication-audit-01/model_manifest.json": "cef399162cdfa86968b9b41eb159d0e39b13cc678d6e335d71ca86c452845454",
+    "results/profanity_method_transfer_01.json": "4308406fedd291b4aa9a906288fe6d6b9f765af07a9229ed272d20f6f5bc5efb",
+    "results/author_gcad_impolite_01.json": "c4a884f395e687145daf3d78d59b01a0f46b0e57dfa0fa6e57b9567dc1759aec",
+    "outputs/persona-author-replication-audit-01/gcad/core/gated_steerer.py": "383763ed801696061127509e9d784154b54cf9f05bdd323319fe343e65c256e6",
+    "outputs/persona-author-replication-audit-01/gcad/core/generate_vec.py": "7924a8b7ac2b2c9cad143f134819b694a0afce9f439f832c20d221aa878288bc",
+    "outputs/persona-author-replication-audit-01/gcad/scripts/generate_vec_prompt_attn_k.py": "e09f5ee0fdc7fd598fb289184d70d6d51d4055e39c66100d0f1146e2c2ea38e4",
+    "outputs/persona-author-replication-audit-01/gcad/eval/model_utils.py": "2f4e1aa154145fc8dd5b30f348eaa2eff8a0da56132bfaceb348be607ef35be7",
+    "outputs/persona-author-replication-audit-01/gcad/vectors/prompt_attn_delta/Qwen2.5-7B-Instruct/impolite_response_avg_diff_prompt_attn_delta.pt": "90eeadfcad16965177c7879a6a1043430ab62e5661820c04a84dd50b8f99cae0",
+    "outputs/persona-author-replication-audit-01/gcad/vectors/prompt_attn_k_pos/Qwen2.5-7B-Instruct/impolite_prompt_key_pos.pt": "45c01967b79a7b8e6cb4b75b26512a1ab47b685144e7a03a6e951357f5d4dc85",
+    "outputs/persona-author-replication-audit-01/gcad/vectors/prompt_attn_k_pos/Qwen2.5-7B-Instruct/impolite_avg_demand.pt": "cf212b01c1c3f98f3f662703fdd06f20ea641931e66ee2ae20f83ddc43d9fc11"
+  },
+  "limits": [
+    "Cosine is exploratory coordinate geometry, not causal evidence or behavioral independence/interference.",
+    "Positive-key similarity may reflect shared system templates/identity scaffolding rather than shared trait mechanisms.",
+    "The two banks use different elicitation inputs, evaluation questions, rubrics and provenance; no matched-corpus causal comparison is made.",
+    "Raw vector norms and cosine do not establish effective hook strength: runtime gates, activations, layer sites and coefficients also matter.",
+    "No joint steering, sarcasm/refusal transfer, mathematical capability, p-values, layer/strength selection or downstream outcome is inferred.",
+    "No coefficient or retained-method decision changes as a result of this analysis. Upstream extraction metadata limitations remain explicit."
+  ]
+}
