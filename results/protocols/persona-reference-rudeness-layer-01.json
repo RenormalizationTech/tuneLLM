@@ -1,0 +1,10 @@
+{
+  "study": "PV impolite/rudeness development layer lock",
+  "layer_choice_sha256": "bbb85d9628b793efd3e4a2b73f71b27375bfafc7ce698adb29d9fe5b928fa0df",
+  "author_layer": 8,
+  "block": 7,
+  "coefficient": 2.0,
+  "fallback_used": false,
+  "before_extra_strengths": true,
+  "note": "Highest reference mean among quality-eligible layers; gain requirement is applied after the fixed strength screen."
+}
