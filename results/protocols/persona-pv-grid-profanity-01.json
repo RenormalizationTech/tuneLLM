@@ -1,0 +1,18 @@
+{
+  "study": "Prospective isolated profanity symmetric PV grid",
+  "manifest_sha256": "1ac7eb23d31d65a3aff05c78b6ea5c54c5d7af61e128701cc9577bfe623d1056",
+  "cpu_checks_passed": 31,
+  "cpu_test_source_sha256": "d51649a9ac201795984c38efb7ba970fda62aef3444fbe58e7b6c0ce4b03bd24",
+  "coordinator_code_accepted": true,
+  "advisor_code_accepted": true,
+  "prospective_amendment": "results/protocols/persona-reference-profanity-grid-amendment-01.json",
+  "parent_handoff": "results/protocols/persona-reference-profanity-grid-handoff-01.json",
+  "parent_original_steering_outputs": 0,
+  "new_grid_outputs": 280,
+  "maximum_new_generations": 352,
+  "maximum_child_native_starts": 90,
+  "maximum_whole_native_starts": 140,
+  "canonical_lexical_supplement_bound": true,
+  "source_and_plans_frozen_before_child_outputs": true,
+  "joint_trait_control": "deferred"
+}
