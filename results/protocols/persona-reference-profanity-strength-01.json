@@ -1,0 +1,9 @@
+{
+  "study": "PV profanity vector and preflight lock before prospective grid handoff",
+  "strength_sha256": "7e5df94e5d0b71e1093c984865c432f8e0a852d1e6359dffa4b74b9669df0a1f",
+  "retained_pairs": 30,
+  "questions": 18,
+  "teacher_forced_sequences": 60,
+  "preflight_passed": true,
+  "before_any_steered_selection_outputs": true
+}

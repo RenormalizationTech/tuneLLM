@@ -1,0 +1,13 @@
+{
+  "status": "amended_before_steering",
+  "parent_manifest_sha256": "75129cab3e01278ddcaaaa3d275d2e5cd91dd872c676de8ccbbccc7a6556d185",
+  "parent_strength_sha256": "7e5df94e5d0b71e1093c984865c432f8e0a852d1e6359dffa4b74b9669df0a1f",
+  "amendment_sha256": "169279ef6d3a270ebd0ebded8b7abb3aa57bfe23dee55310fe1f4ae2d4999487",
+  "original_selection_superseded": true,
+  "child_run": "outputs/persona-pv-grid-profanity-01",
+  "completed_parent_generations": 210,
+  "completed_parent_TF": 60,
+  "parent_native_starts": 25,
+  "original_selection_outputs": 0,
+  "note": "Prospective symmetric grid owns all selection/report; parent is an immutable input bank, not a failed selection study."
+}
