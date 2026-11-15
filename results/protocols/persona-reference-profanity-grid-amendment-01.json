@@ -1,0 +1,33 @@
+{
+  "amendment": "Prospective replacement of two-stage search with full isolated layer-by-coefficient grid",
+  "recorded_utc": "2026-11-15T02:29:52.242845+00:00",
+  "parent_manifest_sha256": "75129cab3e01278ddcaaaa3d275d2e5cd91dd872c676de8ccbbccc7a6556d185",
+  "parent_initial_registration": "results/protocols/persona-reference-profanity-01.json",
+  "scope": "Parent elicitation/extraction/preflight unchanged; original layer/strength/report not executed; separate child owns selection/report",
+  "no_steered_parent_outputs_at_amendment": true,
+  "child_run": "outputs/persona-pv-grid-profanity-01",
+  "protocol": "docs/persona_pv_grid_protocol.md",
+  "grid_author_layers": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    35
+  ],
+  "grid_coefficients": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "parent_bank_max_generations": 210,
+  "child_max_new_generations": 352,
+  "whole_max_generations": 562,
+  "whole_max_firstvalid_batches": 70,
+  "whole_max_native_starts": 140,
+  "scientific_reason": "Avoid locking an ineffective shallow site after the coefficient-2 screen; symmetric grid chosen before any profanity steering outputs",
+  "user_authorization": "Current isolated-trait literature-first work; user informed prospectively; joint trait control deferred"
+}
