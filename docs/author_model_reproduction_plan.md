@@ -10,9 +10,9 @@ Codex worker implements and tests code.
 
 | Trait | Reference and original model | Initial reproduction target | Readiness |
 | --- | --- | --- | --- |
-| Rudeness, using the broader author construct `impolite` | [GCAD](https://arxiv.org/html/2605.10664v3), Qwen/Qwen2.5-7B-Instruct | First-reply GCAD and residual-steering rows of Table 1; a later full dialogue reproduces the ten-turn endpoints | Published successful steering and Apache-2.0 source/data/vectors verified; code audit underway; user chose existing Claude evaluation instead of new OpenAI API access |
-| Sarcasm | [SAPS](https://aclanthology.org/2026.findings-emnlp.1594.pdf), mistralai/Mistral-7B-Instruct-v0.1 | Reconstruct released result tables first; then author-runtime fixed-layer generation at layer12, fixed alpha1 and SAPS alpha1.4 | Source/data and averaged author ratings available; published logs audited with data/prompt metadata inconsistencies; generation environment is being provisioned |
-| Profanity | [Malla et al. v4](https://arxiv.org/abs/2609.06951v4), Qwen/Qwen2.5-7B-Instruct | Appendix E profanity row: layer7, coefficient6, self-effect +1.44 on the author 0–10 scale, coherence0.96 | Protocol published; user authorized a documented-method reimplementation with explicitly reconstructed missing inputs |
+| Rudeness, using the broader author construct `impolite` | [GCAD](https://arxiv.org/html/2605.10664v3), Qwen/Qwen2.5-7B-Instruct | First-reply GCAD and residual-steering rows of Table 1; ten-turn endpoints require a separately reviewed follow-up | [Completed bounded reference](author_gcad_impolite_closeout.md): all3 directional contrasts passed; GCAD trait77.37/coherence75.90 versus baseline1.62/82.68 |
+| Sarcasm | [SAPS](https://aclanthology.org/2026.findings-emnlp.1594.pdf), mistralai/Mistral-7B-Instruct-v0.1 | Reconstruct released result tables first; then author-runtime fixed-layer generation at layer12, fixed alpha1 and SAPS alpha1.4 | Source/data and averaged author ratings available; published logs audited with data/prompt metadata inconsistencies; isolated author environment and model are ready; [four-arm generation protocol](author_saps_method_protocol.md) reviewed |
+| Profanity | [Malla et al. v4](https://arxiv.org/abs/2609.06951v4), Qwen/Qwen2.5-7B-Instruct | Appendix E profanity row: layer7, coefficient6, self-effect +1.44 on the author 0–10 scale, coherence0.96 | [Documented-method protocol](author_profanity_method_protocol.md) reviewed; worker implementing reconstructed-input workflow |
 
 The PV paper's Appendix G, Figures18–19, concerns prediction of fine-tuning
 shifts. It is not evidence of a successful inference-time impoliteness steering
@@ -89,7 +89,8 @@ SAPS3.89/3.70/4.60/4.68 at alpha1.4. Oracle means are a separate result.
 The author judges are Gemma4-31B-IT, Qwen3.5-27B and GPT-OSS-120B, averaged;
 individual judge logs and the executable judge pipeline are absent from the
 pinned release. Their weights and inference serving cannot be assumed to fit
-the existing single48-GB workflow. Source-result reconstruction can proceed;
+the existing single48-GB workflow. Source-result reconstruction completed in
+[the arithmetic report](../results/author_replication_saps_published_01.json);
 fresh scoring will use the existing Claude setup, as authorized, with an
 explicit evaluator adaptation. Exact numerical reproduction is not claimed.
 The six canonical released logs contain450 consistent IDs but448 distinct
@@ -117,6 +118,20 @@ with reconstructed inputs, not an original-artifact or numerical reproduction.
 The primary self-judge can run on unsteered Qwen locally; Claude can provide an
 independent secondary report. Contacting authors is not authorized or needed
 for this selected route.
+
+## Recorded implementation progress
+
+GCAD source acceptance and its initial registration were committed before
+mechanics; successful mechanics were separately locked before main generation.
+Ten probe generations, two logit forwards and180 main generations completed.
+The main GPU stage used82.46 seconds including model loading, with72.27 seconds
+in generation. Both metric streams passed exit integrity:46 first-valid batches,46 starts,
+no retries. All three predeclared contrasts passed; see the
+[closeout](author_gcad_impolite_closeout.md). No target outputs selected settings.
+
+The two original model snapshots and separate Python3.11 environments are ready.
+No shared training environment was changed. SAPS requires an original-runtime
+run because the released result logs have unresolved data/prompt lineage gaps.
 
 ## Resource and preservation policy
 

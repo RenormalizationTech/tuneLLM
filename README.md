@@ -62,6 +62,10 @@ SAPS uses Mistral-7B-v0.1. The profanity route follows the documented paper meth
 with explicitly reconstructed missing inputs. Existing Claude evaluation replaces
 unavailable author graders with clear disclosure. See the
 [source audit](results/reviews/author_model_source_audit_01.md).
+The first [original-Qwen GCAD reference](docs/author_gcad_impolite_closeout.md)
+completed: impoliteness1.62→77.37/100 with coherence82.68→75.90; residual
+addition produced84.52/7.83. All registered contrasts passed under the disclosed
+Claude grading adaptation.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,

@@ -50,7 +50,10 @@ and an unsteered control. SAPS sarcasm uses Mistral-7B-v0.1. Profanity follows t
 paper procedure with disclosed reconstructed inputs because supplementary data
 could not be verified. No new OpenAI API setup; existing Claude evaluation is an
 explicit substitution. Old4B results remain unchanged; joint control and14B are
-deferred. Historical status below is retained for provenance.
+deferred. The [GCAD first-reply reference](docs/author_gcad_impolite_closeout.md)
+completed with all three registered contrasts passing: GCAD impoliteness77.37
+and coherence75.90 versus baseline1.62/82.68; residual84.52/7.83. Historical
+status below is retained for provenance.
 
 ## Current status and execution priorities (2026-11-14)
 
