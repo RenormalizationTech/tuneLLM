@@ -1,0 +1,50 @@
+{
+  "first_structurally_valid_attempt": 0,
+  "manifest_sha256": "dfef1dbf093fc45ae65be0bb515fbad290fd93a2028586e50be87a2637ad0e67",
+  "attempt_sha256": "757c290cc0b16d7814f7b76a27967f78d880dbc7116d6d135cb6d27f285222fa",
+  "parsed_sha256": "689e016d58c5f4495e8691ef58a18e019b84d52534effa2d83223151f1e37aae",
+  "split_sha256": "a27fa709fbbd79a6122d1f3c1cdc83c28638f444f8f805b52b2ffaad807c74ce",
+  "checks_sha256": "ce8dfb7dcef6839b1e51f982fb42370d13763484bb555fa4c84428eb316c1a44",
+  "promoted_dataset_sha256": {
+    "extract.json": "4b0e1aef7d1bd79b0dc2915d5c0cefa7de06b3eb7c88e855975ac325285e73a6",
+    "eval.json": "50d240ff5fbc1ad28abba03ce6ec2aa560b1ffbec01c5cb3c781e02b77309aaa",
+    "coherence.json": "f23ec0649366b61ec691846644111af670e36508c0797b8fc2a8071f58f0ae27",
+    "LICENSE": "bb57d93dde8ac629c48b014e77ceb996314c08f6475f665f69dda361940d9fd4",
+    "ATTRIBUTION.md": "30adf0f430ce7ccdc6952c74e9308944036f142e81d4943b3fb26943b714b9fb"
+  },
+  "rendered_system_sha256": {
+    "0-pos": "21fcbdef840ad49a919840f48e00022efc8769adaf4841aef0aede3c2bbbfa76",
+    "0-neg": "e545400c6684dd8ad010bdca84909b8387aa2de0cb0e4e1aea14d1aed4c41eb4",
+    "1-pos": "0220a81b4946971859bed4c9f1a91ee46d4b11861c8e7d2a62236946fbc9afec",
+    "1-neg": "1004be07b01d6a53bfbff3edffdd80fc676cca5696ce0fce39dafd96058c246b",
+    "2-pos": "8850d2eebfd201660450fa3d4361fcd8090b72d4b6c7f334bb92dadec14268c3",
+    "2-neg": "75dc106886a4bf844f28fa09173e546ca495375d6f188232c27668c6864272d2",
+    "3-pos": "d64b83abf6d9f93d953e56c99bc8a47374085a143672c74cca96fa9bda2cb3b8",
+    "3-neg": "1cf178721a20e1003cf757dc5aa0153b29482a19bb13fd8dae001eb865342663",
+    "4-pos": "3fbbdf7e844df3636ba5b2d5f8e2e81c5d6bd6bbc99a319643661e0d8df06e42",
+    "4-neg": "a9e40984a3abcacbf8c72b4c4ee1d1dc75ec210352f5099f29024c658a5b727f"
+  },
+  "coordinator_accepted": true,
+  "advisor_accepted": true,
+  "full_rendered_systems_accepted": true,
+  "semantic_criteria_pass": true,
+  "reviewed_utc": "2026-11-15T02:07:44.006398+00:00",
+  "review_method": "Coordinator and existing Claude advisor separately read all five pairs, forty questions, rubric, seed703 split and complete matched-identity systems before any Qwen output. No edits or reroll.",
+  "checklist": {
+    "explicit_swear_vs_none": true,
+    "same_casual_register_warmth_helpfulness": true,
+    "no_person_directed_abuse_slurs_sexual_or_violent_content": true,
+    "benign_questions_never_request_trait": true,
+    "rubric_swearing_not_clean_rudeness": true,
+    "instructions_questions_rubric_consistent": true,
+    "shared_instructions_rubric_seed703_split": true
+  },
+  "limits": [
+    "Reference construct is friendly, helpful swearing, not every occurrence of profanity; the separate custom axis and lexical counts measure different aspects.",
+    "Swearing examples range from mild to strong non-slur language.",
+    "The eleven-word lexicon misses slang such as hella and does not exhaust profanity.",
+    "Both partitions come from one generated everyday-question pool; broader transfer is unestablished.",
+    "Generator and evaluator share a model and wrapper, risking circularity; no human validity claim.",
+    "Pinned native Claude under evaluator framing and medium effort replaces author Claude3.7 generation."
+  ]
+}
