@@ -77,7 +77,8 @@ wording but did not establish profanity control; no held-out arm qualified.
 The user authorized a [three-method profanity transfer comparison](docs/profanity_method_comparison_proposal.md).
 Intervention helpers passed22 CPU tests. Claude reviewed the
 [execution protocol](docs/profanity_method_transfer_protocol.md) after login
-restoration; the worker is implementing the fresh comparison runner.
+restoration. The accepted runner passed33 focused tests; exact inputs are
+registered and the fresh comparison is running.
 The [original-Mistral sarcasm reference](docs/author_saps_mistral_closeout.md) is
 complete: SAPS1.4 reached clear sarcasm in276/450 rewrites versus0 baseline,
 while meaning preservation fell4.11→2.98/5. Fixed and adaptive control show
