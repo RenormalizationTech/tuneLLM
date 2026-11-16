@@ -1,0 +1,852 @@
+{
+  "arms": {
+    "baseline": {
+      "n": 24,
+      "n_any_hit": 0,
+      "n_empty": 0,
+      "total_hits": 0,
+      "total_whitespace_words": 2888,
+      "mean_hit_count": 0.0,
+      "mean_per_response_rate_primary": 0.0,
+      "pooled_rate_secondary": 0.0,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 2888,
+        "mean_hit_count": 0.0,
+        "mean_per_response_rate_primary": 0.0,
+        "pooled_rate_secondary": 0.0
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "full_001": {
+      "n": 24,
+      "n_any_hit": 0,
+      "n_empty": 0,
+      "total_hits": 0,
+      "total_whitespace_words": 2950,
+      "mean_hit_count": 0.0,
+      "mean_per_response_rate_primary": 0.0,
+      "pooled_rate_secondary": 0.0,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 2950,
+        "mean_hit_count": 0.0,
+        "mean_per_response_rate_primary": 0.0,
+        "pooled_rate_secondary": 0.0
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "full_010": {
+      "n": 24,
+      "n_any_hit": 6,
+      "n_empty": 0,
+      "total_hits": 7,
+      "total_whitespace_words": 906,
+      "mean_hit_count": 0.2916666666666667,
+      "mean_per_response_rate_primary": 0.7820610776329718,
+      "pooled_rate_secondary": 0.7726269315673289,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 6,
+        "n_empty": 0,
+        "total_hits": 7,
+        "total_whitespace_words": 906,
+        "mean_hit_count": 0.2916666666666667,
+        "mean_per_response_rate_primary": 0.7820610776329718,
+        "pooled_rate_secondary": 0.7726269315673289
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          0.1834282099936749,
+          1.483168943947346
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          0.1834282099936749,
+          1.483168943947346
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "full_011": {
+      "n": 24,
+      "n_any_hit": 13,
+      "n_empty": 0,
+      "total_hits": 22,
+      "total_whitespace_words": 1103,
+      "mean_hit_count": 0.9166666666666666,
+      "mean_per_response_rate_primary": 1.9491947490309895,
+      "pooled_rate_secondary": 1.9945602901178603,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 13,
+        "n_empty": 0,
+        "total_hits": 22,
+        "total_whitespace_words": 1103,
+        "mean_hit_count": 0.9166666666666666,
+        "mean_per_response_rate_primary": 1.9491947490309895,
+        "pooled_rate_secondary": 1.9945602901178603
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          1.1041809218525367,
+          2.8361576550925665
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          1.1041809218525367,
+          2.8361576550925665
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "full_100": {
+      "n": 24,
+      "n_any_hit": 14,
+      "n_empty": 0,
+      "total_hits": 24,
+      "total_whitespace_words": 2707,
+      "mean_hit_count": 1.0,
+      "mean_per_response_rate_primary": 0.9938149453176837,
+      "pooled_rate_secondary": 0.8865903213889915,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 14,
+        "n_empty": 0,
+        "total_hits": 24,
+        "total_whitespace_words": 2707,
+        "mean_hit_count": 1.0,
+        "mean_per_response_rate_primary": 0.9938149453176837,
+        "pooled_rate_secondary": 0.8865903213889915
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          0.5449159851556895,
+          1.5177335436715789
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          0.5449159851556895,
+          1.5177335436715789
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "full_101": {
+      "n": 24,
+      "n_any_hit": 24,
+      "n_empty": 0,
+      "total_hits": 173,
+      "total_whitespace_words": 2084,
+      "mean_hit_count": 7.208333333333333,
+      "mean_per_response_rate_primary": 8.470646661791738,
+      "pooled_rate_secondary": 8.30134357005758,
+      "n_invalid": 1,
+      "valid_split": {
+        "n": 23,
+        "n_any_hit": 23,
+        "n_empty": 0,
+        "total_hits": 160,
+        "total_whitespace_words": 1967,
+        "mean_hit_count": 6.956521739130435,
+        "mean_per_response_rate_primary": 8.355843859647418,
+        "pooled_rate_secondary": 8.13421453990849
+      },
+      "invalid_split": {
+        "n": 1,
+        "n_any_hit": 1,
+        "n_empty": 0,
+        "total_hits": 13,
+        "total_whitespace_words": 117,
+        "mean_hit_count": 13.0,
+        "mean_per_response_rate_primary": 11.11111111111111,
+        "pooled_rate_secondary": 11.11111111111111
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          7.375249805925058,
+          9.64848581587266
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          7.375249805925058,
+          9.64848581587266
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "full_110": {
+      "n": 24,
+      "n_any_hit": 24,
+      "n_empty": 0,
+      "total_hits": 74,
+      "total_whitespace_words": 491,
+      "mean_hit_count": 3.0833333333333335,
+      "mean_per_response_rate_primary": 15.187164219976735,
+      "pooled_rate_secondary": 15.071283095723015,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 24,
+        "n_empty": 0,
+        "total_hits": 74,
+        "total_whitespace_words": 491,
+        "mean_hit_count": 3.0833333333333335,
+        "mean_per_response_rate_primary": 15.187164219976735,
+        "pooled_rate_secondary": 15.071283095723015
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          13.251615216236209,
+          17.131258953287084
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          13.251615216236209,
+          17.131258953287084
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "full_111": {
+      "n": 24,
+      "n_any_hit": 24,
+      "n_empty": 0,
+      "total_hits": 130,
+      "total_whitespace_words": 771,
+      "mean_hit_count": 5.416666666666667,
+      "mean_per_response_rate_primary": 17.18450526586511,
+      "pooled_rate_secondary": 16.861219195849547,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 24,
+        "n_empty": 0,
+        "total_hits": 130,
+        "total_whitespace_words": 771,
+        "mean_hit_count": 5.416666666666667,
+        "mean_per_response_rate_primary": 17.18450526586511,
+        "pooled_rate_secondary": 16.861219195849547
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          15.886613952700264,
+          18.582183581226353
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          15.886613952700264,
+          18.582183581226353
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "half_profanity": {
+      "n": 24,
+      "n_any_hit": 0,
+      "n_empty": 0,
+      "total_hits": 0,
+      "total_whitespace_words": 2942,
+      "mean_hit_count": 0.0,
+      "mean_per_response_rate_primary": 0.0,
+      "pooled_rate_secondary": 0.0,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 2942,
+        "mean_hit_count": 0.0,
+        "mean_per_response_rate_primary": 0.0,
+        "pooled_rate_secondary": 0.0
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "half_impolite": {
+      "n": 24,
+      "n_any_hit": 0,
+      "n_empty": 0,
+      "total_hits": 0,
+      "total_whitespace_words": 2848,
+      "mean_hit_count": 0.0,
+      "mean_per_response_rate_primary": 0.0,
+      "pooled_rate_secondary": 0.0,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 2848,
+        "mean_hit_count": 0.0,
+        "mean_per_response_rate_primary": 0.0,
+        "pooled_rate_secondary": 0.0
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "half_sarcasm": {
+      "n": 24,
+      "n_any_hit": 0,
+      "n_empty": 0,
+      "total_hits": 0,
+      "total_whitespace_words": 2919,
+      "mean_hit_count": 0.0,
+      "mean_per_response_rate_primary": 0.0,
+      "pooled_rate_secondary": 0.0,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 2919,
+        "mean_hit_count": 0.0,
+        "mean_per_response_rate_primary": 0.0,
+        "pooled_rate_secondary": 0.0
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 2000
+      }
+    },
+    "half_triple": {
+      "n": 24,
+      "n_any_hit": 19,
+      "n_empty": 0,
+      "total_hits": 50,
+      "total_whitespace_words": 1522,
+      "mean_hit_count": 2.0833333333333335,
+      "mean_per_response_rate_primary": 3.76450644795758,
+      "pooled_rate_secondary": 3.2851511169513796,
+      "n_invalid": 0,
+      "valid_split": {
+        "n": 24,
+        "n_any_hit": 19,
+        "n_empty": 0,
+        "total_hits": 50,
+        "total_whitespace_words": 1522,
+        "mean_hit_count": 2.0833333333333335,
+        "mean_per_response_rate_primary": 3.76450644795758,
+        "pooled_rate_secondary": 3.2851511169513796
+      },
+      "invalid_split": {
+        "n": 0,
+        "n_any_hit": 0,
+        "n_empty": 0,
+        "total_hits": 0,
+        "total_whitespace_words": 0,
+        "mean_hit_count": null,
+        "mean_per_response_rate_primary": null,
+        "pooled_rate_secondary": null
+      },
+      "mean_rate_ci95": {
+        "ci95": [
+          2.6414549226609876,
+          5.088829439496648
+        ],
+        "defined_replicates": 2000
+      },
+      "mean_rate_minus_baseline_ci95": {
+        "ci95": [
+          2.6414549226609876,
+          5.088829439496648
+        ],
+        "defined_replicates": 2000
+      }
+    }
+  },
+  "correlations": {
+    "within_arm": {
+      "baseline": {
+        "profanity": {
+          "n": 24,
+          "spearman": null
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": null
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": null
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": null
+        }
+      },
+      "full_001": {
+        "profanity": {
+          "n": 24,
+          "spearman": null
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": null
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": null
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": null
+        }
+      },
+      "full_010": {
+        "profanity": {
+          "n": 24,
+          "spearman": 0.7467955419307432
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": 0.500874535436112
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": -0.11781578268485261
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": -0.09276722624510128
+        }
+      },
+      "full_011": {
+        "profanity": {
+          "n": 24,
+          "spearman": 0.8372162753912576
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": 0.30747593172032456
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": -0.5559848700979388
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": -0.49901806297076706
+        }
+      },
+      "full_100": {
+        "profanity": {
+          "n": 24,
+          "spearman": 0.7671698862805003
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": 0.6694627405173381
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": 0.3791675582769574
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": -0.3800339142330314
+        }
+      },
+      "full_101": {
+        "profanity": {
+          "n": 24,
+          "spearman": 0.4042701115820397
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": -0.28499534241754826
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": -0.23619459733465406
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": -0.0975850562189404
+        }
+      },
+      "full_110": {
+        "profanity": {
+          "n": 24,
+          "spearman": -0.056352953571804296
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": 0.34486136985989346
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": -0.3759981192779833
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": -0.04743200104982921
+        }
+      },
+      "full_111": {
+        "profanity": {
+          "n": 24,
+          "spearman": 0.02634855147173854
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": -0.20079961202901636
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": -0.1270138027869135
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": 0.13715923698904942
+        }
+      },
+      "half_profanity": {
+        "profanity": {
+          "n": 24,
+          "spearman": null
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": null
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": null
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": null
+        }
+      },
+      "half_impolite": {
+        "profanity": {
+          "n": 24,
+          "spearman": null
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": null
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": null
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": null
+        }
+      },
+      "half_sarcasm": {
+        "profanity": {
+          "n": 24,
+          "spearman": null
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": null
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": null
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": null
+        }
+      },
+      "half_triple": {
+        "profanity": {
+          "n": 24,
+          "spearman": -0.08023757185321252
+        },
+        "impolite": {
+          "n": 24,
+          "spearman": 0.6160264782850152
+        },
+        "sarcasm": {
+          "n": 24,
+          "spearman": -0.29756419412971974
+        },
+        "coherence": {
+          "n": 24,
+          "spearman": -0.01796278124970575
+        }
+      }
+    },
+    "raw_pooled": {
+      "profanity": {
+        "n": 288,
+        "spearman": 0.719417096246549
+      },
+      "impolite": {
+        "n": 288,
+        "spearman": 0.8365841025855323
+      },
+      "sarcasm": {
+        "n": 288,
+        "spearman": 0.2465950552724412
+      },
+      "coherence": {
+        "n": 288,
+        "spearman": -0.7113887244073601
+      }
+    },
+    "prompt_centred_pooled": {
+      "profanity": {
+        "n": 288,
+        "spearman": 0.5866626455266644
+      },
+      "impolite": {
+        "n": 288,
+        "spearman": 0.7701644151795952
+      },
+      "sarcasm": {
+        "n": 288,
+        "spearman": 0.1104192240294812
+      },
+      "coherence": {
+        "n": 288,
+        "spearman": -0.6668508626812361
+      }
+    }
+  },
+  "bootstrap": {
+    "seed": 106012,
+    "replicates": 2000,
+    "unit": "matched question; same sampled indices across all twelve arms",
+    "interval": "unadjusted percentile95%; undefined rates excluded"
+  },
+  "checks": {
+    "all_primary_lexhit_invalid_counts_match": true,
+    "all_original_score_means_match": true
+  },
+  "primary_decisions_modified": false,
+  "status": "complete_posthoc_descriptive",
+  "post_hoc": true,
+  "registration_sha256": "f31b4f879638fae96fc0064331cffa74e93e312760e76acc018b1a2a19bbb40d",
+  "sources_sha256": {
+    "scripts/joint_gcad_lexical_audit.py": "81fb47a2d780a4308b33d510e3fceb38b607b7fbb1d8dad9b1c7bbad21bb2d96",
+    "docs/joint_gcad_lexical_audit_spec.md": "8f036e42fc995c637476dafb6fcfe9eaf68d1738439235a0d29970e78e431753",
+    "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+    "scripts/joint_gcad_common.py": "7027504106e27d07a150137af6a10615bca6d3c3062b275098c8fa35a96a649f",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+  },
+  "inputs_sha256": {
+    "outputs/joint-gcad-01/generation/predictions.json": "45632d19ca760152c70a14ea672bb6827f698770f78fab028975b851276db3a1",
+    "results/joint_gcad_01.json": "734dd89e943b07bb8999ed76103ad1d5daf6e724914a8659e195a09587a57ca3",
+    "outputs/joint-gcad-01/manifest.json": "ab1c5529821e3cff59949a409f549cc8ec8b3dbc3b6acd93068c3de3c4a08df8",
+    "outputs/joint-gcad-01/native/primary/profanity/accepted.json": "a668af42428329b15a3f9b6dacf3883490bb7c1fbeae0972d8f4451f251afb98",
+    "outputs/joint-gcad-01/native/primary/impolite/accepted.json": "afd7f71f1d04954c209fe14188cceb33e919baf85a7b428bdb5974f0c6f4b299",
+    "outputs/joint-gcad-01/native/primary/sarcasm/accepted.json": "89297fbe075fc3640dc52bdaaff8396491409342fa4d5ec6b19da91ffc41426c",
+    "outputs/joint-gcad-01/native/primary/coherence/accepted.json": "ae0e0edf6a8fa870c304087fd11da3117369779788828b559a1331938ce7d9d0"
+  },
+  "lexicon": [
+    "ass",
+    "bullshit",
+    "crap",
+    "damn",
+    "damned",
+    "fuck",
+    "fucked",
+    "fucking",
+    "hell",
+    "shit",
+    "shitty"
+  ],
+  "definition": "Exact existing case-insensitive whole-word hits; words=text.split(). Rate100*hits/whitespace_words, undefined for zero words. Primary is mean per-response rate; secondary pooled rate is length-weighted. Not a hit-word percentage; compounds can exceed100.",
+  "limits": [
+    "Explicitly post-hoc after inspection of primary results, not confirmatory; no new calls, regrading, selection or quality gates.",
+    "Original PF rubric measures friendly/helpful swearing and excludes user-directed insults; lower rubric score does not establish less literal swearing.",
+    "Literal eleven-word proxy misses slang/variants and counts quoted/incidental hits; it does not measure intent. Length denominators and incoherence can distort rates.",
+    "Within-arm correlations are descriptive; raw and prompt-centred pooled correlations remain condition-confounded, not causal independence evidence.",
+    "n24 AI-authored English practical-advice questions, same advisor/judge family; unadjusted paired bootstrap intervals. Coherence is not accuracy.",
+    "All original candidate/gate verdicts remain unchanged. Per-response duplicate coherence MAD is not a standard error of the mean; a CI spanning the boundary does not prove a quality miss is within noise."
+  ]
+}
