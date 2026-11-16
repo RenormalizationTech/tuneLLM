@@ -1,9 +1,10 @@
 # Qwen2.5-7B political-information baseline screen
 
-Status: initial screen complete; fit, extraction and steering have not run.
-The registered coverage branch is available. Its execution awaits the user's
-choice between omission research and the original explicit-refusal priority.
-No method success or failure is claimed.
+Status: closed after the user's choice to proceed to 4B. Fit, extraction and
+steering did not run. The registered coverage branch remains recorded as
+available but not executed; no method success or failure is claimed.
+The [scope decision](../results/protocols/political-refusal-scope-close-01.json)
+preserves the measured result and frozen branch choice.
 
 The [aggregate result](../results/political_refusal_recovery_headroom_01.json)
 comes from the pinned BF16 Qwen2.5-7B-Instruct checkpoint, greedy decoding,
@@ -37,9 +38,11 @@ gaps alone do not establish censorship, concealed knowledge or its mechanism.
 References are project-curated, with disclosed source and translation limits.
 
 The [Claude interpretation](../results/reviews/political_refusal_headroom_interpretation.md)
-recommends asking the user whether to continue omission research, finish this
-refusal screen and proceed to the 4B controls, or try a separately registered
-published benign refusal pool. No extension has been implemented or released.
+recommended a user choice about further omission research. The user selected
+proceeding to 4B and keeping conventional refusal interventions. No 7B
+extension was implemented or released. Conventional refusal is a separate
+track from GCAD profanity, impoliteness and sarcasm; the prior 4B refusal
+quality failure remains part of its record.
 
 Accounting: 96 Qwen generations, about 15 minutes of GPU generation, and 16
 first-valid grading batches including calibration. All 16 valid batches

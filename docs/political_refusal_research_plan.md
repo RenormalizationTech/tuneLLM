@@ -1,9 +1,17 @@
 # Political-information steering and the next model stages
 
 User-selected sequence, 2026-11-16; discussed with the Claude advisor.
-This is a planning record, not an experiment registration. No new target-model
-outputs have been generated. Earlier protocols, results and null decisions stay
-unchanged.
+This is a planning record, not an experiment registration. The proposal below
+was superseded after the [completed 7B baseline screen](political_refusal_headroom_status.md):
+there were zero explicit refusals on 32 sensitive-topic items. The user chose
+to proceed to 4B and keep conventional refusal interventions. The available
+coverage branch was not executed; no 7B steering result is claimed. Earlier
+protocols, measured results and null decisions stay unchanged.
+
+The next implementation plan is [the fixed 4B transfer](qwen3_4b_fixed_transfer_plan.md).
+Its new style work uses GCAD; conventional refusal remains a separate track
+with its historical quality limitations. The 7B proposal below is retained as
+planning history, not an instruction to launch its unexecuted extension.
 
 ## Current evidence
 

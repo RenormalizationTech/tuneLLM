@@ -1,0 +1,16 @@
+{
+  "status": "closed_after_headroom_by_user_scope_decision",
+  "decision_date": "2026-11-16",
+  "result": "results/political_refusal_recovery_headroom_01.json",
+  "result_sha256": "6f4a3b385e8be626c7e0357e73d8262fd072e5d740dcbabef6017d526b17ba02",
+  "headroom_choice_sha256": "c6f8a84859c6c31e5bded347437adb634342e337dcdc4432bfaab1bacc764189",
+  "frozen_mode": "C",
+  "coverage_branch": "available_not_executed",
+  "explicit_refusals_on_development_targets": {"count": 0, "denominator": 32},
+  "user_direction": "Proceed to 4B; use conventional intervention for refusal.",
+  "new_7b_fit_generations": 0,
+  "new_7b_steering_generations": 0,
+  "method_outcome": "not_tested; no GCAD, fixed-vector or projection success/failure follows from this screen",
+  "next_scope": "Fixed-workflow Qwen3-4B controls; conventional refusal remains distinct from GCAD style steering.",
+  "historical_refusal_limit": "The prior 4B conventional refusal result had a partial effect and failed its quality criterion; it is not relabelled a validated controller."
+}

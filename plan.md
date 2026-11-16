@@ -87,11 +87,12 @@ one registered recovery keeps its failed start charged to the same budget.
 The 96-answer Qwen2.5-7B baseline/reference screen is complete: sensitive-topic
 explicit refusal was 0/32, while reference coverage was 51.6% (prompted 62.5%).
 The frozen rule selected the available coverage branch, but no steering ran.
-See [the measured status](docs/political_refusal_headroom_status.md). Claude
-recommends a user scope decision before the substantially larger omission
-study: continue coverage research, finish this refusal screen and proceed
-to the 4B controls, or try another published benign refusal pool. This is not
-a GCAD success or failure.
+See [the measured status](docs/political_refusal_headroom_status.md). The user
+selected proceeding to 4B and conventional interventions for refusal. The
+available 7B coverage branch closes without execution as a scope choice,
+not a GCAD success or failure. New 4B work transfers the three isolated GCAD
+style controls with fresh model-specific banks and fixed settings; refusal
+keeps its separate fixed-vector/projection track and historical limitations.
 The [sarcasm transfer](docs/sarcasm_method_transfer_closeout.md) closed with a
 development null: GCAD induced sarcasm but the tested strengths lost too much
 coherence, and SAPS also had no qualifying setting. The separately reviewed
