@@ -24,10 +24,12 @@ complete the initial project.
 
 The [fixed-setting Qwen3-4B transfer](docs/qwen3_4b_fixed_transfer_plan.md)
 is registered in [R1](results/protocols/qwen3-4b-fixed-transfer-01.json).
-All 37 port and runner CPU checks passed. Profanity and impoliteness elicitation
-and filtering are complete: 45 and 63 eligible pairs, respectively, out of 100
-candidates per trait. All 100 grading batches passed without retries. Sarcasm
-elicitation is running on GPU 0. Bank extraction and new 4B efficacy are **pending**.
+All 37 port and runner CPU checks passed. Elicitation and filtering are complete:
+45 profanity, 63 impoliteness and 63 sarcasm pairs passed out of 100 candidates
+per trait. All 150 grading batches passed without retries. All three fresh banks
+are extracted, and every mechanics gate passed. [R2](results/protocols/qwen3-4b-fixed-transfer-evaluation-01.json)
+locks the banks and random controls before held-out generation, which is running
+on GPU 0. New 4B efficacy remains **pending** until blinded held-out grading.
 The [execution-only inference context](results/protocols/qwen3-4b-extraction-inference-context-01.json)
 prevents gradient-history retention during extraction; 12 additional checks
 confirmed identical forward tensors without changing R1 or its scientific settings.
