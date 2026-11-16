@@ -7,7 +7,11 @@ from pathlib import Path
 PARENT_SHA='8a57ab029d9d2adee60be7229ee30a3ba347c9c53442bed96799e2b2316849f4'
 TRAITS=('profanity','impolite','sarcasm')
 CRITICAL={t+'/'+n for t in TRAITS for n in ('bank.safetensors','profile.json')}|{'runtime/gcad.py','runtime/loader.py'}
-JOINT={'__init__.py','steerer.py','loader.py','example.py','presets.json','GUIDE.md','results.json','metrics.csv','NOTICE'}
+JOINT={'__init__.py','steerer.py','loader.py','example.py','presets.json','GUIDE.md','results.json','metrics.csv','NOTICE','lexical_audit.json'}
+INVENTORY_EXCLUSIONS=['root .gitattributes','root .git/**','root .cache/**','**/__pycache__/**']
+
+def consumer_metadata(relative):
+    return relative.as_posix()=='.gitattributes' or relative.parts[0] in ('.git','.cache') or '__pycache__' in relative.parts
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
@@ -37,7 +41,8 @@ def verify_bundle(root,*,expected_joint_manifest_sha256):
     old=read(checked(root,'release_manifest.json',PARENT_SHA))
     expected=set(old['files_sha256'])|{'release_manifest.json'}|{'joint_controls/'+n for n in JOINT}
     if set(m['files_sha256'])!=expected:raise ValueError('complete H2 inventory required')
-    actual={p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and p.relative_to(root).parts[0]!='.cache' and '__pycache__' not in p.relative_to(root).parts}
+    if m.get('consumer_inventory_exclusions')!=INVENTORY_EXCLUSIONS:raise ValueError('unexpected consumer metadata policy')
+    actual={p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and not consumer_metadata(p.relative_to(root))}
     if actual!=expected|{'joint_controls/manifest.json'}:raise ValueError('unexpected payload files')
     for n,d in m['files_sha256'].items():checked(root,n,d)
     for n in CRITICAL:

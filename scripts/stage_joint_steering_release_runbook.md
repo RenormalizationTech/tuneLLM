@@ -2,7 +2,9 @@
 
 No study/model/native/network calls, downloads, uploads or commits are performed
 by this builder. Do not stage until `results/joint_gcad_01.json` is terminal with
-all12 measured arms and byte-identical to its committed version. No active or
+all12 measured arms and byte-identical to its committed version. The separate
+post-hoc `results/joint_gcad_lexical_audit_01.json` must also be complete and
+committed, binding the same primary report. No staging before that audit. No active or
 partial grading files are read. The registered study and staging03 stay frozen.
 
 ## CPU verification
@@ -39,7 +41,12 @@ byte-identical to03; only root README/METHODS change and joint_controls is added
 H2 covers every current payload file except itself. It records the original
 manifest hash and original commit763865908e5e94a020606b31ab66185360f7dd44.
 The original manifest's full list applies to that original commit; the unchanged
-isolated loader still checks the original eight critical files at new HEAD.
+isolated loader still checks the original eight critical files at new HEAD. Consumer
+inventory checks allow optional root `.gitattributes`, root `.git` metadata,
+downloader `.cache` and Python `__pycache__`; H2 records this exact exclusion
+policy. These are not upload payload files. The stager still requires its exact
+34-file payload. Root preserves the Hub-managed `.gitattributes` and records its
+unchanged remote hash; no metadata deletion/upload is implied.
 The new loader validates H2, the parent manifest, original critical bytes, actual
 module paths and the unchanged original base/tokenizer/tensor guards. Consumers
 run `python -B -m joint_controls.example` from downloaded root with a local
@@ -77,3 +84,12 @@ No joint refit, independence, universal benchmark or automatic recommendation.
 NF4/PRL are now public separate artifacts; private project-source visibility
 remains accurately described. No raw questions/responses/reasons/tokens or
 private physics adapter/base weights are added.
+
+The additional `joint_controls/lexical_audit.json` is a sanitized aggregate-only
+copy with original audit/source hashes. PF is explicitly labelled **friendly
+rubric**, not literal swearing frequency. The guide now shows any-hit counts,
+mean per-response hit density and within-arm lexical correlations with allfour
+original scores. A score decrease with increased lexical frequency is a
+construct confound, not evidence that swearing was suppressed. All original
+quality verdicts remain unchanged. A CI crossing the coherence boundary or
+per-response duplicate MAD does not establish a pass or a standard error.

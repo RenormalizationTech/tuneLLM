@@ -25,6 +25,12 @@ def synthetic_report():
             'arm_gain_question_bootstrap_ci95':{},'single_cross_effects':{},'spearman':{}},
         'calibration':{'pass':True},'duplicate_noise':{'coherence':{'n':24}}}
 
+def synthetic_audit(primary_sha):
+    return {'status':'complete_posthoc_descriptive','post_hoc':True,'primary_decisions_modified':False,
+        'inputs_sha256':{stage.REPORT:primary_sha},
+        'arms':{a:{'n_any_hit':1,'mean_per_response_rate_primary':3.} for a in common.arms()},
+        'correlations':{'within_arm':{a:{m:{'n':24,'spearman':None} for m in common.METRICS} for a in common.arms()}}}
+
 @pytest.fixture
 def candidate(tmp_path,monkeypatch):
     work=tmp_path/'work';work.mkdir();(work/'scripts').mkdir()
@@ -33,6 +39,8 @@ def candidate(tmp_path,monkeypatch):
     report=work/'results/joint_gcad_01.json';report.parent.mkdir();report.write_text(json.dumps(synthetic_report()))
     monkeypatch.setattr(stage,'ROOT',work);monkeypatch.setattr(stage,'DEST',work/'stage04')
     monkeypatch.setattr(stage,'terminal_report',synthetic_report)
+    audit=synthetic_audit(stage.sha(report));(work/stage.LEXICAL_REPORT).write_text(json.dumps(audit))
+    monkeypatch.setattr(stage,'terminal_audit',lambda:audit)
     receipt=stage.stage();return work/'stage04',receipt
 
 
@@ -66,6 +74,10 @@ def test_additive_identity_manifest_card_and_commit_message(candidate):
     assert 'not a general benchmark' in guide and 'PF/R/S coefficients' in guide
     assert '| full_110 | 5/3.5/0 |' in guide and 'N/A(nonpositive single gain)' in guide
     assert 'zero knob means no injection, NOT absence' in guide and 'Within-arm trait Spearman' in guide
+    assert 'PF (friendly rubric)' in guide and 'Any lex hit /24' in guide and 'Mean hits/100 words' in guide
+    assert 'explicitly post-hoc' in guide and 'NOT establish less literal swearing' in guide
+    assert 'Post-hoc lexical density: within-arm Spearman' in guide and 'not SE of the mean' in guide
+    assert (root/'joint_controls/lexical_audit.json').is_file() and r['files']==34
     assert 'No private physics adapter' not in (root/'README.md').read_text()
     assert 'physics adapter remains private' not in (root/'METHODS.md').read_text()
     assert 'Refusal closures and public physics adapter' in (root/'METHODS.md').read_text()
@@ -158,3 +170,26 @@ def test_download_root_python_module_command_imports_without_private_repo(candid
 def test_new_scanner_rejects_private_raw_prompt_and_token_fields():
     for value in ({'prompt':'raw prompt'},{'tokens':[1,2]},{'output':'raw answer'}):
         with pytest.raises(ValueError,match='raw private'):stage.scan(value)
+
+
+def test_consumer_accepts_optional_hub_git_metadata_but_unknown_payload_rejected(candidate,monkeypatch):
+    root,r=candidate;loader=import_runtime(root,monkeypatch)
+    attributes=root/'.gitattributes';attributes.write_text('*.safetensors filter=lfs diff=lfs merge=lfs -text\n')
+    (root/'.git/refs/heads').mkdir(parents=True);(root/'.git/HEAD').write_text('ref: refs/heads/main\n')
+    (root/'.git/refs/heads/main').write_text(stage.COMMIT+'\n')
+    (root/'.cache/huggingface').mkdir(parents=True);(root/'.cache/huggingface/metadata').write_text('local cache')
+    (root/'joint_controls/__pycache__').mkdir();(root/'joint_controls/__pycache__/loader.cpython-311.pyc').write_bytes(b'not imported')
+    before=attributes.read_bytes()
+    assert loader.verify_bundle(root,expected_joint_manifest_sha256=r['joint_manifest_sha256'])[1]['consumer_inventory_exclusions']==loader.INVENTORY_EXCLUSIONS
+    assert attributes.read_bytes()==before and (root/'.git/HEAD').exists()
+    (root/'unknown_payload.json').write_text('{}')
+    with pytest.raises(ValueError,match='unexpected payload files'):loader.verify_bundle(root,expected_joint_manifest_sha256=r['joint_manifest_sha256'])
+
+
+def test_no_stage_before_separate_committed_lexical_audit(tmp_path,monkeypatch):
+    monkeypatch.setattr(stage,'DEST',tmp_path/'forbidden')
+    monkeypatch.setattr(stage,'terminal_report',synthetic_report)
+    def fail():raise ValueError('committed lexical audit absent')
+    monkeypatch.setattr(stage,'terminal_audit',fail)
+    with pytest.raises(ValueError,match='lexical audit'):stage.stage()
+    assert not (tmp_path/'forbidden').exists()

@@ -1,0 +1,22 @@
+{
+  "post_hoc": true,
+  "purpose": "Clarify literal swearing versus the frozen friendly/helpful profanity rubric after primary inspection; no score replacement or quality reclassification.",
+  "additional_target_model_calls": 0,
+  "additional_native_judge_calls": 0,
+  "sources_sha256": {
+    "scripts/joint_gcad_lexical_audit.py": "81fb47a2d780a4308b33d510e3fceb38b607b7fbb1d8dad9b1c7bbad21bb2d96",
+    "docs/joint_gcad_lexical_audit_spec.md": "8f036e42fc995c637476dafb6fcfe9eaf68d1738439235a0d29970e78e431753",
+    "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+    "scripts/joint_gcad_common.py": "7027504106e27d07a150137af6a10615bca6d3c3062b275098c8fa35a96a649f",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+  },
+  "inputs_sha256": {
+    "outputs/joint-gcad-01/generation/predictions.json": "45632d19ca760152c70a14ea672bb6827f698770f78fab028975b851276db3a1",
+    "results/joint_gcad_01.json": "734dd89e943b07bb8999ed76103ad1d5daf6e724914a8659e195a09587a57ca3",
+    "outputs/joint-gcad-01/manifest.json": "ab1c5529821e3cff59949a409f549cc8ec8b3dbc3b6acd93068c3de3c4a08df8",
+    "outputs/joint-gcad-01/native/primary/profanity/accepted.json": "a668af42428329b15a3f9b6dacf3883490bb7c1fbeae0972d8f4451f251afb98",
+    "outputs/joint-gcad-01/native/primary/impolite/accepted.json": "afd7f71f1d04954c209fe14188cceb33e919baf85a7b428bdb5974f0c6f4b299",
+    "outputs/joint-gcad-01/native/primary/sarcasm/accepted.json": "89297fbe075fc3640dc52bdaaff8396491409342fa4d5ec6b19da91ffc41426c",
+    "outputs/joint-gcad-01/native/primary/coherence/accepted.json": "ae0e0edf6a8fa870c304087fd11da3117369779788828b559a1331938ce7d9d0"
+  }
+}
