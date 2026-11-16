@@ -76,6 +76,13 @@ GCAD if effective, with trait-specific method/settings fallback accepted.
 Cross-effects describe correlations and coupling; strong coupling is reported,
 not a rejection or mandatory disentanglement target. Joint control is optional.
 Continue isolated GCAD sarcasm, then refusal reduction; no joint grid is released.
+The [registered sarcasm transfer](docs/sarcasm_method_transfer_protocol.md)
+compares GCAD and SAPS on the common Qwen2.5-7B checkpoint. Before a new
+refusal intervention, the [headroom check](docs/refusal_headroom_protocol.md)
+measures 100 published benign XSTest development prompts on that checkpoint.
+Fewer than five unnecessary refusals closes that screen; otherwise it informs
+a separate registered study. It generates no unsafe or reserved prompts and
+does not establish controller success.
 
 ## Current status and execution priorities (2026-11-14)
 
