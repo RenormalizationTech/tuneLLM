@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "0f110b80a6a2d34be9e8aaa85f711d4a5da3a282444b85582a0a700e1ed7ba8c",
+  "parent_provenance_sha256": "0af0326fc2b0e401e9eca51446bee6ab1c36f52ad249a4c03dd9df748a1ca16b",
+  "parent_charged_starts": 1,
+  "dns_preflight_sha256": "eb6745570956616b0becaef50300c20da475b4e038aacac91ae9071765d087fa",
+  "unused_preflight_manifest_sha256": "62c6e10218e0c508462acc65352b0689b486612a1a6918bdf30654aeff13cf2c",
+  "initial_cumulative_maximum_starts": 32,
+  "global_cumulative_maximum_starts": 424,
+  "recovery_batch_maximum_structural_attempts": 2,
+  "network_execution_policy": "require_escalated"
+}
