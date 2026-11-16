@@ -11,8 +11,8 @@ training or activation intervention. The behavioral goal is reliable **individua
 control of refusal, profanity, rudeness and sarcasm**. GCAD is preferred where
 it works; each trait may retain its own intervention and tuned setting.
 Cross-effects describe trait coupling, with strong correlations reported rather
-than requiring independent knobs. Simultaneous control is optional. Complete
-the isolated 4B pipeline before further 14B work. Generic physics questions in
+than requiring independent knobs. Simultaneous control is experimental. Preserve
+the completed 4B results as history; larger-model work requires discussion. Generic physics questions in
 a behavior evaluation do not make it physics fine-tuning. See the
 [project map](docs/project_tracks.md), [four-behavior references](docs/steering_reference.md)
 and [GCAD discussion](docs/gcad_and_combined_control.md).
@@ -25,17 +25,31 @@ impoliteness narrowly exceeded the allowed coherence loss. The conventional
 refusal record is carried forward without new compute. No 4B controller is
 relabelled as working, and no retuning is active. The retained 7B style banks
 are [published with runtime and evaluation summaries](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls).
-All 23 files were verified at the pinned remote revision, and all three
-downloaded banks passed CPU loader checks. Existing quantization models and
+The original 23-file isolated release was verified at its pinned revision;
+its banks/runtime remain unchanged in the additive joint release below. Existing quantization models and
 the public physics adapter remain separate.
 
-**Current authorized order:** first the fixed joint three-trait GCAD study and
-measured guide on Qwen2.5-7B, then a separately reviewed benign political 7B
-refusal/headroom screen and conditional publication. See the
-[joint protocol](docs/joint_gcad_protocol.md). The joint implementation passed
-43 focused CPU checks; root registration and explicit stage releases precede
-calls. No joint behavioral outcome is claimed yet. Qwen3.8-27B/Gemma 4 require
-user discussion before any work; no larger-model run is released.
+**Phase 1 complete: joint 7B study and public guide.** All 12 fixed arms were
+measured on the same 24 AI-authored English advice prompts. **0/5 combined
+candidates met all criteria; all five failed a coherence point-estimate rule.**
+Strong cross-effects were observed, not independent controls. Full-triple
+coherence was16.08 vs baseline80.08; half-triple57.12 still missed the allowed
+20-point loss. Its paired CI crosses the boundary and does not create a pass.
+
+PF means **friendly-rubric swearing**, not literal swearing frequency. PF solo
+scored36.38 vs full-triple6.25, while literal lexicon hits rose14/24→24/24.
+The separately registered [post-hoc lexical audit](results/joint_gcad_lexical_audit_01.json)
+documents that construct confound; original grades/gates remain unchanged.
+The [public measured guide](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls/blob/e1e56e6384214be873984f5fb9421ff6c61b9e85/joint_controls/GUIDE.md)
+and [publication receipt](results/steering_publication_joint_04.json) cover all
+34 anonymously verified payload files, both manifest hashes and preserved
+isolated banks/runtime. No new GPU check accompanied publication.
+
+**Phase 2 planned:** the separate benign political DECCP Qwen2.5-7B baseline
+headroom plan is advisor-approved; fixture/source review, registration and
+stage releases remain pending. No fit/intervention is released or new refusal
+controller claimed. Qwen3.8-27B/Gemma 4 require user discussion; no 14B or
+larger-model work is scheduled.
 
 The preceding Hugging Face-only transition is complete. NF4 and PRL Writing QLoRA are
 now public; the GSM8K adapter repository was deleted after a verified local
@@ -141,8 +155,8 @@ found no explicit refusal headroom on its development targets. The user closed
 the available coverage branch before any fit or steering, then selected the
 completed [Qwen3-4B fixed transfer](docs/qwen3_4b_fixed_transfer_closeout.md).
 Its trait effects and quality failures are reported without a model-size causal
-claim. Public release preparation covers the qualified 7B banks; 27B/Gemma work
-follows this milestone.
+claim. The 7B banks and descriptive joint guide are now public; a new benign
+DECCP baseline screen is separately planned. Larger models await user discussion.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,

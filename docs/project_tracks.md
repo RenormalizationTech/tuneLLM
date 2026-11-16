@@ -12,13 +12,23 @@ impoliteness and Mistral fixed/adaptive sarcasm also have positive references
 with quality limits. Refusal reduction remains a partial effect that
 failed final quality. The record spans three checkpoints; cross-model vectors
 cannot be combined. The three Qwen7 GCAD style banks share coordinates, but
-their joint use is untested. The [GCAD mathematics and joint-control discussion](gcad_and_combined_control.md)
-records the completed common-model follow-up and evidence boundaries.
+their joint use has now been tested in one fixed12-arm/24-question study.
+**Phase1 is complete:0/5 combined candidates qualified, all failing a coherence
+point-estimate rule.** The [public guide](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls/blob/e1e56e6384214be873984f5fb9421ff6c61b9e85/joint_controls/GUIDE.md)
+and [publication receipt](../results/steering_publication_joint_04.json) preserve
+all outcomes. Friendly-PF scores and the separate post-hoc literal lexical
+proxy differ: lower friendly score does not mean less swearing. Strong
+cross-effects are descriptive, not independent knobs. The
+[GCAD discussion](gcad_and_combined_control.md) records the evidence limits.
 The Qwen7 benign refusal screen closed at3/100 semantic refusals versus five
-prefix flags; no GCAD refusal controller was tested. No joint grid is released.
+prefix flags; no GCAD refusal controller was tested in that screen.
+**Phase2 is planned:** a separate advisor-approved DECCP benign political7B
+baseline headroom screen; fixture/source review and registration precede calls.
+No new intervention is released. Qwen3.8-27B/Gemma4 require user discussion;
+Qwen3-14B is not a future target.
 
-**4B track status:** the 4B refusal study is closed; the 4B persona pipeline is
-open. The [three-trait rating calibration passed](persona_rating_calibration_completion_execution.md)
+**4B track status:** the 4B refusal and fixed persona-transfer studies are closed;
+no4B controller qualified for release. The [three-trait rating calibration passed](persona_rating_calibration_completion_execution.md)
 on clear authored cases. The [profanity pilot closed with a development null](profanity_steering_execution.md);
 [rudeness and sarcasm also closed with development nulls](isolated_persona_traits_execution.md).
 No isolated setting qualified in the tested range. The user selected the
@@ -26,9 +36,8 @@ No isolated setting qualified in the tested range. The user selected the
 data/code before custom extensions. Source-tested implementations are complete;
 full rudeness/profanity PV grids closed with development nulls. SAPS sarcasm
 completed a held-out paraphrase reference pass, with a meaning-preservation cost
-and small capability checks passing. See the [reference execution record](persona_reference_execution.md). Joint control is a separate experimental topic deferred
-for later discussion, even after isolated success. The isolated 4B control
-work remains unvalidated; further 14B experiments remain deferred.
+and small capability checks passing. See the [reference execution record](persona_reference_execution.md). The separate7B joint study is complete with no qualifying combined candidate.
+Quality-preserving4B control remains unvalidated; no retuning is active.
 The completed 14B baseline remains a historical measurement. Older closeout or
 transition language in frozen protocols is superseded by this current roadmap;
 those records remain unchanged to preserve their experiment hashes.
@@ -41,7 +50,7 @@ those records remain unchanged to preserve their experiment hashes.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Persona activation steering | Intervene on activations to influence written tone/style | Custom 4B pilots closed with nulls; Qwen7 GCAD profanity/impoliteness/sarcasm and Mistral sarcasm references are established with their quality limits. Cross-effects are descriptive; joint control is optional and 14B work stays deferred. |
+| Persona activation steering | Intervene on activations to influence written tone/style | Custom 4B pilots closed with nulls; Qwen7 GCAD profanity/impoliteness/sarcasm and Mistral sarcasm references are established with their quality limits. Joint12-arm study complete:0/5 combined candidates qualified; coupling remains descriptive, and larger models await discussion. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank
@@ -62,7 +71,7 @@ flowchart TD
     Quant --> Physics["Saved NF4 base + physics LoRA training demonstration"]
     Base --> Refusal["Refusal activation-steering research: completed tradeoff"]
     Refusal --> Prompt["Persona prompt reference/control: P1 completed"]
-    Prompt --> Persona["Isolated GCAD/SAPS references across checkpoints; joint control optional"]
+    Prompt --> Persona["Isolated GCAD/SAPS references; joint study complete with quality failures"]
 ```
 
 This diagram organizes the program rather than the exact chronology. The
@@ -126,12 +135,12 @@ training study.
    established alternative method or document the bounded null. Do not force
    every trait to use the same mechanism or coefficient.
 5. Save/reload/check and report both effects and limitations. The immediate
-   next studies are isolated GCAD sarcasm, then isolated GCAD refusal reduction
-   on the common Qwen2.5 checkpoint. The existing model-specific references
-   remain valid evidence while these transfers are tested.
+   next planned stage is only the benign DECCP7B baseline headroom screen,
+   after completed isolated sarcasm and the fixed joint study. No refusal bank,
+   steering or publication follows automatically from headroom.
 
-The isolated 4B pipeline still precedes further 14B work; an optional joint
-study is not a prerequisite for that milestone. Frozen historical protocols
+The fixed4B and7B joint studies are complete; later Qwen3.8-27B/Gemma4 work
+requires user discussion, not an automatic milestone transition. Frozen historical protocols
 and results remain unchanged.
 
 ## Descriptive cross-effects and optional joint work
@@ -147,9 +156,9 @@ search for cancellation, or reject an otherwise qualifying individual control
 because it also changes another trait. Existing study-specific constructs and
 quality gates remain as registered; the clarification does not revise old scores.
 
-Pairwise or multi-trait mixtures are optional later research, requiring their
-own protocol if chosen. Their failure would not erase successful individual
-controls or make the primary project incomplete. Vectors from different model
+The completed pair/triple study tested12 fixed arms without refit/selection.
+Its failures do not erase model/task-specific individual references. Any further
+mixture research requires a new protocol; none is currently released. Vectors from different model
 coordinate systems cannot be added directly even if individual methods work.
 
 A future persona LoRA would be another training experiment and would need its

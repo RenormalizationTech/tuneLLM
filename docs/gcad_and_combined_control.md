@@ -10,6 +10,39 @@ This discussion preserves the existing references. The user subsequently
 authorized continued individual studies and clarified that joint control is
 optional, as recorded below; each live study has its own reviewed protocol.
 
+## Completed joint phase and next stage
+
+The fixed12-arm/24-question7B study and guide are complete and
+[publicly verified](../results/steering_publication_joint_04.json) at
+`e1e56e6384214be873984f5fb9421ff6c61b9e85`.
+**0/5 combined candidates met all original criteria; all five failed coherence
+point-estimate guards.** This is measured descriptive evidence, not a jointly
+validated recommendation. No bank refit or new selection occurred.
+
+Matched-task cross-effects were strong: the PF single increased impoliteness
+by30.29 points, and the SARC single by33.00. Full triple scored impolite99.08,
+SARC4.17 and coherence16.08 vs baseline coherence80.08. The half triple's
+coherence57.125 lost22.958 points, exceeding the20-point allowance; its paired
+unadjusted CI[-30.375,-15.125] crosses the boundary but does not create a pass.
+Duplicate coherence MAD7.25 is per-response, not a standard error of the mean.
+These are output-level observations, not a neural explanation of SARC change.
+
+The original PF rubric scores **friendly/helpful swearing**, excluding insults
+toward the user: solo36.375 vs full triple6.25. The separately registered
+[post-hoc literal audit](../results/joint_gcad_lexical_audit_01.json) counted
+any-hit answers14/24 vs24/24 (half triple19/24), with mean hit densities0.994
+vs17.185 per100 whitespace words. This construct confound prevents calling
+that friendly-score drop general profanity suppression. The narrow proxy is
+not intent, comprehensive vocabulary or a word percentage. Main scores/gates
+are unchanged; both pooled and prompt-centred pooled correlations remain
+condition-confounded. See the [full measured guide](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls/blob/e1e56e6384214be873984f5fb9421ff6c61b9e85/joint_controls/GUIDE.md).
+
+Phase2's benign DECCP7B baseline headroom plan is advisor-approved; fixture/
+source review, registration and stage releases are still required. No new
+refusal intervention or controller is claimed. No14B/larger work is released;
+Qwen3.8-27B/Gemma4 await user discussion. Older planning below is historical
+context, not authorization for a new sweep or simultaneous-control rescue.
+
 ## What GCAD changes
 
 GCAD means Gated Cropped Attention-Delta. At layer l and token t it adds a
@@ -106,13 +139,15 @@ a'_{l,t}=a_{l,t}+\sum_{k\in\{p,r,s\}}
 
 Each trait retains its own delta, positive keys and demand baseline. At that
 single attention output, gates read the same already-computed query, so the
-sum is algebraically independent of addition order. The following nonlinear
+sum is algebraically independent of addition order; the registered BF16
+implementation uses canonical trait-name order because finite-precision sums
+need not be bitwise associative. The following nonlinear
 MLP, later blocks and autoregressive feedback still couple the controls.
 Summed perturbation energy can also exceed isolated calibration. Orthogonal
 deltas would not prove independent behaviors.
 
-Before a joint grid, score every target trait on every isolated arm on one
-common task. This yields an empirical cross-effect matrix: how changing one
+The completed joint study scored every trait on each isolated arm and the
+combined arms on one common task. This yields an empirical cross-effect matrix: how changing one
 knob changes every trait score. Per-layer delta/key cosine similarities are
 cheap geometric diagnostics, with separate provenance and interpretation
 limits; they cannot establish behavioral independence. The
@@ -127,8 +162,9 @@ and establish neither interference nor independence.
 
 Shared code simplifies integration and calibration. It does not make b values
 comparable across differently sized raw vectors, nor ensure joint outputs
-retain the isolated qualities. If joint control is later chosen, a pairwise study should precede three-trait
-control. No mixture is required for the individual-control goal.
+retain the isolated qualities. The registered12-arm study included all three
+full pairs and full/half triples; none qualified. No mixture is required for
+the individual-control goal, and no retuning is released.
 
 ## Completed follow-up and evidence boundaries
 
@@ -150,12 +186,13 @@ control. No mixture is required for the individual-control goal.
    within the selected arm, SARC/impoliteness Pearson r=.637. The pooled r=.932
    is condition-confounded. No lexical profanity hits were observed. These
    findings describe coupling, not independence or a reason to reject the
-   selected sarcasm setting. Other cross-effect directions remain unmeasured.
+   selected sarcasm setting. The later joint study adds the common-task3x4
+   cross-effect matrix; it is distinct from these earlier held-out outcomes.
 
-The bounded sarcasm tuning is closed. Any next phase needs its own prospective
-design; no further sweep or joint grid is released. Cross-model transfer to
-Qwen3 requires fresh architecture-aware extraction and hook checks. The user's
-4B-before-further-14B sequence remains in force.
+The bounded sarcasm tuning and the separate fixed joint study are closed.
+No further sweep is released. The fixed Qwen3-4B transfer also completed with
+no quality-qualified controller. A new benign7B baseline headroom screen is
+planned separately; larger-model targets require discussion.
 
 The paper's tested humorous persona is not a sarcasm result. Its
 [Appendix O](https://arxiv.org/html/2605.10664v3) analyzes incidental refusals

@@ -10,9 +10,14 @@ Current publication status (2026-11-16): the NF4 base and PRL Writing QLoRA
 adapter are public. The GSM8K adapter repository was deleted after verifying an
 ignored archive of all three reachable revisions (42 file entries). See the
 [transition receipt](../results/hf_visibility_transition_01.json) and
-[release index](../releases/README.md). Current user scope is Hugging Face only;
-refusal work is paused, and no new 7B refusal model or controller is claimed.
-Earlier study plans below do not authorize further compute.
+[release index](../releases/README.md). The fixed7B joint study/guide is also
+complete and [publicly verified](../results/steering_publication_joint_04.json):
+all12 arms measured,0/5 combined candidates qualified; strong coupling and
+coherence costs remain visible. Friendly-PF scores are distinct from the
+separate post-hoc literal lexical audit. The next plan is a new benign DECCP
+7B baseline headroom screen, with fixture/source review and registration pending;
+no intervention or new refusal controller is released. Larger-model work
+(Qwen3.8-27B/Gemma4) awaits discussion; Qwen3-14B is historical only.
 
 ## Scope: adapter training and behavioral research
 
@@ -81,12 +86,12 @@ then considers simultaneous controls as described in
 The separately registered [rudeness and sarcasm pilots](isolated_persona_traits_execution.md)
 also closed with development nulls, after accepted fixtures/code and 16 passing
 CPU checks. A null closes its registered study without validating that control.
-Joint steering remains gated, and the full 4B persona-control objective is
-unachieved. The user selected the [literature-first isolated workflow](persona_literature_workflow.md).
+Those historical pilots did not establish quality-preserving 4B control;
+the later fixed4B transfer also qualified no controller. The user selected the [literature-first isolated workflow](persona_literature_workflow.md).
 New steering tasks first audit successful author code/data and establish a
 bounded method adaptation before custom changes. Consolidate each isolated
-workflow after its result; joint control is separately experimental and deferred
-for later discussion, not an automatic next step. Rudeness and profanity PV
+workflow after its result. One separately registered7B joint study is now
+complete with no qualifying combined candidate; no further tuning follows automatically. Rudeness and profanity PV
 grids closed with nulls. SAPS sarcasm passed its registered paraphrase reference
 and compact capability checks, with reduced meaning preservation; this is not
 generic persona control. See the [completed execution record](persona_reference_execution.md).

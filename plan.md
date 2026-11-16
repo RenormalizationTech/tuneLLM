@@ -22,14 +22,30 @@ complete the initial project.
 
 ## Live execution update (2026-11-16)
 
-**Current user-authorized order:** (1) fixed joint three-trait GCAD Qwen2.5-7B
-study and measured guide, (2) separately reviewed benign political 7B refusal/
-headroom screen with conditional HF publication. No larger-model work, including
-Qwen3.8-27B or Gemma 4, precedes user discussion. The
-[joint protocol](docs/joint_gcad_protocol.md) fixes12 arms/24 questions and no
-selection/refit;43 focused CPU checks passed. Root prepares/registers and
-explicitly releases each stage. No joint outcome or new 7B refusal controller is
-claimed, and all closed studies remain immutable.
+**Phase 1 complete:** the fixed12-arm/24-question joint GCAD study and measured
+guide are published on the existing 7B bank repository at
+`e1e56e6384214be873984f5fb9421ff6c61b9e85`. All34 payload hashes and both H1/H2
+commit-message lines were verified anonymously; the extra Hub `.gitattributes`
+was preserved. Original non-card files/banks/runtime remain byte-identical.
+See [publication receipt](results/steering_publication_joint_04.json).
+
+0/5 combined candidates qualified; all five failed coherence point criteria.
+Full triple coherence80.08→16.08; half triple80.08→57.12 (loss22.96), with
+unadjusted paired change CI[-30.375,-15.125]. This interval crossing the -20
+boundary is not a pass or proof the miss is within noise. Duplicate coherence
+MAD7.25 is per-response, not the mean's standard error. Strong cross-effects
+and lower full-triple SARC scores do not establish a neural mechanism.
+
+Original PF rubric scores **friendly/helpful swearing**:36.38 solo vs6.25 full triple,
+while the separate literal eleven-word proxy counted14/24 vs24/24 answers.
+[Post-hoc audit](results/joint_gcad_lexical_audit_01.json) is explicitly after
+primary inspection, not confirmatory; no main scores/gates were changed.
+
+**Phase 2 planned:** advisor-approved benign political DECCP 7B baseline-only
+headroom screen. Fixture/source review and committed registration precede calls;
+no fit/intervention is exposed, and any follow-up needs a separate registered
+plan. No new refusal controller is claimed. Qwen3.8-27B/Gemma 4 require user
+discussion before work; no Qwen3-14B or larger-model run is scheduled.
 
 The preceding HF-only transition is complete. NF4 and PRL Writing QLoRA are now public at
 `2ae7eec7ac38290ea28efefd1a06e779027aafc7` and
@@ -93,7 +109,7 @@ method notes and sanitized result summaries. The private source tag is
 `steering-controls-v1`; no 4B bank or new 4B steering repository was published.
 The sections below preserve the preceding decisions and study history.
 
-## Current scope clarification (2026-11-14)
+## Historical scope clarification (2026-11-14)
 
 Physics LoRA/QLoRA demonstrates the ability to fine-tune on domain data. It is
 independent of the behavioral program: refusal activation steering, followed by
@@ -108,7 +124,8 @@ milestone and refusal studies are complete; the 4B persona pipeline is open.
 P1 was a prompt-only reference with
 a failed acceptance gate. Persona activation studies first test profanity,
 rudeness and sarcasm individually on Qwen3-4B. Simultaneous control is deferred
-for later discussion and literature review. Complete the 4B pipeline before further 14B work.
+for later discussion and literature review at that stage. That earlier4B-first
+ordering is historical; current larger-model options require user discussion.
 Each live study requires its own committed registration; the current status
 below distinguishes completed runs from accepted designs.
 
@@ -142,7 +159,8 @@ passed, but no strength qualified for held-out testing. A separate
 confirmed GCAD 5 on 32 held-out questions: PF 31.13/100, lexical swearing 14/32,
 coherence 82.69 versus baseline 85.34; baseline/random PF 0. Fixed/SAPS did not
 qualify. GCAD is retained in the [profanity workflow](docs/profanity_controller_workflow.md).
-No joint or14B work is released.
+At that earlier decision point no joint or14B work had been released; the
+subsequent fixed7B joint study is now complete as recorded above.
 
 **Latest user clarification:** reliable individual control is the goal. Prefer
 GCAD if effective, with trait-specific method/settings fallback accepted.
@@ -179,7 +197,7 @@ The [refusal headroom screen](docs/refusal_headroom_closeout.md) closed at
 3/100 published benign development prompts, below the predeclared threshold
 of five. The secondary prefix count was five, exposing classification
 sensitivity. No GCAD refusal study or automatic dataset/model fallback is
-released. No joint grid is released.
+released by that closed screen. The later joint study is separately recorded above.
 
 ## Historical status and execution priorities (2026-11-14)
 
@@ -189,7 +207,7 @@ released. No joint grid is released.
   save/reload and reporting. Score all three traits even in isolated tests.
   Consolidate literature-based isolated workflows first. Joint control remains
   experimental and deferred for later discussion. Finish this pipeline on 4B before
-  further 14B work; retain the completed 14B baseline as historical evidence.
+  any proposed scaling at that time; retain the completed14B baseline as historical evidence.
 - Trait-rating calibration: complete/pass after a separately registered
   infrastructure completion. Both blinded passes agreed with all 48 intended
   labels for each trait; kappa was 0.9922/0.9851/0.9685. All 12 completion
@@ -223,7 +241,7 @@ released. No joint grid is released.
   paraphrase reference pass (27/100 reaching author sarcasm ≥3 versus 0 baseline/random), with
   reduced meaning preservation; compact capability checks passed. See `docs/persona_reference_execution.md`. The
   stronger-magnitude proposal was not run. Joint control is experimental,
-  deferred for later discussion; no joint or further 14B run started.
+  deferred at that stage; the later7B joint study is now complete, with no new14B run.
 - Qwen3-4B refusal study: closed after the final published-only replay. All 250
   token/input/output/layout/flag comparisons matched, with 681 protected bindings
   unchanged and no new grading. See `docs/qwen3_4b_closeout.md` and
@@ -887,7 +905,8 @@ treating safeguard bypass as the project objective.
 ## Stage 5 - Profanity, Rudeness and Sarcasm Directions
 
 The immediate user-selected milestone is isolated activation control of
-profanity, rudeness and sarcasm on Qwen3-4B; any joint-control stage is optional. Finish the 4B pipeline before further 14B work. The previously substituted mild-tone roadmap
+profanity, rudeness and sarcasm on Qwen3-4B; any further joint-control stage needs its own plan. The4B transfer and fixed7B
+joint study are now complete; larger models await discussion. The previously substituted mild-tone roadmap
 is superseded. Physics LoRA remains a separate fine-tuning demonstration.
 
 Define and extract each trait using matched contrasts that distinguish it from

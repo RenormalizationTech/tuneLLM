@@ -1,0 +1,113 @@
+{
+  "status": "published_and_anonymously_verified",
+  "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+  "url": "https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+  "revision": "e1e56e6384214be873984f5fb9421ff6c61b9e85",
+  "parent_revision": "763865908e5e94a020606b31ab66185360f7dd44",
+  "private": false,
+  "source_commit": "f4250297a8f961a6d61d41f013cb71665a615a68",
+  "guide_url": "https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls/blob/e1e56e6384214be873984f5fb9421ff6c61b9e85/joint_controls/GUIDE.md",
+  "release_manifest_sha256": "8a57ab029d9d2adee60be7229ee30a3ba347c9c53442bed96799e2b2316849f4",
+  "joint_manifest_sha256": "597bff1a992d6ef597447ddeb96238ba2b8edce5e3ddbc9f01126d430da5b7fc",
+  "commit_hash_lines_verified": true,
+  "operation": "additive existing-repository commit, guarded parent; no repository creation/deletion",
+  "changed_files": [
+    "METHODS.md",
+    "README.md",
+    "joint_controls/GUIDE.md",
+    "joint_controls/NOTICE",
+    "joint_controls/__init__.py",
+    "joint_controls/example.py",
+    "joint_controls/lexical_audit.json",
+    "joint_controls/loader.py",
+    "joint_controls/manifest.json",
+    "joint_controls/metrics.csv",
+    "joint_controls/presets.json",
+    "joint_controls/results.json",
+    "joint_controls/steerer.py"
+  ],
+  "verification": {
+    "anonymous_public": true,
+    "payload_file_count": 34,
+    "remote_file_count": 35,
+    "all_34_payload_hashes_verified": true,
+    "all_34_downloaded_payload_hashes_locally_rechecked": true,
+    "gitattributes_preserved": true,
+    "gitattributes_sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+    "gitattributes_verification_scope": "Root remote comparison; metadata is outside the34-file local payload download.",
+    "original_noncard_files_preserved": true,
+    "joint_bundle_verified": true,
+    "three_original_banks_verified": true,
+    "example_help_passed": true,
+    "example_help_evidence": "Root operator confirmation; not a model forward.",
+    "download": "outputs/steering-release-remote-04",
+    "cpu_only": true,
+    "new_target_generations": 0,
+    "new_judge_calls": 0,
+    "new_gpu_checks": 0
+  },
+  "evidence": {
+    "before.json": {
+      "path": "outputs/joint-gcad-publication-04/before.json",
+      "sha256": "20ce2811b6f3ebbb6a951eb56889cc17300856272236ae8d37261e7829aff419"
+    },
+    "upload.json": {
+      "path": "outputs/joint-gcad-publication-04/upload.json",
+      "sha256": "c1d1ddf16e1ed87e2da6008cbd1f2dd5916e95be0a3f0c9086040b305333a07f"
+    },
+    "anonymous_verification.json": {
+      "path": "outputs/joint-gcad-publication-04/anonymous_verification.json",
+      "sha256": "aa523348b6283e23bdc19ef2869f2e58ab8c30a97d62290662b47b3c31e29cef"
+    },
+    "loader_verification.json": {
+      "path": "outputs/joint-gcad-publication-04/loader_verification.json",
+      "sha256": "e8695d3adbab70567c3ebf679d55113771cbb956216a9c8844c87c303be37c41"
+    }
+  },
+  "scientific_sources": {
+    "primary": {
+      "path": "results/joint_gcad_01.json",
+      "sha256": "734dd89e943b07bb8999ed76103ad1d5daf6e724914a8659e195a09587a57ca3"
+    },
+    "posthoc_lexical": {
+      "path": "results/joint_gcad_lexical_audit_01.json",
+      "sha256": "2ddcd450c49aee0bf45169d928842490b0ff8c620c86cc8cea7c4ed3bd8f0fbb"
+    },
+    "joint_manifest": {
+      "path": "outputs/steering-release-staging-04/joint_controls/manifest.json",
+      "sha256": "597bff1a992d6ef597447ddeb96238ba2b8edce5e3ddbc9f01126d430da5b7fc"
+    }
+  },
+  "cpu_checks": [
+    {
+      "scope": "posthoc lexical audit plus additive packaging; synthetic data/temp bundles/tiny CPU models",
+      "passed": 28,
+      "seconds": 5.99,
+      "source": "Worker focused receipt; tests overlap the packaging suite below."
+    },
+    {
+      "scope": "packaging after final public-wording changes",
+      "passed": 18,
+      "seconds": 5.93,
+      "source": "Worker focused run; not18 additional unique tests."
+    }
+  ],
+  "outcome": {
+    "phase1_complete": true,
+    "fixed_arms": 12,
+    "questions_per_arm": 24,
+    "combined_candidates_qualified": 0,
+    "combined_candidates_assessed": 5,
+    "all_five_failed_coherence_point_estimate_criteria": true,
+    "primary_results_and_grades_unchanged": true,
+    "lexical_audit_explicitly_posthoc": true,
+    "no_new_quality_pass": true
+  },
+  "limits": [
+    "PF means friendly/helpful swearing under the original rubric; lower friendly PF scores do not establish less literal swearing. Posthoc narrow lexical counts/density are separate.",
+    "Coherence is not accuracy/helpfulness; strong cross-effects and lower full-triple sarcasm scores do not establish a neural mechanism or independent knobs.",
+    "24 AI-authored English practical-advice prompts and same-family AI authorship/judging; unadjusted CIs. Half-triple coherence point estimate still fails despite its CI crossing the bound.",
+    "Original isolated impolite evaluation used different decoding/design. Public guide is measured exploratory evidence, not a validated recommended joint controller.",
+    "No new refusal controller is included; phase2 benign7B headroom plan is separate and not executed by this publication."
+  ]
+}
