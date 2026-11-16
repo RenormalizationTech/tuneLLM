@@ -24,8 +24,10 @@ complete the initial project.
 
 The [fixed-setting Qwen3-4B transfer](docs/qwen3_4b_fixed_transfer_plan.md)
 is registered in [R1](results/protocols/qwen3-4b-fixed-transfer-01.json).
-All 37 port and runner CPU checks passed. Fresh profanity elicitation is running
-on GPU 0; impoliteness and sarcasm follow. New 4B efficacy is **pending**.
+All 37 port and runner CPU checks passed. Profanity elicitation and filtering
+are complete: 200 responses, 45 eligible pairs out of 100 candidates, and 50
+first-valid grading batches without retries. Impoliteness elicitation is running
+on GPU 0; sarcasm follows. Bank extraction and new 4B efficacy are **pending**.
 There is no development sweep: retained coefficients are 5, 3.5 and 2,
 with fresh model-specific banks and the predeclared relative-depth block mapping.
 Refusal carries forward the existing conventional subtraction/projection record
