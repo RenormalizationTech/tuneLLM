@@ -20,6 +20,23 @@ Learning the Hugging Face, PyTorch, PEFT/QLoRA, GGUF, and llama.cpp workflows
 is itself a successful outcome. Novel research findings are not required to
 complete the initial project.
 
+## Live execution update (2026-11-16)
+
+The [fixed-setting Qwen3-4B transfer](docs/qwen3_4b_fixed_transfer_plan.md)
+is registered in [R1](results/protocols/qwen3-4b-fixed-transfer-01.json).
+All 37 port and runner CPU checks passed. Fresh profanity elicitation is running
+on GPU 0; impoliteness and sarcasm follow. New 4B efficacy is **pending**.
+There is no development sweep: retained coefficients are 5, 3.5 and 2,
+with fresh model-specific banks and the predeclared relative-depth block mapping.
+Refusal carries forward the existing conventional subtraction/projection record
+with zero new compute; its historical quality failure remains disclosed.
+
+The retained 7B style banks are also [staged locally](results/steering_release_staging_01.json)
+as safetensors with a portable runtime, provenance and licences. All 18 packaging
+CPU checks passed. Real-checkpoint reload validation and the eventual 4B results
+still precede final release preparation; **nothing new is uploaded to Hugging Face**.
+The sections below preserve the preceding decisions and study history.
+
 ## Current scope clarification (2026-11-14)
 
 Physics LoRA/QLoRA demonstrates the ability to fine-tune on domain data. It is
@@ -39,7 +56,7 @@ for later discussion and literature review. Complete the 4B pipeline before furt
 Each live study requires its own committed registration; the current status
 below distinguishes completed runs from accepted designs.
 
-## Current priority (2026-11-15): original-model references
+## Reference-study history (2026-11-15): original-model references
 
 The user selected original open author models and published steering methods
 before further4B adaptations or method comparisons. See
@@ -108,7 +125,7 @@ of five. The secondary prefix count was five, exposing classification
 sensitivity. No GCAD refusal study or automatic dataset/model fallback is
 released. No joint grid is released.
 
-## Current status and execution priorities (2026-11-14)
+## Historical status and execution priorities (2026-11-14)
 
 - Latest user-selected sequence, reviewed with Claude: return to Qwen3-4B for
   isolated profanity, rudeness and sarcasm steering, in that order. Each trait
