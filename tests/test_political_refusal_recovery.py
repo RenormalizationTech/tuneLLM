@@ -109,14 +109,19 @@ def test_actual_cached_tokenizer_reconstructs_source_data_and_all_renderings(mon
 @pytest.fixture
 def journal(tmp_path,monkeypatch):
     s=context_at(tmp_path)
-    body={'items':[{'id':f'opaque{i}','question':'UNIT_TEST_Q','answer':'UNIT_TEST_A','facts':[{'id':'F1'}]} for i in range(8)]}
+    ps=SimpleNamespace(run=r.path(r.PARENT),cfg=r.read_json(r.parent.CONFIG))
+    body=r.parent.bodies(ps,'calibration','primary')[0]
+    parent_attempt=r.read_json(ps.run/'native/calibration/primary/batch-000-attempt-0.json')
+    for k in list(r.os.environ):
+        if k.startswith('GIT_'):monkeypatch.delenv(k)
+    for k in parent_attempt['isolation']['removed_git_variable_names']:monkeypatch.setenv(k,'UNIT_TEST_VALUE_NOT_EXPORTED')
     monkeypatch.setattr(r,'bodies',lambda *args:[body])
     calls=[]
     def invoke(binary,payload):
         calls.append(payload)
-        ratings=[{'id':x['id'],'class':'S','unscorable':False,'facts':{'F1':'present'},'reason':'UNIT_TEST_ONLY'} for x in payload['items']]
+        ratings=[{'id':x['id'],'class':'S','unscorable':False,'facts':{v['id']:'present' for v in x['facts']},'reason':'UNIT_TEST_ONLY'} for x in payload['items']]
         return {'returncode':0,'stdout':json.dumps({'modelUsage':{r.f.MODEL:{}},'result':json.dumps({'ratings':ratings})}),
-            'canonical_stdin_sha256':r.f.canonical_hash(payload),'isolation':{'git_not_repository':True,'git_environment_clean':True,'returncode':128}}
+            'canonical_stdin_sha256':r.f.canonical_hash(payload),'isolation':copy.deepcopy(parent_attempt['isolation'])}
     write(tmp_path/'manifest.json',{'test':True})
     monkeypatch.setattr(r.f,'invoke',invoke)
     return s,calls,invoke
@@ -129,6 +134,53 @@ def test_first_valid_replay_preserves_parent_charge_and_does_not_rerate(journal)
     assert len(calls)==1 and r.native_count(s)==2
     assert first['batches'][0]['first_valid_attempt']==0
     assert not list(s.run.rglob('*attempt-1*'))
+    comparison=r.first_attempt_comparison(s)
+    assert comparison['isolation_equal'] and comparison['canonical_stdin_sha256_equal']
+
+
+def test_first_launch_git_name_mismatch_waits_before_any_start_or_call(journal,monkeypatch):
+    s,calls,_=journal
+    monkeypatch.setenv('GIT_UNIT_TEST_EXTRA','NOT_EXPORTED')
+    with pytest.raises(r.Wait,match='no call or start'):r.run_journal(s,'calibration','primary','MOCK',False)
+    assert not calls and r.native_count(s)==1
+    assert not (s.run/'native').exists() and not (s.run/'stopped.json').exists()
+
+
+@pytest.mark.parametrize('field',['isolation','canonical_stdin_sha256'])
+def test_real_journal_first_attempt_mismatch_fails_before_retry(journal,monkeypatch,field):
+    s,calls,invoke=journal
+    def mismatch(binary,body):
+        a=invoke(binary,body)
+        if field=='isolation':a['isolation']['removed_git_variable_names']=[]
+        else:a[field]='0'*64
+        return a
+    monkeypatch.setattr(r.f,'invoke',mismatch)
+    if field=='isolation':
+        with pytest.raises(ValueError,match='isolation/payload differs'):r.run_journal(s,'calibration','primary','MOCK',False)
+    else:
+        # The unchanged foundation rejects bad stdin hashes even before the
+        # new comparison, preserving an uncertain start rather than a receipt.
+        with pytest.raises(RuntimeError,match='invocation stdin hash differs'):r.run_journal(s,'calibration','primary','MOCK',False)
+    assert len(calls)==1 and not list(s.run.rglob('*attempt-1*'))
+    if field=='isolation':
+        comparison=r.first_attempt_comparison(s,read_json_attempt(s),require_equal=False)
+        assert comparison['isolation_equal'] is False
+    else:assert r.first_attempt_comparison(s)['status']=='started_no_completed_attempt'
+
+
+@pytest.mark.parametrize('field',['isolation','canonical_stdin_sha256'])
+def test_direct_parent_comparison_rejects_both_record_mismatches(tmp_path,field):
+    attempt=r.read_json(r.path(r.PARENT)/'native/calibration/primary/batch-000-attempt-0.json')
+    if field=='isolation':attempt[field]['removed_git_variable_names']=[]
+    else:attempt[field]='0'*64
+    s=context_at(tmp_path)
+    with pytest.raises(ValueError,match='isolation/payload differs'):r.first_attempt_comparison(s,attempt)
+    actual=r.first_attempt_comparison(s,attempt,require_equal=False)
+    assert actual[field+'_equal'] is False
+
+
+def read_json_attempt(s):
+    return r.read_json(s.run/'native/calibration/primary/batch-000-attempt-0.json')
 
 
 def test_parent_charge_prevents_32nd_new_start_before_call(journal):
@@ -177,11 +229,21 @@ def test_report_and_registration_disclose_shared_charge_without_private_text(tmp
     s=context_at(tmp_path);cfg=s.cfg
     write(tmp_path/'manifest.json',{});write(tmp_path/'stopped.json',{'stop_cause':'fatal_execution_or_integrity'})
     cfg['initial_registration']=str(tmp_path/'reg.json');write(Path(cfg['initial_registration']),{})
-    s.m.update({'sources':{},'combined_budget':r.c.budget_counts(),'parent_provenance_sha256':'a'*64})
+    s.m.update({'sources':{'scripts/tone_judge.py':r.stream_hash(r.path('scripts/tone_judge.py'))},
+        'combined_budget':r.c.budget_counts(),'parent_provenance_sha256':'a'*64,'dns_preflight_sha256':r.stream_hash(r.path(r.DNS_PREFLIGHT)),
+        'unused_preflight_archive':r.unused_preflight_archive(),
+        'binary_sha256':r.infra.BINARY_SHA})
     result=r.report(s)
     assert result['status']=='incomplete' and result['native_starts']==1 and result['first_valid_batches']==0
     assert result['recovery']['network_permission_change']['outer_os_sandbox_relaxed'] is True
     assert 'tools_files_credentials_scope_change' not in json.dumps(result)
+    permission=result['recovery']['network_permission_change']
+    assert 'native_argv_unchanged' not in permission and 'native_environment_unchanged' not in permission
+    assert 'argv/env not recorded in receipts' in permission['native_argv_env_basis']
+    assert result['recovery']['first_attempt_comparison']['status']=='not_attempted'
+    assert r.registration_expected(s)['dns_preflight_sha256']==s.m['dns_preflight_sha256']
+    assert result['recovery']['unused_preflight_archive']['native_starts']==0
+    assert r.registration_expected(s)['unused_preflight_manifest_sha256']==s.m['unused_preflight_archive']['manifest_sha256']
     assert r.registration_expected(s)['parent_charged_starts']==1
     assert r.registration_expected(s)['global_cumulative_maximum_starts']==424
     r.native.public_safe(result)

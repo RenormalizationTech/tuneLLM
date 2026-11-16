@@ -49,6 +49,9 @@ OPERATIONAL_FIELDS = {'run','result','initial_registration','calibration_registr
 PARENT = 'outputs/political-refusal-01'
 PARENT_PROVENANCE = 'results/protocols/political-refusal-parent-closure-01.json'
 RECOVERY_REVIEW = 'results/reviews/political_refusal_network_recovery_review.md'
+EXECUTION_REVIEW = 'results/reviews/political_refusal_network_recovery_execution_review.md'
+DNS_PREFLIGHT = 'results/protocols/political-refusal-dns-preflight-01.json'
+UNUSED_PREFLIGHT = 'outputs/political-refusal-recovery-unregistered-preflight-01'
 SCIENCE_FILES = ('config.json','inputs/data.json','inputs/plans.json','inputs/rendered.json',
                  'inputs/primary_rubric.json','inputs/coherence_rubric.json','inputs/model_defaults.json')
 
@@ -68,7 +71,8 @@ def validate_config(cfg):
         'headroom_registration':'results/protocols/political-refusal-recovery-headroom-01.json'}
     if any(cfg.get(k)!=v for k,v in expected.items()):raise ValueError('fixed recovery paths differ')
     if cfg.get('recovery')!={'parent_run':PARENT,'parent_config':parent.CONFIG,'parent_provenance':PARENT_PROVENANCE,
-            'review':RECOVERY_REVIEW,'parent_charged_starts':1,'network_execution_policy':'require_escalated','maximum_recoveries':1}:
+            'review':RECOVERY_REVIEW,'execution_review':EXECUTION_REVIEW,'dns_preflight':DNS_PREFLIGHT,
+            'parent_charged_starts':1,'network_execution_policy':'require_escalated','maximum_recoveries':1}:
         raise ValueError('one-recovery provenance/policy differs')
 
 
@@ -127,6 +131,25 @@ def verify_parent(cfg, record=None):
     return record
 
 
+def first_attempt_comparison(s, attempt=None, *, require_equal=True):
+    """Measured attempt fields, not an unrecorded argv/environment diff."""
+    file=s.run/'native/calibration/primary/batch-000-attempt-0.json'
+    if attempt is None:
+        if not file.exists():
+            return {'status':'started_no_completed_attempt' if file.with_name('batch-000-attempt-0-start.json').exists() else 'not_attempted'}
+        directory=file.parent
+        attempt=infra.checked_attempt(directory,0,0,bodies(s,'calibration','primary')[0],stream_hash(directory/'run_binding.json'))
+    original=read_json(path(PARENT)/'native/calibration/primary/batch-000-attempt-0.json')
+    result={'status':'compared',
+        'isolation_equal':attempt.get('isolation')==original['isolation'],
+        'canonical_stdin_sha256_equal':attempt.get('canonical_stdin_sha256')==original['canonical_stdin_sha256'],
+        'parent_attempt_sha256':stream_hash(path(PARENT)/'native/calibration/primary/batch-000-attempt-0.json'),
+        'recovery_attempt_sha256':stream_hash(file) if file.exists() else f.canonical_hash(attempt)}
+    if require_equal and not (result['isolation_equal'] and result['canonical_stdin_sha256_equal']):
+        raise ValueError('recovery first attempt isolation/payload differs from parent')
+    return result
+
+
 def verify_scientific_snapshots(s):
     root=path(PARENT)
     for name in SCIENCE_FILES:
@@ -156,10 +179,23 @@ def verify_recompiled_inputs(cfg, data, rendered, tok):
     if expected!=rendered:raise ValueError('re-rendered prompt/token IDs differ')
 
 
+def unused_preflight_archive():
+    root=path(UNUSED_PREFLIGHT);m=read_json(root/'manifest.json')
+    if root.is_symlink() or (root/'native').exists() or (root/'headroom').exists() or m.get('no_model_or_judge_calls') is not True:
+        raise ValueError('unused archive must have no native or model-output stages')
+    manifest_sha=stream_hash(root/'manifest.json')
+    if file_inventory(root)!={**m['files'],'manifest.json':manifest_sha}:
+        raise ValueError('unused archive snapshot bytes/inventory differ')
+    return {'path':UNUSED_PREFLIGHT,'status':'unused_never_registered_cpu_preflight',
+            'manifest_sha256':manifest_sha,'native_starts':0,'model_generations':0,
+            'scientific_outputs':0,'scientific_inputs_only':True}
+
+
 def prepare():
     run=path(RUN);guard(run)
     if run.exists():raise FileExistsError('fresh recovery root only')
     cfg=read_json(CONFIG);validate_config(cfg);record=verify_parent(cfg)
+    archive=unused_preflight_archive()
     ps=parent.Context();ps.verify(models=True)
     if read_json(ps.run/'config.json')!=read_json(parent.CONFIG):raise ValueError('parent configuration changed')
     infra.verify_role(type('Runtime',(),{'cfg':cfg,'m':{'gpu_packages':ps.m['gpu_packages']}})(),'gpu')
@@ -170,7 +206,8 @@ def prepare():
     sources=infra.closure(['scripts/political_refusal_recovery.py','scripts/political_refusal_recovery_runbook.md',CONFIG])
     hashes={n:stream_hash(path(n)) for n in sources}
     external={**ps.m['sources'],**ps.m['external_sha256']}
-    external.update({n:stream_hash(path(n)) for n in (PARENT_PROVENANCE,RECOVERY_REVIEW)})
+    external.update({n:stream_hash(path(n)) for n in (PARENT_PROVENANCE,RECOVERY_REVIEW,EXECUTION_REVIEW,DNS_PREFLIGHT)})
+    external[UNUSED_PREFLIGHT+'/manifest.json']=archive['manifest_sha256']
     infra.check_hashes([hashes,external,ps.m['model_sha256']])
     run.mkdir(mode=0o700);save(run/'execution_config.json',cfg)
     for name in SCIENCE_FILES:
@@ -181,6 +218,8 @@ def prepare():
     save(run/'manifest.json',{'sources':hashes,'external_sha256':external,'model_sha256':ps.m['model_sha256'],
         **{k:ps.m[k] for k in ('gpu_packages','cli_version','binary','binary_sha256','combined_budget','initial_budget')},
         'files':file_inventory(run),'parent_charged_starts':1,'parent_provenance_sha256':stream_hash(path(PARENT_PROVENANCE)),
+        'dns_preflight_sha256':stream_hash(path(DNS_PREFLIGHT)),
+        'unused_preflight_archive':archive,
         'network_execution_policy':'require_escalated','no_model_or_judge_calls':True})
     s=Context();s.verify(models=True)
 
@@ -195,17 +234,21 @@ class Context:
         infra.check_hashes(maps)
         if self.m['parent_charged_starts']!=1 or self.m['parent_provenance_sha256']!=stream_hash(path(PARENT_PROVENANCE)):
             raise ValueError('parent charge/provenance differs')
+        if self.m['dns_preflight_sha256']!=stream_hash(path(DNS_PREFLIGHT)):raise ValueError('DNS preflight differs')
+        if self.m['unused_preflight_archive']!=unused_preflight_archive():raise ValueError('unused preflight archive differs')
         verify_parent(self.cfg);verify_scientific_snapshots(self)
         if read_json(self.run/'inputs/plans.json')!=all_plans(read_json(self.run/'inputs/data.json'),self.cfg):raise ValueError('frozen plans changed')
     def registered(self):
         for name in (*self.m['sources'],self.cfg['protocol'],self.cfg['design_review'],self.cfg['data_acceptance'],
-                     PARENT_PROVENANCE,RECOVERY_REVIEW,self.cfg['initial_registration']):infra.committed(name)
+                     PARENT_PROVENANCE,RECOVERY_REVIEW,EXECUTION_REVIEW,DNS_PREFLIGHT,self.cfg['initial_registration']):infra.committed(name)
         if read_json(self.cfg['initial_registration'])!=registration_expected(self):raise ValueError('initial recovery registration differs')
 
 
 def registration_expected(s):
     return {'manifest_sha256':stream_hash(s.run/'manifest.json'),
             'parent_provenance_sha256':s.m['parent_provenance_sha256'],'parent_charged_starts':1,
+            'dns_preflight_sha256':s.m['dns_preflight_sha256'],
+            'unused_preflight_manifest_sha256':s.m['unused_preflight_archive']['manifest_sha256'],
             'initial_cumulative_maximum_starts':32,'global_cumulative_maximum_starts':424,
             'recovery_batch_maximum_structural_attempts':2,'network_execution_policy':'require_escalated'}
 
@@ -215,8 +258,13 @@ def recovery_disclosure(s):
             'recovery_starts':native_count(s)-1,'parent_provenance_sha256':s.m['parent_provenance_sha256'],
             'registration_sha256':stream_hash(path(s.cfg['initial_registration'])),
             'science_and_payloads_unchanged':True,'no_parent_labels_or_qwen_outputs':True,
+            'dns_preflight_sha256':s.m['dns_preflight_sha256'],
+            'first_attempt_comparison':first_attempt_comparison(s,require_equal=False),
+            'unused_preflight_archive':s.m['unused_preflight_archive'],
             'network_permission_change':{'parent':'default sandbox DNS unavailable','recovery_required':'require_escalated network-enabled host execution',
-                'outer_os_sandbox_relaxed':True,'native_argv_unchanged':True,'native_environment_unchanged':True,
+                'outer_os_sandbox_relaxed':True,
+                'native_argv_env_basis':'Identical hash-pinned invocation source and binary; argv/env not recorded in receipts. No observed receipt-to-receipt argv/env diff is claimed.',
+                'invocation_source_sha256':s.m['sources']['scripts/tone_judge.py'],'binary_sha256':s.m['binary_sha256'],
                 'llm_tool_permissions_unchanged':True,'same_user_auth_and_runtime':True,'new_grader_tool_grants':False,
                 'verification_scope':'Operator launch policy; the process does not pretend to detect sandbox permission mode.'}}
 
@@ -247,6 +295,7 @@ def read_grades(s,phase,metric,partial=False):
                 if list(out.glob(stem+'*')):raise f.UncertainAttempt("uncertain native start; no new call")
                 break
             attempt=infra.checked_attempt(out,bi,ai,body,bound,allow_pending_receipt=partial)
+            if phase=='calibration' and metric=='primary' and bi==0 and ai==0:first_attempt_comparison(s,attempt)
             try:parsed,models=parse(attempt,body,metric,s.cfg)
             except f.InvalidSubmission:
                 if ai==1:raise
@@ -270,6 +319,10 @@ def run_journal(s,phase,metric,binary,resume):
     out=s.run/"native"/phase/metric
     if resume and not out.is_dir():raise Wait("no stream to resume")
     if out.exists() and not resume:raise Wait("existing stream requires explicit first-valid replay")
+    if native_count(s)==1:
+        original=read_json(path(PARENT)/'native/calibration/primary/batch-000-attempt-0.json')
+        if sorted(k for k in os.environ if k.startswith('GIT_'))!=original['isolation']['removed_git_variable_names']:
+            raise Wait('launch GIT_* variable names differ from parent; no call or start')
     out.mkdir(parents=True,mode=0o700,exist_ok=True)
     with f.exclusive_run(out):
         f.save_or_match(out/"run_binding.json",binding(s,phase,metric));read_grades(s,phase,metric,True)
@@ -278,6 +331,7 @@ def run_journal(s,phase,metric,binary,resume):
                 file=out/f'batch-{bi:03d}-attempt-{ai}.json'
                 if not file.exists() and (native_count(s)>=32 or native_count(s)>=424):raise ValueError("initial32-start ceiling BEFORE new invocation")
                 attempt,_=f.replay_or_call(out,bi,ai,body,stream_hash(out/"run_binding.json"),binary)
+                if phase=='calibration' and metric=='primary' and bi==0 and ai==0:first_attempt_comparison(s,attempt)
                 try:parse(attempt,body,metric,s.cfg);break
                 except f.InvalidSubmission:
                     if ai==1:raise

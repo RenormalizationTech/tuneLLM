@@ -13,6 +13,12 @@ The scientific protocol and reviewed data are unchanged. Authority:
 (including its log, fatal marker, source snapshots and native journals) is
 hash-bound, plus its original registrations. Any changed or added parent file
 blocks recovery. No parent lock/resume/receipt-repair routine is invoked.
+The unused, zero-call snapshot archived at
+`outputs/political-refusal-recovery-unregistered-preflight-01` stays untouched;
+it is not a registration or a recovery attempt.
+Its manifest SHA256 is bound in preparation and registration. Verification
+checks its complete snapshot inventory and rejects any native/headroom stage;
+the report discloses zero calls, zero scientific outputs and preserved inputs.
 
 ## Snapshot and source differences
 
@@ -55,6 +61,8 @@ Fresh root: `outputs/political-refusal-recovery-01`. Initial registration
 {
   "manifest_sha256": "...",
   "parent_provenance_sha256": "...",
+  "dns_preflight_sha256": "...",
+  "unused_preflight_manifest_sha256": "...",
   "parent_charged_starts": 1,
   "initial_cumulative_maximum_starts": 32,
   "global_cumulative_maximum_starts": 424,
@@ -63,7 +71,8 @@ Fresh root: `outputs/political-refusal-recovery-01`. Initial registration
 }
 ```
 
-Commit the new source/config/runbook, closure record, review and registration
+Commit the new source/config/runbook, closure record, both recovery reviews,
+DNS preflight record and registration
 before calls. The failed parent's API error is not a structural submission;
 recovery batch 0 may use its normal two identical-payload structural attempts,
 within the cumulative ceilings. First valid is frozen, never rerated. Existing
@@ -79,8 +88,31 @@ same command in the default sandbox. The Python process cannot prove its outer
 permission mode; it records the required launch policy without spoofing a
 sandbox detector. Escalation relaxes the outer OS sandbox. Native argv,
 environment policy, same-user auth/runtime, grader tools-off settings and
-LLM tool permissions remain unchanged; OS file permissions are not claimed
-identical. No additional tool is granted to the grader.
+LLM tool permission policy remains unchanged; OS file permissions are not
+claimed identical. No additional tool is granted to the grader. The basis for
+argv/environment equality is the identical hash-pinned invocation source and
+native binary. **Argv and environment were not recorded in either receipt;
+no observed receipt-to-receipt diff of those fields is claimed.**
+
+Immediately after recovery calibration/primary batch000 attempt0, compare its
+actual `isolation` record and `canonical_stdin_sha256` exactly with the parent.
+Any mismatch is fatal before parsing/retry. Receipt replay rechecks them. The
+report records the measured comparison booleans and both raw-attempt hashes;
+before completion it distinguishes not-attempted from a start with no completed
+attempt. The unchanged foundation also rejects a wrong stdin hash before it
+can save a completed attempt. The parent's isolation record includes removal
+of `GIT_PAGER`; a different removed-variable list is a mismatch, not silently
+normalized away.
+Before the first recovery invocation, the runner also compares sorted launch
+`GIT_*` names with the parent's removed-variable list. A mismatch returns
+`Wait` before creating the native stream or any start/call/fatal marker. The
+operator may relaunch with a matching environment; this consumes no budget.
+
+`results/protocols/political-refusal-dns-preflight-01.json` records root's
+read-only diagnostic: `api.anthropic.com`, UTC times, default resolution failure
+and escalated resolution success, explicitly no model/grader call. Its SHA256
+is bound in the manifest, initial registration and public recovery disclosure;
+the record is not an authentication or API-availability probe.
 
 With root's explicit stage release, use a fresh mode600 operator log and
 umask077 (never overwrite an existing log):
@@ -125,9 +157,11 @@ Original raw private records are never copied into public metadata.
 .venv/bin/python -B -m pytest -q -p no:cacheprovider tests/test_political_refusal_recovery.py
 ```
 
-26 focused checks passed in 3.65s. CLI help also passed. Mocks use the real
-first-valid journal/receipt functions, never an executable
+Mocks use the real first-valid journal/receipt functions, never an executable
 or API. Checks cover cumulative pre-start budget, replay/uncertain/fatal
 behavior, exact scientific copies/payloads, parent tampering/content-free
 preconditions, no parent writes, safe public disclosure and direct reuse of
 frozen scientific functions. No model load, GPU or snapshot preparation.
+Additional checks cover actual parent-vs-recovery isolation/stdin equality,
+both mismatch failures without retry, source/binary-only argv/env disclosure,
+and DNS hash binding in the registration.

@@ -149,3 +149,118 @@ accepted for registration. That covers calibration only and the later
 headroom stages under the same rules. Root still owns the DNS record, the
 commits and every live release, which must use the escalated launch policy
 described in the runbook.
+
+## Addendum: final required fixes checked
+
+I checked only the disclosure fixes. I made no calls and ran no tests. The
+worker reports 30 focused tests passing in 3.75 s.
+
+### Verified
+
+- **Unmeasured claims removed.** `recovery_disclosure` no longer asserts
+  `native_argv_unchanged` or `native_environment_unchanged`. It now states
+  how equality was established: "Identical hash-pinned invocation source and
+  binary; argv/env not recorded in receipts. No observed receipt-to-receipt
+  argv/env diff is claimed." It also includes the `tone_judge.py` source hash
+  and the binary hash. `outer_os_sandbox_relaxed: true` stays.
+- **Measured comparison of the first attempt.**
+  - `first_attempt_comparison` compares the recovery's
+    calibration/primary batch 0 attempt 0 with the parent's attempt on two
+    fields: the `isolation` record and `canonical_stdin_sha256`. It records
+    both attempt hashes.
+  - In `run_journal` it runs immediately after the call, before parsing, and
+    fails closed if either field differs. It also runs again on every replay
+    in `read_grades`.
+  - The report includes it non-fatally, with a status of `not_attempted` or
+    `started_no_completed_attempt` when nothing has been compared yet.
+  - The tests show that a mismatch in either field fails closed, both in the
+    live loop and in the direct comparison. The stdin case is rejected even
+    earlier by the unchanged foundation code.
+- **DNS record bound.** `political-refusal-dns-preflight-01.json` is required
+  in the config's recovery block. Its hash is in the manifest, the
+  registration and the report, it is checked on every `verify`, and it must
+  be committed.
+
+### One pre-call guard to add before release (small; protects the single recovery)
+
+**The risk.** The parent's `isolation` record includes
+`removed_git_variable_names: ["GIT_PAGER"]`. `tone_judge.invoke` takes these
+names from the launching process's `os.environ`. If the escalated host shell
+has a different set of `GIT_*` variables, which is a harmless environment
+difference, the new comparison fails only **after** the native call. That
+charges a start, writes a fatal marker, and ends the only permitted recovery.
+
+**Required, before the first recovery invocation:**
+
+- Compare `sorted(k for k in os.environ if k.startswith("GIT_"))` in the
+  launch process with the parent's `removed_git_variable_names`.
+- If they differ, raise `Wait` with **no call and no start record**. The
+  operator then relaunches with a matching environment. No change to frozen
+  code or science is needed.
+- Add one test showing that a mismatched `GIT_*` set makes no call.
+
+The other isolation fields (`git_not_repository`,
+`git_environment_clean`, the command and its return code) are fixed by the
+unchanged temporary-directory logic. The post-call check remains as the
+backstop.
+
+### Final verdict
+
+**Accepted for preparation and registration once the pre-call `GIT_*` guard
+and its test are in.** Everything required by the plan review and by this
+review is otherwise implemented:
+
+- only execution details differ, with the scientific helpers imported
+  unchanged;
+- scientific snapshots and payloads are identical;
+- the parent is proven closed with no labels or Qwen outputs;
+- the budget is cumulative: 1 parent start plus new starts, against the
+  32/424 ceilings;
+- the host-sandbox disclosure is honest;
+- the DNS record is bound;
+- every later path and lock points to the recovery root.
+
+The unused preflight archive
+(`outputs/political-refusal-recovery-unregistered-preflight-01`) and the
+parent's 32 files stay untouched and must be disclosed in the report. Root
+still owns the commits, the registration and the escalated live release.
+
+## Final addendum: last two conditions checked, ACCEPTED
+
+I checked only the two remaining conditions. I made no calls, ran no
+preparation and ran no tests. The worker reports 31 focused tests passing,
+and root is testing independently.
+
+1. **The pre-call `GIT_*` guard is in place.**
+   - On the first recovery launch (`native_count(s) == 1`), `run_journal`
+     compares the sorted `GIT_*` names in the launch environment with the
+     parent's `removed_git_variable_names`. It does this before creating the
+     stream directory, the binding, any start record or any call.
+   - On a mismatch it raises `Wait`. `main` treats `Wait` as a no-call wait,
+     so no fatal stop is written.
+   - **The test** (`test_first_launch_git_name_mismatch_waits_before_any_start_or_call`)
+     adds an extra `GIT_*` variable. It confirms that no call is made, that
+     `native_count` stays at 1, and that neither a `native/` directory nor
+     `stopped.json` is created.
+   - The post-call comparison of `isolation` and stdin stays as the
+     backstop. Root's escalated preflight returned `["GIT_PAGER"]`, which
+     matches the parent.
+2. **The unused preflight archive is disclosed.**
+   - `unused_preflight_archive()` requires all of the following for
+     `outputs/political-refusal-recovery-unregistered-preflight-01`:
+     - no symlink;
+     - no `native/` and no `headroom/`;
+     - `no_model_or_judge_calls: true`;
+     - a full file inventory equal to its own manifest.
+   - The manifest hash is bound into the recovery manifest's external hashes,
+     the registration and the report. It is re-checked on every `verify`.
+   - The report states: `unused_never_registered_cpu_preflight`, 0 native
+     starts, 0 model generations and 0 scientific outputs.
+
+**FINAL VERDICT: ACCEPTED.** The network recovery runner meets every
+condition of the accepted recovery plan and of this review. It is accepted
+for preparation, registration and the calibration and headroom stages under
+the escalated launch policy in the runbook. The science, data, plans, budget
+(1 parent start, plus recovery starts, against the cumulative 32/424 ceilings)
+and the recovery root locks are unchanged from the reviewed state. Root owns
+the commits, the registration and each live release.

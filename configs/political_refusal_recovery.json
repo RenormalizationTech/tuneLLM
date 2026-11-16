@@ -147,6 +147,8 @@
     "review": "results/reviews/political_refusal_network_recovery_review.md",
     "parent_charged_starts": 1,
     "network_execution_policy": "require_escalated",
-    "maximum_recoveries": 1
+    "maximum_recoveries": 1,
+    "execution_review": "results/reviews/political_refusal_network_recovery_execution_review.md",
+    "dns_preflight": "results/protocols/political-refusal-dns-preflight-01.json"
   }
 }

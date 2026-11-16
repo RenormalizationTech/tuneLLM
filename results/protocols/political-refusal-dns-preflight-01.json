@@ -1,0 +1,12 @@
+{
+  "status": "read_only_dns_diagnostic",
+  "host": "api.anthropic.com",
+  "command": ["getent", "ahosts", "api.anthropic.com"],
+  "no_model_or_grader_call": true,
+  "checks": [
+    {"utc": "2026-11-16T07:46:44.833024+00:00", "outer_permission_mode": "default", "returncode": 2, "addresses": []},
+    {"utc": "2026-11-16T07:46:47.253818+00:00", "outer_permission_mode": "require_escalated", "returncode": 0, "addresses": ["160.79.104.10", "2607:6bc0::10"]}
+  ],
+  "interpretation": "Default execution did not resolve the API hostname; host execution did. This is DNS evidence, not a model authentication or API availability probe.",
+  "outer_os_sandbox_relaxed_for_host_check": true
+}
