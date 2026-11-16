@@ -1,0 +1,96 @@
+{
+  "status": "CPU_STAGED_NOT_PUBLISHED",
+  "utc": "2026-11-16T16:54:12.844060+00:00",
+  "bundle": "outputs/steering-release-staging-01",
+  "preflight": {
+    "pass": true,
+    "file_count": 20,
+    "manifest_sha256": "256318b7ebda735387ae8bae3b0f31fbe51655b78f1c08483a986de514c87f12"
+  },
+  "bundle_bytes": 1446694,
+  "archive": {
+    "path": "outputs/steering-release-staging-unreviewed-01",
+    "manifest_sha256": "652d7966c12511c7cca5442e4e940bc0ea6c3309fa87b7684c80461f1decbb4a",
+    "all20files_preserved": true
+  },
+  "cpu_tests": {
+    "passed": 18,
+    "seconds": 5.28,
+    "runtime": "GCADPython3.11, torch2.6.0+cu124/Transformers4.52.3; pure pytest late fallback, plugins disabled",
+    "warnings": 1,
+    "scope": "Hash-before-load/write, shape/revision/tensor rejection, CPU roundtrip, privacy/path/pickle preflight and tinyQwen2 BF16 zero logits/tokens/cleanup; no real7B weights loaded"
+  },
+  "fixes": {
+    "S1_bundle_root_instruction": true,
+    "S2_model_manifest_checked_against_committed_PF_profile_before_read_use": true,
+    "tampered_manifest_no_write_test_passed": true
+  },
+  "source_and_test_sha256": {
+    "scripts/stage_steering_release.py": "4f451fa001b44418748a6aaeacc55cac9e2e8323efdfa81df42636c68a619e37",
+    "tests/test_stage_steering_release.py": "b256d2e0e365cf176cf81fd665e283f8523c6ab65edefb31aa78e476ae1aa571",
+    "scripts/qwen3_gcad_port.py": "f8093f297dc66ee51af08f441f32be129da9650ba68c34ab874707773ba2b556",
+    "results/reviews/steering_release_scope_review.md": "5ae324dad34b47cd99798a3c78c24209011fc9b8b456b8bf7a4a904acc873570",
+    "results/reviews/steering_release_staging_review.md": "fa4e321b7a848eca3dda350079b44559c8e5fa27c75bcc81dde5bea318b1acc1"
+  },
+  "controllers": {
+    "profanity": {
+      "bank_sha256": "898c979c5e30502a0c93b11e5d950cda9696b41e3560dad84333f7bd2dffc8c9",
+      "profile_sha256": "8ed22088d1cd20f99bac0ce60b6406116f743abc055ba1b29fbffd60189f3803",
+      "all_layers": 28,
+      "tensor_sha256": {
+        "delta": "cb00a1f143e34d4526ef54aba4a732483ca2aea24497eed3da122e09d0a310bb",
+        "demand": "d827e949c928e1ff26851a07818f593fbd6f847304e35b83e9b74cbaef427627",
+        "key": "b9310362375f8855bae5e1fb6332bf387ba245c45eb0400fea3c217424d2bd87"
+      },
+      "fixed_base_coef": 5.0,
+      "scale": 1.5,
+      "n": 32
+    },
+    "impolite": {
+      "bank_sha256": "bb12019e3452be24b216c34018f7bd685ed728e6acc529d2e588e6de9738571a",
+      "profile_sha256": "0620e744f8ac2c02c57c17725093a8d73e43cd471bd05590a0a2dc3b3683eaf1",
+      "all_layers": 28,
+      "tensor_sha256": {
+        "delta": "045c70cc43646d1b423f03d767f596e222e46d72976e5bbb448d77fbfb85c1fd",
+        "demand": "566f8a707a3f0684afd3cc0462445aa4f8b8d8592a9805cff3ba41953583f3c3",
+        "key": "84f1cb893c684582528be183d38981be483a9491bf63ab0dc7fdf947a6b5ae69"
+      },
+      "fixed_base_coef": 3.5,
+      "scale": 1.5,
+      "n": 60
+    },
+    "sarcasm": {
+      "bank_sha256": "18f07509558bde63d7f648e3488eff5ddd50fde010115a86b8a6350f57518a0e",
+      "profile_sha256": "4705529188991903f92dfb1c366250830e2a426ccdfda1042f896c0eb92b8e4a",
+      "all_layers": 28,
+      "tensor_sha256": {
+        "delta": "5d9e6d79492ed71c36d74c0999a96b2b8313ffcb38d942efb11859aa59c24bac",
+        "demand": "2731fbb44b33b93e87990f9b1d11186cb84dbaa1da9c0170536815214f825372",
+        "key": "398dcb2535da9d32f9476893e2696672f19fd984aafe937537e3c5b99fe2547e"
+      },
+      "fixed_base_coef": 2.0,
+      "scale": 1.5,
+      "n": 32
+    }
+  },
+  "license_notice_verbatim": true,
+  "runtime_port_byte_copy": true,
+  "private": true,
+  "gpu_target_model_native_HF_network_calls": 0,
+  "uploads": 0,
+  "installs": 0,
+  "commits": 0,
+  "real7b_reload_and_zero_validation": "DEFERRED until4B jobs free; CPUtiny selftest is not real7B validation",
+  "limits": [
+    "Provisional retained7B individual controls only;4B pending; no refusal controller.",
+    "No baseweights, private adapter, raw answers/reasons/tokenarrays or local absolute paths included."
+  ],
+  "root_independent_cpu_tests": {
+    "passed": 18,
+    "seconds": 5.31,
+    "runtime": "GCAD target runtime, pure pytest late fallback, CUDA hidden",
+    "evidence": "Root coordination receipt; no worker rerun."
+  },
+  "handoff": "DONE: CPU staging only; no publication or real7B reload",
+  "finalized_utc": "2026-11-16T16:55:17.853605+00:00"
+}
