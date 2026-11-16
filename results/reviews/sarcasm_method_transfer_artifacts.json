@@ -1,0 +1,27 @@
+{
+  "accepted": true,
+  "coordinator_accepted": true,
+  "advisor_accepted": true,
+  "preview_sha256": "702830482bdcacacc2b4dd1193021e732b19cd1b3f5594e18c702bdc22278011",
+  "fixture_canonical_sha256": "c2459ce6a4f05d03803620ea1587f34c3538c705962e9b27552b5a7982876e89",
+  "fit_inputs_canonical_sha256": "ed264a2c4065255a38a9be776f58c7cf970228051355d5d02c41dacac5f3eac0",
+  "review_method": "Coordinator and existing Claude independently read all five pairs,20 questions,rubric,GCAD systems and default-prefixed SAPS/prompted systems before Qwen calls; exact accepted strings retained.",
+  "checks": {
+    "sarcasm_vs_sincere_explicit": true,
+    "contextual_verbal_irony_not_plain_humor": true,
+    "rubric_five_anchors_and_exact_slots": true,
+    "rubric_independent_of_helpfulness_and_other_traits": true,
+    "benign_questions_no_style_requests": true,
+    "exact_normalized_overlap_absent": true,
+    "full_system_renderings_accepted": true,
+    "off_axis_not_a_gate": true
+  },
+  "limits": [
+    "Train x06 fitted sheet is near-paraphrase of calibration C01; exact-string disjointness is not topical disjointness.",
+    "Train x18 bread dough overlaps held-out H14 topically; primary32-item decision unchanged,predeclared descriptive31-item sensitivity excludes H14.",
+    "Train x04 and calibration C07 both concern houseplants but ask different questions.",
+    "Weary versus friendly expert and playful sarcasm may bundle additional delivery/humor; coupling is descriptive.",
+    "SAPS/prompted default-prefix rendering repeats helpful identity; GCAD uses persona-only by the accepted recipe.",
+    "Claude generated these artifacts and grades model responses; no independent human validity claim."
+  ]
+}

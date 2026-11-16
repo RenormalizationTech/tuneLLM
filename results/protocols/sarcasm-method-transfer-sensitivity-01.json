@@ -1,0 +1,23 @@
+{
+  "manifest_sha256": "236df4a17284672528ab609f46923e37a980b7154b0ee0fe73a419cfce934408",
+  "preview_sha256": "702830482bdcacacc2b4dd1193021e732b19cd1b3f5594e18c702bdc22278011",
+  "fixture_canonical_sha256": "c2459ce6a4f05d03803620ea1587f34c3538c705962e9b27552b5a7982876e89",
+  "heldout_source_sha256": "486300cffd90fe08780ac786f7bf67143fefcc25b343d1c6e972e276075b5683",
+  "declared_before_any_qwen_call": true,
+  "excluded_ids": [
+    "H14"
+  ],
+  "reason": "Topical bread-dough overlap with extraction x18 found during pre-output semantic review.",
+  "primary_sample_size": 32,
+  "descriptive_sensitivity_sample_size": 31,
+  "planned_summaries": [
+    "mean sarcasm",
+    "mean coherence",
+    "count/fraction sarcasm>=50",
+    "profanity lexicon response count",
+    "descriptive impoliteness if available"
+  ],
+  "primary_decisions_unchanged": true,
+  "no_reselection_or_extra_model_calls": true,
+  "if_no_heldout": "Not applicable; do not generate a heldout stage just for this sensitivity."
+}
