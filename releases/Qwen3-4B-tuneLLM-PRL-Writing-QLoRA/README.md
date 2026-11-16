@@ -13,7 +13,9 @@ tags: [qwen3, lora, qlora, physics, experimental]
 
 **Measured math regression:** numeric GSM8K accuracy fell from 117/128 for the saved NF4 base to 111/128 for this adapter. The final results did not trigger reselection. Strict-format correct counts were 97 and 106, respectively.
 
-This private artifact records continued causal language-model training on cleaned paper LaTeX. It does not establish improved PRL acceptance, novelty, originality, human preference, or scientific correctness.
+This artifact records continued causal language-model training on cleaned paper LaTeX. It does not establish improved PRL acceptance, novelty, originality, human preference, or scientific correctness.
+
+This repository was initially published privately. Historical cards, publication receipts, reproduction notes, provenance and manifests retain their original private status as records of the earlier publication; they do not describe current repository visibility.
 
 Requires `RenormalizationTech/Qwen3-4B-tuneLLM-NF4` at revision `e9af208e44e083b77702a71d8aa65b7d97f78ce6`. The exported PEFT config pins that NF4 repository commit, not the upstream Qwen commit.
 Lineage: `Qwen/Qwen3-4B` at `1cfa9a7208912126459214e8b04321603b3df60c`. Packed NF4 weights are restored from stored quantization; FP32 nonquantized modules match PEFT preparation. Adapters are FP32.
@@ -72,7 +74,9 @@ MMLU uses custom local zero-shot likelihood subsets, GSM8K uses numeric fallback
 
 ## Data, attribution and reproduction
 
-The exact private prepared 70/10/20 paper splits are in `reproduction_data/`. All 100 paper attributions, versioned source URLs, PRL DOIs and verified CC BY4.0 licenses are in `paper_attributions.json`. Cleaning removed comments/hidden blocks, author/funding/back matter and preserved scientific equations, citations and used macros; consult corpus provenance and the source archive for exact processing. Source versions may precede final PRL wording. Cleaned text is not guaranteed to be compilable standalone LaTeX.
+The exact prepared 70/10/20 paper splits are in `reproduction_data/`. All 100 paper attributions, versioned source URLs, PRL DOIs and verified CC BY4.0 licenses are in `paper_attributions.json`. Cleaning removed comments/hidden blocks, author/funding/back matter and preserved scientific equations, citations and used macros; consult corpus provenance and the source archive for exact processing. Source versions may precede final PRL wording. Cleaned text is not guaranteed to be compilable standalone LaTeX.
+Public release exposes the prepared test split and frozen evaluation fixtures. Their historical held-out measurements remain as reported, but future tests on these disclosed items are no longer clean held-out evaluations; new independent data are needed for future generalization claims.
+
 Paper text is CC BY4.0; model Apache2.0 does not override that license. MMLU and GSM8K dataset cards specify MIT; IFEval specifies Apache2.0. These three benchmark datasets are evaluation-only, not physics training data. `data_licenses.json` and `benchmark_dataset_licenses.json` record the separate terms and pinned verification. Git history, credentials, raw source archives and base-model weights are not in this adapter payload.
 `reproduction.zip` contains tracked code/config/docs without history; executable source is unchanged and verified against measured modules. Metadata/documentation path redaction is recorded. Start from the pinned NF4 dependency, exact prepared data and frozen fixtures; do not re-query live paper selection. See `REPRODUCE.md` and `environment.lock.txt`.
 

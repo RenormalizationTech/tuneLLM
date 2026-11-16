@@ -27,7 +27,12 @@ relabelled as working, and no retuning is active. The retained 7B style banks
 are [published with runtime and evaluation summaries](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls).
 All 23 files were verified at the pinned remote revision, and all three
 downloaded banks passed CPU loader checks. Existing quantization models and
-the private physics adapter remain separate.
+the public physics adapter remain separate.
+
+**Latest scope: Hugging Face publication only.** NF4 and PRL Writing QLoRA are
+now public; the GSM8K adapter repository was deleted after a verified local
+archive. See the [transition receipt](results/hf_visibility_transition_01.json).
+Refusal work is paused; no new 7B refusal model or controller is claimed.
 
 The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The
@@ -219,9 +224,18 @@ improvement remains unestablished. See the [full physics result](results/physics
 and [execution record](docs/physics_prl_execution.md). A blinded local review is
 available at `outputs/physics-writing-review/review.html`; assessment is deferred
 and human review is optional for the learning milestone.
-The [private physics adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) is published with its
-[pinned private NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4).
-[Publication checks](results/physics_huggingface_publication.json) passed.
+The [public physics adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA)
+is at revision `b9f7ff0222d9e4070ee88f89e4f00ff096e20359`. Its
+[public NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4)
+has current card revision `2ae7eec7ac38290ea28efefd1a06e779027aafc7`; the adapter
+still pins base revision `e9af208e44e083b77702a71d8aa65b7d97f78ce6`.
+The [visibility-transition receipt](results/hf_visibility_transition_01.json)
+records anonymous dependency verification and unchanged weights. This used
+small-file downloads and large-file LFS metadata against previously verified
+hashes, with no new weight download or GPU check. The prepared test split and
+evaluation fixtures are public, so future reuse is not clean held-out testing.
+Original [publication checks](results/physics_huggingface_publication.json)
+remain historical evidence.
 
 
 Initial workflow:
@@ -233,8 +247,10 @@ Initial workflow:
    Hugging Face organization.
 
 The GitHub repository and Hugging Face organization already exist. The first
-artifacts are published: [public GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF)
-and a [private experimental adapter](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA).
+artifacts include [public GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF),
+the public NF4 base and PRL Writing QLoRA adapter. The earlier GSM8K adapter
+repository is deleted; its negative learning result and verified local archive
+are preserved in the [transition receipt](results/hf_visibility_transition_01.json).
 The organization is
 [RenormalizationTech](https://huggingface.co/RenormalizationTech).
 See [plan.md](plan.md) for priorities and the optional research backlog, and

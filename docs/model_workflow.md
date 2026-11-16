@@ -6,6 +6,14 @@ project goal; scientific-writing gains are an experimental outcome, not assumed.
 The routine policy below was updated after the calibration pilot and reviewed
 with Claude following the user's workflow discussion.
 
+Current publication status (2026-11-16): the NF4 base and PRL Writing QLoRA
+adapter are public. The GSM8K adapter repository was deleted after verifying an
+ignored archive of all three reachable revisions (42 file entries). See the
+[transition receipt](../results/hf_visibility_transition_01.json) and
+[release index](../releases/README.md). Current user scope is Hugging Face only;
+refusal work is paused, and no new 7B refusal model or controller is claimed.
+Earlier study plans below do not authorize further compute.
+
 ## Scope: adapter training and behavioral research
 
 This workflow's training steps cover quantization and LoRA/QLoRA learning.
@@ -42,8 +50,8 @@ uses one verified base and one fresh adapter configuration per task:
 6. For a passing nominee, fix the checkpoint, then evaluate the base and selected
    adapter once on the final set. Preserve regressions and uncertainty alongside
    task gains.
-7. Verify reload, document the result, and publish the selected experimental
-   artifact privately when releasing it.
+7. Verify reload, document the result, and release the selected experimental
+   artifact with the explicitly chosen visibility after license/payload review.
 
 Baseline reuse requires matching weights/quantization, tokenizer/chat template,
 fixture and prompt hashes, inference/scorer code hashes and package versions,
@@ -167,8 +175,10 @@ Prepared papers and extracted fields are in `train.jsonl`, `validation.jsonl`
 and `test.jsonl` under `data/physics-prl-01/` (70/10/20 papers). Writing fixtures
 are under `data/benchmark-screen-01/`; model responses are under
 `outputs/physics-final-screen-*/writing_predictions.json`. These large/generated
-folders remain Git-ignored. Exact prepared splits are also in the private
-release's `reproduction_data/` folder.
+folders remain Git-ignored. Exact prepared splits are also in the now-public
+release's `reproduction_data/` folder. The historical test measurements remain
+as reported, but disclosed test data and fixtures cannot provide clean future
+held-out evaluation.
 
 ## Calibration history and checkpoint selection
 
@@ -257,9 +267,17 @@ attributed to quantization alone.
 Verify adapter serialization and regeneration on a freshly reloaded saved base.
 Report the registered configuration and any registered controls, exceptions,
 actual time/memory, and limits.
-Keep new experimental adapters private by default, consistent with the user's
-earlier publication choice. Review concrete model cards and data-license
-compatibility before any new upload. Existing published artifacts remain immutable.
+Review concrete model cards, data-license compatibility and the explicitly
+chosen visibility before any new upload. NF4 and PRL Writing QLoRA are now
+public; historical private labels in receipts and reproduction notes remain
+unchanged. The PRL dependency stays pinned to NF4 revision
+`e9af208e44e083b77702a71d8aa65b7d97f78ce6`, not the newer card commit.
+The transition verified anonymous pinned access through small-file downloads
+and large-file LFS metadata against prior verified hashes, with no new weight
+download or GPU check. Only cards changed; weights and other file identities
+were preserved. The archived GSM8K negative result remains part of the learning
+record after its repository's deletion. New releases do not overwrite historical
+receipts, protocols or execution reports.
 
 Better PRL-like presentation cannot establish novelty, publication suitability
 or acceptance. A negative or inconclusive experiment is still a completed,

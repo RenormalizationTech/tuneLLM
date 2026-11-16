@@ -12,8 +12,13 @@ tags:
 ---
 # Qwen3-4B tuneLLM NF4 base
 
-Standalone **unadapted** NF4 checkpoint for the tuneLLM learning workflow. This
-repository is private. No LoRA adapter or physics training is included here.
+Standalone **unadapted** NF4 checkpoint for the tuneLLM learning workflow.
+No LoRA adapter or physics training is included here.
+
+This repository was initially published privately. Historical cards,
+publication receipts, reproduction notes, provenance and manifests retain their original private
+status as records of the earlier publication; they do not describe current
+repository visibility.
 
 The source is [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B), pinned to
 `1cfa9a7208912126459214e8b04321603b3df60c`. We loaded it with bitsandbytes NF4,

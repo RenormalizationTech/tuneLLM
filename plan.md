@@ -22,6 +22,23 @@ complete the initial project.
 
 ## Live execution update (2026-11-16)
 
+**Current user scope is Hugging Face publication only; refusal research is
+paused.** NF4 and PRL Writing QLoRA are now public at
+`2ae7eec7ac38290ea28efefd1a06e779027aafc7` and
+`b9f7ff0222d9e4070ee88f89e4f00ff096e20359`, respectively. The adapter's NF4
+dependency stays at `e9af208e44e083b77702a71d8aa65b7d97f78ce6`, verified
+anonymously using small-file downloads and large-file LFS metadata against
+previously verified hashes. No weights were uploaded and no new GPU check ran.
+The exact GSM8K adapter repository was deleted after rechecking all three
+reachable revision snapshots (42 file entries; main only, no tags or PR refs).
+Its ignored archive is `outputs/hf-transition-20261116-01/gsm8k-archive`;
+the [factual receipt](results/hf_visibility_transition_01.json) preserves its
+hashes and deletion evidence. The negative learning record remains intact.
+Public PRL test data are disclosed and cannot serve as clean future held-out
+tests. No new 7B refusal model or controller is claimed; the prior political
+coverage branch remains unexecuted. Earlier plans below are history, not a
+release for further compute.
+
 The [fixed-setting Qwen3-4B transfer](docs/qwen3_4b_fixed_transfer_plan.md)
 is registered in [R1](results/protocols/qwen3-4b-fixed-transfer-01.json).
 The [4B closeout](docs/qwen3_4b_fixed_transfer_closeout.md) and
@@ -229,8 +246,8 @@ released. No joint grid is released.
 - The approved reporting, tone-feasibility and positive-refusal pilot sequence
   is complete. Discuss management planning with Claude first; the dedicated
   Codex worker implements code.
-- Reporting cleanup is published and hash-verified in all four Hugging Face
-  repositories; only cards and new compact summaries changed. See
+- Reporting cleanup was published and hash-verified in all four then-existing
+  Hugging Face repositories (GSM8K is now archived and deleted); only cards and new compact summaries changed. See
   `docs/benchmark_summary.md` and `releases/README.md` for scores and exact
   documentation revisions.
 - Tone contrast-construction feasibility is complete: upper bounds 5, 31 and 46
@@ -317,11 +334,11 @@ released. No joint grid is released.
   Reuse compatible baseline results. Rank/LR grids, extra seeds, BF16 controls
   and full quantization sweeps are optional investigations.
 - Physics progress: 100 licensed PRL-associated papers frozen into 70/10/20 splits;
-  NF4 base published privately and reload-verified. Four optimization runs and
+  NF4 base initially published privately and reload-verified (now public). Four optimization runs and
   their development screens completed. The fixed rule selected all-linear rank
   128, LR 5e-5, epoch 1. Both matched controls completed and passed reload
-  verification; the fixed final evaluation and private physics-adapter publication
-  are complete. See `docs/physics_prl_execution.md` and
+  verification; the fixed final evaluation and initial private physics-adapter
+  publication are complete (adapter now public). See `docs/physics_prl_execution.md` and
   `results/physics_rank_selection.json`. Release verification is in
   `results/physics_huggingface_publication.json`. Writing-quality assessment is deferred.
 - Latest writing scope: keep this a lightweight exercise in learning the rough
@@ -337,10 +354,11 @@ released. No joint grid is released.
   generated IDs match exactly; `results/nf4_checkpoint.json`.
 - GitHub repository: created; this working directory is the project repository.
 - Hugging Face organization: `RenormalizationTech` (confirmed by user).
-- Hugging Face artifacts published and verified: public base GGUFs and private experimental adapter.
+- Current Hugging Face artifacts: public base GGUFs, NF4 base, PRL Writing QLoRA
+  and 7B steering controls; the archived GSM8K adapter repository is deleted.
 - Published revisions and scoped load checks: `results/huggingface_publication.json`.
 - Bounded QLoRA completed: better answer format, lower math accuracy; see release cards.
-- Publication visibility confirmed by user: public GGUFs; private experimental adapter.
+- Current visibility/deletion evidence: `results/hf_visibility_transition_01.json`.
 - Environment verified: Python 3.10, PyTorch 2.6.0+cu124, both A6000 GPUs visible.
 - Small-model BF16 baseline: two successful Qwen3-4B runs with identical generated tokens;
   7/8 on the basic smoke fixture. See `docs/execution.md` for evidence and limitations.
@@ -415,7 +433,8 @@ organization ID, artifact names, and visibility must be resolved before upload.
    development criterion. Screen that nominee once, retain the base if it fails,
    and run the fixed final base-versus-selected-adapter comparison once.
 5. Verify reload, report the outcome and measured costs, and release selected
-   experimental artifacts under the existing private publication scope.
+   experimental artifacts under the explicitly chosen publication scope after
+   license and payload review; current NF4/PRL visibility is public.
 
 The reusable workflow documents the larger physics calibration as completed
 history. Further physics writing ratings or another model are separate follow-ups.
@@ -457,7 +476,9 @@ arises. Merging and requantizing the tuned model is a follow-up exercise.
 The 1,024-example, 64-step GSM8K experiment and its fixed checkpoint-selection
 protocol completed before the physics-writing exercise. The selected attention
 LoRA rank-8 adapter improved answer formatting but reduced held-out math accuracy.
-The private release preserves that negative result; see `results/qlora_real_01.json`
+The verified ignored archive and historical publication records preserve that
+negative result after the Hub repository's deletion; see
+`results/hf_visibility_transition_01.json`, `results/qlora_real_01.json`
 and `docs/execution.md`. It is a distinct objective and dataset from the current
 paper-text causal training experiment.
 

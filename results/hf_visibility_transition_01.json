@@ -1,0 +1,775 @@
+{
+  "status": "complete",
+  "created_at": "2026-11-16T20:33:03.848472+00:00",
+  "user_authorized": [
+    "public NF4",
+    "public PRL-Writing-QLoRA",
+    "archive then delete GSM8K-QLoRA"
+  ],
+  "credentials_recorded": false,
+  "weight_uploads": 0,
+  "new_gpu_checks": 0,
+  "public_repositories": [
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
+      "before_revision": "6ba2181bb08ebab104292f19fb381efb8bc6d207",
+      "revision": "2ae7eec7ac38290ea28efefd1a06e779027aafc7",
+      "before_private": true,
+      "card_sha256": "cd1c9f3b828531d53a40bfaba317c28aa3b8076cfdabf036217daa6575853274",
+      "changed_files": [
+        "README.md"
+      ],
+      "all_other_remote_file_identities_unchanged": true,
+      "files": {
+        ".gitattributes": {
+          "bytes": 1570,
+          "identity": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+          "lfs": false
+        },
+        "LICENSE": {
+          "bytes": 11343,
+          "identity": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+          "lfs": false
+        },
+        "README.md": {
+          "bytes": 3677,
+          "identity": "b876e95bfe2d33fbb362f293b28a688b983f864d",
+          "lfs": false
+        },
+        "added_tokens.json": {
+          "bytes": 707,
+          "identity": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "lfs": false
+        },
+        "benchmark_summary.json": {
+          "bytes": 7399,
+          "identity": "2840988945969ab3eca03372bcbe9ea0869d420b",
+          "lfs": false
+        },
+        "chat_template.jinja": {
+          "bytes": 4168,
+          "identity": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "lfs": false
+        },
+        "config.json": {
+          "bytes": 2016,
+          "identity": "a640a04230447257fcc4f9ec7c4a5d02d00910c8",
+          "lfs": false
+        },
+        "export_manifest.json": {
+          "bytes": 2197,
+          "identity": "cc219fc24ae79bb0e82c829f955fdce04c9ee689",
+          "lfs": false
+        },
+        "generation_config.json": {
+          "bytes": 214,
+          "identity": "be89f8af8cb53cdfeaa15cc2c340fe0ce5b01378",
+          "lfs": false
+        },
+        "merges.txt": {
+          "bytes": 1671853,
+          "identity": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "lfs": false
+        },
+        "model-00001-of-00002.safetensors": {
+          "bytes": 1999008122,
+          "identity": "4b0f3e6a6da9c11b379c455a10f4fecbd6ec731d520d89ac46b4829a83a52747",
+          "lfs": true
+        },
+        "model-00002-of-00002.safetensors": {
+          "bytes": 1432430629,
+          "identity": "4ecb4c6014dab3b74f7c0625fa3872344c3e997b41d00c8c32547b0415addddf",
+          "lfs": true
+        },
+        "model.safetensors.index.json": {
+          "bytes": 154761,
+          "identity": "2ef8f2bf7c7e17c6239cbcd19dd8ed31b5133868",
+          "lfs": false
+        },
+        "special_tokens_map.json": {
+          "bytes": 613,
+          "identity": "ac23c0aaa2434523c494330aeb79c58395378103",
+          "lfs": false
+        },
+        "tokenizer.json": {
+          "bytes": 11422654,
+          "identity": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "lfs": true
+        },
+        "tokenizer_config.json": {
+          "bytes": 5404,
+          "identity": "ddaf69808214a44fdd26d3785b66c1367c78277a",
+          "lfs": false
+        },
+        "verification.json": {
+          "bytes": 6659,
+          "identity": "1bcb35a80e5a9a09e85cf01e183cc29a245fad23",
+          "lfs": false
+        },
+        "vocab.json": {
+          "bytes": 2776833,
+          "identity": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "lfs": false
+        }
+      },
+      "private": false,
+      "anonymous_main_verified": true,
+      "pinned_dependency_verification": {
+        "revision": "e9af208e44e083b77702a71d8aa65b7d97f78ce6",
+        "all_recorded_files_match": true,
+        "files": {
+          "LICENSE": {
+            "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "README.md": {
+            "sha256": "d31fc24281d388d9c36260ccd861bdebaaa0ca067db99d4ae987e5089c111643",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "added_tokens.json": {
+            "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "chat_template.jinja": {
+            "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "config.json": {
+            "sha256": "3d2a894aed3f76cdaa7cb8693535b2fb1eafa08f9c36f64579c74dbcb708e7ed",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "generation_config.json": {
+            "sha256": "64d86df2173901c58389974bde21f7d2ab9eb7d79f35a337753329d39cf265c0",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "merges.txt": {
+            "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "model-00001-of-00002.safetensors": {
+            "sha256": "4b0f3e6a6da9c11b379c455a10f4fecbd6ec731d520d89ac46b4829a83a52747",
+            "method": "anonymous pinned LFS metadata and prior byte-verified release SHA256; no new weight download"
+          },
+          "model-00002-of-00002.safetensors": {
+            "sha256": "4ecb4c6014dab3b74f7c0625fa3872344c3e997b41d00c8c32547b0415addddf",
+            "method": "anonymous pinned LFS metadata and prior byte-verified release SHA256; no new weight download"
+          },
+          "model.safetensors.index.json": {
+            "sha256": "c0607b666aa425800ae3a585b4637f5543a357a554da548d21389c3c5e6389d6",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "special_tokens_map.json": {
+            "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "tokenizer.json": {
+            "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "tokenizer_config.json": {
+            "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "verification.json": {
+            "sha256": "d9aa410d586ba433175e02a26f9f39e1e806265615627c643dd3af436ea5f90c",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "vocab.json": {
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+            "method": "anonymous revision-pinned download SHA256"
+          },
+          "export_manifest.json": {
+            "sha256": "1b8b7972786121ae321d6499484a6e6d526bd4c84e4f151bcdc9414be37a051e",
+            "method": "anonymous revision-pinned download SHA256"
+          }
+        }
+      }
+    },
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA",
+      "before_revision": "5a3b128e520b9147b999ecb00da02216159a8cc6",
+      "revision": "b9f7ff0222d9e4070ee88f89e4f00ff096e20359",
+      "before_private": true,
+      "card_sha256": "be59c021284b0b8ff6a76779f2437776a1b2d13c7fb10d4d0ed8f1b72d887219",
+      "changed_files": [
+        "README.md"
+      ],
+      "all_other_remote_file_identities_unchanged": true,
+      "files": {
+        ".gitattributes": {
+          "bytes": 1570,
+          "identity": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+          "lfs": false
+        },
+        "LICENSE": {
+          "bytes": 11343,
+          "identity": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+          "lfs": false
+        },
+        "README.md": {
+          "bytes": 8692,
+          "identity": "9a083bf3cefbf7139f3bcaa86707e38b0cb37869",
+          "lfs": false
+        },
+        "REPRODUCE.md": {
+          "bytes": 3919,
+          "identity": "d97d58a526702d4d5ceca808e185ad3d980aa85b",
+          "lfs": false
+        },
+        "adapter_config.json": {
+          "bytes": 1112,
+          "identity": "7c28a9d6064aeec63b22b2bfb04527c8a66eaebe",
+          "lfs": false
+        },
+        "adapter_model.safetensors": {
+          "bytes": 1057033224,
+          "identity": "cc3e18f287aac6f688f31a3516c7e1ebec305b4b3c7e630f169a5faad4070d21",
+          "lfs": true
+        },
+        "added_tokens.json": {
+          "bytes": 707,
+          "identity": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+          "lfs": false
+        },
+        "base_publication.json": {
+          "bytes": 4677,
+          "identity": "424d48400eb7a96ab847b37b80f7e7cf1bba646b",
+          "lfs": false
+        },
+        "benchmark_dataset_licenses.json": {
+          "bytes": 619,
+          "identity": "47f1a13c4fcc91f49505a4824e434aa86761ffb4",
+          "lfs": false
+        },
+        "benchmark_summary.json": {
+          "bytes": 14219,
+          "identity": "2f61dd22056820fb716aa60f59f990e90c723ab1",
+          "lfs": false
+        },
+        "chat_template.jinja": {
+          "bytes": 4168,
+          "identity": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+          "lfs": false
+        },
+        "corpus_provenance.json": {
+          "bytes": 184148,
+          "identity": "342fceea9565b1b13abc201723b92b057a0d6736",
+          "lfs": false
+        },
+        "corpus_quality.json": {
+          "bytes": 1201,
+          "identity": "5b385199597dfc3bf76c7007eb5b3bf39eeadff0",
+          "lfs": false
+        },
+        "data_licenses.json": {
+          "bytes": 430,
+          "identity": "21503a3b6eec8cc164f6710d125b245f9965c16c",
+          "lfs": false
+        },
+        "environment.lock.txt": {
+          "bytes": 1507,
+          "identity": "970bfefd9cb1deec0b6cf13fe75bd8b42f4737a2",
+          "lfs": false
+        },
+        "evaluation.json": {
+          "bytes": 99081,
+          "identity": "933a8e8ed7db5146f7c8f2081e7954608cfc5948",
+          "lfs": false
+        },
+        "global_protocol.json": {
+          "bytes": 4714,
+          "identity": "7014378057571e8c0b46e7918f1ee38968c970c4",
+          "lfs": false
+        },
+        "human_review/README.md": {
+          "bytes": 537,
+          "identity": "a499830b912dc79f3584c7bfbc2afa606d39bee8",
+          "lfs": false
+        },
+        "human_review/packet.json": {
+          "bytes": 521536,
+          "identity": "9a3cadfbe1455f12527a5b992b981c6aed4a2d45",
+          "lfs": false
+        },
+        "ifeval_language_stability.json": {
+          "bytes": 15782,
+          "identity": "bb9546d11ea2b67293c60f30b9cc333f8a590ffd",
+          "lfs": false
+        },
+        "lr_selection.json": {
+          "bytes": 12758,
+          "identity": "925f21b8cd1c1dd2ac20fc3e6da6497cf9a17c80",
+          "lfs": false
+        },
+        "merges.txt": {
+          "bytes": 1671853,
+          "identity": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "lfs": false
+        },
+        "nltk_resource.json": {
+          "bytes": 1095,
+          "identity": "779891b916a70bfe50e360a54aef594db60cb975",
+          "lfs": false
+        },
+        "paper_attributions.json": {
+          "bytes": 92841,
+          "identity": "c07555e406be1eb73692e0982c13a9b4646706e3",
+          "lfs": false
+        },
+        "protocol_addendum_01.json": {
+          "bytes": 2344,
+          "identity": "ebf8dffc624e44c0e0a568bb0e1f70af0c614777",
+          "lfs": false
+        },
+        "provenance.json": {
+          "bytes": 27352,
+          "identity": "2e6c5813f0b0d101280254ec60d8227c2c8322b5",
+          "lfs": false
+        },
+        "reproduction.zip": {
+          "bytes": 201430,
+          "identity": "b82c4e2c089535713e63d8423ad673fa1ceea70a185f4235466e4ca23b20a40d",
+          "lfs": true
+        },
+        "reproduction_data/benchmarks/development.json": {
+          "bytes": 77566,
+          "identity": "eb5df20b8897623f64b4096cdbf6b708c2e557ec",
+          "lfs": false
+        },
+        "reproduction_data/benchmarks/provenance.json": {
+          "bytes": 2561,
+          "identity": "e93210c083e3ed0db57f2b3a02b37abf8d53e836",
+          "lfs": false
+        },
+        "reproduction_data/benchmarks/test.json": {
+          "bytes": 275227,
+          "identity": "6835a32d8cb8f846462655b3dbd2496ad434e8ce",
+          "lfs": false
+        },
+        "reproduction_data/benchmarks/writing_development.json": {
+          "bytes": 442672,
+          "identity": "f928b8b1b8bb0672300d8ff2928f3535d703c3ba",
+          "lfs": false
+        },
+        "reproduction_data/benchmarks/writing_development_fewshot.json": {
+          "bytes": 661492,
+          "identity": "3cbfd37db2d77fce2016db4940268a162c5d6436",
+          "lfs": false
+        },
+        "reproduction_data/benchmarks/writing_provenance.json": {
+          "bytes": 1230,
+          "identity": "be535a1a8dae12c033e416c471d774cb240a1a62",
+          "lfs": false
+        },
+        "reproduction_data/benchmarks/writing_test.json": {
+          "bytes": 901916,
+          "identity": "9f9cbf49714d18822e5d7c7b1347a7101a13f2ae",
+          "lfs": false
+        },
+        "reproduction_data/benchmarks/writing_test_fewshot.json": {
+          "bytes": 1339556,
+          "identity": "fe0aeb6d0cfd79447a7def713913623b1c9e5566",
+          "lfs": false
+        },
+        "reproduction_data/nf4_checkpoint_report.json": {
+          "bytes": 6933,
+          "identity": "38802765a30a7063478a0f7df234bee501c1a0e7",
+          "lfs": false
+        },
+        "reproduction_data/test.jsonl": {
+          "bytes": 1138181,
+          "identity": "8e926dad4c55482396b2f354fbdd1d6a7148d9eb",
+          "lfs": false
+        },
+        "reproduction_data/train.jsonl": {
+          "bytes": 3847989,
+          "identity": "f4fc55f02573702edda5ede09285089601514aa9",
+          "lfs": false
+        },
+        "reproduction_data/validation.jsonl": {
+          "bytes": 528112,
+          "identity": "cd5851b48be54049df0f220ea7ff23ee2efc862c",
+          "lfs": false
+        },
+        "selection.json": {
+          "bytes": 18088,
+          "identity": "43fbda9c38dba62b25d971e7658f92cbeacde35e",
+          "lfs": false
+        },
+        "special_tokens_map.json": {
+          "bytes": 613,
+          "identity": "ac23c0aaa2434523c494330aeb79c58395378103",
+          "lfs": false
+        },
+        "third_party/ifeval/__init__.py": {
+          "bytes": 0,
+          "identity": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "lfs": false
+        },
+        "third_party/ifeval/evaluation_lib.py": {
+          "bytes": 6984,
+          "identity": "c87422822f9e1565ca7574ac0b3cee5389c9f44e",
+          "lfs": false
+        },
+        "third_party/ifeval/instructions.py": {
+          "bytes": 55162,
+          "identity": "0007359bd37c7b9c1d9557f8937cb6586d2788a7",
+          "lfs": false
+        },
+        "third_party/ifeval/instructions_registry.py": {
+          "bytes": 7240,
+          "identity": "6b42adcc4c8cc827810ab3efa8a06f02bb48c397",
+          "lfs": false
+        },
+        "third_party/ifeval/instructions_util.py": {
+          "bytes": 19538,
+          "identity": "d50702400738df4378fe286c0090a416f9a172fa",
+          "lfs": false
+        },
+        "tokenizer.json": {
+          "bytes": 11422654,
+          "identity": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "lfs": true
+        },
+        "tokenizer_config.json": {
+          "bytes": 5404,
+          "identity": "ddaf69808214a44fdd26d3785b66c1367c78277a",
+          "lfs": false
+        },
+        "training_protocol.json": {
+          "bytes": 30124,
+          "identity": "a860b8b1ce6089b7beae1a9efac658aa79ee6ab6",
+          "lfs": false
+        },
+        "training_run.json": {
+          "bytes": 19887,
+          "identity": "fcc1735b45120f7a62a1de93139fd3a8cfa3db8f",
+          "lfs": false
+        },
+        "vocab.json": {
+          "bytes": 2776833,
+          "identity": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "lfs": false
+        }
+      },
+      "private": false,
+      "anonymous_main_verified": true,
+      "anonymous_pinned_base_dependency_verified": "e9af208e44e083b77702a71d8aa65b7d97f78ce6"
+    }
+  ],
+  "gsm8k_deletion": {
+    "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA",
+    "deleted_at": "2026-11-16T20:33:45.551026+00:00",
+    "archived_head": "6a29265f7dc99577777e412fa76659d8b734fdea",
+    "archive_location": "outputs/hf-transition-20261116-01/gsm8k-archive",
+    "archive_manifest_sha256": "aa720dd92fc6809c3ed8038acd6e500cb6f1e6199c55808db842a17a574a1716",
+    "archive_refs_sha256": "5b2fa9712034ea7d5138e1294dbe94cea1bdff08fde213280d187b040282c096",
+    "archive_revisions": 3,
+    "archive_file_entries": 42,
+    "all_archive_files_reverified_before_delete": true,
+    "refs": {
+      "branches": [
+        {
+          "name": "main",
+          "ref": "refs/heads/main",
+          "target_commit": "6a29265f7dc99577777e412fa76659d8b734fdea"
+        }
+      ],
+      "tags": [],
+      "converts": [],
+      "pull_requests": []
+    },
+    "archive_manifest": {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA",
+      "head": "6a29265f7dc99577777e412fa76659d8b734fdea",
+      "private": true,
+      "commits": [
+        {
+          "revision": "6a29265f7dc99577777e412fa76659d8b734fdea",
+          "title": "Add benchmark summary and update documentation",
+          "created_at": "2026-11-13T16:46:26+00:00",
+          "files": {
+            ".gitattributes": {
+              "bytes": 1570,
+              "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+              "git_blob": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+              "lfs": false
+            },
+            "LICENSE": {
+              "bytes": 11343,
+              "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+              "git_blob": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+              "lfs": false
+            },
+            "README.md": {
+              "bytes": 11383,
+              "sha256": "cd32297f768f53e127bfc0cae3200dcd93f0d2b022cbfa6d1133afedbdd43fc7",
+              "git_blob": "cd61e4f61aa08dedba5066e41de9e11027fb3deb",
+              "lfs": false
+            },
+            "REPRODUCE.md": {
+              "bytes": 3957,
+              "sha256": "fed7a04aaaa8c519d70ee8a84b5b1fad1c9b5560cb724a20ac9d1823507b15c4",
+              "git_blob": "c5c646d7f13e2f8defc6252d7a81def94014984e",
+              "lfs": false
+            },
+            "adapter_config.json": {
+              "bytes": 1032,
+              "sha256": "827ca790fb000554911ead4798fe96f19b9850c5b80a1eae7348a042803ee4b1",
+              "git_blob": "357baab8ff5f6701e4e9c36d0b19eb2f0805128c",
+              "lfs": false
+            },
+            "adapter_model.safetensors": {
+              "bytes": 23631240,
+              "sha256": "261d6429b70630a8dac201fc3e8fd19be144b2577d582a6fe6a7a9d491668d35",
+              "git_blob": "935d09439608fd70dbca6196c062a0ccc9cee3c7",
+              "lfs": true
+            },
+            "added_tokens.json": {
+              "bytes": 707,
+              "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+              "git_blob": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+              "lfs": false
+            },
+            "benchmark_summary.json": {
+              "bytes": 1477,
+              "sha256": "ad816f6aa2cf58312419f229cb5874219c99601bbae255e1ff5738115e198862",
+              "git_blob": "bcdb14d01f515734be0562ef6abe522f9d03ddab",
+              "lfs": false
+            },
+            "chat_template.jinja": {
+              "bytes": 4168,
+              "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+              "git_blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+              "lfs": false
+            },
+            "environment.lock.txt": {
+              "bytes": 1395,
+              "sha256": "5f56da2277bf8eeb14a11c4fb53a73bffba5df6452d24c5c964950d6f31105de",
+              "git_blob": "f023d6a3c63119cfc021fc37bd123d8c67efe50d",
+              "lfs": false
+            },
+            "evaluation.json": {
+              "bytes": 56510,
+              "sha256": "7a278fd5cf6b9202cd77fda7f704bbfc7339f4908d044b6fed07e0f52817ad57",
+              "git_blob": "d8163b98cd0942a2a1c08ee36b2fca04d712af07",
+              "lfs": false
+            },
+            "merges.txt": {
+              "bytes": 1671853,
+              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+              "git_blob": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+              "lfs": false
+            },
+            "protocol.json": {
+              "bytes": 64352,
+              "sha256": "bdacb73a6a5a68237d7305c180190a2c4cb71bebc1de4f314034c448c9c3e1fa",
+              "git_blob": "206e457f9707543cfdf500b777a40f28569b4277",
+              "lfs": false
+            },
+            "provenance.json": {
+              "bytes": 4399,
+              "sha256": "3cf38687c61fe6a2f5a75c8c7c01c6a1f96dd239b13aa4c22b634974b652355e",
+              "git_blob": "32863207c2ddceb0dee7a5f2637887402ad1fb27",
+              "lfs": false
+            },
+            "reproduction.zip": {
+              "bytes": 114163,
+              "sha256": "0069e26655c15aa4304aea2fe363f8f8d39f8fb3cfd6044d5c53f0672e3c9cc5",
+              "git_blob": "84dc3d206fb31ba5c2da2137cdb5fa4fae0b379f",
+              "lfs": true
+            },
+            "retention_sensitivity.json": {
+              "bytes": 302435,
+              "sha256": "8ebebb2e14e3d3bdf7e7da3f197e73a9b7289a6c43ac3538d20a40ef571437d6",
+              "git_blob": "24324fc73c8cdf67472f0e85f68f3955b9624cda",
+              "lfs": false
+            },
+            "special_tokens_map.json": {
+              "bytes": 613,
+              "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+              "git_blob": "ac23c0aaa2434523c494330aeb79c58395378103",
+              "lfs": false
+            },
+            "tokenizer.json": {
+              "bytes": 11422654,
+              "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+              "git_blob": "cd71f61a15a522601badb3dc960d800d9cb3766c",
+              "lfs": true
+            },
+            "tokenizer_config.json": {
+              "bytes": 5404,
+              "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0",
+              "git_blob": "ddaf69808214a44fdd26d3785b66c1367c78277a",
+              "lfs": false
+            },
+            "training_provenance.json": {
+              "bytes": 16738,
+              "sha256": "17badc6e7c6d602b24018f0da9511cddd59de1bc9269f3d81751f66681388394",
+              "git_blob": "89a34186eeb93a5a34857b55600b4749207f91c3",
+              "lfs": false
+            },
+            "vocab.json": {
+              "bytes": 2776833,
+              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+              "git_blob": "4783fe10ac3adce15ac8f358ef5462739852c569",
+              "lfs": false
+            }
+          }
+        },
+        {
+          "revision": "399903ca450b44a68b84ec8b6acfe2ff36cc6e64",
+          "title": "Release validated tuneLLM learning artifacts and measured limitations",
+          "created_at": "2026-11-13T01:13:30+00:00",
+          "files": {
+            ".gitattributes": {
+              "bytes": 1570,
+              "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+              "git_blob": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+              "lfs": false
+            },
+            "LICENSE": {
+              "bytes": 11343,
+              "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+              "git_blob": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+              "lfs": false
+            },
+            "README.md": {
+              "bytes": 10931,
+              "sha256": "0cc6bc613bcf7c965c9929b786e68123475e75ca9850416b80886ad5ddf17af9",
+              "git_blob": "a2b3dd875edc5f7166e7f59311d2e468f92c20c3",
+              "lfs": false
+            },
+            "REPRODUCE.md": {
+              "bytes": 3957,
+              "sha256": "fed7a04aaaa8c519d70ee8a84b5b1fad1c9b5560cb724a20ac9d1823507b15c4",
+              "git_blob": "c5c646d7f13e2f8defc6252d7a81def94014984e",
+              "lfs": false
+            },
+            "adapter_config.json": {
+              "bytes": 1032,
+              "sha256": "827ca790fb000554911ead4798fe96f19b9850c5b80a1eae7348a042803ee4b1",
+              "git_blob": "357baab8ff5f6701e4e9c36d0b19eb2f0805128c",
+              "lfs": false
+            },
+            "adapter_model.safetensors": {
+              "bytes": 23631240,
+              "sha256": "261d6429b70630a8dac201fc3e8fd19be144b2577d582a6fe6a7a9d491668d35",
+              "git_blob": "935d09439608fd70dbca6196c062a0ccc9cee3c7",
+              "lfs": true
+            },
+            "added_tokens.json": {
+              "bytes": 707,
+              "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+              "git_blob": "b54f9135e44c1e81047e8d05cb027af8bc039eed",
+              "lfs": false
+            },
+            "chat_template.jinja": {
+              "bytes": 4168,
+              "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+              "git_blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+              "lfs": false
+            },
+            "environment.lock.txt": {
+              "bytes": 1395,
+              "sha256": "5f56da2277bf8eeb14a11c4fb53a73bffba5df6452d24c5c964950d6f31105de",
+              "git_blob": "f023d6a3c63119cfc021fc37bd123d8c67efe50d",
+              "lfs": false
+            },
+            "evaluation.json": {
+              "bytes": 56510,
+              "sha256": "7a278fd5cf6b9202cd77fda7f704bbfc7339f4908d044b6fed07e0f52817ad57",
+              "git_blob": "d8163b98cd0942a2a1c08ee36b2fca04d712af07",
+              "lfs": false
+            },
+            "merges.txt": {
+              "bytes": 1671853,
+              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+              "git_blob": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+              "lfs": false
+            },
+            "protocol.json": {
+              "bytes": 64352,
+              "sha256": "bdacb73a6a5a68237d7305c180190a2c4cb71bebc1de4f314034c448c9c3e1fa",
+              "git_blob": "206e457f9707543cfdf500b777a40f28569b4277",
+              "lfs": false
+            },
+            "provenance.json": {
+              "bytes": 4399,
+              "sha256": "3cf38687c61fe6a2f5a75c8c7c01c6a1f96dd239b13aa4c22b634974b652355e",
+              "git_blob": "32863207c2ddceb0dee7a5f2637887402ad1fb27",
+              "lfs": false
+            },
+            "reproduction.zip": {
+              "bytes": 114163,
+              "sha256": "0069e26655c15aa4304aea2fe363f8f8d39f8fb3cfd6044d5c53f0672e3c9cc5",
+              "git_blob": "84dc3d206fb31ba5c2da2137cdb5fa4fae0b379f",
+              "lfs": true
+            },
+            "retention_sensitivity.json": {
+              "bytes": 302435,
+              "sha256": "8ebebb2e14e3d3bdf7e7da3f197e73a9b7289a6c43ac3538d20a40ef571437d6",
+              "git_blob": "24324fc73c8cdf67472f0e85f68f3955b9624cda",
+              "lfs": false
+            },
+            "special_tokens_map.json": {
+              "bytes": 613,
+              "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+              "git_blob": "ac23c0aaa2434523c494330aeb79c58395378103",
+              "lfs": false
+            },
+            "tokenizer.json": {
+              "bytes": 11422654,
+              "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+              "git_blob": "cd71f61a15a522601badb3dc960d800d9cb3766c",
+              "lfs": true
+            },
+            "tokenizer_config.json": {
+              "bytes": 5404,
+              "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0",
+              "git_blob": "ddaf69808214a44fdd26d3785b66c1367c78277a",
+              "lfs": false
+            },
+            "training_provenance.json": {
+              "bytes": 16738,
+              "sha256": "17badc6e7c6d602b24018f0da9511cddd59de1bc9269f3d81751f66681388394",
+              "git_blob": "89a34186eeb93a5a34857b55600b4749207f91c3",
+              "lfs": false
+            },
+            "vocab.json": {
+              "bytes": 2776833,
+              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+              "git_blob": "4783fe10ac3adce15ac8f358ef5462739852c569",
+              "lfs": false
+            }
+          }
+        },
+        {
+          "revision": "1c4a206e2b186f0dbc24c7974018771683516540",
+          "title": "initial commit",
+          "created_at": "2026-11-13T01:13:25+00:00",
+          "files": {
+            ".gitattributes": {
+              "bytes": 1519,
+              "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+              "git_blob": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+              "lfs": false
+            }
+          }
+        }
+      ]
+    },
+    "verification": {
+      "authenticated": {
+        "available": false,
+        "http_status": 404
+      },
+      "anonymous": {
+        "available": false,
+        "http_status": 401
+      }
+    },
+    "absent_from_authenticated_organization_model_listing": true
+  },
+  "completed_at": "2026-11-16T20:33:45.551160+00:00"
+}
