@@ -80,6 +80,13 @@ new 7B political-information refusal/GCAD study and same-model method comparison
 then a fixed-workflow Qwen3-4B control with all outcomes reported; GitHub and
 Hugging Face releases; then Qwen3.8-27B and Gemma 4. No model-size causal claim
 or expected 4B failure is assumed. Dataset/source review precedes the new study.
+The political-information protocol and licensed fixture are now registered.
+Grading calibration passed all 16 authored examples in four first-valid batches.
+The original network-isolated attempt produced no labels and is preserved;
+one registered recovery keeps its failed start charged to the same budget.
+The 96-answer Qwen2.5-7B baseline/reference screen is running on GPU 0.
+This is not yet a steering result; fit and intervention work requires the
+frozen headroom rule to find room for improvement.
 The [sarcasm transfer](docs/sarcasm_method_transfer_closeout.md) closed with a
 development null: GCAD induced sarcasm but the tested strengths lost too much
 coherence, and SAPS also had no qualifying setting. The separately reviewed
