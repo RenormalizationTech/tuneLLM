@@ -1,0 +1,9 @@
+{
+  "manifest_sha256": "e916394e9425dfbcdfe43415617a4745fb047c1397498022800cf2733207552a",
+  "selection_sha256": "7b79093f93d98d19350b2261ed6301b50c21a6dbfa7e63cc6c959d9424ee32b1",
+  "development_run_sha256": "a9202c14a7b9d66da5fba8aa0b98d392f7bd074b6e05febc4cde9f3c373ddd6a",
+  "trait_accepted_sha256": "e4c4e1ea3cf5144642e942aaf05c73335a02be8a097c640153a96b57615e61b1",
+  "coherence_accepted_sha256": "ec7569a9520caea80c2280c78db686a728e9a0692d7ff0d301e68235d43adb23",
+  "controls_sha256": "0fe6b4f6f5241b89cfbd8276122fdfb5f361183bad4fc3edf1b1a79858d8f368",
+  "controls_metadata_sha256": "c3fda982096996b1aecf0a96a75baba92e98d1128329d931847958aa6aae7a55"
+}
