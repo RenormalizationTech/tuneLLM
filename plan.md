@@ -24,12 +24,17 @@ complete the initial project.
 
 The [fixed-setting Qwen3-4B transfer](docs/qwen3_4b_fixed_transfer_plan.md)
 is registered in [R1](results/protocols/qwen3-4b-fixed-transfer-01.json).
-All 37 port and runner CPU checks passed. Elicitation and filtering are complete:
-45 profanity, 63 impoliteness and 63 sarcasm pairs passed out of 100 candidates
-per trait. All 150 grading batches passed without retries. All three fresh banks
-are extracted, and every mechanics gate passed. [R2](results/protocols/qwen3-4b-fixed-transfer-evaluation-01.json)
-locks the banks and random controls before held-out generation, which is running
-on GPU 0. New 4B efficacy remains **pending** until blinded held-out grading.
+The [4B closeout](docs/qwen3_4b_fixed_transfer_closeout.md) and
+[aggregate](results/qwen3_4b_fixed_transfer_01.json) are complete. All three GCAD
+directions induced their traits, but none met every quality gate: PF failed
+coherence and invalid-output checks; sarcasm missed coherence relative; impolite
+passed the author-effect rule but missed its additional coherence-relative
+qualification. There is no retuning or new 4B steering-bank release.
+
+All mechanics gates passed. Eligible pairs were 45/63/63, and the
+[R2 lock](results/protocols/qwen3-4b-fixed-transfer-evaluation-01.json) preceded
+held-out generation. The run used 952 generations, 513 teacher-forced passes,
+5 logit forwards and 252 first-valid grading batches with zero retries.
 The [execution-only inference context](results/protocols/qwen3-4b-extraction-inference-context-01.json)
 prevents gradient-history retention during extraction; 12 additional checks
 confirmed identical forward tensors without changing R1 or its scientific settings.
@@ -40,8 +45,9 @@ with zero new compute; its historical quality failure remains disclosed.
 
 The retained 7B style banks are also [staged locally](results/steering_release_staging_01.json)
 as safetensors with a portable runtime, provenance and licences. All 18 packaging
-CPU checks passed. Real-checkpoint reload validation and the eventual 4B results
-still precede final release preparation; **nothing new is uploaded to Hugging Face**.
+CPU checks passed. The [real-base reload checks](results/steering_release_real_reload_02.json)
+passed for all three 7B banks. Final public release preparation is next;
+**nothing new is uploaded to Hugging Face yet**.
 The sections below preserve the preceding decisions and study history.
 
 ## Current scope clarification (2026-11-14)
