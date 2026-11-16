@@ -13,7 +13,7 @@ from scripts import author_gcad_impolite_common as author
 from scripts.save_nf4 import tensor_hash
 
 ROOT=Path(__file__).resolve().parents[1]
-DEST=ROOT/'outputs/steering-release-staging-01'
+DEST=ROOT/'outputs/steering-release-staging-02'
 BASE='Qwen/Qwen2.5-7B-Instruct'
 REV='a09a35458c702b33eeacc393d103063234e8bc28'
 TRAITS=('profanity','impolite','sarcasm')
@@ -172,6 +172,24 @@ def profile_and_tensors(root,trait,*,expected_manifest_sha256):
         if tuple(v.shape)!=SHAPES[k] or v.dtype!=torch.float32 or not torch.isfinite(v).all() or tensor_sha(v)!=p["bank"]["tensor_sha256"][k]:raise ValueError("finite FP32 tensor shape/hash differs")
     return p,values
 
+def validate_tokenizer(tokenizer,snapshot,metadata):
+    from transformers import AutoTokenizer
+    snapshot=Path(snapshot).resolve()
+    required={"config.json","generation_config.json","tokenizer.json","tokenizer_config.json","vocab.json","merges.txt"}
+    if set(metadata)!=required:raise ValueError("complete pinned snapshot metadata required")
+    for name,digest in metadata.items():
+        if sha(snapshot/name)!=digest:raise ValueError("base config/tokenizer/generation metadata changed")
+    if Path(tokenizer.name_or_path).resolve()!=snapshot:raise ValueError("actual tokenizer source differs")
+    reference=AutoTokenizer.from_pretrained(str(snapshot),local_files_only=True,trust_remote_code=False)
+    reference.pad_token=reference.eos_token;reference.padding_side="left"
+    if tokenizer.eos_token_id!=151645 or tokenizer.pad_token_id!=151645 or tokenizer.padding_side!="left":raise ValueError("source tokenizer EOS-as-PAD left padding required")
+    if reference.eos_token_id!=151645 or reference.pad_token_id!=151645 or reference.padding_side!="left":raise ValueError("reference tokenizer policy differs")
+    if tokenizer.get_vocab()!=reference.get_vocab():raise ValueError("actual tokenizer vocabulary differs")
+    if tokenizer.chat_template!=reference.chat_template:raise ValueError("actual tokenizer template differs")
+    actual=json.loads(tokenizer.backend_tokenizer.to_str());expected=json.loads(reference.backend_tokenizer.to_str())
+    for key in ("model","normalizer","pre_tokenizer","post_processor","decoder","added_tokens"):
+        if actual.get(key)!=expected.get(key):raise ValueError("actual tokenizer backend differs: "+key)
+
 def validate_base(model,tokenizer,snapshot,profile,*,base_id,revision):
     snapshot=Path(snapshot).resolve();c=model.config;b=profile["base"]
     if base_id!=BASE or revision!=REV or snapshot.name!=REV:raise ValueError("exact base ID/revision/snapshot required")
@@ -180,17 +198,7 @@ def validate_base(model,tokenizer,snapshot,profile,*,base_id,revision):
     if getattr(c,"_commit_hash",None) not in (None,REV):raise ValueError("loaded base commit differs")
     if (c.model_type,c.num_hidden_layers,c.hidden_size,c.num_attention_heads,c.num_key_value_heads)!=("qwen2",28,3584,28,4):raise ValueError("Qwen2.5-7B native geometry required")
     if c._attn_implementation!="sdpa" or any(p.dtype!=torch.bfloat16 for p in model.parameters()):raise ValueError("native BF16 SDPA model required")
-    for name,digest in b["snapshot_metadata_sha256"].items():
-        if sha(snapshot/name)!=digest:raise ValueError("base config/tokenizer/generation metadata changed")
-    if tokenizer.eos_token_id!=151645 or tokenizer.pad_token_id!=151645 or tokenizer.padding_side!="left":raise ValueError("source tokenizer EOS-as-PAD left padding required")
-    tokenizer_json=json.loads((snapshot/"tokenizer.json").read_text());vocabulary=dict(tokenizer_json["model"]["vocab"])
-    vocabulary.update({x["content"]:x["id"] for x in tokenizer_json.get("added_tokens",[])})
-    if tokenizer.get_vocab()!=vocabulary:raise ValueError("actual tokenizer vocabulary differs")
-    backend=json.loads(tokenizer.backend_tokenizer.to_str())
-    for key in ("model","normalizer","pre_tokenizer","post_processor","decoder","added_tokens"):
-        if backend.get(key)!=tokenizer_json.get(key):raise ValueError("actual tokenizer backend differs")
-    expected=json.loads((snapshot/"tokenizer_config.json").read_text())["chat_template"]
-    if tokenizer.chat_template!=expected:raise ValueError("actual tokenizer template differs")
+    validate_tokenizer(tokenizer,snapshot,b["snapshot_metadata_sha256"])
     validate_geometry(model)
 
 def load_controller(root,trait,model,tokenizer,snapshot,*,base_id,revision,expected_manifest_sha256,zero=False):
@@ -250,6 +258,25 @@ def allowlist():
         *{t+'/'+f for t in TRAITS for f in ('bank.safetensors','profile.json','provenance.json','README.md')}}
 
 
+def prior_validation():
+    return {'staging_01':'Real-7B load guard false positive from tokenizer serialization comparison; base loaded, zero forwards; original tree and log preserved.',
+        'model_forwards':0,'zero_selftest_completed':False,
+        'staging_01_manifest_sha256':sha(ROOT/'outputs/steering-release-staging-01/release_manifest.json'),
+        'log_sha256':sha(ROOT/'outputs/steering-release-validation-01/profanity.log'),
+        'differing_keys':['model.merges','model.ignore_merges'],
+        'repair':'Fresh local reference from hash-checked snapshot; same EOS-as-PAD/left padding; actual vocabulary/template and semantic backend sections compared.'}
+
+
+def history_readme(history):
+    return ('\n## Prior validation history\n\nStaging01 loaded the base but its tokenizer-serialization guard gave a false\n'
+        'positive before any forward: **0 forwards**, zero self-test not reached.\n'
+        'The original01 tree/log are preserved; bank tensors and scientific results\n'
+        'are unchanged. Staging02 uses the checked fresh-reference tokenizer guard.\n'
+        f'01 manifest SHA256: `{history["staging_01_manifest_sha256"]}`.\n'
+        f'Preserved failed-log SHA256: `{history["log_sha256"]}`.\n'
+        'Real7B reload/zero validation remains deferred until separately released.\n')
+
+
 def preflight(root):
     root=Path(root);wanted=allowlist();actual=set()
     for file in root.rglob('*'):
@@ -266,6 +293,9 @@ def preflight(root):
     if actual!=wanted:raise ValueError('incomplete release allowlist')
     m=read(root/'release_manifest.json')
     if m.get('private') is not True or m.get('status')!='local_draft_not_uploaded':raise ValueError('explicit local private draft field required')
+    history=m.get('prior_validation',{})
+    if history.get('model_forwards')!=0 or history.get('zero_selftest_completed') is not False or any(not re.fullmatch('[0-9a-f]{64}',history.get(k,'')) for k in ('staging_01_manifest_sha256','log_sha256')):
+        raise ValueError('prior zero-forward guard-failure history required')
     if set(m['files_sha256'])!=actual-{'release_manifest.json'}:raise ValueError('manifest path/inventory differs')
     for name,digest in m['files_sha256'].items():checked(root/name,digest)
     for name,raw in runtime_files().items():
@@ -286,6 +316,7 @@ def stage():
     model=next(x for x in model_manifest if x['model']==BASE and x['revision']==REV)
     metadata={r['path']:r['sha256'] for r in model['files'] if r['path'] in ('config.json','generation_config.json','tokenizer.json','tokenizer_config.json','vocab.json','merges.txt')}
     staged={trait:(load_impolite() if trait=='impolite' else load_source_profile(trait)) for trait in TRAITS}
+    history=prior_validation()
     DEST.mkdir(mode=0o700)
     from safetensors.torch import save_file,load_file
     import torch
@@ -338,6 +369,10 @@ Runtime is the byte-identical reviewed Qwen3 GCAD port's Qwen2-compatible path;
 its tinyQwen2 source parity/zero tests do not replace a real7B reload check.
 Torch2.6.0/Transformers4.52.3 are the measured basis. The loader validates the
 pinned local base revision, tokenizer metadata, tensor dimensions and hashes.
+Tokenizer structure is compared with a fresh local reference loaded only after
+its snapshot files pass the pinned hashes; EOS-as-PAD and left padding match.
+All model/normalizer/pre-tokenizer/post-processor/decoder/added-token structures,
+vocabulary and chat template must agree. No cache files are altered.
 It cannot attest that a caller secretly modified in-memory model parameters.
 
 Runtime requirements: torch2.6.0+cu124, transformers4.52.3, safetensors and tqdm.
@@ -355,10 +390,11 @@ not a claim that a new prompt matches the published small evaluation design.
 LICENSE and upstream NOTICE are copied verbatim. The NOTICE credits Persona
 Vectors for source data/code. The runtime port is derived Apache-2.0 code;
 its changes are head geometry/norm support and fail-closed audit instrumentation.
-''')
+'''+history_readme(history))
     files={p.relative_to(DEST).as_posix():sha(p) for p in DEST.rglob('*') if p.is_file()}
     save(DEST/'release_manifest.json',{'schema_version':1,'private':True,'status':'local_draft_not_uploaded','base_id':BASE,'revision':REV,
         'files_sha256':files,'staging_script_sha256':sha(Path(__file__)),'source_scope_review_sha256':sha(local('results/reviews/steering_release_scope_review.md')),
+        'prior_validation':history,
         'gpu_or_model_or_native_or_hf_calls':0,'real_7b_reload_validation':'deferred; CPU tensor conversion and tiny tests only'})
     result=preflight(DEST)
     # Recheck every loaded source after conversion; do not repair on mismatch.

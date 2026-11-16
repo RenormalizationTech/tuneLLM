@@ -1,0 +1,160 @@
+{
+  "status": "CPU_TOKENIZER_GUARD_FIX_STAGED_NOT_PUBLISHED",
+  "utc": "2026-11-16T18:07:06.292470+00:00",
+  "bundle": "outputs/steering-release-staging-02",
+  "preflight": {
+    "pass": true,
+    "file_count": 20,
+    "manifest_sha256": "05aea48f36a5365bbe55adad1ee5ef17d52df3711557f960c1f158fab44a853e"
+  },
+  "diagnosis": {
+    "differing_backend_keys": [
+      "model.ignore_merges",
+      "model.merges"
+    ],
+    "snapshot_ignore_merges_key": "absent",
+    "loaded_ignore_merges": false,
+    "merges_count": 151387,
+    "snapshot_merges_representation": "space-delimited pair strings",
+    "loaded_merges_representation": "two-element arrays",
+    "every_snapshot_merge_has_two_parts": true,
+    "canonical_merge_order_and_values_exact_equal": true,
+    "other_backend_keys_equal": true,
+    "conclusion": "Known tokenizer serialization/default-field differences, not a demonstrated semantic tokenizer mismatch."
+  },
+  "fix": {
+    "hash_check_files_before_reference_load": true,
+    "fresh_reference": "AutoTokenizer.from_pretrained(checked_snapshot,local_files_only=True,trust_remote_code=False)",
+    "policy": "Both tokenizers EOS151645 as PAD, left padding; compare actual vocab/chat template and canonical backend model/normalizer/pre_tokenizer/post_processor/decoder/added_tokens.",
+    "manual_merge_normalization": false,
+    "semantic_guards_preserved": true,
+    "cache_files_modified": false,
+    "model_method_strengths_changed": false
+  },
+  "cpu_tests": {
+    "passed": 26,
+    "seconds": 15.51,
+    "warnings": 1,
+    "runtime": "target GCAD runtime, pure pytest late fallback; CUDA hidden; no installs",
+    "real_cached_tokenizer_accepts": [
+      "fresh EOS-as-PAD left-padding tokenizer",
+      "after padding=True batch call"
+    ],
+    "rejects": [
+      "merge-order mutation",
+      "normalizer mutation",
+      "added special token",
+      "chat-template mutation",
+      "wrong PAD token",
+      "right padding"
+    ],
+    "cached_tokenizer_files_unchanged": true,
+    "no_model_weights_loaded": true
+  },
+  "preserved": {
+    "bundle01_manifest_sha256": "256318b7ebda735387ae8bae3b0f31fbe51655b78f1c08483a986de514c87f12",
+    "all_bundle01_files_match_original_manifest": true,
+    "bundle01_receipt_sha256": "34424cadd5360ec054868a8309b9c48c57d222fc253a663c3c0e6af1bb016c55",
+    "failed_check_path": "outputs/steering-release-validation-01/profanity.log",
+    "failed_check_sha256": "16c2da808a55e7b6617e5e3c8f1ce78100c63ababf5284c7e108882038076bc8",
+    "original_validation_scope_reported_by_root": "Base loaded; validation rejected before any model forward. No zero-parity result exists from that attempt."
+  },
+  "banks": {
+    "profanity": {
+      "file_sha256": "898c979c5e30502a0c93b11e5d950cda9696b41e3560dad84333f7bd2dffc8c9",
+      "tensor_sha256": {
+        "delta": "cb00a1f143e34d4526ef54aba4a732483ca2aea24497eed3da122e09d0a310bb",
+        "demand": "d827e949c928e1ff26851a07818f593fbd6f847304e35b83e9b74cbaef427627",
+        "key": "b9310362375f8855bae5e1fb6332bf387ba245c45eb0400fea3c217424d2bd87"
+      },
+      "same_bytes_and_tensors_as_01": true
+    },
+    "impolite": {
+      "file_sha256": "bb12019e3452be24b216c34018f7bd685ed728e6acc529d2e588e6de9738571a",
+      "tensor_sha256": {
+        "delta": "045c70cc43646d1b423f03d767f596e222e46d72976e5bbb448d77fbfb85c1fd",
+        "demand": "566f8a707a3f0684afd3cc0462445aa4f8b8d8592a9805cff3ba41953583f3c3",
+        "key": "84f1cb893c684582528be183d38981be483a9491bf63ab0dc7fdf947a6b5ae69"
+      },
+      "same_bytes_and_tensors_as_01": true
+    },
+    "sarcasm": {
+      "file_sha256": "18f07509558bde63d7f648e3488eff5ddd50fde010115a86b8a6350f57518a0e",
+      "tensor_sha256": {
+        "delta": "5d9e6d79492ed71c36d74c0999a96b2b8313ffcb38d942efb11859aa59c24bac",
+        "demand": "2731fbb44b33b93e87990f9b1d11186cb84dbaa1da9c0170536815214f825372",
+        "key": "398dcb2535da9d32f9476893e2696672f19fd984aafe937537e3c5b99fe2547e"
+      },
+      "same_bytes_and_tensors_as_01": true
+    }
+  },
+  "runtime_port_sha256": "f8093f297dc66ee51af08f441f32be129da9650ba68c34ab874707773ba2b556",
+  "source_and_tests_sha256": {
+    "scripts/stage_steering_release.py": "da410c88416a24aab05a40af9030887ebff14d522e4786018c2a851d983e902d",
+    "tests/test_stage_steering_release.py": "1ddf927c94d96425ced8125672d5f85adaf1c51ff43e6c7ce39d7ab7356e1949"
+  },
+  "source_frozen_port_unchanged": true,
+  "gpu_model_native_HF_network_calls_by_worker": 0,
+  "commits_uploads_installs": 0,
+  "real7b_reload": "DEFERRED for root/advisor review and a separately released GPU opportunity; no efficacy, science or bank changes.",
+  "original01_guard_failure": {
+    "phase": "runtime.example validation before ordinary forward",
+    "base_weights_loaded": true,
+    "model_forwards": 0,
+    "zero_selftest_completed": false,
+    "cause": "Strict loaded-backend versus snapshot-JSON equality rejected serialization/default-field differences.",
+    "differing_keys": [
+      "model.merges",
+      "model.ignore_merges"
+    ],
+    "failed_log_sha256": "16c2da808a55e7b6617e5e3c8f1ce78100c63ababf5284c7e108882038076bc8",
+    "evidence": "Root-reported execution ordering and retained failed-check log; no new target call."
+  },
+  "final_release_provenance_requirement": "Carry the preserved 01 failure (0 forwards), tokenizer serialization diagnosis, checked-reference repair and unchanged bank hashes into final release provenance. The 02 README/manifest metadata revision and initial-manifest preservation are recorded below.",
+  "handoff": "DONE_CPU_METADATA_REVISION; original01 and initial02 manifest preserved; no model/GPU/native calls",
+  "finalized_utc": "2026-11-16T18:08:48.682492+00:00",
+  "prior_cpu_receipts": {
+    "worker21": {
+      "passed": 21,
+      "seconds": 11.28,
+      "warnings": 1,
+      "runtime": "GCADPython3.11 torch2.6.0+cu124 Transformers4.52.3; pure pytest late fallback, no installs",
+      "real_cached_7b_tokenizer_pass": true,
+      "injected_merge_order_rejected": true,
+      "injected_normalizer_rejected": true,
+      "cached_metadata_bytes_unchanged_checked": true,
+      "no_model_weights_loaded": true
+    },
+    "root21": {
+      "passed": 21,
+      "seconds": 11.1,
+      "warnings": 1,
+      "runtime": "target GCAD runtime with pure pytest late fallback",
+      "evidence": "Root coordination receipt; no worker rerun."
+    }
+  },
+  "initial_staging02_manifest": {
+    "preserved_copy": "outputs/steering-release-staging-02-initial-manifest.json",
+    "sha256": "e5a71601eeb63eb0410d3e0f38e8300ef2f063f4630896e7da5c58ea4e20d8bd",
+    "byte_exact": true
+  },
+  "metadata_revision": {
+    "utc": "2026-11-16T18:13:30.906409+00:00",
+    "changed_files": [
+      "README.md",
+      "release_manifest.json"
+    ],
+    "builder_template_updated": true,
+    "all_other_bundle_files_unchanged": true,
+    "bank_guard_and_tensor_bytes_unchanged": true,
+    "original01_files_receipt_log_unchanged": true,
+    "prior_validation_recorded_in_manifest_and_readme": true,
+    "real7b_reload_validation": "deferred"
+  },
+  "root_independent_cpu_tests": {
+    "passed": 26,
+    "seconds": 15.49,
+    "warnings": 1,
+    "runtime": "Pinned GCAD Python3.11/torch2.6.0+cu124/Transformers4.52.3, pure pytest late fallback; CUDA hidden"
+  }
+}

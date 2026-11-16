@@ -41,7 +41,7 @@ def bundle(tmp_path):
         folder=root/trait;folder.mkdir();save_file(v,str(folder/'bank.safetensors'))
         p=profile(trait,v);p['bank']['sha256']=a.sha(folder/'bank.safetensors');put(folder/'profile.json',p)
         put(folder/'provenance.json',{'source_tensor_sha256':p['bank']['tensor_sha256']});(folder/'README.md').write_text('CPU_TEST_ONLY\n')
-    m={'private':True,'status':'local_draft_not_uploaded','files_sha256':{p.relative_to(root).as_posix():a.sha(p) for p in root.rglob('*') if p.is_file()}}
+    m={'private':True,'status':'local_draft_not_uploaded','prior_validation':a.prior_validation(),'files_sha256':{p.relative_to(root).as_posix():a.sha(p) for p in root.rglob('*') if p.is_file()}}
     put(root/'release_manifest.json',m)
     return root,v
 
@@ -166,3 +166,33 @@ def test_tampered_model_manifest_fails_before_read_use_or_any_write(tmp_path,mon
     before={p.name:p.read_bytes() for p in tmp_path.iterdir()}
     with pytest.raises(ValueError,match='hash mismatch'):a.stage()
     assert not dest.exists() and before=={p.name:p.read_bytes() for p in tmp_path.iterdir()}
+
+
+@pytest.mark.parametrize('tamper',[None,'padding_state','merges','normalizer','added_token','template','wrong_pad','right_padding'])
+def test_real_cached_pinned_tokenizer_reference_pass_and_semantic_tamper_rejection(bundle,tamper):
+    from transformers import AutoTokenizer
+    from tokenizers import Tokenizer
+    snapshot=a.local('.hf/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/'+a.REV)
+    names=('config.json','generation_config.json','tokenizer.json','tokenizer_config.json','vocab.json','merges.txt')
+    metadata={name:a.sha(snapshot/name) for name in names}
+    before={name:(snapshot/name).read_bytes() for name in names}
+    tokenizer=AutoTokenizer.from_pretrained(snapshot,local_files_only=True,trust_remote_code=False)
+    tokenizer.pad_token=tokenizer.eos_token;tokenizer.padding_side='left'
+    loader=runtime(bundle[0])
+    if tamper in ('merges','normalizer'):
+        backend=json.loads(tokenizer.backend_tokenizer.to_str())
+        if tamper=='merges':backend['model']['merges'][0],backend['model']['merges'][1]=backend['model']['merges'][1],backend['model']['merges'][0]
+        else:backend['normalizer']={'type':'NFKC'}
+        tokenizer._tokenizer=Tokenizer.from_str(json.dumps(backend))
+        with pytest.raises(ValueError,match='actual tokenizer backend differs'):loader.validate_tokenizer(tokenizer,snapshot,metadata)
+    elif tamper in ('added_token','template','wrong_pad','right_padding'):
+        if tamper=='added_token':tokenizer.add_special_tokens({'additional_special_tokens':['<|CPU_EXTRA_SPECIAL|>']})
+        elif tamper=='template':tokenizer.chat_template+='\nCPU_TEMPLATE_TAMPER'
+        elif tamper=='wrong_pad':tokenizer.pad_token='<|im_start|>'
+        else:tokenizer.padding_side='right'
+        with pytest.raises(ValueError):loader.validate_tokenizer(tokenizer,snapshot,metadata)
+    elif tamper=='padding_state':
+        tokenizer(['a','bb'],padding=True)
+        loader.validate_tokenizer(tokenizer,snapshot,metadata)
+    else:loader.validate_tokenizer(tokenizer,snapshot,metadata)
+    assert before=={name:(snapshot/name).read_bytes() for name in names}
