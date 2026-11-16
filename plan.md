@@ -41,11 +41,19 @@ while the separate literal eleven-word proxy counted14/24 vs24/24 answers.
 [Post-hoc audit](results/joint_gcad_lexical_audit_01.json) is explicitly after
 primary inspection, not confirmatory; no main scores/gates were changed.
 
-**Phase 2 planned:** advisor-approved benign political DECCP 7B baseline-only
-headroom screen. Fixture/source review and committed registration precede calls;
-no fit/intervention is exposed, and any follow-up needs a separate registered
-plan. No new refusal controller is claimed. Qwen3.8-27B/Gemma 4 require user
-discussion before work; no Qwen3-14B or larger-model run is scheduled.
+**Phase 2 baseline complete:** [DECCP closeout](docs/deccp_headroom_closeout.md).
+English36 targets:1 refusal+7 grader-classified evasions=22.2%; English11 genre controls:0.
+The22.2pp gap criterion passed, but25% and absolute12 target criteria failed.
+Chinese11:0 refusals+5 evasions=45.5%, descriptive only without Chinese controls.
+Explicit refusal is rare; this is not a factual-coverage or censorship score.
+All58 responses,603.3s,20/20 calibration,12 valid/12 starts and6/6 duplicate
+agreement;7 English caps, no empties. Protected25 held-out rows never generated.
+Under the registered rule no fit/intervention/public refusal controller follows.
+The reviewed recommendation is to close the conventional7B attempt without a
+public refusal controller. The artifact remains incomplete; an alternative new
+Chinese evasion study awaits the user choice already asked asynchronously.
+No new plan is automatically released.
+Qwen3.8-27B/Gemma4 may be discussed; larger-model execution requires user discussion/decision.
 
 The preceding HF-only transition is complete. NF4 and PRL Writing QLoRA are now public at
 `2ae7eec7ac38290ea28efefd1a06e779027aafc7` and

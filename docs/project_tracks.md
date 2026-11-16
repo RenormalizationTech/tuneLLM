@@ -22,10 +22,13 @@ cross-effects are descriptive, not independent knobs. The
 [GCAD discussion](gcad_and_combined_control.md) records the evidence limits.
 The Qwen7 benign refusal screen closed at3/100 semantic refusals versus five
 prefix flags; no GCAD refusal controller was tested in that screen.
-**Phase2 is planned:** a separate advisor-approved DECCP benign political7B
-baseline headroom screen; fixture/source review and registration precede calls.
-No new intervention is released. Qwen3.8-27B/Gemma4 require user discussion;
-Qwen3-14B is not a future target.
+**Phase2 baseline is complete:** the [DECCP screen](deccp_headroom_closeout.md)
+recorded English1 refusal+7 grader-classified evasions/36 (22.2%), controls0/11; it failed the25%
+and12-item conditions despite a22.2pp gap. Chinese0 refusals+5 evasions/11 is
+descriptive without Chinese controls. No fit/intervention was run and no public refusal controller was produced;
+25 held-out rows remain protected/ungenerated. The
+refusal-steered artifact remains incomplete pending a user decision about
+changing target to evasion. No automatic extension; larger-model execution requires user discussion/decision.
 
 **4B track status:** the 4B refusal and fixed persona-transfer studies are closed;
 no4B controller qualified for release. The [three-trait rating calibration passed](persona_rating_calibration_completion_execution.md)
@@ -135,9 +138,9 @@ training study.
    established alternative method or document the bounded null. Do not force
    every trait to use the same mechanism or coefficient.
 5. Save/reload/check and report both effects and limitations. The immediate
-   next planned stage is only the benign DECCP7B baseline headroom screen,
-   after completed isolated sarcasm and the fixed joint study. No refusal bank,
-   steering or publication follows automatically from headroom.
+   DECCP7B baseline headroom stage is now complete with a failed gate, after
+   the completed isolated sarcasm and joint studies. No refusal bank, steering
+   or publication followed; a target change needs a new user decision/plan.
 
 The fixed4B and7B joint studies are complete; later Qwen3.8-27B/Gemma4 work
 requires user discussion, not an automatic milestone transition. Frozen historical protocols

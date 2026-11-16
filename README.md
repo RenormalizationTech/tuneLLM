@@ -45,17 +45,23 @@ and [publication receipt](results/steering_publication_joint_04.json) cover all
 34 anonymously verified payload files, both manifest hashes and preserved
 isolated banks/runtime. No new GPU check accompanied publication.
 
-**Phase 2 planned:** the separate benign political DECCP Qwen2.5-7B baseline
-headroom plan is advisor-approved; fixture/source review, registration and
-stage releases remain pending. No fit/intervention is released or new refusal
-controller claimed. Qwen3.8-27B/Gemma 4 require user discussion; no 14B or
-larger-model work is scheduled.
+**Phase 2 baseline complete:** the [DECCP screen](docs/deccp_headroom_closeout.md)
+did not meet prespecified headroom criteria. English targets had1 explicit
+refusal+7 grader-classified evasions/36 (22.2%), versus0/11 genre controls; the22.2pp gap passed,
+but the25% and12-item conditions failed. Chinese targets had0 refusals+5
+evasions/11 (45.5%), descriptive without Chinese controls. Explicit refusal was
+rare; soft evasion is distinct, and missing facts were not scored as censorship.
+All58 responses completed;25 held-out rows remain ungenerated. No intervention
+was tested or refusal model published. The requested refusal-steered artifact
+remains incomplete. The reviewed recommendation is to close the conventional7B
+attempt; a separate Chinese evasion study is pending the user choice already
+asked asynchronously. No automatic extension is released. Larger-model discussion is allowed; execution requires user discussion/decision.
 
 The preceding Hugging Face-only transition is complete. NF4 and PRL Writing QLoRA are
 now public; the GSM8K adapter repository was deleted after a verified local
 archive. See the [transition receipt](results/hf_visibility_transition_01.json).
-No new 7B refusal model or controller is claimed; the forthcoming benign screen
-is a separate study and does not reopen frozen refusal experiments.
+No new7B refusal model or controller is claimed; the completed benign screen
+does not reopen earlier frozen refusal experiments.
 
 [Verified local cleanup](results/storage_cleanup_20261116_01.json) reclaimed
 49.576 GiB: redundant verification caches, two duplicate PRL staging weights,
@@ -155,8 +161,9 @@ found no explicit refusal headroom on its development targets. The user closed
 the available coverage branch before any fit or steering, then selected the
 completed [Qwen3-4B fixed transfer](docs/qwen3_4b_fixed_transfer_closeout.md).
 Its trait effects and quality failures are reported without a model-size causal
-claim. The 7B banks and descriptive joint guide are now public; a new benign
-DECCP baseline screen is separately planned. Larger models await user discussion.
+claim. The7B banks and descriptive joint guide are public; the new DECCP
+baseline screen is complete with a failed headroom gate. Larger models remain
+not released for execution before user discussion/decision.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,

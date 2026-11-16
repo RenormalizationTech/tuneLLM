@@ -37,11 +37,16 @@ not intent, comprehensive vocabulary or a word percentage. Main scores/gates
 are unchanged; both pooled and prompt-centred pooled correlations remain
 condition-confounded. See the [full measured guide](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls/blob/e1e56e6384214be873984f5fb9421ff6c61b9e85/joint_controls/GUIDE.md).
 
-Phase2's benign DECCP7B baseline headroom plan is advisor-approved; fixture/
-source review, registration and stage releases are still required. No new
-refusal intervention or controller is claimed. No14B/larger work is released;
-Qwen3.8-27B/Gemma4 await user discussion. Older planning below is historical
-context, not authorization for a new sweep or simultaneous-control rescue.
+Phase2's [DECCP7B baseline](deccp_headroom_closeout.md) is complete and failed
+its headroom rule: English1 explicit refusal+7 evasions/36=22.2%, controls0/11;
+Chinese0 refusals+5 evasions/11=45.5% is descriptive without Chinese controls.
+The22.2pp gap passed, but the25%/12-item requirements did not. This distinguishes
+grader-classified evasion from explicit refusal; omission was not treated as censorship.
+No fit/intervention was run or public refusal controller produced, and25
+held-out rows were never generated. The requested refusal-steered artifact remains
+incomplete. A change to evasion-focused research awaits user decision; no
+extension, larger-model execution or joint rescue is released; discussion is allowed. Older planning below
+remains historical context.
 
 ## What GCAD changes
 
@@ -191,8 +196,8 @@ the individual-control goal, and no retuning is released.
 
 The bounded sarcasm tuning and the separate fixed joint study are closed.
 No further sweep is released. The fixed Qwen3-4B transfer also completed with
-no quality-qualified controller. A new benign7B baseline headroom screen is
-planned separately; larger-model targets require discussion.
+no quality-qualified controller. The separate benign7B DECCP baseline is now
+complete with a failed headroom gate; larger-model discussion is allowed, with no execution before user decision.
 
 The paper's tested humorous persona is not a sarcasm result. Its
 [Appendix O](https://arxiv.org/html/2605.10664v3) analyzes incidental refusals

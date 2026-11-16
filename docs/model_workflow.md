@@ -14,10 +14,14 @@ ignored archive of all three reachable revisions (42 file entries). See the
 complete and [publicly verified](../results/steering_publication_joint_04.json):
 all12 arms measured,0/5 combined candidates qualified; strong coupling and
 coherence costs remain visible. Friendly-PF scores are distinct from the
-separate post-hoc literal lexical audit. The next plan is a new benign DECCP
-7B baseline headroom screen, with fixture/source review and registration pending;
-no intervention or new refusal controller is released. Larger-model work
-(Qwen3.8-27B/Gemma4) awaits discussion; Qwen3-14B is historical only.
+separate post-hoc literal lexical audit. The [DECCP7B baseline](deccp_headroom_closeout.md)
+is also complete and did not meet prespecified headroom criteria: English
+1 refusal+7 evasions/36, controls0/11; Chinese0+5/11 is descriptive only. Grader-classified
+evasion has a subjective boundary and is distinct from explicit refusal; this did not score missing facts or
+accuracy. No intervention/refusal model was tested or published;25 held-out
+rows are ungenerated. The requested refusal-steered artifact remains incomplete
+pending user decision about an evasion-focused target. No automatic extension;
+larger-model execution requires user discussion/decision; Qwen3-14B remains historical only.
 
 ## Scope: adapter training and behavioral research
 
