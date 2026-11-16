@@ -1,0 +1,31 @@
+{
+  "manifest_sha256": "2ce6212a05c5f2c086aed6d867fefcee0b29f308f2f9387e95e5cdcf9c5336d4",
+  "files_sha256": {
+    "eligibility_profanity": "7a9ec60c65c4002740c9f0f5c2b04c3f672c818893e6e63b129fba864c81aad7",
+    "eligibility_impolite": "3ddcd62413d35ff1842f7e4412c8ec71aacf5a4913dd0a07725dcf8274754774",
+    "eligibility_sarcasm": "e1ec84222f9ebbe8f51d51fedd73be611c6062f5e8572c96cf877cb7ab2b91b2",
+    "profanity/bank.safetensors": "b3bccfc6b55587fad0a0006cec26d2030271645b61db68890e6e4686133e348c",
+    "profanity/bank.json": "61fc6e5fa8d66e533318b18f60eccebbf60291318e5c81944bba276868ad72ca",
+    "profanity/integrity.json": "020ca0cf3250665babfd1ecea9f6bb7e14366af12828b3c9b50cd4aa1d132630",
+    "profanity/encodings.json": "8237e768ae9b32e9d0e3965432e08fe4c62eafd76f3d50c160c997dd4f266723",
+    "impolite/bank.safetensors": "a7842f49728246e69b067c6ce40fbfe81d737ec958088e45a1ec15401061eb76",
+    "impolite/bank.json": "a52e2b1edd28964e7a0eb758cb15162430b04a2d367a01b03fd565e06b9565e9",
+    "impolite/integrity.json": "29fc0ce2546d7d88d5e6d09d344cc416458b7d6a4d2b3dbecd96ff01d98a1008",
+    "impolite/encodings.json": "8a43902076bd4033e251eef88c4776e9f43a15525cef848622682e9f71d90eb9",
+    "sarcasm/bank.safetensors": "9d28ab347969dc689a288042f343b441ba2f3013292bf00f2aa724a8aae81575",
+    "sarcasm/bank.json": "8f95b03f06fb85ce85dcf801a3ac5381060ee8a353758e324d8d96842c1e9e52",
+    "sarcasm/integrity.json": "6a459735990aaf6b1aa5cb9f1643e4edaa8b08ebf4e89ef8cd5466b1a74fe09f",
+    "sarcasm/encodings.json": "4367e31f811892f88560c03a02c93f204d4cb3b7a2ab3664bc57901c75f781e5",
+    "mechanics/run.json": "aa90a372cc3985e19c9e71588648ca5ae685a5a7089a965329827c72f990d04d",
+    "mechanics/integrity.json": "396e00ed675dc02057d109d15e1b413f4a386e98982bc5661d6e9b9f3e9ab1f1",
+    "mechanics/result.json": "99a4676a123eada6268256ceeaf690fd16e85412c2573b083e2a4bb2e74c0ef4",
+    "controls.safetensors": "9ac7c74c7ac9dd8c1131f0f639183e9d2319584e66e17872327eae435c802d95",
+    "controls_metadata.json": "c66899a5055554e8f68597ce1acb88715b4c7877a0f0475cd77b3894135b74c5"
+  },
+  "available_traits": [
+    "profanity",
+    "impolite",
+    "sarcasm"
+  ],
+  "no_selection": true
+}
