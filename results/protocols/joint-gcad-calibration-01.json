@@ -1,0 +1,10 @@
+{
+  "manifest_sha256": "ab1c5529821e3cff59949a409f549cc8ec8b3dbc3b6acd93068c3de3c4a08df8",
+  "calibration_sha256": "ee66fd25e5b268fcfc6a890ebb545571796a515e363c9aede1b8dfead4c2c350",
+  "accepted_sha256": {
+    "profanity": "b3b59fa3fc497e8848ede248662ab82408cbed2223e3bf45cedbdd8c043ba4a7",
+    "impolite": "d4632b697357522cf36a961fbfa2ae070ce70bf1e4e8f84a8b6d4c63f3ec3481",
+    "sarcasm": "800ff7b64b597324d25bad06a229a92bda7eb675754c54f337431c5e3d21e1c7",
+    "coherence": "53e82c48165e8859fbfd3189b45d8db46319085bb2ad91e1e77d539e359e0146"
+  }
+}
