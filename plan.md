@@ -75,6 +75,11 @@ No joint or14B work is released.
 GCAD if effective, with trait-specific method/settings fallback accepted.
 Cross-effects describe correlations and coupling; strong coupling is reported,
 not a rejection or mandatory disentanglement target. Joint control is optional.
+The [2026-11-16 sequence](docs/political_refusal_research_plan.md) is now:
+new 7B political-information refusal/GCAD study and same-model method comparisons;
+then a fixed-workflow Qwen3-4B control with all outcomes reported; GitHub and
+Hugging Face releases; then Qwen3.8-27B and Gemma 4. No model-size causal claim
+or expected 4B failure is assumed. Dataset/source review precedes the new study.
 The [sarcasm transfer](docs/sarcasm_method_transfer_closeout.md) closed with a
 development null: GCAD induced sarcasm but the tested strengths lost too much
 coherence, and SAPS also had no qualifying setting. The separately reviewed

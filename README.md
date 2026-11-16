@@ -102,6 +102,12 @@ The [Qwen7 refusal headroom screen](docs/refusal_headroom_closeout.md) found
 The secondary phrase matcher counted five; classification sensitivity is
 disclosed. No GCAD refusal controller was tested or retained.
 
+The [next phase selected on 2026-11-16](docs/political_refusal_research_plan.md)
+tests GCAD refusal/information-access steering on benign published political
+questions at 7B, alongside fixed subtraction and projection. Then the frozen
+workflow gets a quick Qwen3-4B control, with actual successes/nulls reported,
+followed by GitHub/Hugging Face releases and later Qwen3.8-27B/Gemma 4 work.
+
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
 a small development screen, and one fixed final comparison. Compatible baseline
