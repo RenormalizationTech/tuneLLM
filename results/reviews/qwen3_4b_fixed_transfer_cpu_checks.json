@@ -1,0 +1,50 @@
+{
+  "status": "CPU_READY",
+  "created_utc": "2026-11-16T16:35:07.414283+00:00",
+  "source_and_test_sha256": {
+    "scripts/qwen3_4b_fixed_transfer.py": "4a64dbef1d8c4b112c1d16428df7797ecfab76f96c3335255d7d8d416a7393e2",
+    "scripts/qwen3_gcad_port.py": "f8093f297dc66ee51af08f441f32be129da9650ba68c34ab874707773ba2b556",
+    "configs/qwen3_4b_fixed_transfer.json": "df05c912f3f25cd1a2f96a1192a05f7ae8dbafe04ec7e8d6f5085812e2ec6175",
+    "scripts/qwen3_4b_fixed_transfer_runbook.md": "cbfd2564ecf0db56e9432b90daa596295fcabd59a6e5e86cc9bef3701c277234",
+    "scripts/qwen3_gcad_port_NOTICE": "49e5dfe41e0d2ceca9ec85d692b77451b4f68d708d22b00e83a08a1368c3b8ef",
+    "scripts/qwen3_gcad_port_LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "tests/test_qwen3_gcad_port.py": "d64d9e7dd806dfdb1984ae714a59da473d4aac9d3b0e78dc6f431dce3310530e",
+    "tests/test_qwen3_4b_fixed_transfer.py": "104a0efe4f31acbd0339470b34fe37e5c1ecd998ae3bdc02e63d2cc0f7c3451b"
+  },
+  "runtime": {
+    "python": "3.11.18",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.52.3",
+    "pytest": "8.4.2 late fallback; plugins disabled; no installation"
+  },
+  "port": {
+    "passed": 15,
+    "seconds": 5.21,
+    "evidence": "Root independent target-runtime receipt supplied in coordination message; port and port tests unchanged since it. Not a new worker rerun."
+  },
+  "runner": {
+    "passed": 22,
+    "seconds": 6.34,
+    "evidence": "Worker final target-runtime pytest run, after component-count/native-identity report changes; exit0.",
+    "warning_count": 1,
+    "warning": "pkg_resources/sre_constants deprecation from late pytest fallback"
+  },
+  "total_passed": 37,
+  "cli_help_passed": true,
+  "checks": [
+    "Qwen2 FP32/BF16 author regression; Qwen3 normalized Q/K, padded/cached attention and decomposition; gate arithmetic and zero logits/tokens; geometry negatives and cleanup",
+    "All eight branch plans packed and immutable; source question construction; cached nonthinking tokenizer; response-retokenization prefix diagnostics",
+    "Actual runner controller constructor and tiny36-block zero hook path; safetensors roundtrip and exact 7B-shaped dedicated-generator random parity",
+    "Invalid/think-tag union, baseline-zero versus measured active norms, every report branch/margins, primary retention on descriptive-only failure",
+    "Precondition Wait/no writes, G1 descriptive-last pending-impolite no-call, R2 artifact tamper, first-valid replay, structural retry, uncertain start and 504 pre-start budget",
+    "Impolite component counts and requested/observed judge/runtime identity export fields"
+  ],
+  "no_study_preparation": true,
+  "no_target_model_or_gpu_or_native_calls": true,
+  "no_installs_downloads_or_commits": true,
+  "limits": [
+    "CPU and tiny in-memory models do not establish real-checkpoint mechanics or steering efficacy; R1 and explicit live releases remain required.",
+    "Model-specific fixed-setting transfer; no model-size causality, joint independence, new refusal experiment or universal quality claim.",
+    "Prompt/response retokenization mismatches are disclosed while preserving author pooling; think tags and truncation are separately reported."
+  ]
+}

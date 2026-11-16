@@ -1,0 +1,17 @@
+Qwen3 GCAD adaptation — NOTICE
+
+Derived from NihiI-obstat/Gated-Cropped-Attention-Delta,
+https://github.com/NihiI-obstat/Gated-Cropped-Attention-Delta
+commit 6c879f4d12e2b01274fc96c9afdb0f4f3a26d4de:
+ core/generate_vec.py: get_prompt_attn_delta_p_and_r
+ scripts/generate_vec_prompt_attn_k.py: compute_k_pos_and_avg_demand
+ core/gated_steerer.py: MultiLayerGatedSteerer
+
+Original source is licensed Apache-2.0; exact LICENSE accompanies this notice.
+No standalone upstream NOTICE was supplied in the pinned source archive.
+This notice identifies the derived work and does not claim to be an upstream
+NOTICE or author endorsement.
+
+Changes: native head_dim and Qwen3 rotary imports; per-head Q/K normalization;
+fail-closed geometry validation; non-nesting and applied/skipped hook counters.
+The source gate, update, pooling and dtype operations remain unchanged.
