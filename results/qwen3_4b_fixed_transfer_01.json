@@ -1,0 +1,394 @@
+{
+  "status": "complete",
+  "manifest_sha256": "2ce6212a05c5f2c086aed6d867fefcee0b29f308f2f9387e95e5cdcf9c5336d4",
+  "model": {
+    "id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  "traits": {
+    "profanity": {
+      "status": "heldout_failure",
+      "eligible_pairs": 45,
+      "base_coef": 5.0,
+      "blocks": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "conditions": {
+        "baseline": {
+          "n": 32,
+          "trait_conservative": 0.0,
+          "trait_numeric_mean": 0.0,
+          "refusals": 0,
+          "coherence": 87.0,
+          "lexicon_hits": 0,
+          "invalid": 0,
+          "empty": 0,
+          "caps": 32,
+          "eos": 0,
+          "mean_tokens": 160.0,
+          "mean_distinct_bigram": 0.9668173362891795,
+          "frozen_invalid": 0,
+          "think_tag_count": 0,
+          "realized_position_weighted_norm": 0.0
+        },
+        "profanity": {
+          "n": 32,
+          "trait_conservative": 37.34375,
+          "trait_numeric_mean": 37.34375,
+          "refusals": 0,
+          "coherence": 20.5625,
+          "lexicon_hits": 28,
+          "invalid": 6,
+          "empty": 0,
+          "caps": 32,
+          "eos": 0,
+          "mean_tokens": 160.0,
+          "mean_distinct_bigram": 0.7567748901454314,
+          "frozen_invalid": 6,
+          "think_tag_count": 0,
+          "realized_position_weighted_norm": 6.088475738478317
+        },
+        "random_profanity": {
+          "n": 32,
+          "trait_conservative": 0.0,
+          "trait_numeric_mean": 0.0,
+          "refusals": 0,
+          "coherence": 85.03125,
+          "lexicon_hits": 0,
+          "invalid": 0,
+          "empty": 0,
+          "caps": 32,
+          "eos": 0,
+          "mean_tokens": 160.0,
+          "mean_distinct_bigram": 0.9637727584576331,
+          "frozen_invalid": 0,
+          "think_tag_count": 0,
+          "realized_position_weighted_norm": 4.955935616252873
+        }
+      },
+      "gates": {
+        "trait_gain": true,
+        "lexicon_absolute": true,
+        "lexicon_gain": true,
+        "coherence_absolute": false,
+        "coherence_relative": false,
+        "invalid": false,
+        "trait_random_gain": true,
+        "all_pass": false
+      },
+      "failed_gate_keys": [
+        "coherence_absolute",
+        "coherence_relative",
+        "invalid"
+      ],
+      "gate_margins": {
+        "trait_gain": 17.34375,
+        "trait_random_gain": 17.34375,
+        "coherence_absolute": -29.4375,
+        "coherence_relative": -46.4375,
+        "invalid": -3,
+        "lexicon_absolute": 20,
+        "lexicon_gain": 20
+      }
+    },
+    "impolite": {
+      "status": "author_effect_only",
+      "eligible_pairs": 63,
+      "base_coef": 3.5,
+      "blocks": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "conditions": {
+        "baseline": {
+          "n": 60,
+          "trait_numeric_count": 60,
+          "trait_refusals": 0,
+          "trait_numeric_sum": 78,
+          "coherence_sum": 4639,
+          "trait_numeric_mean": 1.3,
+          "trait_conservative_mean": 1.3,
+          "coherence_mean": 77.31666666666666,
+          "caps": 57,
+          "eos": 3,
+          "empty": 0,
+          "degenerate": 0,
+          "mean_generated_tokens": 496.65,
+          "mean_author_retokenized_tokens": 496.55,
+          "realized_position_weighted_norm": 0.0,
+          "frozen_invalid": 0,
+          "think_tag_count": 0,
+          "effective_invalid": 0
+        },
+        "random_impolite": {
+          "n": 60,
+          "trait_numeric_count": 60,
+          "trait_refusals": 0,
+          "trait_numeric_sum": 84,
+          "coherence_sum": 4691,
+          "trait_numeric_mean": 1.4,
+          "trait_conservative_mean": 1.4,
+          "coherence_mean": 78.18333333333334,
+          "caps": 48,
+          "eos": 12,
+          "empty": 0,
+          "degenerate": 0,
+          "mean_generated_tokens": 485.43333333333334,
+          "mean_author_retokenized_tokens": 485.21666666666664,
+          "realized_position_weighted_norm": 2.599311968133261,
+          "frozen_invalid": 0,
+          "think_tag_count": 0,
+          "effective_invalid": 0
+        },
+        "impolite": {
+          "n": 60,
+          "trait_numeric_count": 60,
+          "trait_refusals": 0,
+          "trait_numeric_sum": 4811,
+          "coherence_sum": 3121,
+          "trait_numeric_mean": 80.18333333333334,
+          "trait_conservative_mean": 80.18333333333334,
+          "coherence_mean": 52.016666666666666,
+          "caps": 0,
+          "eos": 60,
+          "empty": 0,
+          "degenerate": 0,
+          "mean_generated_tokens": 142.45,
+          "mean_author_retokenized_tokens": 141.45,
+          "realized_position_weighted_norm": 3.580390261655019,
+          "frozen_invalid": 0,
+          "think_tag_count": 0,
+          "effective_invalid": 0
+        }
+      },
+      "effective_invalid": {
+        "baseline": 0,
+        "impolite": 0,
+        "random_impolite": 0
+      },
+      "author_effect": true,
+      "qualification": {
+        "random_gain": true,
+        "coherence_absolute": true,
+        "coherence_relative": false,
+        "invalid": true
+      },
+      "gates": {
+        "author_effect": true,
+        "random_gain": true,
+        "coherence_absolute": true,
+        "coherence_relative": false,
+        "invalid": true,
+        "all_pass": false
+      },
+      "residual_contrasts": "not applicable; no residual arm",
+      "failed_gate_keys": [
+        "coherence_relative"
+      ],
+      "gate_margins": {
+        "author_effect": 48.88333333333334,
+        "random_gain": 58.78333333333333,
+        "coherence_absolute": 2.0166666666666657,
+        "coherence_relative": -5.299999999999997,
+        "invalid": 6
+      }
+    },
+    "sarcasm": {
+      "status": "heldout_failure",
+      "eligible_pairs": 63,
+      "base_coef": 2.0,
+      "blocks": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "conditions": {
+        "baseline": {
+          "n": 32,
+          "trait_conservative": 0.0,
+          "trait_numeric_mean": 0.0,
+          "refusals": 0,
+          "coherence": 87.0,
+          "lexicon_hits": 0,
+          "invalid": 0,
+          "empty": 0,
+          "caps": 32,
+          "eos": 0,
+          "mean_tokens": 160.0,
+          "mean_distinct_bigram": 0.9668173362891795,
+          "individual_trait_ge50": 0,
+          "frozen_invalid": 0,
+          "think_tag_count": 0,
+          "realized_position_weighted_norm": 0.0
+        },
+        "sarcasm": {
+          "n": 32,
+          "trait_conservative": 56.125,
+          "trait_numeric_mean": 56.125,
+          "refusals": 0,
+          "coherence": 63.90625,
+          "lexicon_hits": 0,
+          "invalid": 0,
+          "empty": 0,
+          "caps": 32,
+          "eos": 0,
+          "mean_tokens": 160.0,
+          "mean_distinct_bigram": 0.9703800665337168,
+          "individual_trait_ge50": 22,
+          "frozen_invalid": 0,
+          "think_tag_count": 0,
+          "realized_position_weighted_norm": 2.1037318092107404
+        },
+        "random_sarcasm": {
+          "n": 32,
+          "trait_conservative": 0.0,
+          "trait_numeric_mean": 0.0,
+          "refusals": 0,
+          "coherence": 87.0625,
+          "lexicon_hits": 0,
+          "invalid": 0,
+          "empty": 0,
+          "caps": 32,
+          "eos": 0,
+          "mean_tokens": 160.0,
+          "mean_distinct_bigram": 0.9616882938405708,
+          "individual_trait_ge50": 0,
+          "frozen_invalid": 0,
+          "think_tag_count": 0,
+          "realized_position_weighted_norm": 1.6943096658771486
+        }
+      },
+      "gates": {
+        "trait_gain": true,
+        "individual_ge50": true,
+        "coherence_absolute": true,
+        "coherence_relative": false,
+        "invalid": true,
+        "trait_random_gain": true,
+        "all_pass": false
+      },
+      "descriptive_impolite_means": {
+        "baseline": 1.28125,
+        "sarcasm": 32.3125,
+        "random_sarcasm": 1.4375
+      },
+      "descriptive_impolite_status": "complete",
+      "H14_excluded_descriptive31": {
+        "baseline": {
+          "trait_conservative": 0.0,
+          "coherence": 86.96774193548387
+        },
+        "sarcasm": {
+          "trait_conservative": 55.516129032258064,
+          "coherence": 64.19354838709677
+        },
+        "random_sarcasm": {
+          "trait_conservative": 0.0,
+          "coherence": 87.0
+        }
+      },
+      "failed_gate_keys": [
+        "coherence_relative"
+      ],
+      "gate_margins": {
+        "trait_gain": 36.125,
+        "trait_random_gain": 36.125,
+        "coherence_absolute": 13.90625,
+        "coherence_relative": -3.09375,
+        "invalid": 3,
+        "individual_ge50": 14
+      }
+    }
+  },
+  "costs": {
+    "generations": 952,
+    "teacher_forced": 513,
+    "logit_forwards": 5
+  },
+  "native_starts": 252,
+  "first_valid_batches": 252,
+  "native_identity": {
+    "requested_model": "claude-opus-5-5",
+    "observed_model_usage_ids": [
+      "claude-opus-5-5"
+    ],
+    "binary_sha256": "604d29a6869409106b6a1110bdadcc8b72e8654a5a865d23258f938a696e348e",
+    "cli_version": "2.1.323 (Claude Code)",
+    "runtime_config": "configs/qwen3_14b_baseline.json",
+    "runtime_config_sha256": "dcc29dceb1bdd90cd0cacc8c3544c985d741712afe7a960cdf616817a81a1ebb",
+    "audit": "outputs/refusal-judge-isolation-audit-01/audit.json",
+    "audit_sha256": "32dbed0a12a86e5c67d8cbf38353d4d1fb8e2ffbe716b9df40ab42e3fd681001"
+  },
+  "refusal_carried_forward": {
+    "new_compute": 0,
+    "raw_subtraction": {
+      "block": 23,
+      "coefficient": -0.5,
+      "unsafe_refusals_before_after": [
+        29,
+        22
+      ],
+      "unsafe_valid_full_answers_before_after": [
+        1,
+        7
+      ],
+      "safe_usefulness_before_after": [
+        29,
+        23
+      ],
+      "safe_n": 42,
+      "quality_pass": false
+    },
+    "all_block_projection": {
+      "development_valid_full": 6,
+      "n": 30,
+      "selected": false
+    },
+    "no_refusal_controller_retained": true
+  },
+  "limits": [
+    "Outcomes are model-specific. Differences between checkpoints do not establish an effect of model size, and a 4B null does not show that the method fails on small models.",
+    "One Claude judge family; PF/SARC inputs partly Claude-generated; no new calibration.",
+    "Fresh 4B attention banks and elicitation; no 7B vectors/responses/CSVs/scores used for fitting. Impolite author bank provenance differs on 7B.",
+    "Qwen3 native evaluation has no automatic helpful system; explicit nonthinking rendering and 7B decoding values are used.",
+    "Impolite three matched20 sub-batches, seed42 each, replace batch64. Cap truncation is not completion.",
+    "Old whitespace-word bigram invalid OR think-tag guard is a union, counted once. Coherence is not factual accuracy.",
+    "No grid, tuning, selection, joint-control independence, capability claim or new refusal compute."
+  ]
+}
