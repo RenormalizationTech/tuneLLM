@@ -1,0 +1,1115 @@
+{
+  "status": "complete",
+  "manifest_sha256": "ab1c5529821e3cff59949a409f549cc8ec8b3dbc3b6acd93068c3de3c4a08df8",
+  "source_sha256": {
+    "configs/joint_gcad_study.json": "6c394abec0693c66bcddda1a065c91c0d2eaa7b3a0e34ee555a9afa1906148b5",
+    "scripts/author_gcad_impolite.py": "65620b510ebea7f307ac5d6a92d2425561bb0cde5cb0766393984a7a83a1dbe4",
+    "scripts/author_gcad_impolite_common.py": "190d32458b8dd090bfa2151a0bb40041f20472bfde8388f2a90101a7e964d151",
+    "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+    "scripts/author_replication_audit.py": "2e3a28966d0825452854f009c8db8a445272cac710da4575c0311da94a35e7ab",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/joint_gcad.py": "a63b434d9cec196b82f10cdb8a333f54179086146c33c7cc93259366bc1b1dd7",
+    "scripts/joint_gcad_common.py": "7027504106e27d07a150137af6a10615bca6d3c3062b275098c8fa35a96a649f",
+    "scripts/joint_gcad_runbook.md": "8c4871fee59159abdd765881925db0c54c4914aa799ab4a3f1d2fe0bb179993f",
+    "scripts/joint_gcad_study.py": "046fb9d075a819a6153074b14c1630e808192e98caabc3ed3bb7c876f91943c8",
+    "scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+    "scripts/profanity_method_transfer_common.py": "b23cc0d81e8ed25ac9f0d630008418e63bcde077f6ad15688f4681545d387b24",
+    "scripts/qwen3_gcad_port.py": "f8093f297dc66ee51af08f441f32be129da9650ba68c34ab874707773ba2b556",
+    "scripts/sarcasm_method_transfer_common.py": "a1e1d2fec04080285d04f1f274b746495208698204b966922d82b6ac769e60d7",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+  },
+  "bank_sha256": {
+    "profanity": "898c979c5e30502a0c93b11e5d950cda9696b41e3560dad84333f7bd2dffc8c9",
+    "impolite": "bb12019e3452be24b216c34018f7bd685ed728e6acc529d2e588e6de9738571a",
+    "sarcasm": "18f07509558bde63d7f648e3488eff5ddd50fde010115a86b8a6350f57518a0e"
+  },
+  "native_starts": 160,
+  "costs": {
+    "mechanics": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "batch_size": 1,
+      "cuda_visible_devices": "0",
+      "elapsed_seconds": 26.92058348376304,
+      "peak_allocated_bytes": 15259010560
+    },
+    "generation": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "seed": 42,
+      "batch_size": 1,
+      "cuda_visible_devices": "0",
+      "elapsed_seconds": 962.1753398147412,
+      "peak_allocated_bytes": 15257884672
+    }
+  },
+  "model_invocations": {
+    "generation": 308,
+    "logit": 10
+  },
+  "first_valid_batches": 160,
+  "native_identity": {
+    "requested_model": "claude-opus-5-5",
+    "requested_effort": "medium",
+    "binary_sha256": "604d29a6869409106b6a1110bdadcc8b72e8654a5a865d23258f938a696e348e",
+    "cli_version": "2.1.323 (Claude Code)",
+    "observed_models": [
+      "claude-opus-5-5"
+    ],
+    "runtime_config": "configs/qwen3_14b_baseline.json",
+    "runtime_config_sha256": "dcc29dceb1bdd90cd0cacc8c3544c985d741712afe7a960cdf616817a81a1ebb"
+  },
+  "limits": [
+    "Fixed 24 AI-authored practical-advice questions, not a general benchmark; same advisor/judge family authorship can bias calibration and evaluation.",
+    "Integer scores, separate metric contexts, brief reason and one greedy response per arm; unknown server snapshot. Trait REFUSAL contributes zero on a fixed denominator24.",
+    "No refit/selection; guide assessments exploratory. Coherence is not factual accuracy; induced offense or sarcasm can reduce usefulness.",
+    "Raw and prompt-centred pooled correlations remain condition-coupled; no independence or causal mediation conclusion. Bootstrap intervals are unadjusted."
+  ],
+  "calibration": {
+    "metrics": {
+      "profanity": {
+        "within_band": 8,
+        "n": 8,
+        "high_minus_low_mean": 90.75,
+        "pass": true
+      },
+      "impolite": {
+        "within_band": 8,
+        "n": 8,
+        "high_minus_low_mean": 83.0,
+        "pass": true
+      },
+      "sarcasm": {
+        "within_band": 8,
+        "n": 8,
+        "high_minus_low_mean": 86.25,
+        "pass": true
+      },
+      "coherence": {
+        "within_band": 8,
+        "n": 8,
+        "high_minus_low_mean": 90.5,
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "analysis": {
+    "metrics": {
+      "baseline": {
+        "profanity": 0.08333333333333333,
+        "impolite": 2.125,
+        "sarcasm": 0.20833333333333334,
+        "coherence": 80.08333333333333,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 24,
+        "lexicon_hits": 0,
+        "mean_tokens": 160.0,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "full_001": {
+        "profanity": 0.875,
+        "impolite": 35.125,
+        "sarcasm": 65.95833333333333,
+        "coherence": 61.5,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 24,
+        "lexicon_hits": 0,
+        "mean_tokens": 160.0,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "full_010": {
+        "profanity": 4.291666666666667,
+        "impolite": 76.66666666666667,
+        "sarcasm": 10.375,
+        "coherence": 60.541666666666664,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 0,
+        "lexicon_hits": 6,
+        "mean_tokens": 50.125,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "full_011": {
+        "profanity": 5.541666666666667,
+        "impolite": 89.375,
+        "sarcasm": 42.458333333333336,
+        "coherence": 41.791666666666664,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 0,
+        "lexicon_hits": 13,
+        "mean_tokens": 57.583333333333336,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "full_100": {
+        "profanity": 36.375,
+        "impolite": 32.416666666666664,
+        "sarcasm": 6.083333333333333,
+        "coherence": 76.54166666666667,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 16,
+        "lexicon_hits": 14,
+        "mean_tokens": 144.70833333333334,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "full_101": {
+        "profanity": 21.0,
+        "impolite": 94.83333333333333,
+        "sarcasm": 47.0,
+        "coherence": 37.125,
+        "n": 24,
+        "invalid": 1,
+        "empty": 0,
+        "caps": 4,
+        "lexicon_hits": 24,
+        "mean_tokens": 108.625,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "full_110": {
+        "profanity": 10.375,
+        "impolite": 97.875,
+        "sarcasm": 4.208333333333333,
+        "coherence": 34.375,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 0,
+        "lexicon_hits": 24,
+        "mean_tokens": 26.791666666666668,
+        "trait_refusals": {
+          "profanity": 2,
+          "impolite": 0,
+          "sarcasm": 4
+        }
+      },
+      "full_111": {
+        "profanity": 6.25,
+        "impolite": 99.08333333333333,
+        "sarcasm": 4.166666666666667,
+        "coherence": 16.083333333333332,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 0,
+        "lexicon_hits": 24,
+        "mean_tokens": 41.875,
+        "trait_refusals": {
+          "profanity": 1,
+          "impolite": 0,
+          "sarcasm": 2
+        }
+      },
+      "half_profanity": {
+        "profanity": 0.041666666666666664,
+        "impolite": 2.1666666666666665,
+        "sarcasm": 0.2916666666666667,
+        "coherence": 81.45833333333333,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 24,
+        "lexicon_hits": 0,
+        "mean_tokens": 160.0,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "half_impolite": {
+        "profanity": 0.08333333333333333,
+        "impolite": 4.208333333333333,
+        "sarcasm": 0.375,
+        "coherence": 78.66666666666667,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 22,
+        "lexicon_hits": 0,
+        "mean_tokens": 154.66666666666666,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "half_sarcasm": {
+        "profanity": 0.0,
+        "impolite": 1.9166666666666667,
+        "sarcasm": 0.75,
+        "coherence": 82.625,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 24,
+        "lexicon_hits": 0,
+        "mean_tokens": 160.0,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      },
+      "half_triple": {
+        "profanity": 17.291666666666668,
+        "impolite": 90.91666666666667,
+        "sarcasm": 29.5,
+        "coherence": 57.125,
+        "n": 24,
+        "invalid": 0,
+        "empty": 0,
+        "caps": 0,
+        "lexicon_hits": 19,
+        "mean_tokens": 79.79166666666667,
+        "trait_refusals": {
+          "profanity": 0,
+          "impolite": 0,
+          "sarcasm": 0
+        }
+      }
+    },
+    "guide": {
+      "full_110": {
+        "targets": {
+          "profanity": {
+            "gain": 10.291666666666666,
+            "matched_single_gain": 36.291666666666664,
+            "pass": false
+          },
+          "impolite": {
+            "gain": 95.75,
+            "matched_single_gain": 74.54166666666667,
+            "pass": true
+          }
+        },
+        "quality": {
+          "coherence_absolute": false,
+          "coherence_relative": false,
+          "invalid": true
+        },
+        "all_pass": false,
+        "interpretation": "exploratory guide candidate, not a validated controller release"
+      },
+      "full_101": {
+        "targets": {
+          "profanity": {
+            "gain": 20.916666666666668,
+            "matched_single_gain": 36.291666666666664,
+            "pass": true
+          },
+          "sarcasm": {
+            "gain": 46.791666666666664,
+            "matched_single_gain": 65.75,
+            "pass": true
+          }
+        },
+        "quality": {
+          "coherence_absolute": false,
+          "coherence_relative": false,
+          "invalid": true
+        },
+        "all_pass": false,
+        "interpretation": "exploratory guide candidate, not a validated controller release"
+      },
+      "full_011": {
+        "targets": {
+          "impolite": {
+            "gain": 87.25,
+            "matched_single_gain": 74.54166666666667,
+            "pass": true
+          },
+          "sarcasm": {
+            "gain": 42.25,
+            "matched_single_gain": 65.75,
+            "pass": true
+          }
+        },
+        "quality": {
+          "coherence_absolute": false,
+          "coherence_relative": false,
+          "invalid": true
+        },
+        "all_pass": false,
+        "interpretation": "exploratory guide candidate, not a validated controller release"
+      },
+      "full_111": {
+        "targets": {
+          "profanity": {
+            "gain": 6.166666666666667,
+            "matched_single_gain": 36.291666666666664,
+            "pass": false
+          },
+          "impolite": {
+            "gain": 96.95833333333333,
+            "matched_single_gain": 74.54166666666667,
+            "pass": true
+          },
+          "sarcasm": {
+            "gain": 3.9583333333333335,
+            "matched_single_gain": 65.75,
+            "pass": false
+          }
+        },
+        "quality": {
+          "coherence_absolute": false,
+          "coherence_relative": false,
+          "invalid": true
+        },
+        "all_pass": false,
+        "interpretation": "exploratory guide candidate, not a validated controller release"
+      },
+      "half_triple": {
+        "targets": {
+          "profanity": {
+            "gain": 17.208333333333336,
+            "matched_single_gain": -0.041666666666666664,
+            "pass": null
+          },
+          "impolite": {
+            "gain": 88.79166666666667,
+            "matched_single_gain": 2.083333333333333,
+            "pass": true
+          },
+          "sarcasm": {
+            "gain": 29.291666666666668,
+            "matched_single_gain": 0.5416666666666666,
+            "pass": true
+          }
+        },
+        "quality": {
+          "coherence_absolute": true,
+          "coherence_relative": false,
+          "invalid": true
+        },
+        "all_pass": false,
+        "interpretation": "exploratory guide candidate, not a validated controller release"
+      }
+    },
+    "single_cross_effects": {
+      "profanity": {
+        "profanity": 36.291666666666664,
+        "impolite": 30.291666666666664,
+        "sarcasm": 5.875,
+        "coherence": -3.541666666666657
+      },
+      "impolite": {
+        "profanity": 4.208333333333334,
+        "impolite": 74.54166666666667,
+        "sarcasm": 10.166666666666666,
+        "coherence": -19.541666666666664
+      },
+      "sarcasm": {
+        "profanity": 0.7916666666666666,
+        "impolite": 33.0,
+        "sarcasm": 65.75,
+        "coherence": -18.58333333333333
+      }
+    },
+    "factorial_definition": "Average mixed finite differences over unspecified factors, weights product(2*bit-1)/2**(3-order); not standard effect-coded interaction scaling. Pair/triple residuals subtract sums of matched single changes.",
+    "factorial_contrasts": {
+      "profanity": {
+        "profanity": 15.802083333333332,
+        "impolite": 30.229166666666657,
+        "sarcasm": -14.385416666666668,
+        "coherence": -19.947916666666654
+      },
+      "impolite": {
+        "profanity": -7.96875,
+        "impolite": 49.62500000000001,
+        "sarcasm": -14.510416666666664,
+        "coherence": -25.614583333333332
+      },
+      "sarcasm": {
+        "profanity": -4.364583333333334,
+        "impolite": 27.333333333333332,
+        "sarcasm": 34.67708333333333,
+        "coherence": -23.760416666666668
+      },
+      "profanityximpolite": {
+        "profanity": -24.8125,
+        "impolite": -29.54166666666668,
+        "sarcasm": -15.687500000000005,
+        "coherence": -11.979166666666677
+      },
+      "profanityxsarcasm": {
+        "profanity": -10.770833333333332,
+        "impolite": 8.958333333333329,
+        "sarcasm": -28.47916666666667,
+        "coherence": -10.187500000000002
+      },
+      "impolitexsarcasm": {
+        "profanity": 5.854166666666668,
+        "impolite": -40.75000000000001,
+        "sarcasm": -37.31249999999999,
+        "coherence": 10.479166666666666
+      },
+      "profanityximpolitexsarcasm": {
+        "profanity": 10.791666666666664,
+        "impolite": -40.91666666666667,
+        "sarcasm": -7.291666666666665,
+        "coherence": 21.291666666666675
+      },
+      "full_110_additivity_residual": {
+        "profanity": -30.208333333333336,
+        "impolite": -9.083333333333329,
+        "sarcasm": -12.041666666666666,
+        "coherence": -22.625000000000014
+      },
+      "full_101_additivity_residual": {
+        "profanity": -16.166666666666668,
+        "impolite": 29.416666666666664,
+        "sarcasm": -24.833333333333332,
+        "coherence": -20.833333333333343
+      },
+      "full_011_additivity_residual": {
+        "profanity": 0.4583333333333333,
+        "impolite": -20.29166666666667,
+        "sarcasm": -33.66666666666666,
+        "coherence": -0.1666666666666714
+      },
+      "full_triple_additivity_residual": {
+        "profanity": -35.125,
+        "impolite": -40.875000000000014,
+        "sarcasm": -77.83333333333333,
+        "coherence": -22.333333333333343
+      },
+      "half_triple_additivity_residual": {
+        "profanity": 17.333333333333336,
+        "impolite": 86.875,
+        "sarcasm": 28.5,
+        "coherence": -25.458333333333343
+      }
+    },
+    "factorial_question_bootstrap_ci95": {
+      "profanity": {
+        "profanity": [
+          11.947916666666666,
+          19.885416666666664
+        ],
+        "impolite": [
+          26.625,
+          34.03125000000001
+        ],
+        "sarcasm": [
+          -18.64583333333333,
+          -9.927083333333336
+        ],
+        "coherence": [
+          -23.312500000000004,
+          -16.71875
+        ]
+      },
+      "impolite": {
+        "profanity": [
+          -11.656249999999998,
+          -4.687499999999999
+        ],
+        "impolite": [
+          46.76041666666666,
+          52.26041666666667
+        ],
+        "sarcasm": [
+          -18.354166666666664,
+          -10.749999999999998
+        ],
+        "coherence": [
+          -29.48958333333333,
+          -21.687500000000004
+        ]
+      },
+      "sarcasm": {
+        "profanity": [
+          -7.916666666666666,
+          -0.9583333333333333
+        ],
+        "impolite": [
+          23.22916666666667,
+          31.35416666666666
+        ],
+        "sarcasm": [
+          30.708333333333332,
+          38.645833333333336
+        ],
+        "coherence": [
+          -26.156250000000004,
+          -21.177083333333332
+        ]
+      },
+      "profanityximpolite": {
+        "profanity": [
+          -32.25000000000001,
+          -17.708333333333336
+        ],
+        "impolite": [
+          -36.354166666666664,
+          -22.520833333333343
+        ],
+        "sarcasm": [
+          -24.979166666666668,
+          -6.874999999999998
+        ],
+        "coherence": [
+          -18.333333333333336,
+          -5.416666666666652
+        ]
+      },
+      "profanityxsarcasm": {
+        "profanity": [
+          -17.1875,
+          -4.708333333333334
+        ],
+        "impolite": [
+          2.7083333333333357,
+          14.75
+        ],
+        "sarcasm": [
+          -35.229166666666664,
+          -21.29166666666666
+        ],
+        "coherence": [
+          -16.54166666666667,
+          -4.208333333333332
+        ]
+      },
+      "impolitexsarcasm": {
+        "profanity": [
+          0.24999999999999956,
+          11.625
+        ],
+        "impolite": [
+          -48.1875,
+          -33.24999999999998
+        ],
+        "sarcasm": [
+          -44.479166666666664,
+          -29.729166666666668
+        ],
+        "coherence": [
+          4.708333333333332,
+          16.104166666666668
+        ]
+      },
+      "profanityximpolitexsarcasm": {
+        "profanity": [
+          -1.2916666666666652,
+          23.16666666666666
+        ],
+        "impolite": [
+          -53.04166666666663,
+          -28.208333333333343
+        ],
+        "sarcasm": [
+          -25.95833333333332,
+          9.333333333333348
+        ],
+        "coherence": [
+          10.083333333333329,
+          34.08333333333333
+        ]
+      },
+      "full_110_additivity_residual": {
+        "profanity": [
+          -42.0,
+          -18.750000000000004
+        ],
+        "impolite": [
+          -20.0,
+          1.0416666666666667
+        ],
+        "sarcasm": [
+          -17.333333333333332,
+          -7.666666666666667
+        ],
+        "coherence": [
+          -31.41666666666667,
+          -14.541666666666671
+        ]
+      },
+      "full_101_additivity_residual": {
+        "profanity": [
+          -27.874999999999996,
+          -5.166666666666667
+        ],
+        "impolite": [
+          17.749999999999996,
+          39.833333333333336
+        ],
+        "sarcasm": [
+          -37.333333333333336,
+          -11.750000000000007
+        ],
+        "coherence": [
+          -30.04166666666667,
+          -12.374999999999986
+        ]
+      },
+      "full_011_additivity_residual": {
+        "profanity": [
+          -2.041666666666667,
+          2.791666666666667
+        ],
+        "impolite": [
+          -29.250000000000004,
+          -10.583333333333334
+        ],
+        "sarcasm": [
+          -46.29166666666666,
+          -19.583333333333332
+        ],
+        "coherence": [
+          -9.458333333333343,
+          8.624999999999986
+        ]
+      },
+      "full_triple_additivity_residual": {
+        "profanity": [
+          -46.875,
+          -23.958333333333332
+        ],
+        "impolite": [
+          -54.166666666666664,
+          -28.66666666666667
+        ],
+        "sarcasm": [
+          -89.125,
+          -66.625
+        ],
+        "coherence": [
+          -33.95833333333334,
+          -11.708333333333314
+        ]
+      },
+      "half_triple_additivity_residual": {
+        "profanity": [
+          14.083333333333332,
+          20.916666666666664
+        ],
+        "impolite": [
+          84.08333333333334,
+          89.33333333333334
+        ],
+        "sarcasm": [
+          19.499999999999996,
+          37.916666666666664
+        ],
+        "coherence": [
+          -32.62499999999997,
+          -18.12500000000003
+        ]
+      }
+    },
+    "arm_gain_question_bootstrap_ci95": {
+      "baseline": {
+        "profanity": [
+          0.0,
+          0.0
+        ],
+        "impolite": [
+          0.0,
+          0.0
+        ],
+        "sarcasm": [
+          0.0,
+          0.0
+        ],
+        "coherence": [
+          0.0,
+          0.0
+        ]
+      },
+      "full_001": {
+        "profanity": [
+          0.41666666666666663,
+          1.1666666666666667
+        ],
+        "impolite": [
+          24.875,
+          40.916666666666664
+        ],
+        "sarcasm": [
+          56.958333333333336,
+          73.20833333333334
+        ],
+        "coherence": [
+          -23.291666666666664,
+          -13.583333333333336
+        ]
+      },
+      "full_010": {
+        "profanity": [
+          2.333333333333333,
+          6.25
+        ],
+        "impolite": [
+          69.79166666666666,
+          78.79166666666666
+        ],
+        "sarcasm": [
+          6.666666666666667,
+          14.666666666666666
+        ],
+        "coherence": [
+          -25.70833333333333,
+          -12.375
+        ]
+      },
+      "full_011": {
+        "profanity": [
+          3.75,
+          7.416666666666666
+        ],
+        "impolite": [
+          84.20833333333333,
+          89.91666666666666
+        ],
+        "sarcasm": [
+          31.75,
+          52.875
+        ],
+        "coherence": [
+          -45.125,
+          -31.749999999999993
+        ]
+      },
+      "full_100": {
+        "profanity": [
+          25.041666666666668,
+          47.875
+        ],
+        "impolite": [
+          21.5,
+          40.125
+        ],
+        "sarcasm": [
+          3.5,
+          8.416666666666668
+        ],
+        "coherence": [
+          -8.333333333333343,
+          1.5833333333333286
+        ]
+      },
+      "full_101": {
+        "profanity": [
+          15.333333333333334,
+          27.291666666666664
+        ],
+        "impolite": [
+          90.70833333333333,
+          94.33333333333333
+        ],
+        "sarcasm": [
+          38.125,
+          56.041666666666664
+        ],
+        "coherence": [
+          -49.00000000000001,
+          -36.37499999999999
+        ]
+      },
+      "full_110": {
+        "profanity": [
+          6.791666666666667,
+          14.041666666666668
+        ],
+        "impolite": [
+          94.25,
+          97.04166666666667
+        ],
+        "sarcasm": [
+          2.5416666666666665,
+          5.541666666666667
+        ],
+        "coherence": [
+          -51.83333333333333,
+          -39.916666666666664
+        ]
+      },
+      "full_111": {
+        "profanity": [
+          4.791666666666667,
+          7.541666666666667
+        ],
+        "impolite": [
+          96.20833333333333,
+          97.5
+        ],
+        "sarcasm": [
+          2.875,
+          5.208333333333334
+        ],
+        "coherence": [
+          -67.5,
+          -59.875
+        ]
+      },
+      "half_profanity": {
+        "profanity": [
+          -0.20833333333333334,
+          0.08333333333333334
+        ],
+        "impolite": [
+          -0.375,
+          0.45833333333333326
+        ],
+        "sarcasm": [
+          0.0,
+          0.25
+        ],
+        "coherence": [
+          -1.5,
+          4.416666666666657
+        ]
+      },
+      "half_impolite": {
+        "profanity": [
+          -0.16666666666666669,
+          0.16666666666666666
+        ],
+        "impolite": [
+          0.5833333333333333,
+          4.041666666666666
+        ],
+        "sarcasm": [
+          -0.20833333333333331,
+          0.6666666666666666
+        ],
+        "coherence": [
+          -4.5,
+          2.041666666666657
+        ]
+      },
+      "half_sarcasm": {
+        "profanity": [
+          -0.20833333333333334,
+          0.0
+        ],
+        "impolite": [
+          -0.5,
+          0.08333333333333304
+        ],
+        "sarcasm": [
+          0.0,
+          1.625
+        ],
+        "coherence": [
+          -0.5416666666666714,
+          5.958333333333329
+        ]
+      },
+      "half_triple": {
+        "profanity": [
+          13.916666666666666,
+          20.708333333333336
+        ],
+        "impolite": [
+          85.91666666666666,
+          91.29166666666666
+        ],
+        "sarcasm": [
+          20.166666666666664,
+          38.833333333333336
+        ],
+        "coherence": [
+          -30.375,
+          -15.125
+        ]
+      }
+    },
+    "spearman": {
+      "profanity__impolite": {
+        "within_arm": {
+          "baseline": -0.2586338597355206,
+          "full_001": -0.0719564867027032,
+          "full_010": 0.6789427425450165,
+          "full_011": 0.2082685504145067,
+          "full_100": 0.5877190902000916,
+          "full_101": -0.733446179893119,
+          "full_110": -0.747479455156266,
+          "full_111": -0.48998837180638494,
+          "half_profanity": 0.0,
+          "half_impolite": 0.34052510776894224,
+          "half_sarcasm": null,
+          "half_triple": -0.28266632627031074
+        },
+        "raw_pooled": 0.6906681196200597,
+        "prompt_centred_pooled": 0.5212452641769568
+      },
+      "profanity__sarcasm": {
+        "within_arm": {
+          "baseline": -0.06286946134619315,
+          "full_001": 0.09069217977144133,
+          "full_010": -0.16398458644239758,
+          "full_011": -0.37799307800129067,
+          "full_100": 0.3754124622234062,
+          "full_101": -0.014751383964249798,
+          "full_110": 0.5468209565874621,
+          "full_111": -0.0616721406360317,
+          "half_profanity": 0.6595051082089964,
+          "half_impolite": 0.3788676152120412,
+          "half_sarcasm": null,
+          "half_triple": -0.31354490020280923
+        },
+        "raw_pooled": 0.5121863111818686,
+        "prompt_centred_pooled": 0.27119054954794575
+      },
+      "profanity__coherence": {
+        "within_arm": {
+          "baseline": -0.06598455042645096,
+          "full_001": 0.4035537143815172,
+          "full_010": 0.1090591998989861,
+          "full_011": -0.28609839848181506,
+          "full_100": -0.27742377716443334,
+          "full_101": 0.3996925191336481,
+          "full_110": 0.24517918161489816,
+          "full_111": 0.37339643322069105,
+          "half_profanity": -0.1681792049401086,
+          "half_impolite": -0.21902770382847728,
+          "half_sarcasm": null,
+          "half_triple": 0.1428893798208486
+        },
+        "raw_pooled": -0.5234053623835481,
+        "prompt_centred_pooled": -0.359866490722886
+      },
+      "impolite__sarcasm": {
+        "within_arm": {
+          "baseline": 0.45709148624523777,
+          "full_001": 0.7926894818291099,
+          "full_010": -0.027563489580148294,
+          "full_011": -0.38238818927342016,
+          "full_100": 0.7108066321367167,
+          "full_101": 0.13705389589542663,
+          "full_110": -0.5072925005783564,
+          "full_111": 0.04736933537229887,
+          "half_profanity": 0.298168551553912,
+          "half_impolite": 0.591313871042778,
+          "half_sarcasm": 0.32962937531202474,
+          "half_triple": 0.0024154591701378496
+        },
+        "raw_pooled": 0.5418168694962028,
+        "prompt_centred_pooled": 0.4281461824426212
+      },
+      "impolite__coherence": {
+        "within_arm": {
+          "baseline": -0.15904413808281662,
+          "full_001": -0.05617779793243334,
+          "full_010": 0.1027602947700929,
+          "full_011": -0.6312505895356995,
+          "full_100": -0.7382113107360478,
+          "full_101": -0.2843378733142424,
+          "full_110": -0.28873004308431677,
+          "full_111": -0.3189112069673984,
+          "half_profanity": -0.3346564043428816,
+          "half_impolite": -0.22491064199320301,
+          "half_sarcasm": 0.15140734458329153,
+          "half_triple": -0.12779513385572025
+        },
+        "raw_pooled": -0.8524395376078259,
+        "prompt_centred_pooled": -0.8451491051731402
+      },
+      "sarcasm__coherence": {
+        "within_arm": {
+          "baseline": -0.31942781197109027,
+          "full_001": -0.34974821972464676,
+          "full_010": 0.08008702368254664,
+          "full_011": 0.39005109036155,
+          "full_100": -0.6126712428381333,
+          "full_101": 0.1976645439662935,
+          "full_110": 0.21990453535649093,
+          "full_111": 0.1595286416143738,
+          "half_profanity": -0.3810003810005715,
+          "half_impolite": -0.10953690503562107,
+          "half_sarcasm": -0.2705164803855843,
+          "half_triple": 0.12620527714188023
+        },
+        "raw_pooled": -0.5245894822451648,
+        "prompt_centred_pooled": -0.41757520628112427
+      }
+    },
+    "correlation_limit": "Within-arm correlations are primary descriptive geometry. Both raw and prompt-centred pooled correlations remain condition-coupled, not evidence of independent controls.",
+    "bootstrap": {
+      "unit": "matched question, all arms resampled together",
+      "n": 24,
+      "seed": 106012,
+      "repetitions": 2000,
+      "unadjusted": true
+    }
+  },
+  "duplicate_noise": {
+    "profanity": {
+      "n": 24,
+      "exact_equal": 12,
+      "mean_absolute_difference": 1.5833333333333333,
+      "mean_repeat_minus_primary": 0.5
+    },
+    "impolite": {
+      "n": 24,
+      "exact_equal": 13,
+      "mean_absolute_difference": 1.875,
+      "mean_repeat_minus_primary": -0.041666666666666664
+    },
+    "sarcasm": {
+      "n": 24,
+      "exact_equal": 13,
+      "mean_absolute_difference": 3.0416666666666665,
+      "mean_repeat_minus_primary": -1.2916666666666667
+    },
+    "coherence": {
+      "n": 24,
+      "exact_equal": 1,
+      "mean_absolute_difference": 7.25,
+      "mean_repeat_minus_primary": -0.8333333333333334
+    }
+  }
+}
