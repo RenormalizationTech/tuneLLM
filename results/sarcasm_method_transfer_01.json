@@ -1,0 +1,490 @@
+{
+  "status": "development_null",
+  "manifest_sha256": "236df4a17284672528ab609f46923e37a980b7154b0ee0fe73a419cfce934408",
+  "source_sha256": {
+    "configs/sarcasm_method_transfer.json": "374726df1924a4fab4a116922ec9f1beef567cec5aa08a3399ecbbe5a4277814",
+    "scripts/author_gcad_impolite.py": "65620b510ebea7f307ac5d6a92d2425561bb0cde5cb0766393984a7a83a1dbe4",
+    "scripts/author_gcad_impolite_common.py": "190d32458b8dd090bfa2151a0bb40041f20472bfde8388f2a90101a7e964d151",
+    "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+    "scripts/author_replication_audit.py": "2e3a28966d0825452854f009c8db8a445272cac710da4575c0311da94a35e7ab",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+    "scripts/persona_saps_common.py": "7801023f954b0f18daf1ec805b4af4d626d912ec2c854f9d7b45f7b8874ea8dc",
+    "scripts/profanity_method_transfer.py": "4236071f350e9e3604e5ead0240dc68cb7829cff0b6ad0da08811a7ea2131b73",
+    "scripts/profanity_method_transfer_common.py": "b23cc0d81e8ed25ac9f0d630008418e63bcde077f6ad15688f4681545d387b24",
+    "scripts/profanity_transfer_common.py": "a4f72765fd723d136870e3a8c0ed6bc7e65025b5386318ae5e4e29609977a4a8",
+    "scripts/sarcasm_method_transfer.py": "f1386eee6d221f1b336358d4b70f2095525b0d5a646155b16704c52a9bbec7e0",
+    "scripts/sarcasm_method_transfer_common.py": "a1e1d2fec04080285d04f1f274b746495208698204b966922d82b6ac769e60d7",
+    "scripts/sarcasm_method_transfer_runbook.md": "bc88bef092a77e9d2a94cf112ea030d042755c66bb013a2e6689b0738fb1d0e5",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+  },
+  "totals": {
+    "generations": 466,
+    "prompt_forwards": 300,
+    "gcad_teacher_forced": 261,
+    "logit_forwards": 2
+  },
+  "native_starts": 115,
+  "first_valid_batches": 115,
+  "costs": {
+    "elicitation": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 200,
+      "prompt_forwards": 0,
+      "gcad_teacher_forced": 0,
+      "logit_forwards": 0,
+      "generation_wall_seconds": 1167.6335451011546,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 1181.3711277400143,
+      "peak_allocated_bytes": 15267691520,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed counters plus durable before-call journals; peak allocator across own loads, not total VRAM"
+    },
+    "extraction": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 0,
+      "prompt_forwards": 300,
+      "gcad_teacher_forced": 261,
+      "logit_forwards": 0,
+      "generation_wall_seconds": 0.0,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        },
+        {
+          "attention": "eager",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+          "free_mib_before_load": 47706
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 103.64052903885022,
+      "peak_allocated_bytes": 15541216768,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed counters plus durable before-call journals; peak allocator across own loads, not total VRAM"
+    },
+    "mechanics": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 10,
+      "prompt_forwards": 0,
+      "gcad_teacher_forced": 0,
+      "logit_forwards": 2,
+      "generation_wall_seconds": 10.792782854288816,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 20.841259728185833,
+      "peak_allocated_bytes": 15248230912,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed counters plus durable before-call journals; peak allocator across own loads, not total VRAM"
+    },
+    "development": {
+      "completed": true,
+      "physical_gpu": 0,
+      "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+      "name": "NVIDIA RTX A6000",
+      "free_mib_before_load": 48053,
+      "utilization_percent_before_load": 0,
+      "driver": "580.178.04",
+      "generations": 256,
+      "prompt_forwards": 0,
+      "gcad_teacher_forced": 0,
+      "logit_forwards": 0,
+      "generation_wall_seconds": 977.9133154684678,
+      "loads": [
+        {
+          "attention": "sdpa",
+          "dtype": "bfloat16",
+          "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b"
+        }
+      ],
+      "seed": 42,
+      "batch_size": 1,
+      "mc_items": 0,
+      "elapsed_wall_seconds": 998.2680396353826,
+      "peak_allocated_bytes": 15259442176,
+      "dtype": "bfloat16",
+      "cuda_visible_devices": "0",
+      "accounting": "Completed counters plus durable before-call journals; peak allocator across own loads, not total VRAM"
+    }
+  },
+  "limits": [
+    "Reconstructed native-Claude artifact/review/grading circularity; not missing original-author sarcasm data or exact numerical reproduction.",
+    "Ordinary Qwen7 reply task transfers the Mistral rewriting method; evaluation questions are reused project material, held out only for this selection.",
+    "Trait REFUSAL counts zero in conservative means; numeric means/refusal counts also reported. Separate coherence does not establish correctness or helpfulness.",
+    "GCAD persona-only systems versus default-prefixed SAPS/prompted systems is an explicit method-dependent rendering choice.",
+    "Impoliteness and narrow profanity lexicon are descriptive coupling measures, never rejection/disentanglement gates; score correlations are not causal independence.",
+    "Random controls match development position-mean norm or per-layer norm/sites/gate, not adaptive-law trajectory energy.",
+    "No joint control, off-axis zero requirement, layer expansion, rescue artifact or automatic new study. Prior Mistral reference stays model-specific if this transfer fails."
+  ],
+  "artifact_accepted_sha256": "7ada14e65b92095a96d37187be92e06902a2ec7e44ffd8d6d8bd43fed506b1f7",
+  "promotion_sha256": "d6bb0859c0a8979ebcb8565c4734e79f75b0bd549a6ba846a70cde494c694b32",
+  "gcad_eligibility": {
+    "count": 87,
+    "gcad_available": true,
+    "only_gcad_null": false,
+    "elicitation_sha256": "29dbd24ba6697000b01cf25c1f81801c2665280df52f973077cd1e7435b1d976",
+    "accepted_sha256": {
+      "trait": "d0080b07f050452590546553ba55991a9ca2f10a72aa494007c28ff28759346d",
+      "coherence": "16f3bbf99eea0bf0f8e1a650090bdcbdd028b6660460d0b70ae8403736a988fb"
+    }
+  },
+  "selection": {
+    "selected": {},
+    "selection_null": true,
+    "gates": {
+      "saps_1": {
+        "trait_gain": false,
+        "individual_ge50": false,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": false
+      },
+      "saps_2": {
+        "trait_gain": false,
+        "individual_ge50": false,
+        "coherence_absolute": true,
+        "coherence_relative": true,
+        "invalid": true,
+        "all_pass": false
+      },
+      "saps_4": {
+        "trait_gain": true,
+        "individual_ge50": true,
+        "coherence_absolute": false,
+        "coherence_relative": false,
+        "invalid": true,
+        "all_pass": false
+      },
+      "gcad_3.5": {
+        "trait_gain": true,
+        "individual_ge50": true,
+        "coherence_absolute": true,
+        "coherence_relative": false,
+        "invalid": true,
+        "all_pass": false
+      },
+      "gcad_5": {
+        "trait_gain": true,
+        "individual_ge50": true,
+        "coherence_absolute": false,
+        "coherence_relative": false,
+        "invalid": true,
+        "all_pass": false
+      },
+      "gcad_7": {
+        "trait_gain": true,
+        "individual_ge50": true,
+        "coherence_absolute": false,
+        "coherence_relative": false,
+        "invalid": true,
+        "all_pass": false
+      }
+    },
+    "prompted_validity_concern": false,
+    "off_axis_is_descriptive_only": true,
+    "manifest_sha256": "236df4a17284672528ab609f46923e37a980b7154b0ee0fe73a419cfce934408",
+    "metrics_sha256": "4780138b3ca89910ee1edb8208bb7657b1aaccb638c45c087246554b03acfa87",
+    "settings": {
+      "baseline": {
+        "method": "baseline"
+      },
+      "prompted": {
+        "method": "prompted"
+      },
+      "saps_1": {
+        "method": "saps",
+        "strength": 1.0
+      },
+      "saps_2": {
+        "method": "saps",
+        "strength": 2.0
+      },
+      "saps_4": {
+        "method": "saps",
+        "strength": 4.0
+      },
+      "gcad_3.5": {
+        "method": "gcad",
+        "strength": 3.5
+      },
+      "gcad_5": {
+        "method": "gcad",
+        "strength": 5.0
+      },
+      "gcad_7": {
+        "method": "gcad",
+        "strength": 7.0
+      }
+    },
+    "selected_development_norms": {},
+    "accepted_sha256": {
+      "trait": "f034f1e941f47d6325842f059093f8445f6159c9ce4476f2938c5f88e6ee5cb3",
+      "coherence": "d1cfd32e562bd93bd69f87c0f6d0dcff895f35ea6154b428f9138aa34028913e"
+    }
+  },
+  "development": {
+    "baseline": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 85.875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 32,
+      "eos": 0,
+      "mean_tokens": 160.0,
+      "mean_distinct_bigram": 0.9652066417596968,
+      "individual_trait_ge50": 0,
+      "changed_answers_vs_baseline": 0,
+      "trait_score_distribution": {
+        "0": 32
+      }
+    },
+    "prompted": {
+      "n": 32,
+      "trait_conservative": 58.125,
+      "trait_numeric_mean": 58.125,
+      "refusals": 0,
+      "coherence": 75.34375,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 10,
+      "eos": 22,
+      "mean_tokens": 124.75,
+      "mean_distinct_bigram": 0.9843904706170201,
+      "individual_trait_ge50": 25,
+      "changed_answers_vs_baseline": 32,
+      "trait_score_distribution": {
+        "30": 1,
+        "40": 2,
+        "65": 3,
+        "45": 3,
+        "85": 1,
+        "78": 3,
+        "50": 5,
+        "55": 4,
+        "60": 3,
+        "80": 2,
+        "62": 1,
+        "75": 1,
+        "72": 2,
+        "10": 1
+      }
+    },
+    "saps_1": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 87.0625,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 28,
+      "eos": 4,
+      "mean_tokens": 156.125,
+      "mean_distinct_bigram": 0.9601692987977412,
+      "individual_trait_ge50": 0,
+      "changed_answers_vs_baseline": 32,
+      "trait_score_distribution": {
+        "0": 32
+      },
+      "realized_position_weighted_norm": 10.726597752468502
+    },
+    "saps_2": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 89.28125,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 17,
+      "eos": 15,
+      "mean_tokens": 127.65625,
+      "mean_distinct_bigram": 0.9694423285848589,
+      "individual_trait_ge50": 0,
+      "changed_answers_vs_baseline": 32,
+      "trait_score_distribution": {
+        "0": 32
+      },
+      "realized_position_weighted_norm": 22.142737858752373
+    },
+    "saps_4": {
+      "n": 32,
+      "trait_conservative": 54.3125,
+      "trait_numeric_mean": 54.3125,
+      "refusals": 0,
+      "coherence": 43.75,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 0,
+      "eos": 32,
+      "mean_tokens": 32.28125,
+      "mean_distinct_bigram": 0.9983552631578947,
+      "individual_trait_ge50": 18,
+      "changed_answers_vs_baseline": 32,
+      "trait_score_distribution": {
+        "80": 2,
+        "20": 1,
+        "85": 3,
+        "15": 2,
+        "10": 1,
+        "70": 1,
+        "30": 1,
+        "5": 2,
+        "95": 2,
+        "90": 3,
+        "50": 1,
+        "0": 1,
+        "92": 2,
+        "75": 2,
+        "40": 2,
+        "55": 1,
+        "35": 1,
+        "88": 1,
+        "3": 2,
+        "45": 1
+      },
+      "realized_position_weighted_norm": 59.03401986234783
+    },
+    "gcad_3.5": {
+      "n": 32,
+      "trait_conservative": 87.125,
+      "trait_numeric_mean": 87.125,
+      "refusals": 0,
+      "coherence": 52.40625,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 19,
+      "eos": 13,
+      "mean_tokens": 139.03125,
+      "mean_distinct_bigram": 0.9825524551890283,
+      "individual_trait_ge50": 32,
+      "changed_answers_vs_baseline": 32,
+      "trait_score_distribution": {
+        "90": 2,
+        "80": 3,
+        "85": 5,
+        "95": 10,
+        "92": 1,
+        "88": 7,
+        "70": 1,
+        "82": 1,
+        "55": 1,
+        "78": 1
+      },
+      "realized_position_weighted_norm": 7.575088659537575
+    },
+    "gcad_5": {
+      "n": 32,
+      "trait_conservative": 92.84375,
+      "trait_numeric_mean": 92.84375,
+      "refusals": 0,
+      "coherence": 38.84375,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 4,
+      "eos": 28,
+      "mean_tokens": 122.875,
+      "mean_distinct_bigram": 0.9837488638956928,
+      "individual_trait_ge50": 32,
+      "changed_answers_vs_baseline": 32,
+      "trait_score_distribution": {
+        "92": 8,
+        "90": 4,
+        "95": 14,
+        "97": 2,
+        "85": 2,
+        "88": 1,
+        "93": 1
+      },
+      "realized_position_weighted_norm": 11.581779581774406
+    },
+    "gcad_7": {
+      "n": 32,
+      "trait_conservative": 92.0625,
+      "trait_numeric_mean": 92.0625,
+      "refusals": 0,
+      "coherence": 25.53125,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 29,
+      "eos": 3,
+      "mean_tokens": 158.46875,
+      "mean_distinct_bigram": 0.937031281312829,
+      "individual_trait_ge50": 32,
+      "changed_answers_vs_baseline": 32,
+      "trait_score_distribution": {
+        "97": 2,
+        "93": 3,
+        "95": 11,
+        "92": 7,
+        "82": 1,
+        "88": 4,
+        "90": 2,
+        "85": 2
+      },
+      "realized_position_weighted_norm": 15.66209562843108
+    }
+  },
+  "stop": {
+    "stop_cause": "development_null",
+    "error_type": "ValueError"
+  }
+}

@@ -88,6 +88,16 @@ complete: SAPS1.4 reached clear sarcasm in276/450 rewrites versus0 baseline,
 while meaning preservation fell4.11→2.98/5. Fixed and adaptive control show
 different style/quality trade-offs.
 
+The [Qwen sarcasm transfer](docs/sarcasm_method_transfer_closeout.md) closed with
+a development null: GCAD 3.5 raised sarcasm to 87.1/100 but reduced coherence
+from 85.9 to 52.4; no tested SAPS or GCAD setting met both requirements.
+One separately reviewed [lower-strength GCAD study](docs/sarcasm_gcad_low_strength_protocol.md)
+will test 1, 2 and 3 using the same bank and unchanged criteria.
+The [Qwen7 refusal headroom screen](docs/refusal_headroom_closeout.md) found
+3/100 unnecessary refusals, below the predeclared five-question threshold.
+The secondary phrase matcher counted five; classification sensitivity is
+disclosed. No GCAD refusal controller was tested or retained.
+
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
 a small development screen, and one fixed final comparison. Compatible baseline

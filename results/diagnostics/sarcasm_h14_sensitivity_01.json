@@ -1,0 +1,31 @@
+{
+  "analysis": "predeclared_descriptive_H14_exclusion",
+  "status": "not_applicable",
+  "excluded_ids": [
+    "H14"
+  ],
+  "primary_n": 32,
+  "sensitivity_n": 31,
+  "primary_report_status": "development_null",
+  "primary_decisions_unchanged": true,
+  "no_gates_recomputed": true,
+  "no_reselection_or_extra_model_calls": true,
+  "original_primary_confirmation_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+  "original_preferred": null,
+  "limits": [
+    "Descriptive pre-output topical-overlap sensitivity, not a new benchmark rating or primary decision.",
+    "REFUSAL remains zero in conservative means; denominators32/31 are explicit. No threshold is rescaled or re-applied.",
+    "Impoliteness, if available, is descriptive only; unavailable/unaccepted ratings are not inferred.",
+    "Removing one topical overlap does not establish full semantic independence or generalization."
+  ],
+  "not_applicable_cause": "Closed study has no held-out stage; no held-out generation requested.",
+  "input_sha256": {
+    "scripts/sarcasm_h14_sensitivity.py": "7dda7d2a5399962a821ed7cb29697f3998e39cbc51c64def216bc41a3370ff99",
+    "results/protocols/sarcasm-method-transfer-sensitivity-01.json": "0bb27bfb0252fe68328cc34beae227eb83da4f99acdb1b52393c6bf793e0ad43",
+    "results/sarcasm_method_transfer_01.json": "559b08a107a4ac2f1e82c47b6a9452d0e7ef6227810f33e8dd916ddf4fc1ea4a",
+    "outputs/sarcasm-method-transfer-01/manifest.json": "236df4a17284672528ab609f46923e37a980b7154b0ee0fe73a419cfce934408",
+    "outputs/sarcasm-method-transfer-01/preview.json": "702830482bdcacacc2b4dd1193021e732b19cd1b3f5594e18c702bdc22278011",
+    "evaluation/author_profanity_revision/report.json": "486300cffd90fe08780ac786f7bf67143fefcc25b343d1c6e972e276075b5683",
+    "evaluation/sarcasm_method_transfer/extract.json": "e84b1279692d9d326ce866b3f468e4d650011af8b2430951bb53b12ba1b31cf6"
+  }
+}

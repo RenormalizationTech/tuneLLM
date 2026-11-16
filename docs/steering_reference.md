@@ -63,6 +63,16 @@ it does not retrospectively reproduce those failed studies. Single-judge
 limits, truncation, construct differences and quality tradeoffs remain attached
 to each record.
 
+The [Qwen sarcasm transfer](sarcasm_method_transfer_closeout.md) subsequently
+closed with a development null: GCAD induced strong sarcasm but exceeded the
+allowed coherence loss; SAPS also had no qualifying setting. One separately
+reviewed [lower-strength test](sarcasm_gcad_low_strength_protocol.md) uses the
+same bank and criteria. The Mistral reference remains the positive sarcasm
+reference while this work is pending.
+The [Qwen7 refusal headroom screen](refusal_headroom_closeout.md) found
+3/100 semantic refusals versus five prefix flags and closed under its
+predeclared rule. No GCAD refusal controller was tested.
+
 ## Primary individual-control goal and optional combinations
 
 Each trait may retain its best supported intervention; GCAD is preferred where
