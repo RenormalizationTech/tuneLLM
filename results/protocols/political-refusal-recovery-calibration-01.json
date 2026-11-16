@@ -1,0 +1,6 @@
+{
+  "manifest_sha256": "0f110b80a6a2d34be9e8aaa85f711d4a5da3a282444b85582a0a700e1ed7ba8c",
+  "calibration_check_sha256": "35f9c3596eeb15593825715fd5cdd55424c520e2e70d455e64ba9940c2262991",
+  "primary_accepted_sha256": "f89096b24bf9ab580ed28d37cea3675c16f02451bebbb430a1fc2ab2de660247",
+  "coherence_accepted_sha256": "8ea785f07dfd55d27695ea29ae6e6892853df32023a24335a23cd0d9e2bfaa3a"
+}
