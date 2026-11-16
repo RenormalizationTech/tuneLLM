@@ -1,7 +1,7 @@
 # Established steering references
 
-Current consolidated record, reviewed with Claude after the three-method
-profanity study. All interventions act during inference with fixed model
+Current consolidated record, reviewed with Claude and updated after the
+fixed-setting Qwen3-4B transfer. All interventions act during inference with fixed model
 weights. Physics LoRA/QLoRA is a separate training demonstration.
 
 Three behaviors have positive method references; refusal reduction has an
@@ -20,6 +20,25 @@ three style traits, using separate banks and calibrated strengths.
 All block numbers are zero-based. Numerical strengths have different units
 across methods and vector banks. A coefficient of 5 is not a common behavioral
 strength across traits.
+
+## Qwen3-4B fixed-setting transfer (closed 2026-11-16)
+
+The [completed control](qwen3_4b_fixed_transfer_closeout.md) used fresh banks,
+blocks 12–25 by the registered relative-depth rule, and the retained coefficients
+5 / 3.5 / 2. All mechanics passed and every target trait increased against the
+baseline and random controls. None met every quality gate:
+
+| Trait | Trait score, baseline → GCAD | Coherence, baseline → GCAD | Qualification |
+| --- | --- | --- | --- |
+| Profanity, n=32 | 0 → 37.34; lexical hits 28/32 | 87.00 → 20.56 | Failed coherence and invalid-output gates (6/32 invalid) |
+| Impoliteness, n=60 on 13 unique first questions | 1.30 → 80.18 | 77.32 → 52.02 | Author-effect rule passed; new relative-coherence qualification missed by 5.30 points |
+| Sarcasm, n=32 | 0 → 56.13; 22/32 ≥50 | 87.00 → 63.91 | Relative-coherence gate missed by 3.09 points |
+
+This is trait induction without a quality-qualified 4B controller. There is no
+retuning or 4B steering-bank release. The earlier conventional refusal record
+above is unchanged. Outcomes are model-specific; this comparison does not
+establish a cause or an effect of model size. The 7B retained references remain
+the release candidates.
 
 ## Method distinction
 

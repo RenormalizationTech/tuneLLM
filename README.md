@@ -17,6 +17,17 @@ a behavior evaluation do not make it physics fine-tuning. See the
 [project map](docs/project_tracks.md), [four-behavior references](docs/steering_reference.md)
 and [GCAD discussion](docs/gcad_and_combined_control.md).
 
+**Current status (2026-11-16):** the
+[fixed-setting Qwen3-4B GCAD transfer](docs/qwen3_4b_fixed_transfer_closeout.md)
+is complete. All three style directions induced their traits, but none passed
+every quality gate. Profanity lost substantial coherence; sarcasm and
+impoliteness narrowly exceeded the allowed coherence loss. The conventional
+refusal record is carried forward without new compute. No 4B controller is
+relabelled as working, and no retuning is active. The retained 7B style banks
+passed real-base reload checks and are being prepared for a self-contained
+public Hugging Face release. Existing quantization models and the private
+physics adapter remain separate.
+
 The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The
 completed [adapted XSTest-safe baseline](docs/xstest_baseline_execution.md)
@@ -56,12 +67,12 @@ closed with development nulls. SAPS sarcasm completed a narrow held-out
 paraphrase reference pass (27/100 reaching the author sarcasm threshold ≥3 versus 0 baseline/random),
 with reduced meaning preservation and small capability checks passing. See the
 [reference execution record](docs/persona_reference_execution.md). Joint control is deferred for later discussion as a separate
-experimental project; reliable individual control remains unestablished on every target/model. See
+experimental project. Those earlier studies did not establish usable control for every trait; the subsequent 7B references and fixed-setting 4B result give the current evidence. See
 [the current project map](docs/project_tracks.md) and
 [local artifact retention](docs/workspace_maintenance.md).
 
-The current priority (2026-11-15) is [original-model method reproduction](docs/author_model_reproduction_plan.md)
-before further4B transfer. A verified GCAD impoliteness reference uses Qwen2.5-7B;
+The [original-model method references](docs/author_model_reproduction_plan.md)
+were completed before the fixed-setting 4B transfer. A verified GCAD impoliteness reference uses Qwen2.5-7B;
 SAPS uses Mistral-7B-v0.1. The profanity route follows the documented paper method
 with explicitly reconstructed missing inputs. Existing Claude evaluation replaces
 unavailable author graders with clear disclosure. See the
@@ -102,11 +113,13 @@ The [Qwen7 refusal headroom screen](docs/refusal_headroom_closeout.md) found
 The secondary phrase matcher counted five; classification sensitivity is
 disclosed. No GCAD refusal controller was tested or retained.
 
-The [next phase selected on 2026-11-16](docs/political_refusal_research_plan.md)
-tests GCAD refusal/information-access steering on benign published political
-questions at 7B, alongside fixed subtraction and projection. Then the frozen
-workflow gets a quick Qwen3-4B control, with actual successes/nulls reported,
-followed by GitHub/Hugging Face releases and later Qwen3.8-27B/Gemma 4 work.
+The [7B political-information screen](docs/political_refusal_headroom_status.md)
+found no explicit refusal headroom on its development targets. The user closed
+the available coverage branch before any fit or steering, then selected the
+completed [Qwen3-4B fixed transfer](docs/qwen3_4b_fixed_transfer_closeout.md).
+Its trait effects and quality failures are reported without a model-size causal
+claim. Public release preparation covers the qualified 7B banks; 27B/Gemma work
+follows this milestone.
 
 For adapter-training tasks, the routine workflow policy is **one base and one
 adapter configuration**, seed 42,
