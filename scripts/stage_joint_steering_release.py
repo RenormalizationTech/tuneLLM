@@ -82,7 +82,11 @@ def metrics_csv(result,audit):
 
 
 def guide_text(result,audit):
+    candidates=result['analysis']['guide'];n=len(candidates);passed=sum(v['all_pass'] for v in candidates.values())
+    coherence_failures=sum(not (v['quality']['coherence_absolute'] and v['quality']['coherence_relative']) for v in candidates.values())
+    coherence_summary=f'all {n} failed a coherence point-estimate criterion' if coherence_failures==n else f'{coherence_failures}/{n} failed a coherence point-estimate criterion'
     lines=['# Measured joint-control guide','',f"Terminal execution status: `{result['status']}`.",'',
+        f"**{passed}/{n} joint candidates met all original criteria; {coherence_summary}.**",'',
         'These are exploratory outcomes on 24 AI-authored English practical-advice questions,','not a general benchmark or validated recommended joint controller. BF16 Qwen2.5-7B,','native default system, greedy B1 cap160 seed42, repetition penalty1.05; no refit or selection.',
         'Original isolated impolite results used a different sampled cap500/B64 design.','Coherence is not accuracy/helpfulness; all traits may induce offensive style.',
         'Fixture/calibration authors and judges share a Claude model family.',
@@ -139,8 +143,8 @@ def guide_text(result,audit):
         '## Local inference','',
         'Read BOTH manifest hashes from the pinned HF revision commit message. Use real downloaded files.',
         'From the bundle root, with the already local pinned Qwen2.5-7B base snapshot:',
-        '```bash','python -B -m joint_controls.example --snapshot "$LOCAL_BASE_SNAPSHOT" --preset full_110 --joint-manifest-sha256 "$JOINT_MANIFEST_SHA"','```',
-        'Choose an explicitly measured preset from presets.json; there is no automatic recommendation.',
+        '```bash','python -B -m joint_controls.example --snapshot "$LOCAL_BASE_SNAPSHOT" --preset "$MEASURED_PRESET" --joint-manifest-sha256 "$JOINT_MANIFEST_SHA"','```',
+        'Set MEASURED_PRESET yourself from the measured table/presets.json. Measured does not mean qualified; none is recommended when no candidate qualified.',
         'A fresh context is required per generation; baseline has no hooks and zero traits are omitted.',
         'No implicit base download. Python3.11, torch2.6.0+cu124, Transformers4.52.3, accelerate1.7.0, safetensors, tqdm.',
         'EOS151645-as-PAD and left padding; the loader verifies exact base/tokenizer/bank identity.']
@@ -149,17 +153,18 @@ def guide_text(result,audit):
 
 def revised_docs(result):
     readme=(PARENT/'README.md').read_text();methods=(PARENT/'METHODS.md').read_text()
-    readme=readme.replace('No retuning, joint or independence claim.','No retuning or independence claim. Joint outcomes are separately reported below.')
+    readme=readme.replace('No retuning, joint or independence claim.','No 4B retuning or joint claim; separate 7B joint outcomes are below; no independence claim.')
+    readme=readme.replace(', and there is no retained refusal\ncontroller.','. This package contains no refusal controller.')
     readme=readme.replace('No private physics adapter','No physics adapter')
     readme=readme.replace('adapter remains private and untouched.','adapter and NF4 base are now public and separate from this package.')
-    methods=methods.replace('private physics adapter','separate physics adapter').replace('## Refusal closures and private adapter','## Refusal closures and public physics adapter').replace('adapter remains private and untouched.','adapter and NF4 base are now public and separate from this package.')
+    methods=methods.replace('No refusal controller is retained or packaged.','This package contains no refusal controller.').replace('private physics adapter','separate physics adapter').replace('## Refusal closures and private adapter','## Refusal closures and public physics adapter').replace('adapter remains private and untouched.','adapter and NF4 base are now public and separate from this package.')
     add='''\n## Additive joint-controls release\n\nThe original release_manifest.json is byte-identical and its full list describes\nthe original revision `'''+COMMIT+'''`, not the updated root README/METHODS.\nIts eight original critical bank/profile/core/loader hashes remain valid, so\nthe isolated loader still works at this HEAD. The new joint manifest covers\ncurrent cards, joint files and shared payload files. Read BOTH lines from this\npinned HF commit message: `Release manifest SHA256: H1` and `Joint manifest SHA256: H2`.\nH1 is the original manifest; H2 is joint_controls/manifest.json. Optional root
 .gitattributes and .git metadata, downloader .cache and Python __pycache__ are
 not payload files and are excluded only from consumer inventory checks. Root
 preserves any Hub-managed .gitattributes and verifies it separately unchanged. These check\nfile consistency for the pinned revision you choose, not independent publisher identity.\n\n[Joint guide](joint_controls/GUIDE.md), [all 12 arm metrics](joint_controls/metrics.csv),\nand [sanitized aggregate](joint_controls/results.json), and [post-hoc lexical audit](joint_controls/lexical_audit.json) report all outcomes, paired\nintervals, calibration/duplicate noise, cross-effects and confounding limits.\nPF means friendly-rubric swearing, not literal profanity incidence: a lower friendly PF score
 does not establish suppressed swearwords. The lexical addendum is explicitly post-hoc,
 using an unchanged narrow proxy; all original guide/gate verdicts stay unchanged.
-No new base weights, LoRA, raw questions, answers, token arrays or private grading reasons are included.\nThe NF4 base and PRL Writing QLoRA adapter are now public; they are separate\nartifacts and are not bundled here. No retained refusal controller is claimed.\n'''
+No new base weights, LoRA, raw questions, answers, token arrays or private grading reasons are included.\nThe NF4 base and PRL Writing QLoRA adapter are now public; they are separate\nartifacts and are not bundled here. This package contains no refusal controller.\n'''
     return readme+add,methods+add
 
 
