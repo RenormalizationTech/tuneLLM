@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "0f110b80a6a2d34be9e8aaa85f711d4a5da3a282444b85582a0a700e1ed7ba8c",
+  "headroom_choice_sha256": "c6f8a84859c6c31e5bded347437adb634342e337dcdc4432bfaab1bacc764189",
+  "headroom_run_sha256": "b863879301e81b26cd65d830d2ead6202ac96170f4de08c931318641cf845534",
+  "headroom_integrity_sha256": "f67ff2fa4712cdafd01cf0b57559fe0153c0d8a57bb05cc6d9dfed0ef4bdcb63",
+  "primary_accepted_sha256": "69cebad91479bf905578331b3becd75ea826c86cb393a8b655890242cbec7de8"
+}
