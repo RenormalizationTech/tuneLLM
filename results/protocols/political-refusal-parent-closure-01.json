@@ -1,0 +1,80 @@
+{
+  "status": "incomplete_infrastructure_no_labels",
+  "parent_run": "outputs/political-refusal-01",
+  "files_sha256": {
+    "config.json": "e5a7924dfeb44c26c0ca556ea830461dc91c64a7348ef0f5d856ab0e7e9e2558",
+    "inputs/coherence_rubric.json": "ae6cc173aa1b58eeb7e6c12d088b7fb925327f39e71fe4f038233a6690c4afc8",
+    "inputs/data.json": "8a5c263c795d1bf8d5aca2e8522444ff4b15dff5e82cc6a8eeea4ea13340d1f3",
+    "inputs/model_defaults.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+    "inputs/plans.json": "4e730267c06f8d2ebff900157b1c124910e23f27592efbf4f037741d87c60658",
+    "inputs/primary_rubric.json": "a123637664ab3fd8dca6a58ea513cbd9d8ae56bb1ee1a3582a7d2ccd72539b17",
+    "inputs/rendered.json": "d4144d88c09ae86c174f1bacc7dc7ac373225c2913c2a3c569d43563bc310290",
+    "manifest.json": "7f83b1f0d3ef5e2379a84bfae39cd94efe0ef0c4e91d9fa0e3d9f8000000db03",
+    "native/calibration/primary/.resume.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native/calibration/primary/batch-000-attempt-0-receipt.json": "3aef137b74f7048bcce95ceb9861e3c3910aa9f08523f61de8fc926f9f082ff4",
+    "native/calibration/primary/batch-000-attempt-0-start.json": "2bfa753e0ad8a9edd2f7e27d82f39d9fbb55f576c793f93818c13fc22567b287",
+    "native/calibration/primary/batch-000-attempt-0.json": "ca9e08d72e9a45238c85b86f57dee02611ad7f6d1a655ff5781ec8b1c581152b",
+    "native/calibration/primary/run_binding.json": "766ac4b5b20cb9cc15b732d312f654ce0d134ffbbfb9edae7146e09f80ea0b9e",
+    "operator_logs/calibration-01.log": "cdb8b5c6c9cfb912c66dc015d4ce6c12ca116fcec117e3191f61ff1bf8867f87",
+    "source/configs/political_refusal.json": "8ee4fc9578c831070ff2ed3700e0e0c17bd05d02ced1be47b65e1d6924534c14",
+    "source/scripts/author_gcad_impolite.py": "65620b510ebea7f307ac5d6a92d2425561bb0cde5cb0766393984a7a83a1dbe4",
+    "source/scripts/author_gcad_impolite_common.py": "190d32458b8dd090bfa2151a0bb40041f20472bfde8388f2a90101a7e964d151",
+    "source/scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+    "source/scripts/author_replication_audit.py": "2e3a28966d0825452854f009c8db8a445272cac710da4575c0311da94a35e7ab",
+    "source/scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "source/scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "source/scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+    "source/scripts/political_refusal.py": "5e046546ec0a7aece09782af5325193e2a27e8e55a1b93514280a0cd5ad2f6d2",
+    "source/scripts/political_refusal_common.py": "230b37c3df3890e569a895d95843f8b14ac6f79d7dc0dcf058fc1b6b27833610",
+    "source/scripts/political_refusal_runbook.md": "90a76857d58abb6ab9006565e537cf973e6e6da22dc01ccf0b9a891e062980d1",
+    "source/scripts/profanity_method_transfer_common.py": "b23cc0d81e8ed25ac9f0d630008418e63bcde077f6ad15688f4681545d387b24",
+    "source/scripts/reduction_hooks.py": "f45f7e48520278306e79aa4d0cf6011648b4a213125c0a32ca265f4157ffa3d8",
+    "source/scripts/sarcasm_method_transfer_common.py": "a1e1d2fec04080285d04f1f274b746495208698204b966922d82b6ac769e60d7",
+    "source/scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "source/scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "source/scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5",
+    "stopped.json": "4987a46a9139721b0f1e4848bf19572658a58659dd3a9cec8d20069f7f61959f"
+  },
+  "registrations_sha256": {
+    "results/protocols/political-refusal-01.json": "0450a06d79f1e9ea548f96dd114122069f005b9f0e96683ff19bd9838ab207f1",
+    "results/protocols/political-refusal-data-01.json": "9012e601249bd85704bf02aecf50b542b608ab5c42c5789aad0580b0d2a48710"
+  },
+  "verified_counts_and_payload": {
+    "native_starts": 1,
+    "first_valid_batches": 0,
+    "qwen_generations": 0,
+    "calibration_primary_payloads_sha256": "3dad0da638fd51e671ba0a31b296c9ceb0f3f4828ebd79077139c2f9d502904f"
+  },
+  "failure_type": "DNS EAI_AGAIN; default sandbox; no ratings or Qwen output",
+  "parent_manifest_sha256": "7f83b1f0d3ef5e2379a84bfae39cd94efe0ef0c4e91d9fa0e3d9f8000000db03",
+  "source_sha256": {
+    "configs/political_refusal.json": "8ee4fc9578c831070ff2ed3700e0e0c17bd05d02ced1be47b65e1d6924534c14",
+    "scripts/author_gcad_impolite.py": "65620b510ebea7f307ac5d6a92d2425561bb0cde5cb0766393984a7a83a1dbe4",
+    "scripts/author_gcad_impolite_common.py": "190d32458b8dd090bfa2151a0bb40041f20472bfde8388f2a90101a7e964d151",
+    "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+    "scripts/author_replication_audit.py": "2e3a28966d0825452854f009c8db8a445272cac710da4575c0311da94a35e7ab",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+    "scripts/political_refusal.py": "5e046546ec0a7aece09782af5325193e2a27e8e55a1b93514280a0cd5ad2f6d2",
+    "scripts/political_refusal_common.py": "230b37c3df3890e569a895d95843f8b14ac6f79d7dc0dcf058fc1b6b27833610",
+    "scripts/political_refusal_runbook.md": "90a76857d58abb6ab9006565e537cf973e6e6da22dc01ccf0b9a891e062980d1",
+    "scripts/profanity_method_transfer_common.py": "b23cc0d81e8ed25ac9f0d630008418e63bcde077f6ad15688f4681545d387b24",
+    "scripts/reduction_hooks.py": "f45f7e48520278306e79aa4d0cf6011648b4a213125c0a32ca265f4157ffa3d8",
+    "scripts/sarcasm_method_transfer_common.py": "a1e1d2fec04080285d04f1f274b746495208698204b966922d82b6ac769e60d7",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+    "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+  },
+  "recovery_review_sha256": "71773a7fa200cb836d6d79301d287bfcdc30d33d362239cac6419bdec8b3ce6a",
+  "budget_charge": {
+    "initial_starts": 1,
+    "global_starts": 1,
+    "initial_ceiling": 32,
+    "global_ceiling": 424
+  },
+  "limits": [
+    "Infrastructure closure, not a scientific null or calibration result.",
+    "Private attempt bytes retained; no account/session metadata or grading text exported."
+  ]
+}
