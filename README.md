@@ -34,6 +34,13 @@ now public; the GSM8K adapter repository was deleted after a verified local
 archive. See the [transition receipt](results/hf_visibility_transition_01.json).
 Refusal work is paused; no new 7B refusal model or controller is claimed.
 
+[Verified local cleanup](results/storage_cleanup_20261116_01.json) reclaimed
+49.576 GiB: redundant verification caches, two duplicate PRL staging weights,
+and Qwen3-14B/Mistral-7B weight blobs. Their tokenizer/config metadata remain;
+all 18 physics optimizer states, checkpoints, active 7B/4B weights, environments
+and the GSM8K archive were retained. Future model options are Qwen3.8-27B and
+Gemma 4, not another Qwen3-14B download or study; no new compute is released.
+
 The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The
 completed [adapted XSTest-safe baseline](docs/xstest_baseline_execution.md)
@@ -54,8 +61,8 @@ All 57 grading batches passed on their first attempts. The model phase took
 about 13 minutes with 30.8 GB peak allocated memory. These are unmodified-model
 measurements; reliable refusal steering and greater stability from size remain
 unestablished. See the [registered protocol](docs/qwen3_14b_baseline_protocol.md).
-The completed 14B baseline is retained; further 14B experiments are deferred
-under the user's revised 4B-first persona sequence.
+The completed 14B baseline records are retained. Its cached weights have been
+removed while tokenizer/config metadata remain; Qwen3-14B is not a future target.
 
 The [trait-rating calibration passed](docs/persona_rating_calibration_completion_execution.md):
 both blinded passes matched all 48 authored presence labels for each trait.

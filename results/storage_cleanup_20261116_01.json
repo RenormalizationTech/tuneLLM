@@ -1,0 +1,172 @@
+{
+  "status": "complete",
+  "verified_at": "2026-11-16T20:45:20.059351+00:00",
+  "scope": "User-authorized cleanup 1, 2 and 4 only; local storage, no scientific change.",
+  "evidence": {
+    "manifest.json": {
+      "path": "outputs/storage-cleanup-20261116-01/manifest.json",
+      "sha256": "7f85807f4d13f51a141affee1dc161c3894957c20de8117cbcf74e7d7ee0611b"
+    },
+    "verified-receipt.json": {
+      "path": "outputs/storage-cleanup-20261116-01/verified-receipt.json",
+      "sha256": "4b5889ead567cda397135d73fc998cf637b74353da2d4d8b46a25db69c953e85"
+    },
+    "receipt.json": {
+      "path": "outputs/storage-cleanup-20261116-01/receipt.json",
+      "sha256": "b3d20c7f4e955d67b4915f1e0165549f343b7d2c85c86fa7b5cf6c61d63b0928"
+    },
+    "retention-before.json": {
+      "path": "outputs/storage-cleanup-20261116-01/retention-before.json",
+      "sha256": "de4c28f8565ab8bfe8e1a67515ad8cad19c3f6f119b009c09d16f1729a17b38b"
+    },
+    "RECOVERY.md": {
+      "path": "outputs/storage-cleanup-20261116-01/RECOVERY.md",
+      "sha256": "d09a7deba032ce12e374bae64dd9801708a231f5117bf9b29aa3c5f1bc7fab16"
+    },
+    "cleanup.py": {
+      "path": "outputs/storage-cleanup-20261116-01/cleanup.py",
+      "sha256": "97cc910e6e2d900830f57571221c06d1c3950dcf4d79bd8f79df538fbc27221e"
+    }
+  },
+  "deleted_target_count": 25,
+  "deleted_verification_caches": [
+    ".hf/published-verification",
+    ".hf/physics-publication-check",
+    ".hf/report-update-verification"
+  ],
+  "deleted_staging_files": [
+    "artifacts/releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA-pre-review-01/adapter_model.safetensors",
+    "artifacts/releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA-pre-review-02/adapter_model.safetensors"
+  ],
+  "staging_weights_exact_duplicate_of_retained_published_adapter_sha256": "cc3e18f287aac6f688f31a3516c7e1ebec305b4b3c7e630f169a5faad4070d21",
+  "model_weight_cleanup": [
+    {
+      "repo_id": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "removed_weights": [
+        {
+          "file": "model-00001-of-00008.safetensors",
+          "bytes": 3841788544,
+          "cached_blob_name": "e942bdbdf08857d16a8fef7d1dae9fceabeb4e84def6043485fe2f6f085dab0e",
+          "recorded_lfs_sha256": "e942bdbdf08857d16a8fef7d1dae9fceabeb4e84def6043485fe2f6f085dab0e"
+        },
+        {
+          "file": "model-00002-of-00008.safetensors",
+          "bytes": 3963750816,
+          "cached_blob_name": "f7c9c6eee628f5ad831d2d1d292e120505e5fcadeb38f88b4d3c4cb86306ccf9",
+          "recorded_lfs_sha256": "f7c9c6eee628f5ad831d2d1d292e120505e5fcadeb38f88b4d3c4cb86306ccf9"
+        },
+        {
+          "file": "model-00003-of-00008.safetensors",
+          "bytes": 3963750880,
+          "cached_blob_name": "dfb8c5df9404b41ad6ae74e8b6b367135f017b4467b884cf71b17c71954f18a9",
+          "recorded_lfs_sha256": "dfb8c5df9404b41ad6ae74e8b6b367135f017b4467b884cf71b17c71954f18a9"
+        },
+        {
+          "file": "model-00004-of-00008.safetensors",
+          "bytes": 3963750880,
+          "cached_blob_name": "eab286fec759e3e59ab228621aefa0fef14ed56039e06f959e67257d5af7604d",
+          "recorded_lfs_sha256": "eab286fec759e3e59ab228621aefa0fef14ed56039e06f959e67257d5af7604d"
+        },
+        {
+          "file": "model-00005-of-00008.safetensors",
+          "bytes": 3963750880,
+          "cached_blob_name": "97f0dc2992e59da95c466eff6f4fd0c8335843bbc36ed5c913a6f5150748c0e6",
+          "recorded_lfs_sha256": "97f0dc2992e59da95c466eff6f4fd0c8335843bbc36ed5c913a6f5150748c0e6"
+        },
+        {
+          "file": "model-00006-of-00008.safetensors",
+          "bytes": 3963750880,
+          "cached_blob_name": "9e8e76a013cd5e253865b792991e0b410f869b136b3c500079b531b09198e99e",
+          "recorded_lfs_sha256": "9e8e76a013cd5e253865b792991e0b410f869b136b3c500079b531b09198e99e"
+        },
+        {
+          "file": "model-00007-of-00008.safetensors",
+          "bytes": 3963750880,
+          "cached_blob_name": "0aee70ee6e91dc00d818804fb47f124d13ee4ad5b4a64553e09dbf9391cd5750",
+          "recorded_lfs_sha256": "0aee70ee6e91dc00d818804fb47f124d13ee4ad5b4a64553e09dbf9391cd5750"
+        },
+        {
+          "file": "model-00008-of-00008.safetensors",
+          "bytes": 1912371880,
+          "cached_blob_name": "0d6b92296e326d39bbbaeb32c3ec454ac606da843d4c8ffa8edf010b62b8c9e0",
+          "recorded_lfs_sha256": "0d6b92296e326d39bbbaeb32c3ec454ac606da843d4c8ffa8edf010b62b8c9e0"
+        }
+      ],
+      "retained": "tokenizer/config/index/refs and small metadata; partial cache with no dangling links"
+    },
+    {
+      "repo_id": "mistralai/Mistral-7B-Instruct-v0.1",
+      "revision": "ec5deb64f2c6e6fa90c1abf74a91d5c93a9669ca",
+      "removed_weights": [
+        {
+          "file": "model-00001-of-00002.safetensors",
+          "bytes": 9942981696,
+          "cached_blob_name": "a464228d9c9427bf035cfd5a2e18bf0494d7231bfacc478ec5fc9f57a612d051",
+          "recorded_lfs_sha256": "a464228d9c9427bf035cfd5a2e18bf0494d7231bfacc478ec5fc9f57a612d051"
+        },
+        {
+          "file": "model-00002-of-00002.safetensors",
+          "bytes": 4540516344,
+          "cached_blob_name": "5734c77cf2ff6482713d474ee9c8791cd712b59dd36b05d096af5a4cb41f3f02",
+          "recorded_lfs_sha256": "5734c77cf2ff6482713d474ee9c8791cd712b59dd36b05d096af5a4cb41f3f02"
+        }
+      ],
+      "retained": "tokenizer/config/index/refs and small metadata; partial cache with no dangling links"
+    }
+  ],
+  "space": {
+    "planned_inode_aware_allocated_bytes_excluding_directories": 53232156672,
+    "planned_gib": 49.57630920410156,
+    "observed_filesystem_used_bytes_reduction": 53232201728,
+    "observed_gib": 49.576351165771484,
+    "measurement_note": "Filesystem df reduction; directory allocation and concurrent filesystem activity can differ from per-file estimate."
+  },
+  "metadata_backup": {
+    "path": "outputs/storage-cleanup-20261116-01/metadata",
+    "file_count": 433,
+    "file_hashes_in": "manifest.json:metadata_sha256",
+    "recovery_instructions": "outputs/storage-cleanup-20261116-01/RECOVERY.md",
+    "large_blob_hash_scope": "Cached blob names record remote content identifiers; no fresh remote check or large-blob rehash."
+  },
+  "retention": {
+    "optimizer_states_deleted": 0,
+    "optimizer_states_unchanged": 18,
+    "optimizer_comparison": "size/inode/mtime, root verified against retention-before.json",
+    "physics_checkpoints_retained": true,
+    "retained_model_roots": [
+      ".hf/hub/models--Qwen--Qwen2.5-7B-Instruct",
+      ".hf/hub/models--Qwen--Qwen3-4B"
+    ],
+    "retained_7b_4b_weights_present": true,
+    "retained_runtime_roots": [
+      ".venv",
+      "outputs/persona-author-replication-audit-01/envs/gcad",
+      "outputs/persona-author-replication-audit-01/envs/saps"
+    ],
+    "runtime_environments_present": true,
+    "hf_auth_and_uv_cache_not_targeted": true,
+    "gsm8k_archive_manifest_unchanged": true,
+    "gsm8k_archive_manifest_sha256": "aa720dd92fc6809c3ed8038acd6e500cb6f1e6199c55808db842a17a574a1716",
+    "partial_model_caches_no_dangling_links": true
+  },
+  "post_cleanup_cpu_verification": {
+    "source": "Root operator receipts reported after cleanup; no worker rerun.",
+    "qwen3_14b_tokenizer_test": {
+      "nodeid": "tests/test_qwen3_14b_baseline.py::test_actual_cached_14b_tokenizer_native_prefix_and_all_mc_boundaries",
+      "passed": 1,
+      "seconds": 3.17
+    },
+    "offline_AutoTokenizer_load_and_encode_passed": [
+      "mistralai/Mistral-7B-Instruct-v0.1",
+      "Qwen/Qwen2.5-7B-Instruct",
+      "Qwen/Qwen3-4B"
+    ]
+  },
+  "future_model_options": [
+    "Qwen3.8-27B",
+    "Gemma 4"
+  ],
+  "qwen3_14b_future_download_or_study_authorized": false,
+  "historical_reports_protocols_and_execution_records_unchanged": true
+}

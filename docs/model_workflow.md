@@ -28,7 +28,8 @@ BF16 base; its physics/math questions checked content retention, not PRL writing
 or physics-adapter improvement. See the [project map](project_tracks.md) for
 methods, completed status and the user-selected profanity/rudeness/sarcasm
 objective: isolated controls first on 4B, then a separate simultaneous study.
-Further 14B work is deferred until the bounded 4B persona pipeline is complete.
+The fixed 4B transfer is complete. Future model options are Qwen3.8-27B and
+Gemma 4; Qwen3-14B is retained as historical evidence, not a future target.
 
 ## Routine workflow after the calibration pilot
 
@@ -100,6 +101,15 @@ Preserve the upstream repository, immutable revision, tokenizer, license, packag
 versions and checksums. Large artifacts, datasets and raw outputs remain under
 git-ignored `artifacts/`, `data/`, `outputs/` and `.hf/`.
 See [workspace maintenance](workspace_maintenance.md) for retention and cleanup.
+
+The [2026-11-16 cleanup receipt](../results/storage_cleanup_20261116_01.json)
+records removal of redundant verification caches, duplicate pre-review adapter
+weights and 14B/Mistral weight blobs. All physics optimizer states and
+checkpoints were retained. These two model caches are intentionally partial:
+tokenizers/configs/indices/refs remain, and no weight links dangle. Metadata
+backups and revision-pinned recovery instructions are under
+`outputs/storage-cleanup-20261116-01/`; old reports can name cache paths whose
+weights are now absent. Recovery is not an automatic download instruction.
 
 For a new model's quantization calibration, produce independent branches directly
 from the original high-precision weights. Routine adapter runs reuse the verified

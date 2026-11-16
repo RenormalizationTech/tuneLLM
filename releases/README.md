@@ -22,6 +22,13 @@ large files by LFS metadata against prior byte-verified hashes. There was no new
 weight download or GPU check. The prepared PRL test split and frozen evaluation
 fixtures are now public; future reuse is not clean held-out evaluation.
 
+The [local storage cleanup](../results/storage_cleanup_20261116_01.json)
+removed redundant verification-download caches and the two duplicate PRL
+pre-review weight files, preserving the retained release payload and all
+physics optimizer/checkpoint files. Historical receipts still describe their
+original verification paths; metadata backups and recovery instructions are
+in `outputs/storage-cleanup-20261116-01/`. Published repositories are unchanged.
+
 ### Additive benchmark documentation updates (2026-11-13)
 
 The completed [benchmark summary](../docs/benchmark_summary.md) was included

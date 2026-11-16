@@ -39,6 +39,17 @@ tests. No new 7B refusal model or controller is claimed; the prior political
 coverage branch remains unexecuted. Earlier plans below are history, not a
 release for further compute.
 
+Local cleanup is complete: [receipt](results/storage_cleanup_20261116_01.json).
+The planned reclaim was 49.576309 GiB; the observed filesystem used-space
+reduction was 49.576351 GiB. Only the 25 allowlisted cache/staging targets were
+removed. No optimizer states were deleted: all 18 retained their size, inode
+and mtime. Tokenizer/config/index/refs survive in the partial Qwen3-14B and
+Mistral caches; active 7B/4B weights, runtime environments and the GSM8K archive
+remain. Root verified the cached 14B tokenizer test (1 pass, 3.17 seconds) and
+offline tokenizer loading for Mistral-7B, Qwen2.5-7B and Qwen3-4B. Future model
+options are Qwen3.8-27B and Gemma 4; Qwen3-14B has no future download or study
+scheduled. Existing historical 14B results remain unchanged.
+
 The [fixed-setting Qwen3-4B transfer](docs/qwen3_4b_fixed_transfer_plan.md)
 is registered in [R1](results/protocols/qwen3-4b-fixed-transfer-01.json).
 The [4B closeout](docs/qwen3_4b_fixed_transfer_closeout.md) and
