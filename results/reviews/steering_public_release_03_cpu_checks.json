@@ -1,0 +1,89 @@
+{
+  "status": "CPU_READY_PENDING_ROOT_COMMIT_TAG_AND_FINAL03_BUILD",
+  "utc": "2026-11-16T19:15:46.410173+00:00",
+  "source_and_tests_sha256": {
+    "scripts/stage_steering_release.py": "14b55c5ed7824b772ecd4962dff571aefa5ab5445c266b9bd804704e2d4fb060",
+    "tests/test_stage_steering_release.py": "ea886338a7d17c0affc27c74402f14084a7ba0511a1cf4474ce4d8a509d7f8a9"
+  },
+  "review_sha256": "62a36c51fe81315ad9df97985da59546e8b7fc0abb1776a9833e70ffcac0b24f",
+  "cpu_tests": {
+    "passed": 39,
+    "seconds": 15.53,
+    "warnings": 1,
+    "runtime": "GCADPython3.11 torch2.6.0+cu124 Transformers4.52.3, late pure pytest fallback, plugins disabled, CUDA hidden",
+    "scope": [
+      "All26 prior packaging/tokenizer checks",
+      "public23-file allowlist, exact inference-core byte identity to validated02 and strict tensor loader",
+      "source-tag resolution and committed-builder mismatch guard (mocked Git; no tags/commits made)",
+      "public visibility/status/hash/secret/extra-file/core-mutation rejection",
+      "two-path-only4B aggregate sanitization and outside publisher schema",
+      "payload-relative/public-author links and private project-path rejection",
+      "P1 corrected publication scope and explicit omitted private protocol/review labels",
+      "P2 expected hash and file-consistency scope; no embedded self-hash"
+    ],
+    "production_03_built": false,
+    "unit_finalization": "Temporary pytest directories only, mocked tags; no real public build."
+  },
+  "finalization_command": "CUDA_VISIBLE_DEVICES='' .venv/bin/python -B -m scripts.stage_steering_release public --source-ref steering-controls-v1",
+  "verify_command": "CUDA_VISIBLE_DEVICES='' .venv/bin/python -B -m scripts.stage_steering_release verify-public",
+  "production_payload": "outputs/steering-release-staging-03",
+  "outside_publication_manifest": "outputs/steering-release-staging-03-publication-manifest.json",
+  "public_repository": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+  "private": false,
+  "expected_files": 23,
+  "reviewed_staging02_manifest_sha256": "05aea48f36a5365bbe55adad1ee5ef17d52df3711557f960c1f158fab44a853e",
+  "inference_core_sha256": {
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "NOTICE": "50ac5d235595dfce04fc12f4272520e93ddb181ab8604249b4dc61a13c0abc95",
+    "impolite/bank.safetensors": "bb12019e3452be24b216c34018f7bd685ed728e6acc529d2e588e6de9738571a",
+    "impolite/profile.json": "0620e744f8ac2c02c57c17725093a8d73e43cd471bd05590a0a2dc3b3683eaf1",
+    "impolite/provenance.json": "7f7e8ed719efe597f8e55439bf40c0c2fbae0d82c6146f590e5e95658f921af0",
+    "profanity/bank.safetensors": "898c979c5e30502a0c93b11e5d950cda9696b41e3560dad84333f7bd2dffc8c9",
+    "profanity/profile.json": "8ed22088d1cd20f99bac0ce60b6406116f743abc055ba1b29fbffd60189f3803",
+    "profanity/provenance.json": "857f8850ce84106fd671ff06a63714e10ec8aed4621331f929a117be63852b03",
+    "runtime/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime/example.py": "c2204d0858b93c1562a9e7ea5c03d040875a89e0a53793359b731fdc7b526ccc",
+    "runtime/gcad.py": "f8093f297dc66ee51af08f441f32be129da9650ba68c34ab874707773ba2b556",
+    "runtime/loader.py": "a6a9bdccdb27fe7afa698dd0727647fc39aead7c16e74fc06570c5bc943c6058",
+    "sarcasm/bank.safetensors": "18f07509558bde63d7f648e3488eff5ddd50fde010115a86b8a6350f57518a0e",
+    "sarcasm/profile.json": "4705529188991903f92dfb1c366250830e2a426ccdfda1042f896c0eb92b8e4a",
+    "sarcasm/provenance.json": "9606d80bee0b0640ae6d020a4ba65d07d6eed3dd144cd8b4454dbcde9ad43175"
+  },
+  "real_reload_source_record_sha256": "d5a58b02bffc9ad85f7a5b8b0c7c3f1a05a028bf747d227598bb0998bf725342",
+  "real_reload_proof_scope": {
+    "method": "CPU byte identity of the inference core to the real-zero-validated staging02 bundle",
+    "record": "steering_release_real_reload_02.json",
+    "record_sha256": "d5a58b02bffc9ad85f7a5b8b0c7c3f1a05a028bf747d227598bb0998bf725342",
+    "validated_parent_manifest_sha256": "05aea48f36a5365bbe55adad1ee5ef17d52df3711557f960c1f158fab44a853e",
+    "traits_passed": [
+      "profanity",
+      "impolite",
+      "sarcasm"
+    ],
+    "staging02_real_model_forwards": 6,
+    "staging02_generated_answers": 0,
+    "public03_gpu_rerun": false,
+    "scope": "Operational zero-coefficient validation on staging02, not a new efficacy benchmark or a claimed staging03 GPU rerun."
+  },
+  "related_results_original_sha256": "004c2de7bc24a8e6686fd6476964f0ea18ee1077fab50dfd07c2679816256d13",
+  "P3_operator_condition": {
+    "publisher_message_exact_template": "Release manifest SHA256: H",
+    "H": "SHA256 of final03 release_manifest.json, not the outside upload-manifest hash",
+    "after_upload": "Root verifies the remote pinned commit message and all file hashes and saves publication proof. Not executed by worker."
+  },
+  "privacy_and_scope": "Public package self-contained; source Git tag/commit private provenance only. No private GitHub expected-hash link. No raw questions/prompts/answers/grades/full pipeline/private physics/base weights/4B banks.",
+  "runtime_and_banks_changed": false,
+  "existing_study_sources_changed": false,
+  "actual_03_gpu_rerun": false,
+  "network_model_native_HF_upload_calls": 0,
+  "worker_commits_tags_installs": 0,
+  "root_independent_cpu_tests": {
+    "passed": 39,
+    "seconds": 15.64,
+    "warnings": 1,
+    "runtime": "target GCADPython with pure pytest late fallback; CUDA hidden",
+    "evidence": "Root final coordination receipt; no worker rerun."
+  },
+  "handoff": "DONE; root owns source commit, creation of steering-controls-v1, actual03 build/file review and P3 publication checks",
+  "finalized_utc": "2026-11-16T19:17:17.286029+00:00"
+}

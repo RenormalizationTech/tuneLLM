@@ -196,3 +196,98 @@ def test_real_cached_pinned_tokenizer_reference_pass_and_semantic_tamper_rejecti
         loader.validate_tokenizer(tokenizer,snapshot,metadata)
     else:loader.validate_tokenizer(tokenizer,snapshot,metadata)
     assert before=={name:(snapshot/name).read_bytes() for name in names}
+
+
+@pytest.fixture
+def public_fixture(tmp_path,monkeypatch):
+    root=tmp_path/'public'
+    monkeypatch.setattr(a,'PUBLIC_DEST',root)
+    monkeypatch.setattr(a,'PUBLIC_UPLOAD_MANIFEST',tmp_path/'upload.json')
+    monkeypatch.setattr(a,'resolve_source_ref',lambda ref:{'tag':ref,'commit':'a'*40})
+    result=a.finalize_public('cpu-tested-tag')
+    assert result['upload_performed'] is False and result['file_count']==23
+    return root
+
+
+def test_public_inference_core_byte_identity_and_strict_loader_cpu(public_fixture):
+    root=public_fixture;result=a.preflight(root,public=True);assert result['pass']
+    for name in a.core_names():assert (root/name).read_bytes()==(a.DEST/name).read_bytes()
+    loader=runtime(root);p,v=loader.profile_and_tensors(root,'profanity',expected_manifest_sha256=a.sha(root/'release_manifest.json'))
+    assert p['base']['revision']==a.REV and set(v)==set(a.SHAPES)
+    assert a.read(root/'release_manifest.json')['validation']['public03_gpu_rerun'] is False
+
+
+@pytest.mark.parametrize('tamper',['private','status','hash','secret','extra','core'])
+def test_public_mode_rejects_visibility_status_hash_secret_extra_core_change(public_fixture,tamper):
+    root=public_fixture;m=a.read(root/'release_manifest.json')
+    if tamper=='private':m['private']=True
+    elif tamper=='status':m['status']='local_draft_not_uploaded'
+    elif tamper=='hash':m['files_sha256']['README.md']='0'*64
+    elif tamper=='secret':
+        (root/'README.md').write_text('Bearer '+'x'*24);m['files_sha256']['README.md']=a.sha(root/'README.md')
+    elif tamper=='extra':(root/'unexpected.txt').write_text('CPU_TEST')
+    else:
+        file=root/'profanity/profile.json';p=a.read(file);p['runtime']['real_7b_reload_validation']='MUTATED_ARCHIVE';put(file,p);m['files_sha256']['profanity/profile.json']=a.sha(file)
+    put(root/'release_manifest.json',m)
+    with pytest.raises(ValueError):a.preflight(root,public=True)
+
+
+def test_public_tag_guard_requires_committed_builder_and_resolves_exact_tag(monkeypatch):
+    calls=[]
+    def git(argv,**kwargs):
+        calls.append(argv)
+        if argv[1]=='rev-parse':return SimpleNamespace(stdout=('a'*40+'\n').encode())
+        name=argv[2].split(':',1)[1]
+        return SimpleNamespace(stdout=a.local(name).read_bytes())
+    monkeypatch.setattr(a.subprocess,'run',git)
+    assert a.resolve_source_ref('steering-controls-v1')=={'tag':'steering-controls-v1','commit':'a'*40}
+    assert calls[0]==['git','rev-parse','--verify','refs/tags/steering-controls-v1^{commit}']
+    calls.clear()
+    with pytest.raises(ValueError):a.resolve_source_ref('../unsafe')
+    assert not calls
+    def stale(argv,**kwargs):
+        if argv[1]=='rev-parse':return SimpleNamespace(stdout=('a'*40+'\n').encode())
+        return SimpleNamespace(stdout=b'CPU_OLD_COMMITTED_BUILDER')
+    monkeypatch.setattr(a.subprocess,'run',stale)
+    with pytest.raises(ValueError,match='source tag does not bind'):a.resolve_source_ref('steering-controls-v1')
+
+
+def test_public_upload_schema_sanitized_derivatives_and_no_self_hash(public_fixture):
+    root=public_fixture;m=a.read(root/'release_manifest.json');upload=a.read(a.PUBLIC_UPLOAD_MANIFEST)
+    assert set(upload)=={'repo_id','private','files'} and upload['repo_id']==a.PUBLIC_REPO and upload['private'] is False
+    assert set(upload['files'])==a.allowlist(public=True) and len(upload['files'])==23
+    for name,item in upload['files'].items():assert item=={'bytes':(root/name).stat().st_size,'sha256':a.sha(root/name)}
+    assert 'release_manifest.json' not in m['files_sha256']
+    public=a.read(root/'related_results/qwen3_4b_fixed_transfer_01.public.json');original=a.read(a.local(a.FOURB_RESULT))
+    assert public['traits']==original['traits'] and public['costs']==original['costs']
+    assert public['native_identity']['runtime_config']==Path(original['native_identity']['runtime_config']).name
+    assert public['native_identity']['runtime_config_sha256']==original['native_identity']['runtime_config_sha256']
+    card=(root/'README.md').read_text()
+    assert a.sha(root/'release_manifest.json') not in card
+    assert 'Release manifest SHA256: H' in card and 'revision=PINNED_HF_SHA' in card
+    assert 'accelerate==1.7.0' in card and 'local_dir="controls"' in card
+    assert 'github.com/' not in card
+
+
+@pytest.mark.parametrize('tamper',['private_json_path','dead_relative_link','private_github_link'])
+def test_public_path_and_link_scope_does_not_blindly_scan_runtime(public_fixture,tamper):
+    root=public_fixture
+    if tamper=='private_json_path':
+        file=root/'related_results/qwen3_4b_fixed_transfer_01.public.json';data=a.read(file);data['native_identity']['runtime_config']='configs/CPU_PRIVATE.json';put(file,data)
+    else:
+        file=root/'README.md';file.write_text(file.read_text()+ ('\n[private](../../not-shipped.md)\n' if tamper=='dead_relative_link' else '\n[private](https://github.com/RenormalizationTech/tuneLLM)\n'))
+    rehash(root)
+    with pytest.raises(ValueError):a.preflight(root,public=True)
+    # Existing exact-byte attribution paths in reviewed runtime remain allowed.
+    assert b'outputs/' in (root/'runtime/gcad.py').read_bytes()
+
+
+def test_public_closeout_publication_scope_and_expected_hash_wording(public_fixture):
+    root=public_fixture;closeout=(root/'related_results/qwen3_4b_fixed_transfer_closeout.md').read_text();card=(root/'README.md').read_text()
+    assert 'on GitHub' not in closeout and 'aggregates in this bundle' in closeout
+    assert '[plan]' not in closeout and '[interpretation]' not in closeout
+    assert 'private protocol (not included)' in closeout and 'private interpretation review (not included)' in closeout
+    assert '[public method notes](../METHODS.md#qwen3-4b-fixed-transfer)' in closeout
+    assert 'expected manifest hash' in ' '.join(card.split()) and 'trusted bank' not in card
+    assert 'This verifies file consistency for the pinned revision you choose' in card
+    assert 'does not independently prove who published them' in card
