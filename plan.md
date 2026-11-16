@@ -46,8 +46,15 @@ with zero new compute; its historical quality failure remains disclosed.
 The retained 7B style banks are also [staged locally](results/steering_release_staging_01.json)
 as safetensors with a portable runtime, provenance and licences. All 18 packaging
 CPU checks passed. The [real-base reload checks](results/steering_release_real_reload_02.json)
-passed for all three 7B banks. Final public release preparation is next;
-**nothing new is uploaded to Hugging Face yet**.
+passed for all three 7B banks. The
+[public 7B package](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls) is published at revision
+`763865908e5e94a020606b31ab66185360f7dd44`. All 23 remote hashes, the commit-message
+manifest checksum and the three downloaded CPU bank loads are verified;
+see the [publication receipt](results/steering_publication_7b_03.json) and
+[post-download check](results/steering_publication_7b_03_postdownload.json).
+The GitHub repository remains private, so the HF package includes its own
+method notes and sanitized result summaries. The private source tag is
+`steering-controls-v1`; no 4B bank or new 4B steering repository was published.
 The sections below preserve the preceding decisions and study history.
 
 ## Current scope clarification (2026-11-14)

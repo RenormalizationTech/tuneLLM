@@ -1,0 +1,136 @@
+{
+  "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+  "url": "https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+  "private": false,
+  "manifest_sha256": "0ac1014e0a041c175f0da012c5bc588fc6b9f89d1f5fb4de24d6b81541513dc8",
+  "credentials_recorded": false,
+  "status": "published_remote_hashes_verified",
+  "revision": "763865908e5e94a020606b31ab66185360f7dd44",
+  "commit_url": "https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls/commit/763865908e5e94a020606b31ab66185360f7dd44",
+  "verified_at_utc": "2026-11-16T19:20:47.326672+00:00",
+  "files": {
+    "METHODS.md": {
+      "bytes": 6684,
+      "sha256": "b917bf68444ebbb5e187099e095623a2affcbb286530210c0463ef1ff26eb58a",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "NOTICE": {
+      "bytes": 626,
+      "sha256": "50ac5d235595dfce04fc12f4272520e93ddb181ab8604249b4dc61a13c0abc95",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "release_manifest.json": {
+      "bytes": 8104,
+      "sha256": "8a57ab029d9d2adee60be7229ee30a3ba347c9c53442bed96799e2b2316849f4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "README.md": {
+      "bytes": 4937,
+      "sha256": "c4dbb1a4d7ff6d79d770f43f062ef8ba1cf46775bbb827c828a16ada43a6e471",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "impolite/bank.safetensors": {
+      "bytes": 459088,
+      "sha256": "bb12019e3452be24b216c34018f7bd685ed728e6acc529d2e588e6de9738571a",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "impolite/profile.json": {
+      "bytes": 4277,
+      "sha256": "0620e744f8ac2c02c57c17725093a8d73e43cd471bd05590a0a2dc3b3683eaf1",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "impolite/provenance.json": {
+      "bytes": 2170,
+      "sha256": "7f7e8ed719efe597f8e55439bf40c0c2fbae0d82c6146f590e5e95658f921af0",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "impolite/README.md": {
+      "bytes": 604,
+      "sha256": "a812e6b8d8bd29038955bfe6f6d2c7b2f32898966a1242c1e12a376233ac8fb8",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/example.py": {
+      "bytes": 2213,
+      "sha256": "c2204d0858b93c1562a9e7ea5c03d040875a89e0a53793359b731fdc7b526ccc",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/gcad.py": {
+      "bytes": 17146,
+      "sha256": "f8093f297dc66ee51af08f441f32be129da9650ba68c34ab874707773ba2b556",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/loader.py": {
+      "bytes": 5689,
+      "sha256": "a6a9bdccdb27fe7afa698dd0727647fc39aead7c16e74fc06570c5bc943c6058",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "related_results/qwen3_4b_fixed_transfer_01.public.json": {
+      "bytes": 11570,
+      "sha256": "e89bcf0ea43e84043207db0031ccf58180bd7d1415ab6265bccfb51d76ddc0ce",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "related_results/qwen3_4b_fixed_transfer_closeout.md": {
+      "bytes": 6883,
+      "sha256": "365a5da0e3bfea3a309542ed73c13f24519742f2ce43267ed6f794877b372ab7",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "profanity/bank.safetensors": {
+      "bytes": 459088,
+      "sha256": "898c979c5e30502a0c93b11e5d950cda9696b41e3560dad84333f7bd2dffc8c9",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "profanity/profile.json": {
+      "bytes": 4888,
+      "sha256": "8ed22088d1cd20f99bac0ce60b6406116f743abc055ba1b29fbffd60189f3803",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "profanity/provenance.json": {
+      "bytes": 3839,
+      "sha256": "857f8850ce84106fd671ff06a63714e10ec8aed4621331f929a117be63852b03",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "profanity/README.md": {
+      "bytes": 605,
+      "sha256": "8fa3fbdd6094fa3483bd12b09c7d093bcd6c995fac00578cf208661030e3f583",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "sarcasm/bank.safetensors": {
+      "bytes": 459088,
+      "sha256": "18f07509558bde63d7f648e3488eff5ddd50fde010115a86b8a6350f57518a0e",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "sarcasm/profile.json": {
+      "bytes": 7029,
+      "sha256": "4705529188991903f92dfb1c366250830e2a426ccdfda1042f896c0eb92b8e4a",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "sarcasm/provenance.json": {
+      "bytes": 4479,
+      "sha256": "9606d80bee0b0640ae6d020a4ba65d07d6eed3dd144cd8b4454dbcde9ad43175",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "sarcasm/README.md": {
+      "bytes": 603,
+      "sha256": "a0d2b099233d89007885d6842e2c336f7776a3c3ea4c7f4658f8aa189fadaf3d",
+      "method": "revision-pinned downloaded SHA256"
+    }
+  },
+  "additional_remote_files": [
+    ".gitattributes"
+  ],
+  "card_metadata": {
+    "base_model": "Qwen/Qwen2.5-7B-Instruct",
+    "license": "apache-2.0"
+  },
+  "load_check": "separate pinned-download runtime verification required"
+}

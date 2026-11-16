@@ -37,8 +37,8 @@ baseline and random controls. None met every quality gate:
 This is trait induction without a quality-qualified 4B controller. There is no
 retuning or 4B steering-bank release. The earlier conventional refusal record
 above is unchanged. Outcomes are model-specific; this comparison does not
-establish a cause or an effect of model size. The 7B retained references remain
-the release candidates.
+establish a cause or an effect of model size. The 7B retained references are
+[published with their runtime and result summaries](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls).
 
 ## Method distinction
 

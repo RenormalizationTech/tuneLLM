@@ -1,0 +1,81 @@
+{
+  "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+  "revision": "763865908e5e94a020606b31ab66185360f7dd44",
+  "commit_message": "Release manifest SHA256: 8a57ab029d9d2adee60be7229ee30a3ba347c9c53442bed96799e2b2316849f4",
+  "commit_message_matches_manifest_sha256": true,
+  "release_manifest_sha256": "8a57ab029d9d2adee60be7229ee30a3ba347c9c53442bed96799e2b2316849f4",
+  "downloaded_payload_files_verified": 23,
+  "controls_are_regular_files": true,
+  "credentials_recorded": false,
+  "status": "pinned_remote_download_and_cpu_loader_verified",
+  "verified_utc": "2026-11-16T19:22:00.708892+00:00",
+  "traits": {
+    "profanity": {
+      "status": "passed",
+      "base_coef": 5.0,
+      "tensor_shapes": {
+        "delta": [
+          28,
+          3584
+        ],
+        "demand": [
+          28
+        ],
+        "key": [
+          28,
+          4,
+          128
+        ]
+      },
+      "dtype": "float32",
+      "cpu_only": true,
+      "bank_sha256": "898c979c5e30502a0c93b11e5d950cda9696b41e3560dad84333f7bd2dffc8c9"
+    },
+    "impolite": {
+      "status": "passed",
+      "base_coef": 3.5,
+      "tensor_shapes": {
+        "delta": [
+          28,
+          3584
+        ],
+        "demand": [
+          28
+        ],
+        "key": [
+          28,
+          4,
+          128
+        ]
+      },
+      "dtype": "float32",
+      "cpu_only": true,
+      "bank_sha256": "bb12019e3452be24b216c34018f7bd685ed728e6acc529d2e588e6de9738571a"
+    },
+    "sarcasm": {
+      "status": "passed",
+      "base_coef": 2.0,
+      "tensor_shapes": {
+        "delta": [
+          28,
+          3584
+        ],
+        "demand": [
+          28
+        ],
+        "key": [
+          28,
+          4,
+          128
+        ]
+      },
+      "dtype": "float32",
+      "cpu_only": true,
+      "bank_sha256": "18f07509558bde63d7f648e3488eff5ddd50fde010115a86b8a6350f57518a0e"
+    }
+  },
+  "model_forwards": 0,
+  "generated_answers": 0,
+  "raw_items_in_release": false,
+  "base_weight_runtime_validation": "3 real pinned-base coefficient-zero checks recorded separately; public inference files are byte-identical"
+}

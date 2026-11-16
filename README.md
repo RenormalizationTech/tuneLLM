@@ -24,9 +24,10 @@ every quality gate. Profanity lost substantial coherence; sarcasm and
 impoliteness narrowly exceeded the allowed coherence loss. The conventional
 refusal record is carried forward without new compute. No 4B controller is
 relabelled as working, and no retuning is active. The retained 7B style banks
-passed real-base reload checks and are being prepared for a self-contained
-public Hugging Face release. Existing quantization models and the private
-physics adapter remain separate.
+are [published with runtime and evaluation summaries](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls).
+All 23 files were verified at the pinned remote revision, and all three
+downloaded banks passed CPU loader checks. Existing quantization models and
+the private physics adapter remain separate.
 
 The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The
