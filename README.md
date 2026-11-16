@@ -7,14 +7,15 @@ extension.
 The project has separate tracks: **physics LoRA/QLoRA demonstrates fine-tuning**;
 **refusal and persona activation steering study inference-time behavior control**.
 Persona system prompting is a reference/control for the latter, with no weight
-training or activation intervention. The next milestone is isolated activation
-steering of **profanity, rudeness and sarcasm**, with simultaneous control deferred for later discussion and literature review. Complete this pipeline on **Qwen3-4B before further
-14B work**. Generic physics questions in a behavior
-evaluation do not make it physics fine-tuning. See the
-[project map and selected persona targets](docs/project_tracks.md).
-The [four-behavior steering reference](docs/steering_reference.md) summarizes
-current methods and success levels; the [GCAD and combined-control guide](docs/gcad_and_combined_control.md)
-explains the equations and proposed unification studies.
+training or activation intervention. The behavioral goal is reliable **individual
+control of refusal, profanity, rudeness and sarcasm**. GCAD is preferred where
+it works; each trait may retain its own intervention and tuned setting.
+Cross-effects describe trait coupling, with strong correlations reported rather
+than requiring independent knobs. Simultaneous control is optional. Complete
+the isolated 4B pipeline before further 14B work. Generic physics questions in
+a behavior evaluation do not make it physics fine-tuning. See the
+[project map](docs/project_tracks.md), [four-behavior references](docs/steering_reference.md)
+and [GCAD discussion](docs/gcad_and_combined_control.md).
 
 The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The
@@ -55,7 +56,7 @@ closed with development nulls. SAPS sarcasm completed a narrow held-out
 paraphrase reference pass (27/100 reaching the author sarcasm threshold ≥3 versus 0 baseline/random),
 with reduced meaning preservation and small capability checks passing. See the
 [reference execution record](docs/persona_reference_execution.md). Joint control is deferred for later discussion as a separate
-experimental project; the full persona-control objective remains unachieved. See
+experimental project; reliable individual control remains unestablished on every target/model. See
 [the current project map](docs/project_tracks.md) and
 [local artifact retention](docs/workspace_maintenance.md).
 

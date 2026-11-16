@@ -63,7 +63,11 @@ it does not retrospectively reproduce those failed studies. Single-judge
 limits, truncation, construct differences and quality tradeoffs remain attached
 to each record.
 
-## Combining references
+## Primary individual-control goal and optional combinations
+
+Each trait may retain its best supported intervention; GCAD is preferred where
+it succeeds. Strong cross-trait correlations are reported descriptively and do
+not require correction. Joint control is optional.
 
 The existing vectors cannot be combined across these three models. Establish
 the target traits on one checkpoint, with a common task, questions, decoding

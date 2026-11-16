@@ -6,7 +6,9 @@ at 6c879f4d12e2b01274fc96c9afdb0f4f3a26d4de, especially
 `core/gated_steerer.py`, `core/generate_vec.py` and
 `scripts/generate_vec_prompt_attn_k.py`. Root checked the
 [paper, section 4](https://arxiv.org/html/2605.10664v3) against those files.
-This discussion does not release GPU work or replace the existing references.
+This discussion preserves the existing references. The user subsequently
+authorized continued individual studies and clarified that joint control is
+optional, as recorded below; each live study has its own reviewed protocol.
 
 ## What GCAD changes
 
@@ -119,8 +121,8 @@ and establish neither interference nor independence.
 
 Shared code simplifies integration and calibration. It does not make b values
 comparable across differently sized raw vectors, nor ensure joint outputs
-retain the isolated qualities. A pairwise profanity/rudeness study should
-precede three-trait control.
+retain the isolated qualities. If joint control is later chosen, a pairwise study should precede three-trait
+control. No mixture is required for the individual-control goal.
 
 ## Proposed order, with evidence boundaries
 
@@ -137,11 +139,12 @@ precede three-trait control.
    residual refusal direction cannot substitute for an attention-specific bank.
 4. Re-establish isolated settings under comparable task/decoding conditions,
    scoring all relevant traits and quality on each arm with suitable benchmark
-   partitions. Measure the cross-effects before a small pairwise joint grid,
-   beginning with profanity plus broad impoliteness; three-trait control follows.
+   partitions. Report cross-effects/correlations descriptively, including strong
+   coupling. No automatic joint grid or requirement to remove coupling follows.
 
 This order was reconfirmed with Claude after the refusal-setting discussion:
-finish isolated GCAD sarcasm, then isolated GCAD refusal, before joint tuning.
+finish isolated GCAD sarcasm, then isolated GCAD refusal. Each trait may retain
+its own intervention; any later joint tuning is optional.
 The immediate milestone is a reviewed sarcasm protocol and fresh construct/
 artifact, followed by bounded development and untouched held-out comparison
 against baseline, prompted reference and random controls. Keep the Mistral
@@ -158,3 +161,14 @@ proposed applications are exploratory transfers. Unifying mechanisms is a
 useful engineering goal; retain the existing successful methods unless the
 new common-method tests support replacing them. No new artifact generation,
 model calls, parameter search or joint experiment was run for this discussion.
+
+## User clarification: individual control is the primary goal
+
+A common GCAD mechanism is an engineering preference, not an acceptance gate.
+Tune each isolated trait with its appropriate intervention and quality criteria.
+If GCAD fails for a trait, a supported alternative remains a valid retained
+method. Cross-effects document coupling; strong correlation is reported rather
+than triggering mandatory disentanglement or parameter searches. Simultaneous
+control is optional and is not the criterion for overall project success.
+The user authorized continuing until a real input/action is needed, starting
+with the reviewed isolated sarcasm study.

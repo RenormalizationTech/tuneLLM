@@ -22,8 +22,8 @@ data/code before custom extensions. Source-tested implementations are complete;
 full rudeness/profanity PV grids closed with development nulls. SAPS sarcasm
 completed a held-out paraphrase reference pass, with a meaning-preservation cost
 and small capability checks passing. See the [reference execution record](persona_reference_execution.md). Joint control is a separate experimental topic deferred
-for later discussion, even after isolated success. The full 4B persona-control
-objective is unachieved; further 14B experiments remain deferred.
+for later discussion, even after isolated success. The isolated 4B control
+work remains unvalidated; further 14B experiments remain deferred.
 The completed 14B baseline remains a historical measurement. Older closeout or
 transition language in frozen protocols is superseded by this current roadmap;
 those records remain unchanged to preserve their experiment hashes.
@@ -36,7 +36,7 @@ those records remain unchanged to preserve their experiment hashes.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Persona activation steering | Intervene on activations to influence written tone/style | Custom 4B pilots closed with nulls; original-model GCAD profanity/impoliteness and Mistral sarcasm references are established. Common-model and joint control remain future work; 14B work stays deferred. |
+| Persona activation steering | Intervene on activations to influence written tone/style | Custom 4B pilots closed with nulls; original-model GCAD profanity/impoliteness and Mistral sarcasm references are established. Further individual controls and descriptive common-model comparisons remain; joint control is optional and 14B work stays deferred. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank
@@ -57,7 +57,7 @@ flowchart TD
     Quant --> Physics["Saved NF4 base + physics LoRA training demonstration"]
     Base --> Refusal["Refusal activation-steering research: completed tradeoff"]
     Refusal --> Prompt["Persona prompt reference/control: P1 completed"]
-    Prompt --> Persona["Isolated GCAD/SAPS references across checkpoints; joint control open"]
+    Prompt --> Persona["Isolated GCAD/SAPS references across checkpoints; joint control optional"]
 ```
 
 This diagram organizes the program rather than the exact chronology. The
@@ -88,97 +88,70 @@ They did not train a model, load the physics adapter, use the PRL training corpu
 as persona data, or assess improvements in PRL writing. A task's subject matter
 does not determine whether the method is fine-tuning, prompting or steering.
 
-## User-selected persona targets and simultaneous control
+## Current user-selected goal: individual controls
 
-The user's clarified goal is **profanity, rudeness and sarcasm**, with three
-simultaneously adjustable activation controls. The previously suggested
-conciseness/formality/warmth roadmap was a misunderstanding and is superseded.
-It does not replace these targets.
+The user clarified the objective after the GCAD discussion: establish reliable
+individual controls for refusal reduction, profanity, rudeness and sarcasm.
+Prefer GCAD if it works well across traits. Otherwise retain and tune the
+best supported intervention for each trait. Different methods are an acceptable
+final outcome. Simultaneous control is not the ultimate goal or a condition
+for completing the individual-control learning pipeline.
 
-| Direction | Intended written behavior | Distinction to preserve |
+| Behavior | Intended effect | Interpretation |
 | --- | --- | --- |
-| Profanity | Amount/intensity of swearing | Swearing can be friendly or emphatic without being rude. |
-| Rudeness | Impolite, abrasive or dismissive delivery | Rudeness can occur without profanity or sarcasm. |
-| Sarcasm | Context-dependent ironic or mocking delivery | Sarcasm need not contain profanity or be rude. |
+| Refusal reduction | Fewer refusals under the registered task, with answer-quality and boundary measurements | Current reference showed a partial effect with failed quality. |
+| Profanity | Amount/intensity of swearing | It can co-occur with rudeness; the retained study's original friendly-swearing rubric remains unchanged. |
+| Rudeness/impoliteness | Abrasive, dismissive or impolite delivery | The author reference measures a broad construct; task/rubric differences stay explicit. |
+| Sarcasm | Context-recognizable verbal irony | It may correlate with rudeness or profanity; those correlations do not invalidate a sarcasm effect. |
 
-The target intervention is:
+The previously substituted mild-tone roadmap remains superseded. Physics LoRA
+remains a separate demonstration; a future persona LoRA would be a separate
+training study.
 
-\[
-h_l' = h_l
-+ \alpha_p v_{\text{profanity}}
-+ \alpha_r v_{\text{rudeness}}
-+ \alpha_s v_{\text{sarcasm}}.
-\]
+## Per-trait workflow
 
-At an intervention site, add the weighted sum once to the same hidden state.
-The model weights stay fixed; this is activation steering, not a new physics
-adapter or prompt-only persona switch. The directions must share the same
-activation space at the selected block. If multiple blocks are used, specify
-block-specific directions and intervention sites in the protocol.
+1. Follow an established method/source first. Specify the target construct,
+   checkpoint, extraction data, intervention sites and bounded tuning budget.
+2. Extract and verify that trait's model-specific representation. Prompted
+   references establish what behavior the model can express under instruction.
+3. Tune the individual intervention against its own target and quality rules.
+   Freeze a selected setting before held-out confirmation. Cross-trait effects
+   are descriptive, not an off-axis rejection gate.
+4. Retain a confirmed method/settings profile. If GCAD fails, preserve an
+   established alternative method or document the bounded null. Do not force
+   every trait to use the same mechanism or coefficient.
+5. Save/reload/check and report both effects and limitations. The immediate
+   next studies are isolated GCAD sarcasm, then isolated GCAD refusal reduction
+   on the common Qwen2.5 checkpoint. The existing model-specific references
+   remain valid evidence while these transfers are tested.
 
-The immediate milestone is three isolated steering experiments on Qwen3-4B,
-in the order profanity, rudeness, sarcasm. Each is a complete learning result,
-including construction, extraction, bounded development, locked confirmation,
-vector save/reload verification and reporting. Simultaneous control follows as
-a separate stage; it is not assumed to work. Complete this pipeline on 4B before
-further 14B experiments. The already completed unmodified 14B baseline is kept
-as historical evidence, without implying that the 4B persona work is complete.
+The isolated 4B pipeline still precedes further 14B work; an optional joint
+study is not a prerequisite for that milestone. Frozen historical protocols
+and results remain unchanged.
 
-Independent, linear or monotonic effects on generated language are hypotheses,
-not consequences of the additive formula: later nonlinear computation can
-couple the traits. A coefficient of zero removes that direction's contribution,
-not the trait from the baseline. Strength units depend on vector normalization;
-negative coefficients require testing rather than assuming an opposite effect.
+## Descriptive cross-effects and optional joint work
 
-Physics-adapter/steering interaction remains a separate optional research
-question, not part of the physics demonstration or this persona objective.
+Score relevant traits on individual-intervention outputs to describe coupling
+or correlations. Use comparable questions/decoding where feasible, and label
+model/task differences. A cross-effect matrix records how one active control
+changes the other trait ratings; score correlations are a separate descriptive
+summary. Neither is evidence of independent causal dimensions by itself.
 
-## Development path toward joint control
+If correlations are strong, report them. Do not automatically orthogonalize,
+search for cancellation, or reject an otherwise qualifying individual control
+because it also changes another trait. Existing study-specific constructs and
+quality gates remain as registered; the clarification does not revise old scores.
 
-1. Define separate ratings for all three traits. Use content-matched contrasts
-   that vary one trait while controlling the other two, answer length and task
-   meaning as far as practical. Use fictional dialogue or impersonal examples
-   to make style distinguishable from factual correctness. Declare construction
-   yield and length-tolerance gates before extraction, and calibrate the ratings
-   on a small fixed set, particularly for contextual sarcasm.
-2. Use prompts to construct/reference these contrasts, then extract candidate
-   activation directions under a reviewed protocol. Do not reuse the refusal
-   vector as a persona vector. Existing warm-tone and P1 results remain
-   historical evidence, not validation of these new directions.
-3. Calibrate each direction alone with a small declared set of blocks/strengths.
-   Record vector normalization, token scope and per-trait effects, together
-   with correctness, coherence and degeneration checks. Score all three traits
-   even when only one vector is active. Lock a block and strength for a compact
-   held-out confirmation, verify vector serialization/reload, and report each
-   trait independently. Fix target-effect, crosstalk and quality criteria before
-   development; avoid adaptive searches.
-4. Joint work is deferred for later discussion and literature review. If later
-   selected, separately register pairwise combinations and all-three mixtures. Combine only directions supported by isolated tests:
-   at least two for a pair, all three for the full mixture. If fewer than two
-   qualify, close this bounded attempt with that result. Score every trait for
-   every condition, including neutral and single-direction controls, with the
-   coefficient settings hidden from evaluators. A lexical profanity count can
-   complement contextual judgments of rudeness and sarcasm. Measure
-   whether changing one coefficient changes the other trait ratings. Preserve
-   original directions when comparing any orthogonalization or other correction.
-   Start with zero versus locked single-trait strengths (four cells for a pair,
-   eight for all three). Report deviations from additive trait effects and the
-   combined vector norm. Do not retune strengths after observing joint results.
-5. Lock the chosen joint configuration before a compact held-out evaluation.
-   Report cross-trait interference, usable strength ranges and failures. Do not
-   claim independent knobs unless the measurements support them. Poor joint
-   behavior is a valid outcome. Close and document the 4B pipeline before
-   considering transfer to 14B; larger size is not a presumed stability fix.
-
-This is the selected research objective. Isolated-study data, blocks, strengths
-and stopping rules are fixed in the linked protocol and run registrations.
-Joint-study settings still need a concrete protocol before execution.
+Pairwise or multi-trait mixtures are optional later research, requiring their
+own protocol if chosen. Their failure would not erase successful individual
+controls or make the primary project incomplete. Vectors from different model
+coordinate systems cannot be added directly even if individual methods work.
 
 A future persona LoRA would be another training experiment and would need its
 own dataset and protocol. It is not the current persona-steering method or a
 reason to restart the completed physics adapter exercise.
 
-**Protocol status:** profanity, rudeness and sarcasm are closed with development nulls.
+**Historical 4B pilot status:** profanity, rudeness and sarcasm closed with development nulls.
 The [rudeness/sarcasm design](isolated_persona_traits_protocol.md), fixtures and
 code are accepted; 16 focused CPU checks passed. Both studies had separate
 pre-call registrations and preserved their stopping rules. See the

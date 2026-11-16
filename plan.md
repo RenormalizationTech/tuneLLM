@@ -71,6 +71,12 @@ coherence 82.69 versus baseline 85.34; baseline/random PF 0. Fixed/SAPS did not
 qualify. GCAD is retained in the [profanity workflow](docs/profanity_controller_workflow.md).
 No joint or14B work is released.
 
+**Latest user clarification:** reliable individual control is the goal. Prefer
+GCAD if effective, with trait-specific method/settings fallback accepted.
+Cross-effects describe correlations and coupling; strong coupling is reported,
+not a rejection or mandatory disentanglement target. Joint control is optional.
+Continue isolated GCAD sarcasm, then refusal reduction; no joint grid is released.
+
 ## Current status and execution priorities (2026-11-14)
 
 - Latest user-selected sequence, reviewed with Claude: return to Qwen3-4B for
@@ -104,8 +110,8 @@ No joint or14B work is released.
   qualified; all six settings produced 0/16 raw/usable target outputs, changing
   6–12/16 token sequences. Content fulfillment was 13–15/16 versus baseline
   15/16, with no incoherence/gross failures. All 22 judge batches passed first
-  try. No isolated control qualified, so joint steering remains gated and the
-  full 4B persona-control objective is unachieved. The user then selected
+  try. No isolated control qualified in those historical pilots; the individual
+  4B control milestone remains open. Joint steering is optional. The user then selected
   `docs/persona_literature_workflow.md`: author methods/data first, isolated
   rudeness (PV), sarcasm (SAPS), profanity (explicit PV new-trait adaptation).
   Source-tested implementations are complete. Rudeness and profanity full PV
@@ -773,8 +779,7 @@ treating safeguard bypass as the project objective.
 ## Stage 5 - Profanity, Rudeness and Sarcasm Directions
 
 The immediate user-selected milestone is isolated activation control of
-profanity, rudeness and sarcasm on Qwen3-4B, before a separate joint-control
-stage. Finish the 4B pipeline before further 14B work. The previously substituted mild-tone roadmap
+profanity, rudeness and sarcasm on Qwen3-4B; any joint-control stage is optional. Finish the 4B pipeline before further 14B work. The previously substituted mild-tone roadmap
 is superseded. Physics LoRA remains a separate fine-tuning demonstration.
 
 Define and extract each trait using matched contrasts that distinguish it from
@@ -784,17 +789,20 @@ final activation-control mechanism. Do not assume every trait is one-dimensional
 
 Complete and report each individual direction first: construction, extraction,
 bounded development, locked confirmation and vector save/reload verification.
-Then evaluate pairwise and all-three mixtures in a separately reviewed study.
+Report cross-effects descriptively. Pairwise/all-three mixtures are optional
+future studies and are not required for completion.
 No successful refusal
 configuration is required before investigating these distinct traits.
 See [the project map](docs/project_tracks.md) for the development path.
 
 ------------------------------------------------------------------------
 
-## Stage 6 - Behavioral Geometry
+## Stage 6 - Descriptive Cross-Effects and Optional Geometry
 
-Study relationships among the three candidate persona directions to diagnose
-interference in joint control. No geometry experiment is currently registered.
+Study relationships among individual controls to report coupling and score
+correlations. The CPU GCAD profanity/impolite alignment record is retained;
+further geometry requires a separate research question. No disentanglement or
+joint-control result is required.
 
 For directions (v_i) and (v_j), calculate:
 
@@ -817,18 +825,20 @@ PCA/SVD:
 
 Estimate the effective dimensionality of behavioral representations.
 
-Orthogonalization may be explored if correlated directions prevent
-independent control, but the original directions should always be
-retained for scientific comparison.
+Strong correlations are a reportable result. No automatic orthogonalization or
+tuning to remove coupling is required. Any later disentanglement experiment
+would need a separate research objective; retain the original directions.
 
 ------------------------------------------------------------------------
 
-## Stage 7 - Simultaneous Inference-Time Persona Controls
+## Stage 7 - Optional Simultaneous Persona Controls
 
-This follows the isolated 4B milestone. At least two validated individual
+This is optional research after the isolated 4B milestone; it is not required
+for the primary individual-control goal. At least two validated individual
 directions are needed for pairwise tests; all three are needed for the full
 mixture. Poor joint behavior is an acceptable result, with no automatic retuning
-or escalation to 14B. Completing this bounded 4B stage precedes model scaling.
+or escalation to 14B. Complete the isolated 4B pipeline before model scaling; optional joint work
+is not a prerequisite.
 
 The target is three adjustable activation contributions:
 
@@ -1090,10 +1100,10 @@ purpose, such as a LoRA adapter versus GGUF inference files.
 -   [x] Complete the separately registered sarcasm run: development null
 -   [x] Close each bounded axis with target, content and cross-trait results; passing
     control is not assumed
--   [ ] Establish usable isolated control before joint steering
+-   [ ] Establish or close/report each isolated control with its best supported method
 -   Geometry analysis is optional and requires a separate research question.
 
-## M5 - Simultaneous Persona Controls
+## M5 - Optional Simultaneous Persona Controls
 
 -   [ ] Calibrate each of the three directions individually
 -   [ ] Test pairwise combinations and all-three mixtures
