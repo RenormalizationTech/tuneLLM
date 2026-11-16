@@ -77,9 +77,13 @@ Cross-effects describe correlations and coupling; strong coupling is reported,
 not a rejection or mandatory disentanglement target. Joint control is optional.
 The [sarcasm transfer](docs/sarcasm_method_transfer_closeout.md) closed with a
 development null: GCAD induced sarcasm but the tested strengths lost too much
-coherence, and SAPS also had no qualifying setting. Complete one separately
-reviewed [lower-strength GCAD study](docs/sarcasm_gcad_low_strength_protocol.md)
-at 1/2/3 with the same bank and criteria, then stop without another sweep.
+coherence, and SAPS also had no qualifying setting. The separately reviewed
+[lower-strength study](docs/sarcasm_gcad_low_strength_closeout.md) is complete:
+GCAD2 passed held-out confirmation (SARC63.78 versus baseline0.06/random0;
+coherence89.59→70.72, a narrow1.125-point margin). It also increased
+impoliteness1.63→38.75; coupling remains descriptive. The retained
+[workflow](docs/sarcasm_controller_workflow.md) uses the same bank and criteria.
+This bounded tuning is closed; no further sweep is released.
 The [refusal headroom screen](docs/refusal_headroom_closeout.md) closed at
 3/100 published benign development prompts, below the predeclared threshold
 of five. The secondary prefix count was five, exposing classification

@@ -5,12 +5,17 @@ updating the roadmap. This is the current project map. Historical protocols
 and results continue to describe the experiments as registered.
 
 **Latest references:** see the [consolidated four-behavior record](steering_reference.md).
-GCAD profanity on Qwen2.5-7B passed held-out confirmation and is retained;
-author-model GCAD impoliteness and Mistral fixed/adaptive sarcasm have positive
-references with quality limits. Refusal reduction remains a partial effect that
-failed final quality. The references span three checkpoints and cannot be
-combined as-is. The [GCAD mathematics and joint-control discussion](gcad_and_combined_control.md)
-records the proposed common-model studies; no new GPU work follows that discussion.
+GCAD profanity and the separate lower-strength GCAD sarcasm study on
+Qwen2.5-7B passed held-out confirmation and are retained. Sarcasm has a narrow
+coherence margin and measurable impoliteness coupling. Author-model GCAD
+impoliteness and Mistral fixed/adaptive sarcasm also have positive references
+with quality limits. Refusal reduction remains a partial effect that
+failed final quality. The record spans three checkpoints; cross-model vectors
+cannot be combined. The three Qwen7 GCAD style banks share coordinates, but
+their joint use is untested. The [GCAD mathematics and joint-control discussion](gcad_and_combined_control.md)
+records the completed common-model follow-up and evidence boundaries.
+The Qwen7 benign refusal screen closed at3/100 semantic refusals versus five
+prefix flags; no GCAD refusal controller was tested. No joint grid is released.
 
 **4B track status:** the 4B refusal study is closed; the 4B persona pipeline is
 open. The [three-trait rating calibration passed](persona_rating_calibration_completion_execution.md)
@@ -36,7 +41,7 @@ those records remain unchanged to preserve their experiment hashes.
 | Physics LoRA/QLoRA | Train adapter parameters on physics-paper text; keep the base frozen | Demonstrate fine-tuning on domain data; completed experimental adapter. Writing-quality improvement remains unestablished. |
 | Refusal activation steering | Intervene on hidden activations during inference | Learn behavioral representation/control methods; completed experiments showed an effect with quality tradeoffs, without a validated usable setting. |
 | Persona prompting | Change system instructions at inference | Define a desired tone and provide a reference/control for persona research. No adapter training. P1 completed without passing its acceptance rule. |
-| Persona activation steering | Intervene on activations to influence written tone/style | Custom 4B pilots closed with nulls; original-model GCAD profanity/impoliteness and Mistral sarcasm references are established. Further individual controls and descriptive common-model comparisons remain; joint control is optional and 14B work stays deferred. |
+| Persona activation steering | Intervene on activations to influence written tone/style | Custom 4B pilots closed with nulls; Qwen7 GCAD profanity/impoliteness/sarcasm and Mistral sarcasm references are established with their quality limits. Cross-effects are descriptive; joint control is optional and 14B work stays deferred. |
 
 The physics adapter is a demonstration of the ability to fine-tune, not a
 persona-steering task. Its physics-paper corpus, training loss, adapter rank

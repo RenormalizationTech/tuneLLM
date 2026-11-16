@@ -91,8 +91,12 @@ different style/quality trade-offs.
 The [Qwen sarcasm transfer](docs/sarcasm_method_transfer_closeout.md) closed with
 a development null: GCAD 3.5 raised sarcasm to 87.1/100 but reduced coherence
 from 85.9 to 52.4; no tested SAPS or GCAD setting met both requirements.
-One separately reviewed [lower-strength GCAD study](docs/sarcasm_gcad_low_strength_protocol.md)
-will test 1, 2 and 3 using the same bank and unchanged criteria.
+The separate [lower-strength study](docs/sarcasm_gcad_low_strength_closeout.md)
+retained **GCAD strength 2**: held-out sarcasm 63.78/100 versus 0.06 baseline
+and 0 random, with 29/32 answers scoring at least50. Coherence fell
+89.59→70.72, only1.125 points inside the allowed loss. Impoliteness also rose
+1.63→38.75; this coupling is reported, not rejected. See the
+[sarcasm workflow](docs/sarcasm_controller_workflow.md).
 The [Qwen7 refusal headroom screen](docs/refusal_headroom_closeout.md) found
 3/100 unnecessary refusals, below the predeclared five-question threshold.
 The secondary phrase matcher counted five; classification sensitivity is

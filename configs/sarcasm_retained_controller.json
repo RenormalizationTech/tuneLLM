@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "kind": "static_retained_controller",
+  "trait": "sarcasm",
+  "method": "gcad",
+  "status": "passed_registered_development_and32_item_heldout",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "snapshot": ".hf/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "manifest": {
+      "path": "outputs/persona-author-replication-audit-01/model_manifest.json",
+      "sha256": "cef399162cdfa86968b9b41eb159d0e39b13cc678d6e335d71ca86c452845454"
+    }
+  },
+  "controller": {
+    "blocks": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "base_coef": 2.0,
+    "scale": 1.5,
+    "inverse": false,
+    "debug": false,
+    "delta_normalization": "none; raw SARC system-attention delta",
+    "bank": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/inputs/banks.pt",
+      "sha256": "6b0dd37a5f825a4daa72d48e56e2e47df67dd449db007ab4f03ebbc238a4fcc2"
+    },
+    "object_key": "gcad",
+    "representation": "system_attention_delta",
+    "tensor_sha256": {
+      "delta": "5d9e6d79492ed71c36d74c0999a96b2b8313ffcb38d942efb11859aa59c24bac",
+      "key": "398dcb2535da9d32f9476893e2696672f19fd984aafe937537e3c5b99fe2547e",
+      "demand": "2731fbb44b33b93e87990f9b1d11186cb84dbaa1da9c0170536815214f825372"
+    },
+    "author_hook": {
+      "path": "outputs/persona-author-replication-audit-01/gcad/core/gated_steerer.py",
+      "sha256": "383763ed801696061127509e9d784154b54cf9f05bdd323319fe343e65c256e6",
+      "class": "MultiLayerGatedSteerer",
+      "repository": "NihiI-obstat/Gated-Cropped-Attention-Delta",
+      "revision": "6c879f4d12e2b01274fc96c9afdb0f4f3a26d4de"
+    },
+    "coefficient_rule": "Per layer/token: 2 * base_coef * sigmoid(scale * (demand - avg_demand)); base_coef is not a constant realized displacement."
+  },
+  "basis": {
+    "reference": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/inputs/basis.json",
+      "sha256": "f38683f4d43530b85f1774d3ee8643617e841af57a3c0cc2094881a83807594d"
+    },
+    "coordinate_system": "native_hf",
+    "tokenizer_sha256": "3b0409535ce1b02305d80e931c0d3fdbd8b742512f4d8983977c210d27998c6e",
+    "rendering_sha256": "2e40ea8451a7d016370c64937e7c4924f111c7b4ef0280568d09185e899c017a"
+  },
+  "data": {
+    "snapshot": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/inputs/data.json",
+      "sha256": "df87cd1ca5a5712bfb555eeb6e17c8425f8f08d040ee151867b5f4cf3ddcb8f3"
+    },
+    "fit_bundle": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/fit_inputs.json",
+      "sha256": "23b20727c8db7f2d8a90cd9f187fe365086399334c9545c937db59f5654b1c05"
+    },
+    "training_data_sha256": "23b20727c8db7f2d8a90cd9f187fe365086399334c9545c937db59f5654b1c05",
+    "parent_bank_origin": {
+      "path": "outputs/sarcasm-method-transfer-01/extraction/banks.pt",
+      "sha256": "6b0dd37a5f825a4daa72d48e56e2e47df67dd449db007ab4f03ebbc238a4fcc2"
+    },
+    "elicitation_eligibility": {
+      "path": "outputs/sarcasm-method-transfer-01/eligibility.json",
+      "sha256": "305ead591ae70e47e7903ede91b1f64f8d7613823d3c362eb54205b78683ae79"
+    },
+    "instruction_source": {
+      "path": "evaluation/sarcasm_method_transfer/extract.json",
+      "sha256": "e84b1279692d9d326ce866b3f468e4d650011af8b2430951bb53b12ba1b31cf6"
+    },
+    "instruction_identity_source": {
+      "path": "configs/sarcasm_method_transfer.json",
+      "sha256": "374726df1924a4fab4a116922ec9f1beef567cec5aa08a3399ecbbe5a4277814"
+    },
+    "reused_development": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/inputs/reused_development.json",
+      "sha256": "0b9c6c8fe1fad053e69b7e1c6434112026f3935684ed4656aa3f59fca1b53b54"
+    },
+    "reuse_record": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/inputs/reuse.json",
+      "sha256": "27f5be07d9d571c95bb48ee7ccf2eee8dd5ce6ef2379b61ca86114de26b1e985"
+    }
+  },
+  "provenance": {
+    "manifest": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/manifest.json",
+      "sha256": "e916394e9425dfbcdfe43415617a4745fb047c1397498022800cf2733207552a"
+    },
+    "source_config": {
+      "path": "configs/sarcasm_gcad_low_strength.json",
+      "sha256": "d41d97752e071c57b8f1ac404e743d3ea1966f30c17d64192dc8c2a2535185e7"
+    },
+    "protocol": {
+      "path": "docs/sarcasm_gcad_low_strength_protocol.md",
+      "sha256": "d4d4f3ee25a9b37d4d55c9dfb8ab845faa488bd1805329f5bf6137922fb1c1a0"
+    },
+    "design_review": {
+      "path": "results/reviews/sarcasm_gcad_low_strength_design_review.md",
+      "sha256": "eba470bf539730874beced0f7aff107fed523518244301b2515b5ffecfa923fb"
+    },
+    "report": {
+      "path": "results/sarcasm_gcad_low_strength_01.json",
+      "sha256": "1cd1cb405af1e2f05631a2a73d916eaea0c8f0430460ba39265531925eb8e54a"
+    },
+    "selection": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/selection.json",
+      "sha256": "7b79093f93d98d19350b2261ed6301b50c21a6dbfa7e63cc6c959d9424ee32b1"
+    },
+    "source_sha256": {
+      "configs/sarcasm_gcad_low_strength.json": "d41d97752e071c57b8f1ac404e743d3ea1966f30c17d64192dc8c2a2535185e7",
+      "scripts/author_gcad_impolite.py": "65620b510ebea7f307ac5d6a92d2425561bb0cde5cb0766393984a7a83a1dbe4",
+      "scripts/author_gcad_impolite_common.py": "190d32458b8dd090bfa2151a0bb40041f20472bfde8388f2a90101a7e964d151",
+      "scripts/author_profanity_method_common.py": "c79081261dd6be9127ed9eb5feb83385d5e6631c1d6880aba9006418594f556b",
+      "scripts/author_replication_audit.py": "2e3a28966d0825452854f009c8db8a445272cac710da4575c0311da94a35e7ab",
+      "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+      "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+      "scripts/persona_reference_common.py": "6c157609da0fdb7e21ce32cf3df8148bd2a690d7a148268471c80ac9a0641682",
+      "scripts/persona_saps_common.py": "7801023f954b0f18daf1ec805b4af4d626d912ec2c854f9d7b45f7b8874ea8dc",
+      "scripts/profanity_method_transfer.py": "4236071f350e9e3604e5ead0240dc68cb7829cff0b6ad0da08811a7ea2131b73",
+      "scripts/profanity_method_transfer_common.py": "b23cc0d81e8ed25ac9f0d630008418e63bcde077f6ad15688f4681545d387b24",
+      "scripts/profanity_transfer_common.py": "a4f72765fd723d136870e3a8c0ed6bc7e65025b5386318ae5e4e29609977a4a8",
+      "scripts/sarcasm_gcad_low_strength.py": "5b728a124b24215b4ee5cb6e1230d5b94c575d4943ee0e2120426a78a2360dc1",
+      "scripts/sarcasm_gcad_low_strength_runbook.md": "8646e0328345eb0c77de359cf7bcf0c1633ae6971f281324bc109e7266dde92c",
+      "scripts/sarcasm_h14_sensitivity.py": "7dda7d2a5399962a821ed7cb29697f3998e39cbc51c64def216bc41a3370ff99",
+      "scripts/sarcasm_method_transfer.py": "f1386eee6d221f1b336358d4b70f2095525b0d5a646155b16704c52a9bbec7e0",
+      "scripts/sarcasm_method_transfer_common.py": "a1e1d2fec04080285d04f1f274b746495208698204b966922d82b6ac769e60d7",
+      "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+      "scripts/tone_common.py": "b7b58846746f7ddba8312324a9591dc55ef806f3039ef7e6c6146f2743b63e70",
+      "scripts/tone_judge.py": "63361396d908d219d2886a35d3bdb98d7a783e5b209d804e5aa791c45da7d4d5"
+    },
+    "registrations": {
+      "initial": {
+        "path": "results/protocols/sarcasm-gcad-low-strength-01.json",
+        "sha256": "b0d683e69241add9400be8d35dc95f1a52f99334bd4014230d4c646d968c7046"
+      },
+      "mechanics": {
+        "path": "results/protocols/sarcasm-gcad-low-strength-mechanics-01.json",
+        "sha256": "421ab0e0239e33868e1d27418e23f44ab595f3b72dd84bf21d89f1e6006b2090"
+      },
+      "selection": {
+        "path": "results/protocols/sarcasm-gcad-low-strength-selection-01.json",
+        "sha256": "ac4485a7e3ebb3bd6269dbbf310681da88f936720e29e26ecb6fd264033aac84"
+      }
+    },
+    "bank_metadata": {
+      "path": "outputs/sarcasm-method-transfer-01/extraction/banks.json",
+      "sha256": "c3aba6035548f913bc46e6d28f0462f0cfadb94ab1ddbfec5b1dd773624e0ded"
+    },
+    "extraction_integrity": {
+      "path": "outputs/sarcasm-method-transfer-01/extraction/integrity.json",
+      "sha256": "386df4cf6257eb67a0bc9db39925f0400258ebe35f1397b277f6540741e57982"
+    },
+    "parent_report": {
+      "path": "results/sarcasm_method_transfer_01.json",
+      "sha256": "559b08a107a4ac2f1e82c47b6a9452d0e7ef6227810f33e8dd916ddf4fc1ea4a"
+    },
+    "parent_status": "development_null",
+    "controls": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/controls.pt",
+      "sha256": "0fe6b4f6f5241b89cfbd8276122fdfb5f361183bad4fc3edf1b1a79858d8f368"
+    },
+    "controls_metadata": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/controls_metadata.json",
+      "sha256": "c3fda982096996b1aecf0a96a75baba92e98d1128329d931847958aa6aae7a55"
+    }
+  },
+  "generation_defaults": {
+    "do_sample": false,
+    "seed": 42,
+    "batch_size": 1,
+    "max_new_tokens": 160,
+    "use_cache": true,
+    "system": "No explicit style/system override; native default Qwen helpful system"
+  },
+  "runtime_constraint": {
+    "python": "outputs/persona-author-replication-audit-01/envs/gcad/bin/python",
+    "environment": {
+      "path": "outputs/persona-author-replication-audit-01/gcad_environment.json",
+      "sha256": "993916b2bc6e8085257c363cbbf1ec9fb59983904dcdc8dd151f0f510c8165db"
+    },
+    "python_version": "3.11.18",
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "transformers": "4.52.3",
+    "accelerate": "1.7.0",
+    "physical_gpu": 0,
+    "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+    "minimum_free_mib": 24000,
+    "maximum_utilization_percent": 10,
+    "recorded_driver": "580.178.04"
+  },
+  "measured_heldout": {
+    "n_per_condition": 32,
+    "baseline": {
+      "n": 32,
+      "trait_conservative": 0.0625,
+      "trait_numeric_mean": 0.0625,
+      "refusals": 0,
+      "coherence": 89.59375,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 32,
+      "eos": 0,
+      "mean_tokens": 160.0,
+      "mean_distinct_bigram": 0.9633258634997651,
+      "individual_trait_ge50": 0,
+      "changed_answers_vs_baseline": 0,
+      "trait_score_distribution": {
+        "0": 31,
+        "2": 1
+      }
+    },
+    "prompted": {
+      "n": 32,
+      "trait_conservative": 66.46875,
+      "trait_numeric_mean": 66.46875,
+      "refusals": 0,
+      "coherence": 77.125,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 10,
+      "eos": 22,
+      "mean_tokens": 120.4375,
+      "mean_distinct_bigram": 0.9870249790065599,
+      "individual_trait_ge50": 29,
+      "changed_answers_vs_baseline": 32,
+      "trait_score_distribution": {
+        "75": 5,
+        "50": 2,
+        "65": 2,
+        "85": 3,
+        "55": 5,
+        "45": 1,
+        "20": 1,
+        "70": 4,
+        "68": 1,
+        "42": 1,
+        "80": 2,
+        "90": 1,
+        "95": 1,
+        "72": 1,
+        "60": 2
+      }
+    },
+    "selected": {
+      "n": 32,
+      "trait_conservative": 63.78125,
+      "trait_numeric_mean": 63.78125,
+      "refusals": 0,
+      "coherence": 70.71875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 27,
+      "eos": 5,
+      "mean_tokens": 156.96875,
+      "mean_distinct_bigram": 0.9851333656551161,
+      "individual_trait_ge50": 29,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 4.036670575045039,
+      "trait_score_distribution": {
+        "55": 4,
+        "72": 3,
+        "85": 4,
+        "50": 3,
+        "60": 5,
+        "35": 1,
+        "40": 1,
+        "62": 1,
+        "70": 2,
+        "65": 2,
+        "82": 1,
+        "68": 1,
+        "78": 1,
+        "75": 1,
+        "80": 1,
+        "25": 1
+      }
+    },
+    "random": {
+      "n": 32,
+      "trait_conservative": 0.0,
+      "trait_numeric_mean": 0.0,
+      "refusals": 0,
+      "coherence": 87.71875,
+      "lexicon_hits": 0,
+      "invalid": 0,
+      "empty": 0,
+      "caps": 32,
+      "eos": 0,
+      "mean_tokens": 160.0,
+      "mean_distinct_bigram": 0.9631743090501365,
+      "individual_trait_ge50": 0,
+      "changed_answers_vs_baseline": 32,
+      "realized_position_weighted_norm": 3.1004033846012873,
+      "trait_score_distribution": {
+        "0": 32
+      }
+    },
+    "selected_sarcasm_gain_baseline": 63.71875,
+    "selected_sarcasm_gain_random": 63.78125,
+    "coherence_loss_vs_baseline": 18.875,
+    "coherence_relative_gate_margin": 1.125,
+    "all_registered_criteria_pass": true,
+    "descriptive_coupling": {
+      "conditions": {
+        "baseline": {
+          "impolite_conservative_mean": 1.625,
+          "within_condition_pearson": -0.23186944788008415,
+          "target_gain_fraction_of_prompted": 0.0
+        },
+        "prompted": {
+          "impolite_conservative_mean": 49.90625,
+          "within_condition_pearson": 0.7821125079226103,
+          "target_gain_fraction_of_prompted": 1.0
+        },
+        "selected_gcad": {
+          "impolite_conservative_mean": 38.75,
+          "within_condition_pearson": 0.6370922701731506,
+          "target_gain_fraction_of_prompted": 0.9595294117647059
+        },
+        "random_gcad": {
+          "impolite_conservative_mean": 1.65625,
+          "within_condition_pearson": null,
+          "target_gain_fraction_of_prompted": -0.0009411764705882353
+        }
+      },
+      "pooled_condition_confounded_pearson": 0.9318638163743425,
+      "off_axis_is_descriptive_only": true
+    },
+    "H14_exclusion": {
+      "status": "complete",
+      "primary_decisions_unchanged": true,
+      "excluded_ids": [
+        "H14"
+      ],
+      "conditions": {
+        "baseline": {
+          "primary32": {
+            "n": 32,
+            "mean_sarcasm_conservative": 0.0625,
+            "sarcasm_refusals": 0,
+            "mean_coherence": 89.59375,
+            "sarcasm_ge50_count": 0,
+            "sarcasm_ge50_fraction": 0.0,
+            "profanity_lexicon_response_count": 0,
+            "descriptive_impolite": {
+              "mean_conservative": 1.625,
+              "refusals": 0
+            }
+          },
+          "descriptive31": {
+            "n": 31,
+            "mean_sarcasm_conservative": 0.06451612903225806,
+            "sarcasm_refusals": 0,
+            "mean_coherence": 89.48387096774194,
+            "sarcasm_ge50_count": 0,
+            "sarcasm_ge50_fraction": 0.0,
+            "profanity_lexicon_response_count": 0,
+            "descriptive_impolite": {
+              "mean_conservative": 1.6451612903225807,
+              "refusals": 0
+            }
+          }
+        },
+        "prompted": {
+          "primary32": {
+            "n": 32,
+            "mean_sarcasm_conservative": 66.46875,
+            "sarcasm_refusals": 0,
+            "mean_coherence": 77.125,
+            "sarcasm_ge50_count": 29,
+            "sarcasm_ge50_fraction": 0.90625,
+            "profanity_lexicon_response_count": 0,
+            "descriptive_impolite": {
+              "mean_conservative": 49.90625,
+              "refusals": 0
+            }
+          },
+          "descriptive31": {
+            "n": 31,
+            "mean_sarcasm_conservative": 65.87096774193549,
+            "sarcasm_refusals": 0,
+            "mean_coherence": 77.35483870967742,
+            "sarcasm_ge50_count": 28,
+            "sarcasm_ge50_fraction": 0.9032258064516129,
+            "profanity_lexicon_response_count": 0,
+            "descriptive_impolite": {
+              "mean_conservative": 49.74193548387097,
+              "refusals": 0
+            }
+          }
+        },
+        "selected_gcad": {
+          "primary32": {
+            "n": 32,
+            "mean_sarcasm_conservative": 63.78125,
+            "sarcasm_refusals": 0,
+            "mean_coherence": 70.71875,
+            "sarcasm_ge50_count": 29,
+            "sarcasm_ge50_fraction": 0.90625,
+            "profanity_lexicon_response_count": 0,
+            "descriptive_impolite": {
+              "mean_conservative": 38.75,
+              "refusals": 0
+            }
+          },
+          "descriptive31": {
+            "n": 31,
+            "mean_sarcasm_conservative": 63.83870967741935,
+            "sarcasm_refusals": 0,
+            "mean_coherence": 70.6774193548387,
+            "sarcasm_ge50_count": 28,
+            "sarcasm_ge50_fraction": 0.9032258064516129,
+            "profanity_lexicon_response_count": 0,
+            "descriptive_impolite": {
+              "mean_conservative": 38.70967741935484,
+              "refusals": 0
+            }
+          }
+        },
+        "random_gcad": {
+          "primary32": {
+            "n": 32,
+            "mean_sarcasm_conservative": 0.0,
+            "sarcasm_refusals": 0,
+            "mean_coherence": 87.71875,
+            "sarcasm_ge50_count": 0,
+            "sarcasm_ge50_fraction": 0.0,
+            "profanity_lexicon_response_count": 0,
+            "descriptive_impolite": {
+              "mean_conservative": 1.65625,
+              "refusals": 0
+            }
+          },
+          "descriptive31": {
+            "n": 31,
+            "mean_sarcasm_conservative": 0.0,
+            "sarcasm_refusals": 0,
+            "mean_coherence": 87.64516129032258,
+            "sarcasm_ge50_count": 0,
+            "sarcasm_ge50_fraction": 0.0,
+            "profanity_lexicon_response_count": 0,
+            "descriptive_impolite": {
+              "mean_conservative": 1.6451612903225807,
+              "refusals": 0
+            }
+          }
+        }
+      }
+    },
+    "scope": "These 32 ordinary neutral held-out questions on this pinned checkpoint/runtime only; coherence is not factual correctness or helpfulness."
+  },
+  "limits": [
+    "A substantial 18.875-point coherence loss leaves only 1.125 points of margin inside the registered relative gate. This is a narrow pass, not quality solved.",
+    "Selected mean impoliteness 38.75 is descriptive coupling. Within-selected r 0.6371 and pooled condition-confounded r 0.9319 establish neither causality nor independent trait control.",
+    "Selected 27/32, baseline 32/32 and random 32/32 answers reach cap 160. Results characterize bounded outputs, not completed or uncapped responses.",
+    "Random layers match raw delta norms, keys, demands, sites and gate formula; realized mean per-position shifts 4.03667 versus 3.10040 are unequal. No realized-energy matching claim.",
+    "One reconstructed artifact and one Claude generator/reviewer/judge family; 32 reused project questions held out only for this selection. H14 exclusion is descriptive only.",
+    "Zero fixed 11-word profanity-lexicon hits is an incomplete contextual proxy, not proof of no profanity. No off-axis gate was used.",
+    "No factual accuracy, downstream capability, joint-control independence, other checkpoint, prompt, sampling regime or longer-cap validation.",
+    "Original parent development null remains unchanged. Original-Mistral SAPS is a separate model and complaint-rewriting task.",
+    "This is a static local artifact pointer, not a model release or an executable runner. It requires the exact retained local bank and pinned source/runtime."
+  ]
+}

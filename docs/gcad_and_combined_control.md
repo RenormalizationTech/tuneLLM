@@ -26,6 +26,9 @@ Here b controls magnitude, s gate sharpness, and sigma is the logistic sigmoid.
 At d=mean demand the coefficient is b; it ranges between 0 and 2b. Our retained
 profanity reference uses b=5, s=1.5 at blocks 9–19. Delta stays raw rather than
 unit-normalized, so its norm also matters.
+The separate sarcasm reference retains b=2, while the author impoliteness
+reference uses b=3.5. These use different banks and evaluation conditions;
+equal coefficients do not imply equal behavioral intensity.
 
 Delta is extracted from the attention contribution attributable to system-prompt
 source tokens. With attention weights computed over the full causal prefix,
@@ -79,6 +82,9 @@ The current references span Qwen3-4B, Qwen2.5-7B and Mistral-7B. Their tensors
 use different coordinate systems. Even on one model, residual subtraction,
 projection targeting and gated attention injection differ in sites, units
 and feedback. Their interaction cannot be inferred from isolated scores.
+The three GCAD style references now share Qwen2.5-7B coordinates. This removes
+that architecture mismatch for those banks, but does not establish independent
+controls or remove their task, decoding and extraction differences.
 
 For example, a target projection P_T(h)=h+(T-u^T h)u can remove a component of
 another added displacement w. At alpha=1,
@@ -124,43 +130,40 @@ comparable across differently sized raw vectors, nor ensure joint outputs
 retain the isolated qualities. If joint control is later chosen, a pairwise study should precede three-trait
 control. No mixture is required for the individual-control goal.
 
-## Proposed order, with evidence boundaries
+## Completed follow-up and evidence boundaries
 
-1. Preserve the [four references](steering_reference.md) and their different
-   success levels. Refusal remains a partial effect that failed quality.
-2. Test GCAD sarcasm on Qwen2.5-7B ordinary replies, using a new reviewed
-   construct/fit and a prompted-sarcasm reference. A SAPS comparison must use
-   that same checkpoint, task, questions and decoding to compare methods.
-   The existing Mistral rewriting success stays the external reference.
-3. Test isolated GCAD refusal reduction on that same Qwen2.5 checkpoint,
-   with fresh attention-specific extraction, a prompted reference, published
-   evaluation prompts, explicit reduction/quality criteria and the existing
-   boundary measurements. Establish the new checkpoint's baseline first. The
-   residual refusal direction cannot substitute for an attention-specific bank.
-4. Re-establish isolated settings under comparable task/decoding conditions,
-   scoring all relevant traits and quality on each arm with suitable benchmark
-   partitions. Report cross-effects/correlations descriptively, including strong
-   coupling. No automatic joint grid or requirement to remove coupling follows.
+1. Preserve the [four-behavior record](steering_reference.md) and its different
+   success levels. The original Qwen3-4B refusal subtraction showed a partial
+   effect and failed quality; it is separate from the GCAD work.
+2. The first [Qwen sarcasm transfer](sarcasm_method_transfer_closeout.md)
+   closed with a development null. A separately reviewed
+   [lower-strength study](sarcasm_gcad_low_strength_closeout.md) retained GCAD2:
+   held-out SARC63.78 versus baseline0.06/random0, coherence89.59→70.72.
+   The coherence margin is only1.125 points. SAPS had no qualifying setting in
+   the original grid; the positive Mistral rewriting reference stays separate.
+3. The [Qwen7 benign refusal screen](refusal_headroom_closeout.md) closed at
+   3/100 semantic refusals versus five secondary prefix flags. No GCAD refusal
+   bank or intervention was tested. This benign-over-refusal screen does not
+   settle broader refusal reduction or replace the earlier refusal comparison.
+   No automatic dataset/model fallback follows its close.
+4. Sarcasm's descriptive held-out impoliteness mean rose1.625→38.75;
+   within the selected arm, SARC/impoliteness Pearson r=.637. The pooled r=.932
+   is condition-confounded. No lexical profanity hits were observed. These
+   findings describe coupling, not independence or a reason to reject the
+   selected sarcasm setting. Other cross-effect directions remain unmeasured.
 
-This order was reconfirmed with Claude after the refusal-setting discussion:
-finish isolated GCAD sarcasm, then isolated GCAD refusal. Each trait may retain
-its own intervention; any later joint tuning is optional.
-The immediate milestone is a reviewed sarcasm protocol and fresh construct/
-artifact, followed by bounded development and untouched held-out comparison
-against baseline, prompted reference and random controls. Keep the Mistral
-SAPS reference, and label same-checkpoint SAPS comparison as a method transfer.
-A failed isolated transfer closes with reported tables rather than an automatic
-expanded grid. Cross-model transfer to Qwen3 requires fresh architecture-aware
-extraction and hook checks; keep the existing 4B-before-further-14B sequence.
-No new model experiment is launched by this roadmap update.
+The bounded sarcasm tuning is closed. Any next phase needs its own prospective
+design; no further sweep or joint grid is released. Cross-model transfer to
+Qwen3 requires fresh architecture-aware extraction and hook checks. The user's
+4B-before-further-14B sequence remains in force.
 
 The paper's tested humorous persona is not a sarcasm result. Its
 [Appendix O](https://arxiv.org/html/2605.10664v3) analyzes incidental refusals
 in persona experiments, not a dedicated refusal-control benchmark. Both
-proposed applications are exploratory transfers. Unifying mechanisms is a
+applications are exploratory transfers. Unifying mechanisms is a
 useful engineering goal; retain the existing successful methods unless the
-new common-method tests support replacing them. No new artifact generation,
-model calls, parameter search or joint experiment was run for this discussion.
+new common-method tests support replacing them. The original discussion itself
+launched no model work; the linked registered studies record later execution.
 
 ## User clarification: individual control is the primary goal
 
