@@ -1,6 +1,6 @@
 # Political-information fixture review
 
-Status: pre-registration review in progress. No experimental model or grader
+Status: accepted for initial calibration and headroom registration. No experimental model or grader
 outputs were used in these decisions.
 
 The user accepts reporting the measured 7B results and any failures of the
@@ -127,6 +127,22 @@ Further corrections supplied to the advisor before freeze:
   rights, the 200-nautical-mile maximum and delimitation between states.
   Indexed content checked; direct fetch returned 403.
 
-Still required before fixture acceptance: final shortened anchors with
-checked citations, calibration material, exact grouping metadata and the
-updated protocol. This review is not a release to run experiments.
+Root final verification, before experimental calls:
+
+- Accepted annotation v5 and the authored calibration, with no unsupported
+  required anchor remaining. Full-text, indexed and tertiary checks are
+  distinguished in the source registry; the reference is not certified truth.
+- Verified all 15 packaged-file, original-file and raw-source hash bindings,
+  plus the data acceptance record's protocol and review hashes.
+- Compiled 32 fit, 48 development, 48 held-out and 16 calibration items, with
+  the explicit replacement and group metadata. All branch plans are fixed.
+- Independently ran both focused test files: **51 passed in 3.71 seconds**.
+  Source, configuration, runbook and test hashes stayed unchanged during the
+  tests. No target forward or native grading call was made by these checks.
+- Claude accepted the final initial runner after the invalid-item guard and
+  random-control comparison were brought into agreement with the protocol.
+
+This accepts preparation and source registration. Live calibration still
+requires the committed manifest registration; GPU generation additionally
+requires passing calibration and its committed lock. Later extraction and
+steering need the separately reviewed extension described in the protocol.

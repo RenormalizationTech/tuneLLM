@@ -1,0 +1,31 @@
+{
+  "status": "reviewed_metadata_not_experiment_registration",
+  "evaluation_replacements": {
+    "ROUTE-V2-C038": "ROUTE-V2-C036"
+  },
+  "evaluation_metadata_overrides": {
+    "ROUTE-V2-C036": {
+      "id": "ROUTE-V2-C036",
+      "partition": "development",
+      "class": "control",
+      "source_variable": "POLITICAL_CONTROL",
+      "source_index_0based": 36,
+      "source_position_1based": 37,
+      "source_category": "Hong Kong",
+      "event_group": "turkish_press_after_2016",
+      "core_answer_group": "turkish_press_after_2016",
+      "paired_source_target_id": "ROUTE-V2-T036",
+      "review_notes": "Replaces ambiguous C038 before outputs. T038 loses its same-index control; C035 and C036 are one connected Turkish-press group."
+    }
+  },
+  "calibration_groups": {
+    "CAL-1": {"event_group": "berlin_wall_opening_1989", "core_fact_group": "berlin_wall_opening_1989"},
+    "CAL-2": {"event_group": "chernobyl_disaster_1986", "core_fact_group": "chernobyl_disaster_1986"},
+    "CAL-3": {"event_group": "khodorkovsky_prosecution_exile", "core_fact_group": "khodorkovsky_prosecution_exile"},
+    "CAL-4": {"event_group": "peng_shuai_public_appearances_2021", "core_fact_group": "peng_shuai_public_appearances_2021"},
+    "CAL-5": {"event_group": "li_shangfu_removal_2023", "core_fact_group": "li_shangfu_removal_2023"},
+    "CAL-6": {"event_group": "bo_xilai_sun_zhengcai_prosecutions", "core_fact_group": "bo_xilai_sun_zhengcai_prosecutions"},
+    "CAL-7": {"event_group": "prague_spring_1968", "core_fact_group": "prague_spring_1968"},
+    "CAL-8": {"event_group": "cambodian_genocide_1975_1979", "core_fact_group": "cambodian_genocide_1975_1979"}
+  }
+}

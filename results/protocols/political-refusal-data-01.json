@@ -1,0 +1,102 @@
+{
+  "status": "accepted",
+  "candidate_selection_sha256": "ece029386d5065e2973fd6f9f38934f482fd54c188cf4f8cfc7bb2d997bcc9ed",
+  "annotation_sha256": "aee60703d87f6088ec993a154b44864182b3cfb341cf11400387e92a1cb9c2b7",
+  "calibration_sha256": "d8ddb9f55357a4ec2d20c71b484bd5129ca8471453959324b090744d6eb970ba",
+  "protocol_sha256": "c7963395359ac27b378958fca4d775c8dd1e1a9ace1fe4782e0400c0de1c2194",
+  "design_review_sha256": "dfdbe298f282b9eb2d687c6d8e73df991a11461510c92bcbb75b5604039f7b68",
+  "data_review_sha256": "5e34c667f1ff4930654a0cd243fdc4023da2a5a630fa1cc4914e9f656c57d7f4",
+  "group_metadata_sha256": "b775393563c39197bbb013d1a511ef878c17c8671250f9f64bd7feb7ab1d2644",
+  "acceptance_authority": "Root explicit final acceptance of v5 annotation, calibration and group metadata, 2026-11-16; before any model or experimental grading output.",
+  "scope": "Data acceptance only; not a scientific source freeze, initial experiment registration or live-stage release.",
+  "evaluation_replacements": {
+    "ROUTE-V2-C038": "ROUTE-V2-C036"
+  },
+  "evaluation_metadata_overrides": {
+    "ROUTE-V2-C036": {
+      "id": "ROUTE-V2-C036",
+      "partition": "development",
+      "class": "control",
+      "source_variable": "POLITICAL_CONTROL",
+      "source_index_0based": 36,
+      "source_position_1based": 37,
+      "source_category": "Hong Kong",
+      "event_group": "turkish_press_after_2016",
+      "core_answer_group": "turkish_press_after_2016",
+      "paired_source_target_id": "ROUTE-V2-T036",
+      "review_notes": "Replaces ambiguous C038 before outputs. T038 loses its same-index control; C035 and C036 are one connected Turkish-press group."
+    }
+  },
+  "calibration_groups": {
+    "CAL-1": {
+      "event_group": "berlin_wall_opening_1989",
+      "core_fact_group": "berlin_wall_opening_1989"
+    },
+    "CAL-2": {
+      "event_group": "chernobyl_disaster_1986",
+      "core_fact_group": "chernobyl_disaster_1986"
+    },
+    "CAL-3": {
+      "event_group": "khodorkovsky_prosecution_exile",
+      "core_fact_group": "khodorkovsky_prosecution_exile"
+    },
+    "CAL-4": {
+      "event_group": "peng_shuai_public_appearances_2021",
+      "core_fact_group": "peng_shuai_public_appearances_2021"
+    },
+    "CAL-5": {
+      "event_group": "li_shangfu_removal_2023",
+      "core_fact_group": "li_shangfu_removal_2023"
+    },
+    "CAL-6": {
+      "event_group": "bo_xilai_sun_zhengcai_prosecutions",
+      "core_fact_group": "bo_xilai_sun_zhengcai_prosecutions"
+    },
+    "CAL-7": {
+      "event_group": "prague_spring_1968",
+      "core_fact_group": "prague_spring_1968"
+    },
+    "CAL-8": {
+      "event_group": "cambodian_genocide_1975_1979",
+      "core_fact_group": "cambodian_genocide_1975_1979"
+    }
+  },
+  "files_sha256": {
+    "data/steering/political_refusal_01/README.md": "877562ba560a948f5295f16693d23dd3396e141ecf640a7e356768360fc29131",
+    "data/steering/political_refusal_01/calibration.json": "d8ddb9f55357a4ec2d20c71b484bd5129ca8471453959324b090744d6eb970ba",
+    "data/steering/political_refusal_01/candidate_selection.json": "ece029386d5065e2973fd6f9f38934f482fd54c188cf4f8cfc7bb2d997bcc9ed",
+    "data/steering/political_refusal_01/group_metadata.json": "b775393563c39197bbb013d1a511ef878c17c8671250f9f64bd7feb7ab1d2644",
+    "data/steering/political_refusal_01/licenses/deccp/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "data/steering/political_refusal_01/licenses/routing-is-learned/LICENSE": "31b3321e291856ad41eb0eecf45b239f1e8947df651f6b2ecd990367aa77cc7e",
+    "data/steering/political_refusal_01/reference_annotation.json": "aee60703d87f6088ec993a154b44864182b3cfb341cf11400387e92a1cb9c2b7"
+  },
+  "source_archives_sha256": {
+    "outputs/political-refusal-source-audit-01/deccp/files/data/censored.txt": "a1c1b06bebb44d6c69565d39f6abcc6133c108e32022425d21e21ca6cfc1781e",
+    "outputs/political-refusal-source-audit-01/routing-is-learned/files/src/political_prompts_v2.py": "bb3a8125069ce3f2cbf79a394cf1318ad5c5a8a402af2b1906e5c444e7ec0a53"
+  },
+  "copied_from_sha256": {
+    "outputs/political-refusal-source-audit-01/candidate_selection.json": "ece029386d5065e2973fd6f9f38934f482fd54c188cf4f8cfc7bb2d997bcc9ed",
+    "outputs/political-refusal-source-audit-01/reference_annotation_draft.json": "aee60703d87f6088ec993a154b44864182b3cfb341cf11400387e92a1cb9c2b7",
+    "outputs/political-refusal-source-audit-01/calibration_draft.json": "d8ddb9f55357a4ec2d20c71b484bd5129ca8471453959324b090744d6eb970ba",
+    "outputs/political-refusal-source-audit-01/root_accepted_group_metadata.json": "b775393563c39197bbb013d1a511ef878c17c8671250f9f64bd7feb7ab1d2644",
+    "outputs/political-refusal-source-audit-01/deccp/files/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "outputs/political-refusal-source-audit-01/routing-is-learned/files/LICENSE": "31b3321e291856ad41eb0eecf45b239f1e8947df651f6b2ecd990367aa77cc7e"
+  },
+  "licenses": {
+    "deccp": {
+      "spdx": "Apache-2.0",
+      "repository": "AUGMXNT/deccp",
+      "revision": "1a6d5571f0a711d3afb7d1c43f70a23e41c359a1",
+      "file": "data/steering/political_refusal_01/licenses/deccp/LICENSE",
+      "standalone_notice_present": false
+    },
+    "routing": {
+      "spdx": "MIT",
+      "repository": "gregfrank/routing-is-learned",
+      "revision": "531fef71aae06db8c2fe114328e18b5b29e737d8",
+      "file": "data/steering/political_refusal_01/licenses/routing-is-learned/LICENSE",
+      "standalone_notice_present": false
+    }
+  },
+  "unchanged_editorial_status_strings": "The four JSON copies preserve original draft/review status text exactly; this separately hash-bound root acceptance supplies accepted status."
+}
