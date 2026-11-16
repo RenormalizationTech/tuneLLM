@@ -1,0 +1,75 @@
+{
+  "status": "real_7b_zero_reload_checks_passed",
+  "verified_utc": "2026-11-16T18:33:32.170480+00:00",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "dtype": "bfloat16",
+    "attention": "sdpa"
+  },
+  "bundle_manifest_sha256": "05aea48f36a5365bbe55adad1ee5ef17d52df3711557f960c1f158fab44a853e",
+  "runtime_files_sha256": {
+    "example.py": "c2204d0858b93c1562a9e7ea5c03d040875a89e0a53793359b731fdc7b526ccc",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gcad.py": "f8093f297dc66ee51af08f441f32be129da9650ba68c34ab874707773ba2b556",
+    "loader.py": "a6a9bdccdb27fe7afa698dd0727647fc39aead7c16e74fc06570c5bc943c6058"
+  },
+  "traits": {
+    "profanity": {
+      "status": "passed",
+      "exit_code": 0,
+      "log_sha256": "b08f39b5fc216f4fc48b1bdd09c3a2e50cd2a51d3dbb4277a4d18f8689d100d0",
+      "ordinary_and_zero_logits_exact_equal": true,
+      "forwards": 2,
+      "resource": {
+        "physical_gpu": 0,
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "driver": "580.178.04"
+      }
+    },
+    "impolite": {
+      "status": "passed",
+      "exit_code": 0,
+      "log_sha256": "21d5691baba341223add68bd15195c14644a3e305b5defc733a03e4b382c5589",
+      "ordinary_and_zero_logits_exact_equal": true,
+      "forwards": 2,
+      "resource": {
+        "physical_gpu": 0,
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "driver": "580.178.04"
+      }
+    },
+    "sarcasm": {
+      "status": "passed",
+      "exit_code": 0,
+      "log_sha256": "b08f39b5fc216f4fc48b1bdd09c3a2e50cd2a51d3dbb4277a4d18f8689d100d0",
+      "ordinary_and_zero_logits_exact_equal": true,
+      "forwards": 2,
+      "resource": {
+        "physical_gpu": 0,
+        "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+        "name": "NVIDIA RTX A6000",
+        "free_mib_before_load": 48053,
+        "utilization_percent_before_load": 0,
+        "driver": "580.178.04"
+      }
+    }
+  },
+  "model_loads": 3,
+  "model_forwards": 6,
+  "generated_answers": 0,
+  "new_training": false,
+  "nonzero_efficacy_retested": false,
+  "scope": "Operational coefficient-zero logit parity on one fixed benign probe per bank, with real pinned base reload; separate from the unchanged 4B scientific budget.",
+  "limits": [
+    "Not a new 7B held-out efficacy or capability benchmark.",
+    "Initial staging01 check loaded weights but failed tokenizer validation before any forward; that log and manifests remain preserved."
+  ],
+  "credentials_recorded": false
+}
