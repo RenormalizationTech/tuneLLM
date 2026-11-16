@@ -22,8 +22,16 @@ complete the initial project.
 
 ## Live execution update (2026-11-16)
 
-**Current user scope is Hugging Face publication only; refusal research is
-paused.** NF4 and PRL Writing QLoRA are now public at
+**Current user-authorized order:** (1) fixed joint three-trait GCAD Qwen2.5-7B
+study and measured guide, (2) separately reviewed benign political 7B refusal/
+headroom screen with conditional HF publication. No larger-model work, including
+Qwen3.8-27B or Gemma 4, precedes user discussion. The
+[joint protocol](docs/joint_gcad_protocol.md) fixes12 arms/24 questions and no
+selection/refit;43 focused CPU checks passed. Root prepares/registers and
+explicitly releases each stage. No joint outcome or new 7B refusal controller is
+claimed, and all closed studies remain immutable.
+
+The preceding HF-only transition is complete. NF4 and PRL Writing QLoRA are now public at
 `2ae7eec7ac38290ea28efefd1a06e779027aafc7` and
 `b9f7ff0222d9e4070ee88f89e4f00ff096e20359`, respectively. The adapter's NF4
 dependency stays at `e9af208e44e083b77702a71d8aa65b7d97f78ce6`, verified
@@ -36,8 +44,8 @@ the [factual receipt](results/hf_visibility_transition_01.json) preserves its
 hashes and deletion evidence. The negative learning record remains intact.
 Public PRL test data are disclosed and cannot serve as clean future held-out
 tests. No new 7B refusal model or controller is claimed; the prior political
-coverage branch remains unexecuted. Earlier plans below are history, not a
-release for further compute.
+coverage branch remains unexecuted. Earlier plans below are history and do not
+override the new sequence or its requirement for registered stage releases.
 
 Local cleanup is complete: [receipt](results/storage_cleanup_20261116_01.json).
 The planned reclaim was 49.576309 GiB; the observed filesystem used-space
@@ -47,8 +55,8 @@ and mtime. Tokenizer/config/index/refs survive in the partial Qwen3-14B and
 Mistral caches; active 7B/4B weights, runtime environments and the GSM8K archive
 remain. Root verified the cached 14B tokenizer test (1 pass, 3.17 seconds) and
 offline tokenizer loading for Mistral-7B, Qwen2.5-7B and Qwen3-4B. Future model
-options are Qwen3.8-27B and Gemma 4; Qwen3-14B has no future download or study
-scheduled. Existing historical 14B results remain unchanged.
+options are Qwen3.8-27B and Gemma 4 only after user discussion; Qwen3-14B has
+no future download or study scheduled. Existing historical 14B results remain unchanged.
 
 The [fixed-setting Qwen3-4B transfer](docs/qwen3_4b_fixed_transfer_plan.md)
 is registered in [R1](results/protocols/qwen3-4b-fixed-transfer-01.json).

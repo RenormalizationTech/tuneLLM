@@ -1,0 +1,141 @@
+{
+  "gpu_python": "outputs/persona-author-replication-audit-01/envs/gcad/bin/python",
+  "judge_python": ".venv/bin/python",
+  "environment": "outputs/persona-author-replication-audit-01/gcad_environment.json",
+  "model_manifest": "outputs/persona-author-replication-audit-01/model_manifest.json",
+  "judge_runtime_config": "configs/qwen3_14b_baseline.json",
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "snapshot": ".hf/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "minimum_free_mib": 24000,
+  "maximum_utilization_percent": 10,
+  "run": "outputs/joint-gcad-01",
+  "result": "results/joint_gcad_01.json",
+  "protocol": "docs/joint_gcad_protocol.md",
+  "design_review": "results/reviews/joint_gcad_design_review.md",
+  "fixture_review": "results/reviews/joint_gcad_fixture_review.md",
+  "fixture": "evaluation/joint_gcad/fixture.json",
+  "initial_registration": "results/protocols/joint-gcad-01.json",
+  "mechanics_registration": "results/protocols/joint-gcad-mechanics-01.json",
+  "calibration_registration": "results/protocols/joint-gcad-calibration-01.json",
+  "release_root": "outputs/steering-release-staging-03",
+  "release_manifest_sha256": "8a57ab029d9d2adee60be7229ee30a3ba347c9c53442bed96799e2b2316849f4",
+  "seed": 42,
+  "batch_size": 1,
+  "target_cap": 160,
+  "probe_cap": 32,
+  "layers": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "scale": 1.5,
+  "inverse": false,
+  "full_strengths": {
+    "profanity": 5.0,
+    "impolite": 3.5,
+    "sarcasm": 2.0
+  },
+  "plan_seed": 106011,
+  "bootstrap_seed": 106012,
+  "bootstrap_repetitions": 2000,
+  "maximum_native_starts": 320,
+  "maximum_first_valid": 160,
+  "maximum_generations": 308,
+  "mechanics_generations": 20,
+  "maximum_logit_forwards": 10,
+  "generation_overrides": {
+    "do_sample": false,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "repetition_penalty": 1.05,
+    "use_cache": true
+  },
+  "rubric_sources": {
+    "profanity": {
+      "path": "outputs/profanity-method-transfer-01/inputs/data.json",
+      "keys": [
+        "trait_rubric"
+      ]
+    },
+    "impolite": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/inputs/data.json",
+      "keys": [
+        "impolite_rubric"
+      ]
+    },
+    "sarcasm": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/inputs/data.json",
+      "keys": [
+        "trait_rubric"
+      ]
+    },
+    "coherence": {
+      "path": "outputs/sarcasm-gcad-low-strength-01/inputs/data.json",
+      "keys": [
+        "coherence_rubric"
+      ]
+    }
+  },
+  "overlap_files": [
+    "evaluation/author_profanity_method/calibration.json",
+    "evaluation/author_profanity_method/definitions.json",
+    "evaluation/author_profanity_method/report.json",
+    "evaluation/author_profanity_method/self_judge.json",
+    "evaluation/author_profanity_method/triples.json",
+    "evaluation/author_profanity_revision/calibration.json",
+    "evaluation/author_profanity_revision/definitions.json",
+    "evaluation/author_profanity_revision/report.json",
+    "evaluation/author_profanity_revision/self_judge.json",
+    "evaluation/author_profanity_revision/triples.json",
+    "evaluation/benign_helpfulness/development.json",
+    "evaluation/benign_helpfulness/rubric.json",
+    "evaluation/persona/development.json",
+    "evaluation/persona/rubric.json",
+    "evaluation/persona_calibration/rubric.json",
+    "evaluation/persona_calibration/texts.json",
+    "evaluation/persona_reference/profanity/coherence.json",
+    "evaluation/persona_reference/profanity/eval.json",
+    "evaluation/persona_reference/profanity/extract.json",
+    "evaluation/persona_reference/rudeness/coherence.json",
+    "evaluation/persona_reference/rudeness/eval.json",
+    "evaluation/persona_reference/rudeness/extract.json",
+    "evaluation/persona_saps/prompts.json",
+    "evaluation/persona_saps/rubric.json",
+    "evaluation/persona_saps/test.json",
+    "evaluation/persona_saps/train.json",
+    "evaluation/persona_saps/val.json",
+    "evaluation/persona_traits/confirmation.json",
+    "evaluation/persona_traits/development.json",
+    "evaluation/persona_traits/rubric.json",
+    "evaluation/profanity_steering/confirmation.json",
+    "evaluation/profanity_steering/development.json",
+    "evaluation/profanity_steering/extraction.json",
+    "evaluation/profanity_steering/rubric.json",
+    "evaluation/refusal/output_diagnosis_rubric.json",
+    "evaluation/refusal/response_rubric.json",
+    "evaluation/refusal/screening_rubric.json",
+    "evaluation/rudeness_steering/extraction.json",
+    "evaluation/sarcasm_method_transfer/extract.json",
+    "evaluation/sarcasm_steering/extraction.json",
+    "evaluation/small_tasks.json",
+    "evaluation/tone/development.json",
+    "evaluation/tone/extraction.json",
+    "evaluation/tone/final.json",
+    "evaluation/tone/fixture_manifest.json",
+    "evaluation/tone/rubric.json",
+    "outputs/author-gcad-impolite-01/inputs/questions.json",
+    "outputs/profanity-method-transfer-01/inputs/data.json",
+    "outputs/sarcasm-gcad-low-strength-01/fit_inputs.json"
+  ]
+}

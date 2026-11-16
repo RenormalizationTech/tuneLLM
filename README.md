@@ -29,17 +29,27 @@ All 23 files were verified at the pinned remote revision, and all three
 downloaded banks passed CPU loader checks. Existing quantization models and
 the public physics adapter remain separate.
 
-**Latest scope: Hugging Face publication only.** NF4 and PRL Writing QLoRA are
+**Current authorized order:** first the fixed joint three-trait GCAD study and
+measured guide on Qwen2.5-7B, then a separately reviewed benign political 7B
+refusal/headroom screen and conditional publication. See the
+[joint protocol](docs/joint_gcad_protocol.md). The joint implementation passed
+43 focused CPU checks; root registration and explicit stage releases precede
+calls. No joint behavioral outcome is claimed yet. Qwen3.8-27B/Gemma 4 require
+user discussion before any work; no larger-model run is released.
+
+The preceding Hugging Face-only transition is complete. NF4 and PRL Writing QLoRA are
 now public; the GSM8K adapter repository was deleted after a verified local
 archive. See the [transition receipt](results/hf_visibility_transition_01.json).
-Refusal work is paused; no new 7B refusal model or controller is claimed.
+No new 7B refusal model or controller is claimed; the forthcoming benign screen
+is a separate study and does not reopen frozen refusal experiments.
 
 [Verified local cleanup](results/storage_cleanup_20261116_01.json) reclaimed
 49.576 GiB: redundant verification caches, two duplicate PRL staging weights,
 and Qwen3-14B/Mistral-7B weight blobs. Their tokenizer/config metadata remain;
 all 18 physics optimizer states, checkpoints, active 7B/4B weights, environments
 and the GSM8K archive were retained. Future model options are Qwen3.8-27B and
-Gemma 4, not another Qwen3-14B download or study; no new compute is released.
+Gemma 4, not another Qwen3-14B download or study; larger-model work awaits
+user discussion.
 
 The [refusal reproducibility review](docs/refusal_reproducibility_review.md)
 compares the original author code with published over-refusal benchmarks. The
