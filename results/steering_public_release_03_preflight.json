@@ -1,0 +1,27 @@
+{
+  "status": "reviewed_ready_for_public_upload",
+  "utc": "2026-11-16T19:20:03.011401+00:00",
+  "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+  "private": false,
+  "source_git": {
+    "tag": "steering-controls-v1",
+    "commit": "199cf41ac9db9024b14c9afddaea8e060af5b14b"
+  },
+  "source_repository_visibility": "private; unchanged",
+  "file_count": 23,
+  "payload_bytes": 1480967,
+  "release_manifest_sha256": "8a57ab029d9d2adee60be7229ee30a3ba347c9c53442bed96799e2b2316849f4",
+  "publication_manifest_sha256": "0ac1014e0a041c175f0da012c5bc588fc6b9f89d1f5fb4de24d6b81541513dc8",
+  "publisher_commit_message": "Release manifest SHA256: 8a57ab029d9d2adee60be7229ee30a3ba347c9c53442bed96799e2b2316849f4",
+  "card_metadata": {
+    "base_model": "Qwen/Qwen2.5-7B-Instruct",
+    "license": "apache-2.0"
+  },
+  "cpu_tests_passed": 39,
+  "inference_core_byte_identical_to_validated_02": true,
+  "real_02_zero_checks_passed": 3,
+  "public_03_gpu_rerun_claimed": false,
+  "public_result_contains_raw_items": false,
+  "private_project_links_required": false,
+  "uploads_performed": 0
+}
