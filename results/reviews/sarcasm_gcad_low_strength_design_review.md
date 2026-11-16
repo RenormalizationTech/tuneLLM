@@ -46,7 +46,13 @@ Source code and registrations are reviewed separately.
    is regenerated on the GPU.
 5. **The H14 exclusion is descriptive only.** It is predeclared, and the
    primary decision uses all 32 held-out questions.
-6. **There is one study and then a stop.** No further sweep, no SAPS α 3 and no
+6. **Grading order and reporting.** Held-out grading runs sarcasm, then
+   coherence, then impoliteness. A fatal stop during the descriptive
+   impoliteness journal, after the primary decision is complete, publishes
+   with status `primary_complete_descriptive_incomplete`, keeping the primary
+   decision and the stop record. Any earlier fatal stop stays a private
+   `incomplete` record.
+7. **There is one study and then a stop.** No further sweep, no SAPS α 3 and no
    new artifact. A second null closes GCAD sarcasm on this checkpoint and falls
    back to the Mistral SAPS reference, with its model and task limits stated.
 

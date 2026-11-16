@@ -93,6 +93,19 @@ development.
 - Impoliteness and the profanity lexicon are descriptive coupling measures,
   never gates.
 
+## Grading order and reporting rule
+
+- Held-out grading runs in a fixed order: sarcasm, then coherence, then
+  impoliteness. The impoliteness journal cannot start until both primary
+  streams are accepted.
+- If a fatal stop happens **during the held-out impoliteness journal**, after
+  the primary decision is complete, publish the result with terminal status
+  `primary_complete_descriptive_incomplete`. It keeps the primary decision,
+  the H14 descriptive figures and the stop record. Impoliteness is descriptive
+  only, so its failure never hides or changes the primary decision.
+- A fatal stop at any earlier point, before the primary decision is complete,
+  stays a private `incomplete` record and is not published as a result.
+
 ## Budgets (maxima)
 
 - Target generations: 6 mechanics + 96 development + 128 held-out = **230**.

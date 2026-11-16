@@ -1,0 +1,63 @@
+{
+  "gpu_python": "outputs/persona-author-replication-audit-01/envs/gcad/bin/python",
+  "judge_python": ".venv/bin/python",
+  "environment": "outputs/persona-author-replication-audit-01/gcad_environment.json",
+  "model_manifest": "outputs/persona-author-replication-audit-01/model_manifest.json",
+  "judge_runtime_config": "configs/qwen3_14b_baseline.json",
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "snapshot": ".hf/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "minimum_free_mib": 24000,
+  "maximum_utilization_percent": 10,
+  "author_root": "outputs/persona-author-replication-audit-01/gcad",
+  "seed": 42,
+  "batch_size": 1,
+  "target_cap": 160,
+  "probe_cap": 32,
+  "gcad_layers": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "gcad_scale": 1.5,
+  "random_seeds": [
+    9603,
+    9604,
+    9605
+  ],
+  "run": "outputs/sarcasm-gcad-low-strength-01",
+  "result": "results/sarcasm_gcad_low_strength_01.json",
+  "protocol": "docs/sarcasm_gcad_low_strength_protocol.md",
+  "design_review": "results/reviews/sarcasm_gcad_low_strength_design_review.md",
+  "initial_registration": "results/protocols/sarcasm-gcad-low-strength-01.json",
+  "mechanics_registration": "results/protocols/sarcasm-gcad-low-strength-mechanics-01.json",
+  "selection_registration": "results/protocols/sarcasm-gcad-low-strength-selection-01.json",
+  "parent_run": "outputs/sarcasm-method-transfer-01",
+  "parent_result": "results/sarcasm_method_transfer_01.json",
+  "gcad_base_coefs": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "maximum_generations": 230,
+  "maximum_logit_forwards": 2,
+  "maximum_prompt_forwards": 0,
+  "maximum_gcad_teacher_forced": 0,
+  "maximum_native_starts": 176,
+  "plan_seeds": {
+    "development_trait": 10501,
+    "development_coherence": 10502,
+    "heldout_trait": 10503,
+    "heldout_coherence": 10504,
+    "heldout_impolite": 10505
+  }
+}
