@@ -1,0 +1,92 @@
+{
+  "kind": "operational_inference_context_note",
+  "status": "CPU_ACCEPTED_PENDING_ROOT_COMMIT_AND_TF_RELEASE",
+  "created_utc": "2026-11-16T17:34:28.084957+00:00",
+  "replaces_R1": false,
+  "R1_manifest_sha256": "2ce6212a05c5f2c086aed6d867fefcee0b29f308f2f9387e95e5cdcf9c5336d4",
+  "R1_registration_sha256": "ce90a032480dfdc0ca43cbbd518ef177456f6f61d2ebc3a86398369128b8567c",
+  "reason": "The frozen key/demand extractor reapplies Qwen3 q_norm/k_norm after its inner no_grad, retaining autograd graphs across eligible examples. A global torch.no_grad around frozen main preserves forward arithmetic and prevents graph retention.",
+  "wrapper": "scripts/run_qwen3_extraction_inference.py",
+  "wrapper_sha256": "eddc6e8be6117958b4319ba5e58c758244a4910ba5b6ddd891e1ed3470dbffbe",
+  "tests": "tests/test_qwen3_extraction_inference.py",
+  "tests_sha256": "abadd1d1a5a8f652bfe594b0fe7f9a44b6572bc9ad8c876e4c06ea37b7255c2b",
+  "frozen_runner_sha256": "4a64dbef1d8c4b112c1d16428df7797ecfab76f96c3335255d7d8d416a7393e2",
+  "frozen_port_sha256": "f8093f297dc66ee51af08f441f32be129da9650ba68c34ab874707773ba2b556",
+  "call_contract": {
+    "module": "scripts.qwen3_4b_fixed_transfer",
+    "run_name": "__main__",
+    "sys_argv": [
+      "scripts.qwen3_4b_fixed_transfer",
+      "extraction",
+      "--trait",
+      "TRAIT",
+      "--execute-gpu"
+    ],
+    "scope": "with torch.no_grad(): runpy.run_module(...); original argv and grad mode restored on normal return or exception"
+  },
+  "required_commands": {
+    "profanity": "outputs/persona-author-replication-audit-01/envs/gcad/bin/python -B -u -m scripts.run_qwen3_extraction_inference --trait profanity --execute-gpu",
+    "impolite": "outputs/persona-author-replication-audit-01/envs/gcad/bin/python -B -u -m scripts.run_qwen3_extraction_inference --trait impolite --execute-gpu",
+    "sarcasm": "outputs/persona-author-replication-audit-01/envs/gcad/bin/python -B -u -m scripts.run_qwen3_extraction_inference --trait sarcasm --execute-gpu"
+  },
+  "operator_policy": "All three real extraction stages use the wrapper after root review/commit/release and GPU0 resource guard. Generation/judging commands remain unchanged. No actual extraction authorized/executed by this note.",
+  "parity_receipt": {
+    "passed": 12,
+    "seconds": 5.35,
+    "warning_count": 1,
+    "warning": "pkg_resources/sre_constants deprecation from pure pytest late fallback",
+    "runtime": "Pinned GCADPython3.11 torch2.6.0+cu124 Transformers4.52.3; pure pytest late fallback, plugins disabled; no installation",
+    "matrix": [
+      "tinyQwen2 FP32",
+      "tinyQwen2 BF16",
+      "tinyQwen3 FP32",
+      "tinyQwen3 BF16"
+    ],
+    "delta_key_demand_torch_equal": true,
+    "wrapped_key_demand_requires_grad_false": true,
+    "wrapped_key_demand_grad_fn_none": true,
+    "ordinary_qwen3_graph_retention_reproduced": true,
+    "normal_dry_execute_flag_argv_and_grad_restoration": true,
+    "exception_restoration": true
+  },
+  "actual_dry_run": {
+    "command": "CUDA_VISIBLE_DEVICES='' outputs/persona-author-replication-audit-01/envs/gcad/bin/python -B -u -m scripts.run_qwen3_extraction_inference --trait profanity",
+    "exit_code": 0,
+    "stdout": "No execution flag; no calls or writes.",
+    "extraction_directories_present": false,
+    "evidence_scope": "Frozen-main early return plus no extraction directories. Concurrent SARC writes excluded; no claim that the entire live run tree was unchanged."
+  },
+  "clean_role_check": {
+    "python": "outputs/persona-author-replication-audit-01/envs/gcad/bin/python",
+    "expression": "infra.verify_role(Context(),'gpu')",
+    "pytest_fallback_used": false,
+    "passed": true,
+    "model_calls": 0
+  },
+  "invariants": {
+    "all_R1_source_hashes_unchanged": true,
+    "weights_and_scientific_data_unchanged": true,
+    "pooling_gate_geometry_and_forward_values_unchanged": true,
+    "budget_generations": 952,
+    "budget_teacher_forced_max": 900,
+    "budget_logit_max": 5,
+    "budget_native_first_valid_max": 252,
+    "budget_native_starts_max": 504,
+    "target_model_gpu_native_calls_by_worker": 0,
+    "real_extraction_stages_started": 0,
+    "installs_downloads_commits": 0,
+    "weights_hashes_recomputed_by_worker": false,
+    "source_hash_verification_scope": "Current R1 sources checked against the manifest. Wrapper has no parameter/data-write operation; no whole live-tree comparison was made."
+  },
+  "limits": [
+    "Tiny CPU equality tests establish the operational arithmetic check, not real-checkpoint steering efficacy or memory/timing measurements.",
+    "No R1 source, port, config, plan, review or runbook was modified. Root retains live-stage authority."
+  ],
+  "root_independent_cpu_tests": {
+    "passed": 12,
+    "seconds": 5.35,
+    "warnings": 1,
+    "runtime": "target GCAD runtime, pure pytest late fallback",
+    "evidence": "Root coordination receipt; no worker rerun."
+  }
+}
