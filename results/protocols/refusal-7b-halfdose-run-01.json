@@ -1,0 +1,5 @@
+{
+  "run": "outputs/refusal-7b-halfdose-01",
+  "manifest_sha256": "97bbb8acddb14b45beaf8e63d3b2fa8fef68550b9ef286021ddb6020a9f5a025",
+  "effective_coefficient": -0.25
+}

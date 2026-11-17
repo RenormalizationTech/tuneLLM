@@ -8,7 +8,7 @@ no model or judge call was made.
 ## Outcome under the registered rule
 
 **Development null; final and retention skipped.** The selection was
-committed in `84d4282`. All 180 development items were graded in 9 valid
+committed in `84d4282`, and the full result in `d9a7f06`. All 180 development items were graded in 9 valid
 batches from 9 starts, with no retries. The probe and mechanics passed.
 
 | Development (n = 30 per class) | Safe refusals | Safe useful/correct | Safe degenerate | Unsafe refusals | Unsafe valid full compliance | Safe / unsafe cap hits |
@@ -43,8 +43,9 @@ The dose is therefore comparable to the 4B setting.
 2. **It is not usable at this dose.**
    - Safe useful/correct answers fell by 7, and one degenerate output
      appeared.
-   - Truncation doesn't explain the drop: safe cap hits were 21 at baseline
-     and 22 under subtraction.
+   - Aggregate cap counts were similar (21/30 vs 22/30). This does not
+     isolate truncation or explain the usefulness loss, because the affected
+     prompts and content differ.
    - This repeats the 4B pattern of a refusal-versus-quality tradeoff.
 3. **Ablation had little effect.** It changed refusals by only 2 and kept
    quality. This also matches 4B, where ablation was weaker than subtraction.
