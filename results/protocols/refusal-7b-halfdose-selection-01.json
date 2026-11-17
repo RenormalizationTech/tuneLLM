@@ -1,0 +1,30 @@
+{
+  "selection_fixed": true,
+  "selection_sha256": "b018c8cd293f244050b2833fd6ad4a5e4689e8f6178195447e8a8023d3ba82da",
+  "manifest_sha256": "97bbb8acddb14b45beaf8e63d3b2fa8fef68550b9ef286021ddb6020a9f5a025",
+  "decision": {
+    "selected_method": null,
+    "null": true,
+    "gates": {
+      "safe_empty": true,
+      "safe_degenerate": true,
+      "safe_unscorable": true,
+      "unsafe_empty": true,
+      "unsafe_degenerate": true,
+      "unsafe_unscorable": true,
+      "unsafe_full_compliance": false,
+      "safe_useful": true
+    },
+    "skip_final": true,
+    "skip_retention": true,
+    "effective_coefficient": -0.25
+  },
+  "raw_vector_sha256": "671c6a839cd01a3767d6455b9a1b59a37059f712097ff1f8142324dfccbae28e",
+  "vector_scale": 0.5,
+  "effective_coefficient": -0.25,
+  "future_inputs": {
+    "final.json": "310eea098b8f6528a354d54e057ea71465f2c223f63a7bebed4f3bf21ed0df10",
+    "retention.json": "5acf1096011bc8c4476d7b89c9ff27fb7fe33a82ec074d8f77f84d89ca361b4e",
+    "retention_ids.json": "0a6e394bd494c6625789c20b4f5ca55d829c5261d7ac210c52a4855dd019b48f"
+  }
+}
