@@ -22,6 +22,16 @@ complete the initial project.
 
 ## Live execution update (2026-11-16)
 
+**Current authorized work:** [minimal 4B-to-7B refusal transfer](docs/refusal_7b_transfer_execution.md).
+The user requested the existing 4B workflow as baseline, adding only necessary
+model adaptations. The fixed protocol retains its data, methods and quality
+checks. The fixed transfer completed with a development null: subtraction reduced
+refusals but lost safe usefulness and introduced degeneration; projection removal
+missed the original mechanism-gain threshold. Final/retention were skipped.
+One weaker-dose calibration is under review; the initial result stays fixed. The
+earlier OR-Bench/canonical-grid expansion is cancelled and unused. This new
+authorization does not alter the historical closed headroom studies below.
+
 **Phase 1 complete:** the fixed12-arm/24-question joint GCAD study and measured
 guide are published on the existing 7B bank repository at
 `e1e56e6384214be873984f5fb9421ff6c61b9e85`. All34 payload hashes and both H1/H2

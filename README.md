@@ -17,7 +17,19 @@ a behavior evaluation do not make it physics fine-tuning. See the
 [project map](docs/project_tracks.md), [four-behavior references](docs/steering_reference.md)
 and [GCAD discussion](docs/gcad_and_combined_control.md).
 
-**Current status (2026-11-16):** the
+**Live work (2026-11-16):** the user selected a
+[minimal transfer of the completed 4B refusal workflow to Qwen2.5-7B](docs/refusal_7b_transfer_execution.md).
+It reuses the original pairs, splits, two interventions and quality checks,
+with a fixed relative-depth layer and newly extracted 7B direction. The fixed
+transfer is complete: subtraction reduced benign refusals 3/30→0/30 but safe
+usefulness fell 20/30→13/30 with one degeneration; projection removal preserved
+19/30 usefulness but missed the original mechanism-gain threshold. Neither
+qualified, so final and retention were skipped. Only one subtraction case was
+a paired useful benign rescue. A single weaker-dose calibration is under review;
+the original null remains unchanged.
+The cancelled OR-Bench/new-method expansion is unused.
+
+**Completed status (2026-11-16):** the
 [fixed-setting Qwen3-4B GCAD transfer](docs/qwen3_4b_fixed_transfer_closeout.md)
 is complete. All three style directions induced their traits, but none passed
 every quality gate. Profanity lost substantial coherence; sarcasm and
