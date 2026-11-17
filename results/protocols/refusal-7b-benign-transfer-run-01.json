@@ -1,0 +1,5 @@
+{
+  "run": "outputs/refusal-7b-benign-transfer-01",
+  "manifest_sha256": "36e3d78d37e4a127b3bd9f9d1a48b679c14fa1ce2c389a77f795b05d4310547e",
+  "new_generation_ceiling": 26
+}
