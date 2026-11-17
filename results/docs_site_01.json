@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-17",
+  "scope": "MkDocs rendering of existing docs, GitHub Pages workflow; no experiment changes",
+  "site_url": "https://renormalizationtech.github.io/tuneLLM/",
+  "status": "validated locally; awaiting GitHub Pages enablement and live deployment verification",
+  "validation": {
+    "focused_tests_passed": 7,
+    "strict_build": "passed",
+    "markdown_pages": 101,
+    "html_pages_including_404": 102,
+    "internal_links_checked": 14371,
+    "broken_internal_links": 0,
+    "existing_files_preserved": 103,
+    "all_markdown_in_navigation": true,
+    "browser": {
+      "desktop_pages_checked": [
+        "home",
+        "activation_steering_methods/",
+        "project_tracks/",
+        "model_workflow/",
+        "showcase/"
+      ],
+      "math_containers_on_methods": 35,
+      "real_mermaid_diagrams": 4,
+      "mermaid_error_svgs": 0,
+      "search_result_links": 228,
+      "mobile": {
+        "horizontal_overflow": false,
+        "nav_toggle_visible": true,
+        "archive_menu_visible": true,
+        "archive_menu_scrollable": true
+      },
+      "console_errors": [],
+      "asset_request_failures": [],
+      "note": "MkDocs live-reload polling aborts during page navigation are expected and excluded."
+    },
+    "sample_rewritten_github_links_checked": 5
+  },
+  "audit": {
+    "reviewer": "Claude via Herdr tunellm-advisor",
+    "verdict": "Approved publication conditional on final browser QA, which passed locally.",
+    "changes_addressed": [
+      "Separate build cancellation from deployment concurrency",
+      "Normalize Mermaid code wrappers and restore source on render failure"
+    ]
+  },
+  "local_evidence_dir": "outputs/docs-site-01/",
+  "limitations": [
+    "Live Pages URL still needs post-deployment verification.",
+    "MathJax and Mermaid require their pinned external CDN assets; Mermaid preserves source if unavailable.",
+    "Browser QA is sampled; static internal links are checked across all generated pages."
+  ]
+}

@@ -1,0 +1,45 @@
+site_name: tuneLLM research portfolio
+site_description: Quantization, LoRA/QLoRA and activation-steering experiments, with measured limitations.
+site_url: https://renormalizationtech.github.io/tuneLLM/
+repo_url: https://github.com/RenormalizationTech/tuneLLM
+repo_name: GitHub source
+edit_uri: blob/main/docs/
+docs_dir: docs
+site_dir: outputs/docs-site-01/site
+use_directory_urls: true
+theme:
+  name: mkdocs
+  navigation_depth: 3
+  highlightjs: false
+plugins:
+  - search
+hooks:
+  - scripts/docs_hooks.py
+markdown_extensions:
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+      inline_syntax: [round, dollar]
+      block_syntax: [square, dollar]
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+extra_css:
+  - stylesheets/portfolio.css
+extra_javascript:
+  - javascripts/math.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+  - javascripts/diagrams.js
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn

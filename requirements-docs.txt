@@ -1,0 +1,4 @@
+# Separate lightweight docs environment; no ML dependencies.
+mkdocs==1.6.1
+pymdown-extensions==10.16.1
+pytest==8.4.2

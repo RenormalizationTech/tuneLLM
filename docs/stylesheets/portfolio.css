@@ -1,0 +1,13 @@
+body { line-height: 1.65; }
+h1, h2, h3, h4 { line-height: 1.25; scroll-margin-top: 5rem; }
+pre { overflow-x: auto; }
+img, svg { max-width: 100%; height: auto; }
+.table { display: block; overflow-x: auto; }
+.arithmatex { overflow-x: auto; }
+.mermaid { overflow-x: auto; margin: 1.5rem 0; }
+.local-only-reference { font-size: .85em; font-style: italic; }
+.dropdown-menu { max-height: 70vh; overflow-y: auto; }
+@media (max-width: 767px) {
+  h1 { font-size: 1.9rem; }
+  .container { padding-inline: 1rem; }
+}
