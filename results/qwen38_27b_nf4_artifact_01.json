@@ -1,0 +1,42 @@
+{
+  "status": "saved_local_nf4_verified",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "upstream_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "loader": "Qwen3_5ForCausalLM",
+  "vision_modules_loaded": false,
+  "files": {
+    "chat_template.jinja": {
+      "bytes": 9004,
+      "sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375"
+    },
+    "config.json": {
+      "bytes": 3189,
+      "sha256": "1fbd2cdd1ecb38af8cd56a6dc1aff8b853e80b19a30206f97efee9675802afb7"
+    },
+    "generation_config.json": {
+      "bytes": 214,
+      "sha256": "1580cfd94bd7542aff2e93bff1addca01d4cda5c2b1bfba637bf7741afde0212"
+    },
+    "model.safetensors": {
+      "bytes": 17653667512,
+      "sha256": "3b22a35844f3fd9bd66e98d3b20ab294b9452293f37d0f3cbc5c5b389c197ce2"
+    },
+    "smoke_origin.json": {
+      "bytes": 223,
+      "sha256": "41305937a7413c851e8da693d4d029189eded5c6afa402c24c23fd984b0bfb44"
+    },
+    "tokenizer.json": {
+      "bytes": 19989339,
+      "sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f"
+    },
+    "tokenizer_config.json": {
+      "bytes": 2484,
+      "sha256": "27c9bb9dbc425fafea54d21a57aab11d0ad3cd1a206757147d73852ab3f99734"
+    }
+  },
+  "total_bytes": 17673671965,
+  "weight_bytes": 17653667512,
+  "smoke_result": "results/qwen38_27b_nf4_smoke_02.json",
+  "separate_process_reload_tokens_match": true,
+  "uploaded": false
+}

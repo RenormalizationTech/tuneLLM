@@ -78,9 +78,26 @@ NF4 training memory and kernel/Transformers compatibility still require a smoke
 check, not an assumption that 4B/7B code transfers unchanged. Use an isolated
 environment; preserve existing environments and results.
 
-Complete current publication/documentation first. Register exact data splits,
-software, resource cap and evaluation settings before any 27B training or
-generation. No 27B weights have been downloaded for this planning step.
+Current publication/documentation is complete. The user then selected the
+official checkpoint in Transformers NF4, text-only. Its source files were
+downloaded and SHA-verified. An isolated environment and a bounded two-prompt
+functional smoke completed, with 496 Linear4bit modules, no missing language
+weights and no vision modules loaded. Stored NF4 reload in a separate process
+reproduced both generated token sequences exactly. Saved weights: 17.65 GB;
+peak PyTorch allocated memory: 18.02 GB on one A6000, not total VRAM.
+
+The strict cached/full-prefix allclose diagnostic failed at unchanged
+rtol 0.02 / atol 0.05 (max absolute logit difference 0.125). Finite logits and
+matching one-step argmax do not establish cache correctness/equivalence.
+The first numerical failure and the follow-up functional result are retained;
+the latter is explicitly `complete_with_cache_difference`. Later compared arms
+must use the same cached generation path and batch size. No threshold was
+loosened or optimized kernels installed to make this diagnostic pass.
+See [the execution record](../results/qwen38_27b_nf4_execution_01.json) and
+[functional result](../results/qwen38_27b_nf4_smoke_02.json). The local NF4
+artifact is not uploaded. No broad quality benchmark, sarcasm extraction or
+QLoRA training has run. Register their exact data splits, software, resource
+cap and evaluation settings before execution.
 This latest scope takes precedence over older larger-model/pending-evasion
 language below; historical experiments remain unchanged.
 

@@ -1,0 +1,207 @@
+{
+  "status": "complete_with_cache_difference",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "python": "3.13.3 (main, May 23 2026, 16:52:01) [GCC 9.4.0]",
+  "packages": {
+    "torch": "2.12.0",
+    "transformers": "5.23.0",
+    "accelerate": "1.12.0",
+    "bitsandbytes": "0.49.2",
+    "huggingface_hub": "2.4.0"
+  },
+  "torch_cuda_build": "13.0",
+  "physical_gpu": "0",
+  "gpu_name": "NVIDIA RTX A6000",
+  "source_inspection": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "source_architecture": [
+      "Qwen3_5ForConditionalGeneration"
+    ],
+    "installed_versions": {
+      "torch": "2.12.0",
+      "transformers": "5.23.0",
+      "accelerate": "1.12.0",
+      "bitsandbytes": "0.49.2",
+      "huggingface_hub": "2.4.0"
+    },
+    "text_layers": 64,
+    "hidden_size": 5120,
+    "layer_types": {
+      "linear_attention": 48,
+      "full_attention": 16
+    },
+    "official_support": {
+      "available": true,
+      "loader": "Qwen3_5ForCausalLM",
+      "config_class": "Qwen3_5TextConfig",
+      "source_sha256": {
+        "outputs/qwen38-27b-nf4-01/env/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py": "1a475c45d900e0bfb06b9b245257d7f3234fd247474fcbd3363b03430e504a68",
+        "outputs/qwen38-27b-nf4-01/env/lib/python3.13/site-packages/transformers/models/qwen3_5/configuration_qwen3_5.py": "a2a7c5c2f193dec6bbad0c5dcd2536dfba2eba14259814b9dc0438afe01969d9",
+        "outputs/qwen38-27b-nf4-01/env/lib/python3.13/site-packages/transformers/conversion_mapping.py": "e877d1729259a0c51859d653b4a158d7671c0caefe78db3e0e2c8579fd72d1bd"
+      },
+      "official_key_mapping": "model.language_model.* -> model.* via PrefixChange; expected vision/MTP skipped",
+      "documentation": "https://huggingface.co/docs/transformers/main/en/model_doc/qwen3_5#usage-tips-and-notes"
+    },
+    "snapshot": ".hf/hub/models--Qwen--Qwen3.8-27B/snapshots/37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "source_key_counts": {
+      "other": 1,
+      "language": 850,
+      "vision": 333,
+      "mtp": 15
+    },
+    "shards": 18,
+    "missing_shards": [],
+    "inspection_only": true,
+    "model_loaded": false
+  },
+  "load_saved": null,
+  "quantization_config_supplied": true,
+  "optional_kernels": {
+    "fla": false,
+    "causal_conv1d": false,
+    "kernels": false
+  },
+  "native_positions": true,
+  "batch_size": 1,
+  "enable_thinking": false,
+  "source_record": {
+    "path": "outputs/qwen38-27b-nf4-01/source.json",
+    "sha256": "0998f267235db901d37ebc2d5b1f18a7efd93901d39ef89fbdde7a7b423e1529"
+  },
+  "load_seconds": 16.16564535489306,
+  "loading_info": {
+    "missing_keys": [],
+    "mismatched_keys": [],
+    "expected_skipped_vision_mtp": [],
+    "note": "official ignored vision/MTP keys may be absent from loading_info; source-key counts are recorded separately"
+  },
+  "module_inventory": {
+    "file": "outputs/qwen38-27b-nf4-01/smoke-03/modules.json",
+    "sha256": "fc2d8d76465e840788c8a5ca852ba8cc05a0ad3669699fdc539bc3089e8751f9",
+    "linear4bit_count": 496,
+    "parameter_dtype_counts": {
+      "torch.bfloat16": 355,
+      "torch.uint8": 496
+    },
+    "native_dtype_policy": "No custom casts of A_log/dt_bias/conv; recorded exactly as official loader produced."
+  },
+  "native_token_ids": {
+    "tokenizer_eos": 248046,
+    "tokenizer_pad": 248044,
+    "generation_eos": [
+      248046,
+      248044
+    ],
+    "generation_pad": 248044
+  },
+  "generations": [
+    {
+      "prompt": "What is 2 + 2? Answer with only the number.",
+      "input_ids": [
+        248045,
+        846,
+        198,
+        3710,
+        369,
+        220,
+        17,
+        478,
+        220,
+        17,
+        30,
+        21134,
+        440,
+        1132,
+        279,
+        1324,
+        13,
+        248046,
+        198,
+        248045,
+        74455,
+        198,
+        248068,
+        271,
+        248069,
+        271
+      ],
+      "rendered_sha256": "01b602ed0bc350c41f1a7dfedc71e10fff34ae251ffa85b4bdbb2b76e3a2a110",
+      "generated_ids": [
+        19,
+        248046
+      ],
+      "text": "4",
+      "seconds": 0.5153153510764241,
+      "finite_lm_head_calls": 2
+    },
+    {
+      "prompt": "Name the capital of France in one short sentence.",
+      "input_ids": [
+        248045,
+        846,
+        198,
+        657,
+        279,
+        6511,
+        314,
+        9338,
+        303,
+        799,
+        2716,
+        11316,
+        13,
+        248046,
+        198,
+        248045,
+        74455,
+        198,
+        248068,
+        271,
+        248069,
+        271
+      ],
+      "rendered_sha256": "3049428a9034952c9c79b089c34711d3b5d4680829af7710d4143b707ba44c14",
+      "generated_ids": [
+        760,
+        6511,
+        314,
+        9338,
+        369,
+        11751,
+        13,
+        248046
+      ],
+      "text": "The capital of France is Paris.",
+      "seconds": 1.778759699780494,
+      "finite_lm_head_calls": 8
+    }
+  ],
+  "hybrid_cache_check": {
+    "finite": true,
+    "allclose": false,
+    "max_abs_delta": 0.125,
+    "rtol": 0.02,
+    "atol": 0.05,
+    "cache_class": "DynamicCache",
+    "next_token_id": 19,
+    "decode_steps_checked": 1,
+    "cached_top1": 248046,
+    "full_prefix_top1": 248046,
+    "argmax_matches": true
+  },
+  "memory": {
+    "allocated_bytes": 17678505472,
+    "reserved_bytes": 18140364800,
+    "peak_allocated_bytes": 18022078464,
+    "peak_reserved_bytes": 18140364800,
+    "model_footprint_bytes": 17266162944
+  },
+  "saved_nf4": "artifacts/qwen38-27b-nf4-01",
+  "separate_process_reload": {
+    "result": "outputs/qwen38-27b-nf4-01/smoke-03/reload-summary.json",
+    "exact_tokens": true
+  },
+  "elapsed_seconds": 85.3403473328799
+}

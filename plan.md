@@ -10,7 +10,11 @@ selected publication of the 7B refusal demonstration and GitHub/HF documentation
 followed by a bounded **Qwen3.8-27B quantization, sarcasm-steering and QLoRA**
 extension. Sarcasm, not refusal, is the 27B behavioral target. Reuse the existing
 physics corpus for one short QLoRA exercise; verify hybrid-model compatibility
-and memory first. No 27B compute is started by this planning update.
+and memory first. The subsequent official text-only NF4 load/save/reload smoke
+completed on one A6000 with exact token replay on two prompts. A strict
+cached/full-prefix numerical check failed and remains a documented caveat;
+sarcasm, quality benchmarking and QLoRA training have not started. See the
+[27B execution record](results/qwen38_27b_nf4_execution_01.json).
 The next phase is portfolio presentation and reproduction guidance, as recorded
 in [the current project map](docs/project_tracks.md#portfolio-objective-and-next-steps-2026-11-16).
 This clarification takes precedence over historical expansion plans below;

@@ -86,6 +86,7 @@ environment for every track.
 | QLoRA | [Adapter reproduction guide](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/blob/main/REPRODUCE.md) and [training code](scripts/physics_train.py) |
 | Refusal | Released `refusal_runtime.py` CLI; [original runbook](scripts/refusal_7b_benign_transfer_runbook.md) for historical context |
 | Traits | Released `runtime.example` and joint guide; [sarcasm workflow](docs/sarcasm_controller_workflow.md) |
+| 27B NF4 smoke | [Pinned profile](configs/qwen38_27b_nf4.json) and [local-only runner](scripts/qwen38_nf4_smoke.py); `--inspect` performs a CPU-only check before explicit GPU execution. |
 
 For the original local 4B baseline, after the setup in
 [the execution notes](docs/execution.md):
@@ -101,7 +102,7 @@ artifacts; they are not instructions to overwrite or repeat frozen studies.
 The public test fixtures retain their historical held-out status only for the
 reported runs. Future generalization studies need independent data.
 
-## Next: a bounded Qwen3.8-27B extension
+## Qwen3.8-27B extension
 
 The selected larger-model direction is **sarcasm steering, quantization and one
 QLoRA exercise**. Reuse the existing methods, corpus and evaluation structure
@@ -109,9 +110,25 @@ where compatible; verify architecture/runtime support and resource needs first.
 The official BF16 checkpoint has approximately 55.6 GB of weight files; an
 approximately 18 GB download refers to a quantized representation. Quantized
 inference and QLoRA can use a smaller-memory path than the BF16 reference.
-Report each intervention against its own baseline. These are planned tasks,
-not completed results. ARA, broad parameter sweeps, joint-controller retuning
-and production deployment are deferred.
+The initial **text-only Transformers NF4 load/save/reload smoke is complete**:
+496 quantized linear layers, no missing language weights, no loaded vision
+modules, and exact generated-token replay after a fresh-process reload on two
+short prompts. Saved weights occupy **17.65 GB (16.44 GiB)**; peak PyTorch allocated memory
+was **18.02 GB (16.78 GiB)** for this short run, not total device memory or a long-context
+budget. See the [execution record](results/qwen38_27b_nf4_execution_01.json),
+[smoke result](results/qwen38_27b_nf4_smoke_02.json) and
+[local artifact hashes](results/qwen38_27b_nf4_artifact_01.json).
+
+A strict cached/full-prefix numerical check failed on **one decode step**
+(maximum logit difference 0.125), despite finite logits and matching argmax. Its tolerance and
+failed result are preserved. All later compared arms must use the same cached
+generation path and batch size; cache equivalence is unestablished. The smoke
+used reference PyTorch kernels and does not measure broad quality or optimized
+throughput. The 27B NF4 checkpoint is local, not uploaded.
+
+The small quality screen, sarcasm transfer and physics QLoRA remain planned.
+Report each intervention against its own baseline. ARA, broad parameter sweeps,
+joint-controller retuning and production deployment are deferred.
 
 See [the current roadmap](docs/project_tracks.md), [model workflow](docs/model_workflow.md)
 and [release index](releases/README.md). Older protocol documents remain as
