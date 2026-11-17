@@ -1,9 +1,15 @@
 # Local artifacts and workspace maintenance
 
-Current policy, reviewed with Claude on 2026-11-14. This repository contains
-roughly 105 GB of local files; most are useful model assets and experiment
-artifacts rather than temporary files. Git tracks source, protocols and compact
-reports. `.gitignore` excludes large artifacts, raw outputs and caches.
+Retention guidance, reviewed with Claude on 2026-11-14. The storage estimate
+was roughly 105 GB **on that date**, before later downloads and experiments;
+it is historical, not current disk usage. Most local files are model assets and
+experiment evidence. Git tracks source, protocols and compact reports;
+`.gitignore` excludes large artifacts, raw outputs and caches.
+
+For the current folder map and runnable entry points, see the
+[repository overview](../README.md#repository-layout) and
+[release index](../releases/README.md). The dated cleanup receipts below describe
+completed actions, not new cleanup instructions.
 
 | Location | Purpose | Retention |
 | --- | --- | --- |

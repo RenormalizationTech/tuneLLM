@@ -148,3 +148,28 @@ function element(source) {
 '''
     root = Path(__file__).resolve().parents[1]
     subprocess.run([node, "-e", harness], cwd=root, capture_output=True, text=True, check=True)
+
+
+def test_release_catalog_matches_cards_receipts_and_visible_index():
+    import hashlib
+    import json
+    root = Path(__file__).resolve().parents[1]
+    catalog = json.loads((root/"releases/catalog.json").read_text())
+    receipt = json.loads((root/"results/huggingface_card_polish_02.json").read_text())
+    published = {row["repo_id"]: row for row in receipt["repositories"]}
+    index = (root/"releases/README.md").read_text()
+    rows = catalog["public_releases"]
+    assert {row["repo_id"] for row in rows} == set(published)
+    assert len(rows) == len(published)
+    for row in rows:
+        expected = published[row["repo_id"]]
+        assert row["revision"] == expected["revision"] and row["revision"] in index
+        card = root/row["card_path"]
+        assert hashlib.sha256(card.read_bytes()).hexdigest() == row["card_sha256"] == expected["files"]["README.md"]["sha256"]
+        assert row["url"] in index and f'{card.parent.name}/README.md' in index
+        for field in ("result_path", "publication_receipt", "verification_receipt"):
+            assert (root/row[field]).is_file(), row[field]
+        assert all((root/p).is_file() for p in row["historical_metadata_paths"])
+    for row in catalog["retired_releases"]:
+        assert row["status"] == "deleted_after_verified_archival"
+        assert (root/row["card_path"]).is_file()

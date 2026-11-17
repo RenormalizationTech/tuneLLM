@@ -155,6 +155,23 @@ and [release index](releases/README.md). Older protocol documents remain as
 records of the experiments as registered; current priorities supersede their
 pending-expansion language.
 
+## Repository layout
+
+| Location | Purpose |
+| --- | --- |
+| [docs/](docs/index.md) | Current guides and historical experiment records; [project status](docs/project_tracks.md) is authoritative. |
+| [scripts/](scripts/README.md) | Runnable entry points, shared modules and historical runbooks. |
+| [configs/](configs/README.md) / [evaluation/](evaluation/README.md) | Pinned experiment settings, scoring code, prompts and rubrics. |
+| [results/](results/README.md) | Compact outcomes, registered protocol bindings, reviews and publication receipts. |
+| [releases/](releases/README.md) | Five current HF card mirrors, a release catalog and historical metadata; model weights are not stored here. |
+| `artifacts/`, `outputs/`, `.hf/` | Ignored local models/release payloads, raw run evidence and download caches. |
+| `data/` | Mostly ignored corpora; selected small steering fixtures and license records remain tracked. |
+| [tests/](tests/conftest.py), `requirements*.txt` | Portable CPU checks plus opt-in research checks, and separate environment profiles. |
+
+Historical file paths are retained where protocols and source hashes depend on
+them. [plan.md](plan.md) and [release history](releases/HISTORY.md) are context,
+not current task lists. Start new work from the roadmap and reproduction guide.
+
 ## Implementation and attribution
 
 **Project ownership:** the project owner directs the research questions,

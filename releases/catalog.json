@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-17T06:05:55.384615+00:00",
+  "scope": "Current publication index, not an upload or model-quality certificate",
+  "storage": {
+    "tracked": "Card mirrors and selected historical metadata under releases/",
+    "ignored": "Local payloads under artifacts/releases/; caches under .hf/; snapshots and full verification under outputs/",
+    "manifest_note": "Release-time manifests describe original metadata. Current card hashes are recorded here and in results/huggingface_card_polish_02.json. Existing manifests were not rewritten."
+  },
+  "public_releases": [
+    {
+      "label": "4B GGUF",
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+      "status": "public",
+      "revision": "77de6c6ef052fca13675d6b8a47ff3afc81008c8",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+      "card_path": "releases/Qwen3-4B-tuneLLM-GGUF/README.md",
+      "card_sha256": "d6f52481b2df0333567d36a63442d40505cf8ed7898d2eeaedcb5dc06bb12e42",
+      "local_payload_path": "artifacts/releases/Qwen3-4B-tuneLLM-GGUF",
+      "published_file_count": 12,
+      "published_inventory_sha256": "43f514bb94449776cee99bec2207930ab568cb5f4484cf3a6c73833a9d038b06",
+      "verification_receipt": "results/repository_cleanup_01.json",
+      "result_path": "results/benchmark_summary.json",
+      "publication_receipt": "results/huggingface_publication.json",
+      "historical_metadata_paths": [
+        "releases/Qwen3-4B-tuneLLM-GGUF/LICENSE",
+        "releases/Qwen3-4B-tuneLLM-GGUF/REPRODUCE.md",
+        "releases/Qwen3-4B-tuneLLM-GGUF/environment.lock.txt",
+        "releases/Qwen3-4B-tuneLLM-GGUF/evaluation.json",
+        "releases/Qwen3-4B-tuneLLM-GGUF/provenance.json"
+      ]
+    },
+    {
+      "label": "4B NF4 base",
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
+      "status": "public",
+      "revision": "670ac49990add1639cd38ba0e858bdda2d9b6fb9",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
+      "card_path": "releases/Qwen3-4B-tuneLLM-NF4/README.md",
+      "card_sha256": "9fd0345d805573bcea7c4dd5a4df852ef57225ec4df4d6c4fd54813346cbd305",
+      "local_payload_path": "artifacts/releases/Qwen3-4B-tuneLLM-NF4",
+      "published_file_count": 18,
+      "published_inventory_sha256": "5e14e0b406e400bf7ad6fb58859f8a205e35f25c430bf6a5162ee4d452ba462a",
+      "verification_receipt": "results/repository_cleanup_01.json",
+      "result_path": "results/nf4_huggingface_publication.json",
+      "publication_receipt": "results/nf4_huggingface_publication.json",
+      "historical_metadata_paths": [
+        "releases/Qwen3-4B-tuneLLM-NF4/export_manifest.json"
+      ]
+    },
+    {
+      "label": "Physics QLoRA",
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA",
+      "status": "public",
+      "revision": "3ac6a47916a86d334a7548a3d678c2fecd1c9dd7",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA",
+      "card_path": "releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/README.md",
+      "card_sha256": "3bf4e540389caefc21f61050f1a36f08f0ace968a0e7d97b6a94eef993ba46c9",
+      "local_payload_path": "artifacts/releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA",
+      "published_file_count": 51,
+      "published_inventory_sha256": "b55ca0deddc8954f3a6b7e1c8da8ab418dca3f66734d36e15688e04ba6901604",
+      "verification_receipt": "results/repository_cleanup_01.json",
+      "result_path": "results/physics_prl_final.json",
+      "publication_receipt": "results/physics_huggingface_publication.json",
+      "historical_metadata_paths": [
+        "releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/export_manifest.json"
+      ]
+    },
+    {
+      "label": "7B trait controls",
+      "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+      "status": "public",
+      "revision": "a6c49acf9ec12cac9bb6438db26604e5ca45cc74",
+      "url": "https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+      "card_path": "releases/qwen2.5-7b-gcad-steering-controls/README.md",
+      "card_sha256": "6491595899aaf90c44f2ee139ff688f2b53f091efbb6ab6621f21727c8e0397d",
+      "local_payload_path": "artifacts/releases/qwen2.5-7b-gcad-steering-controls",
+      "published_file_count": 35,
+      "published_inventory_sha256": "2987d520f966c3142e0e9ae3e9ab15466b6d01048eeeba0d4750f073d9fe430c",
+      "verification_receipt": "results/repository_cleanup_01.json",
+      "result_path": "results/steering_publication_joint_04.json",
+      "publication_receipt": "results/steering_publication_joint_04.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "7B refusal experiment",
+      "repo_id": "RenormalizationTech/qwen2.5-7b-refusal-steering-experiment",
+      "status": "public",
+      "revision": "b9649ef186570f6159fbe95011024fa04655a89e",
+      "url": "https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment",
+      "card_path": "releases/qwen2.5-7b-refusal-steering-experiment/README.md",
+      "card_sha256": "687545458548d695fe3b286b953c7a4c9d6f9eb267309f83207b0b2a397c8cdb",
+      "local_payload_path": "artifacts/releases/qwen2.5-7b-refusal-steering-experiment",
+      "published_file_count": 17,
+      "published_inventory_sha256": "48d0d22cb122baff55afd9294ee3a629af8c4c4652dc144034f1616e3d88ef95",
+      "verification_receipt": "results/repository_cleanup_01.json",
+      "result_path": "results/refusal_7b_benign_transfer_01.json",
+      "publication_receipt": "results/refusal_7b_huggingface_publication_01.json",
+      "historical_metadata_paths": []
+    }
+  ],
+  "retired_releases": [
+    {
+      "label": "GSM8K QLoRA learning experiment",
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GSM8K-QLoRA",
+      "status": "deleted_after_verified_archival",
+      "historical_revision": "6a29265f7dc99577777e412fa76659d8b734fdea",
+      "card_path": "releases/Qwen3-4B-tuneLLM-GSM8K-QLoRA/README.md",
+      "local_payload_path": "artifacts/releases/Qwen3-4B-tuneLLM-GSM8K-QLoRA",
+      "revision_archive_path": "outputs/hf-transition-20261116-01/gsm8k-archive",
+      "result_path": "results/qlora_real_01.json",
+      "publication_receipt": "results/hf_visibility_transition_01.json"
+    }
+  ],
+  "inventory_digest_recipe": {
+    "payload": "Map of each published relative path to {\"bytes\": integer_size, \"sha256\": lowercase_file_sha256}; exclude local cache/tool extras and mtimes.",
+    "serialization": "json.dumps(payload, sort_keys=True, separators=(\",\", \":\"), ensure_ascii=True).encode(\"utf-8\")",
+    "digest": "hashlib.sha256(serialized_bytes).hexdigest(); no trailing newline"
+  }
+}

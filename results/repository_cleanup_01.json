@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-17",
+  "scope": "Concise documentation and directory indexes; pinned local release metadata reconciliation",
+  "before_commit": "20720baabf0511a3dac19a3464728303929fba80",
+  "website": {
+    "url": "https://renormalizationtech.github.io/tuneLLM/",
+    "verified_http_status": 200,
+    "prior_deployment_run": "https://github.com/RenormalizationTech/tuneLLM/actions/runs/44026593464",
+    "prior_deployment_conclusion": "success"
+  },
+  "decisions": {
+    "current_guidance": "Concise docs/project_tracks.md and releases/README.md",
+    "historical_copies": {
+      "docs/project_tracks_history.md": "36b0d2a97ba1134b4770e7d2a529b5806e9cb302d8f4b196126d6631339cad6f",
+      "releases/HISTORY.md": "788c734ab1388e10572a809e18e1318250e0723374b002cb8161e6edfd44a89e"
+    },
+    "retained_paths": "Scripts, configs, fixtures, result records, per-release folders and local model assets retained to preserve bindings",
+    "outdated_visibility_instructions": "physics_release_requirements.md source unchanged; moved to archive navigation for the historical banner",
+    "storage_estimate": "105 GB explicitly qualified as 2026-11-14 historical estimate"
+  },
+  "local_payload_reconciliation": {
+    "remote_writes": 0,
+    "changed_files": [
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-GGUF/.gitattributes",
+        "before": null,
+        "after": {
+          "bytes": 1686,
+          "sha256": "fa1e0310b9bb326d9d160c12b3816eecfab1b5c613329e3c6bf8ca731876a892",
+          "git_blob_sha1": "a4f487ded1351f5c5b574468cc952401f1d39e68"
+        }
+      },
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-GGUF/README.md",
+        "before": {
+          "bytes": 4412,
+          "sha256": "f2a9d1434fba5e25e823e78a7ce4561220335de539f500b99ca47140d3fb0ece",
+          "git_blob_sha1": "87d4407234070eb5c438f507de9929ac0ebe80c3"
+        },
+        "after": {
+          "bytes": 8749,
+          "sha256": "d6f52481b2df0333567d36a63442d40505cf8ed7898d2eeaedcb5dc06bb12e42",
+          "git_blob_sha1": "205a58acf767a84cd016ec29e9c370fe180239bb"
+        }
+      },
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-GGUF/benchmark_summary.json",
+        "before": null,
+        "after": {
+          "bytes": 9999,
+          "sha256": "fac8e5a1588cbb6486bf66852a2a48c050375a4c55b07b67786d6b98e72f168d",
+          "git_blob_sha1": "1be5d26c7fb3bb3b229b5b24d7dbd0461e40df94"
+        }
+      },
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-NF4/.gitattributes",
+        "before": null,
+        "after": {
+          "bytes": 1570,
+          "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+          "git_blob_sha1": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+        }
+      },
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-NF4/README.md",
+        "before": {
+          "bytes": 2178,
+          "sha256": "d31fc24281d388d9c36260ccd861bdebaaa0ca067db99d4ae987e5089c111643",
+          "git_blob_sha1": "a9b22c5b0b8016c5cc03ec2518d1cd0fea0ed9a4"
+        },
+        "after": {
+          "bytes": 5705,
+          "sha256": "9fd0345d805573bcea7c4dd5a4df852ef57225ec4df4d6c4fd54813346cbd305",
+          "git_blob_sha1": "534a27e2bf4b22eaa8b1dcf36d8749505d79e039"
+        }
+      },
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-NF4/benchmark_summary.json",
+        "before": null,
+        "after": {
+          "bytes": 7399,
+          "sha256": "30cc9e5c17c7b88f6e506c31b3a71f7cf30109653cc214dfe6340db52342c535",
+          "git_blob_sha1": "2840988945969ab3eca03372bcbe9ea0869d420b"
+        }
+      },
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/.gitattributes",
+        "before": null,
+        "after": {
+          "bytes": 1570,
+          "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+          "git_blob_sha1": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+        }
+      },
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/README.md",
+        "before": {
+          "bytes": 7467,
+          "sha256": "6faf7bf518551385fec320cf8f8ceb929a99747f0dc374271f27cd9ad61eac9c",
+          "git_blob_sha1": "3e547f7af00e430da90f660fd3077208b162c415"
+        },
+        "after": {
+          "bytes": 10832,
+          "sha256": "3bf4e540389caefc21f61050f1a36f08f0ace968a0e7d97b6a94eef993ba46c9",
+          "git_blob_sha1": "b18f44e4875ce278b84dd64d4953e6d238610b0a"
+        }
+      },
+      {
+        "path": "artifacts/releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/benchmark_summary.json",
+        "before": null,
+        "after": {
+          "bytes": 14219,
+          "sha256": "8f608525a4db6a3d729a0e68fb4b778e7dade95394477a6ec9c8ef2683a41c06",
+          "git_blob_sha1": "2f61dd22056820fb716aa60f59f990e90c723ab1"
+        }
+      }
+    ],
+    "metadata_backup_dir": "outputs/repository-cleanup-01/metadata-backups",
+    "verification_method": "Pinned anonymous HF tree: streaming local SHA256 versus LFS SHA256; regular files verified against Git blob OID, with local SHA256 recorded. Repeated after sync.",
+    "published_files_verified": 133,
+    "inventories": [
+      {
+        "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+        "revision": "77de6c6ef052fca13675d6b8a47ff3afc81008c8",
+        "file_count": 12,
+        "inventory_sha256": "43f514bb94449776cee99bec2207930ab568cb5f4484cf3a6c73833a9d038b06"
+      },
+      {
+        "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
+        "revision": "670ac49990add1639cd38ba0e858bdda2d9b6fb9",
+        "file_count": 18,
+        "inventory_sha256": "5e14e0b406e400bf7ad6fb58859f8a205e35f25c430bf6a5162ee4d452ba462a"
+      },
+      {
+        "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA",
+        "revision": "3ac6a47916a86d334a7548a3d678c2fecd1c9dd7",
+        "file_count": 51,
+        "inventory_sha256": "b55ca0deddc8954f3a6b7e1c8da8ab418dca3f66734d36e15688e04ba6901604"
+      },
+      {
+        "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+        "revision": "a6c49acf9ec12cac9bb6438db26604e5ca45cc74",
+        "file_count": 35,
+        "inventory_sha256": "2987d520f966c3142e0e9ae3e9ab15466b6d01048eeeba0d4750f073d9fe430c"
+      },
+      {
+        "repo_id": "RenormalizationTech/qwen2.5-7b-refusal-steering-experiment",
+        "revision": "b9649ef186570f6159fbe95011024fa04655a89e",
+        "file_count": 17,
+        "inventory_sha256": "48d0d22cb122baff55afd9294ee3a629af8c4c4652dc144034f1616e3d88ef95"
+      }
+    ],
+    "all_other_published_file_hashes_and_mtimes_unchanged": true,
+    "inode_comparison": "Not captured before sync; no inode-preservation claim. Metadata-only atomic replacements avoid writing through hardlinks.",
+    "original_manifests": "Unchanged; release-time README hashes are historical. Current card identities in catalog and HF-card-polish receipt.",
+    "full_verification_local": "outputs/repository-cleanup-01/verified-after-sync.json",
+    "inventory_digest_recipe": {
+      "payload": "Map of each published relative path to {\"bytes\": integer_size, \"sha256\": lowercase_file_sha256}; exclude local cache/tool extras and mtimes.",
+      "serialization": "json.dumps(payload, sort_keys=True, separators=(\",\", \":\"), ensure_ascii=True).encode(\"utf-8\")",
+      "digest": "hashlib.sha256(serialized_bytes).hexdigest(); no trailing newline"
+    }
+  },
+  "experimental_changes": 0,
+  "validation": {
+    "focused_docs_and_catalog_tests_passed": 8,
+    "strict_build": "passed",
+    "markdown_pages": 102,
+    "html_pages_including_404": 103,
+    "internal_links_checked": 14625,
+    "broken_internal_links": 0,
+    "all_original_paths_exist": true,
+    "existing_docs_modified": [
+      "docs/project_tracks.md",
+      "docs/workspace_maintenance.md"
+    ],
+    "history_copies_byte_identical": true,
+    "scientific_scripts_configs_fixtures_and_prior_results_unchanged": true,
+    "guide_local_link_paths_checked": 102
+  },
+  "claude_audit": {
+    "design": "Recommended concise current indexes, preserved histories, stable scientific paths and nine-file metadata sync",
+    "final": "Approved for commit after documenting the exact inventory digest recipe and restaging the completed validation receipt; both addressed."
+  }
+}

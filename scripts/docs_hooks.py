@@ -20,7 +20,7 @@ REPO = "https://github.com/RenormalizationTech/tuneLLM"
 CURRENT = {
     "Start here": ["index.md", "showcase.md", "reproduce.md", "website.md", "project_tracks.md", "references.md"],
     "Quantization": ["benchmark_summary.md", "execution.md"],
-    "LoRA and QLoRA": ["physics_prl_execution.md", "physics_prl_protocol.md", "physics_release_requirements.md", "model_workflow.md"],
+    "LoRA and QLoRA": ["physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
     "Refusal steering": ["refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],
     "Trait steering": ["steering_reference.md", "profanity_controller_workflow.md", "sarcasm_controller_workflow.md", "gcad_and_combined_control.md", "persona_literature_workflow.md"],
 }

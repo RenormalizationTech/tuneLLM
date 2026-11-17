@@ -1,3 +1,7 @@
+> **Historical planning log.** Earlier priorities and checklists below are retained
+> for context. Use the [current roadmap](docs/project_tracks.md),
+> [reproduction guide](docs/reproduce.md) and [release index](releases/README.md).
+
 # tuneLLM: LLM Quantization and Fine-Tuning Learning Lab
 
 ## 1. Project Objective
