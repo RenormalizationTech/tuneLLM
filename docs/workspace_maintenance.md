@@ -6,6 +6,9 @@ it is historical, not current disk usage. Most local files are model assets and
 experiment evidence. Git tracks source, protocols and compact reports;
 `.gitignore` excludes large artifacts, raw outputs and caches.
 
+The [file organization and storage rules](file_organization.md) are the current
+policy for new files, release mirrors and cleanup.
+
 For the current folder map and runnable entry points, see the
 [repository overview](../README.md#repository-layout) and
 [release index](../releases/README.md). The dated cleanup receipts below describe

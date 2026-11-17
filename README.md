@@ -157,6 +157,9 @@ pending-expansion language.
 
 ## Repository layout
 
+Use the [file organization and storage rules](docs/file_organization.md) when
+adding runs, results, model assets or releases.
+
 | Location | Purpose |
 | --- | --- |
 | [docs/](docs/index.md) | Current guides and historical experiment records; [project status](docs/project_tracks.md) is authoritative. |

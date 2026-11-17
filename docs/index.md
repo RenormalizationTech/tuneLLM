@@ -36,6 +36,7 @@ separate result. [Figure data, interpretation and examples](showcase.md).
 3. [Four-behavior evidence](steering_reference.md): model-specific results, controls and limits.
 4. [Reproduce](reproduce.md): portable CPU tests, pinned inference bundles and separate environments.
 5. [Methods and references](references.md): published approaches and source attribution.
+6. [File organization and storage rules](file_organization.md): where new files belong and how history is retained.
 
 ## Published artifacts
 
