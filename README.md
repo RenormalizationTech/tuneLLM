@@ -25,8 +25,11 @@ transfer is complete: subtraction reduced benign refusals 3/30→0/30 but safe
 usefulness fell 20/30→13/30 with one degeneration; projection removal preserved
 19/30 usefulness but missed the original mechanism-gain threshold. Neither
 qualified, so final and retention were skipped. Only one subtraction case was
-a paired useful benign rescue. A single weaker-dose calibration is under review;
-the original null remains unchanged.
+a paired useful benign rescue. The single -0.25 calibration completed: benign
+refusals 3/30→0/30, useful/correct 20/30→21/30, no invalid outputs, one useful
+paired rescue. It passed quality but missed the original unsafe-contrast gain
+gate; final/retention were skipped. A fixed-setting check on the earlier
+4B-refused benign texts is under review. Both registered nulls remain unchanged.
 The cancelled OR-Bench/new-method expansion is unused.
 
 **Completed status (2026-11-16):** the
