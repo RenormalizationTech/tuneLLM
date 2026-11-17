@@ -1,0 +1,2 @@
+# Optional; scientific figure generation only, separate from model environments.
+matplotlib==3.10.8

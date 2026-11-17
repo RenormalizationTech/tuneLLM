@@ -9,6 +9,9 @@ from scripts.joint_gcad import JointGCAD
 from scripts.author_gcad_impolite_common import hook_signature
 
 PUBLIC = Path('outputs/steering-release-staging-03/runtime/gcad.py')
+pytestmark = pytest.mark.artifact(str(PUBLIC))
+if not PUBLIC.is_file():
+    pytest.skip('requires local published GCAD runtime copy; no download during collection', allow_module_level=True)
 spec = importlib.util.spec_from_file_location('published_gcad', PUBLIC)
 published = importlib.util.module_from_spec(spec); spec.loader.exec_module(published)
 

@@ -1,0 +1,65 @@
+{
+  "status": "polish_implemented_and_locally_verified",
+  "base_revision": "8ee9190a73d52971976a3feca33d9df840fe83de",
+  "scope": "Public/CV presentation, portable CPU checks, pinned artifact setup, attribution; no new model experiments",
+  "visibility_changed": false,
+  "history_rewritten": false,
+  "original_experimental_results_changed": false,
+  "reviews": {
+    "claude": "Final bounded public-showcase review approved after explicit contribution, grading-context, exact settings and source corrections; no blocking documentation issue.",
+    "codex_worker": "Portable profile, artifact helper, isolated27B requirements, CPU CI and reproduction guide"
+  },
+  "security_baseline": {
+    "tracked_files": 763,
+    "reachable_commits": 213,
+    "unique_reachable_blobs_scanned": 1091,
+    "bytes_scanned": 15468585,
+    "high_confidence_secret_pattern_hits": [],
+    "tracked_sensitive_filename_candidates": [],
+    "historical_sensitive_filename_candidates": [],
+    "scope_limit": "Pattern-based local scan of reachable Git blobs; not a guarantee of absence of credentials or sensitive content."
+  },
+  "clean_checkout": {
+    "candidate_tree_sha256": "e30b827b1c3f00ad8d567c045afe0d67ddac3b0d85a4db06d8b66e0df214a7d2",
+    "file_count": 779,
+    "environment": "Fresh Python3.10 virtualenv, Torch2.6.0 CPU, requirements-dev only; no inherited site-packages",
+    "copied_ignored_files": false,
+    "result": "47 passed in5.47s",
+    "test_modules": 8,
+    "research_modules_excluded_before_import": 67,
+    "scope": "Portable slice only; not all archived research tests"
+  },
+  "archived_suite_diagnostic": {
+    "passed": 874,
+    "failed": 170,
+    "errors": 73,
+    "skipped": 11,
+    "reason": "Broader historical suite needs archived assets/environments; not made a portable guarantee or claimed fixed."
+  },
+  "published_bundle_setup": {
+    "download_and_16_hash_checks": true,
+    "offline_verification": true,
+    "test_exit_code": 0,
+    "test_output": ".                                                                        [100%]\n1 passed in 1.49s\n",
+    "new_model_generation": false,
+    "base_weights_downloaded": false
+  },
+  "documentation": {
+    "figure": "docs/assets/refusal_tradeoff.svg",
+    "figure_source": "scripts/plot_portfolio_results.py",
+    "examples": "docs/assets/showcase_examples.json",
+    "source_hashes_and_exact_prefixes_verified": true,
+    "references": "docs/references.md",
+    "license_scope": "THIRD_PARTY_NOTICES.md",
+    "reproduction": "docs/reproduce.md"
+  },
+  "SAPS_scope": {
+    "released_prompts": "Authors explicit MIT license retained at pinned revision; data generation lineage remains incomplete and disclosed",
+    "paper_rubric": "Separate AppendixC attribution, CC BY4.0 verified on ACL landing page",
+    "frozen_attribution_and_fixture_files_changed": false
+  },
+  "hosted_ci": "Configured; outcome will be checked after push",
+  "new_target_model_generations": 0,
+  "new_gpu_work": false,
+  "remaining_action": "Visibility remains private; making GitHub public is separate from this polish."
+}

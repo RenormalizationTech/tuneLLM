@@ -1,21 +1,33 @@
 # tuneLLM
 
+[Hugging Face artifacts](https://huggingface.co/RenormalizationTech) ·
+[Figure and saved examples](docs/showcase.md) · [Reproduce](docs/reproduce.md) ·
+[References](docs/references.md)
+
 A reproducible LLM research portfolio covering **quantization, LoRA/QLoRA,
 refusal steering and trait steering**. Experiments on Qwen3-4B and
 Qwen2.5-7B-Instruct examine compression, adaptation and inference-time behavior
-control, with explicit baselines and response-quality measurements.
+control, with explicit baselines and response-quality measurements. Mistral-7B-Instruct-v0.1
+provides a SAPS reference; Qwen3.8-27B has an initial NF4 loading/reload smoke.
 
 The goal is to demonstrate practical LLM research: implement methods, reproduce
 results, compare alternatives and explain limitations. Positive effects, failed
 transfers and quality tradeoffs are all retained. This is an experimental
 portfolio; the results do not establish production-ready behavioral controls.
 
+- Implemented model compression, domain-text QLoRA and activation interventions
+  with pinned checkpoints, baseline comparisons and saved artifacts.
+- Measured how stronger refusal/style steering can trade useful or coherent
+  answers for a larger behavioral effect.
+- Preserved unsuccessful transfers and quality failures alongside positive
+  case-level findings, rather than selecting only successful outcomes.
+
 ## Results at a glance
 
 | Area | What was implemented | Main measured result | Interpretation |
 | --- | --- | --- | --- |
-| Quantization | BF16 GGUF conversion; Q8_0/Q4_K_M quantization; saved NF4 base | GGUF weights: **7.50 → 3.99 → 2.33 GiB**; short A6000 generation benchmark: **79 → 131 → 186 tokens/s** | Compression and throughput gains in a fixed microbenchmark; capability checked separately on small subsets. |
-| Physics QLoRA | NF4 frozen base, LoRA training on 100 licensed physics papers, checkpoint selection and reload | Held-out paper-text NLL **1.975 → 1.734**; GSM8K **117/128 → 111/128** | Better fit to paper text with a math regression; improved writing quality is unestablished. |
+| Quantization | BF16 GGUF conversion; Q8_0/Q4_K_M quantization; saved NF4 base | GGUF weights: **7.50 → 3.99 → 2.33 GiB**; short A6000 generation benchmark: **79.1 → 130.5 → 186.0 tokens/s** | Compression and throughput gains in a fixed microbenchmark; capability checked separately on small subsets. |
+| Physics QLoRA | NF4 frozen base, LoRA training on 100 licensed physics papers, checkpoint selection and reload | Held-out paper-text NLL **1.975 → 1.734**; GSM8K numeric **117/128 → 111/128**, strict-format correct **97/128 → 106/128** | Better fit and formatting alongside a numeric-accuracy regression; improved writing quality is unestablished. |
 | Refusal steering | Contrastive direction extraction; constant subtraction versus projection removal on 4B/7B | 7B subtraction −0.5: unsafe refusals **28/30 → 17/30**, benign usefulness **20/30 → 13/30**. Selected benign diagnostic at −0.25: refusals **3/13 → 1/13**, useful valid full answers **9/13 → 11/13** | A causal intervention effect with dose/quality tradeoffs; the 13 selected cases are a narrow demonstration, not a general success rate. |
 | Trait steering | Literature-based GCAD/SAPS references; random controls; model transfer; joint-control study | 7B GCAD sarcasm: **29/32** answers scored ≥50/100 versus **0/32** baseline; coherence **89.59 → 70.72**. Joint candidates passing all gates: **0/5** | Individual effects can be strong while quality and cross-trait coupling limit combined control. |
 
@@ -23,6 +35,11 @@ These rows use different tasks, models and evaluation designs. They are not a
 single leaderboard. Behavioral scores use an AI judge; coherence does not imply
 factual correctness. Detailed counts, controls, decoding limits and provenance
 are linked below.
+
+![7B refusal and usefulness development counts](docs/assets/refusal_tradeoff.svg)
+
+The same development prompts show the dose tradeoff. The later 13-case diagnostic
+is separate. [Source counts, interpretation and saved examples](docs/showcase.md).
 
 ## Published artifacts
 
@@ -52,7 +69,8 @@ limit cross-runtime timing comparisons; close scores do not prove equivalence.
 
 **Adaptation:** does domain-text training improve the desired task? The physics
 adapter reduced paper-text loss but did not establish improved scientific
-writing. Its math regression is reported alongside the loss gain. See the
+writing. Numeric GSM8K accuracy fell 117→111/128 while strict-format correctness
+rose 97→106/128; the two scorers measure different aspects of the answers. See the
 [protocol](docs/physics_prl_protocol.md) and [results](results/physics_prl_final.json).
 
 **Refusal control:** how do constant vector subtraction and projection removal
@@ -78,7 +96,8 @@ a model-size effect.
 Start with a released artifact's model card and its pinned revisions; each
 release documents its own environment. The training, GCAD and baseline
 experiments used different dependency versions, so there is no single verified
-environment for every track.
+environment for every track. The [reproduction guide](docs/reproduce.md) separates
+portable CPU tests, pinned artifact replay and historical full-study runs.
 
 | Track | Runnable entry point / reproduction guide |
 | --- | --- |
@@ -108,8 +127,8 @@ The selected larger-model direction is **sarcasm steering, quantization and one
 QLoRA exercise**. Reuse the existing methods, corpus and evaluation structure
 where compatible; verify architecture/runtime support and resource needs first.
 The official BF16 checkpoint has approximately 55.6 GB of weight files; an
-approximately 18 GB download refers to a quantized representation. Quantized
-inference and QLoRA can use a smaller-memory path than the BF16 reference.
+NF4 copy is saved locally as described below. Quantized inference and QLoRA
+use a smaller-memory path than the BF16 reference.
 The initial **text-only Transformers NF4 load/save/reload smoke is complete**:
 496 quantized linear layers, no missing language weights, no loaded vision
 modules, and exact generated-token replay after a fresh-process reload on two
@@ -137,12 +156,24 @@ pending-expansion language.
 
 ## Implementation and attribution
 
+**Project ownership:** the project owner directs the research questions,
+model/method priorities and scope, reviews result interpretation, and decides
+which demonstrations and releases serve the portfolio goal. Codex wrote and
+executed the implementation and experimental runs under the owner's direction;
+Claude supplied scientific review and the disclosed AI-judge evaluations.
+This is an AI-assisted research project applying existing methods.
+
 Python, PyTorch, Transformers, PEFT, bitsandbytes, llama.cpp and Hugging Face Hub
 support the workflows. Protocols, configurations and compact results live in
 `docs/`, `configs/` and `results/`; scripts and evaluation fixtures accompany
 them. Weights, caches and large raw outputs remain in ignored directories.
 Source and dataset attribution are recorded per experiment and release.
+The [third-party notices](THIRD_PARTY_NOTICES.md) distinguish original code from
+copied code, data and paper-derived rubric terms. [References](docs/references.md)
+identify the methods applied here.
 
-Planning and implementation used Codex with Claude scientific review; evaluation
-records disclose the AI-judge adaptations and limitations. This project applies
-and evaluates existing methods rather than claiming to have invented them.
+For a short review: this overview → [figure/examples](docs/showcase.md) →
+[four-behavior evidence](docs/steering_reference.md) →
+[7B execution details](docs/refusal_7b_transfer_execution.md).
+[plan.md](plan.md) is historical planning context; the
+[current roadmap](docs/project_tracks.md) records active priorities.

@@ -2,6 +2,12 @@
 
 ## 1. Project Objective
 
+The public-showcase polish is implemented: figure/examples, references and license
+scope, portable CPU tests/CI, pinned artifact setup and separate 27B requirements.
+See the [polish record](results/public_readiness_polish_01.json) and
+[reproduction guide](docs/reproduce.md). GitHub is still private. Original
+experimental decisions and frozen records are unchanged.
+
 **Current user priority (2026-11-16):** present the completed quantization,
 LoRA/QLoRA, refusal-steering and trait-steering work as a credible LLM research
 portfolio for a CV and job applications. Avoid overengineering. ARA is deferred;

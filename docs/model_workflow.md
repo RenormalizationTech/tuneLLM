@@ -18,10 +18,15 @@ separate post-hoc literal lexical audit. The [DECCP7B baseline](deccp_headroom_c
 is also complete and did not meet prespecified headroom criteria: English
 1 refusal+7 evasions/36, controls0/11; Chinese0+5/11 is descriptive only. Grader-classified
 evasion has a subjective boundary and is distinct from explicit refusal; this did not score missing facts or
-accuracy. No intervention/refusal model was tested or published;25 held-out
-rows are ungenerated. The requested refusal-steered artifact remains incomplete
-pending user decision about an evasion-focused target. No automatic extension;
-larger-model execution requires user discussion/decision; Qwen3-14B remains historical only.
+accuracy. No intervention/refusal model followed that DECCP screen; its 25
+held-out rows remain ungenerated. A separate conventional 7B subtraction study
+subsequently completed and its [experimental direction/runtime](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment)
+is public, with the original nulls and selected-case limits preserved. See the
+[current release index](../releases/README.md). Qwen3-14B remains historical only.
+The official Qwen3.8-27B text-only NF4 load/save/reload smoke is complete;
+sarcasm steering and physics QLoRA remain planned. The
+[reproduction guide](reproduce.md) separates environments and portable checks
+from historical artifact-dependent workflows.
 
 ## Scope: adapter training and behavioral research
 

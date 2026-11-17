@@ -14,6 +14,8 @@ from scripts.refusal_7b_transfer_hooks import intervene
 @pytest.fixture(scope='module')
 def raw():
     file = stage.path(stage.read_json(stage.SETTING)['direction_file'])
+    if not file.is_file():
+        pytest.skip('artifact: original private vector absent; use downloaded-bundle tests for public inference artifacts')
     assert stage.sha256(file) == runtime.PT_SHA256
     return runtime.validate_direction(torch.load(file, map_location='cpu', weights_only=True))
 

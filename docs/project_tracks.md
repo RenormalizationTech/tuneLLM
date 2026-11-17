@@ -6,6 +6,14 @@ and results continue to describe the experiments as registered.
 
 ## Portfolio objective and next steps (2026-11-16)
 
+**Public showcase polish is complete locally:** the README now links a measured
+figure, saved examples, references, third-party notices and a reproduction guide.
+The portable CPU profile passed 47 tests in a fresh environment and a clean
+checkout; the small published refusal bundle passed anonymous file verification
+and an offline CPU check. Historical research tests remain opt-in and require
+their original assets. See the [polish record](../results/public_readiness_polish_01.json).
+GitHub visibility remains private; no new model experiment accompanied this pass.
+
 The user's high-level goal is a CV/job-search project demonstrating LLM research
 ability across quantization, LoRA/QLoRA, refusal steering and trait steering.
 Keep the work proportionate to that goal; successful production controllers,
@@ -15,7 +23,7 @@ the user subsequently selected the bounded 27B extension below. Broad method
 expansion and sweeps are not scheduled.
 This clarification supersedes older pending-expansion language in the roadmap.
 
-Next steps use existing evidence:
+The portfolio preparation uses existing evidence:
 
 1. Condense the README into a portfolio overview with one results table covering
    the four areas and links to the underlying records and public artifacts.
