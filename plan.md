@@ -28,10 +28,14 @@ model adaptations. The fixed protocol retains its data, methods and quality
 checks. The fixed transfer completed with a development null: subtraction reduced
 refusals but lost safe usefulness and introduced degeneration; projection removal
 missed the original mechanism-gain threshold. Final/retention were skipped.
-The single -0.25 calibration also completed: safe refusals3→0, safe usefulness20→21,
-no invalid outputs, but unsafe compliance+2 missed the original+6 gate. Both
-registered decisions are null; no final/retention ran. A fixed-setting check
-on the already discussed 4B-refused benign texts is under review. The
+The single -0.25 calibration also completed: safe refusals 3→0, safe usefulness 20→21,
+no invalid outputs, but unsafe compliance +2 missed the original +6 gate. Both
+registered decisions are null; no final/retention ran. The fixed -0.25 diagnostic
+on 13 earlier 4B-refused benign texts completed: 3→1 refusals, 9→11 useful valid full
+answers, 2 useful rescues, 0 new refusals and 1 repetitive output. Four seen cases
+are separate. An experimental reference setting is recorded; no further run is
+active. The user accepted the narrow result as the **completed experimental
+demonstration**; no broader robustness work is scheduled. The
 earlier OR-Bench/canonical-grid expansion is cancelled and unused. This new
 authorization does not alter the historical closed headroom studies below.
 

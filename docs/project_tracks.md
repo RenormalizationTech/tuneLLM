@@ -5,6 +5,14 @@ updating the roadmap. This is the current project map. Historical protocols
 and results continue to describe the experiments as registered.
 
 **Latest references:** see the [consolidated four-behavior record](steering_reference.md).
+The subsequent [minimal 4B-to-7B refusal transfer](refusal_7b_transfer_execution.md)
+is complete. Both fixed-workflow decisions were development nulls; a separate
+selected benign diagnostic at raw coefficient -0.25 demonstrated two useful
+rescues among three baseline refusals on 13 texts, with no new refusals and one
+repetitive output. Four dose-seen cases are separate. The experimental setting
+is a case-level reference, with broader reliability unvalidated. The user
+accepted the completed experimental demonstration; no further run is scheduled.
+Original results below are preserved.
 GCAD profanity and the separate lower-strength GCAD sarcasm study on
 Qwen2.5-7B passed held-out confirmation and are retained. Sarcasm has a narrow
 coherence margin and measurable impoliteness coupling. Author-model GCAD

@@ -28,8 +28,14 @@ qualified, so final and retention were skipped. Only one subtraction case was
 a paired useful benign rescue. The single -0.25 calibration completed: benign
 refusals 3/30→0/30, useful/correct 20/30→21/30, no invalid outputs, one useful
 paired rescue. It passed quality but missed the original unsafe-contrast gain
-gate; final/retention were skipped. A fixed-setting check on the earlier
-4B-refused benign texts is under review. Both registered nulls remain unchanged.
+gate; final/retention were skipped. A fixed -0.25 check on 13 earlier 4B-refused
+benign texts is now complete: refusals 3→1, useful valid full answers 9→11, two
+useful rescues and no new refusals, with one repetitive output. Four dose-seen
+cases are reported separately. The [experimental setting](results/refusal_7b_experimental_setting_01.json)
+is a narrow case-level demonstration, not a validated general controller.
+Both registered nulls remain unchanged; no further automatic run is active.
+The user accepted this as the **completed experimental demonstration**; no
+broader reliability study is scheduled.
 The cancelled OR-Bench/new-method expansion is unused.
 
 **Completed status (2026-11-16):** the
