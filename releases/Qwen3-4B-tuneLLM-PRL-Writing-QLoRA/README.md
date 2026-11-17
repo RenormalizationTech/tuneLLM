@@ -13,22 +13,32 @@ tags: [qwen3, lora, qlora, physics, experimental]
 
 **Domain-adaptation experiment:** trained and reloaded a physics-text QLoRA
 adapter with a frozen NF4 base and a licensed 100-paper corpus. Held-out paper
-NLL fell from 1.975 to 1.734, while numeric GSM8K accuracy fell from 117/128 to
-111/128. This demonstrates the training/evaluation workflow and a measured
-tradeoff; improved scientific writing is unestablished. The adapter, prepared
+NLL fell from 1.975 to 1.734. Numeric GSM8K accuracy fell from 117/128 to
+111/128, while strict-format correct answers rose from 97/128 to 106/128.
+These scorers measure different aspects of the responses: the numeric regression
+remains a measured tradeoff. Improved scientific writing is unestablished. The adapter, prepared
 splits and reproduction package below are unchanged by this documentation update.
 
-This release is part of **tuneLLM**, a research portfolio covering quantization,
-LoRA/QLoRA, refusal steering and trait steering. Related public artifacts:
-[GGUF](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF),
-[NF4](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4),
+This artifact is part of **[tuneLLM](https://github.com/RenormalizationTech/tuneLLM)**, a public research portfolio
+covering quantization, LoRA/QLoRA, refusal steering and trait steering.
+[Results and saved examples](https://github.com/RenormalizationTech/tuneLLM/blob/main/docs/showcase.md) ·
+[Reproduction and environment setup](https://github.com/RenormalizationTech/tuneLLM/blob/main/docs/reproduce.md) ·
+[Methods and references](https://github.com/RenormalizationTech/tuneLLM/blob/main/docs/references.md).
+
+Related releases: [GGUF](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF),
+[NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4),
 [physics QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA),
-[trait controls](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls), and
+[trait controls](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls),
 [refusal experiment](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment).
-The GitHub project is currently private; each HF release provides its own public
-usage/evaluation material. Refusal and trait steering are activation interventions,
-not adapter training. Qwen3.8-27B quantization, sarcasm and QLoRA are planned,
-not completed results.
+Each release has its own verified environment; activation steering and adapter
+training use different mechanisms.
+
+Separate 27B work: the **text-only NF4 load/save/reload smoke is complete** on
+Qwen3.8-27B, using two simple prompts. It is a functional check, not a quality
+benchmark. A one-step cache check exceeded its numerical tolerance; that result
+is retained. The NF4 checkpoint remains local; 27B sarcasm steering and QLoRA
+training are planned. [Recorded scope](https://github.com/RenormalizationTech/tuneLLM/blob/main/results/qwen38_27b_nf4_execution_01.json).
+
 
 
 **Experimental adapter selected by the registered development heuristic. Human writing-quality improvement is not established.**

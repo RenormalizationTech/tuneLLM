@@ -7,12 +7,52 @@ GSM8K deletion are recorded in the
 Historical receipts, cards, reproduction notes and manifests keep their original
 private labels; those labels do not describe current repository visibility.
 
-| Artifact | Visibility | Hub revision |
+| Artifact | Local card | Current public Hub revision |
 | --- | --- | --- |
-| [Base GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF) | Public | `505aaf590c53811f015c532036679f03a3e38f81` |
-| GSM8K QLoRA learning artifact | Deleted after verified archive | Archived head `6a29265f7dc99577777e412fa76659d8b734fdea` |
-| [Standalone NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4) | Public | `ef363f062184dd7361fcc3f8ef951990e95c52bb` |
-| [PRL Writing QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) | Public | `a9ccf9fa05b088fb929506cbac08a58257d8fa84` |
+| [Base GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF) | [README](Qwen3-4B-tuneLLM-GGUF/README.md) | `77de6c6ef052fca13675d6b8a47ff3afc81008c8` |
+| [Standalone NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4) | [README](Qwen3-4B-tuneLLM-NF4/README.md) | `670ac49990add1639cd38ba0e858bdda2d9b6fb9` |
+| [PRL Writing QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) | [README](Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/README.md) | `3ac6a47916a86d334a7548a3d678c2fecd1c9dd7` |
+| [7B GCAD trait controls](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls) | [README](qwen2.5-7b-gcad-steering-controls/README.md) | `a6c49acf9ec12cac9bb6438db26604e5ca45cc74` |
+| [7B refusal experiment](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment) | [README](qwen2.5-7b-refusal-steering-experiment/README.md) | `b9649ef186570f6159fbe95011024fa04655a89e` |
+
+The earlier GSM8K adapter is deleted on HF after verified archival; its historical
+head was `6a29265f7dc99577777e412fa76659d8b734fdea`.
+
+## Local cards and complete payloads
+
+Every current HF release has a card mirror under `releases/<HF-repo>/README.md`.
+This tracked directory is a documentation index, not a copy of every weight or
+runtime file. Complete release payloads live under ignored
+`artifacts/releases/<HF-repo>/`; upstream downloads are cached separately in
+`.hf/hub/`. Card-edit snapshots and historical staging remain in ignored
+`outputs/`.
+
+The two 7B packages are now available at these complete local destinations:
+
+| Published package | Complete local payload |
+| --- | --- |
+| GCAD trait controls | `artifacts/releases/qwen2.5-7b-gcad-steering-controls/` |
+| Refusal experiment | `artifacts/releases/qwen2.5-7b-refusal-steering-experiment/` |
+
+These contain steering banks/vectors and runtime code. They use the separately
+obtained `Qwen/Qwen2.5-7B-Instruct` checkpoint; they are not full base-model
+releases. The public [reproduction guide](../docs/reproduce.md) explains the
+small pinned refusal-bundle download and separates it from base-weight setup.
+
+## Audited HF card polish (2026-11-17)
+
+Claude audited all five cards before publication. They now link the public
+GitHub project, results/examples, reproduction guide and references; distinguish
+the completed local 27B NF4 smoke from planned steering/training; and preserve
+all original loading code blocks and measured outcomes. Exact throughput and
+both physics GSM8K scoring conventions are reported. The two new 7B card
+folders make the local index consistent with HF.
+
+The [publication receipt](../results/huggingface_card_polish_02.json) records
+parent commits, updated card hashes and anonymous verification. Only the five
+READMEs and the trait package's derived joint-manifest README hash changed on
+HF. All other remote files were verified unchanged. Original manifests,
+immutable artifact revisions and earlier receipts remain historical evidence.
 
 ## Current portfolio publication update (2026-11-16)
 

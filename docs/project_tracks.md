@@ -12,7 +12,9 @@ The portable CPU profile passed 47 tests in a fresh environment and a clean
 checkout; the small published refusal bundle passed anonymous file verification
 and an offline CPU check. Historical research tests remain opt-in and require
 their original assets. See the [polish record](../results/public_readiness_polish_01.json).
-GitHub visibility remains private; no new model experiment accompanied this pass.
+GitHub is now public. The subsequent HF-card polish and five-card local release
+index are recorded in [the publication receipt](../results/huggingface_card_polish_02.json).
+No new model experiment accompanied either documentation pass.
 
 The user's high-level goal is a CV/job-search project demonstrating LLM research
 ability across quantization, LoRA/QLoRA, refusal steering and trait steering.

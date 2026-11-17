@@ -5,7 +5,7 @@
 The public-showcase polish is implemented: figure/examples, references and license
 scope, portable CPU tests/CI, pinned artifact setup and separate 27B requirements.
 See the [polish record](results/public_readiness_polish_01.json) and
-[reproduction guide](docs/reproduce.md). GitHub is still private. Original
+[reproduction guide](docs/reproduce.md). GitHub is now public. Original
 experimental decisions and frozen records are unchanged.
 
 **Current user priority (2026-11-16):** present the completed quantization,
@@ -153,8 +153,8 @@ passed for all three 7B banks. The
 manifest checksum and the three downloaded CPU bank loads are verified;
 see the [publication receipt](results/steering_publication_7b_03.json) and
 [post-download check](results/steering_publication_7b_03_postdownload.json).
-The GitHub repository remains private, so the HF package includes its own
-method notes and sanitized result summaries. The private source tag is
+At that publication the GitHub repository was private, so the HF package included
+its own method notes and sanitized result summaries. The original source tag is
 `steering-controls-v1`; no 4B bank or new 4B steering repository was published.
 The sections below preserve the preceding decisions and study history.
 

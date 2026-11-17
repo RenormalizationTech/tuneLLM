@@ -1,0 +1,113 @@
+{
+  "scope": "Five model-card edits and derived trait joint-manifest README hash; weights/runtime/results unchanged",
+  "github_public_verified_anonymously": true,
+  "github_doc_links_verified_anonymously": true,
+  "claude_audit": "Approved initial five-card diff and final minor edits; confirmed code blocks unchanged, all staged plan hashes match, derived trait manifest correct. Public-GitHub precondition then verified anonymously by root.",
+  "new_model_generations": 0,
+  "repositories": [
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+      "parent_revision": "505aaf590c53811f015c532036679f03a3e38f81",
+      "private": false,
+      "files": {
+        "README.md": {
+          "sha256": "d6f52481b2df0333567d36a63442d40505cf8ed7898d2eeaedcb5dc06bb12e42",
+          "bytes": 8749
+        }
+      },
+      "revision": "77de6c6ef052fca13675d6b8a47ff3afc81008c8",
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 11,
+      "inventory_preserved": true
+    },
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
+      "parent_revision": "ef363f062184dd7361fcc3f8ef951990e95c52bb",
+      "private": false,
+      "files": {
+        "README.md": {
+          "sha256": "9fd0345d805573bcea7c4dd5a4df852ef57225ec4df4d6c4fd54813346cbd305",
+          "bytes": 5705
+        }
+      },
+      "revision": "670ac49990add1639cd38ba0e858bdda2d9b6fb9",
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 17,
+      "inventory_preserved": true
+    },
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA",
+      "parent_revision": "a9ccf9fa05b088fb929506cbac08a58257d8fa84",
+      "private": false,
+      "files": {
+        "README.md": {
+          "sha256": "3bf4e540389caefc21f61050f1a36f08f0ace968a0e7d97b6a94eef993ba46c9",
+          "bytes": 10832
+        }
+      },
+      "revision": "3ac6a47916a86d334a7548a3d678c2fecd1c9dd7",
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 50,
+      "inventory_preserved": true
+    },
+    {
+      "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+      "parent_revision": "af91cbcc3270e1310dbb37cc70a4bdddd5674201",
+      "private": false,
+      "files": {
+        "README.md": {
+          "sha256": "6491595899aaf90c44f2ee139ff688f2b53f091efbb6ab6621f21727c8e0397d",
+          "bytes": 9422
+        },
+        "joint_controls/manifest.json": {
+          "sha256": "d3cfc90092d4f7940b91cc0546fcbcf9e71d33ad0e62b9a67fbf58880b7159c5",
+          "bytes": 4180
+        }
+      },
+      "revision": "a6c49acf9ec12cac9bb6438db26604e5ca45cc74",
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 33,
+      "inventory_preserved": true
+    },
+    {
+      "repo_id": "RenormalizationTech/qwen2.5-7b-refusal-steering-experiment",
+      "parent_revision": "3e8a151667a8fef0ebba552a3f3d74317b1c093d",
+      "private": false,
+      "files": {
+        "README.md": {
+          "sha256": "687545458548d695fe3b286b953c7a4c9d6f9eb267309f83207b0b2a397c8cdb",
+          "bytes": 7679
+        }
+      },
+      "revision": "b9649ef186570f6159fbe95011024fa04655a89e",
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 16,
+      "inventory_preserved": true
+    }
+  ],
+  "status": "published_anonymously_verified",
+  "local_7b_packages": [
+    {
+      "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+      "revision": "a6c49acf9ec12cac9bb6438db26604e5ca45cc74",
+      "local_card": "releases/qwen2.5-7b-gcad-steering-controls/README.md",
+      "complete_local_payload": "artifacts/releases/qwen2.5-7b-gcad-steering-controls",
+      "verification": "Full 34-file payload plus derived joint manifest verified; original banks/runtime/H1 unchanged"
+    },
+    {
+      "repo_id": "RenormalizationTech/qwen2.5-7b-refusal-steering-experiment",
+      "revision": "b9649ef186570f6159fbe95011024fa04655a89e",
+      "local_card": "releases/qwen2.5-7b-refusal-steering-experiment/README.md",
+      "complete_local_payload": "artifacts/releases/qwen2.5-7b-refusal-steering-experiment",
+      "verification": "Both frozen vector formats load identically; standalone runtime unchanged"
+    }
+  ],
+  "local_card_mirrors": "All five under releases/<HF-repo>/README.md; complete payloads remain ignored under artifacts/releases/",
+  "runtime_verification_scope": "Anonymous pinned downloads, full trait-manifest validation and refusal serializer parity; CPU only, no base weights or new generation.",
+  "local_release_storage": {
+    "tracked": "releases/<HF-repo>/README.md",
+    "ignored_complete_payloads": "artifacts/releases/<HF-repo>/",
+    "original_staging_preserved": true,
+    "complete_7b_payloads_git_ignored_verified": true
+  }
+}
