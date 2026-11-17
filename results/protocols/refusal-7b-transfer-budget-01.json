@@ -1,0 +1,2502 @@
+{
+  "mechanics_passed": true,
+  "checks": {
+    "identity_subtract18": {
+      "passed": true,
+      "identity_tokens_exact": true,
+      "logit_delta": 0.0
+    },
+    "identity_ablate_all": {
+      "passed": true,
+      "identity_tokens_exact": true,
+      "logit_delta": 0.0
+    },
+    "subtract18": {
+      "passed": true,
+      "identity_tokens_exact": null,
+      "logit_delta": 7.09375
+    },
+    "ablate_all": {
+      "passed": true,
+      "identity_tokens_exact": null,
+      "logit_delta": 5.66796875
+    }
+  },
+  "plain_after_cleanup_exact": true,
+  "hooks": {
+    "identity_subtract18": {
+      "method": "subtract18",
+      "identity": true,
+      "all_positions": true,
+      "numerical_sampling": "first prefill and first decode per node; counters include all calls",
+      "intervention_sites": [
+        "18.output"
+      ],
+      "hooks_removed": true,
+      "nodes": {
+        "18.output": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1841.9066162109375,
+          "nonfinite": false
+        }
+      }
+    },
+    "identity_ablate_all": {
+      "method": "ablate_all",
+      "identity": true,
+      "all_positions": true,
+      "numerical_sampling": "first prefill and first decode at each node; counters include all calls",
+      "intervention_sites": [
+        "0.input",
+        "0.attention",
+        "0.mlp",
+        "1.input",
+        "1.attention",
+        "1.mlp",
+        "2.input",
+        "2.attention",
+        "2.mlp",
+        "3.input",
+        "3.attention",
+        "3.mlp",
+        "4.input",
+        "4.attention",
+        "4.mlp",
+        "5.input",
+        "5.attention",
+        "5.mlp",
+        "6.input",
+        "6.attention",
+        "6.mlp",
+        "7.input",
+        "7.attention",
+        "7.mlp",
+        "8.input",
+        "8.attention",
+        "8.mlp",
+        "9.input",
+        "9.attention",
+        "9.mlp",
+        "10.input",
+        "10.attention",
+        "10.mlp",
+        "11.input",
+        "11.attention",
+        "11.mlp",
+        "12.input",
+        "12.attention",
+        "12.mlp",
+        "13.input",
+        "13.attention",
+        "13.mlp",
+        "14.input",
+        "14.attention",
+        "14.mlp",
+        "15.input",
+        "15.attention",
+        "15.mlp",
+        "16.input",
+        "16.attention",
+        "16.mlp",
+        "17.input",
+        "17.attention",
+        "17.mlp",
+        "18.input",
+        "18.attention",
+        "18.mlp",
+        "19.input",
+        "19.attention",
+        "19.mlp",
+        "20.input",
+        "20.attention",
+        "20.mlp",
+        "21.input",
+        "21.attention",
+        "21.mlp",
+        "22.input",
+        "22.attention",
+        "22.mlp",
+        "23.input",
+        "23.attention",
+        "23.mlp",
+        "24.input",
+        "24.attention",
+        "24.mlp",
+        "25.input",
+        "25.attention",
+        "25.mlp",
+        "26.input",
+        "26.attention",
+        "26.mlp",
+        "27.input",
+        "27.attention",
+        "27.mlp"
+      ],
+      "nodes": {
+        "0.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.05041888356208801,
+          "nonfinite": false
+        },
+        "0.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.597413957118988,
+          "nonfinite": false
+        },
+        "0.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.6063868403434753,
+          "nonfinite": false
+        },
+        "0.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.6030314564704895,
+          "nonfinite": false
+        },
+        "0.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.0015363693237305,
+          "nonfinite": false
+        },
+        "1.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.0015363693237305,
+          "nonfinite": false
+        },
+        "1.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.3176550269126892,
+          "nonfinite": false
+        },
+        "1.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.1438482999801636,
+          "nonfinite": false
+        },
+        "1.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.4863994121551514,
+          "nonfinite": false
+        },
+        "1.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.9810967445373535,
+          "nonfinite": false
+        },
+        "2.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.9810967445373535,
+          "nonfinite": false
+        },
+        "2.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.38713663816452026,
+          "nonfinite": false
+        },
+        "2.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.3604094982147217,
+          "nonfinite": false
+        },
+        "2.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.784715175628662,
+          "nonfinite": false
+        },
+        "2.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.476268768310547,
+          "nonfinite": false
+        },
+        "3.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.476268768310547,
+          "nonfinite": false
+        },
+        "3.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.5879501104354858,
+          "nonfinite": false
+        },
+        "3.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.476268768310547,
+          "nonfinite": false
+        },
+        "3.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1465.228271484375,
+          "nonfinite": false
+        },
+        "3.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1466.8427734375,
+          "nonfinite": false
+        },
+        "4.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1466.8427734375,
+          "nonfinite": false
+        },
+        "4.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.5761229395866394,
+          "nonfinite": false
+        },
+        "4.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1466.8427734375,
+          "nonfinite": false
+        },
+        "4.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 231.57998657226562,
+          "nonfinite": false
+        },
+        "4.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1694.9534912109375,
+          "nonfinite": false
+        },
+        "5.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1694.9534912109375,
+          "nonfinite": false
+        },
+        "5.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.5276825428009033,
+          "nonfinite": false
+        },
+        "5.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1694.9534912109375,
+          "nonfinite": false
+        },
+        "5.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 23.028797149658203,
+          "nonfinite": false
+        },
+        "5.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1714.765380859375,
+          "nonfinite": false
+        },
+        "6.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1714.765380859375,
+          "nonfinite": false
+        },
+        "6.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 4.0025153160095215,
+          "nonfinite": false
+        },
+        "6.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1714.765380859375,
+          "nonfinite": false
+        },
+        "6.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 16.967660903930664,
+          "nonfinite": false
+        },
+        "6.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1731.873779296875,
+          "nonfinite": false
+        },
+        "7.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1731.873779296875,
+          "nonfinite": false
+        },
+        "7.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.2282822132110596,
+          "nonfinite": false
+        },
+        "7.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1731.873779296875,
+          "nonfinite": false
+        },
+        "7.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 11.838335990905762,
+          "nonfinite": false
+        },
+        "7.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1740.621826171875,
+          "nonfinite": false
+        },
+        "8.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1740.621826171875,
+          "nonfinite": false
+        },
+        "8.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 4.100247859954834,
+          "nonfinite": false
+        },
+        "8.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1740.621826171875,
+          "nonfinite": false
+        },
+        "8.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 8.189358711242676,
+          "nonfinite": false
+        },
+        "8.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1749.8330078125,
+          "nonfinite": false
+        },
+        "9.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1749.8330078125,
+          "nonfinite": false
+        },
+        "9.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.5776658058166504,
+          "nonfinite": false
+        },
+        "9.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1749.8330078125,
+          "nonfinite": false
+        },
+        "9.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 24.001890182495117,
+          "nonfinite": false
+        },
+        "9.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1777.8055419921875,
+          "nonfinite": false
+        },
+        "10.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1777.8055419921875,
+          "nonfinite": false
+        },
+        "10.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.1751798391342163,
+          "nonfinite": false
+        },
+        "10.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1777.8055419921875,
+          "nonfinite": false
+        },
+        "10.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 6.500946998596191,
+          "nonfinite": false
+        },
+        "10.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1787.1884765625,
+          "nonfinite": false
+        },
+        "11.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1787.1884765625,
+          "nonfinite": false
+        },
+        "11.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.6383748054504395,
+          "nonfinite": false
+        },
+        "11.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1787.1884765625,
+          "nonfinite": false
+        },
+        "11.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 28.639610290527344,
+          "nonfinite": false
+        },
+        "11.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1814.2530517578125,
+          "nonfinite": false
+        },
+        "12.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1814.2530517578125,
+          "nonfinite": false
+        },
+        "12.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.8632943630218506,
+          "nonfinite": false
+        },
+        "12.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1814.2530517578125,
+          "nonfinite": false
+        },
+        "12.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 17.916175842285156,
+          "nonfinite": false
+        },
+        "12.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1832.8155517578125,
+          "nonfinite": false
+        },
+        "13.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1832.8155517578125,
+          "nonfinite": false
+        },
+        "13.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.8138158321380615,
+          "nonfinite": false
+        },
+        "13.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1832.8155517578125,
+          "nonfinite": false
+        },
+        "13.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 7.536199569702148,
+          "nonfinite": false
+        },
+        "13.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.5382080078125,
+          "nonfinite": false
+        },
+        "14.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.5382080078125,
+          "nonfinite": false
+        },
+        "14.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.1332361698150635,
+          "nonfinite": false
+        },
+        "14.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.5382080078125,
+          "nonfinite": false
+        },
+        "14.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.3869385719299316,
+          "nonfinite": false
+        },
+        "14.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.3153076171875,
+          "nonfinite": false
+        },
+        "15.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.3153076171875,
+          "nonfinite": false
+        },
+        "15.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.3785942792892456,
+          "nonfinite": false
+        },
+        "15.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.3153076171875,
+          "nonfinite": false
+        },
+        "15.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 4.259658336639404,
+          "nonfinite": false
+        },
+        "15.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.233642578125,
+          "nonfinite": false
+        },
+        "16.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.233642578125,
+          "nonfinite": false
+        },
+        "16.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.8972314596176147,
+          "nonfinite": false
+        },
+        "16.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.233642578125,
+          "nonfinite": false
+        },
+        "16.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.439544200897217,
+          "nonfinite": false
+        },
+        "16.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1841.9515380859375,
+          "nonfinite": false
+        },
+        "17.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1841.9515380859375,
+          "nonfinite": false
+        },
+        "17.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.7595988512039185,
+          "nonfinite": false
+        },
+        "17.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1841.9515380859375,
+          "nonfinite": false
+        },
+        "17.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.6567111015319824,
+          "nonfinite": false
+        },
+        "17.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.114013671875,
+          "nonfinite": false
+        },
+        "18.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.114013671875,
+          "nonfinite": false
+        },
+        "18.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.9004356861114502,
+          "nonfinite": false
+        },
+        "18.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.114013671875,
+          "nonfinite": false
+        },
+        "18.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 4.651486396789551,
+          "nonfinite": false
+        },
+        "18.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1841.9066162109375,
+          "nonfinite": false
+        },
+        "19.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1841.9066162109375,
+          "nonfinite": false
+        },
+        "19.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.267115592956543,
+          "nonfinite": false
+        },
+        "19.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1841.9066162109375,
+          "nonfinite": false
+        },
+        "19.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.874408483505249,
+          "nonfinite": false
+        },
+        "19.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.1610107421875,
+          "nonfinite": false
+        },
+        "20.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.1610107421875,
+          "nonfinite": false
+        },
+        "20.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.8841354846954346,
+          "nonfinite": false
+        },
+        "20.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1842.1610107421875,
+          "nonfinite": false
+        },
+        "20.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 6.143620491027832,
+          "nonfinite": false
+        },
+        "20.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1833.9461669921875,
+          "nonfinite": false
+        },
+        "21.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1833.9461669921875,
+          "nonfinite": false
+        },
+        "21.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.5439813137054443,
+          "nonfinite": false
+        },
+        "21.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1833.9461669921875,
+          "nonfinite": false
+        },
+        "21.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 5.0926361083984375,
+          "nonfinite": false
+        },
+        "21.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1834.6920166015625,
+          "nonfinite": false
+        },
+        "22.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1834.6920166015625,
+          "nonfinite": false
+        },
+        "22.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 4.51162052154541,
+          "nonfinite": false
+        },
+        "22.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1834.6920166015625,
+          "nonfinite": false
+        },
+        "22.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 5.126439094543457,
+          "nonfinite": false
+        },
+        "22.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1830.2568359375,
+          "nonfinite": false
+        },
+        "23.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1830.2568359375,
+          "nonfinite": false
+        },
+        "23.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.7667088508605957,
+          "nonfinite": false
+        },
+        "23.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1830.2568359375,
+          "nonfinite": false
+        },
+        "23.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 7.421146869659424,
+          "nonfinite": false
+        },
+        "23.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1826.035888671875,
+          "nonfinite": false
+        },
+        "24.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1826.035888671875,
+          "nonfinite": false
+        },
+        "24.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 8.972321510314941,
+          "nonfinite": false
+        },
+        "24.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1826.035888671875,
+          "nonfinite": false
+        },
+        "24.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 12.961074829101562,
+          "nonfinite": false
+        },
+        "24.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1809.174072265625,
+          "nonfinite": false
+        },
+        "25.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1809.174072265625,
+          "nonfinite": false
+        },
+        "25.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 6.2442779541015625,
+          "nonfinite": false
+        },
+        "25.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1809.174072265625,
+          "nonfinite": false
+        },
+        "25.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 74.32640075683594,
+          "nonfinite": false
+        },
+        "25.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1732.3619384765625,
+          "nonfinite": false
+        },
+        "26.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1732.3619384765625,
+          "nonfinite": false
+        },
+        "26.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 10.27987289428711,
+          "nonfinite": false
+        },
+        "26.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1732.3619384765625,
+          "nonfinite": false
+        },
+        "26.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1159.1341552734375,
+          "nonfinite": false
+        },
+        "26.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 573.2428588867188,
+          "nonfinite": false
+        },
+        "27.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 573.2428588867188,
+          "nonfinite": false
+        },
+        "27.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 358.9783935546875,
+          "nonfinite": false
+        },
+        "27.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 573.2428588867188,
+          "nonfinite": false
+        },
+        "27.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 46.2669792175293,
+          "nonfinite": false
+        },
+        "27.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 568.4368286132812,
+          "nonfinite": false
+        }
+      },
+      "hooks_removed": true
+    },
+    "subtract18": {
+      "method": "subtract18",
+      "identity": false,
+      "all_positions": true,
+      "numerical_sampling": "first prefill and first decode per node; counters include all calls",
+      "intervention_sites": [
+        "18.output"
+      ],
+      "hooks_removed": true,
+      "nodes": {
+        "18.output": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 4.0,
+          "max_abs_projection": 1865.365234375,
+          "nonfinite": false
+        }
+      }
+    },
+    "ablate_all": {
+      "method": "ablate_all",
+      "identity": false,
+      "all_positions": true,
+      "numerical_sampling": "first prefill and first decode at each node; counters include all calls",
+      "intervention_sites": [
+        "0.input",
+        "0.attention",
+        "0.mlp",
+        "1.input",
+        "1.attention",
+        "1.mlp",
+        "2.input",
+        "2.attention",
+        "2.mlp",
+        "3.input",
+        "3.attention",
+        "3.mlp",
+        "4.input",
+        "4.attention",
+        "4.mlp",
+        "5.input",
+        "5.attention",
+        "5.mlp",
+        "6.input",
+        "6.attention",
+        "6.mlp",
+        "7.input",
+        "7.attention",
+        "7.mlp",
+        "8.input",
+        "8.attention",
+        "8.mlp",
+        "9.input",
+        "9.attention",
+        "9.mlp",
+        "10.input",
+        "10.attention",
+        "10.mlp",
+        "11.input",
+        "11.attention",
+        "11.mlp",
+        "12.input",
+        "12.attention",
+        "12.mlp",
+        "13.input",
+        "13.attention",
+        "13.mlp",
+        "14.input",
+        "14.attention",
+        "14.mlp",
+        "15.input",
+        "15.attention",
+        "15.mlp",
+        "16.input",
+        "16.attention",
+        "16.mlp",
+        "17.input",
+        "17.attention",
+        "17.mlp",
+        "18.input",
+        "18.attention",
+        "18.mlp",
+        "19.input",
+        "19.attention",
+        "19.mlp",
+        "20.input",
+        "20.attention",
+        "20.mlp",
+        "21.input",
+        "21.attention",
+        "21.mlp",
+        "22.input",
+        "22.attention",
+        "22.mlp",
+        "23.input",
+        "23.attention",
+        "23.mlp",
+        "24.input",
+        "24.attention",
+        "24.mlp",
+        "25.input",
+        "25.attention",
+        "25.mlp",
+        "26.input",
+        "26.attention",
+        "26.mlp",
+        "27.input",
+        "27.attention",
+        "27.mlp"
+      ],
+      "nodes": {
+        "0.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.00604248046875,
+          "max_abs_projection": 0.00043906085193157196,
+          "nonfinite": false
+        },
+        "0.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.072265625,
+          "max_abs_projection": 0.0037553012371063232,
+          "nonfinite": false
+        },
+        "0.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.00382314994931221,
+          "nonfinite": false
+        },
+        "0.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.07421875,
+          "max_abs_projection": 0.007587142288684845,
+          "nonfinite": false
+        },
+        "0.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.007922306656837463,
+          "nonfinite": false
+        },
+        "1.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0009765625,
+          "max_abs_projection": 0.005961433053016663,
+          "nonfinite": false
+        },
+        "1.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0401611328125,
+          "max_abs_projection": 0.0040337443351745605,
+          "nonfinite": false
+        },
+        "1.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.00661005824804306,
+          "nonfinite": false
+        },
+        "1.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.29296875,
+          "max_abs_projection": 0.003546476364135742,
+          "nonfinite": false
+        },
+        "1.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.007759988307952881,
+          "nonfinite": false
+        },
+        "2.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0009765625,
+          "max_abs_projection": 0.006252259016036987,
+          "nonfinite": false
+        },
+        "2.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.05078125,
+          "max_abs_projection": 0.0024119000881910324,
+          "nonfinite": false
+        },
+        "2.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.006934404373168945,
+          "nonfinite": false
+        },
+        "2.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.2265625,
+          "max_abs_projection": 0.015599250793457031,
+          "nonfinite": false
+        },
+        "2.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.01978975534439087,
+          "nonfinite": false
+        },
+        "3.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.00390625,
+          "max_abs_projection": 0.017729520797729492,
+          "nonfinite": false
+        },
+        "3.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0654296875,
+          "max_abs_projection": 0.004137709736824036,
+          "nonfinite": false
+        },
+        "3.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.011037707328796387,
+          "nonfinite": false
+        },
+        "3.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 176.0,
+          "max_abs_projection": 1.44256591796875,
+          "nonfinite": false
+        },
+        "3.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.27056884765625,
+          "nonfinite": false
+        },
+        "4.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 1.90521240234375,
+          "nonfinite": false
+        },
+        "4.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.07421875,
+          "max_abs_projection": 0.003504745662212372,
+          "nonfinite": false
+        },
+        "4.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.90521240234375,
+          "nonfinite": false
+        },
+        "4.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 28.0,
+          "max_abs_projection": 0.2560882568359375,
+          "nonfinite": false
+        },
+        "4.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.20355224609375,
+          "nonfinite": false
+        },
+        "5.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0625,
+          "max_abs_projection": 1.16107177734375,
+          "nonfinite": false
+        },
+        "5.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.296875,
+          "max_abs_projection": 0.0035690665245056152,
+          "nonfinite": false
+        },
+        "5.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.16107177734375,
+          "nonfinite": false
+        },
+        "5.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 3.0,
+          "max_abs_projection": 0.018947601318359375,
+          "nonfinite": false
+        },
+        "5.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.999267578125,
+          "nonfinite": false
+        },
+        "6.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 2.47283935546875,
+          "nonfinite": false
+        },
+        "6.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.5,
+          "max_abs_projection": 0.0031616538763046265,
+          "nonfinite": false
+        },
+        "6.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.47283935546875,
+          "nonfinite": false
+        },
+        "6.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 2.09375,
+          "max_abs_projection": 0.050040245056152344,
+          "nonfinite": false
+        },
+        "6.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.00848388671875,
+          "nonfinite": false
+        },
+        "7.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 2.50469970703125,
+          "nonfinite": false
+        },
+        "7.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.1484375,
+          "max_abs_projection": 0.007124647498130798,
+          "nonfinite": false
+        },
+        "7.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.50469970703125,
+          "nonfinite": false
+        },
+        "7.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.59375,
+          "max_abs_projection": 0.009396001696586609,
+          "nonfinite": false
+        },
+        "7.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.37518310546875,
+          "nonfinite": false
+        },
+        "8.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 1.9130859375,
+          "nonfinite": false
+        },
+        "8.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.5,
+          "max_abs_projection": 0.006640493869781494,
+          "nonfinite": false
+        },
+        "8.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.558837890625,
+          "nonfinite": false
+        },
+        "8.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.1484375,
+          "max_abs_projection": 0.018250465393066406,
+          "nonfinite": false
+        },
+        "8.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.7100830078125,
+          "nonfinite": false
+        },
+        "9.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.03125,
+          "max_abs_projection": 0.7001953125,
+          "nonfinite": false
+        },
+        "9.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.4375,
+          "max_abs_projection": 0.007151246070861816,
+          "nonfinite": false
+        },
+        "9.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.662841796875,
+          "nonfinite": false
+        },
+        "9.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 3.0625,
+          "max_abs_projection": 0.015077412128448486,
+          "nonfinite": false
+        },
+        "9.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 4.02838134765625,
+          "nonfinite": false
+        },
+        "10.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 2.39251708984375,
+          "nonfinite": false
+        },
+        "10.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.14453125,
+          "max_abs_projection": 0.006069257855415344,
+          "nonfinite": false
+        },
+        "10.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.39251708984375,
+          "nonfinite": false
+        },
+        "10.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.9375,
+          "max_abs_projection": 0.015975549817085266,
+          "nonfinite": false
+        },
+        "10.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 5.4442138671875,
+          "nonfinite": false
+        },
+        "11.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.0,
+          "max_abs_projection": 1.89398193359375,
+          "nonfinite": false
+        },
+        "11.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.3125,
+          "max_abs_projection": 0.0041655004024505615,
+          "nonfinite": false
+        },
+        "11.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.12591552734375,
+          "nonfinite": false
+        },
+        "11.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 3.5625,
+          "max_abs_projection": 0.04225635528564453,
+          "nonfinite": false
+        },
+        "11.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.404052734375,
+          "nonfinite": false
+        },
+        "12.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.125,
+          "max_abs_projection": 1.34820556640625,
+          "nonfinite": false
+        },
+        "12.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.24609375,
+          "max_abs_projection": 0.0028345584869384766,
+          "nonfinite": false
+        },
+        "12.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.33453369140625,
+          "nonfinite": false
+        },
+        "12.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 2.30859375,
+          "max_abs_projection": 0.03342628479003906,
+          "nonfinite": false
+        },
+        "12.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.42132568359375,
+          "nonfinite": false
+        },
+        "13.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 2.05615234375,
+          "nonfinite": false
+        },
+        "13.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25390625,
+          "max_abs_projection": 0.0029660463333129883,
+          "nonfinite": false
+        },
+        "13.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.4085693359375,
+          "nonfinite": false
+        },
+        "13.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.98828125,
+          "max_abs_projection": 0.011277087032794952,
+          "nonfinite": false
+        },
+        "13.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 5.5697021484375,
+          "nonfinite": false
+        },
+        "14.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.0,
+          "max_abs_projection": 2.61810302734375,
+          "nonfinite": false
+        },
+        "14.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.3037109375,
+          "max_abs_projection": 0.0037602782249450684,
+          "nonfinite": false
+        },
+        "14.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.61810302734375,
+          "nonfinite": false
+        },
+        "14.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.4765625,
+          "max_abs_projection": 0.022909045219421387,
+          "nonfinite": false
+        },
+        "14.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.08587646484375,
+          "nonfinite": false
+        },
+        "15.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0625,
+          "max_abs_projection": 1.05950927734375,
+          "nonfinite": false
+        },
+        "15.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.1787109375,
+          "max_abs_projection": 0.0022242069244384766,
+          "nonfinite": false
+        },
+        "15.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.05950927734375,
+          "nonfinite": false
+        },
+        "15.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.59765625,
+          "max_abs_projection": 0.010488271713256836,
+          "nonfinite": false
+        },
+        "15.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 5.12255859375,
+          "nonfinite": false
+        },
+        "16.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.0,
+          "max_abs_projection": 1.3721923828125,
+          "nonfinite": false
+        },
+        "16.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.2332763671875,
+          "max_abs_projection": 0.00916212797164917,
+          "nonfinite": false
+        },
+        "16.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.3721923828125,
+          "nonfinite": false
+        },
+        "16.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.310791015625,
+          "max_abs_projection": 0.009628385305404663,
+          "nonfinite": false
+        },
+        "16.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.52044677734375,
+          "nonfinite": false
+        },
+        "17.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 2.743896484375,
+          "nonfinite": false
+        },
+        "17.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.2109375,
+          "max_abs_projection": 0.0045741647481918335,
+          "nonfinite": false
+        },
+        "17.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.743896484375,
+          "nonfinite": false
+        },
+        "17.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.28857421875,
+          "max_abs_projection": 0.009813442826271057,
+          "nonfinite": false
+        },
+        "17.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.5283203125,
+          "nonfinite": false
+        },
+        "18.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 2.7425537109375,
+          "nonfinite": false
+        },
+        "18.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.4306640625,
+          "max_abs_projection": 0.004931658506393433,
+          "nonfinite": false
+        },
+        "18.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.7425537109375,
+          "nonfinite": false
+        },
+        "18.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.484375,
+          "max_abs_projection": 0.007964253425598145,
+          "nonfinite": false
+        },
+        "18.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.2506103515625,
+          "nonfinite": false
+        },
+        "19.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 2.087158203125,
+          "nonfinite": false
+        },
+        "19.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.345703125,
+          "max_abs_projection": 0.004056870937347412,
+          "nonfinite": false
+        },
+        "19.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.087158203125,
+          "nonfinite": false
+        },
+        "19.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.42578125,
+          "max_abs_projection": 0.015862971544265747,
+          "nonfinite": false
+        },
+        "19.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.65496826171875,
+          "nonfinite": false
+        },
+        "20.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.125,
+          "max_abs_projection": 1.5880126953125,
+          "nonfinite": false
+        },
+        "20.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.2734375,
+          "max_abs_projection": 0.005652908235788345,
+          "nonfinite": false
+        },
+        "20.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.28076171875,
+          "nonfinite": false
+        },
+        "20.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.96875,
+          "max_abs_projection": 0.025177597999572754,
+          "nonfinite": false
+        },
+        "20.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.30816650390625,
+          "nonfinite": false
+        },
+        "21.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 2.7225341796875,
+          "nonfinite": false
+        },
+        "21.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.49609375,
+          "max_abs_projection": 0.018074698746204376,
+          "nonfinite": false
+        },
+        "21.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.7225341796875,
+          "nonfinite": false
+        },
+        "21.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.5859375,
+          "max_abs_projection": 0.028816938400268555,
+          "nonfinite": false
+        },
+        "21.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.1524658203125,
+          "nonfinite": false
+        },
+        "22.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.25,
+          "max_abs_projection": 1.94281005859375,
+          "nonfinite": false
+        },
+        "22.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.552734375,
+          "max_abs_projection": 0.00785970687866211,
+          "nonfinite": false
+        },
+        "22.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.92144775390625,
+          "nonfinite": false
+        },
+        "22.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.66015625,
+          "max_abs_projection": 0.03551137447357178,
+          "nonfinite": false
+        },
+        "22.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.39984130859375,
+          "nonfinite": false
+        },
+        "23.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.5,
+          "max_abs_projection": 2.58148193359375,
+          "nonfinite": false
+        },
+        "23.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.3515625,
+          "max_abs_projection": 0.015501677989959717,
+          "nonfinite": false
+        },
+        "23.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.58148193359375,
+          "nonfinite": false
+        },
+        "23.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.94140625,
+          "max_abs_projection": 0.03848433494567871,
+          "nonfinite": false
+        },
+        "23.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.3590087890625,
+          "nonfinite": false
+        },
+        "24.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.5,
+          "max_abs_projection": 1.5399169921875,
+          "nonfinite": false
+        },
+        "24.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.099609375,
+          "max_abs_projection": 0.015152335166931152,
+          "nonfinite": false
+        },
+        "24.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 2.3096923828125,
+          "nonfinite": false
+        },
+        "24.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.71875,
+          "max_abs_projection": 0.041997939348220825,
+          "nonfinite": false
+        },
+        "24.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 5.3218994140625,
+          "nonfinite": false
+        },
+        "25.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.0,
+          "max_abs_projection": 0.944580078125,
+          "nonfinite": false
+        },
+        "25.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.7421875,
+          "max_abs_projection": 0.016800373792648315,
+          "nonfinite": false
+        },
+        "25.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.944580078125,
+          "nonfinite": false
+        },
+        "25.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 8.0625,
+          "max_abs_projection": 0.05594432353973389,
+          "nonfinite": false
+        },
+        "25.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.3914794921875,
+          "nonfinite": false
+        },
+        "26.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0234375,
+          "max_abs_projection": 0.3873291015625,
+          "nonfinite": false
+        },
+        "26.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 1.21875,
+          "max_abs_projection": 0.026114702224731445,
+          "nonfinite": false
+        },
+        "26.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 0.97833251953125,
+          "nonfinite": false
+        },
+        "26.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 132.0,
+          "max_abs_projection": 3.59783935546875,
+          "nonfinite": false
+        },
+        "26.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 3.884490966796875,
+          "nonfinite": false
+        },
+        "27.input": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.5,
+          "max_abs_projection": 0.674652099609375,
+          "nonfinite": false
+        },
+        "27.attention": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 43.75,
+          "max_abs_projection": 0.65179443359375,
+          "nonfinite": false
+        },
+        "27.mid_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.3534965515136719,
+          "nonfinite": false
+        },
+        "27.mlp": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 5.453125,
+          "max_abs_projection": 0.2831614017486572,
+          "nonfinite": false
+        },
+        "27.post_residual": {
+          "calls": 320,
+          "prefill_calls": 1,
+          "decode_calls": 319,
+          "max_abs_hidden_delta": 0.0,
+          "max_abs_projection": 1.6380996704101562,
+          "nonfinite": false
+        }
+      },
+      "hooks_removed": true
+    }
+  },
+  "manifest_sha256": "a62b8f34507bf2766a0a0ca4a96a9db03c63e1decb5c39dbfcf0bafb6b10e1bb",
+  "vector_sha256": "671c6a839cd01a3767d6455b9a1b59a37059f712097ff1f8142324dfccbae28e",
+  "projected_remaining_generation_seconds": 515.7656889609061,
+  "projection_scope": "rough measured schedule; excludes load/judging; not guaranteed bound"
+}
