@@ -9,6 +9,28 @@ tags: [qwen3, lora, qlora, physics, experimental]
 
 # Qwen3-4B tuneLLM PRL Writing QLoRA
 
+## Portfolio summary
+
+**Domain-adaptation experiment:** trained and reloaded a physics-text QLoRA
+adapter with a frozen NF4 base and a licensed 100-paper corpus. Held-out paper
+NLL fell from 1.975 to 1.734, while numeric GSM8K accuracy fell from 117/128 to
+111/128. This demonstrates the training/evaluation workflow and a measured
+tradeoff; improved scientific writing is unestablished. The adapter, prepared
+splits and reproduction package below are unchanged by this documentation update.
+
+This release is part of **tuneLLM**, a research portfolio covering quantization,
+LoRA/QLoRA, refusal steering and trait steering. Related public artifacts:
+[GGUF](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF),
+[NF4](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4),
+[physics QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA),
+[trait controls](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls), and
+[refusal experiment](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment).
+The GitHub project is currently private; each HF release provides its own public
+usage/evaluation material. Refusal and trait steering are activation interventions,
+not adapter training. Qwen3.8-27B quantization, sarcasm and QLoRA are planned,
+not completed results.
+
+
 **Experimental adapter selected by the registered development heuristic. Human writing-quality improvement is not established.**
 
 **Measured math regression:** numeric GSM8K accuracy fell from 117/128 for the saved NF4 base to 111/128 for this adapter. The final results did not trigger reselection. Strict-format correct counts were 97 and 106, respectively.

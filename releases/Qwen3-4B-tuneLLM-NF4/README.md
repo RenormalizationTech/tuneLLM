@@ -12,6 +12,28 @@ tags:
 ---
 # Qwen3-4B tuneLLM NF4 base
 
+## Portfolio summary
+
+**Quantization and serialization experiment:** saved an unadapted bitsandbytes
+NF4 base, verified exact reload and used it as the frozen dependency for physics
+QLoRA. This is a different quantization/backend from the GGUF release. The
+checkpoint is approximately 3.21 GiB because not every module is stored at four
+bits. The fixed benchmark and pinned loading recipe below document its measured
+scope. No weights changed in this documentation update.
+
+This release is part of **tuneLLM**, a research portfolio covering quantization,
+LoRA/QLoRA, refusal steering and trait steering. Related public artifacts:
+[GGUF](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF),
+[NF4](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4),
+[physics QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA),
+[trait controls](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls), and
+[refusal experiment](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment).
+The GitHub project is currently private; each HF release provides its own public
+usage/evaluation material. Refusal and trait steering are activation interventions,
+not adapter training. Qwen3.8-27B quantization, sarcasm and QLoRA are planned,
+not completed results.
+
+
 Standalone **unadapted** NF4 checkpoint for the tuneLLM learning workflow.
 No LoRA adapter or physics training is included here.
 

@@ -4,6 +4,86 @@ Scope clarification from the user, 2026-11-14; discussed with Claude before
 updating the roadmap. This is the current project map. Historical protocols
 and results continue to describe the experiments as registered.
 
+## Portfolio objective and next steps (2026-11-16)
+
+The user's high-level goal is a CV/job-search project demonstrating LLM research
+ability across quantization, LoRA/QLoRA, refusal steering and trait steering.
+Keep the work proportionate to that goal; successful production controllers,
+novel methods and positive outcomes on every experiment are not required.
+ARA is explicitly deferred. Existing studies cover the four-topic portfolio;
+the user subsequently selected the bounded 27B extension below. Broad method
+expansion and sweeps are not scheduled.
+This clarification supersedes older pending-expansion language in the roadmap.
+
+Next steps use existing evidence:
+
+1. Condense the README into a portfolio overview with one results table covering
+   the four areas and links to the underlying records and public artifacts.
+2. Select a small set of saved baseline/intervention examples and make one
+   compact figure summarizing measured effects and quality tradeoffs.
+3. Document the shortest reproduction path for each area using existing scripts,
+   configs and environments; check commands and links without rerunning studies.
+4. Draft evidence-based CV bullets and a short interview narrative distinguishing
+   implemented methods, measured findings and limitations.
+
+Preserve frozen protocols, results, acceptance decisions and artifact hashes.
+New work should serve a concrete portfolio question rather than extend the
+research by default.
+
+### Latest selected scope: publication, documentation, then 27B
+
+The user authorized publication of the completed 7B refusal demonstration,
+followed by GitHub and HF documentation updates. Preserve the original null
+decisions and distinguish the released case-level demonstration from a reliable
+controller. No 7B retuning or new evaluation is part of publication.
+The release is now [public](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment)
+with [anonymous pinned-file and CPU-load verification](../results/refusal_7b_huggingface_publication_01.json).
+The release index and portfolio documentation receipt supersede older unpublished
+status language below.
+
+The selected larger-model candidate is **Qwen/Qwen3.8-27B**, with three bounded
+exercises: quantization, sarcasm steering and QLoRA. Sarcasm replaces refusal as
+the 27B behavioral target. Reuse existing datasets, methods and evaluation
+structure where compatible; extract a new 27B bank rather than reuse 7B vectors.
+
+- Quantization: use the official checkpoint in Transformers NF4 as the primary
+  working representation. Verify save/reload and measure size, inference memory,
+  throughput and a fixed small quality subset. A matched BF16 comparison and
+  GGUF export are optional; without that comparison, do not attribute task-score
+  changes to quantization. No required precision sweep.
+- Sarcasm: adapt the existing GCAD workflow to the hybrid architecture, with
+  zero-intervention checks, a small strength comparison, prompting/random
+  references and one locked evaluation. Report coherence and impoliteness along
+  with sarcasm. A null is an acceptable outcome; no automatic retuning follows.
+- QLoRA: one short adapter run on the existing licensed physics corpus, one
+  configuration and a fixed selection/evaluation rule. Check save/reload and
+  domain-loss/general-task tradeoffs. No new sarcasm training corpus is needed.
+
+Metadata inspection only: upstream revision
+`37561816e66b5b9153b1b64c10968c18c1e6f4a0`, Apache-2.0,
+`Qwen3_5ForConditionalGeneration`, 64 text blocks with hybrid attention,
+55,563,006,776 safetensors bytes. Two 48 GB RTX A6000s are present. BF16 weights
+exceed one card's capacity; a two-GPU inference path would be needed for an
+optional BF16 reference rather than the primary 4-bit workflow.
+An approximately 18 GB download is a quantized representation rather than this
+BF16 checkpoint. Plan quantized inference and QLoRA separately from the BF16
+reference; the 55.6 GB figure is not their weight-memory requirement.
+Only text inputs are in scope. The official checkpoint contains vision
+components, which are not the research target; keep them unused/frozen and
+scope hooks/adapters to language modules. Ollama's approximately 18 GB Q4_K_M
+artifact is a different backend/format from Transformers NF4; it is not the
+QLoRA training base. Quantization on load may still require downloading the
+full official source checkpoint before reducing its in-memory representation.
+NF4 training memory and kernel/Transformers compatibility still require a smoke
+check, not an assumption that 4B/7B code transfers unchanged. Use an isolated
+environment; preserve existing environments and results.
+
+Complete current publication/documentation first. Register exact data splits,
+software, resource cap and evaluation settings before any 27B training or
+generation. No 27B weights have been downloaded for this planning step.
+This latest scope takes precedence over older larger-model/pending-evasion
+language below; historical experiments remain unchanged.
+
 **Latest references:** see the [consolidated four-behavior record](steering_reference.md).
 The subsequent [minimal 4B-to-7B refusal transfer](refusal_7b_transfer_execution.md)
 is complete. Both fixed-workflow decisions were development nulls; a separate

@@ -1,0 +1,31 @@
+{
+  "status": "reviewed",
+  "scope": "7B refusal publication and GitHub/HF portfolio documentation",
+  "advisor": "existing Claude Herdr advisor; numerical README review completed",
+  "worker": "existing Codex Herdr worker; staging/runtime and six CPU tests completed",
+  "checks": {
+    "readme_local_links": true,
+    "refusal_payload_files": 16,
+    "refusal_payload_bytes": 111154,
+    "new_refusal_model_generations": 0,
+    "original_result_files_unchanged": true,
+    "existing_hf_weights_and_runtime_unchanged": true
+  },
+  "qwen38_27b_plan": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "inspected_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "license": "apache-2.0",
+    "official_safetensors_bytes": 55563006776,
+    "inputs": "text only; vision unused/frozen",
+    "primary_representation": "Transformers NF4; software and memory smoke checks pending",
+    "ollama_distinction": "27b llama.cpp variant is Q4_K_M, approximately18GB; separate format from NF4",
+    "experiments": [
+      "quantization/save-reload and small quality/resource screen",
+      "GCAD sarcasm transfer with coherence/coupling measurement",
+      "one short physics QLoRA configuration"
+    ],
+    "bf16_reference": "optional",
+    "weight_downloaded": false,
+    "compute_started": false
+  }
+}

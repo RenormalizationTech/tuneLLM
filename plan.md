@@ -2,6 +2,20 @@
 
 ## 1. Project Objective
 
+**Current user priority (2026-11-16):** present the completed quantization,
+LoRA/QLoRA, refusal-steering and trait-steering work as a credible LLM research
+portfolio for a CV and job applications. Avoid overengineering. ARA is deferred;
+production-ready controllers and broad sweeps are not required. The user then
+selected publication of the 7B refusal demonstration and GitHub/HF documentation,
+followed by a bounded **Qwen3.8-27B quantization, sarcasm-steering and QLoRA**
+extension. Sarcasm, not refusal, is the 27B behavioral target. Reuse the existing
+physics corpus for one short QLoRA exercise; verify hybrid-model compatibility
+and memory first. No 27B compute is started by this planning update.
+The next phase is portfolio presentation and reproduction guidance, as recorded
+in [the current project map](docs/project_tracks.md#portfolio-objective-and-next-steps-2026-11-16).
+This clarification takes precedence over historical expansion plans below;
+experimental records and registered conclusions remain unchanged.
+
 The primary goal is hands-on familiarity with open-source LLM training and
 tuning. The first deliverables are a quantized model and a working QLoRA
 fine-tuning workflow, with reproducible evaluation and eventual Hugging Face

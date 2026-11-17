@@ -1,0 +1,63 @@
+{
+  "status": "published_anonymously_verified",
+  "scope": "README summaries/crosslinks; refreshed trait joint manifest for changed README; no weights/runtime/results changed",
+  "new_gpu_runs": 0,
+  "repositories": [
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-GGUF",
+      "parent_revision": "c089994f008cc3d6326e4e010e5cba04974d0d02",
+      "revision": "505aaf590c53811f015c532036679f03a3e38f81",
+      "files": {
+        "README.md": "ae5bba6e6fa8dea1b081d3ed8d7e25d2f711594e9a9155437426ca8ae8b3f298"
+      },
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 11,
+      "inventory_preserved": true,
+      "private": false
+    },
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-NF4",
+      "parent_revision": "2ae7eec7ac38290ea28efefd1a06e779027aafc7",
+      "revision": "ef363f062184dd7361fcc3f8ef951990e95c52bb",
+      "files": {
+        "README.md": "321c7b77c11f78650552ed8237fdd0d819ca149a5a1de971d390b427260cc7ff"
+      },
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 17,
+      "inventory_preserved": true,
+      "private": false
+    },
+    {
+      "repo_id": "RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA",
+      "parent_revision": "b9f7ff0222d9e4070ee88f89e4f00ff096e20359",
+      "revision": "a9ccf9fa05b088fb929506cbac08a58257d8fa84",
+      "files": {
+        "README.md": "367664f10fbc5dd74dd14fce6562d0e0dc5df4bb945224d3ae10fbec57356e83"
+      },
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 50,
+      "inventory_preserved": true,
+      "private": false
+    },
+    {
+      "repo_id": "RenormalizationTech/qwen2.5-7b-gcad-steering-controls",
+      "parent_revision": "e1e56e6384214be873984f5fb9421ff6c61b9e85",
+      "revision": "af91cbcc3270e1310dbb37cc70a4bdddd5674201",
+      "files": {
+        "README.md": "995b2372f53420162b357d834f0a3bafa130877de370feff8415c9e14dd9d239",
+        "joint_controls/manifest.json": "6330ed0108bcba691f094db62d80a82231519fa01b897c5b422c8d40e3e7547c"
+      },
+      "status": "published_anonymously_verified",
+      "unchanged_files_verified": 33,
+      "inventory_preserved": true,
+      "private": false
+    }
+  ],
+  "trait_bundle_cpu_verification": {
+    "joint_manifest_verified": true,
+    "all_34_payload_hashes_verified": true,
+    "original_manifest_preserved": true,
+    "runtime_and_banks_preserved": true,
+    "new_gpu_checks": 0
+  }
+}

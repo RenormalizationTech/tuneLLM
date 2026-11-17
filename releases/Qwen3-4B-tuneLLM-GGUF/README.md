@@ -12,6 +12,28 @@ tags:
 
 # Qwen3-4B tuneLLM GGUF
 
+## Portfolio summary
+
+**Quantization experiment:** converted the pinned Qwen3-4B checkpoint to BF16
+GGUF, Q8_0 and Q4_K_M, then measured file size, generation throughput and fixed
+capability subsets. Weight sizes were 7.50 / 3.99 / 2.33 GiB; the short A6000
+generation benchmark measured 79 / 131 / 186 tokens/s. These are microbenchmark
+results, not production latency. Capability counts and reproduction instructions
+below define the evaluation scope. No weights changed in this documentation update.
+
+This release is part of **tuneLLM**, a research portfolio covering quantization,
+LoRA/QLoRA, refusal steering and trait steering. Related public artifacts:
+[GGUF](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF),
+[NF4](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4),
+[physics QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA),
+[trait controls](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls), and
+[refusal experiment](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment).
+The GitHub project is currently private; each HF release provides its own public
+usage/evaluation material. Refusal and trait steering are activation interventions,
+not adapter training. Qwen3.8-27B quantization, sarcasm and QLoRA are planned,
+not completed results.
+
+
 An unofficial learning release of Qwen3-4B converted to BF16 GGUF and quantized
 to Q8_0 and Q4_K_M. These files exercise the conversion and evaluation workflow;
 they do not introduce new training or claim improved model capability.

@@ -1,0 +1,118 @@
+{
+  "repo_id": "RenormalizationTech/qwen2.5-7b-refusal-steering-experiment",
+  "url": "https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment",
+  "private": false,
+  "manifest_sha256": "d29e704ed63a35166c96db3512a818349be7659de0dbbcb90210b4e3e3073a68",
+  "credentials_recorded": false,
+  "status": "published_anonymously_verified",
+  "revision": "3e8a151667a8fef0ebba552a3f3d74317b1c093d",
+  "commit_url": "https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment/commit/3e8a151667a8fef0ebba552a3f3d74317b1c093d",
+  "verified_at_utc": "2026-11-17T03:54:02.720105+00:00",
+  "files": {
+    "DATA_SOURCES.md": {
+      "sha256": "c7e0154ca5ada673a5e7dcf1afdd5e638e1c27ee4bd5e7a828d4fa256279e026",
+      "bytes": 1896,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "LICENSE": {
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "bytes": 11343,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "NOTICE": {
+      "sha256": "d07457dfc9352ddefff051fe779316ec985e8ea6e3a80abec1374f9dd1b3bd9f",
+      "bytes": 406,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "README.md": {
+      "sha256": "41bc9b132a437488bb045105119552235e9a152087818aedc89ea2e3df985306",
+      "bytes": 5105,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "VECTOR_LICENSE.md": {
+      "sha256": "480a84fab74d9a5198cd10c3f0d1228e52ce1fd8c73cf5fdca811815545ca7d2",
+      "bytes": 553,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "base_model.json": {
+      "sha256": "bfe2ce420774a1f5058d6dd87604581bdfbf8af163497eeed920730737ef2c67",
+      "bytes": 1207,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "direction.pt": {
+      "sha256": "671c6a839cd01a3767d6455b9a1b59a37059f712097ff1f8142324dfccbae28e",
+      "bytes": 15516,
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "direction.safetensors": {
+      "sha256": "ff7e8ba7880af6dedd645f33d760dfbfc62fe102b6c707d7b64d69666cae3f09",
+      "bytes": 14416,
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "environment.json": {
+      "sha256": "6eaa327eb4b5d90543f37ffaab486caad985871b6b68b6c3d6040366c8d598de",
+      "bytes": 304,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "provenance.json": {
+      "sha256": "9df86d5380866d092d3ee3cc5c6c6dbfa1181fe07526fce312007df95d755602",
+      "bytes": 2344,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "refusal_runtime.py": {
+      "sha256": "14ca5b788a7294d746ed1111b8d423613471de34a2ecc5148720927f58ca6775",
+      "bytes": 6357,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "requirements.txt": {
+      "sha256": "8d0cdad199347c089d1c4333a1731d168458b2ced32323dceed0e1f3f5ef5b52",
+      "bytes": 164,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "results/experimental_setting.json": {
+      "sha256": "74d86177e8bf63dcce6c2ac70daea7ce63b04193af30e506d3cc123df3e013f5",
+      "bytes": 2306,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "results/halfdose.json": {
+      "sha256": "bfd8e9205c1af6a68f927aafa14ccac9fa9231cf169a7208598a13b45188aaf7",
+      "bytes": 10069,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "results/initial_transfer.json": {
+      "sha256": "c5aee76e4f2c35031d23eec38b33107e18dc04dfc77b79abc61253ceda036dfb",
+      "bytes": 30548,
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "results/selected_benign13.json": {
+      "sha256": "b14978b5628d84925ee742a8ca371b565d8550f75383700318cccefa3cdea5b2",
+      "bytes": 8620,
+      "method": "revision-pinned downloaded SHA256"
+    }
+  },
+  "additional_remote_files": [
+    ".gitattributes"
+  ],
+  "card_metadata": {
+    "base_model": "Qwen/Qwen2.5-7B-Instruct",
+    "library_name": "transformers",
+    "license": "apache-2.0",
+    "tags": [
+      "experimental",
+      "activation-steering",
+      "refusal-steering"
+    ]
+  },
+  "load_check": "Anonymous pinned download, all 16 hashes, both vector serializers and standalone CLI verified; hook parity/cleanup CPU tests passed; no new full-model/GPU replay.",
+  "anonymous_verification": {
+    "revision": "3e8a151667a8fef0ebba552a3f3d74317b1c093d",
+    "public": true,
+    "all_16_downloaded_hashes_verified": true,
+    "standalone_vector_loads_match": true,
+    "standalone_cli_help_passed": true,
+    "base_weights_loaded": false,
+    "new_model_generation": false,
+    "cpu_tests_passed": 6,
+    "test_command": "OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest tests/test_stage_refusal_7b_release.py"
+  }
+}

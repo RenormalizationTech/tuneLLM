@@ -1,0 +1,84 @@
+{
+  "repo_id": "RenormalizationTech/qwen2.5-7b-refusal-steering-experiment",
+  "private": false,
+  "status": "staged_local_only_not_uploaded",
+  "files": {
+    "DATA_SOURCES.md": {
+      "sha256": "c7e0154ca5ada673a5e7dcf1afdd5e638e1c27ee4bd5e7a828d4fa256279e026",
+      "bytes": 1896
+    },
+    "LICENSE": {
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "bytes": 11343
+    },
+    "NOTICE": {
+      "sha256": "d07457dfc9352ddefff051fe779316ec985e8ea6e3a80abec1374f9dd1b3bd9f",
+      "bytes": 406
+    },
+    "README.md": {
+      "sha256": "41bc9b132a437488bb045105119552235e9a152087818aedc89ea2e3df985306",
+      "bytes": 5105
+    },
+    "VECTOR_LICENSE.md": {
+      "sha256": "480a84fab74d9a5198cd10c3f0d1228e52ce1fd8c73cf5fdca811815545ca7d2",
+      "bytes": 553
+    },
+    "base_model.json": {
+      "sha256": "bfe2ce420774a1f5058d6dd87604581bdfbf8af163497eeed920730737ef2c67",
+      "bytes": 1207
+    },
+    "direction.pt": {
+      "sha256": "671c6a839cd01a3767d6455b9a1b59a37059f712097ff1f8142324dfccbae28e",
+      "bytes": 15516
+    },
+    "direction.safetensors": {
+      "sha256": "ff7e8ba7880af6dedd645f33d760dfbfc62fe102b6c707d7b64d69666cae3f09",
+      "bytes": 14416
+    },
+    "environment.json": {
+      "sha256": "6eaa327eb4b5d90543f37ffaab486caad985871b6b68b6c3d6040366c8d598de",
+      "bytes": 304
+    },
+    "provenance.json": {
+      "sha256": "9df86d5380866d092d3ee3cc5c6c6dbfa1181fe07526fce312007df95d755602",
+      "bytes": 2344
+    },
+    "refusal_runtime.py": {
+      "sha256": "14ca5b788a7294d746ed1111b8d423613471de34a2ecc5148720927f58ca6775",
+      "bytes": 6357
+    },
+    "requirements.txt": {
+      "sha256": "8d0cdad199347c089d1c4333a1731d168458b2ced32323dceed0e1f3f5ef5b52",
+      "bytes": 164
+    },
+    "results/experimental_setting.json": {
+      "sha256": "74d86177e8bf63dcce6c2ac70daea7ce63b04193af30e506d3cc123df3e013f5",
+      "bytes": 2306
+    },
+    "results/halfdose.json": {
+      "sha256": "bfd8e9205c1af6a68f927aafa14ccac9fa9231cf169a7208598a13b45188aaf7",
+      "bytes": 10069
+    },
+    "results/initial_transfer.json": {
+      "sha256": "c5aee76e4f2c35031d23eec38b33107e18dc04dfc77b79abc61253ceda036dfb",
+      "bytes": 30548
+    },
+    "results/selected_benign13.json": {
+      "sha256": "b14978b5628d84925ee742a8ca371b565d8550f75383700318cccefa3cdea5b2",
+      "bytes": 8620
+    }
+  },
+  "cpu_checks": {
+    "file_count": 16,
+    "vector_shape": [
+      3584
+    ],
+    "vector_dtype": "torch.float32",
+    "original_pt_sha256": "671c6a839cd01a3767d6455b9a1b59a37059f712097ff1f8142324dfccbae28e",
+    "tensor_sha256": "1d2b29bc37636b26c6ba803467052e31fa4758e9928ea0f9fc8183c9791d646b",
+    "safetensors_exact": true,
+    "cpu_only": true,
+    "model_loaded": false,
+    "uploaded": false
+  }
+}

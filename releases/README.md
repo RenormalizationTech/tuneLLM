@@ -9,10 +9,30 @@ private labels; those labels do not describe current repository visibility.
 
 | Artifact | Visibility | Hub revision |
 | --- | --- | --- |
-| [Base GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF) | Public | `96038e0cb81737bc58489e19cf97461058a0b4e5` |
+| [Base GGUFs](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-GGUF) | Public | `505aaf590c53811f015c532036679f03a3e38f81` |
 | GSM8K QLoRA learning artifact | Deleted after verified archive | Archived head `6a29265f7dc99577777e412fa76659d8b734fdea` |
-| [Standalone NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4) | Public | `2ae7eec7ac38290ea28efefd1a06e779027aafc7` |
-| [PRL Writing QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) | Public | `b9f7ff0222d9e4070ee88f89e4f00ff096e20359` |
+| [Standalone NF4 base](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-NF4) | Public | `ef363f062184dd7361fcc3f8ef951990e95c52bb` |
+| [PRL Writing QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) | Public | `a9ccf9fa05b088fb929506cbac08a58257d8fa84` |
+
+## Current portfolio publication update (2026-11-16)
+
+The [7B refusal experiment](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment)
+is public at `3e8a151667a8fef0ebba552a3f3d74317b1c093d`. Its 16-file package
+contains the frozen direction, identical safetensors mirror, standalone runtime,
+pinned setting, all development-arm results and selected-case limits. Six CPU
+checks passed; all 16 anonymously downloaded files and both vector loaders were
+verified. There was no new full-model/GPU replay. See the
+[publication receipt](../results/refusal_7b_huggingface_publication_01.json) and
+[explicit manifest](../results/refusal_7b_release_manifest_01.json).
+
+The four earlier HF cards now give concise portfolio summaries and crosslinks;
+all weights, runtimes and measured results are unchanged. The trait package's
+joint manifest was refreshed for its updated README; the original manifest is
+preserved. Current card revisions and unchanged-file verification are in the
+[documentation receipt](../results/huggingface_portfolio_documentation_01.json).
+The original trait publication receipt remains historical evidence at its pinned
+revision. Older statements that no refusal artifact was published describe
+those earlier experiments, before this separately authorized release.
 
 Only the NF4/PRL cards changed during the visibility transition; all other remote
 file identities, including weights, stayed unchanged. The PRL dependency remains
