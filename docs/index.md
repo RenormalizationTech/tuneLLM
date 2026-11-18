@@ -9,14 +9,14 @@ retained experimental references together.
 
 ## Find what you need
 
-| Destination | What you will find |
+| Destination | Contents |
 | --- | --- |
-| [Learn the mathematics](learning_foundations.md) | Equations, intuition, worked examples and primary references for each tuning method. |
 | [Results and portfolio](showcase.md) | Main findings, CV bullets, interview summary and saved examples. |
 | [27B results and releases](qwen38_release_plan.md) | Completed quantization and QASPER/PRL adapter results, decisions and limitations. |
 | [Release catalog](../releases/README.md) | All nine public packages, model cards and pinned Hugging Face revisions. |
 | [Reproduce](reproduce.md) | CPU checks, loading instructions and separate runtime environments. |
 | [Project status](project_tracks.md) | Completed work and deferred studies. |
+| [Theoretical background](learning_foundations.md) | Formulations, assumptions and primary references underlying the methods and implementation choices. |
 
 Use the left sidebar to switch topics, its search box to find a term, and
 **On this page** to jump between headings. On a phone, open **Menu** for the
@@ -46,7 +46,7 @@ AI-judged development counts; the weaker-dose candidate was graded in a separate
 packet from the reused baseline. The later selected-case diagnostic is a
 separate result. [Figure data, interpretation and examples](showcase.md).
 
-## A short reading path
+## Suggested reading { #a-short-reading-path }
 
 1. [Results and examples](showcase.md): the main tradeoff and two selected saved responses.
 2. [Activation steering methods](activation_steering_methods.md): the intervention equations and implementation choices.

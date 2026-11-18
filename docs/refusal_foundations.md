@@ -1,12 +1,13 @@
-# Mathematical foundations of refusal steering
+# Theoretical background for refusal steering
 
-Activation steering changes an internal state during inference. It leaves the
-stored model weights unchanged, but it can change the probability distribution
-of the next token and all later generated text.
+Activation steering intervenes on an internal state during inference while
+preserving the stored model weights. Its effect depends on the intervention
+operator, direction, placement and token scope, together with the subsequent
+nonlinear and autoregressive computation.
 
-Prerequisites: [vectors and the residual stream](learning_foundations.md).
-This section explains geometry before the
-[implemented methods](activation_steering_methods.md) and
+The [shared notation](learning_foundations.md) defines the residual states and
+linear algebra used below. Intervention sites and measured outcomes are specified
+in the [implementation](activation_steering_methods.md) and
 [7B results](refusal_7b_transfer_execution.md).
 
 ## Estimating a direction from contrasting examples
@@ -40,7 +41,7 @@ uses contrastive activation vectors for other behaviors.
 Their empirical findings motivate tests on specified models; they do not
 establish one universal refusal direction.
 
-## Fixed addition and the units of strength
+## Fixed addition and coefficient units { #fixed-addition-and-the-units-of-strength }
 
 A fixed edit is
 
@@ -70,7 +71,7 @@ A useful descriptive diagnostic is
 for nonzero \(h\). It compares edit size to activation size.
 It is not the percentage of refusal removed or a predictor of quality.
 
-## Projection removal is a different operator
+## Projection removal { #projection-removal-is-a-different-operator }
 
 For unit \(u\), directional ablation uses
 
@@ -89,7 +90,7 @@ These are exact-arithmetic identities. Projection removes whatever signed
 component is present. Fixed subtraction translates every point by the same
 amount, even when its original projection is negative.
 
-**Worked example.** Let \(v=(2,0)\), \(u=(1,0)\), and use a fixed edit
+**Geometric comparison.** Let \(v=(2,0)\), \(u=(1,0)\), and use a fixed edit
 \(h-0.5v\).
 
 | Input \(h\) | Fixed subtraction | Projection removal |
@@ -97,10 +98,10 @@ amount, even when its original projection is negative.
 | \((3,4)\) | \((2,4)\) | \((0,4)\) |
 | \((-3,4)\) | \((-4,4)\) | \((0,4)\) |
 
-The second row makes the distinction clear: fixed subtraction increases the
-magnitude of a negative projection, while ablation sets it to zero.
+For a negative initial projection, fixed subtraction increases its magnitude,
+whereas ablation sets the coordinate to zero.
 
-## Placement determines what is removed
+## Intervention placement { #placement-determines-what-is-removed }
 
 In a pre-normalized block, write the attention and MLP writers as \(a,m\).
 Projecting only the block input does not prevent later writers from adding
@@ -129,7 +130,7 @@ also requires matching every relevant site, including incoming residuals,
 and the same arithmetic. A hook at another side of a normalization or nonlinear
 operation is not covered by this identity.
 
-## Why a linear edit can have nonlinear consequences
+## Local linearization and its limits { #why-a-linear-edit-can-have-nonlinear-consequences }
 
 For a downstream logit map \(z=f(h)\) and a sufficiently small edit \(\delta h\),
 
@@ -152,7 +153,7 @@ effect of **that operator under that protocol**. It does not prove the vector
 is the unique representation of refusal. Prompt confounding and output
 judgments remain separate questions.
 
-## Controls and what our results establish
+## Controls and recorded outcomes { #controls-and-what-our-results-establish }
 
 A zero-strength edit should reproduce the chosen baseline path within its
 registered tolerance; removing hooks
@@ -172,16 +173,10 @@ The [source references](references.md#activation-steering) and
 [implementation explanation](activation_steering_methods.md) identify how our
 data, layer outputs and scopes differ from the cited papers.
 
-## Check your understanding
+## Magnitude matching across vector banks
 
-**Question:** For \(h=3u+w\) with \(u^\top w=0\), what is \(Ph\)?
-Does fixed addition by \(-u\) give the same result?
-
-**Answer:** \(Ph=w\). Fixed addition gives \(2u+w\), so they differ.
-
-**Question:** If two raw banks have norms 10 and 40, are edits with
-alpha \(0.5\) matched in magnitude?
-
-**Answer:** No. Their displacement norms are 5 and 20. Normalize or otherwise
-match the intended geometric quantity before interpreting a comparison;
-behavior still needs to be measured.
+For raw banks with norms 10 and 40, a shared coefficient of \(0.5\) produces
+displacement norms 5 and 20. Coefficient comparisons therefore require the
+vector normalization and effective perturbation to be specified.
+Matching geometric magnitude controls one aspect of the comparison;
+behavioral specificity and response quality remain empirical questions.

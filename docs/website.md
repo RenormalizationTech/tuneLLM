@@ -56,15 +56,17 @@ controls. Every Markdown page retains its URL and is included once in the site
 tree and search index. Publishing a historical page does not change its
 experimental status or acceptance decision.
 
-Each tuning section starts with **Mathematical foundations**, before its
-workflow and result pages. **Learn the mathematics** under Start here supplies
-shared notation, prerequisite equations, and links to the four foundations.
-These learning pages include worked examples, self-check answers and primary
-references; frozen experiment records keep their original conclusions.
+Each tuning section starts with **Theoretical background**, before its
+workflow and result pages. The shared background under Start here specifies
+notation, objectives and evaluation principles. These pages present analytical
+notes, numerical illustrations and primary references in the context of the
+research portfolio. Results and releases precede the shared theory page in the
+overview navigation; existing page URLs are retained. Frozen experiment records
+keep their original conclusions.
 
 Put a blank line between consecutive display-math blocks. Otherwise Markdown
 can treat both equations as prose before MathJax sees them. The site checker
-rejects TeX left outside math containers or literal code examples; the foundation
+rejects TeX left outside math containers or literal code examples; the theory-page
 tests also compare source-delimited equation counts with parsed math counts.
 Browser checks then verify typesetting and errors. Counting rendered containers
 alone cannot detect equations that never reached the math parser.

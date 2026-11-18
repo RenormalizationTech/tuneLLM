@@ -1,22 +1,23 @@
-# Mathematical foundations for tuning LLMs
+# Theoretical background and notation
 
-Tuning becomes easier to reason about when we separate three operations:
-changing the stored weights, learning a weight update, and changing activations
-during a forward pass. Quantization does the first, LoRA/QLoRA the second,
-and the steering methods here the third. This guide supplies the notation
-needed to understand all four research sections.
+The studies in this repository act at three distinct levels: weight
+representation, trainable parameter updates, and inference-time activations.
+Quantization changes the first, LoRA/QLoRA optimizes the second, and activation
+steering intervenes on the third. These distinctions define the comparisons
+needed to attribute changes in task performance, memory and response behavior.
 
-Start with vectors, matrix multiplication, derivatives and conditional
-probability. The examples below are teaching calculations, not new model
-experiments. Each section's **Mathematical foundations** page continues from
-here; its implementation and results pages explain what this project tested.
+This section specifies the notation, likelihood objectives and computational
+structure used to interpret those experiments. Method-specific background
+connects the formulations to implementation choices and recorded outcomes.
+Numerical illustrations describe analytical properties; empirical claims
+are linked to the corresponding experiment records.
 
-| Section | First principles | Practical question |
+| Method | Analytical basis | Relevance to the experiments |
 | --- | --- | --- |
-| [Quantization](quantization_foundations.md) | Discrete approximations and propagated error | What changes when weights use fewer bits? |
-| [LoRA and QLoRA](qlora_foundations.md) | Low-rank updates and gradients | What is learned, and where does the memory go? |
-| [Refusal steering](refusal_foundations.md) | Vector geometry and interventions | How do subtraction and projection differ? |
-| [Trait steering](trait_foundations.md) | Attention, gates and feedback | Why can stronger style reduce quality? |
+| [Quantization](quantization_foundations.md) | Discrete approximations and propagated error | Representation, runtime and capability comparisons. |
+| [LoRA and QLoRA](qlora_foundations.md) | Low-rank updates and gradients | Trainable state, memory requirements and task adaptation. |
+| [Refusal steering](refusal_foundations.md) | Vector geometry and interventions | Operator scope, coefficient units and response-quality tradeoffs. |
+| [Trait steering](trait_foundations.md) | Attention, gates and feedback | Control strength, coupling and coherence. |
 
 ## Shapes and notation
 
@@ -42,7 +43,7 @@ For \(h=(3,4)\), \(\|h\|_2=5\). For unit \(u=(1,0)\),
 Cosine similarity instead divides the dot product by both norms and lies
 between \(-1\) and \(1\) for nonzero vectors.
 
-## From logits to a generated sequence
+## Autoregressive likelihood and decoding { #from-logits-to-a-generated-sequence }
 
 A decoder assigns a distribution to the next token. If its logits are
 \(z\in\mathbb R^{|\mathcal V|}\), where \(\mathcal V\) is the vocabulary,
@@ -65,7 +66,7 @@ first tokens do not prove equal logits or equal later outputs. These
 autoregressive ideas underlie modern language-model training; see
 [Radford et al., Language Models are Unsupervised Multitask Learners, section 2](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf).
 
-## What a supervised loss actually rewards
+## Supervised objectives and loss reduction { #what-a-supervised-loss-actually-rewards }
 
 For example \(i\), let \(n_i\) be the number of supervised answer tokens.
 Teacher forcing supplies the reference prefix \(y_{i,<t}\):
@@ -207,7 +208,7 @@ Grouped-query attention shares each KV head across several query heads;
 Some architectures also normalize queries/keys before rotation; the exact
 ordering belongs to the tested implementation.
 
-## Why lower loss is not the whole evaluation
+## Evaluation beyond likelihood { #why-lower-loss-is-not-the-whole-evaluation }
 
 Training minimizes a reference-based surrogate. The intended outcome may
 instead be grounded answers, good abstracts, useful responses or coherent style.
@@ -231,28 +232,19 @@ independent questions, fix data leakage, or remove judge bias.
 [Efron, Bootstrap Methods: Another Look at the Jackknife](https://doi.org/10.1214/aos/1176344552)
 introduces bootstrap resampling; the paper grouping here follows this study's data structure.
 
-Choose settings on development data, then freeze them before final evaluation.
+Development-based selection and fixed final evaluation separate optimization
+from assessment.
 A passed point-estimate retention rule is not a proof of statistical
 noninferiority. A small paired interval supports a claim on the sampled task
 and protocol, not every future prompt.
 
-## Check your understanding
+## Interpretation notes
 
-**Question:** Two models have the same greedy next token. Must their
-cross-entropy be equal?
+**Token agreement and likelihood.** Two distributions can select the same
+greedy token while assigning it probabilities \(0.6\) and \(0.9\), corresponding
+to losses \(0.511\) and \(0.105\) nats. Token agreement therefore provides a
+weaker comparison than agreement of the underlying distributions.
 
-**Answer:** No. If the correct token is largest with probabilities \(0.6\) and
-\(0.9\), both choose it, but losses are \(0.511\) and \(0.105\) nats.
-
-**Question:** Does assigning zero loss to prompt tokens make the model ignore
-the prompt?
-
-**Answer:** No. Answer-token predictions still depend on the prompt through
-the forward computation and its gradient paths.
-
-## Reading map
-
-Continue with the first foundation page in the section you want to understand.
-Each includes primary references, a worked example and its connection to the
-project. The [reference index](references.md) collects papers and software;
-the [reproduction guide](reproduce.md) describes actual runtime requirements.
+The [reference index](references.md) identifies the source literature and
+software. Runtime requirements and artifact loading are specified in the
+[reproduction guide](reproduce.md).

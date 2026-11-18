@@ -1,12 +1,13 @@
-# Mathematical foundations of LoRA and QLoRA
+# Theoretical background for LoRA and QLoRA
 
-Fine-tuning changes a model's parameters to improve an objective on examples.
-LoRA restricts the trainable change to a low-rank factorization. QLoRA adds a
-quantized frozen base to reduce storage requirements. Neither method guarantees
-that fitting references better will improve the task metric you care about.
+Parameter-efficient fine-tuning restricts the trainable update to a subset or
+parameterization of the model. LoRA uses low-rank factors; QLoRA combines these
+factors with a quantized frozen base. The objective, parameterization and
+runtime precision jointly determine the adaptation being evaluated.
 
-Prerequisites: [losses and gradients](learning_foundations.md) and
-[quantization](quantization_foundations.md). Then read the
+The formulation uses the [shared loss and gradient notation](learning_foundations.md)
+and [quantized reconstruction model](quantization_foundations.md).
+Implementation choices and empirical outcomes are documented in the
 [workflow](model_workflow.md) and [27B task results](qwen38_release_plan.md).
 
 ## A low-rank weight update
@@ -28,7 +29,7 @@ rank-\(r\) map. The original
 introduces this parameterization. Low-rank task updates are a useful modeling
 hypothesis, not a theorem that every task has a low-rank optimum.
 
-**Worked example.** One hypothetical \(4096\times4096\) matrix contains
+**Parameter accounting.** One hypothetical \(4096\times4096\) matrix contains
 \(16,777,216\) entries. At \(r=16\),
 
 \[
@@ -49,7 +50,7 @@ also documents dropout, target selection and alternative scaling.
 Our registered 27B runs used \(\alpha/r=32/16=2\), not the rsLoRA
 \(\alpha/\sqrt r\) convention.
 
-## How gradients reach the adapter
+## Adapter gradients and initialization { #how-gradients-reach-the-adapter }
 
 Let \(g=\partial L/\partial y\) for one example, omitting dropout for clarity.
 The chain rule gives
@@ -68,8 +69,8 @@ desired adapter training.
 A common initialization makes \(B=0\) and \(A\) nonzero/random. Then the
 initial update is zero, the first task-loss gradient for \(A\) is zero, and
 \(B\) can receive a nonzero gradient. If both factors were zero, both task-loss
-gradients would be zero. This follows directly from the equations; it explains
-why “start with no model change” does not mean initializing both factors to zero.
+gradients would be zero. Zero-update initialization
+therefore requires a nonzero factor to preserve a task-gradient path.
 Zero task-loss gradient does not exclude an AdamW decay update to nonzero \(A\).
 [LoRA](https://arxiv.org/html/2106.09685v2#S4.SS1) describes the zero-update initialization.
 
@@ -87,7 +88,7 @@ The factorization is not unique: \(BA=(BC)(C^{-1}A)\) for invertible
 on the factors can matter even when two factorizations initially give the
 same effective update.
 
-## What changes in QLoRA
+## QLoRA formulation { #what-changes-in-qlora }
 
 Let \(q_0=Q(W_0)\) denote stored quantization codes and state, and
 \(\widetilde W_0=D(q_0)\) their reconstructed numerical weights:
@@ -114,7 +115,7 @@ FP32 parameter storage does not imply every operation executes in FP32.
 See the [published loading recipe](../releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md);
 do not replace that recipe with “everything is four-bit.”
 
-## Where memory goes
+## Memory accounting { #where-memory-goes }
 
 An accounting model is
 
@@ -142,7 +143,7 @@ trades recomputation for activation storage; gradient accumulation reduces
 the microbatch requirement while preserving the registered loss reduction.
 Neither changes the number of trainable parameters.
 
-## Targets and masks define what the adapter learns
+## Training targets and loss masks { #targets-and-masks-define-what-the-adapter-learns }
 
 Our two 27B adapters had independent training data and weights:
 
@@ -186,19 +187,13 @@ Thus adapter reload, higher-precision merging and merged GGUF export are
 different verification tasks. This project published separate adapters;
 it did not claim that an unmeasured merged Q4 model reproduces their results.
 
-## Check your understanding
+## Scaling and comparison notes
 
-**Question:** With \(B=0\), \(Ax\ne0\) and \(g\ne0\), which factor can receive
-a nonzero first task-loss gradient?
+With fixed alpha, doubling rank halves \(\gamma=\alpha/r\) while expanding the
+allowed update space. The effective perturbation is \(\|\gamma BAx\|\).
+Rank comparisons therefore need an explicit scaling convention and measured
+outcomes; rank alone does not determine intervention magnitude.
 
-**Answer:** \(B\). Its gradient is \(\gamma g(Ax)^\top\);
-the task-loss gradient for \(A\) contains \(B^\top=0\).
-
-**Question:** Does doubling rank always double the applied perturbation?
-
-**Answer:** No. With fixed alpha, \(\gamma=\alpha/r\) halves, while the factors
-and the allowed update space also change. The actual perturbation is
-\(\|\gamma BAx\|\), not rank alone.
-
-For the concrete optimization, masking and checkpoint decisions, continue to
-[the model workflow](model_workflow.md) and [registered 27B plan](qwen38_release_plan.md).
+The [model workflow](model_workflow.md) and
+[registered 27B plan](qwen38_release_plan.md) specify optimization, masking
+and checkpoint-selection decisions.

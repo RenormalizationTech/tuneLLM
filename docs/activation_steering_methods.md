@@ -1,7 +1,7 @@
 # How the two refusal-steering approaches work
 
-For a learning introduction, read [refusal-steering foundations](refusal_foundations.md)
-first: contrastive directions, coefficient units, projection geometry and
+[Refusal-steering background](refusal_foundations.md) defines contrastive
+directions, coefficient units, projection geometry and
 the distinction between a mechanical intervention and a behavioral claim.
 
 This explains the two intervention families used in run 03. Both alter

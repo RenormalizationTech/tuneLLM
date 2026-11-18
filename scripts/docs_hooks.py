@@ -18,7 +18,7 @@ from markdown.treeprocessors import Treeprocessor
 
 REPO = "https://github.com/RenormalizationTech/tuneLLM"
 CURRENT = {
-    "Start here": ["index.md", "learning_foundations.md", "showcase.md", "qwen38_release_plan.md", "reproduce.md", "project_tracks.md"],
+    "Start here": ["index.md", "showcase.md", "qwen38_release_plan.md", "reproduce.md", "project_tracks.md", "learning_foundations.md"],
     "Quantization": ["quantization_foundations.md", "benchmark_summary.md", "execution.md"],
     "LoRA and QLoRA": ["qlora_foundations.md", "physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
     "Refusal steering": ["refusal_foundations.md", "refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],
@@ -26,11 +26,11 @@ CURRENT = {
     "Guides and references": ["references.md", "file_organization.md", "website.md"],
 }
 NAV_LABELS = {
-    "learning_foundations.md": "Learn the mathematics",
-    "quantization_foundations.md": "Mathematical foundations",
-    "qlora_foundations.md": "Mathematical foundations",
-    "refusal_foundations.md": "Mathematical foundations",
-    "trait_foundations.md": "Mathematical foundations",
+    "learning_foundations.md": "Theoretical background",
+    "quantization_foundations.md": "Theoretical background",
+    "qlora_foundations.md": "Theoretical background",
+    "refusal_foundations.md": "Theoretical background",
+    "trait_foundations.md": "Theoretical background",
     "index.md": "Overview", "showcase.md": "Results and portfolio",
     "qwen38_release_plan.md": "27B results and releases", "reproduce.md": "Reproduce",
     "project_tracks.md": "Project status", "benchmark_summary.md": "4B measurements",

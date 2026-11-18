@@ -1,14 +1,15 @@
-# Mathematical foundations of quantization
+# Theoretical background for quantization
 
-Quantization replaces a high-precision number with a code from a finite set.
-It saves storage by accepting approximation error. Learning to choose a format
-means understanding both that error and the runtime that consumes it.
+Quantization represents high-precision weights using a finite codebook and
+associated reconstruction parameters. Storage is reduced at the cost of
+approximation error whose effect depends on the input distribution, model
+computation and inference backend.
 
-Prerequisites: [vectors, probabilities and model computation](learning_foundations.md).
-After this foundation, read the [4B measurements](benchmark_summary.md),
-[conversion workflow](execution.md) and [27B comparison](qwen38_release_plan.md).
-The formulas and small examples here explain principles; they are not claims
-that every exported tensor uses one uniform quantizer.
+The [shared notation](learning_foundations.md) defines the linear algebra
+used below. The [4B measurements](benchmark_summary.md),
+[conversion workflow](execution.md) and [27B comparison](qwen38_release_plan.md)
+specify the evaluated implementations. The uniform quantizer is an analytical
+model; exported formats can mix quantizer types and tensor precisions.
 
 ## Uniform quantization and reconstruction
 
@@ -33,7 +34,7 @@ For nearest rounding without clipping, each scalar has error
 additionally assumes error is uniformly distributed over a rounding interval;
 it is a model, not a guarantee for neural weights.
 
-**Worked example.** Take \(s=0.1,z=0\), codes \(-7,\ldots,7\).
+**Numerical illustration.** Take \(s=0.1,z=0\), codes \(-7,\ldots,7\).
 For \(w=0.26\), \(q=3\), \(\widehat w=0.3\), and error is \(0.04\).
 For \(w=1.0\), clipping gives \(q=7,\widehat w=0.7\);
 error is \(0.3\), so the no-clipping bound no longer applies.
@@ -42,7 +43,7 @@ A single large outlier can force a large scale for a whole tensor. Using
 separate scales for blocks or channels reduces that coupling, at the cost
 of storing additional metadata.
 
-## Why equally small weight errors can behave differently
+## Error propagation through linear layers { #why-equally-small-weight-errors-can-behave-differently }
 
 Let the reconstructed matrix be \(\widehat W=W+E\). For a fixed input \(x\),
 
@@ -71,7 +72,7 @@ is its Jacobian. The approximation becomes unreliable for large perturbations
 or when generated tokens change. There is no universal conversion from
 “weight error of 1%” to “task accuracy loss of 1%.”
 
-## NF4 and quantizing the scales
+## NF4 and scale quantization { #nf4-and-quantizing-the-scales }
 
 NF4 uses a nonuniform 16-value codebook designed around approximately
 normally distributed weights. A conceptual block encoding is
@@ -97,7 +98,7 @@ gradients and optimizer states into four-bit values.
 introduces NF4 and double quantization. These are distributional design choices,
 not a theorem of lossless model compression.
 
-## Storage precision is not compute precision
+## Storage and compute precision { #storage-precision-is-not-compute-precision }
 
 For \(P\) uniformly quantized weights, a storage estimate is
 
@@ -150,19 +151,17 @@ Transformers reference isolating the effect of NF4. A different batch size,
 template, kernel or precision can also change outputs. Similar small-subset
 counts do not prove equivalent models.
 
-## Check your understanding
+## Sensitivity and evaluation notes
 
-**Question:** If a scale doubles and there is no clipping, how does the
-nearest-rounding worst-case bound change?
+**Scale sensitivity.** Without clipping, the nearest-rounding bound scales
+linearly with the quantization step: doubling the step from \(s\) to \(2s\)
+raises the bound from \(s/2\) to \(s\).
 
-**Answer:** It doubles, from \(s/2\) to \(s\), because the new spacing is \(2s\).
+**Input dependence.** For \(E=\operatorname{diag}(0.1,0)\), the inputs
+\(x_1=(10,0)\) and \(x_2=(0,10)\) produce errors \(Ex_1=(1,0)\) and
+\(Ex_2=(0,0)\). A fixed weight error can therefore have substantially different
+effects across inputs.
 
-**Question:** For \(E=\operatorname{diag}(0.1,0)\), compare inputs
-\(x_1=(10,0)\) and \(x_2=(0,10)\).
-
-**Answer:** The errors are \(Ex_1=(1,0)\) and \(Ex_2=(0,0)\).
-The same weight approximation affects the two inputs differently.
-
-**Practical lesson:** evaluate the exported runtime on the intended task and
-verify its reload. Bit count, scalar error and compression ratio each answer
-a different question.
+Bit width, reconstruction error, compression ratio and task performance measure
+different properties. The project evaluates each exported runtime on fixed
+tasks and verifies its reload separately.

@@ -1,0 +1,59 @@
+{
+  "reviewed_at_utc": "2026-11-18T08:06:02.356109+00:00",
+  "base_commit": "503d47533caa9996f735c0cb9c2aebf6452c0d4d",
+  "scope": "Reframe theory documentation for a recruiter-facing research portfolio",
+  "changes": [
+    "Rename all five theory titles and navigation labels to Theoretical background",
+    "Remove Check your understanding, Question/Answer labels, prerequisite and lesson framing",
+    "Retain useful content as analytical, interpretation, sensitivity and scaling notes; remove repetition",
+    "Use declarative technical headings and preserve renamed section anchors",
+    "Prioritize results/releases in overview navigation; keep theory first within each method section"
+  ],
+  "claude_review": "Final read-only review found no remaining blocking tone or accuracy issues",
+  "preservation_checks": {
+    "docs/learning_foundations.md": {
+      "sha256": "fa41c372bf25e5fa78a98ed8a81f8a5dc8103f9308559bd3a2cc44cdb336f9f5",
+      "display_equations_preserved": 11,
+      "primary_reference_URLs_preserved": true
+    },
+    "docs/quantization_foundations.md": {
+      "sha256": "22f2cbd276ebd606d4eeae83ebb12a5805864f7eae29e5555224b61407c3ee62",
+      "display_equations_preserved": 6,
+      "primary_reference_URLs_preserved": true
+    },
+    "docs/qlora_foundations.md": {
+      "sha256": "904a1fb04d9ffc16fcec1e40f52425d3280258714c7f405f613c5fcf9d03c260",
+      "display_equations_preserved": 7,
+      "primary_reference_URLs_preserved": true
+    },
+    "docs/refusal_foundations.md": {
+      "sha256": "1bc651105f867709c528e0868a33429b3668a01273b8ab9683b7cece4cd73f69",
+      "display_equations_preserved": 7,
+      "primary_reference_URLs_preserved": true
+    },
+    "docs/trait_foundations.md": {
+      "sha256": "15871e4903c0d0a03659e0340434cc4a7e8118c98e548bf872d1bf1991e26747",
+      "display_equations_preserved": 11,
+      "primary_reference_URLs_preserved": true
+    }
+  },
+  "existing_page_URLs_unchanged": true,
+  "scientific_results_protocols_and_model_source_unchanged": true,
+  "validation": {
+    "documentation_tests_passed": 13,
+    "strict_build_passed": true,
+    "HTML_pages": 111,
+    "internal_links_checked": 15896,
+    "broken_links_or_unprocessed_TeX": 0,
+    "math_pages_browser_checked": 8,
+    "source_and_rendered_expressions": 308,
+    "MathJax_errors": 0,
+    "desktop_and_mobile_overflow": false
+  },
+  "browser_receipt": {
+    "path": "outputs/docs-research-tone-01/browser-check-01.json",
+    "sha256": "100f6783263e7c7235c2d421bfb3fef85918662300509082b36838dc2d6a92b0"
+  },
+  "GPU_work": false,
+  "publication_status": "Reviewed before commit; deployment verified separately."
+}

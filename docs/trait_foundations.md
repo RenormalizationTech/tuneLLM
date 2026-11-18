@@ -1,13 +1,15 @@
-# Mathematical foundations of trait steering
+# Theoretical background for trait steering
 
-Trait steering aims to change how an answer is written while retaining its
-usefulness and meaning. A style score is an output measurement; an activation
-projection or gate is an internal control signal. They are not interchangeable.
+Trait steering modifies inference-time activations to influence response style.
+Activation projections and gate values specify internal control signals;
+trait expression, coherence and semantic preservation are measured at the
+output level.
 
-Prerequisites: [attention and residual states](learning_foundations.md#attention-and-the-residual-stream)
-and [steering geometry](refusal_foundations.md). Then read the
-[measured trait references](steering_reference.md) and
-[GCAD implementation discussion](gcad_and_combined_control.md).
+The formulation builds on [attention and residual states](learning_foundations.md#attention-and-the-residual-stream)
+and [steering geometry](refusal_foundations.md).
+The [trait results](steering_reference.md) and
+[GCAD implementation discussion](gcad_and_combined_control.md) connect these
+operators to the measured experiments.
 
 ## A direction and a target coordinate
 
@@ -57,7 +59,7 @@ computation, its error contracts for \(0<\alpha<2\).
 A decoder adds nonlinear layers, new tokens and a changing context between
 edits, so this is not a stability theorem for generation.
 
-**Worked example.** For \(p=2,T=5\), alpha 1 adds \(3u\), reaching coordinate 5.
+**Numerical illustration.** For \(p=2,T=5\), alpha 1 adds \(3u\), reaching coordinate 5.
 Alpha 1.4 adds \(4.2u\), reaching 6.2. Bigger coefficients can overshoot a target
 even though the direction is unchanged.
 
@@ -73,7 +75,7 @@ For a non-last prefill position \(j\), the same broadcast gives
 A post-block edit can affect later layers' computed keys and values; it does
 not retroactively alter KV entries already computed before the hook.
 
-## GCAD starts from the attention writer
+## GCAD attention-delta extraction { #gcad-starts-from-the-attention-writer }
 
 GCAD stands for Gated Cropped Attention-Delta. At one layer, let
 \(A^{(h)}_{tj}\) be head \(h\)'s ordinary causal attention weight from query
@@ -123,7 +125,7 @@ The [pinned extractor](https://github.com/NihiI-obstat/Gated-Cropped-Attention-D
 records the concrete pooling and eager-attention path. A different attention
 kernel during inference need not reproduce extraction arithmetic exactly.
 
-## The gate is a compatibility proxy
+## GCAD gate { #the-gate-is-a-compatibility-proxy }
 
 A representative demand statistic and injection rule in our pinned runtime are
 
@@ -158,7 +160,7 @@ Position changes can also change this compatibility score. A systematic
 position-dependent drift in a particular steered run is a hypothesis to test,
 not a result established by our trait evaluations.
 
-**Worked example.** For \(b=2,s=1.5\), mean demand gives \(c=2\).
+**Numerical illustration.** For \(b=2,s=1.5\), mean demand gives \(c=2\).
 A demand difference \(+1\) gives \(c\approx3.270\);
 a difference \(-1\) gives \(c\approx0.730\).
 The actual displacement is \(c\|\Delta_\ell\|_2\). Equal \(b\) values do not
@@ -174,7 +176,7 @@ The output is already in residual coordinates: adding \(c\Delta\) there
 also adds that displacement to the next residual sum. The distinction is
 the extraction, gate and location before the MLP, not an unrelated vector space.
 
-## Why combining trait controls can fail
+## Interactions between combined controls { #why-combining-trait-controls-can-fail }
 
 At one writer, suppose several trait perturbations sum to
 \(\delta a=\sum_k c_k\Delta_k\). Then
@@ -213,18 +215,13 @@ qualified none of five combined candidates. Direction geometry helps formulate
 hypotheses; it does not replace matched-task measurements of all target traits,
 coherence and meaning. The separate 27B sarcasm study remains deferred.
 
-## Check your understanding
+## Interpretation of control signals
 
-**Question:** Can a GCAD gate value \(c=3\) be interpreted as a 75% probability
-of sarcasm when \(b=2\)?
+A gate value \(c=3\) at base strength \(b=2\) specifies the multiplier of an
+attention-output delta. A probabilistic interpretation would require separate
+calibration against observed response behavior.
 
-**Answer:** No. It is a multiplier of a raw attention-output delta, not a
-calibrated output probability.
-
-**Question:** If two deltas are orthogonal, are their induced traits independent?
-
-**Answer:** No. Orthogonality removes their cross-term in squared perturbation
-norm, but says nothing sufficient about nonlinear downstream behavior.
-
-Continue to [trait results](steering_reference.md) to compare these mechanisms
-with what the project actually observed.
+Orthogonality removes the cross-term between two deltas in squared perturbation
+norm. It is insufficient to establish behavioral independence after downstream
+computation. The [trait results](steering_reference.md) report the observed
+coherence costs and cross-effects.

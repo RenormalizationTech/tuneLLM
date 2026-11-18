@@ -1,8 +1,8 @@
 # Reusable model adaptation workflow
 
-Start with [LoRA and QLoRA foundations](qlora_foundations.md) for the low-rank
+[LoRA and QLoRA background](qlora_foundations.md) defines the low-rank
 update, gradient flow, memory accounting and training objective used in this
-workflow. The [shared prerequisites](learning_foundations.md) explain the notation.
+workflow. The [shared theoretical background](learning_foundations.md) specifies the notation.
 
 Agreed with the user on 2026-11-12. The first implementation uses the pinned
 Qwen/Qwen3-4B checkpoint. Learning quantization and fine-tuning remains the main

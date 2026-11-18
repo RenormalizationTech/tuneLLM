@@ -5,13 +5,14 @@ experiments. These references identify the methods, software and datasets;
 project outcomes are reported in the [four-behavior record](steering_reference.md)
 and [benchmark summary](benchmark_summary.md).
 
-## Learning foundations
+## Theoretical background { #learning-foundations }
 
-Each research section begins with a mathematical introduction. Start with
-[shared notation and prerequisites](learning_foundations.md), then choose
+Each research section opens with the formulations and assumptions underlying
+its methods. The background pages cover
+[notation, training and evaluation](learning_foundations.md),
 [quantization](quantization_foundations.md), [LoRA and QLoRA](qlora_foundations.md),
-[refusal steering](refusal_foundations.md), or [trait steering](trait_foundations.md).
-The pages include worked examples and solutions. Inline citations identify
+[refusal steering](refusal_foundations.md), and [trait steering](trait_foundations.md).
+Inline citations identify
 which mechanism a source supports; project result records support our measured
 outcomes. A paper's reported success is not a guarantee for another task or runtime.
 

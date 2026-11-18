@@ -74,7 +74,7 @@ def test_tables_keep_semantics_inside_keyboard_scroll_region(tmp_path):
     assert region.find("table/tbody/tr/td").text == "Example"
 
 
-def test_tuning_sections_begin_with_their_current_foundations():
+def test_tuning_sections_begin_with_their_theoretical_background():
     root = Path(__file__).resolve().parents[1]
     nav = {group: entries for entry in docs.navigation(root/"docs") for group, entries in entry.items()}
     for group, file in {
@@ -83,8 +83,8 @@ def test_tuning_sections_begin_with_their_current_foundations():
         "Refusal steering": "refusal_foundations.md",
         "Trait steering": "trait_foundations.md",
     }.items():
-        assert nav[group][0] == {"Mathematical foundations": file}
-        assert file in docs.CURRENT[group]  # Teaching pages must not receive archive banners.
+        assert nav[group][0] == {"Theoretical background": file}
+        assert file in docs.CURRENT[group]  # Current theory must not receive archive banners.
     assert "learning_foundations.md" in docs.CURRENT["Start here"]
 
 
@@ -174,7 +174,7 @@ def test_all_foundation_source_equations_reach_the_math_parser():
     root = Path(__file__).resolve().parents[1]
     for name in ("learning", "quantization", "qlora", "refusal", "trait"):
         source = (root/"docs"/(name+"_foundations.md")).read_text()
-        # These teaching pages contain no literal math examples in code fences.
+        # These theory pages contain no literal math examples in code fences.
         # Count source delimiters, independently of what the parser recognizes.
         expected = len(re.findall(r"\\\([\s\S]*?\\\)", source)) + len(re.findall(r"(?m)^\\\[\s*$", source))
         rendered = markdown.markdown(source, extensions=["tables", "pymdownx.arithmatex"],

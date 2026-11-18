@@ -1,6 +1,6 @@
 # Established steering references
 
-Start with [trait-steering foundations](trait_foundations.md) for the GCAD
+[Trait-steering background](trait_foundations.md) defines the GCAD
 attention delta and gate, SAPS projection feedback, and why geometric directions
 do not guarantee independent behaviors.
 
