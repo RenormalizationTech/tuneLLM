@@ -5,11 +5,17 @@ repo_url: https://github.com/RenormalizationTech/tuneLLM
 repo_name: GitHub source
 edit_uri: blob/main/docs/
 docs_dir: docs
+exclude_docs: |
+  /theme/
 site_dir: outputs/docs-site-01/site
 use_directory_urls: true
 theme:
-  name: mkdocs
-  navigation_depth: 3
+  name: readthedocs
+  custom_dir: docs/theme
+  navigation_depth: 5
+  titles_only: true
+  prev_next_buttons_location: none
+  sticky_navigation: false
   highlightjs: false
 plugins:
   - search
@@ -32,6 +38,7 @@ markdown_extensions:
 extra_css:
   - stylesheets/portfolio.css
 extra_javascript:
+  - javascripts/navigation.js
   - javascripts/math.js
   - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
   - javascripts/diagrams.js

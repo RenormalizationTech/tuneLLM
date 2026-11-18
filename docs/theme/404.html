@@ -1,0 +1,8 @@
+{% extends "main.html" %}
+{% block content %}
+<article id="main-content" tabindex="-1">
+  <h1>Page not found</h1>
+  <p>This address does not match a documentation page. Use the site menu or search to find the topic.</p>
+  <p><a href="{{ nav.homepage.url|url }}">Return to the overview</a></p>
+</article>
+{% endblock %}

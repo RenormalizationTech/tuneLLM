@@ -7,6 +7,21 @@ adaptation, refusal and written traits. The experiments compare interventions
 against fixed baselines and report quality costs, unsuccessful transfers and
 retained experimental references together.
 
+## Find what you need
+
+| Destination | What you will find |
+| --- | --- |
+| [Results and portfolio](showcase.md) | Main findings, CV bullets, interview summary and saved examples. |
+| [27B results and releases](qwen38_release_plan.md) | Completed quantization and QASPER/PRL adapter results, decisions and limitations. |
+| [Release catalog](../releases/README.md) | All nine public packages, model cards and pinned Hugging Face revisions. |
+| [Reproduce](reproduce.md) | CPU checks, loading instructions and separate runtime environments. |
+| [Project status](project_tracks.md) | Completed work and deferred studies. |
+
+Use the left sidebar to switch topics, its search box to find a term, and
+**On this page** to jump between headings. On a phone, open **Menu** for the
+same site navigation. Historical protocols are under **Research archive**;
+they remain searchable and keep their original URLs.
+
 Start with the [results and saved examples](showcase.md), then use the
 [reproduction guide](reproduce.md) to inspect an artifact or run the portable
 CPU checks. [GitHub](https://github.com/RenormalizationTech/tuneLLM) contains the
@@ -17,6 +32,7 @@ hosts nine published artifacts, including the evaluated 27B NF4 and Q4_K_M bases
 
 | Track | Question | Main evidence |
 | --- | --- | --- |
+| 27B quantization and QLoRA | Does adaptation improve the intended task beyond prompting? | [QASPER gains and PRL negative result](qwen38_release_plan.md), with fixed task/retention gates and four verified public packages. |
 | Quantization | What changes when a model is compressed? | 4B BF16/Q8/Q4 measurements and [fixed-subset capability comparisons](benchmark_summary.md). |
 | Physics QLoRA | How does domain-text adaptation affect fit and general tasks? | Lower paper-text NLL with a numeric math regression and better answer formatting; [training and evaluation](physics_prl_execution.md). |
 | Refusal steering | How do subtraction and projection affect willingness and usefulness? | A dose/quality tradeoff and a selected benign case demonstration; [7B execution record](refusal_7b_transfer_execution.md). |

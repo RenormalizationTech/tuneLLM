@@ -1,0 +1,69 @@
+{
+  "reviewed_at_utc": "2026-11-18T06:47:28.626269+00:00",
+  "scope": "CPU-only documentation navigation redesign, reviewed with existing Herdr Claude advisor",
+  "base_commit": "c7ae348644fef70d9cf5c6a889ea10730cfc5c6b",
+  "changes": [
+    "Persistent full-height, independently scrolling sidebar and search",
+    "Short current-page labels and seven top-level groups; one collapsed research archive",
+    "Separate page outline, direct results/release/reproduction routes and home-page directory",
+    "Removed all Previous/Next controls including the inherited version bar",
+    "Mobile keyboard/focus/inert behavior, no-JavaScript fallback and navigation on search/404",
+    "Underlined prose links, visible two-tone focus rings and semantic scrollable tables"
+  ],
+  "claude_review": {
+    "implementation_pass": "No remaining serious issues; final local and deployed browser checks are separate evidence",
+    "actionable_fixes_applied": [
+      "404/search template coverage",
+      "Link/focus contrast",
+      "Inert background and modal mobile drawer",
+      "Reachable mobile skip link",
+      "Navigation landmarks and table semantics",
+      "Repeated H1 omitted from heading outline"
+    ]
+  },
+  "checks": {
+    "documentation_tests_passed": 9,
+    "strict_build_passed": true,
+    "html_pages": 106,
+    "internal_links_checked": 14574,
+    "broken_internal_links": 0,
+    "browser_desktop_width": 1440,
+    "browser_mobile_widths": [
+      768,
+      390,
+      375
+    ],
+    "browser_errors": [],
+    "search_results_for_QASPER": 22,
+    "mobile_404_navigation": true,
+    "no_javascript_mobile_navigation": true,
+    "horizontal_overflow": false,
+    "math_and_diagram_rendering_checked": true
+  },
+  "local_browser_evidence": {
+    "path": "outputs/docs-navigation-01/browser-check-01.json",
+    "sha256": "b4927d0baf8606efe404b356738a592e9765b9d46bf3731f57a7f47ea644157b",
+    "runner": "outputs/docs-navigation-01/browser-check.py",
+    "runner_sha256": "a3619895ba99ba49bcdf3c6f8dea5262d1de0d2c0722179932a4e2fa848d2af9"
+  },
+  "source_sha256": {
+    "mkdocs.yml": "ca014069207594f5cf2c839ecb753cad1786caa53cf49848440328cbd43666b2",
+    "scripts/docs_hooks.py": "caf7c57aec9784ab548eb6f1d26b0ce87c4b47f50917dcdf3251dd0a3a46ef14",
+    "docs/stylesheets/portfolio.css": "2f38466575530eaee269d5ced0506fad48ef13ebb8d6531b3c5f1812ad6b6635",
+    "docs/javascripts/navigation.js": "a8fccece0ec910e21d74430667e4f856d13468d316b07a3b1795fac3b054f0c7",
+    "docs/theme/main.html": "c4947c5b116dd35c13d8a4165e0fbd8f9023c6739ded6cea34042e6c568f9228",
+    "docs/theme/search.html": "d6233e5ca3c72fed620258ba6afa3b21dee9aef37604d441137446ff3a230509",
+    "docs/theme/404.html": "c42f8de0343ccdd383b40eb1ac41ba6b2655c8dd0974233c977b2cd9df1a4958",
+    "docs/theme/versions.html": "bff1424befe02e1534600990bbd68cb46e907cb7145fc3ed69a5f35ffa9a8877",
+    "docs/index.md": "b33dfbeb4d3b6f3e02a73d2fc3dfaedc7f0bc13513311e5b7b39d4c0a262e4aa",
+    "docs/website.md": "409ed539c52030a1e64c7a6fb4cedb9387ac1bf5769b24698f79ee7b4cedfb21",
+    "tests/test_docs_site.py": "470454adfdd1b0a6c101bb43afdcb21c26308a6e5080e6df9376ca96600aa328"
+  },
+  "preserved": "Research outcomes, frozen experiment sources, protocols, model assets and existing page URLs",
+  "gpu_work_performed": false,
+  "limitations": [
+    "Targeted keyboard/browser checks, not a complete WCAG conformance audit.",
+    "Theme search requires JavaScript; document links remain available without it."
+  ],
+  "publication_status": "Reviewed and locally validated before commit; live deployment verified separately."
+}

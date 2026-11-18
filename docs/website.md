@@ -38,9 +38,28 @@ assets. The site identifies such references and directs readers to the
 [reproduction guide](reproduce.md). A machine path in an old protocol is not a
 portable setup instruction.
 
-The navigation puts current results and reproduction first, groups the research
-tracks, and makes historical protocols and closeouts discoverable. Publishing a
-historical page does not change its experimental status or acceptance decision.
+## Finding your way around
+
+The persistent left sidebar contains site-wide navigation and search, with
+short links to the overview, results, 27B releases, reproduction and project
+status. Expand a research track for its guides. All historical protocols and
+closeouts are grouped under **Research archive**, collapsed unless you are
+reading an archived page. The current page is highlighted; its archive ancestors
+open automatically. The release catalog, GitHub source and Hugging Face are
+direct resource links in the sidebar.
+
+**On this page** is a separate heading outline: on the right of wide screens,
+or a collapsible panel above the article on smaller screens. On phones, the
+**Menu** button opens the sidebar, including search; **Escape** or **Close menu**
+closes it and restores keyboard focus. There are no sequential Previous/Next
+controls. Every Markdown page retains its URL and is included once in the site
+tree and search index. Publishing a historical page does not change its
+experimental status or acceptance decision.
+
+The layout uses MkDocs' bundled Read the Docs theme, a small Jinja override in
+`docs/theme/`, and local navigation CSS/JavaScript. No model libraries or
+additional theme dependency are required. The [MkDocs theme documentation](https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs)
+describes the underlying theme options.
 
 ## Publishing
 

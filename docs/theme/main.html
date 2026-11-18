@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <noscript><style>
+    @media (max-width: 768px) {
+      .wy-nav-side { position: relative; transform: none; width: 100%; height: auto; }
+      .wy-side-scroll { height: auto; }
+      .wy-nav-top, .nav-close { display: none; }
+    }
+  </style></noscript>
+{% endblock %}
+
+{% macro tree(items) %}
+  <ul class="site-tree">
+  {% for item in items %}
+    <li>
+    {% if item.is_section %}
+      <details{% if item.active or item.title == 'Start here' %} open{% endif %}>
+        <summary>{{ item.title }}</summary>
+        {{ tree(item.children) }}
+      </details>
+    {% else %}
+      <a href="{{ item.url|url }}"{% if item.active %} aria-current="page" class="active-page"{% endif %}>{{ item.title }}</a>
+    {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro outline(items) %}
+  <ul>
+  {% for item in items %}
+    <li><a href="{{ item.url }}">{{ item.title }}</a>{% if item.children %}{{ outline(item.children) }}{% endif %}</li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% block site_name %}
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a href="{{ nav.homepage.url|url }}" class="site-brand">tuneLLM</a>
+  <p class="site-tagline">Research results and reproduction</p>
+  <button type="button" class="nav-close" aria-label="Close navigation">Close menu</button>
+{% endblock %}
+
+{% block site_nav %}
+  <div id="site-navigation">
+    {{ tree(nav) }}
+    <div class="resource-links">
+      <a href="https://github.com/RenormalizationTech/tuneLLM/tree/main/releases">Release catalog ↗</a>
+      <a href="https://github.com/RenormalizationTech/tuneLLM">GitHub source ↗</a>
+      <a href="https://huggingface.co/RenormalizationTech">Hugging Face ↗</a>
+    </div>
+  </div>
+{% endblock %}
+
+{% block mobile_nav %}
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <button type="button" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">Menu</button>
+  <a href="{{ nav.homepage.url|url }}">tuneLLM</a>
+{% endblock %}
+
+{% block content %}
+  {% set outline_items = page.toc.items[0].children if page and page.toc.items|length == 1 else page.toc.items %}
+  {% if page and page.toc.items %}
+  <details class="page-outline-mobile">
+    <summary>On this page</summary>
+    {{ outline(outline_items) }}
+  </details>
+  {% endif %}
+  <div class="reading-layout">
+    <article id="main-content" tabindex="-1">{{ page.content }}</article>
+    {% if page and page.toc.items %}
+    <nav class="page-outline" aria-label="On this page">
+      <p>On this page</p>
+      {{ outline(outline_items) }}
+    </nav>
+    {% endif %}
+  </div>
+{% endblock %}

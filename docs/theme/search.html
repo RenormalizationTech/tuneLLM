@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+{% block content %}
+<article id="main-content" tabindex="-1">
+  <h1 id="search">Search results</h1>
+  <form id="content_search" action="{{ 'search.html'|url }}">
+    <label for="mkdocs-search-query">Search all documentation</label>
+    <input name="q" id="mkdocs-search-query" type="search" placeholder="Search the docs" autocomplete="off">
+  </form>
+  <div id="mkdocs-search-results" class="search-results" data-no-results-text="No results found" aria-live="polite">Searching…</div>
+  <noscript><p>Search requires JavaScript. All documentation remains available in the site menu.</p></noscript>
+</article>
+{% endblock %}

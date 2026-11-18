@@ -26,6 +26,8 @@ def test_all_pages_have_navigation_including_future_archives(tmp_path):
         return [p for x in value.values() for p in leaves(x)]
     actual = leaves(docs.navigation(ctx.docs))
     assert set(actual) == set(docs.document_hashes(ctx.docs)) and len(actual) == len(set(actual))
+    assert [list(group) for group in docs.navigation(ctx.docs)] == [["Start here"], ["Guides and references"], ["Research archive"]]
+    assert docs.navigation(ctx.docs)[0]["Start here"][0] == {"Overview": "index.md"}
 
 
 def test_parsed_links_references_images_and_fences_preserve_source(tmp_path):
@@ -58,6 +60,18 @@ def test_current_github_docs_links_and_source_line_links(tmp_path):
     assert docs.link_target(docs.REPO+"/blob/main/docs/old_protocol.md#heading", ctx) == ("old_protocol.md#heading", False)
     url = docs.REPO+"/blob/main/docs/old_protocol.md#L12"
     assert docs.link_target(url, ctx) == (url, False)
+
+
+def test_tables_keep_semantics_inside_keyboard_scroll_region(tmp_path):
+    from xml.etree import ElementTree
+    ctx = context(tmp_path)
+    source = "| Quantity | Value |\n| --- | --- |\n| Example | 42 |\n"
+    rendered = markdown.markdown(source, extensions=["tables", docs.SiteLinksExtension(ctx)])
+    root = ElementTree.fromstring("<main>" + rendered + "</main>")
+    region = root.find("div")
+    assert region.attrib == {"class": "table-scroll", "role": "region", "tabindex": "0", "aria-label": "Data table 1"}
+    assert region.find("table/thead/tr/th").text == "Quantity"
+    assert region.find("table/tbody/tr/td").text == "Example"
 
 
 def test_archive_notice_is_build_only_and_current_pages_unchanged(tmp_path, monkeypatch):

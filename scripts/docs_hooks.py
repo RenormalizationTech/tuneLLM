@@ -11,18 +11,33 @@ import os
 from pathlib import Path
 import subprocess
 from urllib.parse import quote, unquote, urlsplit, urlunsplit
-from xml.etree.ElementTree import SubElement
+from xml.etree.ElementTree import Element, SubElement
 
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 
 REPO = "https://github.com/RenormalizationTech/tuneLLM"
 CURRENT = {
-    "Start here": ["index.md", "showcase.md", "reproduce.md", "website.md", "file_organization.md", "project_tracks.md", "qwen38_release_plan.md", "references.md"],
+    "Start here": ["index.md", "showcase.md", "qwen38_release_plan.md", "reproduce.md", "project_tracks.md"],
     "Quantization": ["benchmark_summary.md", "execution.md"],
     "LoRA and QLoRA": ["physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
     "Refusal steering": ["refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],
     "Trait steering": ["steering_reference.md", "profanity_controller_workflow.md", "sarcasm_controller_workflow.md", "gcad_and_combined_control.md", "persona_literature_workflow.md"],
+    "Guides and references": ["references.md", "file_organization.md", "website.md"],
+}
+NAV_LABELS = {
+    "index.md": "Overview", "showcase.md": "Results and portfolio",
+    "qwen38_release_plan.md": "27B results and releases", "reproduce.md": "Reproduce",
+    "project_tracks.md": "Project status", "benchmark_summary.md": "4B measurements",
+    "execution.md": "Quantization workflow", "physics_prl_execution.md": "4B physics results",
+    "physics_prl_protocol.md": "4B physics protocol", "model_workflow.md": "Model workflow",
+    "refusal_7b_transfer_execution.md": "7B results", "activation_steering_methods.md": "Methods",
+    "refusal_reproducibility_review.md": "Reproducibility review",
+    "xstest_baseline_execution.md": "XSTest baseline", "xstest_stored_output_audit.md": "Stored-output audit",
+    "steering_reference.md": "Results and controls", "profanity_controller_workflow.md": "Profanity",
+    "sarcasm_controller_workflow.md": "Sarcasm", "gcad_and_combined_control.md": "Joint controls",
+    "persona_literature_workflow.md": "Literature workflow", "references.md": "References",
+    "file_organization.md": "File organization", "website.md": "Website guide",
 }
 
 
@@ -52,12 +67,12 @@ def navigation(docs):
     for group, names in CURRENT.items():
         present = [n for n in names if n in pages]
         if present:
-            nav.append({group: [{title(pages[n]): n} for n in present]}); used.update(present)
+            nav.append({group: [{NAV_LABELS.get(n, title(pages[n])): n} for n in present]}); used.update(present)
     archives = {}
     for name in sorted(set(pages)-used):
         archives.setdefault(archive_group(Path(name).name), []).append({title(pages[name]): name})
-    # Flat archive menus remain usable in the standard responsive MkDocs theme.
-    nav.extend({group: entries} for group, entries in sorted(archives.items()))
+    if archives:
+        nav.append({"Research archive": [{group: entries} for group, entries in sorted(archives.items())]})
     return nav
 
 
@@ -119,6 +134,15 @@ class SiteLinks(Treeprocessor):
                 SubElement(node, "span", {"class": "local-only-reference"}).text = " (local only)"
                 self.context.local_only += 1
             if target != original: self.context.rewritten += 1
+        # Scroll the wrapper, preserving the table's native display/semantics.
+        table_number = 0
+        for parent in list(root.iter()):
+            for index, child in enumerate(list(parent)):
+                if child.tag != "table": continue
+                table_number += 1
+                wrapper = Element("div", {"class": "table-scroll", "role": "region",
+                    "tabindex": "0", "aria-label": f"Data table {table_number}"})
+                parent.remove(child); wrapper.append(child); parent.insert(index, wrapper)
 
 
 class SiteLinksExtension(Extension):
