@@ -56,6 +56,12 @@ controls. Every Markdown page retains its URL and is included once in the site
 tree and search index. Publishing a historical page does not change its
 experimental status or acceptance decision.
 
+Each tuning section starts with **Mathematical foundations**, before its
+workflow and result pages. **Learn the mathematics** under Start here supplies
+shared notation, prerequisite equations, and links to the four foundations.
+These learning pages include worked examples, self-check answers and primary
+references; frozen experiment records keep their original conclusions.
+
 The layout uses MkDocs' bundled Read the Docs theme, a small Jinja override in
 `docs/theme/`, and local navigation CSS/JavaScript. No model libraries or
 additional theme dependency are required. The [MkDocs theme documentation](https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs)

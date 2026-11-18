@@ -18,14 +18,19 @@ from markdown.treeprocessors import Treeprocessor
 
 REPO = "https://github.com/RenormalizationTech/tuneLLM"
 CURRENT = {
-    "Start here": ["index.md", "showcase.md", "qwen38_release_plan.md", "reproduce.md", "project_tracks.md"],
-    "Quantization": ["benchmark_summary.md", "execution.md"],
-    "LoRA and QLoRA": ["physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
-    "Refusal steering": ["refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],
-    "Trait steering": ["steering_reference.md", "profanity_controller_workflow.md", "sarcasm_controller_workflow.md", "gcad_and_combined_control.md", "persona_literature_workflow.md"],
+    "Start here": ["index.md", "learning_foundations.md", "showcase.md", "qwen38_release_plan.md", "reproduce.md", "project_tracks.md"],
+    "Quantization": ["quantization_foundations.md", "benchmark_summary.md", "execution.md"],
+    "LoRA and QLoRA": ["qlora_foundations.md", "physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
+    "Refusal steering": ["refusal_foundations.md", "refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],
+    "Trait steering": ["trait_foundations.md", "steering_reference.md", "profanity_controller_workflow.md", "sarcasm_controller_workflow.md", "gcad_and_combined_control.md", "persona_literature_workflow.md"],
     "Guides and references": ["references.md", "file_organization.md", "website.md"],
 }
 NAV_LABELS = {
+    "learning_foundations.md": "Learn the mathematics",
+    "quantization_foundations.md": "Mathematical foundations",
+    "qlora_foundations.md": "Mathematical foundations",
+    "refusal_foundations.md": "Mathematical foundations",
+    "trait_foundations.md": "Mathematical foundations",
     "index.md": "Overview", "showcase.md": "Results and portfolio",
     "qwen38_release_plan.md": "27B results and releases", "reproduce.md": "Reproduce",
     "project_tracks.md": "Project status", "benchmark_summary.md": "4B measurements",

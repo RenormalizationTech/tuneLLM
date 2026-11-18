@@ -5,6 +5,38 @@ experiments. These references identify the methods, software and datasets;
 project outcomes are reported in the [four-behavior record](steering_reference.md)
 and [benchmark summary](benchmark_summary.md).
 
+## Learning foundations
+
+Each research section begins with a mathematical introduction. Start with
+[shared notation and prerequisites](learning_foundations.md), then choose
+[quantization](quantization_foundations.md), [LoRA and QLoRA](qlora_foundations.md),
+[refusal steering](refusal_foundations.md), or [trait steering](trait_foundations.md).
+The pages include worked examples and solutions. Inline citations identify
+which mechanism a source supports; project result records support our measured
+outcomes. A paper's reported success is not a guarantee for another task or runtime.
+
+### Probability and architecture
+
+- Radford et al. (2019), [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf), section 2: autoregressive likelihood and conditioning.
+- Vaswani et al. (2017), [Attention Is All You Need](https://arxiv.org/html/1706.03762v7), section 3: scaled dot-product attention and multi-head composition. Our pre-normalized/hybrid implementations differ from the original architecture.
+- Zhang and Sennrich (2019), [Root Mean Square Layer Normalization](https://arxiv.org/abs/1910.07467): normalization by RMS rather than mean-centering.
+- Su et al. (2021 preprint), [RoFormer](https://arxiv.org/abs/2104.09864): rotary positional embeddings.
+- Shazeer (2019), [Fast Transformer Decoding](https://arxiv.org/abs/1911.02150): sharing keys/values across query heads.
+- Ainslie et al. (2023), [GQA](https://aclanthology.org/2023.emnlp-main.298/): grouped-query attention between the multi-head and multi-query cases.
+
+### Optimization and statistical interpretation
+
+- Kingma and Ba (2014 preprint, ICLR 2015), [Adam](https://arxiv.org/abs/1412.6980): first/second gradient moments and bias correction.
+- Loshchilov and Hutter (ICLR 2019), [Decoupled Weight Decay Regularization](https://arxiv.org/abs/1711.05101): AdamW and why decoupled decay differs from an L2 penalty under adaptive optimization.
+- Efron (1979), [Bootstrap Methods: Another Look at the Jackknife](https://doi.org/10.1214/aos/1176344552): bootstrap resampling. Our paired, paper-grouped resampling and statistic are specified in the registered study, not asserted to be this paper's exact setup.
+- Dasigi et al. (2021), [A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers](https://arxiv.org/abs/2105.03011): QASPER questions and supporting evidence. Our final subset and paragraph-ID metrics have their own definitions.
+
+### Quantization background beyond the implemented formats
+
+- Jacob et al. (CVPR 2018), [Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference](https://arxiv.org/html/1712.05877v1), section 2: affine scales, zero points and integer arithmetic.
+- Frantar et al. (ICLR 2023), [GPTQ](https://arxiv.org/html/2210.17323v2), section 3: layer-output reconstruction error. Included to explain activation-aware approximation; GPTQ was not run in this project.
+- Kalajdzievski (2023), [A Rank Stabilization Scaling Factor for Fine-Tuning with LoRA](https://arxiv.org/abs/2312.03732): the alternative rsLoRA scaling convention. Our registered 27B adapters used ordinary alpha/r scaling.
+
 ## Adaptation and quantization
 
 - Hu et al. (2021), [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685). Frozen base weights plus trainable low-rank updates.

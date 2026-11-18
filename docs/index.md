@@ -11,6 +11,7 @@ retained experimental references together.
 
 | Destination | What you will find |
 | --- | --- |
+| [Learn the mathematics](learning_foundations.md) | Equations, intuition, worked examples and primary references for each tuning method. |
 | [Results and portfolio](showcase.md) | Main findings, CV bullets, interview summary and saved examples. |
 | [27B results and releases](qwen38_release_plan.md) | Completed quantization and QASPER/PRL adapter results, decisions and limitations. |
 | [Release catalog](../releases/README.md) | All nine public packages, model cards and pinned Hugging Face revisions. |

@@ -1,5 +1,9 @@
 # Established steering references
 
+Start with [trait-steering foundations](trait_foundations.md) for the GCAD
+attention delta and gate, SAPS projection feedback, and why geometric directions
+do not guarantee independent behaviors.
+
 Current consolidated record, reviewed with Claude and updated after the
 fixed-setting Qwen3-4B transfer. All interventions act during inference with fixed model
 weights. Physics LoRA/QLoRA is a separate training demonstration.

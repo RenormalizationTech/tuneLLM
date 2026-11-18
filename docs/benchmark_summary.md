@@ -1,5 +1,9 @@
 # Benchmark summary
 
+For the theory behind these comparisons, start with
+[quantization foundations](quantization_foundations.md): rounding, error,
+NF4, memory accounting and what a format comparison can establish.
+
 Completed fixed-subset computational measurements. Human writing assessment is deferred and is not required to complete this reporting phase.
 
 | Condition | General /128 | Physics /96 | GSM8K /128 | IFEval /32 |

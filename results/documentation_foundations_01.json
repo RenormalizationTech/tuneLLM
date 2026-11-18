@@ -1,0 +1,72 @@
+{
+  "reviewed_at_utc": "2026-11-18T07:24:08.287151+00:00",
+  "scope": "Mathematical learning foundations for the existing tuning sections; documentation only",
+  "base_commit": "4c6213780f0f042f01a2eed654117c27e64d00db",
+  "foundation_pages": {
+    "learning_foundations": {
+      "path": "docs/learning_foundations.md",
+      "sha256": "31dca425c5448996508a99868b89687f1d04ceeea4329b5e31e46d52feba27d1"
+    },
+    "quantization_foundations": {
+      "path": "docs/quantization_foundations.md",
+      "sha256": "020ef1a71f636aa22d7d80e097ec9f522e864a47762b622e571a072689568799"
+    },
+    "qlora_foundations": {
+      "path": "docs/qlora_foundations.md",
+      "sha256": "56d669a53093e7d22b9fbe45b4342260f07b88ef83862e7e9022c4b7254c8929"
+    },
+    "refusal_foundations": {
+      "path": "docs/refusal_foundations.md",
+      "sha256": "b65aac94081a1221d57d7894a3cb489e1c8f110ae267a2115778a51f3b9d12be"
+    },
+    "trait_foundations": {
+      "path": "docs/trait_foundations.md",
+      "sha256": "37ce2a5ff972d08a3d06d1dfdf998d3b50eae6bd7e21a5a786a6465d8225fcb1"
+    }
+  },
+  "placement": "First page in each of Quantization, LoRA and QLoRA, Refusal steering, Trait steering; shared prerequisites under Start here",
+  "learning_content": [
+    "Defined notation and dimensions",
+    "Autoregressive probabilities, masked CE, gradients, AdamW, attention, RMSNorm, RoPE and evaluation interpretation",
+    "Affine quantization, error bounds, NF4 and memory accounting",
+    "LoRA parameterization, gradient derivation, initialization, QLoRA precision and merge limits",
+    "Refusal contrast geometry, addition and projection identities, writer sites and intervention controls",
+    "SAPS local projection feedback, GCAD cropped attention extraction/gating, GQA mapping and multi-trait coupling",
+    "Worked examples and self-check solutions",
+    "Inline primary citations plus expanded reference index"
+  ],
+  "claude_review": {
+    "final_conclusion": "No material mathematical errors remain",
+    "source_checks": "Pinned GCAD gate/extractor and SAPS author hook inspected; formulas and numeric examples reviewed",
+    "corrections_applied": [
+      "Selection-set loss distinguished from final quality",
+      "FP32 parameter storage distinguished from BF16 compute",
+      "AdamW decay distinguished from zero task gradients",
+      "Contiguous GQA mapping, inversion sign and GCAD pooling scoped to implementation",
+      "Post-block hooks do not retroactively modify already-written same-layer KV entries",
+      "Projection/weight identity scoped to linear writer including bias",
+      "SAPS local contraction distinguished from decoder stability",
+      "Dropout notation distinguished from dequantization"
+    ]
+  },
+  "checks": {
+    "docs_tests_passed": 10,
+    "strict_site_build": true,
+    "html_pages": 111,
+    "internal_links_checked": 15899,
+    "broken_internal_links": 0,
+    "math_expressions_rendered": 271,
+    "math_errors": 0,
+    "desktop_width": 1440,
+    "mobile_width": 375,
+    "horizontal_overflow": false,
+    "all_five_pages_current_not_archived": true
+  },
+  "browser_receipt": {
+    "path": "outputs/docs-foundations-01/browser-check-01.json",
+    "sha256": "f5e20012a6dd8417b5195d2edcf61e6f723e98c19a0fe713a4e3d6b581a8ba25"
+  },
+  "gpu_work": false,
+  "preserved": "Experimental source, model weights, protocols, raw/final outcome records and historical conclusions",
+  "publication_status": "Locally verified before commit; deployment and live hashes checked separately."
+}

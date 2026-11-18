@@ -74,6 +74,20 @@ def test_tables_keep_semantics_inside_keyboard_scroll_region(tmp_path):
     assert region.find("table/tbody/tr/td").text == "Example"
 
 
+def test_tuning_sections_begin_with_their_current_foundations():
+    root = Path(__file__).resolve().parents[1]
+    nav = {group: entries for entry in docs.navigation(root/"docs") for group, entries in entry.items()}
+    for group, file in {
+        "Quantization": "quantization_foundations.md",
+        "LoRA and QLoRA": "qlora_foundations.md",
+        "Refusal steering": "refusal_foundations.md",
+        "Trait steering": "trait_foundations.md",
+    }.items():
+        assert nav[group][0] == {"Mathematical foundations": file}
+        assert file in docs.CURRENT[group]  # Teaching pages must not receive archive banners.
+    assert "learning_foundations.md" in docs.CURRENT["Start here"]
+
+
 def test_archive_notice_is_build_only_and_current_pages_unchanged(tmp_path, monkeypatch):
     from types import SimpleNamespace
     ctx = context(tmp_path); before = docs.document_hashes(ctx.docs)

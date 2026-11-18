@@ -1,5 +1,9 @@
 # How the two refusal-steering approaches work
 
+For a learning introduction, read [refusal-steering foundations](refusal_foundations.md)
+first: contrastive directions, coefficient units, projection geometry and
+the distinction between a mechanical intervention and a behavioral claim.
+
 This explains the two intervention families used in run 03. Both alter
 activations during inference on the unmodified upstream BF16 Qwen3-4B
 checkpoint. No LoRA adapter was loaded, no gradient update was performed, and
