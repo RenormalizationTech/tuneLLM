@@ -133,6 +133,7 @@ d_{\ell,t}=\frac1{H_q}\sum_{h=1}^{H_q}
 \qquad
 c_{\ell,t}=2b\,\sigma\!\left(\zeta s(d_{\ell,t}-\bar d_\ell)\right),
 \]
+
 \[
 a'_{\ell,t}=a_{\ell,t}+c_{\ell,t}\Delta_\ell,\qquad
 \sigma(x)=\frac1{1+e^{-x}}.

@@ -1,0 +1,53 @@
+{
+  "checked_at_utc": "2026-11-18T07:37:38.278917+00:00",
+  "base_commit": "178d3f88066c4f8d841aa0481abb174c023a56f0",
+  "problem": "Adjacent display equations without a blank line bypassed pymdownx.arithmatex and were interpreted as prose by Markdown.",
+  "affected": {
+    "learning_foundations": [
+      "AdamW moments and update",
+      "Attention and causal mask"
+    ],
+    "trait_foundations": [
+      "GCAD demand, gate and update"
+    ]
+  },
+  "correction": "Insert three separator blank lines, restoring six display-math blocks; mathematical content unchanged.",
+  "prior_verification_correction": {
+    "receipt": "results/documentation_foundations_01.json",
+    "blind_spot": "The prior 271-expression check counted only formulas already recognized by the parser. It did not establish coverage of every source equation.",
+    "preserved_original_receipt": true
+  },
+  "regression_protection": [
+    "Offline site checker rejects unprocessed TeX outside math/code on every generated HTML page",
+    "Test reproduces the adjacent-block failure and verifies corrected parsing",
+    "Foundation-page source equation counts are compared independently with parsed counts",
+    "Literal code examples and recognized math remain exempt from raw-TeX lint"
+  ],
+  "checks": {
+    "docs_tests_passed": 13,
+    "strict_build_passed": true,
+    "html_pages_scanned_for_raw_TeX": 111,
+    "internal_links_checked": 15899,
+    "broken_links": 0,
+    "browser_math_pages": 8,
+    "source_equations": 320,
+    "rendered_equations": 320,
+    "foundation_equations": 277,
+    "math_errors": 0,
+    "desktop_width": 1440,
+    "mobile_width": 375,
+    "horizontal_overflow": false
+  },
+  "browser_evidence": [
+    {
+      "path": "outputs/docs-math-fix-01/browser-check-01.json",
+      "sha256": "721bb16d7ae0fef175fe9783ff0c5bfbb35ed38c3ea9663cc5534b3faf3ff893"
+    },
+    {
+      "path": "outputs/docs-math-fix-01/browser-check-others-01.json",
+      "sha256": "688d5e38dd34947be4723642f53c5c8045eb0c6bbfcba026dddbd3032776964b"
+    }
+  ],
+  "GPU_work": false,
+  "publication_status": "Locally validated; live deployment checked separately."
+}

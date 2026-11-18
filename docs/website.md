@@ -62,6 +62,13 @@ shared notation, prerequisite equations, and links to the four foundations.
 These learning pages include worked examples, self-check answers and primary
 references; frozen experiment records keep their original conclusions.
 
+Put a blank line between consecutive display-math blocks. Otherwise Markdown
+can treat both equations as prose before MathJax sees them. The site checker
+rejects TeX left outside math containers or literal code examples; the foundation
+tests also compare source-delimited equation counts with parsed math counts.
+Browser checks then verify typesetting and errors. Counting rendered containers
+alone cannot detect equations that never reached the math parser.
+
 The layout uses MkDocs' bundled Read the Docs theme, a small Jinja override in
 `docs/theme/`, and local navigation CSS/JavaScript. No model libraries or
 additional theme dependency are required. The [MkDocs theme documentation](https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs)

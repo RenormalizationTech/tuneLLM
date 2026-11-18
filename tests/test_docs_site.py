@@ -135,6 +135,55 @@ def test_generated_link_checker_rejects_missing_files_and_anchors(tmp_path):
     assert "missing internal target" in str(exc.value)
 
 
+def test_site_checker_rejects_equations_missed_by_math_parser(tmp_path):
+    source = r'''\[
+m_t=\beta m_{t-1}+g_t
+\]
+\[
+\phi_{t+1}=\phi_t-\frac{m_t}{v_t}
+\]
+'''
+    def render(value):
+        return markdown.markdown(value, extensions=["pymdownx.arithmatex"],
+            extension_configs={"pymdownx.arithmatex": {"generic": True}})
+    file = tmp_path/"index.html"
+    broken = render(source)
+    file.write_text(broken)
+    assert 'class="arithmatex"' not in broken
+    with pytest.raises(ValueError, match="unprocessed math notation"):
+        check(tmp_path)
+    fixed = render(source.replace("\\]\n\\[", "\\]\n\n\\["))
+    file.write_text(fixed)
+    assert fixed.count('class="arithmatex"') == 2
+    assert check(tmp_path)["broken"] == 0
+
+
+def test_math_lint_preserves_literal_examples_and_recognized_equations(tmp_path):
+    file = tmp_path/"index.html"
+    file.write_text(r'<pre><code>\frac{x}{y}</code></pre><code>\(example\)</code>'
+        r'<span class="arithmatex">\(\theta\)</span><br><p>Ordinary prose.</p>')
+    assert check(tmp_path)["broken"] == 0
+    file.write_text(r'<p>[\frac{x}{y}]</p>')
+    with pytest.raises(ValueError, match="unprocessed math notation"):
+        check(tmp_path)
+
+
+def test_all_foundation_source_equations_reach_the_math_parser():
+    import re
+    from scripts.check_docs_site import MathMarkup
+    root = Path(__file__).resolve().parents[1]
+    for name in ("learning", "quantization", "qlora", "refusal", "trait"):
+        source = (root/"docs"/(name+"_foundations.md")).read_text()
+        # These teaching pages contain no literal math examples in code fences.
+        # Count source delimiters, independently of what the parser recognizes.
+        expected = len(re.findall(r"\\\([\s\S]*?\\\)", source)) + len(re.findall(r"(?m)^\\\[\s*$", source))
+        rendered = markdown.markdown(source, extensions=["tables", "pymdownx.arithmatex"],
+            extension_configs={"pymdownx.arithmatex": {"generic": True}})
+        assert rendered.count('class="arithmatex"') == expected, name
+        audit = MathMarkup(); audit.feed(rendered)
+        assert not audit.unprocessed, (name, audit.unprocessed)
+
+
 def test_mermaid_wrapper_normalization_success_and_error_svg_source_fallback():
     import shutil
     import subprocess

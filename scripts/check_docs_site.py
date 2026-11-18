@@ -1,5 +1,6 @@
-"""Offline generated-site file/anchor validation; no MkDocs or ML imports."""
+"""Offline site file, anchor and unprocessed-TeX checks; no MkDocs/ML imports."""
 import argparse
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -17,13 +18,49 @@ class Links(HTMLParser):
     handle_startendtag = handle_starttag
 
 
+class MathMarkup(HTMLParser):
+    """Find TeX the Markdown parser left outside math or literal examples.
+
+    Checking only MathJax containers misses formulas never recognized as math.
+    Scan the unprocessed text independently, including text split by emphasis.
+    """
+    VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+    TEX = re.compile(r"\\(?:[A-Za-z]+|[()\[\]])")
+
+    def __init__(self):
+        super().__init__(); self.stack = []; self.unprocessed = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self.VOID: return
+        attrs = dict(attrs)
+        excluded = tag in {"script", "style", "code", "pre"} or "arithmatex" in attrs.get("class", "").split()
+        self.stack.append((tag, excluded))
+
+    def handle_startendtag(self, tag, attrs):
+        pass
+
+    def handle_endtag(self, tag):
+        for index in range(len(self.stack)-1, -1, -1):
+            if self.stack[index][0] == tag:
+                self.stack = self.stack[:index]
+                break
+
+    def handle_data(self, data):
+        if not any(excluded for _, excluded in self.stack) and self.TEX.search(data):
+            self.unprocessed.append(" ".join(data.split())[:120])
+
+
 def check(site, site_url="https://renormalizationtech.github.io/tuneLLM/"):
     site = Path(site).resolve(); public = urlsplit(site_url)
-    pages = {}
+    pages = {}; math_errors = []
     for file in site.rglob("*.html"):
-        parser = Links(); parser.feed(file.read_text()); pages[file.resolve()] = parser
+        source = file.read_text()
+        parser = Links(); parser.feed(source); pages[file.resolve()] = parser
+        math = MathMarkup(); math.feed(source)
+        for text in math.unprocessed:
+            math_errors.append(f"{file.relative_to(site)}: unprocessed math notation outside math/code: {text}")
     if not pages: raise ValueError("no generated HTML pages")
-    errors, checked = [], 0
+    errors, checked = math_errors, 0
     for source, page in pages.items():
         for url in page.links:
             parsed = urlsplit(url)

@@ -116,6 +116,7 @@ AdamW instead combines gradient moments with decoupled weight decay:
 m_t=\beta_1m_{t-1}+(1-\beta_1)g_t,\quad
 v_t=\beta_2v_{t-1}+(1-\beta_2)g_t^2,
 \]
+
 \[
 \phi_{t+1}=(1-\eta_t\lambda)\phi_t
 -\eta_t\frac{\widehat m_t}{\sqrt{\widehat v_t}+\epsilon},
@@ -159,6 +160,7 @@ as rows of \(Q,K,V\). Causal attention is
 A=\operatorname{softmax}_{\rm row}
 \left(\frac{QK^\top}{\sqrt{d_k}}+M\right),\qquad O=AV,
 \]
+
 \[
 M_{tj}=\begin{cases}0&j\leq t\\-\infty&j>t.\end{cases}
 \]
