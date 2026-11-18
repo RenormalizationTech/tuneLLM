@@ -1,0 +1,9 @@
+# Isolated 27B preparation/training environment; preserve the original smoke env.
+# Install Torch from the CUDA 13.0 wheel index as recorded in the run lock.
+-r requirements-qwen38-nf4.txt
+peft==0.21.0
+# QASPER uses original versioned JSON, avoiding a datasets/Hub dependency conflict.
+numpy==2.2.6
+sentencepiece==0.2.1
+protobuf==4.25.9
+pytest==8.4.2

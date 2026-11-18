@@ -1,0 +1,164 @@
+{
+  "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+  "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+  "private": false,
+  "manifest_sha256": "43e5653ee890e78fd654e1cf0dc8d62dac718f4adb73b74ed544f0550a0c90a5",
+  "credentials_recorded": false,
+  "status": "published_remote_hashes_verified",
+  "revision": "adcae12715bf1a946b0424cef4038dd9cac8fc8d",
+  "commit_url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/commit/adcae12715bf1a946b0424cef4038dd9cac8fc8d",
+  "verified_at_utc": "2026-11-18T01:12:34.151130+00:00",
+  "files": {
+    "LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "README.md": {
+      "bytes": 9137,
+      "sha256": "12603e3f36e6f93cb1ab40e80d986e9e8930659186ca90bd4ce4e4621140a9a0",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "adapter_config.json": {
+      "bytes": 1324,
+      "sha256": "6fc2eeb8df5d23ad1a80e8ad6bf410a65e41e443291dbc5c890038230c7f69c3",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "adapter_model.safetensors": {
+      "bytes": 467047680,
+      "sha256": "7570e79dca9a678e6c6bfcf1ccfc1499c85f595f29cf419bea1f49219d2a2abd",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "base_publication.json": {
+      "bytes": 3892,
+      "sha256": "9e66e1e85296dd6b0783f07b8d2167e69888b28e3dc43d2b25d8a143b74e3165",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "config_diff.json": {
+      "bytes": 667,
+      "sha256": "8546d320c3b3b28ebf49060530b37df2324670d82d4d6d28eacca09a502af7f6",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "data_licenses.json": {
+      "bytes": 6936,
+      "sha256": "1e966dc211821de6e26427497891ff89c5df21bcf3572d88174b1efad83889c4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "environment.lock.txt": {
+      "bytes": 1284,
+      "sha256": "66d1d0b27ea8aa4732df3b3f2acd741615871135f9082cd50d268c2568edb77d",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "evaluation_prompt_selection.json": {
+      "bytes": 270,
+      "sha256": "df3dabfc8a37973fd42e8a04bceaa1417121c8ce0ae388e8e7a879474ffe3f00",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "evaluation_registration.json": {
+      "bytes": 3535,
+      "sha256": "821fa1cf7415e896bac32f49398476af03005ef916e7cb2e6f6798090a88695d",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "paper_attributions.json": {
+      "bytes": 157629,
+      "sha256": "1d147a6e9abffb3cd631b1ff312b83de027c516aa0eb8205063e5ba3b18e33f0",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "prepared_manifest.json": {
+      "bytes": 33839,
+      "sha256": "70056095bd86f35bd94845141453361f4dc204eec57283b8f3f89fa4af6c22bb",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "provenance.json": {
+      "bytes": 105112,
+      "sha256": "8a1e3557206c1a4714ac19da4bc3b6f7ad26b835a22c4178aeb963defcb825b5",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "qwen38-prl-development-fallback-01.json": {
+      "bytes": 698,
+      "sha256": "963e401c2e55bd2a7915694b490677aedc5e2eb00e6a4fa908af5d36aad30021",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "qwen38-prl-hardware-amendment-01.json": {
+      "bytes": 673,
+      "sha256": "7e23f1719ed058028cbee93b147f132e8579c292ce6021048ccd9d7efc8bf818",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "qwen38-retention-batch-amendment-01.json": {
+      "bytes": 4042,
+      "sha256": "a348e3dbeef8bd91c4eff617ffc98e39861646d3a1e6d4acb885d655c9ce9f81",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "retention_adapter.json": {
+      "bytes": 63817,
+      "sha256": "42d132db3d407bf1d588b37a7b0ab67be5f52120e78ef89fdb1453b58ef0ee15",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "retention_base.json": {
+      "bytes": 62271,
+      "sha256": "0abacd691f2015ad96701e9d0f4e7471d1e01623e93264cd260fdb147b69d351",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "retention_comparison.json": {
+      "bytes": 1346,
+      "sha256": "45b2f9f4507b57f7b15c7287dd3da35e894a743faca05322a4b52e376c1c2889",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "retention_registration_adapter.json": {
+      "bytes": 72113,
+      "sha256": "3479221fb65b882bcd98085e26700a7df82a3a9c572271bb5da398799fdc0584",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "retention_registration_base.json": {
+      "bytes": 69875,
+      "sha256": "f84fa7b73715ee09dd7b0dae7f6b4d3aab41f0d09e5fbc1a28ed15ff406f0021",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "science_report.json": {
+      "bytes": 13425,
+      "sha256": "672a002347f27e3b561cb38df3de523eafa07eb90a595fb5e0d4672f93cd9ec4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "secondary_diagnostics.json": {
+      "bytes": 80943,
+      "sha256": "6a333541d3b48a343d3e7985eb4866e04a25355081494b876c58fa9dc8656b5e",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "secondary_diagnostics_protocol.json": {
+      "bytes": 961,
+      "sha256": "ef316a1e026a13a60c3ce4ac12c5878644d5ef7de39221e69fc6b8c8df549d82",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "selected_checkpoint.json": {
+      "bytes": 2798,
+      "sha256": "b0a93873deee88061e3d545098185887482fd08abbe24453ef4e378ff3af2e5c",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "source.zip": {
+      "bytes": 126822,
+      "sha256": "08a2e9d973ce6b3b10cbda8efdf8ddfd1c65f0c88172d56e01f86e502c3aff18",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "source_inventory.json": {
+      "bytes": 2572,
+      "sha256": "547657acbc15f8d7541cf98035767be14e67f11a369fea20fd4d692969deeb60",
+      "method": "revision-pinned downloaded SHA256"
+    }
+  },
+  "additional_remote_files": [
+    ".gitattributes"
+  ],
+  "card_metadata": {
+    "base_model": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+    "library_name": "peft",
+    "license": "apache-2.0",
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "qlora",
+      "text-only",
+      "research"
+    ],
+    "base_model_relation": "adapter"
+  },
+  "load_check": "separate pinned-download runtime verification required"
+}

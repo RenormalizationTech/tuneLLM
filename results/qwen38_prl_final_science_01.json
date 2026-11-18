@@ -1,0 +1,764 @@
+{
+  "completed": true,
+  "papers": 40,
+  "preference": {
+    "base": {
+      "mean": 0.175,
+      "ci95": [
+        0.075,
+        0.2875
+      ]
+    }
+  },
+  "unsupported_difference": {
+    "base": {
+      "mean": 0.025,
+      "ci95": [
+        0.0,
+        0.075
+      ]
+    }
+  },
+  "unsupported_mean": {
+    "base": 0.025,
+    "adapter": 0.05
+  },
+  "unsupported_nonframing_fraction_macro": {
+    "base": 0.0035714285714285713,
+    "adapter": 0.01125
+  },
+  "records": [
+    {
+      "id": "2505.24146v2",
+      "preferences": {
+        "base": 1.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 6,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2506.02108v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 2,
+        "base": 8
+      }
+    },
+    {
+      "id": "2506.04342v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 2,
+        "base": 7
+      }
+    },
+    {
+      "id": "2506.12695v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 5,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2506.13960v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 6,
+        "adapter": 4
+      }
+    },
+    {
+      "id": "2506.15661v3",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 4,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2506.16424v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 6,
+        "adapter": 1
+      }
+    },
+    {
+      "id": "2506.16877v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 6
+      }
+    },
+    {
+      "id": "2506.19458v4",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 1,
+        "base": 7
+      }
+    },
+    {
+      "id": "2507.02035v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 2,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2507.03957v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 1
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.2
+      },
+      "partial": {
+        "base": 5,
+        "adapter": 3
+      }
+    },
+    {
+      "id": "2507.06771v3",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 3
+      }
+    },
+    {
+      "id": "2507.07679v1",
+      "preferences": {
+        "base": 1.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 6
+      }
+    },
+    {
+      "id": "2507.17386v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 6,
+        "adapter": 1
+      }
+    },
+    {
+      "id": "2507.22884v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 3
+      }
+    },
+    {
+      "id": "2507.23415v1",
+      "preferences": {
+        "base": 0.5
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 6
+      }
+    },
+    {
+      "id": "2508.00683v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 1,
+        "base": 4
+      }
+    },
+    {
+      "id": "2508.04788v3",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 2,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2508.05964v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 3,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2508.07366v3",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 5
+      }
+    },
+    {
+      "id": "2508.14693v1",
+      "preferences": {
+        "base": 1.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 7,
+        "adapter": 1
+      }
+    },
+    {
+      "id": "2509.03708v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 1
+      }
+    },
+    {
+      "id": "2509.05620v2",
+      "preferences": {
+        "base": 1.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 4,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2509.07117v3",
+      "preferences": {
+        "base": 0.5
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 5,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2509.07151v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 6,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2509.08036v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 1,
+        "adapter": 1
+      },
+      "unsupported_fraction": {
+        "base": 0.14285714285714285,
+        "adapter": 0.25
+      },
+      "partial": {
+        "base": 3,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2509.12321v2",
+      "preferences": {
+        "base": 1.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 4
+      }
+    },
+    {
+      "id": "2509.20305v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 5,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2509.25147v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 2
+      }
+    },
+    {
+      "id": "2510.00509v3",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 6
+      }
+    },
+    {
+      "id": "2510.08478v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 2,
+        "base": 2
+      }
+    },
+    {
+      "id": "2510.10391v3",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 6,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2510.13641v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 5,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2510.20862v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 6,
+        "adapter": 0
+      }
+    },
+    {
+      "id": "2510.26325v2",
+      "preferences": {
+        "base": 1.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 4,
+        "base": 8
+      }
+    },
+    {
+      "id": "2511.18947v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 1,
+        "base": 5
+      }
+    },
+    {
+      "id": "2512.04150v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 5
+      }
+    },
+    {
+      "id": "2601.05846v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "adapter": 0,
+        "base": 0
+      },
+      "unsupported_fraction": {
+        "adapter": 0.0,
+        "base": 0.0
+      },
+      "partial": {
+        "adapter": 0,
+        "base": 4
+      }
+    },
+    {
+      "id": "2602.17656v2",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 6,
+        "adapter": 2
+      }
+    },
+    {
+      "id": "2604.18560v1",
+      "preferences": {
+        "base": 0.0
+      },
+      "unsupported": {
+        "base": 0,
+        "adapter": 0
+      },
+      "unsupported_fraction": {
+        "base": 0.0,
+        "adapter": 0.0
+      },
+      "partial": {
+        "base": 5,
+        "adapter": 0
+      }
+    }
+  ],
+  "AI_review_only": true,
+  "prompt_selection_sha256": "df3dabfc8a37973fd42e8a04bceaa1417121c8ce0ae388e8e7a879474ffe3f00",
+  "identical_baselines": true,
+  "baseline_comparisons": 1,
+  "science_gates_pass": false,
+  "retention_gate_pending": true,
+  "report_scope": "Completed locked40paper two-pass blindedAIscienceevaluation; retention pending as originally captured",
+  "raw_scores_sha256": "672a002347f27e3b561cb38df3de523eafa07eb90a595fb5e0d4672f93cd9ec4",
+  "final_binding_sha256": "94d413fc8e0a09ca1104ed111f867c895acfb807607e31eba4408c402ac29bdf",
+  "diagnostics_sha256": "008523ae7ab039db625b9410074e1885b8c21be6b42575cf7427ea4ca0caaf7c",
+  "training_result_sha256": "d20b8f8a4bc798c8361bf895c2bd54edeefa25783f33f5ceb6b4a7e4a352c413",
+  "primary_interpretation": "Failedscientificqualitygates; not an improvedgroundedabstractwriter. Experimentalreleaseonly, pendingcompleteretention/publicreload."
+}

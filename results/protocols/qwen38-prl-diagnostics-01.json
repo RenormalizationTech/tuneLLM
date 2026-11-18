@@ -1,0 +1,19 @@
+{
+  "scope": "Secondary descriptive metrics only; no changes to prompt/checkpoint selection or gates",
+  "primary_evaluation_registration_sha256": "cb98f1231fc4377afbd4f703d8abd895b7798cde19d359e49fe9c4849cfc4be4",
+  "source_sha256": "94d0bca945cddfa08cd4e9e7487c2b65eafe6a95ed1caafe9e683d7a906121f8",
+  "lexical_metrics": [
+    "lowercase whitespace-token LCS F1 (custom ROUGE-L-style, not official package metric)",
+    "normalized token F1",
+    "novel unique output8gram fraction relative to selected excerpt",
+    "word count and >200word flag"
+  ],
+  "fixed_copy_baseline": "previously frozen target-independent first whole prose blocks; preserve empty cases",
+  "reviewer_metrics": [
+    "support label agreement/kappa on two valid passes",
+    "pairwise preference agreement",
+    "first pair position win rate with half ties",
+    "exactquote downgrade fraction by arm"
+  ],
+  "timing": "before final generations, during base development generation"
+}

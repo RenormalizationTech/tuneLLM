@@ -1,0 +1,100 @@
+{
+  "version": "qwen38-sync-catalog-v1",
+  "status": "published_and_verified",
+  "private": false,
+  "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+  "revision": "586bb02218d196f485c321bbde3348677c63fc6a",
+  "gpu_verified_revision": "e7644d6f288cb8a9ba51856ca2c9fa68946f70fe",
+  "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+  "metadata_only_update": true,
+  "runtime_files_unchanged": true,
+  "anonymous_pinned_download_verified": true,
+  "quality_or_gpu_rerun_for_documentation_update": false,
+  "files": {
+    ".gitattributes": {
+      "bytes": 1570,
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930"
+    },
+    "LICENSE": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    "README.md": {
+      "bytes": 5046,
+      "sha256": "a1f5e4fa1549f3e0bb0e98053a69324aa2e66d42d1626b09677915bc462ffa61"
+    },
+    "REPRODUCE.md": {
+      "bytes": 1559,
+      "sha256": "478cf0af1058f60b5f12dff6867cec6e38a0c24e60863f9c564e60eb23b31bc4"
+    },
+    "chat_template.jinja": {
+      "bytes": 9004,
+      "sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375"
+    },
+    "config.json": {
+      "bytes": 3189,
+      "sha256": "1fbd2cdd1ecb38af8cd56a6dc1aff8b853e80b19a30206f97efee9675802afb7"
+    },
+    "environment.lock.txt": {
+      "bytes": 1284,
+      "sha256": "66d1d0b27ea8aa4732df3b3f2acd741615871135f9082cd50d268c2568edb77d"
+    },
+    "evaluation.json": {
+      "bytes": 12099,
+      "sha256": "7b8df536611f0638523d7fa943bf9a750b4c4d0f10cb055193c35330a274c4f5"
+    },
+    "generation_config.json": {
+      "bytes": 214,
+      "sha256": "1580cfd94bd7542aff2e93bff1addca01d4cda5c2b1bfba637bf7741afde0212"
+    },
+    "model.safetensors": {
+      "bytes": 17653667512,
+      "sha256": "3b22a35844f3fd9bd66e98d3b20ab294b9452293f37d0f3cbc5c5b389c197ce2"
+    },
+    "provenance.json": {
+      "bytes": 143807,
+      "sha256": "07acb0eeda35ca4aa144331d20987993766034657f58052e16860d43f4faab8b"
+    },
+    "requirements-qwen38-nf4.txt": {
+      "bytes": 351,
+      "sha256": "9720a07a328e33310865705ae0dbc6770d5fc0bc3d3b93480ebb58e785d7db79"
+    },
+    "requirements-qwen38-science.txt": {
+      "bytes": 351,
+      "sha256": "7db1633a6266d407b9c26fee20ce96d7cb6b76f8b529dc301f0c7d39c64863fc"
+    },
+    "source.zip": {
+      "bytes": 124365,
+      "sha256": "ab84a98334da674d9e83620ff03bfb500215ece9729b3ab95e2aa45cfa8dfe54"
+    },
+    "tokenizer.json": {
+      "bytes": 19989339,
+      "sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f"
+    },
+    "tokenizer_config.json": {
+      "bytes": 2484,
+      "sha256": "27c9bb9dbc425fafea54d21a57aab11d0ad3cd1a206757147d73852ab3f99734"
+    },
+    "verification.json": {
+      "bytes": 1466,
+      "sha256": "cabcce3bf33e3e829868d653777c68873772120abf23e64bd74f3ad1397b3b19"
+    }
+  },
+  "published_file_count": 17,
+  "published_inventory_sha256": "159a60ab8f2accc262845c6be4af21ff423b07dfd4e616658657aed28789588b",
+  "canonical_payload": "artifacts/releases/Qwen3.8-27B-tuneLLM-NF4",
+  "original_publication": "results/qwen38_nf4_huggingface_publication.json",
+  "original_publication_sha256": "9e66e1e85296dd6b0783f07b8d2167e69888b28e3dc43d2b25d8a143b74e3165",
+  "metadata_result": "outputs/qwen38-public-nf4-metadata-01/result.json",
+  "metadata_result_sha256": "73760b17259235c179deba71f0f61042905f65b38dbe1b39c72b6bad20a787cb",
+  "prepared_sha256": "20c534fc69223ace9b1d2cc911324961235bc85797659d36cba3faf99e7bed6d",
+  "verification_evidence_sha256": "cabcce3bf33e3e829868d653777c68873772120abf23e64bd74f3ad1397b3b19",
+  "gpu_result_sha256": "19b0de2a3b74e8653155e92b66301dfee4e8d8a196b101a89453c243216b9eaf",
+  "download_sha256": "9f955de8b3b0a9ab0f688f93a0bd90579d26351e3784aca85ea13930de311127",
+  "result_path": "results/qwen38_27b_quantization_screen_01.json",
+  "study_result_sha256": "7b8df536611f0638523d7fa943bf9a750b4c4d0f10cb055193c35330a274c4f5",
+  "verified_at_utc": "2026-11-17T20:17:19.079787+00:00",
+  "sync_source_sha256": "472f6feffaec45f6ef1b5d4ce3fdf50cd42dfb34117f97e1be09709712fb58a6",
+  "metadata_publisher_source_sha256": "89970ba9a19dbbf4ed2ef4873af394d91e7eeebb16c66b2e2d0e6bf81bcce6de",
+  "scope": "Local current-publication index; original GPU-tested commit distinguished from metadata commit; no new quality or runtime evaluation."
+}

@@ -1,0 +1,101 @@
+{
+  "scope": "development only; assistant/EOS NLL transfer diagnostic, no final examples or selection",
+  "arms": [
+    "base",
+    "qasper",
+    "prl"
+  ],
+  "counts": {
+    "qasper": 33,
+    "prl": 9
+  },
+  "ids": {
+    "qasper": [
+      "1908.04042::249c805ee6f2ebe4dbc972126b3d82fb09fa3556",
+      "1908.04042::29c014baf99fb9f40b5171aab3e2c7f12a748f79",
+      "1908.04042::79413ff5d98957c31866f22179283902650b5bb6",
+      "1908.04042::ab54cd2dc83141bad3cb3628b3f0feee9169a556",
+      "1908.04042::b4f881331b975e6e4cab1868267211ed729d782d",
+      "1710.03348::91e326fde8b0a538bc34d419541b5990d8aae14b",
+      "1710.03348::beac555c4aea76c88f19db7cc901fa638765c250",
+      "2001.08868::2c947447d81252397839d58c75ebcc71b34379b5",
+      "2001.08868::568fb7989a133564d84911e7cb58e4d8748243ef",
+      "2001.08868::c01784b995f6594fdb23d7b62f20a35ae73eaa77",
+      "1912.08960::509af1f11bd6f3db59284258e18fdfebe86cae47",
+      "1912.08960::50e80cfa84200717921840fddcf3b051a9216ad8",
+      "1912.08960::63a1cbe66fd58ff0ead895a8bac1198c38c008aa",
+      "2001.02284::ca5a82b54cb707c9b947aa8445aac51ea218b23a",
+      "1708.06185::8756b7b9ff5e87e4efdf6c2f73a0512f05b5ae3f",
+      "1708.06185::e48e750743aef36529fbea4328b8253dbe928b4d",
+      "1909.08970::11e8bd4abf5f8bdabad3e8f0691e6d0ad6c326af",
+      "1909.08970::bd419f4094186a5ce74ba6ac1622b24e29e553f4",
+      "1911.02855::20e38438471266ce021817c6364f6a46d01564f2",
+      "1911.02855::23b2901264bda91045258b5d4120879ae292e950",
+      "1911.02855::72f7ef55e150e16dcf97fe443aff9971a32414ef",
+      "1911.02855::b5bc34e1e381dbf972d0b594fe8c66ff75305d71",
+      "2002.01320::29923a824c98b3ba85ced964a0e6a2af35758abe",
+      "2002.01320::6a219d7c58451842aa5d6819a7cdf51c55e9fc0f",
+      "2002.01320::8dc707a0daf7bff61a97d9d854283e65c0c85064",
+      "2002.01320::bc84c5a58c57038910f7720d7a784560054d3e1a",
+      "2002.01320::cee8cfaf26e49d98e7d34fa1b414f8f31d6502ad",
+      "2002.01320::f8f4e4a50d2b3fbd193327e79ea32d8d057e1414",
+      "2002.01320::ffde866b1203a01580eb33237a0bb9da71c75ecf",
+      "1604.00400::184b0082e10ce191940c1d24785b631828a9f714",
+      "1604.00400::3f856097be2246bde8244add838e83a2c793bd17",
+      "1604.00400::74e866137b3452ec50fb6feaf5753c8637459e62",
+      "1604.00400::bf52c01bf82612d0c7bbf2e6a5bb2570c322936f"
+    ],
+    "prl": [
+      "2305.13561v3",
+      "2503.00475v1",
+      "2407.01936v1",
+      "2410.09148v2",
+      "2410.12204v1",
+      "2505.18272v2",
+      "2307.08110v2",
+      "2303.14385v3",
+      "2405.18443v1"
+    ]
+  },
+  "input_sha256": {
+    "qasper": "b4f99e5a7b8400aa613f400319144979d851a468ce18027c6d19d1e6d2b1c74a",
+    "prl": "0505916f6c6ff4756b05b039f0a3e26ec6a8711ff47dee062e9f55f44684ba8d"
+  },
+  "parent_inputs": {
+    "qasper": {
+      "prepared_manifest_sha256": "89c5e45e95bf45001fa00680c6af370bd85589ef7aa794d536585bd3577a9464",
+      "input_sha256": "7028881d0af592c9a5b8727ac56e3bfedda6aa3338af367809654ef4b4451fc4"
+    },
+    "prl": {
+      "prepared_manifest_sha256": "0d10107a571e8bd9f433d1b66985086d86fe0a64757277a55600c47aeda2dc26",
+      "input_sha256": "fda2e8e6b70d92160b7e85618cbee169dae79fc3397e71fa3febfb68b6bd47f9"
+    }
+  },
+  "source_sha256": {
+    "qwen38_transfer.py": "d8510549f5dc64be5bd3d57411700adb6f986d6b3b731617618b2f2061db25d7",
+    "qwen38_science_runtime.py": "b2b8bb1ccc5d4446b7be9640273765b722124fecce103503c570234360bec562",
+    "qwen38_nf4_smoke.py": "dd68928708b86b06df84ad26f7730277ab62e08515c534329f44b8605f868fe3",
+    "qwen38_eval_adapter.py": "f59586b10a8825b0e3a5f1748f17a20333739508bc48cf86b2d32484ad10d277",
+    "qwen38_eval_science.py": "9051b724975a71288da4e0bd0d76b5f6294a67e5f4be0d2bababf2f6db93d1e3",
+    "training_data.py": "08e5034f9a1f3b36313b7b4c205dc5e8f4c4777a28141dcdbac54d147ff54fed",
+    "qwen38_train_science.py": "73d8dcc6efe4b53d43ceddaa6ed00832e887cbaa5042749a21b9617e53ce426a",
+    "common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b"
+  },
+  "versions": {
+    "torch": "2.12.0+cu130",
+    "transformers": "5.23.0",
+    "peft": "0.21.0",
+    "accelerate": "1.12.0",
+    "bitsandbytes": "0.49.2",
+    "huggingface_hub": "2.4.0"
+  },
+  "nf4_manifest_sha256": "4342376e3aa64c221496c7dad8110d1cf0e2442128814ca86bda1d05627188fb",
+  "max_seconds_per_arm": 450,
+  "seed": 42,
+  "max_length": 8192,
+  "weighting": "token-weighted assistant/EOS NLL",
+  "base_preparation": "same rank16 PEFT prep/casts; adapter disabled for baseline",
+  "cache": false,
+  "interpretation": "NLL transfer is descriptive and does not establish scientific summary or QA quality",
+  "timing": "registered before either adapter optimization; QASPER development selection already frozen"
+}

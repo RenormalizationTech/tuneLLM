@@ -1,0 +1,80 @@
+{
+  "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+  "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+  "private": false,
+  "manifest_sha256": "6a2a896ea9522e0a784067a32326d1231e4dcfc82e6ab31be38d1afba74bdcb9",
+  "credentials_recorded": false,
+  "status": "published_remote_hashes_verified",
+  "revision": "8cce64fc0767c8efea134468b23079ef2d693a8c",
+  "commit_url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF/commit/8cce64fc0767c8efea134468b23079ef2d693a8c",
+  "verified_at_utc": "2026-11-17T18:06:15.999825+00:00",
+  "files": {
+    "LICENSE": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "Qwen3.8-27B-text-Q4_K_M.gguf": {
+      "bytes": 16742036832,
+      "sha256": "b856ff3496375f7fde8c90a0d8a23359281f56bdd6719af15cba5facf33e5006",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "README.md": {
+      "bytes": 5083,
+      "sha256": "e09583060a2bf26943d425f48d277732a662c52b91aa4b50918b310c1c9dfe93",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "REPRODUCE.md": {
+      "bytes": 1552,
+      "sha256": "341ea2cec75dd98e1217b6b05e433fb351d5510feec967bc8fc80c9b90c275b4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "environment.lock.txt": {
+      "bytes": 1284,
+      "sha256": "66d1d0b27ea8aa4732df3b3f2acd741615871135f9082cd50d268c2568edb77d",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "evaluation.json": {
+      "bytes": 12099,
+      "sha256": "7b8df536611f0638523d7fa943bf9a750b4c4d0f10cb055193c35330a274c4f5",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "provenance.json": {
+      "bytes": 150116,
+      "sha256": "8eb2f20f7a1f043538d91b3823e22f73902e7b3d8b36032eeed5323e02bb207c",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "requirements-qwen38-nf4.txt": {
+      "bytes": 351,
+      "sha256": "9720a07a328e33310865705ae0dbc6770d5fc0bc3d3b93480ebb58e785d7db79",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "requirements-qwen38-science.txt": {
+      "bytes": 351,
+      "sha256": "7db1633a6266d407b9c26fee20ce96d7cb6b76f8b529dc301f0c7d39c64863fc",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "source.zip": {
+      "bytes": 124365,
+      "sha256": "3a1d325019c37c2ac44b989c91d9317daddec0324dc68d3bd807cea5c145c6c4",
+      "method": "revision-pinned Hub LFS SHA256"
+    }
+  },
+  "additional_remote_files": [
+    ".gitattributes"
+  ],
+  "card_metadata": {
+    "base_model": "Qwen/Qwen3.8-27B",
+    "library_name": "gguf",
+    "license": "apache-2.0",
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "qwen3_5",
+      "text-only",
+      "llama.cpp",
+      "gguf"
+    ],
+    "base_model_relation": "quantized"
+  },
+  "load_check": "separate pinned-download runtime verification required"
+}

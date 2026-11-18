@@ -1,0 +1,35 @@
+{
+  "scope": "Concrete CPU-staged public NF4 and Q4_K_M payload review before upload",
+  "reviewer": "Codex primary; Claude reviewed staging design/code earlier, not these final payloads",
+  "upstream_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "destinations": {
+    "nf4": {
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+      "manifest": "outputs/qwen38-release-nf4-02.json",
+      "manifest_sha256": "ab792b3773c6a72f97b4a4d016f07467e596edf499de358378eaaac57587caa6"
+    },
+    "gguf": {
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+      "manifest": "outputs/qwen38-release-gguf-02.json",
+      "manifest_sha256": "6a2a896ea9522e0a784067a32326d1231e4dcfc82e6ab31be38d1afba74bdcb9"
+    }
+  },
+  "checks": {
+    "all3registered_quality_arms_complete": true,
+    "card_numbers_match_saved_aggregates": true,
+    "primary_qasper_denominator": 27,
+    "card_metadata_parses": true,
+    "pinned_upstream_notice_listing": "LICENSE only; included",
+    "source_and_model_modification_notice": true,
+    "text_only_scope_no_vision_or_MTP": true,
+    "known_strict_cache_logit_failure_retained": true,
+    "no_precision_isolation_claim_for_HF_NF4": true,
+    "corrected_destination_regression_tests": 3,
+    "cpu_nf4_parameter_names_after_official_mapping": 851,
+    "no_unresolved_revision_placeholder": true,
+    "raw_credentials_or_machine_home_paths_in_public_text": false
+  },
+  "preserved_failed_staging": "outputs/qwen38-science-01/base-staging-destination-fix-01.json",
+  "remaining_before_catalog": "Anonymous pinned-download every-file verification and explicit GPU functional reload; no post-publication runtime verification claimed yet",
+  "authorization": "Owner approved bounded quantization/adapters/HF publication plan; intended public namespace and names preserved"
+}

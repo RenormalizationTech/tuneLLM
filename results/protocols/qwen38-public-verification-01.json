@@ -1,0 +1,10 @@
+{
+  "source_sha256": "16ccbd9e8f2458fdc55cc69576a296bd24e2e0ecf965ee49c866f6dca090638a",
+  "scope": "Post-publication verification, not quality evaluation or new quantization",
+  "download": "Anonymous revision-pinned snapshot, exact manifest file listing plus only Hub-generated .gitattributes; hash/size every downloaded file, evaluated model-byte identity required.",
+  "nf4_reload": "Exact creation-time two-probe native generation call, same rendered/input/generated IDs. Strict cached/full-prefix logit equivalence remains unestablished.",
+  "gguf_reload": "Same pinned llama.cpp two-probe route, prompt tokenizer parity and exact token replay.",
+  "adapter_reload": "Public PeftModel.from_pretrained route after identical FP32-casting prep, original selected checkpoint weight hash/tensor equality, public NF4 dependency byte identity, portable config changes only base path and revision, two functional prompts.",
+  "budget": "Reload mechanics within remaining 2GPU-hour feasibility allowance; reserve before execution. CPU downloads may overlap training.",
+  "GPU_required_only_with_explicit_flag": true
+}

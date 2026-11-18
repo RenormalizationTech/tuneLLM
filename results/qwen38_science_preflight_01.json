@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-17",
+  "scope": "27B implementation and mechanics; task training not started",
+  "qasper_acquisition": {
+    "manifest": "data/qasper-v03-01/manifest.json",
+    "manifest_sha256": "26b1269fc6651f8735991174ba31a8c3e64a29ac3ccf02eb56eca4e84938e5a0"
+  },
+  "gguf_conversion": {
+    "completed": true,
+    "protocol_sha256": "3548594bc0ac623b94312d4cf1b2d2410119a5bc4547bf056b5ef0374569fbc9",
+    "stages": {
+      "bf16": {
+        "returncode": 0,
+        "seconds": 220.38162759924307
+      },
+      "q4": {
+        "returncode": 0,
+        "seconds": 139.03790906490758
+      }
+    },
+    "files": {
+      "Qwen3.8-27B-text-BF16.gguf": {
+        "bytes": 53808276832,
+        "sha256": "b71f33d77d768b27de22ce5caef5325946007b7bbd076f6d5283dbee4a95faed"
+      },
+      "Qwen3.8-27B-text-Q4_K_M.gguf": {
+        "bytes": 16742036832,
+        "sha256": "b856ff3496375f7fde8c90a0d8a23359281f56bdd6719af15cba5facf33e5006"
+      }
+    },
+    "elapsed_seconds": 445.5682145329192,
+    "quality_evaluated": false
+  },
+  "q4_smoke": "outputs/qwen38-27b-gguf-01/runtime-smoke-q4-01/result.json",
+  "bf16_smoke": "outputs/qwen38-27b-gguf-01/runtime-smoke-bf16-01/result.json",
+  "backward_preflight": {
+    "path": "outputs/qwen38-science-01/backward-preflight-03/result.json",
+    "probes": [
+      {
+        "sequence_length": 2048,
+        "loss_tokens": 256,
+        "loss": 1.2618176937103271,
+        "gradient_tensors": 992,
+        "nonzero_gradient_tensors": 496,
+        "finite_gradients": true,
+        "seconds": 10.36878452822566,
+        "peak_allocated_bytes": 29361895424,
+        "peak_reserved_bytes": 31734104064
+      },
+      {
+        "sequence_length": 4096,
+        "loss_tokens": 256,
+        "loss": 0.38819795846939087,
+        "gradient_tensors": 992,
+        "nonzero_gradient_tensors": 992,
+        "finite_gradients": true,
+        "seconds": 23.7158891428262,
+        "peak_allocated_bytes": 34896598528,
+        "peak_reserved_bytes": 35924213760
+      },
+      {
+        "sequence_length": 8192,
+        "loss_tokens": 256,
+        "loss": 0.234776109457016,
+        "gradient_tensors": 992,
+        "nonzero_gradient_tensors": 992,
+        "finite_gradients": true,
+        "seconds": 67.4874611501582,
+        "peak_allocated_bytes": 45073364480,
+        "peak_reserved_bytes": 48236593152
+      }
+    ]
+  },
+  "prl_fresh_sources": {
+    "completed_acquisition": true,
+    "target": 40,
+    "papers": 40,
+    "attempted": 45,
+    "shortfall": false,
+    "test_sha256": "0f1797608e3c77281a0ec697329e1fde8d1aa14fe9b744a72c6bf60ba0e395b1",
+    "category_counts": {
+      "cond-mat.str-el": 14,
+      "cond-mat.quant-gas": 3,
+      "cond-mat.stat-mech": 6,
+      "cond-mat.mes-hall": 10,
+      "cond-mat.soft": 2,
+      "cond-mat.mtrl-sci": 4,
+      "cond-mat.supr-con": 1
+    },
+    "freshness": "independent of project training/development; not a pretraining exclusion guarantee",
+    "elapsed_seconds": 328.4803453152999
+  },
+  "known_limits": [
+    "cached/full-prefix equivalence still unestablished",
+    "backward mechanics are synthetic and do not establish quality",
+    "reference PyTorch GDN kernels",
+    "PEFT preparation casts floating base parameters to FP32",
+    "PRL fresh papers are independent of project train/dev but may be in pretraining"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "version": "qwen38-sync-catalog-v1",
+  "status": "published_and_verified",
+  "private": false,
+  "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+  "revision": "b4351e7d6f521b71cb3842116cdff3cae00d7317",
+  "gpu_verified_revision": "8cce64fc0767c8efea134468b23079ef2d693a8c",
+  "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+  "metadata_only_update": true,
+  "runtime_files_unchanged": true,
+  "anonymous_pinned_download_verified": true,
+  "quality_or_gpu_rerun_for_documentation_update": false,
+  "files": {
+    ".gitattributes": {
+      "bytes": 1584,
+      "sha256": "2e83d0787a368bbed2c0a8774d337129e1bd79591c020f1c0cc3c0846f46920e"
+    },
+    "LICENSE": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    "Qwen3.8-27B-text-Q4_K_M.gguf": {
+      "bytes": 16742036832,
+      "sha256": "b856ff3496375f7fde8c90a0d8a23359281f56bdd6719af15cba5facf33e5006"
+    },
+    "README.md": {
+      "bytes": 5521,
+      "sha256": "2f5ea751c4fab9e1467439bd3ce865ef7e7779b0c79a8337d137b2c4691ead67"
+    },
+    "REPRODUCE.md": {
+      "bytes": 1552,
+      "sha256": "341ea2cec75dd98e1217b6b05e433fb351d5510feec967bc8fc80c9b90c275b4"
+    },
+    "environment.lock.txt": {
+      "bytes": 1284,
+      "sha256": "66d1d0b27ea8aa4732df3b3f2acd741615871135f9082cd50d268c2568edb77d"
+    },
+    "evaluation.json": {
+      "bytes": 12099,
+      "sha256": "7b8df536611f0638523d7fa943bf9a750b4c4d0f10cb055193c35330a274c4f5"
+    },
+    "provenance.json": {
+      "bytes": 150116,
+      "sha256": "8eb2f20f7a1f043538d91b3823e22f73902e7b3d8b36032eeed5323e02bb207c"
+    },
+    "requirements-qwen38-nf4.txt": {
+      "bytes": 351,
+      "sha256": "9720a07a328e33310865705ae0dbc6770d5fc0bc3d3b93480ebb58e785d7db79"
+    },
+    "requirements-qwen38-science.txt": {
+      "bytes": 351,
+      "sha256": "7db1633a6266d407b9c26fee20ce96d7cb6b76f8b529dc301f0c7d39c64863fc"
+    },
+    "source.zip": {
+      "bytes": 124365,
+      "sha256": "3a1d325019c37c2ac44b989c91d9317daddec0324dc68d3bd807cea5c145c6c4"
+    },
+    "verification.json": {
+      "bytes": 1431,
+      "sha256": "ac7c46c85fb6ab35a9a143f4e2153a19c3e5ceb1d49f564f09e17b425d0c28c1"
+    }
+  },
+  "published_file_count": 12,
+  "published_inventory_sha256": "0f06aa9a992eea96d237087585e646dbd61afb793e81d1d323bf0d09a2a4e3d0",
+  "canonical_payload": "artifacts/releases/Qwen3.8-27B-tuneLLM-GGUF",
+  "original_publication": "results/qwen38_gguf_huggingface_publication.json",
+  "original_publication_sha256": "ea19b900f8ee5ed8cd3e1ed33b94f899fc5e6b1e32b4c20bb258c379d3d78800",
+  "metadata_result": "outputs/qwen38-public-gguf-metadata-01/result.json",
+  "metadata_result_sha256": "1232b213f2ce1f7ef51d9aa9a93225c046a3a184e6362b2bb269d543a3b5af1e",
+  "prepared_sha256": "72aeea1d1d99cc8411e78fab3ef6235d9ed405cea7bf253a5db7a5ec43559861",
+  "verification_evidence_sha256": "ac7c46c85fb6ab35a9a143f4e2153a19c3e5ceb1d49f564f09e17b425d0c28c1",
+  "gpu_result_sha256": "2501d49af8c8bba82a36aa4a13714b349239eb4e893e4d0d6f3d0ab3a5a00f1d",
+  "download_sha256": "bbab80052a45e5561b474e3b22a7504d7d3ced3c01ce572ec1e3fa512d470dcd",
+  "result_path": "results/qwen38_27b_quantization_screen_01.json",
+  "study_result_sha256": "7b8df536611f0638523d7fa943bf9a750b4c4d0f10cb055193c35330a274c4f5",
+  "verified_at_utc": "2026-11-17T20:19:11.647068+00:00",
+  "sync_source_sha256": "472f6feffaec45f6ef1b5d4ce3fdf50cd42dfb34117f97e1be09709712fb58a6",
+  "metadata_publisher_source_sha256": "89970ba9a19dbbf4ed2ef4873af394d91e7eeebb16c66b2e2d0e6bf81bcce6de",
+  "scope": "Local current-publication index; original GPU-tested commit distinguished from metadata commit; no new quality or runtime evaluation."
+}

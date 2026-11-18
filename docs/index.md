@@ -11,7 +11,7 @@ Start with the [results and saved examples](showcase.md), then use the
 [reproduction guide](reproduce.md) to inspect an artifact or run the portable
 CPU checks. [GitHub](https://github.com/RenormalizationTech/tuneLLM) contains the
 code and compact results; [Hugging Face](https://huggingface.co/RenormalizationTech)
-hosts five published artifacts.
+hosts nine published artifacts, including the evaluated 27B NF4 and Q4_K_M bases.
 
 ## Research tracks
 
@@ -55,9 +55,13 @@ weights; they are distinct from LoRA adapters.
 The original 4B/7B studies are complete. A text-only Qwen3.8-27B NF4
 load/save/reload smoke has completed on two simple prompts, with exact token
 replay after reload and a failed strict one-step numerical cache comparison.
-It is a functional check, not a quality benchmark. The NF4 checkpoint is local;
-27B sarcasm steering and physics QLoRA remain planned. See the
-[current roadmap](project_tracks.md).
+It is a functional check, not a quality benchmark. The subsequent
+[27B release plan](qwen38_release_plan.md) is complete: NF4, Q4_K_M and separate
+QASPER QA/evidence and PRL grounded-abstract adapters are public. QASPER passed
+the fixed custom text-only task and retention gates. PRL passed retention but
+failed abstract-quality gates and is experimental; the unadapted base is preferred
+for that task. The separate sarcasm study is deferred to reserve GPU capacity.
+See the [current roadmap](project_tracks.md).
 
 All Markdown documents under `docs/` are available through this site. Protocols,
 closeouts and execution notes preserve their historical decisions and wording;

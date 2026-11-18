@@ -1,0 +1,29 @@
+{
+  "scope": "fresh-to-project PRL test source selection; no target-model outputs",
+  "candidate_pool_sha256": "6ff31741b0f328aeccf6016b09aefed0ca05a9214b4ba24567d48b131e882539",
+  "candidate_source_sha256": "e32e7b3c447e32b64041f9aa4be3531dcfa526b3a3ea6b2a5ee91b22d23f076f",
+  "old_provenance_sha256": "0d70ae0261771fb62006870ce1189aa1517c06a130815f33ef874f6c4425b63d",
+  "source_sha256": "d414c2df749468f934da07ca8dd264271bc1551cc8eeaef800b90eec584854ea",
+  "candidate_count": 80,
+  "target_papers": 40,
+  "order": "v1 date descending; seeded SHA256 tie break; first passing candidates in this order",
+  "gates": [
+    "independent paper/version from historical100",
+    "same abstract-based theory eligibility",
+    "Crossref PRL journal/DOI identity",
+    "authoritative versioned arXiv CC-BY4 license",
+    "clean source and near-duplicate audit"
+  ],
+  "selection_date": "2026-11-17",
+  "freshness": "independent of project train/dev; may predate model and be in pretraining",
+  "category_counts": {
+    "cond-mat.str-el": 23,
+    "cond-mat.mtrl-sci": 8,
+    "cond-mat.soft": 4,
+    "cond-mat.supr-con": 13,
+    "cond-mat.quant-gas": 5,
+    "cond-mat.mes-hall": 20,
+    "cond-mat.stat-mech": 7
+  },
+  "no_automatic_pool_expansion": true
+}

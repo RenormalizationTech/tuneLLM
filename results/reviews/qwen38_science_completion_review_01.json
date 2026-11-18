@@ -1,0 +1,9 @@
+{
+  "helper_source_sha256": "561e07f6446b317ccc93dc1f14e6e0472411aa9255d53eff2a7d09352d7cf97f",
+  "prospective_amendment_sha256": "dc85701a441fcba608106b9e5c969b700a53303f8abd8d75847cf3aca1493cf3",
+  "worker_CPU_guard_tests": 26,
+  "primary_review": "Reviewedexact395prefix/8suffix IDs andrawlinebytes, immutableoriginalTimeoutErrorreceipt/source/input/tokenizerbindings, sameGPU0/settings/software, unchangedgenerationrunnerdelegation, oneattemptguard,full403byteconcatenation, segmenttimings/sourcenotice/capfailuredisclosure; noqualitymetricsoroutputsusedforselection",
+  "GPU_execution_started": false,
+  "original_phase_cap_met": false,
+  "total_study_pool_limits_unchanged": true
+}

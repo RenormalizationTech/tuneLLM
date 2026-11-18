@@ -1,0 +1,25 @@
+{
+  "advisor": "ExistingClaude science-advisor session; aggregate/protocol reviewonly",
+  "science_report_sha256": "1f60b7645fe71175b0f61cd684cb92565de723b14cde8f38885bf3afc10f9a82",
+  "confirmed": [
+    "Allfivefixedtaskgatespass; betterbaselineisschema",
+    "Strictandlenientgainsbothpositivewithpaper-bootstrapCIsabovezero; notformat-only",
+    "Evidence-strict267scoregain andupstreamexact-textscore directionagree",
+    "Originalphasecapfailed;explicit395+8firsttimecoverageamendmentmustbedisclosed",
+    "Customtext-onlysubset/notfullofficialbenchmark; 309primaryquestions109papers",
+    "Oneconfiguration/seed/epoch;bestofthreefixedprompttemplateson35devquestions",
+    "Reference-answerstyleoverlapdoesnotestablishbroadscientificcomprehensionorout-of-domaingeneralization",
+    "Goldunanswerablecohort16primary/19overalltoo smallforimproveddetectionclaim",
+    "Figure/tableevidencescoreshaveempty-reference/modalityinterpretationlimits",
+    "Recommendationpendingmatchedretentionpointgates; noformalnoninferiorityclaim"
+  ],
+  "primary_review_corrections": [
+    "Advisorpointbound8/309isnotaproofofallbootstrapgateinvariance; no unmeasuredcounterfactualrobustnessclaim",
+    "Do notquantifyempty-evidenceartifactasmostlycausalfromaggregatesalone",
+    "Figure/tablequestionsarenotuniversallyunanswerablefromtext; someinformationcanappearinparagraphs"
+  ],
+  "additional_judge_calls": 0,
+  "quality_gates_or_model_changes": false,
+  "QASPER_card_scope_caveats_added_before_staging": true,
+  "stager_source_sha256": "df5c010f5ff74e981ba58a72ec839829b126f9fded2356aaba5a9357d2e16f23"
+}

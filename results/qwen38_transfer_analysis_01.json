@@ -1,0 +1,103 @@
+{
+  "scope": "Descriptive likelihood diagnostics; not answer/summary quality evidence",
+  "registration_sha256": "8279e003b556c69852b3ac31bdbc507034efb91b5555bd441c798abe7ba2943b",
+  "interpretation_supplement_sha256": "80290d5ef818e7ced4289e9d4f167b397351ae9b79d31c242578799e6ba4803b",
+  "source_sha256": "125c922979dc2bd21e83f030726392d6230789b2c0b360e4e5c32c9cbd820ebf",
+  "input_result_bindings": {
+    "base": {
+      "result_sha256": "89c2bec80c0cd3a8dcc1de9d02bf86c97445314e9ec601c3f782d9e47a8c0c89",
+      "binding_sha256": "ae9d7a31277f600d8d5369bdaddbb37fde01ba937679fbaa3a0ff50b7c0c5277"
+    },
+    "qasper": {
+      "result_sha256": "1b6c3ddfa4bed0a7ed1c2771bbe0c4009017ce45475bb0acb93542f867f050c1",
+      "binding_sha256": "4107764a07e5d75c7ab4ee259553def2c9b3a736825a5ac234027cb0054c6ff1"
+    },
+    "prl": {
+      "result_sha256": "ad721bf0832ef326cd9a91dc207b017fb625403f28b3c43a4246301fba7abd89",
+      "binding_sha256": "1d8de26b05245a50a4c6388c425cac804cf11202dddb86c43f1e17c700eb3dc5"
+    }
+  },
+  "comparisons": {
+    "qasper_adapter_on_qasper": {
+      "difference_candidate_minus_base": -0.5751948129021407,
+      "ci95": [
+        -0.7225950954345892,
+        -0.43115296804105946
+      ],
+      "candidate_nll": 0.23282201794983837,
+      "base_nll": 0.8080168308519791,
+      "tokens": 1585,
+      "papers": 10,
+      "items": 33,
+      "bootstrap": {
+        "draws": 10000,
+        "seed": 20261117,
+        "unit": "paper",
+        "estimator": "token-weighted assistant/EOS NLL"
+      },
+      "interpretation": "checkpoint selection-set NLL; not independent in-task evidence"
+    },
+    "qasper_adapter_on_prl": {
+      "difference_candidate_minus_base": -0.09280207585413798,
+      "ci95": [
+        -0.10280412849239948,
+        -0.08272914639104524
+      ],
+      "candidate_nll": 1.5896312836074589,
+      "base_nll": 1.6824333594615968,
+      "tokens": 1581,
+      "papers": 9,
+      "items": 9,
+      "bootstrap": {
+        "draws": 10000,
+        "seed": 20261117,
+        "unit": "paper",
+        "estimator": "token-weighted assistant/EOS NLL"
+      },
+      "interpretation": "cross-task descriptive transfer"
+    },
+    "prl_adapter_on_qasper": {
+      "difference_candidate_minus_base": -0.21861844735942804,
+      "ci95": [
+        -0.2728851654474876,
+        -0.17576464843092576
+      ],
+      "candidate_nll": 0.589398383492551,
+      "base_nll": 0.8080168308519791,
+      "tokens": 1585,
+      "papers": 10,
+      "items": 33,
+      "bootstrap": {
+        "draws": 10000,
+        "seed": 20261117,
+        "unit": "paper",
+        "estimator": "token-weighted assistant/EOS NLL"
+      },
+      "interpretation": "cross-task descriptive transfer"
+    },
+    "prl_adapter_on_prl": {
+      "difference_candidate_minus_base": -0.18596921458717844,
+      "ci95": [
+        -0.21955255008753713,
+        -0.15021742733472596
+      ],
+      "candidate_nll": 1.4964641448744183,
+      "base_nll": 1.6824333594615968,
+      "tokens": 1581,
+      "papers": 9,
+      "items": 9,
+      "bootstrap": {
+        "draws": 10000,
+        "seed": 20261117,
+        "unit": "paper",
+        "estimator": "token-weighted assistant/EOS NLL"
+      },
+      "interpretation": "checkpoint selection-set NLL; not independent in-task evidence"
+    }
+  },
+  "limits": [
+    "Compare representations only within a task, not QASPER/PRL raw NLL magnitudes",
+    "Single-annotation QA JSON and human reference abstract likelihood; lower loss does not prove better or more faithful generation",
+    "Unadjusted descriptive intervals; no checkpoint/prompt/gate selection"
+  ]
+}

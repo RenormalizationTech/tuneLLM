@@ -1,0 +1,36 @@
+{
+  "scope": "small descriptive capability screen; no training or final QASPER/PRL generation",
+  "fixture_sha256": "d9a8ec11ff4f8b82cc668649a7f9478d8cb4c959f24f5c9dd6feaa213c9b362c",
+  "source_fixture_sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264",
+  "qasper_input_sha256": "3bde8d406a1e37b9f6ef391b78bf33b5355015288a5a3c2bc105540b89e25e29",
+  "arms": [
+    "nf4",
+    "q4",
+    "bf16_gguf"
+  ],
+  "counts": {
+    "general_mc": 32,
+    "gsm8k": 32,
+    "qasper_development": 35
+  },
+  "decoding": {
+    "seed": 42,
+    "batch_size": 1,
+    "thinking": false,
+    "greedy": true,
+    "max_new_tokens": 512
+  },
+  "NF4_runtime": "explicit text-only loader, native saved BF16 unquantized weights; no PEFT preparation",
+  "reference": "BF16 GGUF within llama.cpp; Transformers BF16 not required for this bounded screen",
+  "maximum_total_gpu_hours": 6,
+  "max_seconds_per_arm": 5400,
+  "gpu_accounting": "count visible assigned GPUs times model-phase elapsed wall time",
+  "source_sha256": {
+    "qwen38_science_score.py": "c9c3b6b03efffda64ae42ce246409d864fbaca1304759495b50da0788d383f5a",
+    "qwen38_quant_screen.py": "5f07ae77d12bb71bba1c3b1e9898192a2506ea4169bbaaf496f5fa6996edf211",
+    "qwen38_nf4_smoke.py": "dd68928708b86b06df84ad26f7730277ab62e08515c534329f44b8605f868fe3",
+    "benchmark_screen.py": "0c4d54220a4a3ae9ad7613504415052afa1ed43ee057bda2ab57a25a8d667246",
+    "batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "gguf_eval.py": "8420a1a47f71cfd7ee6c5200367329293de6e4ffc5f18c692e7f8898dc938a81"
+  }
+}

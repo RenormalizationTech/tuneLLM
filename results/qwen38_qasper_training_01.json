@@ -1,0 +1,82 @@
+{
+  "task": "QASPER paper QA and evidence JSON",
+  "completed": true,
+  "training_run": "outputs/qwen38-qasper-02",
+  "training_result_sha256": "a19522716ab35dce46b8dac64550e62786a4bd7fbff2f3fdf575554e66695403",
+  "protocol_sha256": "27667d78453004a56471fe4dbbfed815f725eb079533942aeed567f185c13f63",
+  "steps": 61,
+  "elapsed_seconds": 18409.98055764381,
+  "checkpoints": [
+    {
+      "step": 21,
+      "path": "<PROJECT_ROOT>/outputs/qwen38-qasper-02/checkpoints/step-00021",
+      "adapter_files": {
+        "adapter_model.safetensors": {
+          "sha256": "2dd81268e698ae2fac0919f597b0b87cae9bb227ce4da54159dc29488fdb2422",
+          "bytes": 467047680
+        },
+        "adapter_config.json": {
+          "sha256": "c3b9062a104a9b35b0f35ff4c44231263c68336d50b5e2307bb04c1d47e3a0f2",
+          "bytes": 1302
+        }
+      },
+      "nll": 0.29583516693501083,
+      "loss_tokens": 4308
+    },
+    {
+      "step": 41,
+      "path": "<PROJECT_ROOT>/outputs/qwen38-qasper-02/checkpoints/step-00041",
+      "adapter_files": {
+        "adapter_model.safetensors": {
+          "sha256": "99db2ddc90e7a737ad376661f02126ea75e9a3d92ef018789583e5071b0572f1",
+          "bytes": 467047680
+        },
+        "adapter_config.json": {
+          "sha256": "c3b9062a104a9b35b0f35ff4c44231263c68336d50b5e2307bb04c1d47e3a0f2",
+          "bytes": 1302
+        }
+      },
+      "nll": 0.2867281732202171,
+      "loss_tokens": 4308
+    },
+    {
+      "step": 61,
+      "path": "<PROJECT_ROOT>/outputs/qwen38-qasper-02/checkpoints/step-00061",
+      "adapter_files": {
+        "adapter_model.safetensors": {
+          "sha256": "d8869870aac8b99d879ecdc6559d3299680916128db64d6b0a48915225474d9a",
+          "bytes": 467047680
+        },
+        "adapter_config.json": {
+          "sha256": "c3b9062a104a9b35b0f35ff4c44231263c68336d50b5e2307bb04c1d47e3a0f2",
+          "bytes": 1302
+        }
+      },
+      "nll": 0.28659796707291924,
+      "loss_tokens": 4308
+    }
+  ],
+  "selected": {
+    "step": 61,
+    "path": "<PROJECT_ROOT>/outputs/qwen38-qasper-02/checkpoints/step-00061",
+    "adapter_files": {
+      "adapter_model.safetensors": {
+        "sha256": "d8869870aac8b99d879ecdc6559d3299680916128db64d6b0a48915225474d9a",
+        "bytes": 467047680
+      },
+      "adapter_config.json": {
+        "sha256": "c3b9062a104a9b35b0f35ff4c44231263c68336d50b5e2307bb04c1d47e3a0f2",
+        "bytes": 1302
+      }
+    },
+    "nll": 0.28659796707291924,
+    "loss_tokens": 4308
+  },
+  "quality_evaluation": "pending; development loss is selection evidence only",
+  "eligible_questions": {
+    "train": 482,
+    "development": 101
+  },
+  "seed": 42,
+  "config_sha256": "67fc60ca12a28dc562845c6ff9318bf69d7263b8b90c7120e7ab7d598fc4d2f9"
+}

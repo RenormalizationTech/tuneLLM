@@ -108,3 +108,51 @@ is invoked by inspection or tests. GPU smoke is separately opt-in with
 Stored NF4 reload uses `--load-saved`, without a fresh quantization configuration.
 The reported cached/full-prefix numerical discrepancy remains a limitation;
 CPU setup checks do not override it or establish cache equivalence.
+
+## Completed 27B quantization and QLoRA workflows
+
+The [27B evaluation and release plan](qwen38_release_plan.md) is complete:
+NF4, one Q4_K_M export and independent QASPER QA/evidence and PRL grounded-abstract
+adapters are public. Use the [release catalog](../releases/catalog.json) for
+current metadata revisions and the separate GPU-tested revisions. The
+[closeout report](../results/qwen38_science_summary_01.json) links all final
+results, publication receipts and resource accounting.
+
+For inference, follow the pinned public card for the selected format:
+
+| Package | Verified loading instructions |
+| --- | --- |
+| Saved NF4 base | [NF4 card](../releases/Qwen3.8-27B-tuneLLM-NF4/README.md) |
+| Q4_K_M GGUF | [GGUF card](../releases/Qwen3.8-27B-tuneLLM-GGUF/README.md) |
+| QASPER adapter | [QASPER card](../releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md) |
+| Experimental PRL adapter | [PRL card](../releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/README.md) |
+
+Adapter work used an isolated Python 3.13.3 environment with
+[requirements-qwen38-science.txt](../requirements-qwen38-science.txt);
+the published `environment.lock.txt` records the installed runtime. Both
+adapters depend on the saved NF4 base at revision
+`e7644d6f288cb8a9ba51856ca2c9fa68946f70fe`. Follow the documented FP32-casting
+PEFT preparation and `PeftModel.from_pretrained` loading route. Do not pass a
+new quantization configuration to the already quantized base. Native NF4
+screens and PEFT-prepared science runs are distinct workflows. GGUF uses the
+pinned llama.cpp backend and tokenized, thinking-disabled completion route;
+its unmeasured default chat behavior is not the evaluated route.
+
+The committed runners preserve the experiment implementation:
+`qwen38_prepare_inputs`, `qwen38_train_science`, `qwen38_eval_science`,
+`qwen38_qasper_analysis`, `qwen38_prl_review`, `qwen38_prl_diagnostics`,
+`qwen38_retention`, and `qwen38_quant_screen`. Run modules from the repository
+root. Read each module's `--help`, registered protocol and source snapshot
+before any execution. Model runners require explicit execution options
+(`--execute` or `--execute-gpu`, depending on the module); PRL auditing/judging
+uses separate opt-in calls. None is invoked by
+the portable CPU checks. Original source/input hashes, prepared datasets,
+checkpoints, generated answers and judge journals remain in retained local
+run directories; a clean checkout does not contain those raw inputs or
+reproduce the historical quality results by itself.
+
+The QASPER baseline preserves its original cap failure and the prospectively
+registered eight-question completion. Do not silently rerun completed questions.
+The release cards retain the failed strict cache-equivalence result and the
+fixed-subset/AI-judgment limitations. No new GPU runs are scheduled; the separate
+27B sarcasm study is deferred to preserve capacity for other projects.

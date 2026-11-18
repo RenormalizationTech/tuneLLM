@@ -1,0 +1,6 @@
+{
+  "fix_review": "results/reviews/qwen38_adapter_audit_path_fix_01.json",
+  "stager_source_sha256": "729d1e81e3065e62f017af0208f8cd09cec3356f9b528a08015911879cc9f6a4",
+  "tests": "4targetedpassed;real-layout copiedwitnessacceptance andtamperedpreparedwitnessrejection",
+  "source_and_model_artifacts_unchanged_duringtests": true
+}

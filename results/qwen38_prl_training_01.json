@@ -1,0 +1,82 @@
+{
+  "task": "PRL body excerpt to grounded abstract",
+  "completed": true,
+  "training_run": "outputs/qwen38-prl-02",
+  "training_result_sha256": "d20b8f8a4bc798c8361bf895c2bd54edeefa25783f33f5ceb6b4a7e4a352c413",
+  "protocol_sha256": "098841b5b2e995b110e6254d6ca9d99268da81af5c89f47317377b031e55ae00",
+  "steps": 24,
+  "elapsed_seconds": 8128.695981874131,
+  "checkpoints": [
+    {
+      "step": 8,
+      "path": "<PROJECT_ROOT>/outputs/qwen38-prl-02/checkpoints/step-00008",
+      "adapter_files": {
+        "adapter_model.safetensors": {
+          "sha256": "628e8fdf4a6880794ddcd7f23459cac59544c35db0e71351531f73e61e5a2437",
+          "bytes": 467047680
+        },
+        "adapter_config.json": {
+          "sha256": "823fe23856c843dde856b0f647ae8b687d5704680416c02c9d8ffa2895b66d3c",
+          "bytes": 1302
+        }
+      },
+      "nll": 1.5154481034426657,
+      "loss_tokens": 1581
+    },
+    {
+      "step": 16,
+      "path": "<PROJECT_ROOT>/outputs/qwen38-prl-02/checkpoints/step-00016",
+      "adapter_files": {
+        "adapter_model.safetensors": {
+          "sha256": "cef2c6a079a0a29ea4585c610023f6a562dda61bd0ad15ac97a2ce842b873a62",
+          "bytes": 467047680
+        },
+        "adapter_config.json": {
+          "sha256": "823fe23856c843dde856b0f647ae8b687d5704680416c02c9d8ffa2895b66d3c",
+          "bytes": 1302
+        }
+      },
+      "nll": 1.5010679755913616,
+      "loss_tokens": 1581
+    },
+    {
+      "step": 24,
+      "path": "<PROJECT_ROOT>/outputs/qwen38-prl-02/checkpoints/step-00024",
+      "adapter_files": {
+        "adapter_model.safetensors": {
+          "sha256": "7570e79dca9a678e6c6bfcf1ccfc1499c85f595f29cf419bea1f49219d2a2abd",
+          "bytes": 467047680
+        },
+        "adapter_config.json": {
+          "sha256": "823fe23856c843dde856b0f647ae8b687d5704680416c02c9d8ffa2895b66d3c",
+          "bytes": 1302
+        }
+      },
+      "nll": 1.4964641448744183,
+      "loss_tokens": 1581
+    }
+  ],
+  "selected": {
+    "step": 24,
+    "path": "<PROJECT_ROOT>/outputs/qwen38-prl-02/checkpoints/step-00024",
+    "adapter_files": {
+      "adapter_model.safetensors": {
+        "sha256": "7570e79dca9a678e6c6bfcf1ccfc1499c85f595f29cf419bea1f49219d2a2abd",
+        "bytes": 467047680
+      },
+      "adapter_config.json": {
+        "sha256": "823fe23856c843dde856b0f647ae8b687d5704680416c02c9d8ffa2895b66d3c",
+        "bytes": 1302
+      }
+    },
+    "nll": 1.4964641448744183,
+    "loss_tokens": 1581
+  },
+  "quality_evaluation": "pending; development loss is selection evidence only",
+  "eligible_papers": {
+    "train": 57,
+    "development": 9
+  },
+  "seed": 42,
+  "config_sha256": "be2466432b90f411833c15cdf4347a288773cafbcdc802132c882cf962e6eaea"
+}

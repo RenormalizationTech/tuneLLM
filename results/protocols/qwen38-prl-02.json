@@ -1,0 +1,199 @@
+{
+  "config": {
+    "task": "prl",
+    "base": "/home/angkunwu/Documents/tuneLLM/artifacts/qwen38-27b-nf4-01",
+    "repo_root": "/home/angkunwu/Documents/tuneLLM",
+    "seed": 42,
+    "versions": {
+      "torch": "2.12.0+cu130",
+      "transformers": "5.23.0",
+      "peft": "0.21.0",
+      "accelerate": "1.12.0",
+      "bitsandbytes": "0.49.2",
+      "huggingface_hub": "2.4.0"
+    },
+    "python_executable": "/home/angkunwu/Documents/tuneLLM/outputs/qwen38-science-01/env/bin/python",
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "warmup_steps": 2,
+    "gradient_accumulation": 8,
+    "epochs": 3,
+    "max_length": 8192,
+    "steps_per_epoch": 8,
+    "total_steps": 24,
+    "gpu": "1",
+    "checkpoint_steps": [
+      8,
+      16,
+      24
+    ],
+    "max_seconds": 21600,
+    "optimization_weighting": "equal-example mean loss per accumulation group; partial groups divided by actual size",
+    "selection": "minimum token-weighted development assistant/EOS NLL; earliest step breaks ties",
+    "training_counts": {
+      "train": 57,
+      "validation": 9
+    },
+    "prepared_manifest_sha256": "0d10107a571e8bd9f433d1b66985086d86fe0a64757277a55600c47aeda2dc26",
+    "prepared_input_sha256": {
+      "train": "e60fd83eef4b8203fd8265264b2592c4ac9e29dc8157026a96de6591d3e52a22",
+      "validation": "fda2e8e6b70d92160b7e85618cbee169dae79fc3397e71fa3febfb68b6bd47f9"
+    },
+    "nf4_artifact_manifest": "/home/angkunwu/Documents/tuneLLM/results/qwen38_27b_nf4_artifact_01.json",
+    "nf4_artifact_manifest_sha256": "4342376e3aa64c221496c7dad8110d1cf0e2442128814ca86bda1d05627188fb"
+  },
+  "selected_ids": {
+    "train": [
+      "2407.02481v3",
+      "2312.14598v3",
+      "2507.10762v2",
+      "2306.12548v1",
+      "2309.07886v1",
+      "2311.08893v1",
+      "2507.11308v2",
+      "2509.08479v2",
+      "2405.19607v2",
+      "2310.07476v2",
+      "2306.10411v1",
+      "2503.03477v2",
+      "2405.09217v2",
+      "2407.01457v1",
+      "2405.08887v2",
+      "2411.02489v1",
+      "2304.09040v3",
+      "2312.03840v1",
+      "2506.04356v1",
+      "2305.02091v2",
+      "2405.04159v2",
+      "2306.11321v1",
+      "2407.20101v2",
+      "2312.04093v2",
+      "2409.07804v2",
+      "2401.01928v2",
+      "2303.17553v2",
+      "2411.18108v1",
+      "2402.06585v2",
+      "2506.05262v2",
+      "2309.16227v2",
+      "2404.11647v1",
+      "2503.16384v2",
+      "2402.14321v1",
+      "2307.02840v2",
+      "2510.14724v4",
+      "2405.13809v3",
+      "2506.13696v1",
+      "2307.10103v1",
+      "2412.06915v2",
+      "2507.20705v4",
+      "2304.03303v1",
+      "2402.18364v2",
+      "2407.08194v3",
+      "2305.03962v2",
+      "2406.09080v2",
+      "2412.03648v3",
+      "2305.06033v2",
+      "2507.15503v2",
+      "2305.16244v2",
+      "2307.16853v2",
+      "2309.02242v1",
+      "2309.14047v1",
+      "2505.07790v2",
+      "2303.18169v2",
+      "2305.10363v1",
+      "2409.17096v2"
+    ],
+    "validation": [
+      "2405.18443v1",
+      "2410.12204v1",
+      "2503.00475v1",
+      "2407.01936v1",
+      "2505.18272v2",
+      "2307.08110v2",
+      "2410.09148v2",
+      "2303.14385v3",
+      "2305.13561v3"
+    ]
+  },
+  "exclusions": {
+    "train": [
+      {
+        "id": "2504.06849v2",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2308.04094v2",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2310.16352v6",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2507.19147v1",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2306.05149v2",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2503.18068v2",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2308.09574v3",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2310.03809v3",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2304.12201v2",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2310.02218v1",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2307.14965v3",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2409.18050v2",
+        "reason": "grounding/annotation audit not eligible"
+      },
+      {
+        "id": "2404.19009v2",
+        "reason": "grounding/annotation audit not eligible"
+      }
+    ],
+    "validation": [
+      {
+        "id": "2404.03638v1",
+        "reason": "grounding/annotation audit not eligible"
+      }
+    ]
+  },
+  "source_sha256": {
+    "scripts/qwen38_train_science.py": "73d8dcc6efe4b53d43ceddaa6ed00832e887cbaa5042749a21b9617e53ce426a",
+    "scripts/qwen38_science_runtime.py": "b2b8bb1ccc5d4446b7be9640273765b722124fecce103503c570234360bec562",
+    "scripts/qwen38_nf4_smoke.py": "dd68928708b86b06df84ad26f7730277ab62e08515c534329f44b8605f868fe3",
+    "scripts/training_data.py": "08e5034f9a1f3b36313b7b4c205dc5e8f4c4777a28141dcdbac54d147ff54fed",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b"
+  },
+  "input_sha256": {
+    "train": "782589d308e148ccd9bd814b8e9c1fd56d39d34b0dc7a7747f637933b7dc0015",
+    "validation": "d7781165ff2b5105f2713f1496f8329ce57589009d0448a41c6ccaef0dbe54e6"
+  },
+  "target_tokens": {
+    "train": 10697,
+    "validation": 1581
+  },
+  "test_data_loaded_by_trainer": false
+}

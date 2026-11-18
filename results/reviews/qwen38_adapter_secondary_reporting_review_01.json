@@ -1,0 +1,73 @@
+{
+  "source_sha256": "62212aa2c02466c282f9abc6f1932ef3899c69528ab33a5f3cdb38d911d08cbd",
+  "scope": "PRLsecondaryreportingonly; noexperiment/gatechange",
+  "registered_diagnostics_replay_passed": true,
+  "diagnostic_summary": {
+    "base": {
+      "records": 40,
+      "means": {
+        "words": {
+          "mean": 176.925,
+          "denominator": 40
+        },
+        "novel_unique_8gram_fraction": {
+          "mean": 0.985602701029522,
+          "denominator": 40
+        },
+        "custom_whitespace_lcs_f1": {
+          "mean": 0.205140251123992,
+          "denominator": 40
+        },
+        "normalized_token_f1": {
+          "mean": 0.3822703200235062,
+          "denominator": 40
+        }
+      }
+    },
+    "adapter": {
+      "records": 40,
+      "means": {
+        "words": {
+          "mean": 131.325,
+          "denominator": 40
+        },
+        "novel_unique_8gram_fraction": {
+          "mean": 0.5255008642183983,
+          "denominator": 40
+        },
+        "custom_whitespace_lcs_f1": {
+          "mean": 0.2441574714370228,
+          "denominator": 40
+        },
+        "normalized_token_f1": {
+          "mean": 0.4141669465183827,
+          "denominator": 40
+        }
+      }
+    },
+    "fixed_copy": {
+      "records": 40,
+      "means": {
+        "words": {
+          "mean": 134.0,
+          "denominator": 40
+        },
+        "novel_unique_8gram_fraction": {
+          "mean": 0.0024582479396502857,
+          "denominator": 38
+        },
+        "custom_whitespace_lcs_f1": {
+          "mean": 0.13627453544641416,
+          "denominator": 40
+        },
+        "normalized_token_f1": {
+          "mean": 0.2481097677357565,
+          "denominator": 40
+        }
+      }
+    }
+  },
+  "worker_focused_tests": 13,
+  "primary_review": "Checked optionalPRL-onlyargument, registeredsource/input/predictionbindings, peritemfixedcopy/agreementreplay, exacthashes beforeexport, cardnegativeclassification andpointgateuncertainty. ImportedtokenF1helpernotseparatelypinnedoriginally; packaginghash/snapshot andlimitationexplicit.",
+  "staging_started": false
+}

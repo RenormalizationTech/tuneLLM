@@ -1,0 +1,14 @@
+{
+  "source_sha256": "125c922979dc2bd21e83f030726392d6230789b2c0b360e4e5c32c9cbd820ebf",
+  "parent_registration_sha256": "8279e003b556c69852b3ac31bdbc507034efb91b5555bd441c798abe7ba2943b",
+  "interpretation_supplement_sha256": "80290d5ef818e7ced4289e9d4f167b397351ae9b79d31c242578799e6ba4803b",
+  "timing": "after shared base probe, before any adapter optimization or adapter probe",
+  "statistic": "token-weighted assistant/EOS NLL difference candidate minus base; paired paper resampling retains per-paper token counts",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20261117,
+    "generator": "numpy.default_rng",
+    "interval": "percentile95"
+  },
+  "scope": "Descriptive cross-task results only. Same-task selection-set NLL flagged; no new gate, selection or raw cross-task magnitude comparison."
+}

@@ -1,0 +1,7 @@
+{
+  "parent_registration_sha256": "0dcabc606ace74e1ba305b6b337c4864d22d699308decfa062368b9d71e0b530",
+  "source_sha256": "16ccbd9e8f2458fdc55cc69576a296bd24e2e0ecf965ee49c866f6dca090638a",
+  "reason": "Additionally bind local helper scripts and original smoke/artifact reference files between anonymous download and GPU verification. No model, prompt, decoding, identity criteria or budget changes.",
+  "timing": "before any publication or release download verification",
+  "tests": "11receipt/artifact/listing/native-call guard tests pass"
+}

@@ -1,0 +1,247 @@
+{
+  "task": "QASPER customtext-onlyQA andparagraph-IDevidence",
+  "completed_science_and_retention": true,
+  "recommended_within_registered_scope": true,
+  "all_fixed_task_and_retention_gates_pass": true,
+  "training": "results/qwen38_qasper_training_01.json",
+  "science": "results/qwen38_qasper_final_science_01.json",
+  "counts": {
+    "annotation_types": {
+      "boolean": 140,
+      "extractive": 473,
+      "free_form": 273,
+      "unanswerable": 89
+    },
+    "evidence_strict_primary": 267,
+    "max_evaluation_reserved_tokens": 7253,
+    "max_prompt_tokens": 6741,
+    "max_sequence_tokens": 7442,
+    "missing_context_evidence": 14,
+    "nontext_evidence": 78,
+    "overlength_references": 0,
+    "papers": 116,
+    "primary": 309,
+    "prl_flags": {},
+    "prompt_tokens": 2043571,
+    "records": 403,
+    "reduced_evidence_budgets": 0,
+    "target_tokens_with_eos": 17741,
+    "training_eligible": 279,
+    "unmatched_text_evidence": 23
+  },
+  "strict_primary_answer_f1": {
+    "base": 0.45666038917478496,
+    "prompt": 0.5667949004218192,
+    "adapter": 0.6900662625173457
+  },
+  "lenient_primary_answer_f1": {
+    "base": 0.45666038917478496,
+    "prompt": 0.5837104495294992,
+    "adapter": 0.6900662625173457
+  },
+  "answer_comparisons": {
+    "base": {
+      "ci95": [
+        0.1885238185759261,
+        0.28080877603868454
+      ],
+      "ci_pass": true,
+      "gain": 0.2334058733425608,
+      "gain_pass": true
+    },
+    "prompt": {
+      "ci95": [
+        0.08302105628808003,
+        0.16541340738516108
+      ],
+      "ci_pass": true,
+      "gain": 0.1232713620955265,
+      "gain_pass": true
+    }
+  },
+  "bootstrap": {
+    "lenient": {
+      "base": {
+        "ci95": [
+          0.1885238185759261,
+          0.28080877603868454
+        ],
+        "difference_a_minus_b": 0.2334058733425608,
+        "draws": 10000,
+        "estimand": "item mean; paired paper-cluster percentile bootstrap",
+        "items": 309,
+        "papers": 109,
+        "seed": 20261117
+      },
+      "prompt": {
+        "ci95": [
+          0.06821601468416288,
+          0.1465892926898891
+        ],
+        "difference_a_minus_b": 0.10635581298784659,
+        "draws": 10000,
+        "estimand": "item mean; paired paper-cluster percentile bootstrap",
+        "items": 309,
+        "papers": 109,
+        "seed": 20261117
+      }
+    },
+    "strict": {
+      "base": {
+        "ci95": [
+          0.1885238185759261,
+          0.28080877603868454
+        ],
+        "difference_a_minus_b": 0.2334058733425608,
+        "draws": 10000,
+        "estimand": "item mean; paired paper-cluster percentile bootstrap",
+        "items": 309,
+        "papers": 109,
+        "seed": 20261117
+      },
+      "prompt": {
+        "ci95": [
+          0.08302105628808003,
+          0.16541340738516108
+        ],
+        "difference_a_minus_b": 0.1232713620955265,
+        "draws": 10000,
+        "estimand": "item mean; paired paper-cluster percentile bootstrap",
+        "items": 309,
+        "papers": 109,
+        "seed": 20261117
+      }
+    }
+  },
+  "evidence_gate": {
+    "delta_vs_better_baseline": 0.05999157548014822,
+    "denominator": 267,
+    "group": "evidence_strict_primary"
+  },
+  "format_gate": {
+    "denominator": 403,
+    "fraction": 0.0,
+    "group": "all_sampled",
+    "invalid_outputs": 0,
+    "maximum_fraction": 0.02
+  },
+  "false_unanswerable": {
+    "arms": {
+      "adapter": {
+        "count": 3,
+        "denominator": 293,
+        "rate": 0.010238907849829351
+      },
+      "base": {
+        "count": 14,
+        "denominator": 293,
+        "rate": 0.04778156996587031
+      },
+      "prompt": {
+        "count": 4,
+        "denominator": 293,
+        "rate": 0.013651877133105802
+      }
+    },
+    "definition": "strict valid unanswerable flag on primary rows where every original reference is answerable; strict invalid outputs count against format, not abstention",
+    "delta_vs_better_baseline": -0.003412969283276451,
+    "delta_vs_each_baseline": {
+      "base": -0.03754266211604096,
+      "prompt": -0.003412969283276451
+    }
+  },
+  "format_only_gain": false,
+  "retention": {
+    "interpretation": "fixed point-estimate regression limits; no non-inferiority claim; physics_mc diagnostic only",
+    "retention_pass": true,
+    "tasks": {
+      "general_mc": {
+        "allowed_loss": 5,
+        "baseline_correct": 110,
+        "broken_ids": [
+          "mmlu-test-09952"
+        ],
+        "candidate_correct": 109,
+        "delta_correct": -1,
+        "fixed_ids": [],
+        "gate_pass": true,
+        "total": 128
+      },
+      "gsm8k": {
+        "allowed_loss": 5,
+        "baseline_correct": 114,
+        "broken_ids": [
+          "gsm8k-main-test-00711"
+        ],
+        "candidate_correct": 119,
+        "delta_correct": 5,
+        "fixed_ids": [
+          "gsm8k-main-test-01012",
+          "gsm8k-main-test-00923",
+          "gsm8k-main-test-00214",
+          "gsm8k-main-test-01183",
+          "gsm8k-main-test-00157",
+          "gsm8k-main-test-00825"
+        ],
+        "gate_pass": true,
+        "total": 128
+      },
+      "ifeval": {
+        "allowed_loss": 3,
+        "baseline_correct": 23,
+        "broken_ids": [],
+        "candidate_correct": 26,
+        "delta_correct": 3,
+        "fixed_ids": [
+          "1629",
+          "2904",
+          "1481"
+        ],
+        "gate_pass": true,
+        "total": 32
+      }
+    }
+  },
+  "retention_gsm8k_strict": {
+    "baseline": 114,
+    "adapter": 118,
+    "total": 128
+  },
+  "retention_batching": {
+    "generation_batch_size": 4,
+    "groups_sha256": "3a6de99a6f02ff9381f0cbba9c0b7d6f862a42b95f244ccbd2cb02c11e8a2850",
+    "mc_batch_size": 1,
+    "timing_scope": "per-item batch_seconds shared across group; sum unique batches for arm generation time"
+  },
+  "baseline_execution": {
+    "original_phase_cap_met": false,
+    "original_run": "outputs/qwen38-qasper-final-base-01",
+    "prefix": 395,
+    "first_time_suffix": 8,
+    "full_coverage": 403,
+    "suffix_seconds": 244.55172487720847,
+    "raw_failure_preserved": true,
+    "amendment": "results/protocols/qwen38-qasper-baseline-completion-amendment-01.json",
+    "assembly_registration_sha256": "7d4d0437d1ff5ba55243d48969ba933f1092ebaef3bcc5d3c046fa06b0697076"
+  },
+  "input_sha256": {
+    "science_raw": "5b0bd63af65257be5acfb9cd5ca9434a7c0b1d588d7729fb0c7afaf2d58a4c75",
+    "retention_raw": "880bc0b6f50d2992ac759cee0683d079ab26bbc8223f6b68c527f9780c8dfc46",
+    "selected_training_result": "a19522716ab35dce46b8dac64550e62786a4bd7fbff2f3fdf575554e66695403"
+  },
+  "publication_verification": "Recorded separately inreleasecatalog verificationreceipt afterpinneddownload/GPUreload; notinferredhere",
+  "limits": [
+    "Public NLP papers may have been in pretraining",
+    "No physics-generalization claim from QASPER",
+    "Normalized paragraph-ID scores are custom; exact upstream-string evidence score reported separately",
+    "Point-estimate retention/format gates are not statistical non-inferiority tests",
+    "Generation outputs lack upstream committed prediction hashes; explicit caller-supplied run mapping pins them before analysis",
+    "Lexical/synthetic scorer parity does not establish full official benchmark equivalence",
+    "Oneconfiguration/seed/epoch; promptbestofthreefixedtemplateson35devquestions",
+    "TokenF1/referenceoverlapdoesnotestablishgeneral scientificcomprehension",
+    "Goldunanswerableprimary16:adapter11/base12correct; noclaimimproveddetection",
+    "Figure/tablecasesoutsideprimary;missingvisualinputs/empty-text-evidence scoringlimitinterpretation",
+    "Originalbaselinephasecapfailed;395+8firsttimecoverageunderexplicitresourceamendment, source/failurepreserved",
+    "No physicsorotherdomainqualitygeneralizationclaim"
+  ]
+}

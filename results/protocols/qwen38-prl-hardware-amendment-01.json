@@ -1,0 +1,15 @@
+{
+  "old_training_protocol_sha256": "4b74154dac8ee66babc0da8944757c52b3240f9716e4ad0558a5618608a06163",
+  "new_training_protocol_sha256": "098841b5b2e995b110e6254d6ca9d99268da81af5c89f47317377b031e55ae00",
+  "superseded_prepared_only_run": "qwen38-prl-01",
+  "training_run": "qwen38-prl-02",
+  "config_changes": {
+    "gpu": [
+      "0",
+      "1"
+    ]
+  },
+  "reason": "Use GPU1 independently while QASPER02 uses GPU0. No optimization occurred in PRL01; same single scientific configuration, data, seed and selection.",
+  "optimization_started_at_amendment": false,
+  "evaluation_registration_sha256": "cb98f1231fc4377afbd4f703d8abd895b7798cde19d359e49fe9c4849cfc4be4"
+}

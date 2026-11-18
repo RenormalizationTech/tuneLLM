@@ -1,0 +1,14 @@
+{
+  "source_sha256": "89970ba9a19dbbf4ed2ef4873af394d91e7eeebb16c66b2e2d0e6bf81bcce6de",
+  "prior_protocol_sha256": "c35039dd2f2366203d7acec196f9b6d133d3ad30609ca9a0eb05a0dbcf967866",
+  "review": "Independent Codex worker review found mutable preparation trust gap; primary added invariant reconstruction and mocked rejection tests; worker rereview found no remaining critical findings.",
+  "changes_before_any_metadata_update": [
+    "Require exact README.md/verification.json allowlist before Hub client creation",
+    "Bind parent revision and full prior runtime hashes to original publication/download/GPU evidence",
+    "Reconstruct exact verification JSON and append-only README from bound evidence",
+    "Guard canonical approved model path"
+  ],
+  "tests": "11focused CPUtests, including3forged-plan rejection cases; current portable suite311passed",
+  "runtime_or_science_change": false,
+  "external_metadata_update_started": false
+}

@@ -157,12 +157,32 @@ def test_release_catalog_matches_cards_receipts_and_visible_index():
     catalog = json.loads((root/"releases/catalog.json").read_text())
     receipt = json.loads((root/"results/huggingface_card_polish_02.json").read_text())
     published = {row["repo_id"]: row for row in receipt["repositories"]}
+    new_repos = {
+        "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+        "RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+        "RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
+        "RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+    }
     index = (root/"releases/README.md").read_text()
     rows = catalog["public_releases"]
-    assert {row["repo_id"] for row in rows} == set(published)
-    assert len(rows) == len(published)
+    current_ids = {row["repo_id"] for row in rows}
+    assert set(published) <= current_ids <= set(published) | new_repos
+    assert len(rows) == len(current_ids)
     for row in rows:
-        expected = published[row["repo_id"]]
+        if row["repo_id"] in published:
+            expected = published[row["repo_id"]]
+        else:
+            expected = json.loads((root/row["verification_receipt"]).read_text())
+            assert expected["status"] == "published_and_verified"
+            assert expected["repo_id"] == row["repo_id"]
+            assert expected["anonymous_pinned_download_verified"] is True
+            assert expected["runtime_files_unchanged"] is True
+            assert expected["private"] is False
+            assert row["gpu_verified_revision"] == expected["gpu_verified_revision"]
+            files = expected["files"]
+            serialized = json.dumps(files, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
+            assert row["published_inventory_sha256"] == expected["published_inventory_sha256"] == hashlib.sha256(serialized).hexdigest()
+            assert row["published_file_count"] == expected["published_file_count"] == len(files)
         assert row["revision"] == expected["revision"] and row["revision"] in index
         card = root/row["card_path"]
         assert hashlib.sha256(card.read_bytes()).hexdigest() == row["card_sha256"] == expected["files"]["README.md"]["sha256"]

@@ -1,0 +1,6 @@
+{
+  "source_sha256": "6c3b5eb41cdff84292d5f697fefdf008d638c8a2694ca09f6a801a0b887de779",
+  "change": "Include sanitized full baseline/adapter retention registrations, with exact frozen groupplans; addoriginalregistrationhashes andprospectivebatchamendment to provenance",
+  "scope": "Packaging/provenance only; beforeanyadapterstaging; no model/evaluation/gatechange",
+  "raw_registrations_unchanged": true
+}

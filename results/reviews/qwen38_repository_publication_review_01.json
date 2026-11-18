@@ -1,0 +1,39 @@
+{
+  "reviewed_at_utc": "2026-11-18T06:24:31.476830+00:00",
+  "scope": "Publish completed 27B source, compact evidence, four HF card mirrors and portfolio closeout; no new GPU/model/judge work",
+  "base_commit": "e0005f0e2c5726c0b316a460ac566fbc87b45279",
+  "source_and_report_review": {
+    "staged_files_before_this_receipt": 141,
+    "all_UTF8_text": true,
+    "no_model_binaries_or_ignored_raw_directories": true,
+    "credential_pattern_matches": 0,
+    "frozen_experiment_sources_results_and_HF_revisions_unchanged": true
+  },
+  "portable_checks": {
+    "local_before_fixture_fix": {
+      "passed": 397
+    },
+    "clean_staged_export_after_fixture_fix": {
+      "passed": 391,
+      "skipped": 6,
+      "failed": 0,
+      "note": "Local artifacts are absent; historical artifact-dependent checks remain explicitly unavailable."
+    },
+    "fixture_correction": "Synthetic QASPER tests now build hash-bound snapshots from five committed source modules; they no longer depend on ignored outputs/qwen38-qasper-evaluation-01/source. The separate historical study-binding test retains its actual artifact requirements."
+  },
+  "documentation": {
+    "tests_passed": 8,
+    "strict_build_passed": true,
+    "html_pages": 105,
+    "internal_links_checked": 15148,
+    "broken_internal_links": 0,
+    "staged_diff_whitespace_check_passed": true
+  },
+  "portfolio": "docs/showcase.md#qwen38-27b-portfolio-summary",
+  "results": {
+    "path": "results/qwen38_science_summary_01.json",
+    "sha256": "71848d8ff7f690c2123adc6224e67b964c305708071d317d4cff5c4ed13316cc"
+  },
+  "next_model_study": "27B sarcasm steering deferred at owner request to reserve GPUs for other projects",
+  "publication_status": "Prepared for commit and push; GitHub CPU checks and Pages deployment are subsequent independent checks."
+}

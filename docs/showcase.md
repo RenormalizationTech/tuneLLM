@@ -1,9 +1,60 @@
 # Results and example responses
 
-The main finding is a measurable tradeoff: activation interventions change
-refusal and style, while stronger effects can reduce useful or coherent
-answers. These experiments use fixed baselines and record unsuccessful settings
-alongside retained experimental references.
+The portfolio covers quantization, QLoRA and activation steering. The completed
+27B study improved scientific question answering on its fixed subset, while
+physics abstract adaptation failed the writing-quality gates. Earlier activation
+studies show measurable style/refusal changes alongside usefulness and coherence
+costs. Fixed baselines and unsuccessful settings are retained throughout.
+
+## Qwen3.8-27B portfolio summary
+
+Built and evaluated two independent QLoRA adapters on a saved NF4 base, and
+published four verified Hugging Face packages: NF4, Q4_K_M GGUF, QASPER QA and
+an experimental PRL abstract adapter. The bounded study used **24.44 GPU-hours**.
+
+| Evaluation | Result | Interpretation |
+| --- | --- | --- |
+| QASPER, 309 primary questions from a custom text-only subset | Strict Answer F1: base **0.457**, selected prompt **0.567**, adapter **0.690**; adapter gain over prompt **0.123**, 95% paired paper-bootstrap CI **[0.083, 0.165]** | Passed the fixed answer, evidence, formatting and retention gates; not a full official benchmark result. |
+| PRL-associated abstracts, 40 fresh-to-project papers | Adapter preference **0.175**, 95% paper-bootstrap CI **[0.075, 0.2875]**, from two blinded AI passes per paper | Quality gates failed despite lower development loss and higher reference overlap. Retention passed; the unadapted base is preferred. |
+| Public artifact verification | All four pinned packages passed anonymous full-file hash checks and GPU reload checks; both adapters restored the selected tensors exactly | Functional and artifact-integrity checks, separate from the task-quality evaluations. |
+
+Evidence: [combined closeout](../results/qwen38_science_summary_01.json),
+[QASPER final report](../results/qwen38_qasper_final_01.json),
+[PRL final report](../results/qwen38_prl_final_01.json), and
+[public release index](../releases/README.md).
+
+### CV bullets
+
+- Built a reproducible 27B quantization and QLoRA workflow with fixed data splits,
+  development-only checkpoint selection, task/prompt controls and retention gates;
+  completed the bounded study in 24.44 GPU-hours.
+- Improved QASPER Answer F1 from 0.567 with a development-selected prompt to
+  0.690 with QLoRA on a fixed 309-question primary subset; the paired
+  paper-bootstrap interval for the improvement was [0.083, 0.165].
+- Published four Hugging Face packages with pinned runtimes, data provenance,
+  anonymous hash verification and GPU reload evidence; documented a negative
+  physics-abstract result where lower loss did not establish better writing.
+
+### Interview summary
+
+“I built a bounded 27B study to compare quantized inference and task-specific
+QLoRA. I trained separate scientific-QA and physics-abstract adapters with one
+configuration each, selected checkpoints on development loss, and evaluated
+them against task and prompt baselines. The QA adapter improved Answer F1 from
+0.567 for the selected prompt to 0.690 on our fixed primary subset and passed
+retention gates. The abstract adapter reduced loss but lost the blinded AI
+preference comparison, so I published it as an experimental negative result.
+I kept both outcomes, the failed checks and the resource accounting visible,
+and verified that all four public artifacts could be downloaded and reloaded.”
+
+Scope to retain when presenting these results: QASPER used a custom subset;
+PRL judgments are AI-based and correlated, not human validation. The QASPER
+baseline hit its original phase cap after 395 questions; eight previously
+unevaluated questions were completed once under a prospective amendment.
+The original strict numerical cache-equivalence failure remains unresolved.
+There is no same-backend BF16 Transformers control for NF4. Sarcasm transfer
+to 27B is deferred to reserve GPU capacity; these summaries use completed
+results and require no new model runs.
 
 ## Refusal reduction and answer quality
 

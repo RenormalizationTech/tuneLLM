@@ -1,0 +1,46 @@
+{
+  "registered_at_utc": "2026-11-18T02:02:48.652154+00:00",
+  "scope": "Resource-only completion of eight never-evaluated finalbaselinequestions; norepeatofcompletedquestions",
+  "original_run": "outputs/qwen38-qasper-final-base-01",
+  "original_phase_cap_seconds": 10000,
+  "original_measured_seconds": 10034.74296683073,
+  "original_completed": false,
+  "original_error": "TimeoutError: registered generation time cap reached",
+  "original_registration_sha256": "405a25c6637356a3a6b363684ec5303e0ed72c7ae68c5d8779dcf4d9503b2967",
+  "original_result_sha256": "d044a320e5c09e204cd726337e90243b213865eacc2f8de95acc1d880e560d78",
+  "original_predictions_sha256": "8bfcf81dcb87cae9f928331e68fde8bc45160c6981c47e5ff84bd2dfa388dad3",
+  "original_full_input_sha256": "6dc33a31460e8720c49e71595a37067f0f479e3b400b868262d8204af23e4ac2",
+  "full_denominator": 403,
+  "completed_prefix": 395,
+  "missing_suffix_ids": [
+    "2004.02105::e25b73f700e8c958b64951f14a71bc60d225125c",
+    "2004.02105::908ba58d26d15c14600623498d4e86c9b73b14b2",
+    "2004.02105::3e0fd1a3944e207edbbe7c7108239dbaf3bccd4f",
+    "2004.02105::c0847af3958d791beaa14c4040ada2d364251c4d",
+    "2002.03056::9be9354eeb2bb1827eeb1e23a20cfdca59fb349a",
+    "2002.03056::5d5c25d68988fa5effe546507c66997785070573",
+    "2002.03056::ca595151735444b5b30a003ee7f3a7eb36917208",
+    "2002.03056::a2edd0454026811223b8f31512bdae91159677be"
+  ],
+  "additional_phase_cap_seconds": 900,
+  "additional_parent_reservation": {
+    "name": "qasper-final-base-completion",
+    "gpu_hours": 0.25,
+    "pool": "qasper_eval"
+  },
+  "parent_pool_limit_gpu_hours": 12,
+  "parent_accounted_including_remaining_reservations_gpu_hours": 11.775156228233504,
+  "one_attempt_only": true,
+  "generation_runner": "unchanged frozen scripts/qwen38_eval_science.py",
+  "unchanged": [
+    "original403questions/order/targets",
+    "model/checkpoint selection",
+    "baseprep/dtypes/software/sourceversion",
+    "baseprompt/template andgreedybatch1max512decoding",
+    "statisticalmetrics/bootstrap/qualitygates",
+    "originaltotalstudyGPUhourpools"
+  ],
+  "custody": "PreserveoriginalFAILED filesimmutable; completeonlyeight suffixIDs once in separate registeredrun; concatenate exact395prefixpredictionlines and8newlines into clearlylabeled two-segmentassembly withsegmenthashes; never overwriteoriginalresult",
+  "interpretation": "Originalper-phasecapwasnotmet. Finalbaselinecoverageiscompletedviaanexplicitruntimeamendment, notanuninterruptedoriginalcaprun. Noquestionhasmultiplegenerationsoroutput-basedselection.",
+  "quality_outputs_or_scores_used_for_amendment": false
+}

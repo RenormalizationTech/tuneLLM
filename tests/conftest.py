@@ -8,6 +8,22 @@ PORTABLE = {
     "test_baseline.py", "test_batching.py", "test_training.py", "test_prepare_refusal.py",
     "test_refusal_common.py", "test_reduction_hooks.py", "test_publish_release.py",
     "test_setup_refusal_artifact.py",
+    "test_qwen38_acquire_qasper.py", "test_qwen38_science_data.py",
+    "test_qwen38_science_score.py", "test_qwen38_science_runtime.py",
+    "test_qwen38_prepare_inputs.py", "test_qwen38_prl_sources.py",
+    "test_qwen38_eval_adapter.py", "test_qwen38_prl_claim_audit.py",
+    "test_qwen38_retention.py", "test_qwen38_budget.py",
+    "test_qwen38_prl_review.py",
+    "test_qwen38_apply_prl_audit.py",
+    "test_qwen38_prl_diagnostics.py",
+    "test_qwen38_qasper_analysis.py",
+    "test_qwen38_verify_public.py",
+    "test_qwen38_transfer_analysis.py",
+    "test_qwen38_stage_base.py",
+    "test_qwen38_publish_verification.py",
+    "test_qwen38_sync_catalog.py",
+    "test_qwen38_complete_science.py",
+    "test_qwen38_stage_adapter.py", "test_qwen38_retention_batch_preflight.py",
 }
 
 

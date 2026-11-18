@@ -24,7 +24,13 @@ subsequently completed and its [experimental direction/runtime](https://huggingf
 is public, with the original nulls and selected-case limits preserved. See the
 [current release index](../releases/README.md). Qwen3-14B remains historical only.
 The official Qwen3.8-27B text-only NF4 load/save/reload smoke is complete;
-sarcasm steering and physics QLoRA remain planned. The
+the [2026-11-17 release plan](qwen38_release_plan.md) selects NF4 plus Q4_K_M
+and independent QASPER QA/evidence and PRL grounded-abstract adapters. The fixed
+base screen and public-base reload checks are complete. Both adapters finished
+training; PRL failed its locked science gates, while QASPER passed its fixed
+text-only task and retention gates. All four 27B packages are public with
+anonymous-download and GPU-reload verification. The separate sarcasm
+study is deferred to reserve GPU capacity. The
 [reproduction guide](reproduce.md) separates environments and portable checks
 from historical artifact-dependent workflows.
 

@@ -1,0 +1,9 @@
+{
+  "screen_registration_sha256": "fb92338ba38b666f9c042a2f6a12f28c1b186f27dbd95f4747419d514da158b6",
+  "purpose": "Supplement two imported helper identities omitted from the original screen source map. The Q4 arm is complete and native NF4 arm is in progress; neither helper has been edited during this study. No fixture, metric or inference change.",
+  "helpers": {
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "scripts/qwen38_science_runtime.py": "b2b8bb1ccc5d4446b7be9640273765b722124fecce103503c570234360bec562"
+  },
+  "timing": "after Q4 completion, before NF4 and BF16 GGUF completion"
+}

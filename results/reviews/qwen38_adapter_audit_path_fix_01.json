@@ -1,0 +1,9 @@
+{
+  "failure": "FirstCPUstagingattempt failedbeforewritingpayload: judge_isolation_audit.json notfoundinoriginalclaim-auditfolder",
+  "cause": "audit_application evidence keysdescribe copiedprepared/claim_audit witnesses including runtimeisolation/binding files; stagerusedoriginalauditfolder",
+  "fix": "Verifyall88preservedevidencefiles in immutableprepared/claim_audit snapshot, retainoriginalauditresult hash/eligibility bindings",
+  "stager_sha256": "729d1e81e3065e62f017af0208f8cd09cec3356f9b528a08015911879cc9f6a4",
+  "raw_audit_training_and_evaluation_files_changed": false,
+  "model_rerun": false,
+  "previous_attempt_payload_written": false
+}

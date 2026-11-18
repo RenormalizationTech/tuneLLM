@@ -1,0 +1,22 @@
+{
+  "advisor": "Existing Herdr Claude science-advisor session; interpretation review after80valid finalAIreviewcalls",
+  "science_report_sha256": "93d7c96e8261158639b28c97d80a7aa6f1cdeded891ab9de63c6a64b21c94e0b",
+  "diagnostics_sha256": "008523ae7ab039db625b9410074e1885b8c21be6b42575cf7427ea4ca0caaf7c",
+  "confirmed": [
+    "Preference orientation is adapterwin1/tie0.5/loss0, average2passes perpaper",
+    "Preference0.175 CI[.075,.2875] entirelybelow.5 favorsunadaptedbase underthisAIrubric",
+    "Sciencefailurecannotbeoverriddenbyretention; experimentalnotrecommendedabstractwriter",
+    "Pointunsupportedcountgatefails, but2vs1sentences/40papers andpairedCI[0,.075] do notestablishlargefactualregression",
+    "Referencelexicaloverlapincreasedwhileblindpreferencefell; overlapmetricssecondary",
+    "Developmentfallbackdidnotteststrongerprompt; basealiasonecomparisononly",
+    "Oneconfig/seed,57auditedcondmattrainpapers,40fresh-to-projectnotpretraining-clean,authoroverlapallowed,AIjudgefamilysharedwithadvisor"
+  ],
+  "primary_review_corrections": [
+    "0.175scoreisnotrawwinfrequencywhenhalftiesandpassaveragingexist",
+    "Higherbody8gramoverlapisdescriptive; underlyingtrainingmechanismnotestablished",
+    "Bodycopyingdoesnotbyitselfproveeveryclaimcontextuallysupported",
+    "No robustness-to-judge-bias claim measured"
+  ],
+  "changes_to_experiment": false,
+  "additional_judge_calls": 0
+}

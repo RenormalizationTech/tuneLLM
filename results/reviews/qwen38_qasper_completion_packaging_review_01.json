@@ -1,0 +1,9 @@
+{
+  "source_sha256": "3a816016bdf565f155a998ad73823de50119c8d9ead2177da5c91ef373631ea0",
+  "completion_helper_sha256": "561e07f6446b317ccc93dc1f14e6e0472411aa9255d53eff2a7d09352d7cf97f",
+  "scope": "QASPERpackagingonly; fullbaselineassemblyCPUproofandprominentoriginalcapfailure disclosure",
+  "review": "Reviewedsourceandsegmenthashchecks beforepayloadwrite, original395failedreceipt/8suffix metadataexport, helper/amendmentarchive, optionalcardparameter preservingplainbaseline/PRL behavior. Frozenanalysis/generation sourcesunchanged.",
+  "worker_focused_tests": 9,
+  "actualassembly_not_yet_executed": true,
+  "raw_model_payloads_changed": false
+}

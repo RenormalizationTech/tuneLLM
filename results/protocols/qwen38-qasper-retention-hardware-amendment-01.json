@@ -1,0 +1,17 @@
+{
+  "registered_at_utc": "2026-11-18T02:32:07.920743+00:00",
+  "scope": "RetentionGPUhardware-onlyscheduling amendment beforeanyQASPERretentionexecution",
+  "superseded_CPU_only_run": "outputs/qwen38-retention-qasper-01",
+  "old_registration_sha256": "c36508fd21874bda8bc135abf2242c5103855862c0df34ecfe47584b73a444a2",
+  "old_gpu": "0",
+  "new_run": "outputs/qwen38-retention-qasper-02",
+  "new_registration_sha256": "ece686e80ab4f0e7077320c42f2de57a9d61e99d620d5354fcafa87f0e6b9fdc",
+  "new_gpu": "1",
+  "comparison_sha256": "e934626f67ea2c090c860420d83a672b17064eb61f635d1984b37d01ac0460fa",
+  "only_registration_difference": "gpu",
+  "reason": "GPU1becomesavailableafterschemaarmwhileGPU0finishesadapterarmandits8questionbaselinecompletion; keepallfixedretentionitems/settings/groups/gates and7200secondcap",
+  "old_run_executed": false,
+  "new_run_executed_at_amendment": false,
+  "additional_model_evaluation": false,
+  "parent_reservation": "qasper-retention;unchanged12hourQASPERevaluationpool"
+}

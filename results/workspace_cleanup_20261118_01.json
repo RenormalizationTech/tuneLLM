@@ -1,0 +1,52 @@
+{
+  "completed_at_utc": "2026-11-18T06:12:41.643923+00:00",
+  "scope": "Regenerable project-local pytest cache and Python bytecode only",
+  "removed_directories": [
+    ".pytest_cache",
+    "scripts/__pycache__",
+    "evaluation/__pycache__"
+  ],
+  "removed_files": 54,
+  "removed_logical_bytes": 1172689,
+  "pre_deletion_reference_scan": {
+    "command": "rg -l --hidden -F -f exact_candidate_paths results outputs artifacts configs evaluation data; JSON, JSONL, Markdown and text; environment, site-package, rendered-site and node_modules exclusions",
+    "exit_code": 1,
+    "matches": 0
+  },
+  "inventory": {
+    "path": "outputs/workspace-maintenance-20261118/cache_inventory_01.json",
+    "sha256": "45c823919b9b41623008fa8c44dadec9e59b348606dc4919189bad6786da020b"
+  },
+  "protected_report_catalog_cards_and_receipts": {
+    "results/qwen38_science_summary_01.json": "71848d8ff7f690c2123adc6224e67b964c305708071d317d4cff5c4ed13316cc",
+    "releases/catalog.json": "354034d09671a3117e83331d0fe3ad32c54848f4e23e2b0f4cd41a2a98cfb51e",
+    "releases/Qwen3-4B-tuneLLM-GGUF/README.md": "d6f52481b2df0333567d36a63442d40505cf8ed7898d2eeaedcb5dc06bb12e42",
+    "releases/Qwen3-4B-tuneLLM-NF4/README.md": "9fd0345d805573bcea7c4dd5a4df852ef57225ec4df4d6c4fd54813346cbd305",
+    "releases/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA/README.md": "3bf4e540389caefc21f61050f1a36f08f0ace968a0e7d97b6a94eef993ba46c9",
+    "releases/qwen2.5-7b-gcad-steering-controls/README.md": "6491595899aaf90c44f2ee139ff688f2b53f091efbb6ab6621f21727c8e0397d",
+    "releases/qwen2.5-7b-refusal-steering-experiment/README.md": "687545458548d695fe3b286b953c7a4c9d6f9eb267309f83207b0b2a397c8cdb",
+    "releases/Qwen3.8-27B-tuneLLM-NF4/README.md": "a1f5e4fa1549f3e0bb0e98053a69324aa2e66d42d1626b09677915bc462ffa61",
+    "results/qwen38_nf4_public_verification_01.json": "a1caafaa646c0145d8b2d3f0b55be260f969750bebb5b09a4cee323b657dd50a",
+    "results/qwen38_nf4_huggingface_publication.json": "9e66e1e85296dd6b0783f07b8d2167e69888b28e3dc43d2b25d8a143b74e3165",
+    "results/qwen38_27b_quantization_screen_01.json": "7b8df536611f0638523d7fa943bf9a750b4c4d0f10cb055193c35330a274c4f5",
+    "releases/Qwen3.8-27B-tuneLLM-GGUF/README.md": "2f5ea751c4fab9e1467439bd3ce865ef7e7779b0c79a8337d137b2c4691ead67",
+    "results/qwen38_gguf_public_verification_01.json": "2947ed725e9d3713eed7ba60fe75cba11e5b4c6da47c6cf446cb02633d5ffd4a",
+    "results/qwen38_gguf_huggingface_publication.json": "ea19b900f8ee5ed8cd3e1ed33b94f899fc5e6b1e32b4c20bb258c379d3d78800",
+    "releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/README.md": "453f74a1bb8d5457d7506b354447c23f6d79ba58da15358ac388a1c066840c97",
+    "results/qwen38_prl_public_verification_01.json": "7a02dc8fdb54f0d4d1388682cdf5103bb45cf7bc9b339a6f4704a548c774a11a",
+    "results/qwen38_prl_huggingface_publication.json": "1afc808a0934264eaafe32ff37ced76a496a852cc348b31606d4671ab4429e5a",
+    "results/qwen38_prl_final_01.json": "adf20c09d116895a430831187a17665e6c3f72386be54c79397a3f6c411df649",
+    "releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md": "ae40e86f238fd54bf5bba1994d6981cdf216a121e443d21504b996b4fba2c429",
+    "results/qwen38_qasper_public_verification_01.json": "2a7d6f71ac6ece57f6c319580fa5239a683838ef8a84d097961516ed9c4b6f96",
+    "results/qwen38_qasper_huggingface_publication.json": "04a910ff4617143275ffe1da4df052377187ede338741236c77cb35fb24b17eb",
+    "results/qwen38_qasper_final_01.json": "05a683338638ad3e6f65b6864d1cff892610a1c8b43b746c94201ee6c5d6385b"
+  },
+  "protected_hashes_unchanged": true,
+  "preserved": [
+    "All model weights, checkpoints, environments and HF caches",
+    "Raw generations, judge logs, failed/incomplete runs, source snapshots and registrations",
+    "Unknown /tmp files and pytest sessions; other project files"
+  ],
+  "recovery": "Caches regenerate on the next applicable Python or pytest invocation",
+  "git_status": "27B source, docs and compact reports remain local changes; no commit or push performed"
+}

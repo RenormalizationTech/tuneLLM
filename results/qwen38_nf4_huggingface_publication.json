@@ -1,0 +1,105 @@
+{
+  "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+  "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+  "private": false,
+  "manifest_sha256": "ab792b3773c6a72f97b4a4d016f07467e596edf499de358378eaaac57587caa6",
+  "credentials_recorded": false,
+  "status": "published_remote_hashes_verified",
+  "revision": "e7644d6f288cb8a9ba51856ca2c9fa68946f70fe",
+  "commit_url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4/commit/e7644d6f288cb8a9ba51856ca2c9fa68946f70fe",
+  "verified_at_utc": "2026-11-17T18:06:20.948954+00:00",
+  "files": {
+    "LICENSE": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "README.md": {
+      "bytes": 4608,
+      "sha256": "f9a0d03a07868dcf14c8e7c56324e7f09b3626ef141204743da521d12c31bcd3",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "REPRODUCE.md": {
+      "bytes": 1559,
+      "sha256": "478cf0af1058f60b5f12dff6867cec6e38a0c24e60863f9c564e60eb23b31bc4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "chat_template.jinja": {
+      "bytes": 9004,
+      "sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "config.json": {
+      "bytes": 3189,
+      "sha256": "1fbd2cdd1ecb38af8cd56a6dc1aff8b853e80b19a30206f97efee9675802afb7",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "environment.lock.txt": {
+      "bytes": 1284,
+      "sha256": "66d1d0b27ea8aa4732df3b3f2acd741615871135f9082cd50d268c2568edb77d",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "evaluation.json": {
+      "bytes": 12099,
+      "sha256": "7b8df536611f0638523d7fa943bf9a750b4c4d0f10cb055193c35330a274c4f5",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "generation_config.json": {
+      "bytes": 214,
+      "sha256": "1580cfd94bd7542aff2e93bff1addca01d4cda5c2b1bfba637bf7741afde0212",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "model.safetensors": {
+      "bytes": 17653667512,
+      "sha256": "3b22a35844f3fd9bd66e98d3b20ab294b9452293f37d0f3cbc5c5b389c197ce2",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "provenance.json": {
+      "bytes": 143807,
+      "sha256": "07acb0eeda35ca4aa144331d20987993766034657f58052e16860d43f4faab8b",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "requirements-qwen38-nf4.txt": {
+      "bytes": 351,
+      "sha256": "9720a07a328e33310865705ae0dbc6770d5fc0bc3d3b93480ebb58e785d7db79",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "requirements-qwen38-science.txt": {
+      "bytes": 351,
+      "sha256": "7db1633a6266d407b9c26fee20ce96d7cb6b76f8b529dc301f0c7d39c64863fc",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "source.zip": {
+      "bytes": 124365,
+      "sha256": "ab84a98334da674d9e83620ff03bfb500215ece9729b3ab95e2aa45cfa8dfe54",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "tokenizer.json": {
+      "bytes": 19989339,
+      "sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "tokenizer_config.json": {
+      "bytes": 2484,
+      "sha256": "27c9bb9dbc425fafea54d21a57aab11d0ad3cd1a206757147d73852ab3f99734",
+      "method": "revision-pinned downloaded SHA256"
+    }
+  },
+  "additional_remote_files": [
+    ".gitattributes"
+  ],
+  "card_metadata": {
+    "base_model": "Qwen/Qwen3.8-27B",
+    "library_name": "transformers",
+    "license": "apache-2.0",
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "qwen3_5",
+      "text-only",
+      "bitsandbytes",
+      "nf4"
+    ],
+    "base_model_relation": "quantized"
+  },
+  "load_check": "separate pinned-download runtime verification required"
+}

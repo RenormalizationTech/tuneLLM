@@ -9,7 +9,8 @@ A reproducible LLM research portfolio covering **quantization, LoRA/QLoRA,
 refusal steering and trait steering**. Experiments on Qwen3-4B and
 Qwen2.5-7B-Instruct examine compression, adaptation and inference-time behavior
 control, with explicit baselines and response-quality measurements. Mistral-7B-Instruct-v0.1
-provides a SAPS reference; Qwen3.8-27B has an initial NF4 loading/reload smoke.
+provides a SAPS reference; Qwen3.8-27B adds evaluated base exports and ongoing
+scientific-task QLoRA training.
 
 The goal is to demonstrate practical LLM research: implement methods, reproduce
 results, compare alternatives and explain limitations. Positive effects, failed
@@ -27,8 +28,11 @@ portfolio; the results do not establish production-ready behavioral controls.
 
 | Area | What was implemented | Main measured result | Interpretation |
 | --- | --- | --- | --- |
-| Quantization | BF16 GGUF conversion; Q8_0/Q4_K_M quantization; saved NF4 base | GGUF weights: **7.50 → 3.99 → 2.33 GiB**; short A6000 generation benchmark: **79.1 → 130.5 → 186.0 tokens/s** | Compression and throughput gains in a fixed microbenchmark; capability checked separately on small subsets. |
-| Physics QLoRA | NF4 frozen base, LoRA training on 100 licensed physics papers, checkpoint selection and reload | Held-out paper-text NLL **1.975 → 1.734**; GSM8K numeric **117/128 → 111/128**, strict-format correct **97/128 → 106/128** | Better fit and formatting alongside a numeric-accuracy regression; improved writing quality is unestablished. |
+| Quantization (4B) | BF16 GGUF conversion; Q8_0/Q4_K_M quantization; saved NF4 base | GGUF weights: **7.50 → 3.99 → 2.33 GiB**; short A6000 generation benchmark: **79.1 → 130.5 → 186.0 tokens/s** | Compression and throughput gains in a fixed microbenchmark; capability checked separately on small subsets. |
+| Physics QLoRA (4B) | NF4 frozen base, LoRA training on 100 licensed physics papers, checkpoint selection and reload | Held-out paper-text NLL **1.975 → 1.734**; GSM8K numeric **117/128 → 111/128**, strict-format correct **97/128 → 106/128** | Better fit and formatting alongside a numeric-accuracy regression; improved writing quality is unestablished. |
+| Base formats (27B) | Saved NF4 and one Q4_K_M GGUF; local BF16-GGUF reference | [Fixed screen](results/qwen38_27b_quantization_screen_01.json): NF4/Q4 general MC **30/32 / 29/32**; numeric GSM8K **26/32 / 27/32**, strict **26/32 each** | Small workflow comparisons; NF4 lacks a same-backend BF16 control. Both public packages passed pinned-download/GPU-reload checks. |
+| QASPER QLoRA (27B) | One epoch on 482 questions; selected checkpoint and prompt controls; all 403 final questions retained | [Primary Answer F1](results/qwen38_qasper_final_science_01.json), n=309: base **0.457**, selected prompt **0.567**, adapter **0.690**; lenient gains also pass | Fixed custom text-only task and retention gates pass; adapter published. This is not the full official benchmark. |
+| PRL abstracts (27B) | 57 audited training papers; 40 fresh-to-project evaluation papers; two blinded AI passes | [Adapter preference](results/qwen38_prl_final_01.json) **0.175**, 95% paper CI **[0.075, 0.2875]**; retention gates pass | Abstract-quality gates fail despite lower NLL and higher reference overlap. Published as experimental; the base is preferred for this task. |
 | Refusal steering | Contrastive direction extraction; constant subtraction versus projection removal on 4B/7B | 7B subtraction −0.5: unsafe refusals **28/30 → 17/30**, benign usefulness **20/30 → 13/30**. Selected benign diagnostic at −0.25: refusals **3/13 → 1/13**, useful valid full answers **9/13 → 11/13** | A causal intervention effect with dose/quality tradeoffs; the 13 selected cases are a narrow demonstration, not a general success rate. |
 | Trait steering | Literature-based GCAD/SAPS references; random controls; model transfer; joint-control study | 7B GCAD sarcasm: **29/32** answers scored ≥50/100 versus **0/32** baseline; coherence **89.59 → 70.72**. Joint candidates passing all gates: **0/5** | Individual effects can be strong while quality and cross-trait coupling limit combined control. |
 
@@ -124,8 +128,8 @@ reported runs. Future generalization studies need independent data.
 
 ## Qwen3.8-27B extension
 
-The selected larger-model direction is **sarcasm steering, quantization and one
-QLoRA exercise**. Reuse the existing methods, corpus and evaluation structure
+The selected larger-model direction is **sarcasm steering, quantization and two
+independent QLoRA adapters**. Reuse the existing methods, corpus and evaluation structure
 where compatible; verify architecture/runtime support and resource needs first.
 The official BF16 checkpoint has approximately 55.6 GB of weight files; an
 NF4 copy is saved locally as described below. Quantized inference and QLoRA
@@ -144,11 +148,35 @@ A strict cached/full-prefix numerical check failed on **one decode step**
 failed result are preserved. All later compared arms must use the same cached
 generation path and batch size; cache equivalence is unestablished. The smoke
 used reference PyTorch kernels and does not measure broad quality or optimized
-throughput. The 27B NF4 checkpoint is local, not uploaded.
+throughput. The subsequent evaluated 27B NF4 and Q4_K_M base packages are now
+public; pinned anonymous full-file downloads and GPU reload checks passed.
 
-The small quality screen, sarcasm transfer and physics QLoRA remain planned.
-Report each intervention against its own baseline. ARA, broad parameter sweeps,
-joint-controller retuning and production deployment are deferred.
+The [27B evaluation and release plan](docs/qwen38_release_plan.md) now selects
+**NF4 plus one Q4_K_M GGUF**, followed by separate **QASPER paper-QA/evidence**
+and **PRL physics body-to-grounded-abstract** adapters, then evaluated Hugging
+Face releases. The fixed NF4/Q4/BF16-GGUF comparison and development baselines
+are complete. Both adapters finished training: 482 QASPER questions and 57 audited
+PRL papers. The [locked PRL science evaluation](results/qwen38_prl_final_science_01.json)
+failed its gates: AI-review preference favored the unadapted base. The adapter
+is [published as experimental](releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/README.md),
+with complete retention and public reload verification. QASPER passed its fixed
+text-only task and retention gates and is
+[published](releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md). Its baseline
+retains 395 original predictions plus eight first-time completions under a
+prospective amendment; the original phase cap failure remains recorded. The
+[preflight record](results/qwen38_science_preflight_01.json) separates mechanics
+from quality evidence. Sarcasm transfer is deferred to reserve GPU capacity.
+Report each intervention against its own baseline.
+ARA, broad parameter sweeps, joint-controller retuning and production deployment
+are deferred.
+
+The [27B closeout report](results/qwen38_science_summary_01.json) records all four
+public releases, final outcomes and settled budgets. The results and release
+cards include reproduction and verification evidence. The
+[portfolio summary](docs/showcase.md#qwen38-27b-portfolio-summary) includes CV
+bullets and interview wording grounded in these results. See
+[workspace maintenance](docs/workspace_maintenance.md) for the scoped cache
+cleanup and retained experiment evidence.
 
 See [the current roadmap](docs/project_tracks.md), [model workflow](docs/model_workflow.md)
 and [release index](releases/README.md). Older protocol documents remain as
@@ -166,7 +194,7 @@ adding runs, results, model assets or releases.
 | [scripts/](scripts/README.md) | Runnable entry points, shared modules and historical runbooks. |
 | [configs/](configs/README.md) / [evaluation/](evaluation/README.md) | Pinned experiment settings, scoring code, prompts and rubrics. |
 | [results/](results/README.md) | Compact outcomes, registered protocol bindings, reviews and publication receipts. |
-| [releases/](releases/README.md) | Five current HF card mirrors, a release catalog and historical metadata; model weights are not stored here. |
+| [releases/](releases/README.md) | Nine current HF card mirrors, a release catalog and historical metadata; model weights are not stored here. |
 | `artifacts/`, `outputs/`, `.hf/` | Ignored local models/release payloads, raw run evidence and download caches. |
 | `data/` | Mostly ignored corpora; selected small steering fixtures and license records remain tracked. |
 | [tests/](tests/conftest.py), `requirements*.txt` | Portable CPU checks plus opt-in research checks, and separate environment profiles. |

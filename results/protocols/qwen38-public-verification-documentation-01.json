@@ -1,0 +1,9 @@
+{
+  "source_sha256": "70c5168478303af51d59602e818d753cdb24bfb9cd2ae217fcb02d1f3e87bc38",
+  "scope": "Publish completed anonymous-download/GPU-reload evidence by changing README and adding verification.json only",
+  "preconditions": "Actual source revision GPU check complete; every prior runtime file hash retained; no inferred quality or GPU rerun from metadata change",
+  "raw_publication_records": "Immutable original commit receipts retained; adapter config may pin original verified NF4 compute commit even after later documentation commit",
+  "local_mirror": "Preserve previous README and verify pinned complete new public tree before syncing metadata",
+  "tests": "8pureCPUevidence guards pass",
+  "timing": "Before any metadata update preparation or GPU public reload"
+}

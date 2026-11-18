@@ -1,0 +1,11 @@
+{
+  "supersedes_prepared_only_training": "qwen38-qasper-01",
+  "training_run": "qwen38-qasper-02",
+  "old_training_protocol_sha256": "e22431cd2d02a1690d51853bd840a5c82c2eb872281d43d84c8c3d4030caeb62",
+  "new_training_protocol_sha256": "27667d78453004a56471fe4dbbfed815f725eb079533942aeed567f185c13f63",
+  "evaluation_registration_sha256": "005cf1110c9746434729433ba5086ed628c8df207d9523151c29a8cbd58b8701",
+  "reason": "Record checkpoint file hashes at save time for selected-adapter identity validation. No optimization occurred in run01. Training IDs, encoded input hashes, hyperparameters and checkpoint selection rule are identical.",
+  "config_changes": {},
+  "old_run_optimization_started": false,
+  "new_optimization_started_at_amendment": false
+}

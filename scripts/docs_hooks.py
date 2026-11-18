@@ -18,7 +18,7 @@ from markdown.treeprocessors import Treeprocessor
 
 REPO = "https://github.com/RenormalizationTech/tuneLLM"
 CURRENT = {
-    "Start here": ["index.md", "showcase.md", "reproduce.md", "website.md", "file_organization.md", "project_tracks.md", "references.md"],
+    "Start here": ["index.md", "showcase.md", "reproduce.md", "website.md", "file_organization.md", "project_tracks.md", "qwen38_release_plan.md", "references.md"],
     "Quantization": ["benchmark_summary.md", "execution.md"],
     "LoRA and QLoRA": ["physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
     "Refusal steering": ["refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],

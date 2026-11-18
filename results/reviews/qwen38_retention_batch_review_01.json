@@ -1,0 +1,13 @@
+{
+  "preflight_result_sha256": "567c9c28271486af8bdd7e8887689435230af288d1b0e4416a7802c36c0e011e",
+  "amendment_sha256": "a348e3dbeef8bd91c4eff617ffc98e39861646d3a1e6d4acb885d655c9ce9f81",
+  "independent_review": "Existing Herdr Codex worker inspected frozen sources, hash/input/group bindings, EOS extraction and within-batch disabled/zero-active outputs; no critical blocker found for matched batch4 comparisons. Cause of batch1/batch4 differences remains unproven.",
+  "limits": [
+    "2/4 invented prompts differ between batch1 andbatch4",
+    "32-token synthetic preflight does not establish full1024-token memory or2h completion",
+    "Same exact batch4 groups/padding mandatory in actual paired retention",
+    "Finalscience staysbatch1, no pooling"
+  ],
+  "adapter_stager_caveat_added_before_staging": true,
+  "focused_card_test_passed": true
+}

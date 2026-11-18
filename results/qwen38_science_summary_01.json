@@ -1,0 +1,180 @@
+{
+  "completed_at_utc": "2026-11-18T05:16:32.585562+00:00",
+  "status": "Completed bounded quantization, two independent QLoRA adapters, fixed evaluation and four verified public HF releases",
+  "upstream": {
+    "repo_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "scope": "text-only"
+  },
+  "publications": [
+    {
+      "label": "27B NF4 base",
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+      "status": "public",
+      "revision": "586bb02218d196f485c321bbde3348677c63fc6a",
+      "gpu_verified_revision": "e7644d6f288cb8a9ba51856ca2c9fa68946f70fe",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+      "card_path": "releases/Qwen3.8-27B-tuneLLM-NF4/README.md",
+      "card_sha256": "a1f5e4fa1549f3e0bb0e98053a69324aa2e66d42d1626b09677915bc462ffa61",
+      "local_payload_path": "artifacts/releases/Qwen3.8-27B-tuneLLM-NF4",
+      "published_file_count": 17,
+      "published_inventory_sha256": "159a60ab8f2accc262845c6be4af21ff423b07dfd4e616658657aed28789588b",
+      "verification_receipt": "results/qwen38_nf4_public_verification_01.json",
+      "result_path": "results/qwen38_27b_quantization_screen_01.json",
+      "publication_receipt": "results/qwen38_nf4_huggingface_publication.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "27B GGUF",
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+      "status": "public",
+      "revision": "b4351e7d6f521b71cb3842116cdff3cae00d7317",
+      "gpu_verified_revision": "8cce64fc0767c8efea134468b23079ef2d693a8c",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+      "card_path": "releases/Qwen3.8-27B-tuneLLM-GGUF/README.md",
+      "card_sha256": "2f5ea751c4fab9e1467439bd3ce865ef7e7779b0c79a8337d137b2c4691ead67",
+      "local_payload_path": "artifacts/releases/Qwen3.8-27B-tuneLLM-GGUF",
+      "published_file_count": 12,
+      "published_inventory_sha256": "0f06aa9a992eea96d237087585e646dbd61afb793e81d1d323bf0d09a2a4e3d0",
+      "verification_receipt": "results/qwen38_gguf_public_verification_01.json",
+      "result_path": "results/qwen38_27b_quantization_screen_01.json",
+      "publication_receipt": "results/qwen38_gguf_huggingface_publication.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "27B PRL abstract QLoRA",
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+      "status": "public",
+      "revision": "3bb77b924555bdcc9f92b9c4aa6cf32d63340fbc",
+      "gpu_verified_revision": "adcae12715bf1a946b0424cef4038dd9cac8fc8d",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+      "card_path": "releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/README.md",
+      "card_sha256": "453f74a1bb8d5457d7506b354447c23f6d79ba58da15358ac388a1c066840c97",
+      "local_payload_path": "artifacts/releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+      "published_file_count": 29,
+      "published_inventory_sha256": "cdae45e006cc385a3cb05a6025877307f4c12756db51f973b2322f9d19aea5b7",
+      "verification_receipt": "results/qwen38_prl_public_verification_01.json",
+      "result_path": "results/qwen38_prl_final_01.json",
+      "publication_receipt": "results/qwen38_prl_huggingface_publication.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "27B QASPER QLoRA",
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
+      "status": "public",
+      "revision": "95359154d2b9d94914977462e559c409c1f549c6",
+      "gpu_verified_revision": "d598923f01d6b0ff233ab950becbd63a5babab67",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
+      "card_path": "releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md",
+      "card_sha256": "ae40e86f238fd54bf5bba1994d6981cdf216a121e443d21504b996b4fba2c429",
+      "local_payload_path": "artifacts/releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
+      "published_file_count": 28,
+      "published_inventory_sha256": "372e6a9ec227002927b0de744cd7e84485f18c389efdfc2e11382c747dc7faf8",
+      "verification_receipt": "results/qwen38_qasper_public_verification_01.json",
+      "result_path": "results/qwen38_qasper_final_01.json",
+      "publication_receipt": "results/qwen38_qasper_huggingface_publication.json",
+      "historical_metadata_paths": []
+    }
+  ],
+  "quantization_screen": {
+    "path": "results/qwen38_27b_quantization_screen_01.json",
+    "sha256": "7b8df536611f0638523d7fa943bf9a750b4c4d0f10cb055193c35330a274c4f5"
+  },
+  "qasper": {
+    "final_report": {
+      "path": "results/qwen38_qasper_final_01.json",
+      "sha256": "05a683338638ad3e6f65b6864d1cff892610a1c8b43b746c94201ee6c5d6385b"
+    },
+    "primary_questions": 309,
+    "all_final_questions": 403,
+    "strict_primary_answer_f1": {
+      "base": 0.45666038917478496,
+      "prompt": 0.5667949004218192,
+      "adapter": 0.6900662625173457
+    },
+    "all_fixed_task_and_retention_gates_pass": true,
+    "recommended_within_registered_scope": true,
+    "baseline_completion": {
+      "original_phase_cap_met": false,
+      "original_predictions_preserved": 395,
+      "never_evaluated_suffix_completed_once": 8,
+      "amendment": {
+        "path": "results/protocols/qwen38-qasper-baseline-completion-amendment-01.json",
+        "sha256": "dc85701a441fcba608106b9e5c969b700a53303f8abd8d75847cf3aca1493cf3"
+      }
+    }
+  },
+  "prl": {
+    "final_report": {
+      "path": "results/qwen38_prl_final_01.json",
+      "sha256": "adf20c09d116895a430831187a17665e6c3f72386be54c79397a3f6c411df649"
+    },
+    "papers": 40,
+    "valid_blinded_AI_calls": 80,
+    "adapter_preference": {
+      "mean": 0.175,
+      "ci95": [
+        0.075,
+        0.2875
+      ]
+    },
+    "science_gates_pass": false,
+    "retention_gates_pass": true,
+    "recommended": false,
+    "classification": "Experimental negative result; unadapted base preferred for this task"
+  },
+  "development_transfer_diagnostic": {
+    "path": "results/qwen38_transfer_analysis_01.json",
+    "sha256": "7c6ca2b4f63e9c11d43e6c98affb85a2386e15caeb78d2000b3605d3416e0284"
+  },
+  "budget": {
+    "ledger": {
+      "path": "outputs/qwen38-science-budget-01.json",
+      "sha256": "4fbde3be086de61cbfe7ff59aecb0eda00f3eeecead8d0ffb0dd8f165bb9337b"
+    },
+    "all_runs_settled": true,
+    "actual_gpu_hours_by_pool": {
+      "quant": 1.8088126427166733,
+      "qasper_train": 5.113883488234391,
+      "prl_train": 2.2579711060761474,
+      "qasper_eval": 10.558573927464183,
+      "prl_eval": 4.522699677688005,
+      "mechanics": 0.17985950193445507
+    },
+    "limits_gpu_hours": {
+      "quant": 6,
+      "qasper_train": 12,
+      "prl_train": 6,
+      "qasper_eval": 12,
+      "prl_eval": 6,
+      "mechanics": 2
+    },
+    "actual_total_gpu_hours": 24.441800344113854,
+    "all_pools_within_original_caps": true,
+    "individual_phase_cap_failures_preserved": [
+      "qasper-final-base"
+    ]
+  },
+  "limitations": [
+    "Fixed custom QASPER subset, not the full official benchmark or general scientific comprehension claim.",
+    "PRL preference and support labels are correlated AI judgments, not independent human validation.",
+    "One configuration and seed per adapter; no quality-driven reruns or sweeps.",
+    "Retention gates are fixed point-estimate loss limits, not statistical noninferiority.",
+    "The original strict cached/full-prefix logit-equivalence check failed; short token replay does not resolve numerical equivalence.",
+    "Native NF4 quantization screens preserve BF16 floating weights; matched PEFT science/retention prepare floating base weights in FP32. Do not pool these workflows.",
+    "No BF16 Transformers control; cross-backend scores do not isolate the NF4 quantization effect.",
+    "PRL papers are fresh to this project, not guaranteed absent from pretraining."
+  ],
+  "verification": {
+    "portable_tests_passed": 397,
+    "focused_QASPER_card_tests_after_text_changes": 5,
+    "final_documentation_checks": "Recorded after final catalog integration in execution-state.json"
+  },
+  "scope_closeout": {
+    "additional_quantizations": false,
+    "merged_adapter_GGUF_exports": false,
+    "git_commit_or_push_performed": false,
+    "separate_sarcasm_track": "planned, not started",
+    "user_response_needed": false
+  }
+}

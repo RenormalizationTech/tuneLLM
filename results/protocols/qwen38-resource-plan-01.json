@@ -1,0 +1,137 @@
+{
+  "limits_gpu_hours": {
+    "quant": 6,
+    "qasper_train": 12,
+    "prl_train": 6,
+    "qasper_eval": 12,
+    "prl_eval": 6,
+    "mechanics": 2
+  },
+  "parent_ledger": "outputs/qwen38-science-budget-01.json",
+  "future_reservations": [
+    {
+      "name": "qasper-final-base",
+      "gpu_hours": 2.7777777777777777,
+      "shares": {
+        "qasper_eval": 1
+      }
+    },
+    {
+      "name": "qasper-final-schema",
+      "gpu_hours": 2.3,
+      "shares": {
+        "qasper_eval": 1
+      }
+    },
+    {
+      "name": "qasper-final-adapter",
+      "gpu_hours": 2.3,
+      "shares": {
+        "qasper_eval": 1
+      }
+    },
+    {
+      "name": "shared-retention-base",
+      "gpu_hours": 2,
+      "shares": {
+        "qasper_eval": 0.5,
+        "prl_eval": 0.5
+      }
+    },
+    {
+      "name": "qasper-retention",
+      "gpu_hours": 2,
+      "shares": {
+        "qasper_eval": 1
+      }
+    },
+    {
+      "name": "prl-dev-base",
+      "gpu_hours": 0.25,
+      "shares": {
+        "prl_eval": 1
+      }
+    },
+    {
+      "name": "prl-dev-verify",
+      "gpu_hours": 0.25,
+      "shares": {
+        "prl_eval": 1
+      }
+    },
+    {
+      "name": "prl-final-base",
+      "gpu_hours": 0.8,
+      "shares": {
+        "prl_eval": 1
+      }
+    },
+    {
+      "name": "prl-final-prompt",
+      "gpu_hours": 0.8,
+      "shares": {
+        "prl_eval": 1
+      }
+    },
+    {
+      "name": "prl-final-adapter",
+      "gpu_hours": 0.8,
+      "shares": {
+        "prl_eval": 1
+      }
+    },
+    {
+      "name": "prl-retention",
+      "gpu_hours": 2,
+      "shares": {
+        "prl_eval": 1
+      }
+    },
+    {
+      "name": "qasper-training",
+      "gpu_hours": 12,
+      "shares": {
+        "qasper_train": 1
+      }
+    },
+    {
+      "name": "prl-training",
+      "gpu_hours": 6,
+      "shares": {
+        "prl_train": 1
+      }
+    },
+    {
+      "name": "quant-bf16",
+      "gpu_hours": 3,
+      "shares": {
+        "quant": 1
+      }
+    },
+    {
+      "name": "cache-native",
+      "gpu_hours": 0.25,
+      "shares": {
+        "mechanics": 1
+      }
+    }
+  ],
+  "shared_retention": "count once; allocate half to each adapter evaluation pool",
+  "retention_subledger": "mechanical reservation only, no additional authorization or budget",
+  "superseded_unexecuted_retention_base": [
+    "qwen38-retention-base-01",
+    "qwen38-retention-base-02"
+  ],
+  "retention_base": "qwen38-retention-base-03",
+  "retention_base_registration_sha256": "250e42cee952c6e147f4ed9504f856be89fa3e4fa9a0478d75ab99e0f251f3a3",
+  "final_qasper_caps_seconds": {
+    "base": 10000,
+    "schema": 8280,
+    "adapter": 8280
+  },
+  "prl_caps_seconds": {
+    "development_each": 900,
+    "final_each": 2880
+  },
+  "rationale": "Original study pools unchanged. Completed development receipts replace reservations. Base QASPER final gets longer cap based on observed development timing. Remaining final caps are fixed before final generation; no denominator trimming or automatic retries."
+}

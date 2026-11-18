@@ -1,0 +1,172 @@
+{
+  "task": "QASPER text-only QA/evidence, one seed",
+  "prepared_manifest_sha256": "89c5e45e95bf45001fa00680c6af370bd85589ef7aa794d536585bd3577a9464",
+  "training_protocol_sha256": "e22431cd2d02a1690d51853bd840a5c82c2eb872281d43d84c8c3d4030caeb62",
+  "final_input_sha256": "6dc33a31460e8720c49e71595a37067f0f479e3b400b868262d8204af23e4ac2",
+  "development_input_sha256": "7028881d0af592c9a5b8727ac56e3bfedda6aa3338af367809654ef4b4451fc4",
+  "prompt_selection_input_sha256": "3bde8d406a1e37b9f6ef391b78bf33b5355015288a5a3c2bc105540b89e25e29",
+  "prompt_selection_ids": [
+    "1906.07701::1ed49a8c07ef0ac15cfa6b7decbde6604decbd5b",
+    "1906.07701::348886b4762db063711ef8b7a10952375fbdcb57",
+    "1710.03348::044f922604b4b3f42ae381419fd5cd5624fa0637",
+    "1710.03348::91e326fde8b0a538bc34d419541b5990d8aae14b",
+    "1710.03348::beac555c4aea76c88f19db7cc901fa638765c250",
+    "2001.08868::2c947447d81252397839d58c75ebcc71b34379b5",
+    "2001.08868::568fb7989a133564d84911e7cb58e4d8748243ef",
+    "2001.08868::c01784b995f6594fdb23d7b62f20a35ae73eaa77",
+    "2001.08868::df0257ab04686ddf1c6c4d9b0529a7632330b98e",
+    "2001.03131::133eb4aa4394758be5f41744c60c99901b2bc01c",
+    "2001.03131::3fff37b9f68697d080dbd9d9008a63907137644e",
+    "2001.03131::a778b8204a415b295f73b93623d09599f242f202",
+    "2001.02284::ca5a82b54cb707c9b947aa8445aac51ea218b23a",
+    "2001.02284::da55bd769721b878dd17f07f124a37a0a165db02",
+    "2001.02284::ee417fea65f9b1029455797671da0840c8c1abbe",
+    "1708.06185::8756b7b9ff5e87e4efdf6c2f73a0512f05b5ae3f",
+    "1708.06185::c08aab979dcdc8f4fe8ec1337c3c8290ab13414e",
+    "1708.06185::e48e750743aef36529fbea4328b8253dbe928b4d",
+    "1909.01362::88e5d37617e14d6976cc602a168332fc23644f19",
+    "1909.01362::c74185bced810449c5f438f11ed6a578d1e359b4",
+    "1910.12795::223dc2b9ea34addc0f502003c2e1c1141f6b36a7",
+    "1910.12795::3415762847ed13acc3c90de60e3ef42612bc49af",
+    "2002.01320::29923a824c98b3ba85ced964a0e6a2af35758abe",
+    "2002.01320::559c68802ee2bb8b11e2188127418ca3a6155ba7",
+    "2002.01320::6a219d7c58451842aa5d6819a7cdf51c55e9fc0f",
+    "2002.01320::8dc707a0daf7bff61a97d9d854283e65c0c85064",
+    "2002.01320::bc84c5a58c57038910f7720d7a784560054d3e1a",
+    "2002.01320::cee8cfaf26e49d98e7d34fa1b414f8f31d6502ad",
+    "2002.01320::f8f4e4a50d2b3fbd193327e79ea32d8d057e1414",
+    "2002.01320::ffde866b1203a01580eb33237a0bb9da71c75ecf",
+    "1604.00400::184b0082e10ce191940c1d24785b631828a9f714",
+    "1604.00400::3f856097be2246bde8244add838e83a2c793bd17",
+    "1604.00400::74e866137b3452ec50fb6feaf5753c8637459e62",
+    "1604.00400::bf52c01bf82612d0c7bbf2e6a5bb2570c322936f",
+    "1604.00400::c49ee6ac4dc812ff84d255886fd5aff794f53c39"
+  ],
+  "prompt_selection": "largest strict primary Answer F1 among base/verify/schema; ties retain base then verify then schema",
+  "prompt_selection_timing": "fixed subset before variant outputs; the full base-development run is already in progress; no QA outputs/scores inspected",
+  "prompt_candidates": [
+    "base",
+    "verify",
+    "schema"
+  ],
+  "sampling": "seed20261117 whole-paper prefix target32 for prompt selection; original frozen150dev/403test unchanged",
+  "generation": {
+    "max_new_tokens": 512,
+    "sequence_cap": 8192,
+    "seed": 42,
+    "batch_size": 1,
+    "thinking": false,
+    "cached": true,
+    "do_sample": false
+  },
+  "counts": {
+    "train": {
+      "annotation_types": {
+        "boolean": 409,
+        "extractive": 1363,
+        "free_form": 622,
+        "unanswerable": 281
+      },
+      "evidence_strict_primary": 1756,
+      "max_evaluation_reserved_tokens": 7259,
+      "max_prompt_tokens": 6747,
+      "max_sequence_tokens": 6975,
+      "missing_context_evidence": 104,
+      "nontext_evidence": 320,
+      "overlength_references": 0,
+      "papers": 888,
+      "primary": 1947,
+      "prl_flags": {},
+      "prompt_tokens": 13733021,
+      "records": 2593,
+      "reduced_evidence_budgets": 0,
+      "target_tokens_with_eos": 114161,
+      "training_eligible": 1940,
+      "unmatched_text_evidence": 74
+    },
+    "validation": {
+      "annotation_types": {
+        "boolean": 36,
+        "extractive": 141,
+        "free_form": 62,
+        "unanswerable": 24
+      },
+      "evidence_strict_primary": 102,
+      "max_evaluation_reserved_tokens": 7270,
+      "max_prompt_tokens": 6758,
+      "max_sequence_tokens": 6911,
+      "missing_context_evidence": 7,
+      "nontext_evidence": 21,
+      "overlength_references": 0,
+      "papers": 41,
+      "primary": 111,
+      "prl_flags": {},
+      "prompt_tokens": 762060,
+      "records": 150,
+      "reduced_evidence_budgets": 0,
+      "target_tokens_with_eos": 6163,
+      "training_eligible": 105,
+      "unmatched_text_evidence": 6
+    },
+    "test": {
+      "annotation_types": {
+        "boolean": 140,
+        "extractive": 473,
+        "free_form": 273,
+        "unanswerable": 89
+      },
+      "evidence_strict_primary": 267,
+      "max_evaluation_reserved_tokens": 7253,
+      "max_prompt_tokens": 6741,
+      "max_sequence_tokens": 7442,
+      "missing_context_evidence": 14,
+      "nontext_evidence": 78,
+      "overlength_references": 0,
+      "papers": 116,
+      "primary": 309,
+      "prl_flags": {},
+      "prompt_tokens": 2043571,
+      "records": 403,
+      "reduced_evidence_budgets": 0,
+      "target_tokens_with_eos": 17741,
+      "training_eligible": 279,
+      "unmatched_text_evidence": 23
+    }
+  },
+  "primary": "frozen complete-text-evidence questions plus full-context unanswerable cases; mixed answerability excluded",
+  "evidence_gate": "frozen evidence_strict_primary subset; every answerable reference has nonempty text evidence",
+  "success_gates": {
+    "answer_f1_gain_each_baseline": 0.05,
+    "paired_paper_bootstrap_ci_excludes_zero": true,
+    "max_evidence_f1_loss_vs_better_answer_baseline": 0.02,
+    "max_invalid_json_fraction": 0.02,
+    "max_false_unanswerable_increase": 0.05,
+    "retention": {
+      "gsm8k_total": 128,
+      "gsm8k_max_net_loss": 5,
+      "general_mmlu_total": 128,
+      "general_mmlu_max_net_loss": 5,
+      "ifeval_total": 32,
+      "ifeval_max_strict_net_loss": 3
+    }
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20261117,
+    "unit": "paper",
+    "method": "paired percentile95"
+  },
+  "limits": [
+    "Public NLP papers may have been in pretraining",
+    "No physics-generalization claim from QASPER",
+    "Normalized paragraph-ID scores are custom; exact upstream-string evidence score reported separately",
+    "Point-estimate retention/format gates are not statistical non-inferiority tests"
+  ],
+  "source_sha256": {
+    "qwen38_eval_science.py": "9051b724975a71288da4e0bd0d76b5f6294a67e5f4be0d2bababf2f6db93d1e3",
+    "qwen38_qasper_protocol.py": "8c2c2af1c7f90b21d81045e993ead916a5a9e23f3325e9cbd4c692cf408a673f",
+    "qwen38_science_data.py": "f0d3632e2237535d344d4114dbae123b960bebea84323ce7539d1f60ab045bc2",
+    "qwen38_science_runtime.py": "b2b8bb1ccc5d4446b7be9640273765b722124fecce103503c570234360bec562",
+    "qwen38_science_score.py": "c9c3b6b03efffda64ae42ce246409d864fbaca1304759495b50da0788d383f5a"
+  }
+}

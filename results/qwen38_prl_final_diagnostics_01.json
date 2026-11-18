@@ -1,0 +1,1110 @@
+{
+  "scope": "secondary custom lexical diagnostics; no semantic faithfulness claim",
+  "input_sha256": "a1e8a742fada777257a57a01fe31af6f82a3d6f242f58d01605450444c863bf9",
+  "source_sha256": "94d0bca945cddfa08cd4e9e7487c2b65eafe6a95ed1caafe9e683d7a906121f8",
+  "arms": {
+    "base": {
+      "records": [
+        {
+          "id": "2604.18560v1",
+          "words": 176,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.24802110817941952,
+          "normalized_token_f1": 0.4811594202898551,
+          "novel_unique_8gram_fraction": 0.9881656804733728
+        },
+        {
+          "id": "2602.17656v2",
+          "words": 179,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.13043478260869565,
+          "normalized_token_f1": 0.3129251700680272,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2601.05846v2",
+          "words": 168,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.22388059701492538,
+          "normalized_token_f1": 0.41975308641975306,
+          "novel_unique_8gram_fraction": 0.9751552795031055
+        },
+        {
+          "id": "2512.04150v2",
+          "words": 185,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1987179487179487,
+          "normalized_token_f1": 0.3617021276595745,
+          "novel_unique_8gram_fraction": 0.9550561797752809
+        },
+        {
+          "id": "2511.18947v2",
+          "words": 195,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.13636363636363635,
+          "normalized_token_f1": 0.35494880546075086,
+          "novel_unique_8gram_fraction": 0.9893617021276596
+        },
+        {
+          "id": "2510.26325v2",
+          "words": 183,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1384083044982699,
+          "normalized_token_f1": 0.24812030075187969,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2510.20862v2",
+          "words": 179,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1939799331103679,
+          "normalized_token_f1": 0.3602941176470588,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2510.13641v2",
+          "words": 164,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.23841059602649006,
+          "normalized_token_f1": 0.3595505617977528,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2510.10391v3",
+          "words": 206,
+          "empty": false,
+          "over_200_words": true,
+          "custom_whitespace_lcs_f1": 0.18241042345276873,
+          "normalized_token_f1": 0.3250883392226148,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2510.08478v2",
+          "words": 180,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1875,
+          "normalized_token_f1": 0.2737642585551331,
+          "novel_unique_8gram_fraction": 0.930635838150289
+        },
+        {
+          "id": "2510.00509v3",
+          "words": 178,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2588996763754045,
+          "normalized_token_f1": 0.43686006825938567,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2509.25147v1",
+          "words": 171,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.20462046204620463,
+          "normalized_token_f1": 0.4249084249084249,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2509.20305v1",
+          "words": 185,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.199203187250996,
+          "normalized_token_f1": 0.2907488986784141,
+          "novel_unique_8gram_fraction": 0.9943820224719101
+        },
+        {
+          "id": "2509.12321v2",
+          "words": 156,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.25,
+          "normalized_token_f1": 0.4155844155844156,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2509.08036v2",
+          "words": 159,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.22591362126245848,
+          "normalized_token_f1": 0.4166666666666667,
+          "novel_unique_8gram_fraction": 0.9605263157894737
+        },
+        {
+          "id": "2509.07151v1",
+          "words": 198,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1717171717171717,
+          "normalized_token_f1": 0.47564469914040114,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2509.07117v3",
+          "words": 163,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.19333333333333333,
+          "normalized_token_f1": 0.3524904214559387,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2509.05620v2",
+          "words": 160,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2318840579710145,
+          "normalized_token_f1": 0.3938223938223938,
+          "novel_unique_8gram_fraction": 0.9869281045751634
+        },
+        {
+          "id": "2509.03708v2",
+          "words": 185,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.17956656346749225,
+          "normalized_token_f1": 0.36486486486486486,
+          "novel_unique_8gram_fraction": 0.9269662921348315
+        },
+        {
+          "id": "2508.14693v1",
+          "words": 153,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.17843866171003717,
+          "normalized_token_f1": 0.3346613545816733,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2508.07366v3",
+          "words": 177,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.18397626112759644,
+          "normalized_token_f1": 0.45016077170418006,
+          "novel_unique_8gram_fraction": 0.9058823529411765
+        },
+        {
+          "id": "2508.05964v2",
+          "words": 154,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.22012578616352202,
+          "normalized_token_f1": 0.35251798561151076,
+          "novel_unique_8gram_fraction": 0.9863945578231292
+        },
+        {
+          "id": "2508.04788v3",
+          "words": 193,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1524390243902439,
+          "normalized_token_f1": 0.375,
+          "novel_unique_8gram_fraction": 0.9946236559139785
+        },
+        {
+          "id": "2508.00683v1",
+          "words": 163,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1956521739130435,
+          "normalized_token_f1": 0.3492063492063492,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2507.23415v1",
+          "words": 186,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.19158878504672897,
+          "normalized_token_f1": 0.3854166666666667,
+          "novel_unique_8gram_fraction": 0.9776536312849162
+        },
+        {
+          "id": "2507.22884v2",
+          "words": 157,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.23076923076923078,
+          "normalized_token_f1": 0.40148698884758366,
+          "novel_unique_8gram_fraction": 0.98
+        },
+        {
+          "id": "2507.17386v2",
+          "words": 200,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1876675603217158,
+          "normalized_token_f1": 0.3373493975903614,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2507.07679v1",
+          "words": 167,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.25396825396825395,
+          "normalized_token_f1": 0.45021645021645024,
+          "novel_unique_8gram_fraction": 0.96875
+        },
+        {
+          "id": "2507.06771v3",
+          "words": 190,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.16981132075471697,
+          "normalized_token_f1": 0.3210702341137124,
+          "novel_unique_8gram_fraction": 0.994535519125683
+        },
+        {
+          "id": "2507.03957v2",
+          "words": 183,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.26440677966101694,
+          "normalized_token_f1": 0.39552238805970147,
+          "novel_unique_8gram_fraction": 0.9318181818181818
+        },
+        {
+          "id": "2507.02035v2",
+          "words": 156,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2328767123287671,
+          "normalized_token_f1": 0.417910447761194,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2506.19458v4",
+          "words": 181,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.17956656346749225,
+          "normalized_token_f1": 0.33793103448275863,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2506.16877v1",
+          "words": 186,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.26704545454545453,
+          "normalized_token_f1": 0.43125,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2506.16424v1",
+          "words": 161,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.21025641025641026,
+          "normalized_token_f1": 0.36046511627906974,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2506.15661v3",
+          "words": 173,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2674772036474164,
+          "normalized_token_f1": 0.4900662251655629,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2506.13960v1",
+          "words": 190,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.17665615141955837,
+          "normalized_token_f1": 0.4013377926421405,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2506.12695v2",
+          "words": 183,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.21052631578947367,
+          "normalized_token_f1": 0.3761194029850746,
+          "novel_unique_8gram_fraction": 0.9772727272727273
+        },
+        {
+          "id": "2506.04342v1",
+          "words": 192,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.22153846153846155,
+          "normalized_token_f1": 0.41605839416058393,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2506.02108v2",
+          "words": 184,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2186046511627907,
+          "normalized_token_f1": 0.38860103626943004,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2505.24146v2",
+          "words": 178,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.19895287958115182,
+          "normalized_token_f1": 0.4495677233429395,
+          "novel_unique_8gram_fraction": 1.0
+        }
+      ],
+      "predictions_sha256": "17cdfd6d0b130c6da10c01114d2299a7a793b241867e20e15f5b13b9c2b4d7b7"
+    },
+    "adapter": {
+      "records": [
+        {
+          "id": "2604.18560v1",
+          "words": 105,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.33116883116883117,
+          "normalized_token_f1": 0.4714285714285714,
+          "novel_unique_8gram_fraction": 0.37755102040816324
+        },
+        {
+          "id": "2602.17656v2",
+          "words": 107,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2,
+          "normalized_token_f1": 0.38009049773755654,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2601.05846v2",
+          "words": 188,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2777777777777778,
+          "normalized_token_f1": 0.45038167938931295,
+          "novel_unique_8gram_fraction": 0.4088397790055249
+        },
+        {
+          "id": "2512.04150v2",
+          "words": 40,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.17964071856287425,
+          "normalized_token_f1": 0.32,
+          "novel_unique_8gram_fraction": 0.5454545454545454
+        },
+        {
+          "id": "2511.18947v2",
+          "words": 93,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.17475728155339806,
+          "normalized_token_f1": 0.37948717948717947,
+          "novel_unique_8gram_fraction": 0.47674418604651164
+        },
+        {
+          "id": "2510.26325v2",
+          "words": 114,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.20909090909090908,
+          "normalized_token_f1": 0.3448275862068966,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2510.20862v2",
+          "words": 116,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2966101694915254,
+          "normalized_token_f1": 0.4682926829268293,
+          "novel_unique_8gram_fraction": 0.11926605504587157
+        },
+        {
+          "id": "2510.13641v2",
+          "words": 291,
+          "empty": false,
+          "over_200_words": true,
+          "custom_whitespace_lcs_f1": 0.24242424242424243,
+          "normalized_token_f1": 0.37333333333333335,
+          "novel_unique_8gram_fraction": 0.2535211267605634
+        },
+        {
+          "id": "2510.10391v3",
+          "words": 69,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.25882352941176473,
+          "normalized_token_f1": 0.3973509933774834,
+          "novel_unique_8gram_fraction": 0.9193548387096774
+        },
+        {
+          "id": "2510.08478v2",
+          "words": 121,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.29694323144104806,
+          "normalized_token_f1": 0.4467005076142132,
+          "novel_unique_8gram_fraction": 0.9035087719298246
+        },
+        {
+          "id": "2510.00509v3",
+          "words": 179,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.3161290322580645,
+          "normalized_token_f1": 0.5694444444444444,
+          "novel_unique_8gram_fraction": 0.20348837209302326
+        },
+        {
+          "id": "2509.25147v1",
+          "words": 80,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2830188679245283,
+          "normalized_token_f1": 0.4270833333333333,
+          "novel_unique_8gram_fraction": 0.6712328767123288
+        },
+        {
+          "id": "2509.20305v1",
+          "words": 135,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.25870646766169153,
+          "normalized_token_f1": 0.37714285714285717,
+          "novel_unique_8gram_fraction": 0.546875
+        },
+        {
+          "id": "2509.12321v2",
+          "words": 175,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.3856749311294766,
+          "normalized_token_f1": 0.5,
+          "novel_unique_8gram_fraction": 0.5238095238095238
+        },
+        {
+          "id": "2509.08036v2",
+          "words": 96,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.3277310924369748,
+          "normalized_token_f1": 0.5288461538461539,
+          "novel_unique_8gram_fraction": 0.5056179775280899
+        },
+        {
+          "id": "2509.07151v1",
+          "words": 62,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2153846153846154,
+          "normalized_token_f1": 0.33043478260869563,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2509.07117v3",
+          "words": 172,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.21359223300970873,
+          "normalized_token_f1": 0.3831417624521073,
+          "novel_unique_8gram_fraction": 0.4303030303030303
+        },
+        {
+          "id": "2509.05620v2",
+          "words": 154,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2518518518518518,
+          "normalized_token_f1": 0.38866396761133604,
+          "novel_unique_8gram_fraction": 0.06802721088435375
+        },
+        {
+          "id": "2509.03708v2",
+          "words": 152,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.18620689655172415,
+          "normalized_token_f1": 0.3938223938223938,
+          "novel_unique_8gram_fraction": 0.19310344827586207
+        },
+        {
+          "id": "2508.14693v1",
+          "words": 111,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2026431718061674,
+          "normalized_token_f1": 0.3251231527093596,
+          "novel_unique_8gram_fraction": 0.5769230769230769
+        },
+        {
+          "id": "2508.07366v3",
+          "words": 136,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.28378378378378377,
+          "normalized_token_f1": 0.4552238805970149,
+          "novel_unique_8gram_fraction": 0.24031007751937986
+        },
+        {
+          "id": "2508.05964v2",
+          "words": 116,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.3,
+          "normalized_token_f1": 0.45569620253164556,
+          "novel_unique_8gram_fraction": 0.08256880733944955
+        },
+        {
+          "id": "2508.04788v3",
+          "words": 187,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.18633540372670807,
+          "normalized_token_f1": 0.3958333333333333,
+          "novel_unique_8gram_fraction": 0.20555555555555555
+        },
+        {
+          "id": "2508.00683v1",
+          "words": 66,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.24581005586592178,
+          "normalized_token_f1": 0.3875,
+          "novel_unique_8gram_fraction": 0.8983050847457628
+        },
+        {
+          "id": "2507.23415v1",
+          "words": 209,
+          "empty": false,
+          "over_200_words": true,
+          "custom_whitespace_lcs_f1": 0.31042128603104213,
+          "normalized_token_f1": 0.48635235732009924,
+          "novel_unique_8gram_fraction": 0.297029702970297
+        },
+        {
+          "id": "2507.22884v2",
+          "words": 119,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.29838709677419356,
+          "normalized_token_f1": 0.4933920704845815,
+          "novel_unique_8gram_fraction": 0.30357142857142855
+        },
+        {
+          "id": "2507.17386v2",
+          "words": 159,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.21084337349397592,
+          "normalized_token_f1": 0.38028169014084506,
+          "novel_unique_8gram_fraction": 0.5986842105263158
+        },
+        {
+          "id": "2507.07679v1",
+          "words": 112,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.3147208121827411,
+          "normalized_token_f1": 0.4318181818181818,
+          "novel_unique_8gram_fraction": 0.5619047619047619
+        },
+        {
+          "id": "2507.06771v3",
+          "words": 97,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2222222222222222,
+          "normalized_token_f1": 0.36893203883495146,
+          "novel_unique_8gram_fraction": 0.7888888888888889
+        },
+        {
+          "id": "2507.03957v2",
+          "words": 218,
+          "empty": false,
+          "over_200_words": true,
+          "custom_whitespace_lcs_f1": 0.1393939393939394,
+          "normalized_token_f1": 0.3050847457627119,
+          "novel_unique_8gram_fraction": 0.1943127962085308
+        },
+        {
+          "id": "2507.02035v2",
+          "words": 68,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.22549019607843138,
+          "normalized_token_f1": 0.4111111111111111,
+          "novel_unique_8gram_fraction": 0.03278688524590164
+        },
+        {
+          "id": "2506.19458v4",
+          "words": 87,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.16593886462882096,
+          "normalized_token_f1": 0.30456852791878175,
+          "novel_unique_8gram_fraction": 0.925
+        },
+        {
+          "id": "2506.16877v1",
+          "words": 70,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.22033898305084745,
+          "normalized_token_f1": 0.35348837209302325,
+          "novel_unique_8gram_fraction": 0.6666666666666666
+        },
+        {
+          "id": "2506.16424v1",
+          "words": 84,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.1853035143769968,
+          "normalized_token_f1": 0.33454545454545453,
+          "novel_unique_8gram_fraction": 0.922077922077922
+        },
+        {
+          "id": "2506.15661v3",
+          "words": 198,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.20903954802259886,
+          "normalized_token_f1": 0.5015873015873016,
+          "novel_unique_8gram_fraction": 0.10471204188481675
+        },
+        {
+          "id": "2506.13960v1",
+          "words": 148,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.2109090909090909,
+          "normalized_token_f1": 0.4357976653696498,
+          "novel_unique_8gram_fraction": 0.8085106382978723
+        },
+        {
+          "id": "2506.12695v2",
+          "words": 218,
+          "empty": false,
+          "over_200_words": true,
+          "custom_whitespace_lcs_f1": 0.23232323232323232,
+          "normalized_token_f1": 0.4456824512534819,
+          "novel_unique_8gram_fraction": 0.17535545023696683
+        },
+        {
+          "id": "2506.04342v1",
+          "words": 104,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.21940928270042195,
+          "normalized_token_f1": 0.46632124352331605,
+          "novel_unique_8gram_fraction": 0.979381443298969
+        },
+        {
+          "id": "2506.02108v2",
+          "words": 151,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.23173803526448364,
+          "normalized_token_f1": 0.45977011494252873,
+          "novel_unique_8gram_fraction": 1.0
+        },
+        {
+          "id": "2505.24146v2",
+          "words": 146,
+          "empty": false,
+          "over_200_words": false,
+          "custom_whitespace_lcs_f1": 0.24571428571428572,
+          "normalized_token_f1": 0.4380952380952381,
+          "novel_unique_8gram_fraction": 0.5107913669064749
+        }
+      ],
+      "predictions_sha256": "a997bbb95e46821694c0c92565eefd1212991791c767a6da675dfb636086fee1"
+    }
+  },
+  "fixed_copy_baseline": [
+    {
+      "id": "2604.18560v1",
+      "words": 164,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15258855585831063,
+      "normalized_token_f1": 0.25671641791044775,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2602.17656v2",
+      "words": 123,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.17293233082706766,
+      "normalized_token_f1": 0.37551020408163266,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2601.05846v2",
+      "words": 120,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.09090909090909091,
+      "normalized_token_f1": 0.22549019607843138,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2512.04150v2",
+      "words": 75,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.10891089108910891,
+      "normalized_token_f1": 0.13186813186813187,
+      "novel_unique_8gram_fraction": 0.04411764705882353
+    },
+    {
+      "id": "2511.18947v2",
+      "words": 0,
+      "empty": true,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.0,
+      "normalized_token_f1": 0.0,
+      "novel_unique_8gram_fraction": null
+    },
+    {
+      "id": "2510.26325v2",
+      "words": 140,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.13821138211382114,
+      "normalized_token_f1": 0.24472573839662448,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2510.20862v2",
+      "words": 106,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.168141592920354,
+      "normalized_token_f1": 0.24630541871921183,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2510.13641v2",
+      "words": 149,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.1602787456445993,
+      "normalized_token_f1": 0.3474903474903475,
+      "novel_unique_8gram_fraction": 0.04929577464788732
+    },
+    {
+      "id": "2510.10391v3",
+      "words": 111,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.14150943396226415,
+      "normalized_token_f1": 0.21761658031088082,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2510.08478v2",
+      "words": 183,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.14432989690721648,
+      "normalized_token_f1": 0.19622641509433963,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2510.00509v3",
+      "words": 97,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.12280701754385964,
+      "normalized_token_f1": 0.2488479262672811,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2509.25147v1",
+      "words": 179,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15434083601286175,
+      "normalized_token_f1": 0.3003412969283277,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2509.20305v1",
+      "words": 75,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15602836879432624,
+      "normalized_token_f1": 0.1935483870967742,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2509.12321v2",
+      "words": 161,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.20057306590257878,
+      "normalized_token_f1": 0.35443037974683544,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2509.08036v2",
+      "words": 128,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.17777777777777778,
+      "normalized_token_f1": 0.26666666666666666,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2509.07151v1",
+      "words": 96,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.1360544217687075,
+      "normalized_token_f1": 0.1596958174904943,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2509.07117v3",
+      "words": 183,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15,
+      "normalized_token_f1": 0.24734982332155478,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2509.05620v2",
+      "words": 133,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.11244979919678715,
+      "normalized_token_f1": 0.19574468085106383,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2509.03708v2",
+      "words": 115,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15019762845849802,
+      "normalized_token_f1": 0.27312775330396477,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2508.14693v1",
+      "words": 109,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.10666666666666667,
+      "normalized_token_f1": 0.2692307692307692,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2508.07366v3",
+      "words": 179,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.1415929203539823,
+      "normalized_token_f1": 0.3836477987421384,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2508.05964v2",
+      "words": 118,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15602836879432624,
+      "normalized_token_f1": 0.2788844621513944,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2508.04788v3",
+      "words": 166,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.13953488372093023,
+      "normalized_token_f1": 0.24822695035460993,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2508.00683v1",
+      "words": 178,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.13058419243986255,
+      "normalized_token_f1": 0.2813688212927757,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2507.23415v1",
+      "words": 0,
+      "empty": true,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.0,
+      "normalized_token_f1": 0.0,
+      "novel_unique_8gram_fraction": null
+    },
+    {
+      "id": "2507.22884v2",
+      "words": 168,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.13468013468013468,
+      "normalized_token_f1": 0.34558823529411764,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2507.17386v2",
+      "words": 125,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15436241610738255,
+      "normalized_token_f1": 0.2153846153846154,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2507.07679v1",
+      "words": 158,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.09876543209876543,
+      "normalized_token_f1": 0.18584070796460178,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2507.06771v3",
+      "words": 199,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.1529051987767584,
+      "normalized_token_f1": 0.2754098360655738,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2507.03957v2",
+      "words": 157,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.1412639405204461,
+      "normalized_token_f1": 0.27530364372469635,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2507.02035v2",
+      "words": 121,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.14785992217898833,
+      "normalized_token_f1": 0.26548672566371684,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2506.19458v4",
+      "words": 181,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15479876160990713,
+      "normalized_token_f1": 0.24285714285714285,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2506.16877v1",
+      "words": 135,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.12624584717607973,
+      "normalized_token_f1": 0.2867132867132867,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2506.16424v1",
+      "words": 94,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.15479876160990713,
+      "normalized_token_f1": 0.2112676056338028,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2506.15661v3",
+      "words": 158,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.14012738853503184,
+      "normalized_token_f1": 0.32081911262798635,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2506.13960v1",
+      "words": 79,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.1262135922330097,
+      "normalized_token_f1": 0.21428571428571427,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2506.12695v2",
+      "words": 148,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.12269938650306748,
+      "normalized_token_f1": 0.20462046204620463,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2506.04342v1",
+      "words": 157,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.1793103448275862,
+      "normalized_token_f1": 0.291497975708502,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2506.02108v2",
+      "words": 200,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.18834080717488788,
+      "normalized_token_f1": 0.361323155216285,
+      "novel_unique_8gram_fraction": 0.0
+    },
+    {
+      "id": "2505.24146v2",
+      "words": 192,
+      "empty": false,
+      "over_200_words": false,
+      "custom_whitespace_lcs_f1": 0.11616161616161616,
+      "normalized_token_f1": 0.28493150684931506,
+      "novel_unique_8gram_fraction": 0.0
+    }
+  ],
+  "reviewer_diagnostics": {
+    "support_labeled_sentences_paired": 528,
+    "support_agreement": 0.8787878787878788,
+    "support_cohens_kappa": 0.7682495267879187,
+    "pairwise_preference_agreement": 0.95,
+    "first_pair_position_win_with_half_ties": 0.55,
+    "quote_downgrade_fraction_by_arm": {
+      "base": 0.001607717041800643,
+      "adapter": 0.002304147465437788
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "evaluation_registration_sha256": "cb98f1231fc4377afbd4f703d8abd895b7798cde19d359e49fe9c4849cfc4be4",
+  "development_scores_sha256": "be1e26960a1d971b4d65ce438ae507adcecb8962cf6efc01e0769be63a64449d",
+  "selection_sha256": "df3dabfc8a37973fd42e8a04bceaa1417121c8ce0ae388e8e7a879474ffe3f00",
+  "completed_judgments": 7,
+  "planned_judgments": 20,
+  "complete_two_pass_papers": 0,
+  "infrastructure_failures": 13,
+  "cause": "Claude5hourusage limit; stated reset15:20America/New_York",
+  "decision": "Registered base fallback; no retry or prompt expansion. Final80calls deferred until quota reset. Identical baseline explicitly aliases base.",
+  "training_and_data_eligibility_unchanged": true
+}

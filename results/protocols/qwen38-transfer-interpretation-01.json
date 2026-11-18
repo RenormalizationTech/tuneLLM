@@ -1,0 +1,12 @@
+{
+  "parent_registration_sha256": "8279e003b556c69852b3ac31bdbc507034efb91b5555bd441c798abe7ba2943b",
+  "timing": "before any transfer execution or adapter optimization",
+  "cross_task_cells": [
+    "QASPER adapter on PRL development vs same-runtime base",
+    "PRL adapter on QASPER development vs same-runtime base"
+  ],
+  "same_task_cells": "Selection-set NLL, not independent: the selected checkpoint minimized NLL on overlapping/same development data. Never present these as held-out in-task improvements.",
+  "comparison": "Compare arms only within a task, never raw QASPER and PRL loss magnitudes. References are single-annotation QA JSON and human abstracts, respectively.",
+  "meaning": "Lower NLL assigns reference tokens higher likelihood; does not prove better answers, summaries or factuality. Cross-task transfer remains descriptive; no selection or new gate.",
+  "source_unchanged": true
+}

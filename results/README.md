@@ -17,7 +17,11 @@ Useful starting records: [benchmark summary](benchmark_summary.json),
 [physics QLoRA](physics_prl_final.json), [7B refusal transfer](refusal_7b_transfer_01.json),
 [selected benign diagnostic](refusal_7b_benign_transfer_01.json),
 [7B joint traits](steering_publication_joint_04.json) and
-[27B NF4 smoke](qwen38_27b_nf4_execution_01.json).
+[27B NF4 smoke](qwen38_27b_nf4_execution_01.json). The completed
+[27B closeout report](qwen38_science_summary_01.json) links the quantization screen,
+QASPER positive fixed-subset result, PRL experimental negative result and all four
+verified Hugging Face releases. Original run receipts retain their capture-time
+status; final combined reports and the release catalog describe the closeout.
 
 Older receipts may say private, unpublished or awaiting deployment. They describe
 that receipt's time; [the current release index](../releases/README.md) and

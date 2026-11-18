@@ -1,0 +1,116 @@
+{
+  "registered_at_utc": "2026-11-17T20:20:32.402280+00:00",
+  "scope": "Prospective retention runtime and GPU amendment before any retention arm generation; no training/science quality change",
+  "prior_resource_plan_sha256": "4ae9d1620f60910d92a4b4549a8f3e8d59eb894eab0830d6e77033c829f92dd6",
+  "superseded_cpu_only_preparations": [
+    "outputs/qwen38-retention-base-01",
+    "outputs/qwen38-retention-base-02",
+    "outputs/qwen38-retention-base-03"
+  ],
+  "preflight_registration_sha256": "9586d9f0e6b899f8332be8cc87606f2970090f2d05a3a457ab61c847693e1da1",
+  "preflight_result_sha256": "567c9c28271486af8bdd7e8887689435230af288d1b0e4416a7802c36c0e011e",
+  "preflight_completed": true,
+  "preflight_elapsed_seconds": 93.13473861431703,
+  "preflight_scope": "Four invented prompts at up to626inputtokens, max32newtokens; does not prove1024-token memory or complete retention timing",
+  "preflight_conditions": [
+    {
+      "adapter": "disabled",
+      "batch_size": 1,
+      "generation_seconds": 16.740990958176553,
+      "generated_tokens": 68,
+      "tokens_per_second": 4.061886191198722,
+      "peak_allocated_bytes": 26024437760
+    },
+    {
+      "adapter": "disabled",
+      "batch_size": 4,
+      "generation_seconds": 7.149566674139351,
+      "generated_tokens": 72,
+      "tokens_per_second": 10.070540395186566,
+      "peak_allocated_bytes": 26783472640
+    },
+    {
+      "adapter": "zero_active",
+      "batch_size": 1,
+      "generation_seconds": 20.692804414778948,
+      "generated_tokens": 68,
+      "tokens_per_second": 3.286166468158077,
+      "peak_allocated_bytes": 26021775360
+    },
+    {
+      "adapter": "zero_active",
+      "batch_size": 4,
+      "generation_seconds": 8.837997139897197,
+      "generated_tokens": 72,
+      "tokens_per_second": 8.146642147571175,
+      "peak_allocated_bytes": 26782735360
+    }
+  ],
+  "token_agreement": [
+    {
+      "adapter": "disabled",
+      "batch_size": 1,
+      "by_id": {
+        "synthetic-0": true,
+        "synthetic-1": true,
+        "synthetic-2": true,
+        "synthetic-3": true
+      },
+      "exact_items": 4,
+      "items": 4
+    },
+    {
+      "adapter": "disabled",
+      "batch_size": 4,
+      "by_id": {
+        "synthetic-0": true,
+        "synthetic-1": true,
+        "synthetic-2": false,
+        "synthetic-3": false
+      },
+      "exact_items": 2,
+      "items": 4
+    },
+    {
+      "adapter": "zero_active",
+      "batch_size": 1,
+      "by_id": {
+        "synthetic-0": true,
+        "synthetic-1": true,
+        "synthetic-2": true,
+        "synthetic-3": true
+      },
+      "exact_items": 4,
+      "items": 4
+    },
+    {
+      "adapter": "zero_active",
+      "batch_size": 4,
+      "by_id": {
+        "synthetic-0": true,
+        "synthetic-1": true,
+        "synthetic-2": false,
+        "synthetic-3": false
+      },
+      "exact_items": 2,
+      "items": 4
+    }
+  ],
+  "interpretation": "Batch4 changed two of four greedy outputs relative to batch1 in both disabled and zero-active conditions; not numerically or token equivalent. Disabled and zero-active outputs agreed within each batch size. Compare all actual retention arms only using identical batch4 groups; do not pool with batch1 science/quantification results.",
+  "new_baseline": "outputs/qwen38-retention-base-04",
+  "baseline_gpu": "1",
+  "generation_batch_size": 4,
+  "mc_batch_size": 1,
+  "ordering": "Contiguous frozen source-order groups per task, identical across base/QASPER/PRL; manual left padding, native PAD distinct from EOS",
+  "caps_seconds_each": 7200,
+  "unchanged": [
+    "historical retention fixture and all item denominators",
+    "strict/lenient GSM reporting and official IFEval scorer",
+    "point loss gates generalMC5 GSM5 IFEval3",
+    "parent study pool caps and existing reservations",
+    "no retry/sweep/quality selection",
+    "science final batch1 generation"
+  ],
+  "parent_budget": "outputs/qwen38-science-budget-01.json",
+  "retention_subledger": "outputs/qwen38-retention-ledger-01.json; mechanical12hour sublimit adds no study budget"
+}

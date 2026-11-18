@@ -1,0 +1,17 @@
+{
+  "manifest_sha256": "43e5653ee890e78fd654e1cf0dc8d62dac718f4adb73b74ed544f0550a0c90a5",
+  "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+  "files": 27,
+  "selected_weights_byte_identical": true,
+  "base_revision": "e7644d6f288cb8a9ba51856ca2c9fa68946f70fe",
+  "allowed_config_changes": [
+    "base_model_name_or_path",
+    "revision"
+  ],
+  "classification": "experimental, not recommended forabstractwriting; preferunadaptedbase forrecordedtask",
+  "science_gates_pass": false,
+  "retention_gates_pass": true,
+  "review": "Readcardmetrics/alias/AIreviewlimits/batching/cache/condmat/pretraining/authoroverlap caveats; exactselectedweightSHA andportableconfigdiff matched; allpublishedfilesexplicitmanifest; licensing/provenance/sourceenvironment included",
+  "stage_path_fix": "results/reviews/qwen38_adapter_audit_path_fix_01.json",
+  "upload_started": false
+}

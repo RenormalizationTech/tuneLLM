@@ -1,0 +1,20 @@
+{
+  "manifest_sha256": "9f138fcc4cb2ce34da75662f02184619bf6979b092864a82b98d34c8e5aee082",
+  "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
+  "files": 26,
+  "selected_weights_byte_identical": true,
+  "base_revision": "e7644d6f288cb8a9ba51856ca2c9fa68946f70fe",
+  "allowed_config_changes": [
+    "base_model_name_or_path",
+    "revision"
+  ],
+  "all_fixed_science_and_retention_gates_pass": true,
+  "original_baseline_phase_cap_met": false,
+  "baseline_full_firsttime_coverage": [
+    395,
+    8
+  ],
+  "review": "Readprimary/lenientF1tables andpairedCIs,retentionpointcounts, explicit395+8capfailureamendment,rareunanswerable/figure/benchmarkscope/pretraining/cache/batch4limitations; exactselectedweightSHA/configdiffmatched; fullCPUfrozen-sciencereplay andcompositionproofpassed; licenses,source/environment,registeredgroupplanspresent",
+  "recommendation_scope": "Recordedcustomtext-onlyfixedsubsets; notfullofficialbenchmark orscientificreliabilityclaim",
+  "upload_started": false
+}

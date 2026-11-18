@@ -67,3 +67,17 @@ removed. Model assets, corpora and experiment evidence were preserved.
 Scientific status and the next model experiment are maintained in
 [the project map](project_tracks.md). Historical frozen documents retain the
 scope and transition decisions recorded at their registration time.
+
+After the 27B release closed on 2026-11-18 UTC, a scoped cleanup removed
+`.pytest_cache/`, `scripts/__pycache__/` and `evaluation/__pycache__/`:
+54 files totaling 1,172,689 logical bytes (1.12 MiB). An exact-path reference
+search found no candidate file bound in the searched evidence metadata. The
+combined report, release catalog, all nine card mirrors and the new publication,
+verification and final-result receipts retained their original hashes. See the
+[cleanup receipt](../results/workspace_cleanup_20261118_01.json).
+Raw generations, judge logs, failed/incomplete runs, checkpoints, environments
+and model caches remain deliberately retained. Unknown `/tmp` files and pytest
+scratch sessions were not removed. A broader storage reduction has not been
+performed. At cleanup time the new source, documentation and compact reports
+had not yet been committed/pushed; repository publication and documentation
+deployment are a separate closeout action.

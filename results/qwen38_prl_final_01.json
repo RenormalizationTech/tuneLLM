@@ -1,0 +1,120 @@
+{
+  "task": "PRL-associated fixedbodyexcerpt to groundedabstract",
+  "completed_science_and_retention": true,
+  "recommended": false,
+  "classification": "Experimental negative taskresult; unadaptedNF4basepreferred undercompletedAIreview",
+  "training": "results/qwen38_prl_training_01.json",
+  "science": "results/qwen38_prl_final_science_01.json",
+  "secondary_diagnostics": "results/qwen38_prl_final_diagnostics_01.json",
+  "science_gates_pass": false,
+  "preference": {
+    "base": {
+      "mean": 0.175,
+      "ci95": [
+        0.075,
+        0.2875
+      ]
+    }
+  },
+  "unsupported_difference": {
+    "base": {
+      "mean": 0.025,
+      "ci95": [
+        0.0,
+        0.075
+      ]
+    }
+  },
+  "unsupported_mean": {
+    "base": 0.025,
+    "adapter": 0.05
+  },
+  "AI_review_only": true,
+  "identical_baselines": true,
+  "retention": {
+    "interpretation": "fixed point-estimate regression limits; no non-inferiority claim; physics_mc diagnostic only",
+    "retention_pass": true,
+    "tasks": {
+      "general_mc": {
+        "allowed_loss": 5,
+        "baseline_correct": 110,
+        "broken_ids": [
+          "mmlu-test-09952"
+        ],
+        "candidate_correct": 110,
+        "delta_correct": 0,
+        "fixed_ids": [
+          "mmlu-test-07046"
+        ],
+        "gate_pass": true,
+        "total": 128
+      },
+      "gsm8k": {
+        "allowed_loss": 5,
+        "baseline_correct": 114,
+        "broken_ids": [
+          "gsm8k-main-test-00783",
+          "gsm8k-main-test-01107"
+        ],
+        "candidate_correct": 120,
+        "delta_correct": 6,
+        "fixed_ids": [
+          "gsm8k-main-test-01012",
+          "gsm8k-main-test-00923",
+          "gsm8k-main-test-00012",
+          "gsm8k-main-test-00214",
+          "gsm8k-main-test-00641",
+          "gsm8k-main-test-01183",
+          "gsm8k-main-test-00157",
+          "gsm8k-main-test-00825"
+        ],
+        "gate_pass": true,
+        "total": 128
+      },
+      "ifeval": {
+        "allowed_loss": 3,
+        "baseline_correct": 23,
+        "broken_ids": [
+          "1954",
+          "2069"
+        ],
+        "candidate_correct": 24,
+        "delta_correct": 1,
+        "fixed_ids": [
+          "2904",
+          "3188",
+          "1481"
+        ],
+        "gate_pass": true,
+        "total": 32
+      }
+    }
+  },
+  "retention_gsm8k_strict": {
+    "baseline": 114,
+    "adapter": 118,
+    "total": 128
+  },
+  "retention_batching": {
+    "generation_batch_size": 4,
+    "groups_sha256": "3a6de99a6f02ff9381f0cbba9c0b7d6f862a42b95f244ccbd2cb02c11e8a2850",
+    "mc_batch_size": 1,
+    "timing_scope": "per-item batch_seconds shared across group; sum unique batches for arm generation time"
+  },
+  "input_sha256": {
+    "science_raw": "672a002347f27e3b561cb38df3de523eafa07eb90a595fb5e0d4672f93cd9ec4",
+    "retention_raw": "3ce02fe6513c2acad0a66150b73514ae94dc777ef967cc02ecaab80dd6269f75",
+    "selected_training_result": "d20b8f8a4bc798c8361bf895c2bd54edeefa25783f33f5ceb6b4a7e4a352c413"
+  },
+  "publication_verification": "Recorded separately in the releasecatalog verificationreceipt afterpinneddownload/GPUreload; notinferred here",
+  "limits": [
+    "oneconfiguration/seed;57auditedcondmattrainpapers and9devpapers",
+    "40fresh-to-projectcondmattestpapers;notpretrainingclean/authorheldout",
+    "AIjudgefamilysharedwithadvisor;support/preferencecorrelated",
+    "unsupportedcountpointgatefailsnearzero;pairedCIincludeszero",
+    "secondaryreferenceoverlapincreasedwhilejudgedqualityfell;causeunproven",
+    "retentionpointlimitsdo notestablishnoninferiority",
+    "batch4retentionnotpooledwithbatch1science/nativequantmetrics",
+    "originalstrictcache/fullprefixlogitequivalencefailed"
+  ]
+}
