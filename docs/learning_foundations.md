@@ -181,7 +181,7 @@ intervention. It is an explanatory architecture, not the exact block diagram
 of every model. The 27B checkpoint used here is hybrid: not every block uses
 ordinary full attention. See
 [Vaswani et al., Attention Is All You Need, section 3](https://arxiv.org/html/1706.03762v7#S3)
-for the attention mechanism and our [27B record](qwen38_release_plan.md) for the tested architecture.
+for the attention mechanism and our [27B NF4 card](../releases/Qwen3.8-27B-tuneLLM-NF4/README.md) for the tested architecture.
 
 ### Normalization and positional information
 

@@ -111,9 +111,9 @@ CPU setup checks do not override it or establish cache equivalence.
 
 ## Completed 27B quantization and QLoRA workflows
 
-The [27B evaluation and release plan](qwen38_release_plan.md) is complete:
-NF4, one Q4_K_M export and independent QASPER QA/evidence and PRL grounded-abstract
-adapters are public. Use the [release catalog](../releases/catalog.json) for
+The [27B NF4/Q4_K_M comparison](qwen38_quantization_results.md) and
+[independent QASPER/PRL QLoRA evaluations](qwen38_qlora_results.md) are complete;
+the two bases and two adapters are public. Use the [release catalog](../releases/catalog.json) for
 current metadata revisions and the separate GPU-tested revisions. The
 [closeout report](../results/qwen38_science_summary_01.json) links all final
 results, publication receipts and resource accounting.

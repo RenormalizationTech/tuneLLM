@@ -48,10 +48,10 @@ incomplete. A change to evasion-focused research awaits user decision; no
 extension, larger-model execution or joint rescue is released; discussion is allowed. Older planning below
 remains historical context.
 
-The [27B theory and tuning guide](qwen38_sarcasm_gcad_guide.md) explains the
-hybrid-model native output gate, the separate GCAD gate, user-adjustable
-strength and measured finite-precision shifts. Its [published package and usage guide](qwen38_sarcasm_release.md)
-keeps the release-facing explanation short.
+The shared [theoretical background](trait_foundations.md#gcad-starts-from-the-attention-writer)
+explains GCAD extraction, gating and finite-precision shifts, including the
+hybrid 27B model's native output gate. The [27B results](qwen38_sarcasm_results.md)
+and [usage guide](qwen38_sarcasm_release.md) cover its measured tradeoff and tunable runtime.
 
 ## What GCAD changes
 

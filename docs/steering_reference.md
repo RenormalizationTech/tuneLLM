@@ -7,11 +7,11 @@ do not guarantee independent behaviors.
 Current consolidated record, reviewed with Claude and updated after the
 fixed-setting Qwen3-4B transfer. All interventions act during inference with fixed model
 weights. Physics LoRA/QLoRA is a separate training demonstration. The later
-[27B NF4 sarcasm study](qwen38_sarcasm_execution.md) closed as a development
+[27B NF4 sarcasm study](qwen38_sarcasm_results.md#behaviour-and-quality) closed as a development
 null: the port and mechanics passed, but strengths 1/2 scored 0.00/0.19 versus
 69.22 for the prompted reference. No 27B controller is retained. This is a
 model-specific result, not evidence of a model-size effect. The separate
-[stronger-GCAD follow-up](qwen38_sarcasm_followup_execution.md) induces strong
+[stronger-GCAD follow-up](qwen38_sarcasm_results.md#behaviour-and-quality) induces strong
 sarcasm at strengths 8/16 (88.50/95.16), with coherence costs (58.94/34.59)
 that fail the fixed quality gates. Instruction replay shows positive bank
 alignment at all six sites; no qualifying 27B controller is retained.

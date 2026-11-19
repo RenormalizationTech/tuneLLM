@@ -166,8 +166,7 @@ a difference \(-1\) gives \(c\approx0.730\).
 The algebraic requested displacement has norm \(c\|\Delta_\ell\|_2\).
 Model-dtype rounding can make the realised output difference differ from this
 value. Equal \(b\) values do not match the strength of banks with different delta
-norms. The [27B port guide](qwen38_sarcasm_gcad_guide.md#nominal-strength-versus-realised-shift)
-defines the separately measured requested and actual norms.
+norms. The separately measured requested and actual norms are defined below.
 
 The precise gate, GQA mapping and insertion site are implementation-specific;
 see the
@@ -178,6 +177,91 @@ residual/MLP computation. It is not the same site as post-block residual steerin
 The output is already in residual coordinates: adding \(c\Delta\) there
 also adds that displacement to the next residual sum. The distinction is
 the extraction, gate and location before the MLP, not an unrelated vector space.
+
+### Nominal strength and realised shifts { #nominal-strength-versus-realised-shift }
+
+The user-facing strength \(b\) scales the requested addition for a fixed
+incoming state. Across a generation, earlier edits change later queries,
+gates, native activations and selected tokens. Doubling \(b\) need not double
+the realised shift or the behavioural effect. Strength is not a sarcasm
+probability, temperature or percentage of native activation.
+
+In finite precision, distinguish three quantities. With \(\operatorname{fl}_m\)
+denoting model-dtype rounding, define
+
+\[
+r_{\ell,t}=\operatorname{fl}_m(c_{\ell,t}\Delta_\ell),
+\qquad
+a'_{\ell,t}=\operatorname{fl}_m(a_{\ell,t}+r_{\ell,t}).
+\]
+
+The algebraic norm is \(c\|\Delta\|_2\); the requested operand norm is
+\(\|r\|_2\); the actual shift is measured from the rounded outputs in FP32:
+
+\[
+\rho^{\rm actual}_{\ell,t}
+=\frac{\|\operatorname{FP32}(a'_{\ell,t})-
+\operatorname{FP32}(a_{\ell,t})\|_2}
+{\|\operatorname{FP32}(a_{\ell,t})\|_2}.
+\]
+
+Zero denominators are excluded and counted. Report ratios per token, separating
+prefill and decode. A sequence Frobenius norm is not a per-token denominator;
+dividing it by the square root of sequence length gives an RMS token norm,
+which need not equal the mean token norm. Matching raw delta norms and nominal
+strengths also does not match realised shifts along different trajectories.
+
+### Porting GCAD to gated attention { #gcad-on-the-27b-hybrid-model }
+
+The preceding crop assumes an attention writer without a native output gate.
+When a base model includes a featurewise gate, extraction must retain it. Let
+\(g^{\rm native}_{\ell,t}\) denote that gate, held at its ordinary full-prefix
+value while cropping source positions. The system contribution becomes
+
+\[
+a^{\rm sys}_{\ell,t}=W_{O,\ell}\left[
+g^{\rm native}_{\ell,t}\odot
+\operatorname{concat}_{h=1}^{H_q}
+\left(\sum_{j\in\mathcal S}
+A^{(\ell,h)}_{tj}v^{(\ell,g(h))}_j\right)
+\right].
+\]
+
+This native featurewise sigmoid gate belongs to the base model. It is distinct
+from GCAD's scalar demand gate, which controls the added delta. For fixed
+queries, keys, values and native gate, system and complementary crops sum to
+the full bias-free writer in exact arithmetic. Cropping never renormalizes
+attention weights or recalculates the native gate from a shortened context.
+
+In the [27B NF4 port](../scripts/qwen38_gcad_port.py), query/gate components
+are de-interleaved, Q/K use native normalization and partial RoPE, and 24 query
+heads share four KV heads of width 256: zero-based \(g(h)=\lfloor h/6\rfloor\).
+The output projection is bias-free. Response and matched-pair means accumulate
+in FP32; exact saved response IDs define the extraction positions. The fitted
+bank is an equal-pair mean of 90 eligible sarcastic-minus-sincere contrasts,
+while key and query summaries use their registered token weighting.
+
+Only full-attention blocks **23, 27, 31, 35, 39 and 43** receive direct hooks;
+linear-attention blocks remain unhooked. GCAD adds the raw delta after
+`o_proj`, with gate scale 1.5 and default sign. Later blocks can still receive
+changed activations indirectly. These are model-specific port choices, not
+universal GCAD settings. The [27B results](qwen38_sarcasm_results.md) report
+their measured effect, and the [usage guide](qwen38_sarcasm_release.md) exposes
+only strength as an ordinary user control.
+
+### Why style and answer quality can move together
+
+GCAD edits the same residual computation that supports answer content; it
+does not apply a tone-only output filter. A shift can change topic, emphasis
+and token selection along with wording. This provides a possible mechanism
+for quality costs, without establishing the cause of a particular null result.
+
+Sarcasm can be coherent and helpful. The coherence rubric asks whether an
+answer makes sense in the question's context; sarcasm or rudeness alone should
+not lower it. It is an AI judgment after generation, not a decoding constraint
+or a general factual-correctness test. The historical rubric's hallucination
+wording also makes the separation from correctness imperfect. Trait scores,
+coherence and cross-trait effects must be measured separately.
 
 ## Interactions between combined controls { #why-combining-trait-controls-can-fail }
 
@@ -216,7 +300,8 @@ autoregressive feedback still create interactions.
 The [completed joint study](gcad_and_combined_control.md#completed-joint-phase-and-next-stage)
 qualified none of five combined candidates. Direction geometry helps formulate
 hypotheses; it does not replace matched-task measurements of all target traits,
-coherence and meaning. The separate 27B sarcasm study remains deferred.
+coherence and meaning. The separate [27B sarcasm studies](qwen38_sarcasm_results.md)
+are complete: stronger settings induced sarcasm but none passed every quality gate.
 
 ## Interpretation of control signals
 

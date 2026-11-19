@@ -4,6 +4,22 @@ The experimental [HF controls package](https://huggingface.co/RenormalizationTec
 
 Status: **published and independently verified, 2026-11-19**. This is an experimental demonstration, not a validated quality-preserving controller. The original `development_null` and follow-up `exploratory_null_through_b16` remain unchanged.
 
+## How GCAD tunes this model
+
+GCAD adds a fitted sarcastic-minus-sincere attention-output vector at six
+full-attention blocks (23, 27, 31, 35, 39 and 43); linear-attention blocks have
+no direct hooks. A token-dependent query/key gate scales the addition, with
+coefficient \(2b\,\sigma(1.5(d-\bar d))\). The user controls \(b\) through
+`--strength`; the bank, sites and gate rule stay fixed. This changes activations
+during generation without retraining weights or adding a sarcasm instruction.
+
+Larger strength requests a larger addition for a fixed incoming state, but
+later gates and generated tokens also change. It is not a probability of
+sarcasm, and its units do not transfer across model banks. The shared
+[theoretical background](trait_foundations.md#gcad-starts-from-the-attention-writer)
+explains extraction and gating, including this model's distinct native gate.
+The [27B results](qwen38_sarcasm_results.md) explain the observed quality tradeoff.
+
 ## Pinned release
 
 | Component | Immutable identity |
@@ -74,7 +90,7 @@ answer = controls.generate("How does a compass work?", strength=8)
 print(answer["text"])
 ```
 
-Choose strength before each fresh generation; reusing previously steered cached states does not undo earlier changes. The bank, six intervention sites and gate scale stay fixed. Added system prompts, multi-turn conversations, sampling, other languages and longer replies are untested. The [theory and tuning guide](qwen38_sarcasm_gcad_guide.md) explains extraction, both gates and why actual shifts vary by token.
+Choose strength before each fresh generation; reusing previously steered cached states does not undo earlier changes. The bank, six intervention sites and gate scale stay fixed. Added system prompts, multi-turn conversations, sampling, other languages and longer replies are untested. The [shared theory](trait_foundations.md#nominal-strength-versus-realised-shift) explains why actual shifts vary by token.
 
 ## Verification and evidence
 
@@ -88,4 +104,4 @@ The initial preflight rejected the pinned HF client's two-hop shared-blob layout
 
 The review chain is [criteria](../results/reviews/qwen38_sarcasm_release_review_01.md), [initial source](../results/reviews/qwen38_sarcasm_release_review_02.md), [cache-fix source](../results/reviews/qwen38_sarcasm_release_review_03.md), [local GPU pass and upload clearance](../results/reviews/qwen38_sarcasm_release_review_04.md), and [public download/reload review](../results/reviews/qwen38_sarcasm_release_review_05.md). Initial source bindings were superseded explicitly, not overwritten.
 
-The [scientific execution record](qwen38_sarcasm_followup_execution.md) and [follow-up review06](../results/reviews/qwen38_sarcasm_followup_review_06.md) retain the fixed gates, question-cluster activation analysis and all limitations. The original [HF draft](qwen38_sarcasm_hf_card_draft.md) is preserved byte-for-byte as a historical staging input; the actual published card and this guide describe the current package.
+The [consolidated results](qwen38_sarcasm_results.md) link the scientific execution records, fixed gates, activation analysis and all limitations. The [follow-up review06](../results/reviews/qwen38_sarcasm_followup_review_06.md) independently verifies the analysis. The original [HF draft](qwen38_sarcasm_hf_card_draft.md) is preserved byte-for-byte as a historical staging input; the actual published card and this guide describe the current package.

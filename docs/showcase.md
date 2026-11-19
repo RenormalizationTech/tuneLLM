@@ -81,7 +81,7 @@ gates and a strong prompting reference.”
 
 ## 27B follow-up: strong sarcasm with a quality cost
 
-A separately registered [instruction-activation and stronger-GCAD experiment](qwen38_sarcasm_followup_execution.md) completed 192 fixed-token replay cells and 224 fresh generations in **1.76 GPU-hours**. The instruction change aligns positively with the saved bank at all six sites. On fresh32, GCAD strength 8 scores **88.50 sarcasm / 58.94 coherence**, while strength 16 scores **95.16 / 34.59**. The random16 reference scores zero sarcasm, with a different realised shift along its generated trajectory.
+A separately registered [instruction-activation and stronger-GCAD experiment](qwen38_sarcasm_results.md) completed 192 fixed-token replay cells and 224 fresh generations in **1.76 GPU-hours**. The instruction change aligns positively with the saved bank at all six sites. On fresh32, GCAD strength 8 scores **88.50 sarcasm / 58.94 coherence**, while strength 16 scores **95.16 / 34.59**. The random16 reference scores zero sarcasm, with a different realised shift along its generated trajectory.
 
 No strength passes all gates: b8 misses the baseline-minus-20 coherence threshold, and b16 also misses the absolute threshold. The [canonical result](../results/qwen38_sarcasm_followup_01.json) is an exploratory quality-gate null, with no independent final evaluation. This result demonstrates trait movement, not a validated controller. All answers reached the 160-token cap, and impoliteness rose with sarcasm.
 

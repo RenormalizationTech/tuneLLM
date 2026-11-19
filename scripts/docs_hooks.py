@@ -18,11 +18,11 @@ from markdown.treeprocessors import Treeprocessor
 
 REPO = "https://github.com/RenormalizationTech/tuneLLM"
 CURRENT = {
-    "Start here": ["index.md", "showcase.md", "qwen38_release_plan.md", "reproduce.md", "project_tracks.md", "learning_foundations.md"],
-    "Quantization": ["quantization_foundations.md", "benchmark_summary.md", "execution.md"],
-    "LoRA and QLoRA": ["qlora_foundations.md", "physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
+    "Start here": ["index.md", "showcase.md", "reproduce.md", "project_tracks.md", "learning_foundations.md"],
+    "Quantization": ["quantization_foundations.md", "qwen38_quantization_results.md", "benchmark_summary.md", "execution.md"],
+    "LoRA and QLoRA": ["qlora_foundations.md", "qwen38_qlora_results.md", "physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
     "Refusal steering": ["refusal_foundations.md", "refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],
-    "Trait steering": ["trait_foundations.md", "steering_reference.md", "qwen38_sarcasm_execution.md", "qwen38_sarcasm_followup_execution.md", "qwen38_sarcasm_gcad_guide.md", "qwen38_sarcasm_release.md", "qwen38_sarcasm_plan.md", "profanity_controller_workflow.md", "sarcasm_controller_workflow.md", "gcad_and_combined_control.md", "persona_literature_workflow.md"],
+    "Trait steering": ["trait_foundations.md", "steering_reference.md", "qwen38_sarcasm_results.md", "qwen38_sarcasm_release.md", "profanity_controller_workflow.md", "sarcasm_controller_workflow.md", "gcad_and_combined_control.md", "persona_literature_workflow.md"],
     "Guides and references": ["references.md", "file_organization.md", "website.md"],
 }
 NAV_LABELS = {
@@ -32,6 +32,8 @@ NAV_LABELS = {
     "refusal_foundations.md": "Theoretical background",
     "trait_foundations.md": "Theoretical background",
     "index.md": "Overview", "showcase.md": "Results and portfolio",
+    "qwen38_quantization_results.md": "27B NF4 and Q4_K_M",
+    "qwen38_qlora_results.md": "27B QASPER and PRL adapters",
     "qwen38_release_plan.md": "27B results and releases", "reproduce.md": "Reproduce",
     "project_tracks.md": "Project status", "benchmark_summary.md": "4B measurements",
     "execution.md": "Quantization workflow", "physics_prl_execution.md": "4B physics results",
@@ -40,12 +42,13 @@ NAV_LABELS = {
     "refusal_reproducibility_review.md": "Reproducibility review",
     "xstest_baseline_execution.md": "XSTest baseline", "xstest_stored_output_audit.md": "Stored-output audit",
     "steering_reference.md": "Results and controls", "profanity_controller_workflow.md": "Profanity",
+    "qwen38_sarcasm_results.md": "27B sarcasm results",
     "qwen38_sarcasm_plan.md": "27B sarcasm study",
     "qwen38_sarcasm_execution.md": "27B sarcasm execution",
     "qwen38_sarcasm_followup_execution.md": "27B sarcasm follow-up",
     "qwen38_sarcasm_gcad_guide.md": "27B GCAD theory and tuning",
     "qwen38_sarcasm_hf_card_draft.md": "27B HF card draft (historical)",
-    "qwen38_sarcasm_release.md": "Use the 27B sarcasm controls",
+    "qwen38_sarcasm_release.md": "Use the 27B controls",
     "sarcasm_controller_workflow.md": "Sarcasm", "gcad_and_combined_control.md": "Joint controls",
     "persona_literature_workflow.md": "Literature workflow", "references.md": "References",
     "file_organization.md": "File organization", "website.md": "Website guide",
@@ -68,7 +71,7 @@ def title(file):
 def archive_group(name):
     if name.startswith(("physics_", "real_run", "next_sft")): return "LoRA and QLoRA archive"
     if name.startswith(("refusal_", "benign_", "xstest_", "deccp_", "political_", "qwen3_14b", "qwen3_4b_closeout")): return "Refusal archive"
-    if name.startswith(("author_", "persona_", "sarcasm_", "profanity_", "isolated_", "joint_", "tone_", "qwen3_4b_fixed")): return "Trait archive"
+    if name.startswith(("author_", "persona_", "sarcasm_", "profanity_", "isolated_", "joint_", "tone_", "qwen3_4b_fixed", "qwen38_sarcasm")): return "Trait archive"
     return "Project archive"
 
 

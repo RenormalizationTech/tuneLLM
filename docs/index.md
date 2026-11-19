@@ -12,7 +12,8 @@ retained experimental references together.
 | Destination | Contents |
 | --- | --- |
 | [Results and portfolio](showcase.md) | Main findings, CV bullets, interview summary and saved examples. |
-| [27B results and releases](qwen38_release_plan.md) | Completed quantization and QASPER/PRL adapter results, decisions and limitations. |
+| Quantization | [4B measurements](benchmark_summary.md) and [27B NF4/Q4_K_M results](qwen38_quantization_results.md). |
+| LoRA and QLoRA | [4B physics results](physics_prl_execution.md) and [27B QASPER/PRL adapters](qwen38_qlora_results.md). |
 | [Release catalog](../releases/README.md) | All ten public packages, model cards and pinned Hugging Face revisions. |
 | [Reproduce](reproduce.md) | CPU checks, loading instructions and separate runtime environments. |
 | [Project status](project_tracks.md) | Completed work and deferred studies. |
@@ -33,9 +34,8 @@ hosts ten published artifacts, including the evaluated 27B NF4 and Q4_K_M bases.
 
 | Track | Question | Main evidence |
 | --- | --- | --- |
-| 27B quantization and QLoRA | Does adaptation improve the intended task beyond prompting? | [QASPER gains and PRL negative result](qwen38_release_plan.md), with fixed task/retention gates and four verified public packages. |
-| Quantization | What changes when a model is compressed? | 4B BF16/Q8/Q4 measurements and [fixed-subset capability comparisons](benchmark_summary.md). |
-| Physics QLoRA | How does domain-text adaptation affect fit and general tasks? | Lower paper-text NLL with a numeric math regression and better answer formatting; [training and evaluation](physics_prl_execution.md). |
+| Quantization | What changes when a model is compressed? | [4B fixed-subset comparisons](benchmark_summary.md) and [27B NF4/Q4_K_M screen](qwen38_quantization_results.md). |
+| LoRA and QLoRA | Does adaptation improve the task beyond prompting, and what else changes? | [4B physics training](physics_prl_execution.md); [27B QASPER gain and PRL quality failure](qwen38_qlora_results.md), with fixed task and retention checks. |
 | Refusal steering | How do subtraction and projection affect willingness and usefulness? | A dose/quality tradeoff and a selected benign case demonstration; [7B execution record](refusal_7b_transfer_execution.md). |
 | Trait steering | Can internal interventions change style while preserving coherent answers? | GCAD/SAPS references with quality costs and coupling; [consolidated evidence](steering_reference.md). |
 
@@ -69,25 +69,20 @@ weights; they are distinct from LoRA adapters.
 
 ## Current scope and historical records
 
-The original 4B/7B studies are complete. A text-only Qwen3.8-27B NF4
-load/save/reload smoke has completed on two simple prompts, with exact token
-replay after reload and a failed strict one-step numerical cache comparison.
-It is a functional check, not a quality benchmark. The subsequent
-[27B release plan](qwen38_release_plan.md) is complete: NF4, Q4_K_M and separate
-QASPER QA/evidence and PRL grounded-abstract adapters are public. QASPER passed
-the fixed custom text-only task and retention gates. PRL passed retention but
-failed abstract-quality gates and is experimental; the unadapted base is preferred
-for that task. The separate [sarcasm study](qwen38_sarcasm_execution.md)
-closed as a development null: mechanics passed, but neither registered GCAD
-strength induced the required sarcasm. No final evaluation ran; no controller
-is retained. It used 3.44 GPU-hours. A separately registered
-[activation/stronger-GCAD follow-up](qwen38_sarcasm_followup_execution.md)
-is also complete: strengths 8/16 induce strong sarcasm (88.50/95.16), but
-coherence falls to 58.94/34.59 and no strength passes every gate. It used
-1.76 additional GPU-hours; the original null remains unchanged. The
-[experimental tunable controls](qwen38_sarcasm_release.md) are published and
-verified from a pinned public download. All planned Qwen3.8 releases are complete.
-See the [current roadmap](project_tracks.md).
+The planned 4B, 7B and text-only 27B work is complete. Ten packages are public,
+including five Qwen3.8 releases. Detailed benchmarks and methods live under
+**Quantization**, **LoRA and QLoRA**, **Refusal steering** and **Trait steering**.
+The [results overview](showcase.md) summarizes the findings; the
+[release catalog](../releases/README.md) lists the artifacts.
+
+QASPER passed its custom-subset task and retention gates; PRL failed abstract
+quality and remains experimental. Stronger 27B GCAD induced sarcasm with
+coherence costs, but no strength passed every gate. Both sarcasm outcomes remain
+unchanged: `development_null` and `exploratory_null_through_b16`. The
+[tunable controls](qwen38_sarcasm_release.md) are an experimental demonstration.
+The [project status](project_tracks.md) and
+[final 27B closeout](../results/qwen38_project_closeout_02.json) retain the
+completed scope and unchanged outcomes.
 
 All Markdown documents under `docs/` are available through this site. Protocols,
 closeouts and execution notes preserve their historical decisions and wording;

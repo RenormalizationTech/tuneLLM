@@ -7,7 +7,7 @@ computation and inference backend.
 
 The [shared notation](learning_foundations.md) defines the linear algebra
 used below. The [4B measurements](benchmark_summary.md),
-[conversion workflow](execution.md) and [27B comparison](qwen38_release_plan.md)
+[conversion workflow](execution.md) and [27B comparison](qwen38_quantization_results.md)
 specify the evaluated implementations. The uniform quantizer is an analytical
 model; exported formats can mix quantizer types and tensor precisions.
 

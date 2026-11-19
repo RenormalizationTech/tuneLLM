@@ -160,10 +160,10 @@ used reference PyTorch kernels and does not measure broad quality or optimized
 throughput. The subsequent evaluated 27B NF4 and Q4_K_M base packages are now
 public; pinned anonymous full-file downloads and GPU reload checks passed.
 
-The [27B evaluation and release plan](docs/qwen38_release_plan.md) now selects
-**NF4 plus one Q4_K_M GGUF**, followed by separate **QASPER paper-QA/evidence**
-and **PRL physics body-to-grounded-abstract** adapters, then evaluated Hugging
-Face releases. The fixed NF4/Q4/BF16-GGUF comparison and development baselines
+The completed [27B quantization comparison](docs/qwen38_quantization_results.md)
+covers **NF4 and Q4_K_M GGUF**. The [independent QLoRA evaluations](docs/qwen38_qlora_results.md)
+cover **QASPER paper-QA/evidence** and **PRL physics body-to-grounded-abstract**
+adapters, with all four packages public. The fixed NF4/Q4/BF16-GGUF comparison and development baselines
 are complete. Both adapters finished training: 482 QASPER questions and 57 audited
 PRL papers. The [locked PRL science evaluation](results/qwen38_prl_final_science_01.json)
 failed its gates: AI-review preference favored the unadapted base. The adapter
@@ -178,7 +178,7 @@ from quality evidence. The owner resumed the separate 27B sarcasm study on
 2026-11-18; it [closed as a development null](docs/qwen38_sarcasm_execution.md)
 on 2026-11-19. The port and fitted-bank mechanics passed, but neither registered
 strength induced the required sarcasm. Direct prompting did on the development
-set. The study used 3.44 GPU-hours and retained no controller.
+set. The study records a conservative 3.44 GPU-hour charge and retained no controller.
 The completed quantization and QLoRA results remain unchanged.
 The owner subsequently authorized a separate
 [instruction-activation and stronger-GCAD follow-up](docs/qwen38_sarcasm_followup_execution.md).
