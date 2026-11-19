@@ -14,6 +14,13 @@ controllers are deferred.
 
 ## Completed work
 
+The [short demonstration](short_demonstration.md) presents recorded QASPER and
+tunable-sarcasm examples without requiring a GPU. The separately authorized
+[Gemma 4 31B preflight](gemma4_preflight.md) passed tokenizer, full-length
+synthetic QLoRA and fresh-reload checks on one A6000. **The next decision is
+whether to train a Gemma QASPER adapter, then consider PRL.** No Gemma task
+training or final evaluation is queued; these mechanics do not establish quality.
+
 | Track | Status and evidence |
 | --- | --- |
 | 4B quantization | BF16/Q8/Q4 GGUF and saved NF4 with reload checks, size/speed measurements and [fixed-subset evaluation](benchmark_summary.md). |
@@ -135,8 +142,9 @@ A [scoped cache cleanup](workspace_maintenance.md) is complete; scientific
 evidence remains retained. The earlier bounded 27B quantization, QLoRA and
 sarcasm studies, including the separately registered instruction-activation
 and stronger-GCAD follow-up, plus the experimental tunable-controls release, are
-complete. The Qwen3.8 extension is closed; current work is portfolio maintenance;
-no additional model or judge run is scheduled.
+complete. The Qwen3.8 extension is closed. The recorded demonstration and separate
+Gemma feasibility preflight are complete; the Gemma task-training decision remains
+open. No additional Qwen model or judge run is scheduled.
 
 ## Where to look
 

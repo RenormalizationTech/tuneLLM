@@ -85,6 +85,10 @@ The [project status](project_tracks.md) and
 [final 27B closeout](../results/qwen38_project_closeout_02.json) retain the
 completed scope and unchanged outcomes.
 
+A separate [Gemma 4 31B feasibility preflight](gemma4_preflight.md) also passed
+synthetic training and reload checks. Whether to train QASPER/PRL adapters on
+that family is the next decision; there are no Gemma task-quality results yet.
+
 All Markdown documents under `docs/` are available through this site. Protocols,
 closeouts and execution notes preserve their historical decisions and wording;
 they are not all current setup instructions. Raw run directories and machine

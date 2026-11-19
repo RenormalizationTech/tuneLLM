@@ -1,0 +1,334 @@
+{
+  "recorded_at_utc": "2026-11-19T22:16:42.581306+00:00",
+  "status": "compatibility_and_synthetic_training_feasibility_passed",
+  "decision": "Awaiting owner decision before any Gemma QASPER or PRL task training",
+  "scope": "Text-only compatibility, train/development tokenizer coverage, synthetic optimizer steps and fresh-process reload; no Gemma final-test generation or judging",
+  "model": {
+    "repo_id": "google/gemma-4-31B-it",
+    "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "loader": "Gemma4ForCausalLM",
+    "weights": {
+      "model-00001-of-00002.safetensors": {
+        "bytes": 49784788364,
+        "sha256": "eeef8791537bc04f110967c513149e037d2a9ae97d49add7291ebfa62806bbfa"
+      },
+      "model-00002-of-00002.safetensors": {
+        "bytes": 12761549884,
+        "sha256": "018912220f559f7025d60333e0996183cd538aa77ad6f4988a89ce47be681f10"
+      }
+    },
+    "vision_modules_loaded": false
+  },
+  "software": {
+    "torch": "2.12.0+cu130",
+    "transformers": "5.23.0",
+    "peft": "0.21.0",
+    "bitsandbytes": "0.49.2",
+    "accelerate": "1.12.0",
+    "huggingface_hub": "2.4.0"
+  },
+  "GPU": {
+    "name": "NVIDIA RTX A6000",
+    "total_bytes": 50897289216
+  },
+  "training_profile": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.0,
+    "batch_size": 1,
+    "gradient_checkpointing": "non-reentrant",
+    "attention": "SDPA",
+    "optimizer": "torch AdamW",
+    "trainable_parameters": 122429440,
+    "trainable_tensors": 820,
+    "projection_count": 410,
+    "projection_suffix_counts": {
+      "q_proj": 60,
+      "k_proj": 60,
+      "v_proj": 50,
+      "o_proj": 60,
+      "gate_proj": 60,
+      "up_proj": 60,
+      "down_proj": 60
+    },
+    "floating_weight_recipe": "PEFT default FP32 preparation, including tied embedding/head; match this in later base/adapter comparisons",
+    "source_sha256": "b8e8479b02af7a4e00209a4d14c677298135a3d46ebc01f6071f0983ecba2232"
+  },
+  "masking": {
+    "format": "native no-thinking generation prefix + plain response + one native turn-end; prompt masked",
+    "supervised_native_turn_end_id": 106,
+    "generic_EOS_id_not_appended": 1,
+    "CPU_tests_passed": 7,
+    "full_vs_compact_CE": {
+      "full": 5.727110862731934,
+      "compact": 5.727116107940674,
+      "absolute_difference": 5.245208740234375e-06,
+      "close": true
+    }
+  },
+  "coverage": {
+    "qasper": {
+      "train": {
+        "source_sha256": "bb9b16642c47491b83150b278aa27ebcd37d5d3a06bb0b6e617fb8e274def897",
+        "eligible": 1940,
+        "ineligible": 653,
+        "median": 5726,
+        "p95": 6861,
+        "maximum": 7091,
+        "over_8192": 0,
+        "total_tokens": 10180198,
+        "response_tokens": 80882,
+        "maximum_response_tokens": 432
+      },
+      "validation": {
+        "source_sha256": "7028881d0af592c9a5b8727ac56e3bfedda6aa3338af367809654ef4b4451fc4",
+        "eligible": 105,
+        "ineligible": 45,
+        "median": 5519,
+        "p95": 6821,
+        "maximum": 6906,
+        "over_8192": 0,
+        "total_tokens": 544101,
+        "response_tokens": 4337,
+        "maximum_response_tokens": 208
+      }
+    },
+    "prl": {
+      "train": {
+        "source_sha256": "e60fd83eef4b8203fd8265264b2592c4ac9e29dc8157026a96de6591d3e52a22",
+        "eligible": 57,
+        "ineligible": 13,
+        "median": 6155,
+        "p95": 6504,
+        "maximum": 6609,
+        "over_8192": 0,
+        "total_tokens": 340599,
+        "response_tokens": 10192,
+        "maximum_response_tokens": 259
+      },
+      "validation": {
+        "source_sha256": "fda2e8e6b70d92160b7e85618cbee169dae79fc3397e71fa3febfb68b6bd47f9",
+        "eligible": 9,
+        "ineligible": 1,
+        "median": 6019,
+        "p95": 6349,
+        "maximum": 6349,
+        "over_8192": 0,
+        "total_tokens": 53342,
+        "response_tokens": 1512,
+        "maximum_response_tokens": 204
+      }
+    }
+  },
+  "memory_after_NF4_load": {
+    "allocated_bytes": 17965114368,
+    "reserved_bytes": 18224250880
+  },
+  "memory_after_PEFT_preparation": {
+    "allocated_bytes": 21284673024,
+    "reserved_bytes": 24119345152
+  },
+  "completed_probes": [
+    {
+      "sequence_length": 2048,
+      "response_tokens": 256,
+      "loss": 0.29031944274902344,
+      "gradient_tensors": 820,
+      "nonzero_gradient_tensors": 410,
+      "finite_gradients": true,
+      "gradient_norm_before_clip": 3.3821496963500977,
+      "seconds": 11.147858090698719,
+      "peak_allocated_bytes": 25920887296,
+      "peak_reserved_bytes": 27592228864,
+      "device_free_bytes": 22438739968,
+      "status": "passed"
+    },
+    {
+      "sequence_length": 4096,
+      "response_tokens": 256,
+      "loss": 0.23254995048046112,
+      "gradient_tensors": 820,
+      "nonzero_gradient_tensors": 820,
+      "finite_gradients": true,
+      "gradient_norm_before_clip": 0.8938762545585632,
+      "seconds": 28.814028973225504,
+      "peak_allocated_bytes": 32043015168,
+      "peak_reserved_bytes": 33072087040,
+      "device_free_bytes": 16958881792,
+      "status": "passed"
+    },
+    {
+      "sequence_length": 8192,
+      "response_tokens": 256,
+      "loss": 0.2002435028553009,
+      "gradient_tensors": 820,
+      "nonzero_gradient_tensors": 820,
+      "finite_gradients": true,
+      "gradient_norm_before_clip": 5.763946056365967,
+      "seconds": 86.23562797764316,
+      "peak_allocated_bytes": 41328319488,
+      "peak_reserved_bytes": 43427823616,
+      "device_free_bytes": 6603145216,
+      "status": "passed"
+    },
+    {
+      "sequence_length": 8192,
+      "response_tokens": 512,
+      "loss": 0.12849394977092743,
+      "gradient_tensors": 820,
+      "nonzero_gradient_tensors": 410,
+      "finite_gradients": true,
+      "gradient_norm_before_clip": 0.6724002361297607,
+      "seconds": 84.2335005919449,
+      "peak_allocated_bytes": 39848876544,
+      "peak_reserved_bytes": 42414899200,
+      "device_free_bytes": 7616069632,
+      "status": "passed"
+    }
+  ],
+  "steady_state_probe": {
+    "scope": "synthetic mechanics only; no task training or test/judge calls",
+    "status": "passed",
+    "source_sha256": "d991955455f274abc308afb2b62f79f3d425506a431e4d07549ff73d6693b9ea",
+    "helper_sha256": "b8e8479b02af7a4e00209a4d14c677298135a3d46ebc01f6071f0983ecba2232",
+    "fresh_reload_sha256": "c496e023f6ca36b74b15dcb57a6f2ac025e9c2b9483b7b3e6b68115003a6dfce",
+    "versions": {
+      "torch": "2.12.0+cu130",
+      "transformers": "5.23.0",
+      "peft": "0.21.0",
+      "bitsandbytes": "0.49.2",
+      "accelerate": "1.12.0",
+      "huggingface_hub": "2.4.0"
+    },
+    "sequence_length": 8192,
+    "response_tokens": 512,
+    "loss": 0.10388048738241196,
+    "gradient_tensors": 820,
+    "finite_gradients": true,
+    "gradient_norm_before_clip": 0.5516480207443237,
+    "preexisting_Adam_moment_bytes": 979435520,
+    "full_step_seconds": 84.60953142726794,
+    "peak_allocated_bytes": 40830474752,
+    "peak_reserved_bytes": 42788192256,
+    "device_free_bytes": 7244873728,
+    "synthetic_updates": 2,
+    "seconds_including_load": 108.71890809619799
+  },
+  "fresh_process_reload": {
+    "scope": "fresh-process NF4 base + synthetic adapter mechanics only",
+    "adapter_tensors_equal": true,
+    "adapter_tensor_count": 820,
+    "logits_torch_equal": true,
+    "max_absolute_logit_difference": 0.0,
+    "status": "passed",
+    "seconds_including_load": 20.279978069942445,
+    "source_sha256": "b8e8479b02af7a4e00209a4d14c677298135a3d46ebc01f6071f0983ecba2232",
+    "original_result_sha256": "2f8e5e93fd948c6237199079131f0de605485f7fd6edc24720e3074663ef7b50"
+  },
+  "generation_mechanics": {
+    "short_smokes_source": {
+      "attempt": "02",
+      "receipt_sha256": "2f8e5e93fd948c6237199079131f0de605485f7fd6edc24720e3074663ef7b50",
+      "executed_source_sha256": "b8e8479b02af7a4e00209a4d14c677298135a3d46ebc01f6071f0983ecba2232"
+    },
+    "long_synthetic_probe_source": {
+      "attempt": "01",
+      "receipt_sha256": "0e02d03c434b5a915e4e1cd603766f60e27a595f93f9ab4d07b8560b86a4b920",
+      "executed_source_sha256": "3cfc337b539c76492fe450e3ad362805b6246a501573792d84b45a2fedc0bfdb",
+      "completed_before_later_SIGTERM": true
+    },
+    "short_smokes": [
+      {
+        "prompt": "What is two plus three? Answer briefly.",
+        "prompt_tokens": 22,
+        "cap": 64,
+        "force_cap_for_throughput_only": false,
+        "generated_tokens": 2,
+        "seconds_including_prefill": 0.8902241899631917,
+        "tokens_per_second_including_prefill": 2.2466250889932504,
+        "ended_at_native_turn": true
+      },
+      {
+        "prompt": "Describe one simple scientific observation in one sentence.",
+        "prompt_tokens": 22,
+        "cap": 64,
+        "force_cap_for_throughput_only": false,
+        "generated_tokens": 14,
+        "seconds_including_prefill": 2.617433439940214,
+        "tokens_per_second_including_prefill": 5.348751103416704,
+        "ended_at_native_turn": true
+      }
+    ],
+    "long_synthetic_probe": {
+      "prompt": "Synthetic repeated scientific text; mechanics throughput only",
+      "prompt_tokens": 7936,
+      "cap": 256,
+      "force_cap_for_throughput_only": true,
+      "generated_tokens": 256,
+      "seconds_including_prefill": 72.21911014989018,
+      "tokens_per_second_including_prefill": 3.544768129497498,
+      "ended_at_native_turn": false
+    }
+  },
+  "training_cost_scenarios": {
+    "qasper": {
+      "matched_training_examples": 482,
+      "epochs": 1,
+      "total_training_tokens": 2436699,
+      "constant_8192_token_rate_hours": [
+        6.95976042544527,
+        7.125185426754256
+      ],
+      "comparison_selection_protocol_sha256": "27667d78453004a56471fe4dbbfed815f725eb079533942aeed567f185c13f63"
+    },
+    "prl": {
+      "matched_training_examples": 57,
+      "epochs": 3,
+      "total_training_tokens": 1021797,
+      "constant_8192_token_rate_hours": [
+        2.9184820625931644,
+        2.9878508151812015
+      ],
+      "comparison_selection_protocol_sha256": "4b74154dac8ee66babc0da8944757c52b3240f9716e4ad0558a5618608a06163"
+    },
+    "qasper_all_eligible_one_epoch": {
+      "training_examples": 1940,
+      "total_training_tokens": 10180198,
+      "constant_8192_token_rate_hours": [
+        29.07693529795723,
+        29.768058521414762
+      ]
+    }
+  },
+  "measured_8192_training_tokens_per_second_range": [
+    94.99553945526783,
+    97.25346735480902
+  ],
+  "cost_interpretation": "Simple constant-token-rate scenarios, not predicted wall time, confidence intervals or bounds. Synthetic lengths/targets, warmup, per-step optimizer updates, gradient checks and attention scaling differ from a real accumulated-gradient run. Validation, checkpointing, final generation, retention and AI review are excluded; end-to-end evaluation cost is not estimated.",
+  "interruption": {
+    "attempt": "01",
+    "exit_code": 143,
+    "cause": "Unestablished external SIGTERM",
+    "larger_response_probe_in_attempt01": "incomplete; not scored as a pass or an OOM",
+    "resolution": "Independent attempt02 completed 8192/512 and fresh reload; separate steady-state probe verified resident Adam moments"
+  },
+  "limits": [
+    "Synthetic mechanics do not establish task-quality improvements or convergence",
+    "The exact prepared training/development inputs were reused; original paper excerpts were not expanded to exploit Gemma's context window",
+    "No Gemma task adapter was trained, selected, published or compared on final-test data",
+    "The separate recorded demonstration displays existing Qwen final outputs; reused project evaluation sets would not be new heldout evidence for a future Gemma study",
+    "One RTX A6000/software stack; other hardware, batch sizes and longer contexts untested",
+    "Short generation ends naturally; long synthetic generation forces 256 tokens for throughput and has no quality interpretation"
+  ],
+  "raw_local_receipt_sha256": {
+    "outputs/gemma4-preflight-01/gpu_result.json": "0e02d03c434b5a915e4e1cd603766f60e27a595f93f9ab4d07b8560b86a4b920",
+    "outputs/gemma4-preflight-01/interruption.json": "3c5378d2696143545a56712f12d97691b02fc9b56e90066fef8beb3fa12c01e0",
+    "outputs/gemma4-preflight-01/executed_source.py": "3cfc337b539c76492fe450e3ad362805b6246a501573792d84b45a2fedc0bfdb",
+    "outputs/gemma4-preflight-02/cpu_prepare.json": "9471341931a2d26b3f54914e26983463b5e3f0f1997ef72d4338a77ae89a4f29",
+    "outputs/gemma4-preflight-02/gpu_result.json": "2f8e5e93fd948c6237199079131f0de605485f7fd6edc24720e3074663ef7b50",
+    "outputs/gemma4-preflight-02/fresh_reload.json": "c496e023f6ca36b74b15dcb57a6f2ac025e9c2b9483b7b3e6b68115003a6dfce",
+    "outputs/gemma4-preflight-02/steady_memory.json": "6f005531f9240937bc3741d37071be64b8be8055c401742c8ea570277c28e934",
+    "outputs/gemma4-preflight-02/weights_verification.json": "af9babb2edc89879fb786dd7605bfb214781cd2107d4a977e9b27309dc6c8941"
+  },
+  "report_source_sha256": "ff7ce11431abf466d09feb1a3e01560876a1568874c4f86c1b95e11196e9b16b"
+}
