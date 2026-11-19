@@ -18,7 +18,7 @@ from markdown.treeprocessors import Treeprocessor
 
 REPO = "https://github.com/RenormalizationTech/tuneLLM"
 CURRENT = {
-    "Start here": ["index.md", "showcase.md", "reproduce.md", "project_tracks.md", "learning_foundations.md"],
+    "Start here": ["index.md", "short_demonstration.md", "showcase.md", "reproduce.md", "project_tracks.md", "learning_foundations.md"],
     "Quantization": ["quantization_foundations.md", "qwen38_quantization_results.md", "benchmark_summary.md", "execution.md"],
     "LoRA and QLoRA": ["qlora_foundations.md", "qwen38_qlora_results.md", "physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
     "Refusal steering": ["refusal_foundations.md", "refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],
@@ -32,6 +32,7 @@ NAV_LABELS = {
     "refusal_foundations.md": "Theoretical background",
     "trait_foundations.md": "Theoretical background",
     "index.md": "Overview", "showcase.md": "Results and portfolio",
+    "short_demonstration.md": "Short demonstration",
     "qwen38_quantization_results.md": "27B NF4 and Q4_K_M",
     "qwen38_qlora_results.md": "27B QASPER and PRL adapters",
     "qwen38_release_plan.md": "27B results and releases", "reproduce.md": "Reproduce",

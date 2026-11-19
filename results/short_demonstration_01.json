@@ -1,0 +1,68 @@
+{
+  "recorded_at_utc": "2026-11-19T22:10:01.460698+00:00",
+  "status": "recorded_demonstration_verified_locally",
+  "scope": "Post-hoc presentation of completed Qwen QASPER and sarcasm outputs; not a new quality experiment or live inference service",
+  "new_model_or_judge_calls": 0,
+  "source_files_sha256": {
+    "docs/short_demonstration.md": "c226e731d8510c0ce8cf38d19fa7b89f0f9c4c2fd3378b6b471c148281fed0b7",
+    "docs/assets/short_demonstration.json": "2aac24990f38f11936ee7aecf29e3b31ee42f28b729419bc0636af431adfdbec",
+    "docs/javascripts/short_demonstration.js": "b4d79c33bc4a9c076fe659fe295370bc616eae17c1115b43738d5ed62748a0e7",
+    "docs/stylesheets/short_demonstration.css": "b42d58ef6d8162860df168a4ddc7d7c6f4879f9f1ad2c11542ca67a35b4806d4",
+    "scripts/build_short_demonstration.py": "b118bd9050128062f7b278f174fedfeeb43a3d4a4e33f75b3603038cacbb3fd6",
+    "tests/test_short_demonstration.py": "9303a65cbd9348bff81e8a74ba14e205029e3d9bf78de9e31bd7ddd935cd5fe1"
+  },
+  "selection": {
+    "QASPER_id": "1603.03876::47ffc9811b037613c9c4d1ec1e4f13c08396ed1c",
+    "sarcasm_question_id": "F01",
+    "strengths": [
+      0,
+      2,
+      4,
+      8,
+      16
+    ],
+    "license_attribution": "QASPER v0.3 CC BY4.0 and source-paper link; project fixture/source/licence links; pinned public release commits"
+  },
+  "validation": {
+    "local_docs_and_demo_tests_passed": 21,
+    "clean_checkout_simulation": {
+      "passed": 20,
+      "artifact_regeneration_skipped": 1,
+      "private_reads_blocked": true
+    },
+    "strict_build_passed": true,
+    "pages": 122,
+    "broken_internal_links": 0,
+    "browser_checks": [
+      {
+        "mode": "desktop",
+        "five_strength_text_and_scores_exact": true,
+        "native_keyboard_radio_navigation": true,
+        "horizontal_overflow": false,
+        "page_errors": []
+      },
+      {
+        "mode": "mobile",
+        "five_strength_text_and_scores_exact": true,
+        "native_keyboard_radio_navigation": true,
+        "horizontal_overflow": false,
+        "page_errors": []
+      },
+      {
+        "mode": "no_javascript",
+        "all_five_recorded_answers_visible": true
+      },
+      {
+        "mode": "JSON_fetch_failure",
+        "complete_static_fallback": true
+      }
+    ],
+    "privacy_scan": "passed; only selected public text/scalar scores, public source links and hashes"
+  },
+  "scientific_outcomes_unchanged": {
+    "QASPER": "Passed registered custom-subset task and retention gates",
+    "original_sarcasm": "development_null",
+    "followup_sarcasm": "exploratory_null_through_b16"
+  },
+  "publication_note": "Website deployment and live-page confirmation follow this source commit; this receipt records local checks"
+}

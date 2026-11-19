@@ -11,6 +11,7 @@ retained experimental references together.
 
 | Destination | Contents |
 | --- | --- |
+| [Short demonstration](short_demonstration.md) | A four-minute recorded comparison of QASPER adaptation and tunable sarcasm; no GPU needed. |
 | [Results and portfolio](showcase.md) | Main findings, CV bullets, interview summary and saved examples. |
 | Quantization | [4B measurements](benchmark_summary.md) and [27B NF4/Q4_K_M results](qwen38_quantization_results.md). |
 | LoRA and QLoRA | [4B physics results](physics_prl_execution.md) and [27B QASPER/PRL adapters](qwen38_qlora_results.md). |
