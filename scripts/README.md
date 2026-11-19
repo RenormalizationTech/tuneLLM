@@ -17,6 +17,7 @@ environment for every study.
 | 27B sarcasm study | `qwen38_gcad_port.py`, `qwen38_sarcasm.py`, `qwen38_sarcasm_judge.py`; [registered execution](../docs/qwen38_sarcasm_execution.md). Model/judge stages require exact phase approvals. |
 | 27B sarcasm closeout and figure | `qwen38_sarcasm_analyze.py`, `plot_qwen38_sarcasm_analysis.py`; separate registered offline analysis and optional figure environment. |
 | 27B sarcasm follow-up | `qwen38_sarcasm_followup.py`, `qwen38_sarcasm_followup_telemetry.py`, `qwen38_sarcasm_followup_analyze.py`, `plot_qwen38_sarcasm_followup.py`; [completed one-launch experiment](../docs/qwen38_sarcasm_followup_execution.md). |
+| 27B controls release | `stage_qwen38_sarcasm_release.py` builds a CPU-only explicit-file payload; `verify_qwen38_sarcasm_release.py` runs isolated mechanics/replays. Consumers use the published `runtime.example`; [pinned usage](../docs/qwen38_sarcasm_release.md). |
 | Portfolio figure | `plot_portfolio_results.py`; saved inputs in `docs/assets/` |
 | Website | `docs_hooks.py`, `check_docs_site.py`; [build guide](../docs/website.md) |
 | Release preparation | `stage_*release.py`, `publish_release.py`; [release index](../releases/README.md) |

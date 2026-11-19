@@ -13,7 +13,7 @@ retained experimental references together.
 | --- | --- |
 | [Results and portfolio](showcase.md) | Main findings, CV bullets, interview summary and saved examples. |
 | [27B results and releases](qwen38_release_plan.md) | Completed quantization and QASPER/PRL adapter results, decisions and limitations. |
-| [Release catalog](../releases/README.md) | All nine public packages, model cards and pinned Hugging Face revisions. |
+| [Release catalog](../releases/README.md) | All ten public packages, model cards and pinned Hugging Face revisions. |
 | [Reproduce](reproduce.md) | CPU checks, loading instructions and separate runtime environments. |
 | [Project status](project_tracks.md) | Completed work and deferred studies. |
 | [Theoretical background](learning_foundations.md) | Formulations, assumptions and primary references underlying the methods and implementation choices. |
@@ -27,7 +27,7 @@ Start with the [results and saved examples](showcase.md), then use the
 [reproduction guide](reproduce.md) to inspect an artifact or run the portable
 CPU checks. [GitHub](https://github.com/RenormalizationTech/tuneLLM) contains the
 code and compact results; [Hugging Face](https://huggingface.co/RenormalizationTech)
-hosts nine published artifacts, including the evaluated 27B NF4 and Q4_K_M bases.
+hosts ten published artifacts, including the evaluated 27B NF4 and Q4_K_M bases.
 
 ## Research tracks
 
@@ -84,7 +84,9 @@ is retained. It used 3.44 GPU-hours. A separately registered
 [activation/stronger-GCAD follow-up](qwen38_sarcasm_followup_execution.md)
 is also complete: strengths 8/16 induce strong sarcasm (88.50/95.16), but
 coherence falls to 58.94/34.59 and no strength passes every gate. It used
-1.76 additional GPU-hours; the original null remains unchanged.
+1.76 additional GPU-hours; the original null remains unchanged. The
+[experimental tunable controls](qwen38_sarcasm_release.md) are published and
+verified from a pinned public download. All planned Qwen3.8 releases are complete.
 See the [current roadmap](project_tracks.md).
 
 All Markdown documents under `docs/` are available through this site. Protocols,

@@ -41,3 +41,11 @@ that receipt's time; [the current release index](../releases/README.md) and
 old results to update those labels. Add a new dated receipt for a later action.
 Raw generations, judge journals, checkpoints and detailed local verification
 reports are retained under ignored `outputs/` and `artifacts/`.
+
+
+The [27B sarcasm controls publication](qwen38_sarcasm_huggingface_publication_01.json)
+and [public verification](qwen38_sarcasm_public_verification_01.json) record the
+experimental tunable release. The latter binds an anonymous controls snapshot,
+re-hashed base files from the earlier pinned cache, and exact local/public GPU
+mechanics. The pre-load cache-layout failure remains preserved; the subsequent
+wrapper fix changed no steering arithmetic or scientific outcome.

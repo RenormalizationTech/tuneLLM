@@ -20,7 +20,7 @@ controllers are deferred.
 | Physics QLoRA | Published adapter; held-out paper NLL 1.975 → 1.734, numeric GSM8K 117/128 → 111/128 and strict-format correct 97/128 → 106/128. [Execution record](physics_prl_execution.md). Writing-quality improvement is unestablished. |
 | Refusal steering | 4B and 7B interventions implemented and compared. Fixed-workflow decisions remain null under their original gates. A separate 13-case 7B diagnostic rescued two useful benign answers, with one repetitive output. The [experimental package is published](../releases/qwen2.5-7b-refusal-steering-experiment/README.md); no general benign-only controller is validated. |
 | Trait steering | Individual GCAD/SAPS references show model-specific effects with quality costs. The joint 7B study qualified 0/5 combined candidates. [Consolidated evidence](steering_reference.md) and [joint-control discussion](gcad_and_combined_control.md). |
-| Portfolio presentation | Public GitHub, nine HF cards, saved examples, a results figure, [reproduction guidance](reproduce.md) and the [live documentation site](https://renormalizationtech.github.io/tuneLLM/). |
+| Portfolio presentation | Public GitHub, ten HF cards, saved examples, a results figure, [reproduction guidance](reproduce.md) and the [live documentation site](https://renormalizationtech.github.io/tuneLLM/). |
 | 27B initial NF4 smoke | Official text-only checkpoint loaded, saved and reloaded. Two short prompts replayed exact tokens. The strict one-step cached/full-prefix logit comparison failed; this remains a limitation. [Execution record](../results/qwen38_27b_nf4_execution_01.json). |
 
 The 7B refusal package contains an inference-time direction and runtime, not new
@@ -29,7 +29,7 @@ benign diagnostic is a narrow demonstration. No further 4B/7B retuning or
 headroom/evasion extension is scheduled. The closed DECCP screen did not produce
 a controller; it is separate from the later published refusal experiment.
 
-## Selected next model work: Qwen3.8-27B
+## Completed model work: Qwen3.8-27B
 
 Use **Qwen/Qwen3.8-27B**, official revision
 `37561816e66b5b9153b1b64c10968c18c1e6f4a0`, text-only through Transformers NF4.
@@ -115,6 +115,12 @@ reference at 16. The [follow-up is complete](qwen38_sarcasm_followup_execution.m
 strengths 8/16 produce strong sarcasm, but neither meets the coherence gates.
 No strength qualifies; the original development null remains unchanged.
 The follow-up used 1.76 GPU-hours and has no independent final-set validation.
+The [experimental tunable HF controls](qwen38_sarcasm_release.md) are now public
+at revision `877e4b51e654e7410f792858e93fee6727d48646`. The package preserves
+the fixed bank and exposes strengths 0–16 with demonstration default 8. Its
+anonymous controls download and isolated GPU replay match the staged runtime
+exactly; the base came from the earlier pinned anonymous-download cache and was
+re-hashed. All five planned Qwen3.8 packages are public and verified.
 The existing
 [portfolio summary](showcase.md#qwen38-27b-portfolio-summary) provides CV bullets
 and interview wording using completed results.
@@ -126,7 +132,8 @@ deployment is checked separately through GitHub Actions and the public site.
 A [scoped cache cleanup](workspace_maintenance.md) is complete; scientific
 evidence remains retained. The earlier bounded 27B quantization, QLoRA and
 sarcasm studies, including the separately registered instruction-activation
-and stronger-GCAD follow-up, are complete. Current work is portfolio maintenance;
+and stronger-GCAD follow-up, plus the experimental tunable-controls release, are
+complete. The Qwen3.8 extension is closed; current work is portfolio maintenance;
 no additional model or judge run is scheduled.
 
 ## Where to look

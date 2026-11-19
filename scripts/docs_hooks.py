@@ -22,7 +22,7 @@ CURRENT = {
     "Quantization": ["quantization_foundations.md", "benchmark_summary.md", "execution.md"],
     "LoRA and QLoRA": ["qlora_foundations.md", "physics_prl_execution.md", "physics_prl_protocol.md", "model_workflow.md"],
     "Refusal steering": ["refusal_foundations.md", "refusal_7b_transfer_execution.md", "activation_steering_methods.md", "refusal_reproducibility_review.md", "xstest_baseline_execution.md", "xstest_stored_output_audit.md"],
-    "Trait steering": ["trait_foundations.md", "steering_reference.md", "qwen38_sarcasm_execution.md", "qwen38_sarcasm_followup_execution.md", "qwen38_sarcasm_gcad_guide.md", "qwen38_sarcasm_hf_card_draft.md", "qwen38_sarcasm_plan.md", "profanity_controller_workflow.md", "sarcasm_controller_workflow.md", "gcad_and_combined_control.md", "persona_literature_workflow.md"],
+    "Trait steering": ["trait_foundations.md", "steering_reference.md", "qwen38_sarcasm_execution.md", "qwen38_sarcasm_followup_execution.md", "qwen38_sarcasm_gcad_guide.md", "qwen38_sarcasm_release.md", "qwen38_sarcasm_plan.md", "profanity_controller_workflow.md", "sarcasm_controller_workflow.md", "gcad_and_combined_control.md", "persona_literature_workflow.md"],
     "Guides and references": ["references.md", "file_organization.md", "website.md"],
 }
 NAV_LABELS = {
@@ -44,7 +44,8 @@ NAV_LABELS = {
     "qwen38_sarcasm_execution.md": "27B sarcasm execution",
     "qwen38_sarcasm_followup_execution.md": "27B sarcasm follow-up",
     "qwen38_sarcasm_gcad_guide.md": "27B GCAD theory and tuning",
-    "qwen38_sarcasm_hf_card_draft.md": "27B HF card draft",
+    "qwen38_sarcasm_hf_card_draft.md": "27B HF card draft (historical)",
+    "qwen38_sarcasm_release.md": "Use the 27B sarcasm controls",
     "sarcasm_controller_workflow.md": "Sarcasm", "gcad_and_combined_control.md": "Joint controls",
     "persona_literature_workflow.md": "Literature workflow", "references.md": "References",
     "file_organization.md": "File organization", "website.md": "Website guide",

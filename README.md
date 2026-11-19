@@ -57,6 +57,11 @@ is separate. [Source counts, interpretation and saved examples](docs/showcase.md
 | [Physics QLoRA](https://huggingface.co/RenormalizationTech/Qwen3-4B-tuneLLM-PRL-Writing-QLoRA) | Experimental adapter, prepared data, evaluation and reproduction package | [Physics study](docs/physics_prl_execution.md) |
 | [7B trait-steering controls](https://huggingface.co/RenormalizationTech/qwen2.5-7b-gcad-steering-controls) | Profanity, impoliteness and sarcasm banks; standalone runtime; joint-study guide | [Four-behavior evidence](docs/steering_reference.md) |
 | [7B refusal-steering experiment](https://huggingface.co/RenormalizationTech/qwen2.5-7b-refusal-steering-experiment) | Frozen refusal direction, inference runtime, experimental setting and results | [7B refusal study](docs/refusal_7b_transfer_execution.md) |
+| [27B NF4 base](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4) | Saved text-only NF4 base and fixed-screen evidence | [NF4 card](releases/Qwen3.8-27B-tuneLLM-NF4/README.md) |
+| [27B Q4_K_M GGUF](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF) | Quantized base and reproduction notes | [GGUF card](releases/Qwen3.8-27B-tuneLLM-GGUF/README.md) |
+| [27B QASPER QLoRA](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA) | Adapter passing the fixed custom paper-QA/evidence task and retention gates | [QASPER card](releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md) |
+| [27B PRL abstract QLoRA](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA) | Experimental adapter; abstract-quality gates failed | [PRL card](releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/README.md) |
+| [27B sarcasm GCAD controls](https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls) | Bank and standalone runtime; tunable strength 0–16, experimental default 8 | [Pinned usage guide](docs/qwen38_sarcasm_release.md) |
 
 The refusal direction reduces refusal generally, including on unsafe contrasts;
 it is not a benign-only refusal correction. The selected 13 cases came from
@@ -128,11 +133,13 @@ artifacts; they are not instructions to overwrite or repeat frozen studies.
 The public test fixtures retain their historical held-out status only for the
 reported runs. Future generalization studies need independent data.
 
-## Qwen3.8-27B extension
+## Qwen3.8-27B: completed extension
 
-The selected larger-model direction is **sarcasm steering, quantization and two
-independent QLoRA adapters**. Reuse the existing methods, corpus and evaluation structure
-where compatible; verify architecture/runtime support and resource needs first.
+The planned larger-model extension is complete: **sarcasm steering, quantization and two
+independent QLoRA adapters** have been implemented, evaluated and published. The five
+27B packages retain their individual positive or negative outcomes and verification
+limits. [Use the tunable sarcasm controls](docs/qwen38_sarcasm_release.md) or inspect
+the [full release index](releases/README.md).
 The official BF16 checkpoint has approximately 55.6 GB of weight files; an
 NF4 copy is saved locally as described below. Quantized inference and QLoRA
 use a smaller-memory path than the BF16 reference.
@@ -177,6 +184,9 @@ The owner subsequently authorized a separate
 [instruction-activation and stronger-GCAD follow-up](docs/qwen38_sarcasm_followup_execution.md).
 It is complete: strengths 8/16 induce strong sarcasm on fresh questions, but
 coherence fails the registered gates. The original null remains its own result.
+The [experimental tunable controls package](docs/qwen38_sarcasm_release.md) is now
+public at a pinned revision, with anonymous controls download and exact isolated
+GPU replay verification. No additional Qwen3.8 model or judge run is scheduled.
 Report each intervention against its own baseline.
 ARA, broad parameter sweeps, joint-controller retuning and production deployment
 are deferred.
@@ -205,7 +215,7 @@ adding runs, results, model assets or releases.
 | [scripts/](scripts/README.md) | Runnable entry points, shared modules and historical runbooks. |
 | [configs/](configs/README.md) / [evaluation/](evaluation/README.md) | Pinned experiment settings, scoring code, prompts and rubrics. |
 | [results/](results/README.md) | Compact outcomes, registered protocol bindings, reviews and publication receipts. |
-| [releases/](releases/README.md) | Nine current HF card mirrors, a release catalog and historical metadata; model weights are not stored here. |
+| [releases/](releases/README.md) | Ten current HF card mirrors, a release catalog and historical metadata; model weights are not stored here. |
 | `artifacts/`, `outputs/`, `.hf/` | Ignored local models/release payloads, raw run evidence and download caches. |
 | `data/` | Mostly ignored corpora; selected small steering fixtures and license records remain tracked. |
 | [tests/](tests/conftest.py), `requirements*.txt` | Portable CPU checks plus opt-in research checks, and separate environment profiles. |

@@ -50,7 +50,7 @@ remains historical context.
 
 The [27B theory and tuning guide](qwen38_sarcasm_gcad_guide.md) explains the
 hybrid-model native output gate, the separate GCAD gate, user-adjustable
-strength and measured finite-precision shifts. Its [HF card draft](qwen38_sarcasm_hf_card_draft.md)
+strength and measured finite-precision shifts. Its [published package and usage guide](qwen38_sarcasm_release.md)
 keeps the release-facing explanation short.
 
 ## What GCAD changes

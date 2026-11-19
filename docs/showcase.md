@@ -85,6 +85,11 @@ A separately registered [instruction-activation and stronger-GCAD experiment](qw
 
 No strength passes all gates: b8 misses the baseline-minus-20 coherence threshold, and b16 also misses the absolute threshold. The [canonical result](../results/qwen38_sarcasm_followup_01.json) is an exploratory quality-gate null, with no independent final evaluation. This result demonstrates trait movement, not a validated controller. All answers reached the 160-token cap, and impoliteness rose with sarcasm.
 
+The [tunable experimental package](qwen38_sarcasm_release.md) is now published,
+with exact local/public isolated GPU replay verification. It ships a bank and
+runtime referencing the existing NF4 base, with strength 0–16 and an owner-chosen
+demonstration default of 8; no quality-preserving controller is validated.
+
 CV wording: “Instrumented GCAD shift telemetry and fixed-token activation replay on a hybrid 27B NF4 model; measured an exploratory sarcasm/coherence tradeoff under frozen gates and random-direction controls.”
 
 ## Refusal reduction and answer quality

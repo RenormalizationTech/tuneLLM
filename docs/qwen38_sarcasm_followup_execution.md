@@ -6,7 +6,7 @@ The [authoritative analysis](../results/qwen38_sarcasm_followup_01.json), [indep
 
 For practical strength controls and the model-specific equations, see the
 [theory and tuning guide](qwen38_sarcasm_gcad_guide.md) and the
-[HF card draft](qwen38_sarcasm_hf_card_draft.md).
+[published package and user guide](qwen38_sarcasm_release.md).
 
 ## Stronger GCAD: behaviour and quality
 

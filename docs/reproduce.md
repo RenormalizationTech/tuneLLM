@@ -209,3 +209,23 @@ outputs/public-polish-01/plot-env/bin/python scripts/plot_qwen38_sarcasm_followu
 ```
 
 Existing figure files are preserved; choose a fresh output prefix. Neither reproduction command trains or changes model weights.
+
+
+## Published tunable 27B controls
+
+The [pinned usage guide](qwen38_sarcasm_release.md) contains the exact HF controls
+revision, base revision, manifest digest and standalone CLI/Python examples.
+Consumer inference needs the downloaded controls and base, not a GitHub checkout
+or the private research journals. Use `--strength 0` to turn hooks off, 8 for the
+experimental demonstration, or 16 for the extreme preset; intermediate values
+are configurable but untested.
+
+The 53 release CPU tests include tiny-model parity and scratch staging. Their
+staging/bank cases require retained local bank, provenance and upstream licence
+assets in the isolated NF4 environment; they are opt-in research checks, not the
+default portable profile. The separate GPU verifier compares against retained
+study trajectories and is a maintainer conformance check. Users should run the
+published `runtime.example` entry point. It performs no implicit download.
+The [public verification record](../results/qwen38_sarcasm_public_verification_01.json)
+links the two passing isolated GPU receipts. No new judge or quality run was made
+for release verification.

@@ -23,3 +23,7 @@ prospective registration covers the complete launcher.
 Existing configurations may be hash-bound by protocols. Keep them in place and
 write a new config for a new experiment. Use the [current roadmap](../docs/project_tracks.md)
 to distinguish selected future work from closed studies.
+
+
+Consumer tuning uses `--strength` in the [published 27B controls runtime](../docs/qwen38_sarcasm_release.md).
+It does not require editing any frozen study configuration or refitting the bank.

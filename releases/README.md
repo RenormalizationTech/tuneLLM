@@ -1,6 +1,6 @@
 # Published artifacts and local storage
 
-Checked 2026-11-18 UTC. Nine HF packages are public. This directory holds their
+Checked 2026-11-19 UTC. Ten HF packages are public. This directory holds their
 **card mirrors and selected historical metadata**, not model weights.
 [catalog.json](catalog.json) records exact revisions, card hashes, payload paths,
 result records and publication receipts.
@@ -18,10 +18,13 @@ result records and publication receipts.
 | [27B GGUF](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF) | [README](Qwen3.8-27B-tuneLLM-GGUF/README.md) | [`b4351e7d6f521b71cb3842116cdff3cae00d7317`](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF/tree/b4351e7d6f521b71cb3842116cdff3cae00d7317) |
 | [27B PRL abstract QLoRA](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA) | [README](Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/README.md) | [`3bb77b924555bdcc9f92b9c4aa6cf32d63340fbc`](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/tree/3bb77b924555bdcc9f92b9c4aa6cf32d63340fbc) |
 | [27B QASPER QLoRA](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA) | [README](Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md) | [`95359154d2b9d94914977462e559c409c1f549c6`](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/tree/95359154d2b9d94914977462e559c409c1f549c6) |
+| [27B sarcasm GCAD controls](https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls) | [README](qwen38-27b-sarcasm-gcad-controls/README.md) | [`877e4b51e654e7410f792858e93fee6727d48646`](https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls/tree/877e4b51e654e7410f792858e93fee6727d48646) |
 
-The 27B entries include anonymous full-file download verification and GPU reload checks.
+The four 27B base/adapter entries include anonymous full-file download verification and GPU reload checks.
 Their catalog entries distinguish the tested model commit from the later metadata-only
 verification commit; runtime file hashes are unchanged.
+
+The separately released [27B sarcasm controls](../docs/qwen38_sarcasm_release.md) are an experimental bank/runtime package with strength 0–16 and an owner-chosen demonstration default of 8. No strength passed all registered quality gates. The new controls were downloaded anonymously and passed an isolated/offline GPU replay against the staged package. The base was re-hashed from its pinned-revision cache, whose anonymous full download was recorded on 2026-11-17; it was not freshly transferred for this check. [Public verification](../results/qwen38_sarcasm_public_verification_01.json) binds the exact revision, inventory and matching replay receipts.
 
 ## What lives where
 

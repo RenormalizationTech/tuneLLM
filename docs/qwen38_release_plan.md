@@ -1,10 +1,19 @@
 # Qwen3.8 27B evaluation and release plan
 
-Updated 2026-11-18. The selected work is an evaluated NF4 base, one additional
+Updated 2026-11-19. The selected work is an evaluated NF4 base, one additional
 **Q4_K_M GGUF**, and **two separate QLoRA adapters**: QASPER paper question
 answering with evidence, and PRL-associated physics paper body to grounded
 abstract. Both adapters start independently from the same unadapted NF4 base.
 They are not mixed or trained sequentially onto each other.
+
+
+**Qwen3.8 closeout:** all five planned packages are public: the NF4 and Q4_K_M
+bases, independent QASPER/PRL adapters, and the separately registered
+[experimental tunable sarcasm controls](qwen38_sarcasm_release.md). The latter
+passed exact isolated GPU conformance after anonymous controls download; its
+base was re-hashed from the earlier pinned anonymous-download cache. This
+publication does not upgrade either sarcasm study's null or the PRL quality
+failure. No additional model, retuning or judge run is scheduled.
 
 The owner selected these formats and tasks, including the grounded-abstract
 objective. This is the implementation plan, not an immutable run registration.

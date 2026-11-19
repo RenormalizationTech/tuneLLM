@@ -4,11 +4,11 @@ GCAD changes activations during inference while leaving the base model weights f
 
 The registered outcome is `exploratory_null_through_b16`: no strength passed every trait/quality gate. The owner-selected strength 8 is an experimental demonstration default, not a validated balanced setting.
 
-This guide connects the [general trait-steering theory](trait_foundations.md#gcad-starts-from-the-attention-writer), the [27B implementation](../scripts/qwen38_gcad_port.py) and the [completed activation/strength experiment](qwen38_sarcasm_followup_execution.md). A separate [HF card draft](qwen38_sarcasm_hf_card_draft.md) gives the shorter user-facing explanation. That card is a documentation draft; a standalone 27B controls package has not been published.
+This guide connects the [general trait-steering theory](trait_foundations.md#gcad-starts-from-the-attention-writer), the [27B implementation](../scripts/qwen38_gcad_port.py) and the [completed activation/strength experiment](qwen38_sarcasm_followup_execution.md). The [published package and usage guide](qwen38_sarcasm_release.md) gives the shorter user-facing explanation and pinned download commands. The original [HF card draft](qwen38_sarcasm_hf_card_draft.md) is retained unchanged as a historical staging input.
 
-## What users would tune
+## What users tune
 
-The existing research hook takes `base_coef`, denoted \(b\) below. The release-facing control should expose that same nonnegative strength, fixed for a generation, and retain an explicit off setting. It is a steering amplitude, not a probability of sarcasm, a score out of 100 or a temperature.
+The existing research hook takes `base_coef`, denoted \(b\) below. The published CLI exposes that same nonnegative strength through `--strength`, fixed for a generation, with an explicit off setting. It is a steering amplitude, not a probability of sarcasm, a score out of 100 or a temperature.
 
 | Setting | Measured behaviour on fresh32 | Interpretation for a release |
 | --- | --- | --- |
@@ -127,6 +127,6 @@ Sarcasm can be coherent, helpful and on-topic. Our coherence rubric asks whether
 
 The observed tradeoff is sharper than a generic claim that sarcasm lowers coherence: strength 8 produces strong judged sarcasm but misses the relative-coherence rule by 5.34 points; at 16, 30/32 answers have coherence below 50. Impoliteness also increases. The experiment does not show that incoherence or impoliteness is necessary for sarcasm, or that the old low-strength null was caused solely by dose.
 
-The full [HF card draft](qwen38_sarcasm_hf_card_draft.md#adjusting-sarcasm-strength) includes per-arm impoliteness, counts below coherence 50 and gate results. All fresh answers were capped at 160 tokens. The steered arms used single-turn English questions, no system prompt, greedy decoding with repetition penalty 1.05, batch one and native KV caching. Other languages, added system prompts, multi-turn chats, sampling and longer answers are untested. The profile is exploratory, NF4-only and based on 32 questions on one GPU/software stack, without an independent final set. See the [canonical result](../results/qwen38_sarcasm_followup_01.json), [independent review](../results/reviews/qwen38_sarcasm_followup_review_06.md) and [plot](assets/qwen38_sarcasm_followup.svg) for the complete evidence.
+The full [published HF card](../releases/qwen38-27b-sarcasm-gcad-controls/README.md) includes per-arm impoliteness, counts below coherence 50 and gate results. All fresh answers were capped at 160 tokens. The steered arms used single-turn English questions, no system prompt, greedy decoding with repetition penalty 1.05, batch one and native KV caching. Other languages, added system prompts, multi-turn chats, sampling and longer answers are untested. The profile is exploratory, NF4-only and based on 32 questions on one GPU/software stack, without an independent final set. See the [canonical result](../results/qwen38_sarcasm_followup_01.json), [independent review](../results/reviews/qwen38_sarcasm_followup_review_06.md) and [plot](assets/qwen38_sarcasm_followup.svg) for the complete evidence.
 
 The method derives from the pinned GCAD implementation; the [port notice](../scripts/qwen38_gcad_port_NOTICE) and [license](../scripts/qwen3_gcad_port_LICENSE) retain attribution. The [general GCAD discussion](gcad_and_combined_control.md) covers other models and combined controls; numeric strengths do not transfer directly between banks or checkpoints.

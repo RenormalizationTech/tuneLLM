@@ -1,0 +1,115 @@
+{
+  "repo_id": "RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+  "url": "https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+  "private": false,
+  "manifest_sha256": "2c3efab74ceee3bb9f3b7fd11d2f2966e066088224376806947e0f52d2805d79",
+  "credentials_recorded": false,
+  "status": "published_remote_hashes_verified",
+  "revision": "877e4b51e654e7410f792858e93fee6727d48646",
+  "commit_url": "https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls/commit/877e4b51e654e7410f792858e93fee6727d48646",
+  "verified_at_utc": "2026-11-19T19:49:04.224718+00:00",
+  "files": {
+    "BASE_LICENSE": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "METHODS.md": {
+      "bytes": 1251,
+      "sha256": "54ade8c0e9ac0d19649be0b8b5388480d122f4469419e11718c0f73e5a9fe7f1",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "README.md": {
+      "bytes": 9347,
+      "sha256": "73fd5055b1fbbd894131a37d5313913320020a593f71866b6f8ecf7f3c9c37e8",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "bank.safetensors": {
+      "bytes": 148752,
+      "sha256": "4fd9f86bac07cd858c8f4177ce0e9f1095d30d105f0179713c78da671ab545de",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "environment.lock.json": {
+      "bytes": 493,
+      "sha256": "ca72a2be9bc471b3e045f0e30d940ac95f2ca08d20763be766c17ac4ea658034",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "evaluation.json": {
+      "bytes": 313077,
+      "sha256": "7ff73be1164d83e3aa8b9b1fbbb387f85a27a353f683c9737d6198c53d68db1a",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "metrics.csv": {
+      "bytes": 404,
+      "sha256": "cdf856a805fb4adb15ee0f79916009d78a44364ba037de3fcabcc2243a4f6210",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "qwen38_gcad_port_NOTICE": {
+      "bytes": 1192,
+      "sha256": "e123901ca8c77d49073ef66bb6e40cfac43264a88ceac1bb897d277c36f861d1",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "qwen3_gcad_port_LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "qwen3_gcad_port_NOTICE": {
+      "bytes": 863,
+      "sha256": "49e5dfe41e0d2ceca9ec85d692b77451b4f68d708d22b00e83a08a1368c3b8ef",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "release_manifest.json": {
+      "bytes": 5156,
+      "sha256": "cfaacd0efa5a7b22a40fab5305217ee2c642b46ba230a2eb8259d5a28639e54b",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "requirements.txt": {
+      "bytes": 351,
+      "sha256": "9720a07a328e33310865705ae0dbc6770d5fc0bc3d3b93480ebb58e785d7db79",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/__init__.py": {
+      "bytes": 226,
+      "sha256": "52ef7e279a50a0e016ad31790ecf06e08dde054683c90f455b5ab2ebe798e82c",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/example.py": {
+      "bytes": 1399,
+      "sha256": "7e8a20a18111008093d05cf3ee545d0f8b71520e4d4b8a816b75c557b57cbaf7",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/gcad.py": {
+      "bytes": 10323,
+      "sha256": "3d76d8147ffbe6f802b285d643b4363e09349f0dd14a5f6a2924545b5966abe3",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/loader.py": {
+      "bytes": 14865,
+      "sha256": "49cfb352004dd95688c0f1ec5d94a98f2c540c813f3e233eea51a8b8c194cb57",
+      "method": "revision-pinned downloaded SHA256"
+    }
+  },
+  "additional_remote_files": [
+    ".gitattributes"
+  ],
+  "card_metadata": {
+    "base_model": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+    "library_name": "pytorch",
+    "license": "apache-2.0",
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "gcad",
+      "steering",
+      "sarcasm",
+      "experimental",
+      "nf4"
+    ]
+  },
+  "load_check": "separate pinned-download runtime verification required"
+}

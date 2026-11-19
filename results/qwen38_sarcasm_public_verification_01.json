@@ -1,0 +1,129 @@
+{
+  "status": "published_and_verified",
+  "verified_at_utc": "2026-11-19T19:58:10.315452+00:00",
+  "repo_id": "RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+  "revision": "877e4b51e654e7410f792858e93fee6727d48646",
+  "gpu_verified_revision": "877e4b51e654e7410f792858e93fee6727d48646",
+  "url": "https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+  "private": false,
+  "anonymous_pinned_download_verified": true,
+  "controls_snapshot_fresh": true,
+  "base_snapshot_cache_reused": true,
+  "base_cache_provenance": "Pinned-revision cache; anonymous full base download recorded 2026-11-17. All 17 cached base files re-hashed in this verification; no fresh 17GB network transfer claimed.",
+  "base_repo": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+  "base_revision": "586bb02218d196f485c321bbde3348677c63fc6a",
+  "base_previous_anonymous_verification": "results/qwen38_nf4_public_verification_01.json",
+  "base_previous_download_record_sha256": "9f955de8b3b0a9ab0f688f93a0bd90579d26351e3784aca85ea13930de311127",
+  "base_runtime_files_match_study": true,
+  "release_manifest_sha256": "cfaacd0efa5a7b22a40fab5305217ee2c642b46ba230a2eb8259d5a28639e54b",
+  "publication_manifest_sha256": "2c3efab74ceee3bb9f3b7fd11d2f2966e066088224376806947e0f52d2805d79",
+  "publication_receipt_sha256": "5b68c8276f67c62170b65bf6149862c9c23837c24e59bda3a72b49414b6d6996",
+  "download_record_sha256": "936935850bb38233c4a0465e2aa65e3b54c64022d96695eef95293270389a86f",
+  "commit_message_manifest_hash_verified": true,
+  "runtime_files_unchanged": true,
+  "runtime_match_basis": "All 17 staged publication files equal public/downloaded bytes; Hub-managed .gitattributes is the only extra.",
+  "public_local_mechanics_equal": true,
+  "local_GPU_receipt": "results/qwen38_sarcasm_release_local_smoke_02.json",
+  "local_GPU_receipt_sha256": "c9173dbe423cad38d8fe63cc1134ba457175563c350947ba584f85a6346c25e9",
+  "public_GPU_receipt": "results/qwen38_sarcasm_release_public_smoke_01.json",
+  "public_GPU_receipt_sha256": "e0605f35d7c714aed3907beed53080e803ce28b1fefe7d6d761c90c3c842b4f6",
+  "frozen_port_sha256": "3d76d8147ffbe6f802b285d643b4363e09349f0dd14a5f6a2924545b5966abe3",
+  "canonical_result_sha256": "61362b38ecb32581b58adb6f5e5caaaec7f16598d985ef1b834568210ca081ad",
+  "verifier_sha256": "0e9eeade5705a34429b7358009de043ad61fe8a9ff11bbac43638de838ab69bc",
+  "source_GitHub_commit": "a4180a1b84053c1f0b385fafadd30e676b2f6b3e",
+  "new_quality_or_judge_calls": 0,
+  "CPU_release_tests": 53,
+  "portable_regression_tests": 397,
+  "GPU_process_seconds": {
+    "local": 238.63437744881958,
+    "public": 239.76023353636265
+  },
+  "verification_scope": "Fresh isolated/offline process outside project; two probes at 0/8/16, exact logits/tokens against frozen hook, cleanup and three saved160-token replays. Mechanical conformance only, not new quality evidence.",
+  "old_outcomes_unchanged": [
+    "development_null",
+    "exploratory_null_through_b16"
+  ],
+  "independent_release_reviews_sha256": {
+    "results/reviews/qwen38_sarcasm_release_review_01.md": "e01529fbe1ff70fbf104e71349d43b3921e930fdcf3c0a79c55bfb26e53fca3c",
+    "results/reviews/qwen38_sarcasm_release_review_02.md": "90dbf37bd07bc3ded06c63e0fe51e3d6d000fe9d1e098221a6c3c456a4e6bed5",
+    "results/reviews/qwen38_sarcasm_release_review_03.md": "59030cd0408fed595425795b23707b28b21a3f6b61308ed5b2c8c5cc4c3c72e7",
+    "results/reviews/qwen38_sarcasm_release_review_04.md": "4ff3ddf6f31d1976b18f6bfc4e9969854371fb9ef9da299fb15f97230b8e04ad",
+    "results/reviews/qwen38_sarcasm_release_review_05.md": "ab5e376e9e93b64abdc98d494058e2c7a1e5887cb3cfaa4fa9c8b02dcbadc56d"
+  },
+  "files": {
+    ".gitattributes": {
+      "bytes": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+    },
+    "BASE_LICENSE": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    "LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "METHODS.md": {
+      "bytes": 1251,
+      "sha256": "54ade8c0e9ac0d19649be0b8b5388480d122f4469419e11718c0f73e5a9fe7f1"
+    },
+    "README.md": {
+      "bytes": 9347,
+      "sha256": "73fd5055b1fbbd894131a37d5313913320020a593f71866b6f8ecf7f3c9c37e8"
+    },
+    "bank.safetensors": {
+      "bytes": 148752,
+      "sha256": "4fd9f86bac07cd858c8f4177ce0e9f1095d30d105f0179713c78da671ab545de"
+    },
+    "environment.lock.json": {
+      "bytes": 493,
+      "sha256": "ca72a2be9bc471b3e045f0e30d940ac95f2ca08d20763be766c17ac4ea658034"
+    },
+    "evaluation.json": {
+      "bytes": 313077,
+      "sha256": "7ff73be1164d83e3aa8b9b1fbbb387f85a27a353f683c9737d6198c53d68db1a"
+    },
+    "metrics.csv": {
+      "bytes": 404,
+      "sha256": "cdf856a805fb4adb15ee0f79916009d78a44364ba037de3fcabcc2243a4f6210"
+    },
+    "qwen38_gcad_port_NOTICE": {
+      "bytes": 1192,
+      "sha256": "e123901ca8c77d49073ef66bb6e40cfac43264a88ceac1bb897d277c36f861d1"
+    },
+    "qwen3_gcad_port_LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "qwen3_gcad_port_NOTICE": {
+      "bytes": 863,
+      "sha256": "49e5dfe41e0d2ceca9ec85d692b77451b4f68d708d22b00e83a08a1368c3b8ef"
+    },
+    "release_manifest.json": {
+      "bytes": 5156,
+      "sha256": "cfaacd0efa5a7b22a40fab5305217ee2c642b46ba230a2eb8259d5a28639e54b"
+    },
+    "requirements.txt": {
+      "bytes": 351,
+      "sha256": "9720a07a328e33310865705ae0dbc6770d5fc0bc3d3b93480ebb58e785d7db79"
+    },
+    "runtime/__init__.py": {
+      "bytes": 226,
+      "sha256": "52ef7e279a50a0e016ad31790ecf06e08dde054683c90f455b5ab2ebe798e82c"
+    },
+    "runtime/example.py": {
+      "bytes": 1399,
+      "sha256": "7e8a20a18111008093d05cf3ee545d0f8b71520e4d4b8a816b75c557b57cbaf7"
+    },
+    "runtime/gcad.py": {
+      "bytes": 10323,
+      "sha256": "3d76d8147ffbe6f802b285d643b4363e09349f0dd14a5f6a2924545b5966abe3"
+    },
+    "runtime/loader.py": {
+      "bytes": 14865,
+      "sha256": "49cfb352004dd95688c0f1ec5d94a98f2c540c813f3e233eea51a8b8c194cb57"
+    }
+  },
+  "published_file_count": 18,
+  "published_inventory_sha256": "b9803f63137e25c1fe933f1cb40e084ce366f30784c4abb2518f192eea0b8b90"
+}

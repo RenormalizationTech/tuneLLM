@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-11-18T05:14:21.448593+00:00",
+  "checked_at_utc": "2026-11-19T19:58:10.315452+00:00",
   "scope": "Current publication index, not an upload or model-quality certificate",
   "storage": {
     "tracked": "Card mirrors and selected historical metadata under releases/",
@@ -164,6 +164,23 @@
       "verification_receipt": "results/qwen38_qasper_public_verification_01.json",
       "result_path": "results/qwen38_qasper_final_01.json",
       "publication_receipt": "results/qwen38_qasper_huggingface_publication.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "27B sarcasm GCAD controls (experimental)",
+      "repo_id": "RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+      "status": "public",
+      "revision": "877e4b51e654e7410f792858e93fee6727d48646",
+      "gpu_verified_revision": "877e4b51e654e7410f792858e93fee6727d48646",
+      "url": "https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+      "card_path": "releases/qwen38-27b-sarcasm-gcad-controls/README.md",
+      "card_sha256": "73fd5055b1fbbd894131a37d5313913320020a593f71866b6f8ecf7f3c9c37e8",
+      "local_payload_path": "artifacts/releases/qwen38-27b-sarcasm-gcad-controls",
+      "published_file_count": 18,
+      "published_inventory_sha256": "b9803f63137e25c1fe933f1cb40e084ce366f30784c4abb2518f192eea0b8b90",
+      "verification_receipt": "results/qwen38_sarcasm_public_verification_01.json",
+      "result_path": "results/qwen38_sarcasm_followup_01.json",
+      "publication_receipt": "results/qwen38_sarcasm_huggingface_publication_01.json",
       "historical_metadata_paths": []
     }
   ],
