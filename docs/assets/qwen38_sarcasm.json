@@ -1,0 +1,14 @@
+{
+  "source_analysis": "results/qwen38_sarcasm_01.json",
+  "analysis_sha256": "00b155e602142e95c9bb08d2e787105b1305f9f490a9dbc6e43900f74e4e01aa",
+  "plot_script": "scripts/plot_qwen38_sarcasm_analysis.py",
+  "plot_script_sha256": "4a423ef2dc92b20010230d97e6aedb62bd5394db9950c85c75ee0436f8f32cf1",
+  "raw_figure_receipt": "outputs/qwen38-sarcasm-pm-01/figure-01/receipt.json",
+  "raw_figure_receipt_sha256": "da21f27ea5e822289d106c1d213d43ae74a74096a25a9e0a1a917cba6ed973d0",
+  "stage": "development32; no final evaluation",
+  "figures": {
+    "docs/assets/qwen38_sarcasm.svg": "1cfde8bdf33c6da61db05e1aba68757d228dc9c5271569b1d1bf0589dcbf9271",
+    "docs/assets/qwen38_sarcasm.png": "06858643d0d84928ac27fffcb1003bdf0d3f5f1dd6150ef4981da1feeb1046ae"
+  },
+  "interpretation": "AI-judge point estimates; registered full32 gates remain authoritative; plotted thresholds are mean references only."
+}

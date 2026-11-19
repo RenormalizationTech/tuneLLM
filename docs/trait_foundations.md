@@ -163,8 +163,11 @@ not a result established by our trait evaluations.
 **Numerical illustration.** For \(b=2,s=1.5\), mean demand gives \(c=2\).
 A demand difference \(+1\) gives \(c\approx3.270\);
 a difference \(-1\) gives \(c\approx0.730\).
-The actual displacement is \(c\|\Delta_\ell\|_2\). Equal \(b\) values do not
-match the strength of banks with different delta norms.
+The algebraic requested displacement has norm \(c\|\Delta_\ell\|_2\).
+Model-dtype rounding can make the realised output difference differ from this
+value. Equal \(b\) values do not match the strength of banks with different delta
+norms. The [27B port guide](qwen38_sarcasm_gcad_guide.md#nominal-strength-versus-realised-shift)
+defines the separately measured requested and actual norms.
 
 The precise gate, GQA mapping and insertion site are implementation-specific;
 see the

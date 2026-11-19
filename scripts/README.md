@@ -14,6 +14,9 @@ environment for every study.
 | 27B NF4 loading smoke | `qwen38_nf4_smoke.py --inspect`; [separate environment](../docs/reproduce.md#separate-qwen38-27b-nf4-environment) |
 | 27B quantization and independent adapters | `qwen38_quant_screen.py`, `qwen38_train_science.py`, `qwen38_eval_science.py`, `qwen38_retention.py`; [completed workflows](../docs/reproduce.md#completed-27b-quantization-and-qlora-workflows) |
 | 27B analysis and publication evidence | `qwen38_qasper_analysis.py`, `qwen38_prl_diagnostics.py`, `qwen38_stage_base.py`, `qwen38_stage_adapter.py`, `qwen38_verify_public.py`, `qwen38_publish_verification.py`, `qwen38_sync_catalog.py`; [closeout report](../results/qwen38_science_summary_01.json) |
+| 27B sarcasm study | `qwen38_gcad_port.py`, `qwen38_sarcasm.py`, `qwen38_sarcasm_judge.py`; [registered execution](../docs/qwen38_sarcasm_execution.md). Model/judge stages require exact phase approvals. |
+| 27B sarcasm closeout and figure | `qwen38_sarcasm_analyze.py`, `plot_qwen38_sarcasm_analysis.py`; separate registered offline analysis and optional figure environment. |
+| 27B sarcasm follow-up | `qwen38_sarcasm_followup.py`, `qwen38_sarcasm_followup_telemetry.py`, `qwen38_sarcasm_followup_analyze.py`, `plot_qwen38_sarcasm_followup.py`; [completed one-launch experiment](../docs/qwen38_sarcasm_followup_execution.md). |
 | Portfolio figure | `plot_portfolio_results.py`; saved inputs in `docs/assets/` |
 | Website | `docs_hooks.py`, `check_docs_site.py`; [build guide](../docs/website.md) |
 | Release preparation | `stage_*release.py`, `publish_release.py`; [release index](../releases/README.md) |

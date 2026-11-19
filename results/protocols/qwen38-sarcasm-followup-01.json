@@ -1,0 +1,61 @@
+{
+  "study": "qwen38-sarcasm-followup-01",
+  "registered_at_utc": "2026-11-19T16:35:30.772683+00:00",
+  "authorization": "Owner requests comparison of explicit sarcasm instruction activations and stronger GCAD; GPU experiments and isolated judging authorized. PM performs prospective scientific registration without additional per-stage owner approvals.",
+  "manifest_sha256": "87d1d0e6fb925b3607403e54502f0f462a6ec5453bf4b96411d49f101e468bf3",
+  "launcher_sha256": "c3795e27cdeb4c9f6f304987af9918d9916bc14655ef27db6706a34d14b3f9a3",
+  "algorithm": "preflight,audit,mechanics,PartA,PartB,judging,analysis",
+  "gpu_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "bound_source_and_fixture_sha256": {
+    "scripts/qwen38_sarcasm_followup.py": "c3795e27cdeb4c9f6f304987af9918d9916bc14655ef27db6706a34d14b3f9a3",
+    "scripts/qwen38_sarcasm_followup_telemetry.py": "de4e6c71c114465829d1337d509eb26a546c48d8d00554ef70a18e97aafc5710",
+    "scripts/qwen38_sarcasm_followup_analyze.py": "8e13912b3434783d88a4fe13a8d798c157b78b3b0f101d9e4da8044396d143e8",
+    "tests/test_qwen38_sarcasm_followup.py": "724e166fb3d25d1e1ee6acb19eb6fc8fc8fc47edee0ed6ee5662bacf8e6b0747",
+    "tests/test_qwen38_sarcasm_followup_pipeline.py": "6adb2f7f6738437c52653270b685ef82095724f58a8ef61c81e8ec1d40b8072b",
+    "configs/qwen38_sarcasm_followup.json": "7c19636c449f2071cf0ec9bf76ee5e1f73a5b86b849e85effc7fa62db59e16a2",
+    "docs/qwen38_sarcasm_followup_plan.md": "329705d2d1ce5a6a18887f559fdeafe9774c15a5fae1a9bd3e45963f4d153f40",
+    "evaluation/qwen38_sarcasm_followup/development.json": "3da540a3f0e73bf67e1e7dbaf31638c7b2f240ba29a8ec3a9565e5f1072add4b"
+  },
+  "reviews_sha256": {
+    "results/reviews/qwen38_sarcasm_followup_review_01.md": "a7251e36ad0608a2bc73c5439963fbdc8fcea3478cb4ed9685a948c461292d1f",
+    "results/reviews/qwen38_sarcasm_followup_review_02.md": "d9f550f7bb9c8312712e22dafb39bd1c1bb21e589e0aa7d734d9b2965eb3f7da",
+    "results/reviews/qwen38_sarcasm_followup_review_03.md": "c6cd187cdde0ad9a9fba19b0b9f08269017ef57134d89d03fdb9a2edc7ebc3e7"
+  },
+  "old_outcome": {
+    "path": "results/qwen38_sarcasm_01.json",
+    "sha256": "00b155e602142e95c9bb08d2e787105b1305f9f490a9dbc6e43900f74e4e01aa",
+    "unchanged": "development_null"
+  },
+  "limits": {
+    "maximum_gpu_utilization_percent": 10,
+    "maximum_sequence_tokens": 2048,
+    "maximum_generations": 232,
+    "maximum_generated_tokens": 36096,
+    "maximum_teacher_forced": 194,
+    "maximum_logit_forwards": 5,
+    "maximum_judge_starts": 169,
+    "maximum_judge_batches": 84,
+    "max_gpu_seconds": 14400,
+    "max_wall_seconds": 43200,
+    "maximum_activation_bytes": 2147483648
+  },
+  "scope": "Part A post-hoc observational; Part B fresh exploratory development, no independent final or validated-controller claim",
+  "arms": [
+    "baseline",
+    "prompted",
+    "b2",
+    "b4",
+    "b8",
+    "b16",
+    "random16"
+  ],
+  "strengths": [
+    2,
+    4,
+    8,
+    16
+  ],
+  "authoritative_closeout": "results/qwen38_sarcasm_followup_01.json",
+  "failure_policy": "Deterministic implementation failure preserves evidence and stops; no quality-driven changes or retries. Scientific conclusions use complete registered outputs only.",
+  "source_frozen": true
+}

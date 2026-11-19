@@ -1,0 +1,60 @@
+{
+  "recorded_at_utc": "2026-11-18T20:34:27.510142+00:00",
+  "purpose": "Timing answer requested by owner when resuming 27B sarcasm",
+  "source": "results/qwen38_science_summary_01.json",
+  "units": "GPU-hours: device count multiplied by elapsed hours; not total project wall time",
+  "qasper": {
+    "training_gpu_hours": 5.113883488234391,
+    "evaluation_gpu_hours": 10.558573927464183,
+    "total_gpu_hours": 15.672457415698574
+  },
+  "prl": {
+    "training_gpu_hours": 2.2579711060761474,
+    "evaluation_gpu_hours": 4.522699677688005,
+    "total_gpu_hours": 6.780670783764152
+  },
+  "quantization_comparison_gpu_hours": 1.8088126427166733,
+  "shared_mechanics_gpu_hours": 0.17985950193445507,
+  "accounted_total_gpu_hours": 24.441800344113854,
+  "limitations": [
+    "Evaluation pool accounting includes development, final, retention and transfer work, with shared base retention apportioned between adapters.",
+    "Pools do not establish full calendar time including implementation, audit, judge latency, downloads, CPU builds, hashing and publication.",
+    "Some runs overlapped across two A6000 GPUs."
+  ],
+  "gguf_build_wall_seconds": {
+    "bf16_conversion": 220.38162759924307,
+    "q4_quantization": 139.03790906490758,
+    "total_job_including_checks_and_hashes": 445.5682145329192,
+    "source": "outputs/qwen38-27b-gguf-01/result.json"
+  },
+  "nf4_creation_smoke_wall_seconds": {
+    "successful_attempt_including_save_and_fresh_process_reload": 85.3403473328799,
+    "initial_quantizing_model_load": 16.16564535489306,
+    "source": "results/qwen38_27b_nf4_smoke_02.json",
+    "outcome": "complete_with_cache_difference",
+    "scope": "Cached-source successful functional creation/save/reload smoke only. Excludes download, environment setup and earlier failed attempts; strict cache equivalence remained failed.",
+    "outside_science_closeout_GPU_ledger": true
+  },
+  "quantization_screen_run_timings": {
+    "source": "results/qwen38_27b_quantization_screen_01.json",
+    "arms": {
+      "nf4": {
+        "elapsed_seconds": 3162.106754423119,
+        "gpu_count": 1,
+        "gpu_hours": 0.8783629873397553
+      },
+      "q4": {
+        "elapsed_seconds": 633.1968654622324,
+        "gpu_count": 1,
+        "gpu_hours": 0.17588801818395344
+      },
+      "bf16_gguf": {
+        "elapsed_seconds": 1358.2109469473362,
+        "gpu_count": 2,
+        "gpu_hours": 0.7545616371929645
+      }
+    },
+    "sum_of_run_wall_seconds": 5153.514566832688,
+    "interpretation": "Sum of individual run wall times; not calendar completion time if runs overlapped. BF16-GGUF used two GPUs, so its GPU-hours are twice its run wall hours."
+  }
+}

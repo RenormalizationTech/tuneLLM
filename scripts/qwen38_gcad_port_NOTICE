@@ -1,0 +1,21 @@
+Qwen3.8 GCAD adaptation — NOTICE
+
+Derived from the project's Qwen3 GCAD port and the methods/components of
+NihiI-obstat/Gated-Cropped-Attention-Delta,
+https://github.com/NihiI-obstat/Gated-Cropped-Attention-Delta
+commit 6c879f4d12e2b01274fc96c9afdb0f4f3a26d4de:
+ core/generate_vec.py: get_prompt_attn_delta_p_and_r
+ scripts/generate_vec_prompt_attn_k.py: compute_k_pos_and_avg_demand
+ core/gated_steerer.py: MultiLayerGatedSteerer
+
+The upstream source is Apache-2.0; scripts/qwen3_gcad_port_LICENSE preserves
+the license. See scripts/qwen3_gcad_port_NOTICE for the earlier port. No
+standalone upstream NOTICE was supplied in the pinned source archive.
+This is a derived-work attribution, not an upstream NOTICE or endorsement.
+
+Changes for Qwen3.8: interventions limited to hybrid-model full-attention
+blocks; capture native per-head norms and partial rotary position embeddings;
+de-interleave native query/output-gate projections; include the native sigmoid
+gate in cropped system contributions; accumulate response, pair, key and query
+means in FP32; retain raw delta addition after the native output projection.
+New geometry, cleanup and coverage checks accompany the prospective study.

@@ -23,6 +23,18 @@ QASPER positive fixed-subset result, PRL experimental negative result and all fo
 verified Hugging Face releases. Original run receipts retain their capture-time
 status; final combined reports and the release catalog describe the closeout.
 
+The separate [27B sarcasm closeout](qwen38_sarcasm_01.json) records a
+development null, with no final run or retained controller. The
+[execution guide](../docs/qwen38_sarcasm_execution.md) links the original
+registration, reporting addendum and independent reviews. The
+[timing summary](qwen38_timing_summary_01.json) separates earlier quantization
+builds, comparisons and adapter training/evaluation.
+
+The separately registered [activation/stronger-GCAD follow-up](qwen38_sarcasm_followup_01.json)
+records strong sarcasm at strengths 8/16, with coherence failures that leave no
+qualifying candidate. Its [execution guide](../docs/qwen38_sarcasm_followup_execution.md)
+links the figure, activation analysis and independent verification.
+
 Older receipts may say private, unpublished or awaiting deployment. They describe
 that receipt's time; [the current release index](../releases/README.md) and
 [current roadmap](../docs/project_tracks.md) describe present status. Do not edit

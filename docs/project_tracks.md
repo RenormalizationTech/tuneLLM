@@ -1,6 +1,6 @@
 # Project status and next steps
 
-Updated 2026-11-18. This is the current roadmap. The
+Updated 2026-11-19. This is the current roadmap. The
 [earlier roadmap](project_tracks_history.md) preserves previous plans and status
 statements; frozen protocols and results retain their original conclusions.
 
@@ -96,9 +96,26 @@ Exact splits, decoding, software, numeric
 gates and resource caps are registered before model runs. A null result is
 acceptable; it does not authorize a sweep.
 
-**Sarcasm steering is deferred at the owner's request to reserve GPU capacity
-for other projects.** It has not started; no new GPU study is scheduled.
-Any future resumption needs a separate decision and registration. The existing
+**The separate 27B sarcasm study is complete (2026-11-19): development null.**
+The owner resumed it on 2026-11-18. The hybrid-architecture port, fresh bank
+and mechanics passed; 90 matched pairs were eligible. On development32,
+baseline/prompted sarcasm was 0.00/69.22, while GCAD coefficients 1/2 scored
+0.00/0.19 and each produced zero scores ≥50. Coherence and invalid-output
+gates passed, but neither strength passed the sarcasm gates. No final evaluation
+ran and no controller is retained. Total: 3.44 GPU-hours. See the
+[execution record](qwen38_sarcasm_execution.md), [closeout](../results/qwen38_sarcasm_01.json)
+and [independent review](../results/reviews/qwen38_sarcasm_implementation_review_10.md).
+The [prospective design](qwen38_sarcasm_plan.md) and original decisions stay frozen.
+Further strengths or layers require a new study and fresh development data.
+The owner authorized that separate follow-up on 2026-11-19. Its
+[new design](qwen38_sarcasm_followup_plan.md) compares no-GCAD instruction
+activations under identical continuation tokens and tests fixed strengths
+2, 4, 8 and 16 on 32 fresh development questions, with a random-direction
+reference at 16. The [follow-up is complete](qwen38_sarcasm_followup_execution.md):
+strengths 8/16 produce strong sarcasm, but neither meets the coherence gates.
+No strength qualifies; the original development null remains unchanged.
+The follow-up used 1.76 GPU-hours and has no independent final-set validation.
+The existing
 [portfolio summary](showcase.md#qwen38-27b-portfolio-summary) provides CV bullets
 and interview wording using completed results.
 
@@ -107,8 +124,10 @@ four public revisions, final outcomes, limitations and settled GPU budgets.
 The repository closeout publishes the source, compact evidence and documentation;
 deployment is checked separately through GitHub Actions and the public site.
 A [scoped cache cleanup](workspace_maintenance.md) is complete; scientific
-evidence remains retained. Current work is CPU-only portfolio and publication
-maintenance. No additional training, inference or judge calls are needed.
+evidence remains retained. The earlier bounded 27B quantization, QLoRA and
+sarcasm studies, including the separately registered instruction-activation
+and stronger-GCAD follow-up, are complete. Current work is portfolio maintenance;
+no additional model or judge run is scheduled.
 
 ## Where to look
 

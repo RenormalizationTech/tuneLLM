@@ -48,6 +48,11 @@ incomplete. A change to evasion-focused research awaits user decision; no
 extension, larger-model execution or joint rescue is released; discussion is allowed. Older planning below
 remains historical context.
 
+The [27B theory and tuning guide](qwen38_sarcasm_gcad_guide.md) explains the
+hybrid-model native output gate, the separate GCAD gate, user-adjustable
+strength and measured finite-precision shifts. Its [HF card draft](qwen38_sarcasm_hf_card_draft.md)
+keeps the release-facing explanation short.
+
 ## What GCAD changes
 
 GCAD means Gated Cropped Attention-Delta. At layer l and token t it adds a

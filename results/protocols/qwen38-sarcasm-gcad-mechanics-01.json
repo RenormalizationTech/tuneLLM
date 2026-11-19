@@ -1,0 +1,13 @@
+{
+  "registered_at_utc": "2026-11-18T22:54:14.493470+00:00",
+  "phase": "R1 pre-extraction mechanics and judge audit accepted",
+  "manifest_sha256": "13254530c6bd5231be528e3e724b7eb064666bcdab767975bb19911b093ac1c4",
+  "synthetic_result_sha256": "1c55497d81e091b7565a98897f76cd47c8fa7104be0f85b19c458a364279c32a",
+  "synthetic_decomposition_sha256": "6cb39e60570c3eab623e8748e67b58c075680a34dedd2b25ac87effcad76b080",
+  "judge_audit_sha256": "eeca9320cab7b642eeeefc0a987ba5d71626dc3b30356197cc606e6d8f33b116",
+  "judge_binding_sha256": "7ec181c3e17b065a0a1613ca699068a6fc87a94a9a3c62a2530284f93f9d4137",
+  "approved_next": "elicitation only: 100 matched pairs, 200 raw generations, cap256; fixed prospective grading plans",
+  "PM_criteria_check": "All registered smoke and judge-isolation criteria passed; no quality judgments or final answers available",
+  "gpu": "0",
+  "source_changes_after_R0": false
+}

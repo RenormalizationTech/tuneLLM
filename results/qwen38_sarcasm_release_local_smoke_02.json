@@ -1,0 +1,108 @@
+{
+  "status": "passed_release_mechanics",
+  "scope": "Mechanical exactness only; no judge or quality evaluation",
+  "release_manifest_sha256": "cfaacd0efa5a7b22a40fab5305217ee2c642b46ba230a2eb8259d5a28639e54b",
+  "frozen_port_sha256": "3d76d8147ffbe6f802b285d643b4363e09349f0dd14a5f6a2924545b5966abe3",
+  "canonical_result_sha256": "61362b38ecb32581b58adb6f5e5caaaec7f16598d985ef1b834568210ca081ad",
+  "saved_generation_aggregate_sha256": "2bf33ce55cae146c2cd3d11bfc2f963fd193e449917589ffd4b075ecb0a83a12",
+  "verifier_sha256": "0e9eeade5705a34429b7358009de043ad61fe8a9ff11bbac43638de838ab69bc",
+  "GPU_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "GPU_name": "NVIDIA RTX A6000",
+  "python_isolated": true,
+  "offline": true,
+  "probe_cap": 32,
+  "study_replay_cap": 160,
+  "probes": [
+    {
+      "probe": 0,
+      "strength": 0,
+      "logits_equal": true,
+      "tokens_equal": true,
+      "finite": true,
+      "suffix_length": 32,
+      "suffix_sha256": "293d7823db78368f2da5a2d0d0224f4c9978fc1f520221df296f09b607a95a16",
+      "logits_sha256": "f654b86a62fe7ab5680b293c6370d31d4f7894efe016063fe3a06ef1dec8f7b4"
+    },
+    {
+      "probe": 0,
+      "strength": 8,
+      "logits_equal": true,
+      "tokens_equal": true,
+      "finite": true,
+      "suffix_length": 32,
+      "suffix_sha256": "d70ac82e336eccadf8d3d1dcab30395a8408b4b40d6adb07a5c4d044492f1c48",
+      "logits_sha256": "7c6e69d8f048ead99312b67420119b57de464c23c93c06da2b668d302f6d218d"
+    },
+    {
+      "probe": 0,
+      "strength": 16,
+      "logits_equal": true,
+      "tokens_equal": true,
+      "finite": true,
+      "suffix_length": 32,
+      "suffix_sha256": "8092419ffb7e28095a1ff51b6fa9736cda8ff98f4f028e9a0e56e8cfb0625110",
+      "logits_sha256": "6efaa65737d48f901e378248013bd1799af945bf43c45c9c8ae84d760963d719"
+    },
+    {
+      "probe": 1,
+      "strength": 0,
+      "logits_equal": true,
+      "tokens_equal": true,
+      "finite": true,
+      "suffix_length": 32,
+      "suffix_sha256": "09c786d405587294d9bdeb1774031a6f6352a82240e644823d46ee1a14c800f6",
+      "logits_sha256": "8e02b706986ef03934820a08bdcad2073a259f24727f819533cf9f06d2db8a3c"
+    },
+    {
+      "probe": 1,
+      "strength": 8,
+      "logits_equal": true,
+      "tokens_equal": true,
+      "finite": true,
+      "suffix_length": 32,
+      "suffix_sha256": "0ca582be37054fd55527a17fb2aefd15779ec79e71b6dc5cf5bf6d8e144252fa",
+      "logits_sha256": "334f973fc3740d5b8347ec20e7776e85815c267fc7277d05db0f013951ae6b2d"
+    },
+    {
+      "probe": 1,
+      "strength": 16,
+      "logits_equal": true,
+      "tokens_equal": true,
+      "finite": true,
+      "suffix_length": 32,
+      "suffix_sha256": "1cefa355aa4b8569be2584adfceaf3712796becbe5d1e8dfae80fcc5cd91acaf",
+      "logits_sha256": "f1dd1375cec6662a6affc7c419bf572bc32750e7d2176915d0b16768afe25fe1"
+    }
+  ],
+  "saved_trajectory_replays": [
+    {
+      "id": "F01_baseline",
+      "strength": 0,
+      "tokens_equal": true,
+      "suffix_length": 160,
+      "saved_row_sha256": "f2e3c70e380c3f7c62d1352228e3b3ae09322b36981af98532a4b3144407e470",
+      "suffix_sha256": "336f614d03c2dfcacf6ea2b5c8b0daab0c9b63b54529082b15ce6b8f49982b89"
+    },
+    {
+      "id": "F01_b8",
+      "strength": 8,
+      "tokens_equal": true,
+      "suffix_length": 160,
+      "saved_row_sha256": "16fd9bb46eb31b9d864806f20e04d7188f54242bbe07f92cfc8f78b00dd7d51f",
+      "suffix_sha256": "f713abeec4e39e535b7cdaecda2473a13394c444d6fbcdcee72a5fa7add71af9"
+    },
+    {
+      "id": "F01_b16",
+      "strength": 16,
+      "tokens_equal": true,
+      "suffix_length": 160,
+      "saved_row_sha256": "75ae1fd0628436816319721d2cab7e676d0621377f50997b908c52b694040ba0",
+      "suffix_sha256": "4f4748fac38123fb37b8777471ae87024db03daddbc66a3384f85ebcaba57d5c"
+    }
+  ],
+  "cleanup_equal": true,
+  "cleanup_tokens_equal": true,
+  "cache_equivalence": "Strict cached/full-prefix equivalence remains unestablished; identical cached path used.",
+  "elapsed_seconds": 238.63437744881958,
+  "raw_outputs_recorded": false
+}

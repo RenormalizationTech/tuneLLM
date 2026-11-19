@@ -1,0 +1,46 @@
+{
+  "completed_at_utc": "2026-11-19T15:55:14.973545+00:00",
+  "status": "Completed bounded 27B sarcasm study: development_null",
+  "authoritative_result": "results/qwen38_sarcasm_01.json",
+  "outcome_agrees_with_runner": true,
+  "development_metrics_and_gates_agree_with_selection": true,
+  "source_unchanged_since_R0": true,
+  "manifest_sha256": "13254530c6bd5231be528e3e724b7eb064666bcdab767975bb19911b093ac1c4",
+  "evidence_sha256": {
+    "results/qwen38_sarcasm_01.json": "00b155e602142e95c9bb08d2e787105b1305f9f490a9dbc6e43900f74e4e01aa",
+    "/home/angkunwu/Documents/tuneLLM/outputs/qwen38-sarcasm-gcad-01/closeout.json": "ea19d221d71c1294a8dad7b5445b988dd31c1b928fa85df1a62433c5fc6b2f46",
+    "/home/angkunwu/Documents/tuneLLM/outputs/qwen38-sarcasm-gcad-01/selection.json": "aa7ef7b203c87dafeab3e439d537b3954fdda715796985e8ce48ed7f68c62dee",
+    "results/reviews/qwen38_sarcasm_implementation_review_10.md": "7e19bb7c8fab9ea9a13483c9b3ff948b34ab3770e950a998d62ab14555ff4c23",
+    "results/protocols/qwen38-sarcasm-analysis-01.json": "6e849b72f068222b1ba2fe0669fb55e8d010ef52a5ed51434281508f785272b1",
+    "results/protocols/qwen38-sarcasm-diagnostics-addendum-01.json": "5e742afb9e231a8d17a45866165263d219b5888e872022db9545d04a27ccf793",
+    "docs/assets/qwen38_sarcasm.json": "5a985ab46898dec2ea46cd00d0120c625f65d4ef3bdd6a1fd49ec37a040c3de8",
+    "docs/assets/qwen38_sarcasm.svg": "1cfde8bdf33c6da61db05e1aba68757d228dc9c5271569b1d1bf0589dcbf9271",
+    "docs/assets/qwen38_sarcasm.png": "06858643d0d84928ac27fffcb1003bdf0d3f5f1dd6150ef4981da1feeb1046ae"
+  },
+  "selected_strength": null,
+  "retained_controller": false,
+  "final_evaluation_performed": false,
+  "random_control_evaluation_performed": false,
+  "actual_gpu_hours": 3.436185546001911,
+  "counts": {
+    "generations": 340,
+    "generated_tokens": 71908,
+    "teacher_forced": 182,
+    "logit_forwards": 8,
+    "study_judge_starts": 82,
+    "isolation_audit_starts": 1
+  },
+  "all_registered_resource_limits_pass": true,
+  "checks": {
+    "portable_CPU_tests": 397,
+    "new_27b_research_CPU_tests": 15,
+    "unchanged_qwen2_qwen3_regressions": 15,
+    "independent_analyzer_CPU_tests": 16,
+    "docs_tests": 13,
+    "strict_docs_build": true,
+    "figure_visually_inspected": true
+  },
+  "limitations_record": "docs/qwen38_sarcasm_execution.md#interpretation-limits",
+  "publication_scope": "Local source, evidence, figure and documentation prepared; no new HF package or Git publication performed",
+  "future_work": "No further model or judge calls under this registration; any follow-up needs a separate study and fresh development data."
+}

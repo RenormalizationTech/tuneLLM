@@ -1,0 +1,15 @@
+{
+  "created_at_utc": "2026-11-19T16:12:04.903461+00:00",
+  "role": "Fresh-to-project follow-up development questions; exploratory strength comparison, not confirmatory evaluation",
+  "author": "Codex project manager (AI-generated, before follow-up model outputs)",
+  "records": 32,
+  "file_sha256": "3da540a3f0e73bf67e1e7dbaf31638c7b2f240ba29a8ec3a9565e5f1072add4b",
+  "normalized_exact_overlap": {
+    "evaluation/sarcasm_method_transfer/extract.json": [],
+    "evaluation/author_profanity_revision/calibration.json": [],
+    "evaluation/author_profanity_revision/report.json": []
+  },
+  "semantic_review": "PM inspected all84 previous extraction/development/final questions before writing. Broad everyday topics can overlap; these are not paraphrases of old tasks. Advisor review pending.",
+  "pretraining_status": "New project wording does not imply absence from pretraining.",
+  "frozen_after_registration": true
+}

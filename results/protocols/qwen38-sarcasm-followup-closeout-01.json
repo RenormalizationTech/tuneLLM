@@ -1,0 +1,86 @@
+{
+  "recorded_at_utc": "2026-11-19T18:36:18.968534+00:00",
+  "purpose": "Post-execution evidence closeout; no new calls or analysis changes authorized.",
+  "authoritative_result": "results/qwen38_sarcasm_followup_01.json",
+  "result_sha256": "61362b38ecb32581b58adb6f5e5caaaec7f16598d985ef1b834568210ca081ad",
+  "outcome": "exploratory_null_through_b16",
+  "interpretation": "Strong judged sarcasm at b8/b16, with coherence failures. No strength qualifies. Original development_null unchanged.",
+  "registration": "results/protocols/qwen38-sarcasm-followup-01.json",
+  "registration_sha256": "3b10bec5431573faddeb72e2b75b29f39b39a2210a972056ba81c7189f14c936",
+  "manifest_sha256": "87d1d0e6fb925b3607403e54502f0f462a6ec5453bf4b96411d49f101e468bf3",
+  "old_result_sha256": "00b155e602142e95c9bb08d2e787105b1305f9f490a9dbc6e43900f74e4e01aa",
+  "independent_reviews_sha256": {
+    "results/reviews/qwen38_sarcasm_followup_review_01.md": "a7251e36ad0608a2bc73c5439963fbdc8fcea3478cb4ed9685a948c461292d1f",
+    "results/reviews/qwen38_sarcasm_followup_review_02.md": "d9f550f7bb9c8312712e22dafb39bd1c1bb21e589e0aa7d734d9b2965eb3f7da",
+    "results/reviews/qwen38_sarcasm_followup_review_03.md": "c6cd187cdde0ad9a9fba19b0b9f08269017ef57134d89d03fdb9a2edc7ebc3e7",
+    "results/reviews/qwen38_sarcasm_followup_review_04.md": "a0f4ba1bdb069907004b5066465ab354c9a24889e286943c38da10af3cd760e5",
+    "results/reviews/qwen38_sarcasm_followup_review_05.md": "00cf44f2c383e2e62b582ccb95513a17e58cf11acbb5e273838c442ca74ad478",
+    "results/reviews/qwen38_sarcasm_followup_review_06.md": "134d05380eb912097072db09e5b0fa9f22b4e4f71ae169156a1954ff510cab62"
+  },
+  "figure_receipt_sha256": "c26dfba03147f3915a2c6a10b3d56e31e7ed1a90af20c3f23ea38fc2e74900ea",
+  "frozen_source_and_inputs_unchanged": true,
+  "ledger": {
+    "counters": {
+      "generation": {
+        "reserved_starts": 232,
+        "by_stage": {
+          "generation": 224,
+          "mechanics": 8
+        },
+        "reserved_tokens": 36096
+      },
+      "teacher_forced": {
+        "reserved_starts": 194,
+        "by_stage": {
+          "diagnostic": 192,
+          "mechanics": 2
+        }
+      },
+      "logit": {
+        "reserved_starts": 5,
+        "by_stage": {
+          "mechanics": 5
+        }
+      },
+      "judge": {
+        "reserved_starts": 85,
+        "by_stage": {
+          "audit": 1,
+          "judge": 84
+        }
+      }
+    },
+    "sessions": {
+      "gpu": {
+        "seconds": 6347.736084302887,
+        "completed_sessions": 1
+      },
+      "audit": {
+        "seconds": 3.4725201590918005,
+        "completed_sessions": 1
+      },
+      "judge": {
+        "seconds": 491.3777156667784,
+        "completed_sessions": 1
+      },
+      "launcher": {
+        "seconds": 6842.675821897108,
+        "completed_sessions": 1
+      }
+    }
+  },
+  "verification": {
+    "research_CPU_tests": 24,
+    "docs_CPU_tests": 13,
+    "strict_MkDocs_build": "passed",
+    "site": {
+      "html_pages": 115,
+      "internal_links_checked": 17024,
+      "broken": 0
+    },
+    "git_diff_check": "passed",
+    "figure_visual_review": "passed; both renders retained, final legend exposes random16 point",
+    "final_registered_Context_verification": "passed; source, frozen copies, packages and external inputs unchanged"
+  },
+  "remaining_required_work": []
+}

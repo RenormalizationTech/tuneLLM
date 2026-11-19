@@ -11,8 +11,10 @@ objective. This is the implementation plan, not an immutable run registration.
 Exact data revisions, input hashes, resolved settings and source snapshots must
 be registered before model experiments. The completed 4B/7B results and the
 [27B NF4 smoke](../results/qwen38_27b_nf4_execution_01.json) retain their conclusions.
-The separate 27B sarcasm study is deferred to preserve GPU capacity; see the
-[roadmap](project_tracks.md). No new model runs are scheduled.
+The owner resumed the separate 27B sarcasm study on 2026-11-18; see its
+[execution record](qwen38_sarcasm_execution.md) and the
+[roadmap](project_tracks.md). This completed quantization/QLoRA plan is unchanged;
+new sarcasm runs use their own registration and budgets.
 
 Implementation status: the registered NF4, Q4_K_M and local BF16-GGUF screens
 are complete. Evaluated NF4 and Q4_K_M packages are public with remote file

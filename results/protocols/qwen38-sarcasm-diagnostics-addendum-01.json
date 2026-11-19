@@ -1,0 +1,29 @@
+{
+  "registered_at_utc": "2026-11-19T01:48:41.534214+00:00",
+  "phase": "Prospective pre-development recording-scope correction",
+  "R0_manifest_sha256": "13254530c6bd5231be528e3e724b7eb064666bcdab767975bb19911b093ac1c4",
+  "frozen_plan_sha256": "145a35265254d09b756ca8f278b1c8012cf262609dbc985dfdbd2fa518a17637",
+  "advisor_review": {
+    "path": "results/reviews/qwen38_sarcasm_implementation_review_07.md",
+    "sha256": "0a0d4c7b9de13f6cea2b806c966dc1cde7030efe275447a3d3db54a40a7f338a"
+  },
+  "reason": "Source review found that two planned descriptive diagnostics are not recorded by the frozen implementation. Elicitation is ongoing, and no quality scores, development outputs or final outputs have been inspected.",
+  "unmeasured": [
+    "Realized per-token/per-position shift magnitudes, norms, energy or dose",
+    "A new NF4 steered cached-versus-full-prefix/no-cache numerical or token comparison"
+  ],
+  "reported_instead": [
+    "Raw per-site delta norms and random-control norm targets, with actual norm agreement reported to floating-point precision when controls exist",
+    "Registered zero-intervention/cleanup parity, nonzero hidden/logit effect and hook coverage",
+    "Historical unsteered NF4 strict cache-equivalence failure (max absolute logit difference0.125), and identical cached generation path/batch1 across compared arms"
+  ],
+  "prohibited_inference": "Raw delta norm matching does not establish realized energy matching; historical unsteered cache diagnostics do not establish new steered cache equivalence. No measured realized shift claim.",
+  "primary_decision_impact": "None: both omitted items are descriptive only. No changes to gates, strengths, layers, fixtures, generation settings, eligibility, selection, analyzer or budgets.",
+  "review04_correction": "The earlier cache/no-cache report-only reference identifies a historical limitation, not a new steered measurement. Original review retained.",
+  "source_changes": false,
+  "must_bind_in": [
+    "Development phase registration",
+    "Final phase seal if a strength is selected",
+    "Closeout documentation and evidence receipt"
+  ]
+}

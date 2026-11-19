@@ -1,0 +1,16 @@
+{
+  "status": "staged_CPU_only_not_uploaded",
+  "release_manifest_sha256": "cfaacd0efa5a7b22a40fab5305217ee2c642b46ba230a2eb8259d5a28639e54b",
+  "publication_manifest_sha256": "2c3efab74ceee3bb9f3b7fd11d2f2966e066088224376806947e0f52d2805d79",
+  "builder_sha256": "b908303f6a8b7b216f2f8f6d1c569482405223e66c3644576bb9438f31e94e01",
+  "runtime_sha256": {
+    "__init__.py": "52ef7e279a50a0e016ad31790ecf06e08dde054683c90f455b5ab2ebe798e82c",
+    "gcad.py": "3d76d8147ffbe6f802b285d643b4363e09349f0dd14a5f6a2924545b5966abe3",
+    "loader.py": "49cfb352004dd95688c0f1ec5d94a98f2c540c813f3e233eea51a8b8c194cb57",
+    "example.py": "7e8a20a18111008093d05cf3ee545d0f8b71520e4d4b8a816b75c557b57cbaf7"
+  },
+  "verifier_sha256": "0e9eeade5705a34429b7358009de043ad61fe8a9ff11bbac43638de838ab69bc",
+  "CPU_tests_sha256": "7d95b0da5dd539c523c2d5fcf4dc0387960694b70b78fba97cf2e596128a241d",
+  "source_result_sha256": "61362b38ecb32581b58adb6f5e5caaaec7f16598d985ef1b834568210ca081ad",
+  "no_GPU_model_judge_calls": true
+}

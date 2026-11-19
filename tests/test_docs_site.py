@@ -239,6 +239,7 @@ def test_release_catalog_matches_cards_receipts_and_visible_index():
         "RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
         "RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
         "RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+        "RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
     }
     index = (root/"releases/README.md").read_text()
     rows = catalog["public_releases"]

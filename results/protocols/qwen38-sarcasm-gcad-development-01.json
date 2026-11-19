@@ -1,0 +1,14 @@
+{
+  "registered_at_utc": "2026-11-19T05:56:12.470918+00:00",
+  "phase": "Development: baseline,prompted,GCAD1,GCAD2 on32 fixed questions",
+  "manifest_sha256": "13254530c6bd5231be528e3e724b7eb064666bcdab767975bb19911b093ac1c4",
+  "approval_sha256": "d9b817b418b6631029a87492d998b84ddedc0e00f103a8575d094ced35261dea",
+  "mechanics_sha256": "0d5bfe325db2a4f1bcab746de512980d05103ef576a246db6b606ff7ce01923c",
+  "bank_sha256": "4fd9f86bac07cd858c8f4177ce0e9f1095d30d105f0179713c78da671ab545de",
+  "C6_registration_sha256": "6e849b72f068222b1ba2fe0669fb55e8d010ef52a5ed51434281508f785272b1",
+  "diagnostic_addendum_sha256": "5e742afb9e231a8d17a45866165263d219b5888e872022db9545d04a27ccf793",
+  "advisor_review_sha256": "3f6161c40ebf7c54f633531c77d2ff7a102ab43c918d47d2755f5447d29d57c2",
+  "generation_count": 128,
+  "selection": "lowest fixed strength passing all original gates; no final run if none qualifies",
+  "source_changes_after_R0": false
+}

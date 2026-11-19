@@ -1,0 +1,17 @@
+{
+  "registered_at_utc": "2026-11-19T01:11:34.079123+00:00",
+  "phase": "C6 independent prospective closeout registration",
+  "analyzer_sha256": "26dc69b19ea138070c1d9880aa2b2ad6464052389348ccc87f681527b861f461",
+  "analyzer_tests_sha256": "6a25e4e285832cc715d49e358fc1beb3abc8ddca8f9754785f4aba6c150145b2",
+  "r0_manifest_sha256": "13254530c6bd5231be528e3e724b7eb064666bcdab767975bb19911b093ac1c4",
+  "advisor_review": {
+    "path": "results/reviews/qwen38_sarcasm_implementation_review_06.md",
+    "sha256": "10914fe9c563a94947a446219a5f6b9d9385533656c184eeb55cbd219b3afdef"
+  },
+  "authoritative_closeout": "results/qwen38_sarcasm_01.json",
+  "output_policy": "Fresh immutable independent analyzer result; full32 primary gates authoritative; H14 and coupling descriptive only",
+  "runner_consistency": "For development/final branches run the R0 runner report first. Require analyzer primary_outcome (or outcome for development null) and all gate booleans equal runner closeout.json; mismatch is an implementation stop. Extraction-null branch has no applicable runner report.",
+  "before_final_requirement": "Final phase registration must seal this registration hash, selection hash and exact runner approval hash before first final generation. Bound R0 runner approval schema remains unchanged; separate PM seal binds all three.",
+  "tests": "16 analyzer CPU tests passed and independently rerun by advisor; no final outputs exist",
+  "scientific_changes": false
+}

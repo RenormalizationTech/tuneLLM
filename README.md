@@ -9,8 +9,8 @@ A reproducible LLM research portfolio covering **quantization, LoRA/QLoRA,
 refusal steering and trait steering**. Experiments on Qwen3-4B and
 Qwen2.5-7B-Instruct examine compression, adaptation and inference-time behavior
 control, with explicit baselines and response-quality measurements. Mistral-7B-Instruct-v0.1
-provides a SAPS reference; Qwen3.8-27B adds evaluated base exports and ongoing
-scientific-task QLoRA training.
+provides a SAPS reference; Qwen3.8-27B adds evaluated base exports, two completed
+scientific-task QLoRA studies and a completed bounded sarcasm-steering study.
 
 The goal is to demonstrate practical LLM research: implement methods, reproduce
 results, compare alternatives and explain limitations. Positive effects, failed
@@ -33,6 +33,8 @@ portfolio; the results do not establish production-ready behavioral controls.
 | Base formats (27B) | Saved NF4 and one Q4_K_M GGUF; local BF16-GGUF reference | [Fixed screen](results/qwen38_27b_quantization_screen_01.json): NF4/Q4 general MC **30/32 / 29/32**; numeric GSM8K **26/32 / 27/32**, strict **26/32 each** | Small workflow comparisons; NF4 lacks a same-backend BF16 control. Both public packages passed pinned-download/GPU-reload checks. |
 | QASPER QLoRA (27B) | One epoch on 482 questions; selected checkpoint and prompt controls; all 403 final questions retained | [Primary Answer F1](results/qwen38_qasper_final_science_01.json), n=309: base **0.457**, selected prompt **0.567**, adapter **0.690**; lenient gains also pass | Fixed custom text-only task and retention gates pass; adapter published. This is not the full official benchmark. |
 | PRL abstracts (27B) | 57 audited training papers; 40 fresh-to-project evaluation papers; two blinded AI passes | [Adapter preference](results/qwen38_prl_final_01.json) **0.175**, 95% paper CI **[0.075, 0.2875]**; retention gates pass | Abstract-quality gates fail despite lower NLL and higher reference overlap. Published as experimental; the base is preferred for this task. |
+| Sarcasm GCAD (27B) | Fresh NF4 bank from 90 eligible pairs; port to six full-attention sites; fixed strengths 1 and 2 | [Development sarcasm](results/qwen38_sarcasm_01.json), n=32: base **0.00**, prompted **69.22**, GCAD **0.00 / 0.19**; neither strength produced a score ≥50 | Development null; coherence stayed near baseline. No final evaluation or retained controller; 3.44 GPU-hours. |
+| Sarcasm follow-up (27B) | Fixed-token instruction replay; fresh32 at GCAD 2/4/8/16 and random16 | [Follow-up](results/qwen38_sarcasm_followup_01.json): b8 sarcasm **88.50**, coherence **58.94**; b16 **95.16 / 34.59**; prompted **55.56 / 76.00** | Strong sarcasm, but every strength fails a trait or quality gate. No validated controller; 1.76 GPU-hours. |
 | Refusal steering | Contrastive direction extraction; constant subtraction versus projection removal on 4B/7B | 7B subtraction −0.5: unsafe refusals **28/30 → 17/30**, benign usefulness **20/30 → 13/30**. Selected benign diagnostic at −0.25: refusals **3/13 → 1/13**, useful valid full answers **9/13 → 11/13** | A causal intervention effect with dose/quality tradeoffs; the 13 selected cases are a narrow demonstration, not a general success rate. |
 | Trait steering | Literature-based GCAD/SAPS references; random controls; model transfer; joint-control study | 7B GCAD sarcasm: **29/32** answers scored ≥50/100 versus **0/32** baseline; coherence **89.59 → 70.72**. Joint candidates passing all gates: **0/5** | Individual effects can be strong while quality and cross-trait coupling limit combined control. |
 
@@ -165,7 +167,16 @@ text-only task and retention gates and is
 retains 395 original predictions plus eight first-time completions under a
 prospective amendment; the original phase cap failure remains recorded. The
 [preflight record](results/qwen38_science_preflight_01.json) separates mechanics
-from quality evidence. Sarcasm transfer is deferred to reserve GPU capacity.
+from quality evidence. The owner resumed the separate 27B sarcasm study on
+2026-11-18; it [closed as a development null](docs/qwen38_sarcasm_execution.md)
+on 2026-11-19. The port and fitted-bank mechanics passed, but neither registered
+strength induced the required sarcasm. Direct prompting did on the development
+set. The study used 3.44 GPU-hours and retained no controller.
+The completed quantization and QLoRA results remain unchanged.
+The owner subsequently authorized a separate
+[instruction-activation and stronger-GCAD follow-up](docs/qwen38_sarcasm_followup_execution.md).
+It is complete: strengths 8/16 induce strong sarcasm on fresh questions, but
+coherence fails the registered gates. The original null remains its own result.
 Report each intervention against its own baseline.
 ARA, broad parameter sweeps, joint-controller retuning and production deployment
 are deferred.

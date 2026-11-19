@@ -77,7 +77,14 @@ It is a functional check, not a quality benchmark. The subsequent
 QASPER QA/evidence and PRL grounded-abstract adapters are public. QASPER passed
 the fixed custom text-only task and retention gates. PRL passed retention but
 failed abstract-quality gates and is experimental; the unadapted base is preferred
-for that task. The separate sarcasm study is deferred to reserve GPU capacity.
+for that task. The separate [sarcasm study](qwen38_sarcasm_execution.md)
+closed as a development null: mechanics passed, but neither registered GCAD
+strength induced the required sarcasm. No final evaluation ran; no controller
+is retained. It used 3.44 GPU-hours. A separately registered
+[activation/stronger-GCAD follow-up](qwen38_sarcasm_followup_execution.md)
+is also complete: strengths 8/16 induce strong sarcasm (88.50/95.16), but
+coherence falls to 58.94/34.59 and no strength passes every gate. It used
+1.76 additional GPU-hours; the original null remains unchanged.
 See the [current roadmap](project_tracks.md).
 
 All Markdown documents under `docs/` are available through this site. Protocols,

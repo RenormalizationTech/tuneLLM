@@ -52,9 +52,40 @@ PRL judgments are AI-based and correlated, not human validation. The QASPER
 baseline hit its original phase cap after 395 questions; eight previously
 unevaluated questions were completed once under a prospective amendment.
 The original strict numerical cache-equivalence failure remains unresolved.
-There is no same-backend BF16 Transformers control for NF4. Sarcasm transfer
-to 27B is deferred to reserve GPU capacity; these summaries use completed
-results and require no new model runs.
+There is no same-backend BF16 Transformers control for NF4. The separate
+27B sarcasm study has also closed, as described below; its 3.44 GPU-hours
+are additional to the 24.44-hour quantization/QLoRA ledger.
+
+## Qwen3.8-27B sarcasm: active intervention, development null
+
+![27B sarcasm and coherence development results](assets/qwen38_sarcasm.svg)
+
+A fresh GCAD bank from 90 eligible pairs was applied at six full-attention
+sites in the hybrid NF4 model. Mechanics passed and both strengths changed
+every baseline answer, but development sarcasm stayed at **0.00 / 0.19** for
+coefficients 1/2, versus **0.00** baseline and **69.22** prompted. Neither
+strength produced an answer scoring at least 50; the registered minimum was
+eight. Coherence stayed near baseline. The fixed study therefore closed
+without final evaluation or a retained controller.
+
+The effect-versus-dose question is unresolved: realized shift energy was not
+recorded, and no higher strength was tested within that study. Elicitation and development texts
+were mostly capped. [Scope, measured counts and limitations](qwen38_sarcasm_execution.md),
+[authoritative result](../results/qwen38_sarcasm_01.json), and
+[figure data/provenance](assets/qwen38_sarcasm.json).
+
+CV wording: “Ported GCAD to the full-attention subset of a hybrid 27B NF4
+model, verified attention-gate and cache-hook mechanics, and completed a
+pre-registered negative transfer study in 3.44 GPU-hours with fixed quality
+gates and a strong prompting reference.”
+
+## 27B follow-up: strong sarcasm with a quality cost
+
+A separately registered [instruction-activation and stronger-GCAD experiment](qwen38_sarcasm_followup_execution.md) completed 192 fixed-token replay cells and 224 fresh generations in **1.76 GPU-hours**. The instruction change aligns positively with the saved bank at all six sites. On fresh32, GCAD strength 8 scores **88.50 sarcasm / 58.94 coherence**, while strength 16 scores **95.16 / 34.59**. The random16 reference scores zero sarcasm, with a different realised shift along its generated trajectory.
+
+No strength passes all gates: b8 misses the baseline-minus-20 coherence threshold, and b16 also misses the absolute threshold. The [canonical result](../results/qwen38_sarcasm_followup_01.json) is an exploratory quality-gate null, with no independent final evaluation. This result demonstrates trait movement, not a validated controller. All answers reached the 160-token cap, and impoliteness rose with sarcasm.
+
+CV wording: “Instrumented GCAD shift telemetry and fixed-token activation replay on a hybrid 27B NF4 model; measured an exploratory sarcasm/coherence tradeoff under frozen gates and random-direction controls.”
 
 ## Refusal reduction and answer quality
 

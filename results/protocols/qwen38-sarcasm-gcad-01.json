@@ -1,0 +1,32 @@
+{
+  "registered_at_utc": "2026-11-18T20:51:58.226112+00:00",
+  "run": "outputs/qwen38-sarcasm-gcad-01",
+  "phase": "R0 prospective source and input registration",
+  "manifest_sha256": "13254530c6bd5231be528e3e724b7eb064666bcdab767975bb19911b093ac1c4",
+  "config_sha256": "0844af59d0a48cf968d494c96a1d6f5a6c42a164bc4d51ff2c59d21b9e7deecb",
+  "plan_sha256": "145a35265254d09b756ca8f278b1c8012cf262609dbc985dfdbd2fa518a17637",
+  "reviews": {
+    "results/reviews/qwen38_sarcasm_design_review_01.md": "fadb29f7d5d1e1ac013a59d5845372b1874cabd405284fd41613eca91b184601",
+    "results/reviews/qwen38_sarcasm_implementation_review_01.md": "b2bba15b601bf6d298340adf9d46333bb8f20384aae9364dec815bf66eb59679",
+    "results/reviews/qwen38_sarcasm_implementation_review_02.md": "e8277df9497a021d514d6dc75cdd236df5ad20e1760db0fc3d64353cd7aa550a",
+    "results/reviews/qwen38_sarcasm_implementation_review_03.md": "8d20f92088091336be45734c2a09daff9a0d3f4b8dff5809fa8580a8561c019f"
+  },
+  "approved_by": "root project manager under owner authorization on2026-11-18",
+  "initial_approved_phases": [
+    "synthetic-smoke",
+    "judge-audit"
+  ],
+  "prerequisites": "15 CPU tests pass and advisor source signoff review03; no prior model/judge calls in this run",
+  "limits": {
+    "max_gpu_seconds": 28800,
+    "maximum_generated_tokens": 92544,
+    "maximum_generations": 468,
+    "maximum_teacher_forced": 302,
+    "maximum_logit_forwards": 8,
+    "maximum_judge_batches": 130,
+    "maximum_judge_starts": 260
+  },
+  "next_scientific_phase_requires": "passed synthetic smoke and successful isolated judge audit reviewed by PM",
+  "historical_evidence_unchanged": true,
+  "CPU_preparation_race_receipt": "outputs/qwen38-sarcasm-pm-01/preparation-race-01.json"
+}

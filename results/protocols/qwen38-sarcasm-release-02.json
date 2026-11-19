@@ -1,0 +1,77 @@
+{
+  "registered_at_utc": "2026-11-19T19:41:29.064221+00:00",
+  "authorization": "Owner explicitly requests implementing, verifying, publishing the tunable experimental HF controls package and completing Qwen3.8. No further per-stage owner permission is required.",
+  "repo_id": "RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+  "private": false,
+  "release_manifest_sha256": "cfaacd0efa5a7b22a40fab5305217ee2c642b46ba230a2eb8259d5a28639e54b",
+  "publication_manifest_sha256": "2c3efab74ceee3bb9f3b7fd11d2f2966e066088224376806947e0f52d2805d79",
+  "frozen_source_sha256": {
+    "scripts/stage_qwen38_sarcasm_release.py": "b908303f6a8b7b216f2f8f6d1c569482405223e66c3644576bb9438f31e94e01",
+    "scripts/verify_qwen38_sarcasm_release.py": "0e9eeade5705a34429b7358009de043ad61fe8a9ff11bbac43638de838ab69bc",
+    "tests/test_qwen38_sarcasm_release.py": "7d95b0da5dd539c523c2d5fcf4dc0387960694b70b78fba97cf2e596128a241d",
+    "docs/qwen38_sarcasm_hf_card_draft.md": "33ad601d34e6d7787fa907bc325a8a8fef3c4eabd966fd53e8ca4c0c65f521a5",
+    "scripts/qwen38_sarcasm_release_runtime/__init__.py": "52ef7e279a50a0e016ad31790ecf06e08dde054683c90f455b5ab2ebe798e82c",
+    "scripts/qwen38_sarcasm_release_runtime/example.py": "7e8a20a18111008093d05cf3ee545d0f8b71520e4d4b8a816b75c557b57cbaf7",
+    "scripts/qwen38_sarcasm_release_runtime/gcad.py": "3d76d8147ffbe6f802b285d643b4363e09349f0dd14a5f6a2924545b5966abe3",
+    "scripts/qwen38_sarcasm_release_runtime/loader.py": "49cfb352004dd95688c0f1ec5d94a98f2c540c813f3e233eea51a8b8c194cb57"
+  },
+  "source_review": "results/reviews/qwen38_sarcasm_release_review_03.md",
+  "source_review_sha256": "59030cd0408fed595425795b23707b28b21a3f6b61308ed5b2c8c5cc4c3c72e7",
+  "GPU_uuid": "GPU-34646ab9-ec19-ca63-0dfb-bdbf2e1a977b",
+  "base_repo": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+  "base_revision": "586bb02218d196f485c321bbde3348677c63fc6a",
+  "verification_scope": {
+    "independent_probes": 2,
+    "probe_cap": 32,
+    "strengths": [
+      0,
+      8,
+      16
+    ],
+    "exact_logits_and_tokens_vs_frozen": [
+      8,
+      16
+    ],
+    "ordinary_and_cleanup_tokens_logits_equal": true,
+    "saved_full160_replays": [
+      "F01_baseline",
+      "F01_b8",
+      "F01_b16"
+    ],
+    "saved_aggregate_sha256": "2bf33ce55cae146c2cd3d11bfc2f963fd193e449917589ffd4b075ecb0a83a12",
+    "maximum_generation_calls": 17,
+    "maximum_generated_tokens": 928,
+    "estimate_minutes_per_pass": [
+      4,
+      7
+    ],
+    "raw_outputs_in_tracked_receipt": false,
+    "quality_or_judge_calls": 0
+  },
+  "isolated_offline_verification_passes": [
+    "local staged controls with pinned public base",
+    "anonymous pinned-downloaded controls/base, compare exact receipt"
+  ],
+  "no_new_quality_or_judge_calls": true,
+  "publication_condition": "Local release mechanics pass and reviewer checks receipt; exact-file public upload followed by anonymous pinned download and isolated GPU comparison.",
+  "original_scientific_results_unchanged": [
+    "development_null",
+    "exploratory_null_through_b16"
+  ],
+  "final_steps": [
+    "HF publication and verified public download/reload",
+    "release catalog and actual user guide",
+    "GitHub source/docs publication and workflow/site verification",
+    "mark Qwen3.8 project complete"
+  ],
+  "predecessor_protocol": "results/protocols/qwen38-sarcasm-release-01.json",
+  "predecessor_protocol_sha256": "f7b980c38754f03f000fc55eebb4adf359e2d6c022e50b22b2899d18d91e63e0",
+  "preserved_preload_failure": {
+    "receipt": "results/qwen38_sarcasm_release_local_smoke_01.json",
+    "sha256": "635f07ee37ee578dc30ae9f00c3d780232182741506fd776187945d12ce12662",
+    "cause": "Pinned Hub2.4 shared-blob cache compatibility guard; failed before model loading",
+    "model_or_generation_calls": 0
+  },
+  "CPU_release_tests": 53,
+  "fix_scope": "Release wrapper cache compatibility only; frozen GCAD arithmetic and scientific results unchanged"
+}

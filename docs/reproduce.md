@@ -154,5 +154,58 @@ reproduce the historical quality results by itself.
 The QASPER baseline preserves its original cap failure and the prospectively
 registered eight-question completion. Do not silently rerun completed questions.
 The release cards retain the failed strict cache-equivalence result and the
-fixed-subset/AI-judgment limitations. No new GPU runs are scheduled; the separate
-27B sarcasm study is deferred to preserve capacity for other projects.
+fixed-subset/AI-judgment limitations. The separate 27B sarcasm study is complete;
+the completed QLoRA and quantization runs stay frozen.
+
+## Completed 27B sarcasm workflow
+
+The [execution record](qwen38_sarcasm_execution.md) and
+[registered closeout](../results/qwen38_sarcasm_01.json) report a development
+null. No retained 27B sarcasm controller or final-set result is available.
+The study used the existing isolated NF4 environment and saved base, a fresh
+90-pair bank, cached batch-one generation and six full-attention sites.
+
+The source is `qwen38_gcad_port`, `qwen38_sarcasm` and
+`qwen38_sarcasm_judge`. Preparation is CPU-only; model and judge stages require
+exact phase approvals. Historical replay needs retained author rubrics, raw
+trajectories, journals and the frozen run root; a clean checkout does not contain
+those assets. Do not re-run closed model or judge phases for inspection.
+
+With the retained run, the independent offline analyzer can write a fresh copy:
+
+```bash
+outputs/qwen38-27b-nf4-01/env/bin/python -m scripts.qwen38_sarcasm_analyze \
+  --run outputs/qwen38-sarcasm-gcad-01 \
+  --registration results/protocols/qwen38-sarcasm-analysis-01.json \
+  --output outputs/my-sarcasm-analysis.json
+```
+
+This reads saved evidence and performs no model or judge call. New research
+CPU tests are opt-in under the 27B environment; the historical Qwen2/Qwen3
+regressions use their own environment. The portable default profile is unchanged.
+Regenerate the figure in the separate
+[figure environment](../requirements-figures.txt) using
+`scripts/plot_qwen38_sarcasm_analysis.py --analysis results/qwen38_sarcasm_01.json --output outputs/my-sarcasm-figure`.
+
+
+## Completed 27B activation and stronger-GCAD follow-up
+
+The [separate follow-up](qwen38_sarcasm_followup_execution.md) uses the same saved NF4 base and fitted bank. Its [prospective registration](../results/protocols/qwen38-sarcasm-followup-01.json) binds a single launcher for audit, mechanics, fixed-token replay, seven generation arms, judging and offline analysis. It closed as an exploratory quality-gate null despite strong sarcasm at strengths 8/16. Do not rerun completed model or judge calls for inspection.
+
+The CPU mechanics/reporting tests are explicitly opt-in; the default portable profile excludes them:
+
+```bash
+outputs/qwen38-27b-nf4-01/env/bin/python -B -m pytest -q -m research \
+  tests/test_qwen38_sarcasm_followup.py \
+  tests/test_qwen38_sarcasm_followup_pipeline.py
+```
+
+All 24 tests pass without a model load or judge call. Raw activation replay requires retained local tensors, prompts and journals. The compact result and figure receipt are tracked. The standalone presentation helper reads that result, performs no new statistics or selection and needs only the figure environment:
+
+```bash
+outputs/public-polish-01/plot-env/bin/python scripts/plot_qwen38_sarcasm_followup.py \
+  --analysis results/qwen38_sarcasm_followup_01.json \
+  --output-prefix outputs/my-sarcasm-followup-figure
+```
+
+Existing figure files are preserved; choose a fresh output prefix. Neither reproduction command trains or changes model weights.

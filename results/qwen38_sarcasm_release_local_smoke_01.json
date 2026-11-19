@@ -1,0 +1,7 @@
+{
+  "status": "release_mechanics_failed",
+  "error_type": "ValueError",
+  "release_manifest_sha256": "26f50f8a03c16420ce16507f317e5529c297cf81d071f6b28e32a15c1b330bd4",
+  "verifier_sha256": "0e9eeade5705a34429b7358009de043ad61fe8a9ff11bbac43638de838ab69bc",
+  "raw_outputs_recorded": false
+}
