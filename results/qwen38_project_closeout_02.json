@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-19T20:08:05.708004+00:00",
+  "status": "complete",
+  "scope": "Planned Qwen3.8 text-only quantization, independent QASPER/PRL adapters, sarcasm studies, tunable experimental controls, public verification and documentation",
+  "remaining_required_work": [],
+  "additional_model_or_judge_run_planned": false,
+  "public_Qwen38_packages": [
+    {
+      "label": "27B NF4 base",
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+      "status": "public",
+      "revision": "586bb02218d196f485c321bbde3348677c63fc6a",
+      "gpu_verified_revision": "e7644d6f288cb8a9ba51856ca2c9fa68946f70fe",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-NF4",
+      "card_path": "releases/Qwen3.8-27B-tuneLLM-NF4/README.md",
+      "card_sha256": "a1f5e4fa1549f3e0bb0e98053a69324aa2e66d42d1626b09677915bc462ffa61",
+      "local_payload_path": "artifacts/releases/Qwen3.8-27B-tuneLLM-NF4",
+      "published_file_count": 17,
+      "published_inventory_sha256": "159a60ab8f2accc262845c6be4af21ff423b07dfd4e616658657aed28789588b",
+      "verification_receipt": "results/qwen38_nf4_public_verification_01.json",
+      "result_path": "results/qwen38_27b_quantization_screen_01.json",
+      "publication_receipt": "results/qwen38_nf4_huggingface_publication.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "27B GGUF",
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+      "status": "public",
+      "revision": "b4351e7d6f521b71cb3842116cdff3cae00d7317",
+      "gpu_verified_revision": "8cce64fc0767c8efea134468b23079ef2d693a8c",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF",
+      "card_path": "releases/Qwen3.8-27B-tuneLLM-GGUF/README.md",
+      "card_sha256": "2f5ea751c4fab9e1467439bd3ce865ef7e7779b0c79a8337d137b2c4691ead67",
+      "local_payload_path": "artifacts/releases/Qwen3.8-27B-tuneLLM-GGUF",
+      "published_file_count": 12,
+      "published_inventory_sha256": "0f06aa9a992eea96d237087585e646dbd61afb793e81d1d323bf0d09a2a4e3d0",
+      "verification_receipt": "results/qwen38_gguf_public_verification_01.json",
+      "result_path": "results/qwen38_27b_quantization_screen_01.json",
+      "publication_receipt": "results/qwen38_gguf_huggingface_publication.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "27B PRL abstract QLoRA",
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+      "status": "public",
+      "revision": "3bb77b924555bdcc9f92b9c4aa6cf32d63340fbc",
+      "gpu_verified_revision": "adcae12715bf1a946b0424cef4038dd9cac8fc8d",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+      "card_path": "releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/README.md",
+      "card_sha256": "453f74a1bb8d5457d7506b354447c23f6d79ba58da15358ac388a1c066840c97",
+      "local_payload_path": "artifacts/releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA",
+      "published_file_count": 29,
+      "published_inventory_sha256": "cdae45e006cc385a3cb05a6025877307f4c12756db51f973b2322f9d19aea5b7",
+      "verification_receipt": "results/qwen38_prl_public_verification_01.json",
+      "result_path": "results/qwen38_prl_final_01.json",
+      "publication_receipt": "results/qwen38_prl_huggingface_publication.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "27B QASPER QLoRA",
+      "repo_id": "RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
+      "status": "public",
+      "revision": "95359154d2b9d94914977462e559c409c1f549c6",
+      "gpu_verified_revision": "d598923f01d6b0ff233ab950becbd63a5babab67",
+      "url": "https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
+      "card_path": "releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md",
+      "card_sha256": "ae40e86f238fd54bf5bba1994d6981cdf216a121e443d21504b996b4fba2c429",
+      "local_payload_path": "artifacts/releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA",
+      "published_file_count": 28,
+      "published_inventory_sha256": "372e6a9ec227002927b0de744cd7e84485f18c389efdfc2e11382c747dc7faf8",
+      "verification_receipt": "results/qwen38_qasper_public_verification_01.json",
+      "result_path": "results/qwen38_qasper_final_01.json",
+      "publication_receipt": "results/qwen38_qasper_huggingface_publication.json",
+      "historical_metadata_paths": []
+    },
+    {
+      "label": "27B sarcasm GCAD controls (experimental)",
+      "repo_id": "RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+      "status": "public",
+      "revision": "877e4b51e654e7410f792858e93fee6727d48646",
+      "gpu_verified_revision": "877e4b51e654e7410f792858e93fee6727d48646",
+      "url": "https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls",
+      "card_path": "releases/qwen38-27b-sarcasm-gcad-controls/README.md",
+      "card_sha256": "73fd5055b1fbbd894131a37d5313913320020a593f71866b6f8ecf7f3c9c37e8",
+      "local_payload_path": "artifacts/releases/qwen38-27b-sarcasm-gcad-controls",
+      "published_file_count": 18,
+      "published_inventory_sha256": "b9803f63137e25c1fe933f1cb40e084ce366f30784c4abb2518f192eea0b8b90",
+      "verification_receipt": "results/qwen38_sarcasm_public_verification_01.json",
+      "result_path": "results/qwen38_sarcasm_followup_01.json",
+      "publication_receipt": "results/qwen38_sarcasm_huggingface_publication_01.json",
+      "historical_metadata_paths": []
+    }
+  ],
+  "public_portfolio_package_count": 10,
+  "scientific_conclusions": {
+    "QASPER": "Passed registered task and retention gates on the custom text-only subset; not the full official benchmark",
+    "PRL": "Failed registered quality gates; experimental negative result",
+    "original_sarcasm": "development_null",
+    "followup_sarcasm": "exploratory_null_through_b16",
+    "gates_and_results_unchanged": true
+  },
+  "sarcasm_release": {
+    "revision": "877e4b51e654e7410f792858e93fee6727d48646",
+    "release_manifest_sha256": "cfaacd0efa5a7b22a40fab5305217ee2c642b46ba230a2eb8259d5a28639e54b",
+    "publication_manifest_sha256": "2c3efab74ceee3bb9f3b7fd11d2f2966e066088224376806947e0f52d2805d79",
+    "default_strength": 8,
+    "accepted_strength_interval": [
+      0,
+      16
+    ],
+    "default_label": "experimental demonstration; no tested strength passed all quality gates",
+    "anonymous_controls_download": "fresh pinned download, exact remote inventory verified",
+    "base_verification": "base files hash-verified from pinned-revision cache (anonymous full download recorded 2026-11-17)",
+    "public_local_mechanics_equal": true,
+    "local_GPU_seconds": 238.63437744881958,
+    "public_GPU_seconds": 239.76023353636265,
+    "initial_preload_cache_guard_failure": "Preserved in local_smoke_01; fixed supported Hub cache layout, then local and public verification passed",
+    "limitations": [
+      "Single-turn English, no system prompt, cached batch 1, greedy decoding with repetition penalty 1.05 and cap 160",
+      "No independent final quality evaluation or qualified controller",
+      "Random direction only at b16, one seed, setting-matched rather than realized-energy-matched",
+      "Strict cached/full-prefix equivalence remains unresolved; comparisons preserve the registered cached batch-1 path"
+    ]
+  },
+  "validation": {
+    "release_CPU_tests_passed": 53,
+    "portable_regressions_passed": 397,
+    "documentation_tests_passed": 13,
+    "strict_site_build": "passed",
+    "HTML_pages_checked": 118,
+    "internal_links_checked": 17816,
+    "broken_internal_links": 0,
+    "source_commit": "a4180a1b84053c1f0b385fafadd30e676b2f6b3e",
+    "verified_docs_commit": "89c60b3c7d865d20f21b8ae3cb27f1df3e358adc",
+    "live_site_verification": {
+      "verified_at_utc": "2026-11-19T20:05:41.175896+00:00",
+      "GitHub_commit": "89c60b3c7d865d20f21b8ae3cb27f1df3e358adc",
+      "workflow_runs": [
+        {
+          "name": "Portable CPU checks",
+          "id": 44604566795,
+          "conclusion": "success"
+        },
+        {
+          "name": "Documentation site",
+          "id": 44604566660,
+          "conclusion": "success"
+        }
+      ],
+      "live_pages": {
+        "qwen38_sarcasm_release/": {
+          "url": "https://renormalizationtech.github.io/tuneLLM/qwen38_sarcasm_release/?verified=89c60b3",
+          "status": 200,
+          "HTML_sha256": "d17e84a1c42e217c96d171cd51378770945c5453c983a73bbf5b973e251fc71b"
+        },
+        "qwen38_sarcasm_gcad_guide/": {
+          "url": "https://renormalizationtech.github.io/tuneLLM/qwen38_sarcasm_gcad_guide/?verified=89c60b3",
+          "status": 200,
+          "HTML_sha256": "8aab19badc5f20dc77da2192ed83ad4b872c1789994a13233225972d6c7060f5"
+        },
+        "project_tracks/": {
+          "url": "https://renormalizationtech.github.io/tuneLLM/project_tracks/?verified=89c60b3",
+          "status": 200,
+          "HTML_sha256": "132b30c90a20ad0865bcf4f658a77003fe41b22ebaf24758a6cd818c2f6ea1d8"
+        }
+      },
+      "release_revision_and_manifest_visible": true
+    }
+  },
+  "bound_records": [
+    {
+      "path": "results/qwen38_science_summary_01.json",
+      "sha256": "71848d8ff7f690c2123adc6224e67b964c305708071d317d4cff5c4ed13316cc"
+    },
+    {
+      "path": "results/qwen38_sarcasm_01.json",
+      "sha256": "00b155e602142e95c9bb08d2e787105b1305f9f490a9dbc6e43900f74e4e01aa"
+    },
+    {
+      "path": "results/qwen38_sarcasm_followup_01.json",
+      "sha256": "61362b38ecb32581b58adb6f5e5caaaec7f16598d985ef1b834568210ca081ad"
+    },
+    {
+      "path": "results/qwen38_sarcasm_huggingface_publication_01.json",
+      "sha256": "5b68c8276f67c62170b65bf6149862c9c23837c24e59bda3a72b49414b6d6996"
+    },
+    {
+      "path": "results/qwen38_sarcasm_public_verification_01.json",
+      "sha256": "beb32118ae227c8d12c535a04b0e24d27d1aa2adc65f4db5a4e77149fcfa383d"
+    },
+    {
+      "path": "results/qwen38_sarcasm_release_local_smoke_01.json",
+      "sha256": "635f07ee37ee578dc30ae9f00c3d780232182741506fd776187945d12ce12662"
+    },
+    {
+      "path": "results/qwen38_sarcasm_release_local_smoke_02.json",
+      "sha256": "c9173dbe423cad38d8fe63cc1134ba457175563c350947ba584f85a6346c25e9"
+    },
+    {
+      "path": "results/qwen38_sarcasm_release_public_smoke_01.json",
+      "sha256": "e0605f35d7c714aed3907beed53080e803ce28b1fefe7d6d761c90c3c842b4f6"
+    },
+    {
+      "path": "results/protocols/qwen38-sarcasm-release-02.json",
+      "sha256": "0a2ddd4df819f116e1288364d61809fe6142694d2b9ee8e2a81e18380acc0aa7"
+    },
+    {
+      "path": "results/reviews/qwen38_sarcasm_release_review_01.md",
+      "sha256": "e01529fbe1ff70fbf104e71349d43b3921e930fdcf3c0a79c55bfb26e53fca3c"
+    },
+    {
+      "path": "results/reviews/qwen38_sarcasm_release_review_02.md",
+      "sha256": "90dbf37bd07bc3ded06c63e0fe51e3d6d000fe9d1e098221a6c3c456a4e6bed5"
+    },
+    {
+      "path": "results/reviews/qwen38_sarcasm_release_review_03.md",
+      "sha256": "59030cd0408fed595425795b23707b28b21a3f6b61308ed5b2c8c5cc4c3c72e7"
+    },
+    {
+      "path": "results/reviews/qwen38_sarcasm_release_review_04.md",
+      "sha256": "4ff3ddf6f31d1976b18f6bfc4e9969854371fb9ef9da299fb15f97230b8e04ad"
+    },
+    {
+      "path": "results/reviews/qwen38_sarcasm_release_review_05.md",
+      "sha256": "ab5e376e9e93b64abdc98d494058e2c7a1e5887cb3cfaa4fa9c8b02dcbadc56d"
+    }
+  ]
+}

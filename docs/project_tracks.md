@@ -120,7 +120,9 @@ at revision `877e4b51e654e7410f792858e93fee6727d48646`. The package preserves
 the fixed bank and exposes strengths 0–16 with demonstration default 8. Its
 anonymous controls download and isolated GPU replay match the staged runtime
 exactly; the base came from the earlier pinned anonymous-download cache and was
-re-hashed. All five planned Qwen3.8 packages are public and verified.
+re-hashed. All five planned Qwen3.8 packages are public and verified. The
+[final project closeout](../results/qwen38_project_closeout_02.json) records the
+release revisions, unchanged scientific outcomes and completed verification.
 The existing
 [portfolio summary](showcase.md#qwen38-27b-portfolio-summary) provides CV bullets
 and interview wording using completed results.

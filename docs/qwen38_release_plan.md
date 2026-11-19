@@ -13,7 +13,9 @@ bases, independent QASPER/PRL adapters, and the separately registered
 passed exact isolated GPU conformance after anonymous controls download; its
 base was re-hashed from the earlier pinned anonymous-download cache. This
 publication does not upgrade either sarcasm study's null or the PRL quality
-failure. No additional model, retuning or judge run is scheduled.
+failure. No additional model, retuning or judge run is scheduled. The
+[final project closeout](../results/qwen38_project_closeout_02.json) binds the five
+public releases, unchanged outcomes and verification evidence.
 
 The owner selected these formats and tasks, including the grounded-abstract
 objective. This is the implementation plan, not an immutable run registration.

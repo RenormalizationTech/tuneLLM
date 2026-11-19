@@ -13,6 +13,9 @@ These files record completed runs and decisions. Start with the
 | `model_assets/` | Pinned upstream model-file metadata |
 | `refusal_source_licenses/` | Retained source/license evidence |
 
+The [final Qwen3.8 project closeout](qwen38_project_closeout_02.json) binds all five
+public 27B packages, the unchanged study outcomes and public GPU verification.
+
 Useful starting records: [benchmark summary](benchmark_summary.json),
 [physics QLoRA](physics_prl_final.json), [7B refusal transfer](refusal_7b_transfer_01.json),
 [selected benign diagnostic](refusal_7b_benign_transfer_01.json),
