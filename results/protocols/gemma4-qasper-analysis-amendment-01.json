@@ -1,0 +1,59 @@
+{
+  "id": "gemma4-qasper-analysis-amendment-01",
+  "registered_at_utc": "2026-11-20T16:08:09.264664+00:00",
+  "scope": "Reporting-only validation-literal correction; all statistical methods, thresholds, fixtures, model outputs and checkpoint selection unchanged",
+  "reason": "R0 analyzer expected pre-BOS method description although both registered retention runs correctly used native BOS token2",
+  "original_registration": {
+    "path": "results/protocols/gemma4-qasper-01.json",
+    "sha256": "ba1983fdb9e6ca1e11ce9648e69a4c057832d6524b5014cd99cabe3fca4ba9f0"
+  },
+  "sources": {
+    "scripts/gemma4_qasper_closeout_amendment_01.py": "bc95dd9d26285e9e486cfa06b29370ac0b3d089562bc59eb906513cdde2d1f24",
+    "scripts/gemma4_qasper_analysis_amendment_01.py": "78506e39bed434703d2796f5e16e5824e0f01ce1c52124c2ac02450c7b3256b3",
+    "tests/test_gemma4_qasper_analysis_amendment_01.py": "a7daf28c4f21b1818c0dc37513cd193c070079ee7100115c16dbf67396f0bb48"
+  },
+  "review": {
+    "path": "results/reviews/gemma4_qasper_analysis_amendment_review_01.md",
+    "sha256": "f1d5c9b16284ebeaa262ac4d35580a077b6605ce5b9951154c67288ab28e55b0"
+  },
+  "fixed_inputs": {
+    "outputs/gemma4-qasper-study-01/training/registration.json": "3f780de5bcdad9b5954d83bb00d8f74636c14e80e9dc9357e85853ee31bc0f0c",
+    "outputs/gemma4-qasper-study-01/training/result.json": "c601e9e2835f3b5057fc90b61be0ce1dccac61f5ddea94f8a93d344a258705f4",
+    "outputs/gemma4-qasper-study-01/training/longest_row_mechanics.json": "d2f90d7e82ea1996b1a114d2e3af3f0745e1eb09695dbd9dbd35e0ba7bad86af",
+    "outputs/gemma4-qasper-study-01/training/development-00041.json": "36033a5e7a15778c5cbe8a72ace2ecb0db178a23045da16f58c6046841a0f558",
+    "outputs/gemma4-qasper-study-01/training/development-00021.json": "401f552ab99882ac53965eabe6495d100daddfca6eeb8efb0a413e17958b4373",
+    "outputs/gemma4-qasper-study-01/training/development-00061.json": "6f8f5ecf6046b991d3dd83892d7128212218b31fbe7d1ba4b8531f30f0504bdb",
+    "outputs/gemma4-qasper-study-01/prompt-development/registration.json": "66b75527fd1f6c98015f6a18027ae5e8f1b302d7a9afe60347cfb40335fdbe90",
+    "outputs/gemma4-qasper-study-01/prompt-development/result.json": "24085505de0149de5309918582015fef78123965e73a7ebf8a36695a2b4d48ee",
+    "outputs/gemma4-qasper-study-01/prompt-development/predictions.jsonl": "808e27975282011ea336b5e632c96bf7a125dc74dd8e13c4af10fccc5b65c25c",
+    "outputs/gemma4-qasper-study-01/prompt-development/scores.json": "c77aed70acd1f6db05cddef94f6cd06ff793b43d55ef055bf71ca7b7d28e0f06",
+    "outputs/gemma4-qasper-study-01/prompt-development/prompt_selection.json": "512b9abbb2cacda0e8062e7ecbf905f5b114ad47efbb4430ecbcb7d8ed9baeac",
+    "outputs/gemma4-qasper-study-01/final-base/registration.json": "cc5b0b5495d6cf373c519ecb732995078e10a74e88c330d4cc5e7d3261032c93",
+    "outputs/gemma4-qasper-study-01/final-base/result.json": "0a4bc756a5956939a2ea6a9bdd0535b6ffd1dbbe71f695e8dde60989da775411",
+    "outputs/gemma4-qasper-study-01/final-base/predictions.jsonl": "67e6f3c41008c07db1bb41eda1e92cabed22f1ee73f9d66c4d0afd1d74b4beb9",
+    "outputs/gemma4-qasper-study-01/final-base/scores.json": "8e014bb119bfa390860090d6a385b3bbd242be970c5075b80f01d77341bfd3ed",
+    "outputs/gemma4-qasper-study-01/final-adapter/registration.json": "93f9c070d78ad68aac76c54a83e4555c0bf0cae7be9027141efd41f5cfa28ce1",
+    "outputs/gemma4-qasper-study-01/final-adapter/result.json": "544b078b4027d3bea284058d401db9308849fec1650bb3f7b41cbaa22b3b88c8",
+    "outputs/gemma4-qasper-study-01/final-adapter/predictions.jsonl": "bd3af5ab5c3541e5ce7049cf22ff799196db154576f6a7aed9c6f8d7c6472f9e",
+    "outputs/gemma4-qasper-study-01/final-adapter/scores.json": "f4d48ca79c40acc28b713be625d1adb52bc551a5b8b542c288e3e6344fb6b4f5",
+    "outputs/gemma4-qasper-study-01/retention-base/registration.json": "d74319771730c062c8ae58ea44ed0f03f94ca16fb1e93b21afa19eef5de2ddb1",
+    "outputs/gemma4-qasper-study-01/retention-base/result.json": "4a5605490ef5b6a8eef1d8c239922820ffd91ed38917475b5f602d676cf24c78",
+    "outputs/gemma4-qasper-study-01/retention-base/predictions.jsonl": "ef9486054bac6ad9fe7e157f2e5246bbf4f72ad4dfe49412b05d21b79c647796",
+    "outputs/gemma4-qasper-study-01/retention-base/scores.json": "d2837fd4215b3cb554b692b8d11ab1dfac3f9648d946a5925529d7e6ea02d282",
+    "outputs/gemma4-qasper-study-01/retention-adapter/registration.json": "0cb1a3514d901724053a3e4f4ec1e07a79f949fa40cd74a029a131c9a9a0fd62",
+    "outputs/gemma4-qasper-study-01/retention-adapter/result.json": "3fa41c0ae276d9ef037cfdef67a03d5dae9c1aa33af8c2103f3086d5b1f71870",
+    "outputs/gemma4-qasper-study-01/retention-adapter/predictions.jsonl": "529dd51788ca132404355be5b75ba29e92ff4f1d65773585fdff6422f11b7599",
+    "outputs/gemma4-qasper-study-01/retention-adapter/scores.json": "89ce0ab39ecb2db6b0991a48f2a65c07ca5bc5703f6f7ba098ee5e12f2febf55",
+    "outputs/gemma4-qasper-study-01/completion-seal.json": "97aed854a630993bbcd94967da8b56faf24249f5281260ba716b0e0caa73e861",
+    "outputs/gemma4-qasper-study-01/analysis.log": "ba3444d1907474e4c389bf28f125669a0206cb375278d86485e03b279b26535d",
+    "outputs/gemma4-qasper-study-01/pipeline-status.json": "d487d91b7bed3d52beae2c3015b1970f5f8669b4c78ae3d41dfc4fbd3347dbe7",
+    "results/protocols/gemma4-qasper-01.json": "ba1983fdb9e6ca1e11ce9648e69a4c057832d6524b5014cd99cabe3fca4ba9f0",
+    "outputs/gemma4-qasper-study-01/prompt_alias.json": "83d201c779ea854b25f0fb5f3c3aef47776c0dad2cc1494ab76eafafb5a5736e"
+  },
+  "before": "sum full-answer conditional log probabilities; raw concept prompt",
+  "after": "sum full-answer conditional log probabilities; native BOS + raw concept prompt",
+  "final_scores_inspected_by_PM_before_amendment": false,
+  "analysis_output": "outputs/gemma4-qasper-study-01/analysis-amendment-01.json",
+  "canonical_output": "results/gemma4_qasper_final_01.json",
+  "no_new_GPU_work": true
+}
