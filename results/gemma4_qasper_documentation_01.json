@@ -1,0 +1,81 @@
+{
+  "recorded_at_utc": "2026-11-20T17:27:18.228506+00:00",
+  "status": "documentation_and_recorded_demo_verified_locally",
+  "source_commit": "331866662c6e44b0bd0762fc3290ba79a9a860a2",
+  "scope": "Current Gemma QASPER results/usage, public release catalog and recorded demonstration; local presentation checks before Pages deployment. Functional release GPU verification is separate.",
+  "new_model_or_judge_calls_for_documentation": 0,
+  "public_adapter": {
+    "repo_id": "RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA",
+    "revision": "b3ca7a48aa6a95245c5778e2c2473d8129f58bbb",
+    "release_manifest_sha256": "4e06c0de10fd97b262bd032f34bc6481fa0d27fbd138b301befbc05e2cb8bdac"
+  },
+  "public_verification_receipt": "results/gemma4_qasper_public_verification_01.json",
+  "public_verification_receipt_sha256": "a996a7820832e5346d3d5dce34c82b266e2491cc317affb68b4688211328c75a",
+  "canonical_result_sha256": "a149de809997eb8ec18b670a4c1d32eca13edf014bd07fc28333abad3d50b39f",
+  "source_files_sha256": {
+    "README.md": "1efbb7467ef9835fd35d996aa080199e1edf922a665a7f51a1bc61eeb8c71636",
+    "docs/gemma4_qasper_results.md": "2f43ea812b065f5d13410fbb7679c385a52cb3e25de10022e7bf9e176af4cacf",
+    "docs/reproduce.md": "47063a9fd9f501c7292741ee51f1c7ec59a4b66a154c2c192a5545a489a5f912",
+    "docs/index.md": "b8f0fdb85ad7119a90c3b7e179e40eb0f88a33b2f624219aa5ea9e1c2ed9666f",
+    "docs/project_tracks.md": "aa7e2a7f401bedb0d0a51e36ef3211079bd6c12d6946d246b1993eb419c98bea",
+    "docs/showcase.md": "3e576f7002f7b1ae5068388eec21f2317d27d8458b8dacfcc7d33ed267bbd114",
+    "docs/short_demonstration.md": "bc8e171d9011b51be869c97a13d346a4c096f92a9c5f382d759a020ae142113a",
+    "docs/assets/short_demonstration.json": "f77e55acdccd913bcdcbdf79025dd031b0dedb1eda64b66d3a7a5fbad7c0383e",
+    "docs/stylesheets/short_demonstration.css": "c9b2470b1862339981a51eb62b37290944d0f663bec396c353f93c391352b4d6",
+    "docs/javascripts/short_demonstration.js": "b4d79c33bc4a9c076fe659fe295370bc616eae17c1115b43738d5ed62748a0e7",
+    "scripts/README.md": "171bb8c1aecf2482d506824bd99442f769cc249805a1865aab18ef77a3ecd949",
+    "scripts/docs_hooks.py": "2eb8cf06dad26513eb11667f3398a642c03552350692796e0af24b681f02bc5c",
+    "scripts/build_short_demonstration.py": "c82284d6323147c04bf3c739111d2e1e5b4deeac1f7e2d98ea1f066dba271174",
+    "scripts/gemma4_recorded_demonstration.py": "9b23524637d01972f3b8966dfbde583867bce6b8a24309b4033bc9c099ef5f8d",
+    "tests/test_docs_site.py": "7ec8dd3bac79bcc776eb9abf8d348973200b5aa30aa29cc627f760bd869a4dbd",
+    "tests/test_short_demonstration.py": "c2c523cd8255e746cb40eec7867a10173a194d7404373fcd7742cbe62fdc6532",
+    "releases/README.md": "b565db63d64e81f217954e0f2755a78f9d5a5224222cd89cf63c0771d7971f62",
+    "releases/catalog.json": "7f8dcc7755646cb9deee9e3656adfb761d9955dafaadee4daab31b1b018ca028"
+  },
+  "prior_receipt_unchanged_sha256": {
+    "results/short_demonstration_01.json": "47c576a5b2ecabc9be5bbf82062e0d34e20f1e8e05d2a5ef95ca36272310c72e"
+  },
+  "selection": {
+    "QASPER_id": "1603.03876::47ffc9811b037613c9c4d1ec1e4f13c08396ed1c",
+    "rule": "Same question selected for Qwen before Gemma evaluation; no Gemma output or metric filtering",
+    "prior_qwen_and_sarcasm_objects_unchanged": true,
+    "gemma_recorded_answers_scores_and_selection_unchanged_during_release_link_update": true,
+    "attribution_retained": true
+  },
+  "validation": {
+    "local_docs_tests_passed": 23,
+    "clean_checkout_docs_tests_passed": 22,
+    "clean_checkout_artifact_regeneration_skipped": 1,
+    "clean_checkout": "Detached committed source without private run artifacts",
+    "strict_build_passed": true,
+    "html_pages": 126,
+    "internal_links_checked": 20124,
+    "broken_internal_links": 0,
+    "browser_checks": {
+      "gemma_raw_recorded_text_exact": true,
+      "existing_sarcasm_controls_preserved": true,
+      "desktop_tablet_mobile_no_overflow": true,
+      "gemma_results_page_and_current_nav": true,
+      "no_JS_all_recordings_available": true,
+      "JSON_failure_retains_complete_static_examples": true
+    },
+    "browser_page_errors": [],
+    "viewports_checked": [
+      1440,
+      768,
+      390,
+      375
+    ],
+    "screenshots_visually_inspected": [
+      1440,
+      390
+    ]
+  },
+  "release_scope": "Fresh anonymous adapter download and isolated offline equality with local package. The pinned Google base cache was reused and content-hash verified; no fresh full-base download claimed.",
+  "public_package_count": 11,
+  "planned_public_pages": [
+    "https://renormalizationtech.github.io/tuneLLM/gemma4_qasper_results/",
+    "https://renormalizationtech.github.io/tuneLLM/short_demonstration/"
+  ],
+  "deployment_scope": "Local checks recorded here; the commit-specific GitHub Actions/Pages runs provide deployment status."
+}
