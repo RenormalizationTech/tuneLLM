@@ -109,6 +109,15 @@ gradient-equivalence claim is made. The
 [source/mechanics review](../results/reviews/gemma4_qasper_source_review_01.md)
 retain the failed early check and the validation redesign before training.
 
+## Use the adapter
+
+Release verification is in progress. The verified adapter revision, manifest
+hash and tested download/loading commands will be recorded here and in the
+[release catalog](../releases/README.md) when the public checks are complete.
+The scientific results above are complete; inference-package verification is
+a separate check. The package will contain the adapter and its local helper;
+obtain the pinned Google base separately. It does not retrieve papers.
+
 ## Evidence, correction and scope
 
 The [original registration](../results/protocols/gemma4-qasper-01.json) preceded
