@@ -157,6 +157,31 @@ The release cards retain the failed strict cache-equivalence result and the
 fixed-subset/AI-judgment limitations. The separate 27B sarcasm study is complete;
 the completed QLoRA and quantization runs stay frozen.
 
+## Gemma 4 31B QASPER
+
+The [Gemma QASPER study](gemma4_qasper_results.md) is complete. It uses the
+official Google revision `842da3794eaa0b77d5f08bae87a17459d91ff475`, loaded as
+the text-only `Gemma4ForCausalLM`, with on-load NF4/double quantization. This
+is a separate base and loader from the saved Qwen NF4 artifact above.
+
+The studied inference route retains PEFT's FP32 preparation, outer BF16
+autocast, SDPA, batch one, greedy cached decoding, repetition penalty 1.0 and
+native stop tokens 1/106. It uses Gemma's no-thinking chat prefix. The numbered
+paper context and question must fit within the 8,192-token total envelope,
+including the 512-token QASPER output allowance. Vision inputs were excluded.
+Use the release's tested local helper once its verification is complete;
+loading only a generic model class does not reproduce the text-key mapping
+or precision choices.
+
+The [registered study](../results/protocols/gemma4-qasper-01.json),
+[source/mechanics review](../results/reviews/gemma4_qasper_source_review_01.md),
+[analysis correction](../results/protocols/gemma4-qasper-analysis-amendment-01.json)
+and [final audit](../results/reviews/gemma4_qasper_final_audit_review_02.md)
+describe the preserved execution. The original pipeline's reporting-label
+failure remains part of that history. A clean checkout has compact evidence,
+not the original training inputs, optimizer states or generated-answer files.
+Do not overwrite a historical run directory to retrain the model.
+
 ## Completed 27B sarcasm workflow
 
 The [execution record](qwen38_sarcasm_execution.md) and

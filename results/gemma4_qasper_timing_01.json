@@ -1,0 +1,45 @@
+{
+  "id": "gemma4-qasper-timing-01",
+  "scope": "Elapsed time of GPU-assigned jobs, including loading/IO and recorded idle resident context; not exclusive-device or kernel-only GPU benchmarks",
+  "jobs": {
+    "training": {
+      "elapsed_seconds": 17409.988562107086,
+      "gpu_assigned_elapsed_hours": 4.836107933918635,
+      "source_result_sha256": "c601e9e2835f3b5057fc90b61be0ce1dccac61f5ddea94f8a93d344a258705f4"
+    },
+    "prompt_development": {
+      "elapsed_seconds": 2759.8614225387573,
+      "gpu_assigned_elapsed_hours": 0.7666281729274326,
+      "source_result_sha256": "24085505de0149de5309918582015fef78123965e73a7ebf8a36695a2b4d48ee"
+    },
+    "final_base": {
+      "elapsed_seconds": 10801.550282001495,
+      "gpu_assigned_elapsed_hours": 3.0004306338893043,
+      "source_result_sha256": "0a4bc756a5956939a2ea6a9bdd0535b6ffd1dbbe71f695e8dde60989da775411"
+    },
+    "final_adapter": {
+      "elapsed_seconds": 6722.00674033165,
+      "gpu_assigned_elapsed_hours": 1.8672240945365695,
+      "source_result_sha256": "544b078b4027d3bea284058d401db9308849fec1650bb3f7b41cbaa22b3b88c8"
+    },
+    "retention_base": {
+      "elapsed_seconds": 7759.932918310165,
+      "gpu_assigned_elapsed_hours": 2.1555369217528235,
+      "source_result_sha256": "4a5605490ef5b6a8eef1d8c239922820ffd91ed38917475b5f602d676cf24c78"
+    },
+    "retention_adapter": {
+      "elapsed_seconds": 10712.37520122528,
+      "gpu_assigned_elapsed_hours": 2.9756597781181338,
+      "source_result_sha256": "3fa41c0ae276d9ef037cfdef67a03d5dae9c1aa33af8c2103f3086d5b1f71870"
+    }
+  },
+  "sum_gpu_assigned_elapsed_hours": 15.6015875351429,
+  "wall_hours_through_original_analysis_stop": 8.9571868288517,
+  "wall_start_utc": "2026-11-20T00:59:46.071406+00:00",
+  "wall_end_utc": "2026-11-20T09:57:11.943990+00:00",
+  "later_CPU_only_analysis_correction_excluded": true,
+  "registration_sha256": "ba1983fdb9e6ca1e11ce9648e69a4c057832d6524b5014cd99cabe3fca4ba9f0",
+  "completion_seal_sha256": "97aed854a630993bbcd94967da8b56faf24249f5281260ba716b0e0caa73e861",
+  "launch_receipt_sha256": "4da8333cd08e78f0d3308bfee8a70b0143973e1d2fd9cf8a66709700cd1b699a",
+  "original_pipeline_status_sha256": "d487d91b7bed3d52beae2c3015b1970f5f8669b4c78ae3d41dfc4fbd3347dbe7"
+}

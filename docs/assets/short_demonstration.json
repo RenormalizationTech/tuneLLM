@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "mode": "RECORDED",
   "new_model_or_quality_calls": 0,
   "description": "Small frozen selections from completed experiments, not live inference or a representative sample.",
@@ -332,9 +332,127 @@
         "sha256": "2a7d6f71ac6ece57f6c319580fa5239a683838ef8a84d097961516ed9c4b6f96"
       }
     },
-    "builder_sha256": "b118bd9050128062f7b278f174fedfeeb43a3d4a4e33f75b3603038cacbb3fd6",
+    "builder_sha256": "c82284d6323147c04bf3c739111d2e1e5b4deeac1f7e2d98ea1f066dba271174",
     "row_hash_encoding": "UTF-8 JSON, sorted keys, ensure_ascii=False, allow_nan=False, compact separators.",
     "privacy": "Only selected text, scalar scores and hashes are exported. Full local artifacts and raw judge journals are not included.",
-    "selection_role": "Post-hoc editorial illustration with deterministic readability/ID rules; no statistical or causal claims from these examples."
+    "selection_role": "Post-hoc editorial illustration with deterministic readability/ID rules; no statistical or causal claims from these examples.",
+    "gemma_builder_sha256": "9b23524637d01972f3b8966dfbde583867bce6b8a24309b4033bc9c099ef5f8d"
+  },
+  "gemma_qasper": {
+    "model": "Gemma 4 31B IT",
+    "record_id": "1603.03876::47ffc9811b037613c9c4d1ec1e4f13c08396ed1c",
+    "arms": [
+      {
+        "arm": "base",
+        "label": "Unadapted Gemma base",
+        "recorded_output": "```json\n{\n \"answer\": \"The researchers used the PDTB 2.0 (Penn Discourse Treebank) corpus, which contains discourse annotations over 2,312 Wall Street Journal articles.\",\n \"unanswerable\": false,\n \"evidence\": [\n  \"p000055\"\n ]\n}\n```",
+        "scores": {
+          "strict": {
+            "valid": false,
+            "answer_f1": 0.0,
+            "evidence_f1": 0.0,
+            "source_score_row_sha256": "e2ad67584fb5bec3a69d1ce71694de4075083e46eb03d639ae87285ab6001166"
+          },
+          "lenient": {
+            "valid": true,
+            "answer_f1": 0.2,
+            "evidence_f1": 1.0,
+            "source_score_row_sha256": "b4332b95336152f0adde95033f697b9012916752e7e2863c7c1a39ba3423b3d6"
+          }
+        },
+        "cap_hit": false,
+        "generated_tokens": 74,
+        "source_row_sha256": "77c9115a3111225023ef2afa6024ff1ca01a6081fdd0189da3512b856c41316f",
+        "source_prediction_file_sha256": "67e6f3c41008c07db1bb41eda1e92cabed22f1ee73f9d66c4d0afd1d74b4beb9",
+        "source_score_file_sha256": "8e014bb119bfa390860090d6a385b3bbd242be970c5075b80f01d77341bfd3ed"
+      },
+      {
+        "arm": "adapter",
+        "label": "Gemma QASPER QLoRA adapter",
+        "recorded_output": "{\"answer\":\"PDTB 2.0\",\"evidence\":[\"p000055\"],\"unanswerable\":false}",
+        "scores": {
+          "strict": {
+            "valid": true,
+            "answer_f1": 1.0,
+            "evidence_f1": 1.0,
+            "source_score_row_sha256": "e98f95d91e61dd3d8a1e243ef1d61cad272c371778a8df2d15c8a7dd2a007812"
+          },
+          "lenient": {
+            "valid": true,
+            "answer_f1": 1.0,
+            "evidence_f1": 1.0,
+            "source_score_row_sha256": "e98f95d91e61dd3d8a1e243ef1d61cad272c371778a8df2d15c8a7dd2a007812"
+          }
+        },
+        "cap_hit": false,
+        "generated_tokens": 27,
+        "source_row_sha256": "5b88a699b349760490566808690f893c422cb1158ef1a2a84109b669205305dc",
+        "source_prediction_file_sha256": "bd3af5ab5c3541e5ce7049cf22ff799196db154576f6a7aed9c6f8d7c6472f9e",
+        "source_score_file_sha256": "f4d48ca79c40acc28b713be625d1adb52bc551a5b8b542c288e3e6344fb6b4f5"
+      }
+    ],
+    "release": null,
+    "prompt_alias": "Development selection tied at strict F1 zero and chose base; prompted is an alias, not an additional generation.",
+    "aggregate": {
+      "n": 309,
+      "scores": {
+        "base": {
+          "strict": {
+            "answer_f1": 0.0,
+            "evidence_f1": 0.0
+          },
+          "lenient": {
+            "answer_f1": 0.33380301366781717,
+            "evidence_f1": 0.7232488625878738
+          }
+        },
+        "adapter": {
+          "strict": {
+            "answer_f1": 0.6400835382852015,
+            "evidence_f1": 0.7139216652119054
+          },
+          "lenient": {
+            "answer_f1": 0.6400835382852015,
+            "evidence_f1": 0.7171579111665979
+          }
+        }
+      },
+      "all_fixed_gates_pass": true,
+      "lenient_gain_ci95": [
+        0.25129910186111104,
+        0.3616834722173143
+      ]
+    },
+    "selection": {
+      "rule": "Same ID already fixed for the Qwen demo before Gemma evaluation; no Gemma score or output filtering.",
+      "prior_selection_receipt_sha256": "47c576a5b2ecabc9be5bbf82062e0d34e20f1e8e05d2a5ef95ca36272310c72e",
+      "source_input_row_sha256": "6d8f1a1ae4ad620e78129507fd842e70f6e7afe19d926e45b189204935c09884"
+    },
+    "provenance": {
+      "canonical_result_sha256": "a149de809997eb8ec18b670a4c1d32eca13edf014bd07fc28333abad3d50b39f",
+      "public_sources": {
+        "results/gemma4_qasper_final_01.json": {
+          "url": "https://github.com/RenormalizationTech/tuneLLM/blob/9323a83cef3f83901b31320a2bc6a3fc0a6f7ae2/results/gemma4_qasper_final_01.json",
+          "sha256": "a149de809997eb8ec18b670a4c1d32eca13edf014bd07fc28333abad3d50b39f"
+        },
+        "results/protocols/gemma4-qasper-01.json": {
+          "url": "https://github.com/RenormalizationTech/tuneLLM/blob/7bc286679923be9ba6183213433cbcadbf3868e4/results/protocols/gemma4-qasper-01.json",
+          "sha256": "ba1983fdb9e6ca1e11ce9648e69a4c057832d6524b5014cd99cabe3fca4ba9f0"
+        },
+        "results/protocols/gemma4-qasper-analysis-amendment-01.json": {
+          "url": "https://github.com/RenormalizationTech/tuneLLM/blob/ff0d7b8d7f861fd7a9c150b69336ebed803b1d96/results/protocols/gemma4-qasper-analysis-amendment-01.json",
+          "sha256": "29f41ff850a58d1ca5d23e6e443253d7341cc2ec84c4079776813a0a270862b2"
+        },
+        "results/reviews/gemma4_qasper_final_audit_review_02.md": {
+          "url": "https://github.com/RenormalizationTech/tuneLLM/blob/9323a83cef3f83901b31320a2bc6a3fc0a6f7ae2/results/reviews/gemma4_qasper_final_audit_review_02.md",
+          "sha256": "06beb0963a76ffd97ac6cbfe893d1f50b43c5151f2fa1841cd0ad11d8225e501"
+        },
+        "results/short_demonstration_01.json": {
+          "url": "https://github.com/RenormalizationTech/tuneLLM/blob/4c55c72a40c99304f34873d13c42f9184d1d9608/results/short_demonstration_01.json",
+          "sha256": "47c576a5b2ecabc9be5bbf82062e0d34e20f1e8e05d2a5ef95ca36272310c72e"
+        }
+      }
+    },
+    "attribution": "Same attributed QASPER question, reference and numbered paper context displayed in the Qwen section above; Gemma answers are recorded model output."
   }
 }

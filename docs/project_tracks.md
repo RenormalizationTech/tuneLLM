@@ -1,6 +1,6 @@
 # Project status and next steps
 
-Updated 2026-11-19. This is the current roadmap. The
+Updated 2026-11-20. This is the current roadmap. The
 [earlier roadmap](project_tracks_history.md) preserves previous plans and status
 statements; frozen protocols and results retain their original conclusions.
 
@@ -14,12 +14,13 @@ controllers are deferred.
 
 ## Completed work
 
-The [short demonstration](short_demonstration.md) presents recorded QASPER and
-tunable-sarcasm examples without requiring a GPU. The separately authorized
-[Gemma 4 31B preflight](gemma4_preflight.md) passed tokenizer, full-length
-synthetic QLoRA and fresh-reload checks on one A6000. **The next decision is
-whether to train a Gemma QASPER adapter, then consider PRL.** No Gemma task
-training or final evaluation is queued; these mechanics do not establish quality.
+The [short demonstration](short_demonstration.md) presents recorded Qwen and
+Gemma QASPER answers on the same paper question, plus tunable-sarcasm examples,
+without requiring a GPU. The [Gemma 4 31B QASPER study](gemma4_qasper_results.md)
+is complete: the adapter passes every registered task and retention gate.
+Lenient Answer F1 improved from 0.334 to 0.640; the strict baseline was a format
+floor. Adapter packaging and release verification are in progress. **The next
+study decision is whether to proceed with Gemma PRL.**
 
 | Track | Status and evidence |
 | --- | --- |
@@ -143,8 +144,9 @@ evidence remains retained. The earlier bounded 27B quantization, QLoRA and
 sarcasm studies, including the separately registered instruction-activation
 and stronger-GCAD follow-up, plus the experimental tunable-controls release, are
 complete. The Qwen3.8 extension is closed. The recorded demonstration and separate
-Gemma feasibility preflight are complete; the Gemma task-training decision remains
-open. No additional Qwen model or judge run is scheduled.
+Gemma feasibility preflight are complete. The Gemma QASPER study is also complete,
+with its release being verified; Gemma PRL remains a separate decision. No
+additional Qwen model or judge run is scheduled.
 
 ## Where to look
 

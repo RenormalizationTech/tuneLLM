@@ -11,6 +11,9 @@ Qwen2.5-7B-Instruct examine compression, adaptation and inference-time behavior
 control, with explicit baselines and response-quality measurements. Mistral-7B-Instruct-v0.1
 provides a SAPS reference; Qwen3.8-27B adds evaluated base exports, two completed
 scientific-task QLoRA studies and a completed bounded sarcasm-steering study.
+Gemma 4 31B adds a completed QASPER QLoRA study with registered task and
+retention checks; its [results and format-compliance limits](docs/gemma4_qasper_results.md)
+are reported separately from the Qwen work.
 
 The goal is to demonstrate practical LLM research: implement methods, reproduce
 results, compare alternatives and explain limitations. Positive effects, failed

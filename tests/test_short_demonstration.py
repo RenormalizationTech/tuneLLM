@@ -24,6 +24,10 @@ PRIVATE_REGENERATION_ARTIFACTS=(
     'outputs/qwen38-sarcasm-followup-01/judge/trait.json',
     'outputs/qwen38-sarcasm-followup-01/judge/coherence.json',
     'outputs/qwen38-sarcasm-followup-01/judge/impolite.json',
+    'outputs/gemma4-qasper-study-01/final-base/predictions.jsonl',
+    'outputs/gemma4-qasper-study-01/final-base/scores.json',
+    'outputs/gemma4-qasper-study-01/final-adapter/predictions.jsonl',
+    'outputs/gemma4-qasper-study-01/final-adapter/scores.json',
 )
 
 
@@ -119,3 +123,39 @@ def test_browser_viewer_is_local_static_text_only():
     assert js.count('fetch(')==1
     assert 'WebSocket' not in js and 'POST' not in js
     assert "fallback.open = true" in js
+
+
+def test_gemma_reuses_preexisting_question_and_copies_saved_scoring(data):
+    gemma=data['gemma_qasper']
+    assert data['schema_version']==2
+    assert gemma['record_id']==data['qasper']['record_id']
+    assert gemma['selection']['source_input_row_sha256']==data['qasper']['selection']['source_input_row_sha256']
+    assert gemma['selection']['prior_selection_receipt_sha256']==demo.sha(demo.ROOT/'results/short_demonstration_01.json')
+    base,adapter=gemma['arms']
+    assert base['recorded_output'].startswith('```json')
+    assert base['scores']['strict']['valid'] is False
+    assert base['scores']['lenient']['valid'] is True
+    assert base['scores']['strict']['answer_f1']==0
+    assert base['scores']['lenient']['answer_f1']==.2
+    assert adapter['scores']['strict']['answer_f1']==1
+    assert adapter['scores']['lenient']['answer_f1']==1
+    assert not base['cap_hit'] and not adapter['cap_hit']
+
+
+def test_gemma_aggregates_match_canonical_and_do_not_claim_model_ranking(data):
+    result=json.loads((demo.ROOT/'results/gemma4_qasper_final_01.json').read_text())
+    gemma=data['gemma_qasper'];aggregate=gemma['aggregate']
+    assert aggregate['all_fixed_gates_pass']==result['all_fixed_task_and_retention_gates_pass']
+    for arm in ['base','adapter']:
+        for mode in ['strict','lenient']:
+            for metric in ['answer_f1','evidence_f1']:
+                assert aggregate['scores'][arm][mode][metric]==result['arms'][arm][mode]['primary'][metric]
+    assert aggregate['lenient_gain_ci95']==result['analysis']['bootstrap']['lenient']['base']['ci95']
+    page=demo.render_page(data)
+    assert 'Evidence superiority was not established' in page
+    assert 'Gemma-versus-Qwen ranking' in page
+    for arm in gemma['arms']:assert demo.esc(arm['recorded_output']) in page
+    bad=copy.deepcopy(data);bad['gemma_qasper']['arms'][0]['recorded_output']='<img src=x onerror=alert(1)>'
+    rendered=demo.render_page(bad)
+    assert '<img src=x onerror=alert(1)>' not in rendered
+    assert '&lt;img src=x onerror=alert(1)&gt;' in rendered

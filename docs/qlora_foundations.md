@@ -8,7 +8,8 @@ runtime precision jointly determine the adaptation being evaluated.
 The formulation uses the [shared loss and gradient notation](learning_foundations.md)
 and [quantized reconstruction model](quantization_foundations.md).
 Implementation choices and empirical outcomes are documented in the
-[workflow](model_workflow.md) and [27B task results](qwen38_qlora_results.md).
+[workflow](model_workflow.md), [27B task results](qwen38_qlora_results.md), and
+[Gemma 4 31B QASPER results](gemma4_qasper_results.md).
 
 ## A low-rank weight update
 

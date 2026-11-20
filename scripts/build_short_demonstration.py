@@ -12,6 +12,8 @@ from pathlib import Path
 import re
 import subprocess
 
+from scripts import gemma4_recorded_demonstration as gemma_demo
+
 ROOT=Path(__file__).resolve().parents[1]
 ASSET=ROOT/'docs/assets/short_demonstration.json'
 PAGE=ROOT/'docs/short_demonstration.md'
@@ -174,7 +176,7 @@ def build_data():
     qasper=extract_qasper();sarcasm=extract_sarcasm()
     controls=read(ROOT/'results/qwen38_sarcasm_public_verification_01.json')
     qasper_release=read(ROOT/'results/qwen38_qasper_public_verification_01.json')
-    data={'schema_version':1,'mode':'RECORDED','new_model_or_quality_calls':0,
+    data={'schema_version':2,'mode':'RECORDED','new_model_or_quality_calls':0,
         'description':'Small frozen selections from completed experiments, not live inference or a representative sample.',
         'qasper':qasper,'sarcasm':sarcasm,
         'releases':{'sarcasm':{k:controls[k] for k in ['repo_id','revision','base_repo','base_revision','release_manifest_sha256']},
@@ -183,6 +185,8 @@ def build_data():
             'builder_sha256':sha(__file__),'row_hash_encoding':'UTF-8 JSON, sorted keys, ensure_ascii=False, allow_nan=False, compact separators.',
             'privacy':'Only selected text, scalar scores and hashes are exported. Full local artifacts and raw judge journals are not included.',
             'selection_role':'Post-hoc editorial illustration with deterministic readability/ID rules; no statistical or causal claims from these examples.'}}
+    data['gemma_qasper']=gemma_demo.extract(qasper,public_source)
+    data['provenance']['gemma_builder_sha256']=sha(gemma_demo.__file__)
     validate_story(data);privacy_check(data)
     if before!={n:sha(ROOT/n) for n in source_names}:raise ValueError('canonical source changed during extraction')
     return data
@@ -223,6 +227,7 @@ def gate_label(gates):
 def render_page(data):
     validate_story(data)
     q=data['qasper'];s=data['sarcasm'];e=q['evidence'];reference=q['reference'];release=data['releases']['sarcasm']
+    gemma_section=gemma_demo.render(data['gemma_qasper']) if 'gemma_qasper' in data else ''
     qcards=[]
     for r in q['arms']:
         ids=', '.join(r['evidence_ids']) or 'None'
@@ -245,21 +250,24 @@ def render_page(data):
 <link rel="stylesheet" href="../stylesheets/short_demonstration.css">
 
 <div class="short-demo" data-demo-url="../assets/short_demonstration.json">
-<div class="sd-hero"><p class="sd-eyebrow">RECORDED EXAMPLES · 4-MINUTE WALKTHROUGH · NO GPU NEEDED</p>
-<p class="sd-lede">One base model. Two ways to change its answers.</p>
-<p>Compare a task adapter with a prompt, then switch between five recorded steering strengths.
+<div class="sd-hero"><p class="sd-eyebrow">RECORDED EXAMPLES · 5-MINUTE WALKTHROUGH · NO GPU NEEDED</p>
+<p class="sd-lede">Two model families. Task adapters and an inference control.</p>
+<p>Compare recorded Qwen and Gemma task-adapter examples, then switch between five recorded steering strengths.
 Every answer below is saved experiment output. This page never runs a model, sends a prompt, or calls a judge.</p>
-<div class="sd-jumps"><a href="#qasper-a-task-adapter">1 · Paper question answering</a><a href="#sarcasm-an-inference-control">2 · Sarcasm controls</a><a href="#sources-and-selection">Sources and selection</a></div></div>
+<div class="sd-jumps"><a href="#qasper-a-task-adapter">1 · Qwen paper QA</a><a href="#gemma-qasper-the-same-recorded-question">2 · Gemma paper QA</a><a href="#sarcasm-an-inference-control">3 · Sarcasm controls</a><a href="#sources-and-selection">Sources and selection</a></div></div>
 </div>
 
-## A 3–5 minute walkthrough
+## A five-minute walkthrough
 
-1. **0:00–0:30 — Check the label.** These are recorded, post-hoc illustrations from completed releases, not a live inference demo or a representative sample.
-2. **0:30–1:45 — Read the paper question.** Compare all three answers with the same reference and evidence. The adapter changes model behavior through trained low-rank weights.
-3. **1:45–3:30 — Try strengths 0, 4, 8 and 16.** The question stays fixed. Notice sarcasm, coherence, impoliteness and the retained 160-token cutoffs. GCAD changes activations during generation; base weights stay frozen.
-4. **3:30–4:00 — Separate the example from the result.** QASPER passed its custom task gates. No tested sarcasm strength passed every gate. The releases and optional real CLI are linked below.
+1. **0:00–0:30 — Check the label.** These are recorded, post-hoc illustrations from completed studies, not a live inference demo or a representative sample.
+2. **0:30–1:45 — Read the Qwen paper question.** Compare all three answers with the same reference and evidence. The adapter changes model behavior through trained low-rank weights.
+3. **1:45–2:45 — Compare Gemma on that same question.** Separate the baseline's format failure from its answer content; both strict and lenient scores are shown.
+4. **2:45–4:15 — Try strengths 0, 4, 8 and 16.** The question stays fixed. Notice sarcasm, coherence, impoliteness and the retained 160-token cutoffs. GCAD changes activations during generation; base weights stay frozen.
+5. **4:15–5:00 — Separate the examples from the results.** Both QASPER adapters passed their custom task gates. No tested sarcasm strength passed every gate. This page does not rank the model families.
 
 ## QASPER: a task adapter
+
+**Qwen3.8-27B**, using the same numbered paper context in all three arms.
 
 <div class="short-demo"><div class="sd-question"><p class="sd-eyebrow">SAME QUESTION · SAME NUMBERED PAPER CONTEXT</p>
 <h3>{esc(q['question'])}</h3><p>Paper: <a href="{esc(q['paper']['url'])}">{esc(q['paper']['title'])}</a></p></div>
@@ -273,7 +281,7 @@ Every answer below is saved experiment output. This page never runs a model, sen
 
 **Across the registered primary subset, n=309:** Answer F1 was **{q['aggregate']['strict_primary_answer_f1']['base']:.3f}** for the base, **{q['aggregate']['strict_primary_answer_f1']['prompt']:.3f}** for the selected prompt, and **{q['aggregate']['strict_primary_answer_f1']['adapter']:.3f}** for the adapter. QASPER passed its registered task and retention gates within this custom text-only scope. This is not a full official QASPER benchmark or a claim of general scientific comprehension. See the [full QLoRA results](qwen38_qlora_results.md).
 
-## Sarcasm: an inference control
+{gemma_section}## Sarcasm: an inference control
 
 <div class="short-demo" id="recorded-sarcasm" data-recorded-sarcasm data-demo-url="../assets/short_demonstration.json">
 <div class="sd-question"><p class="sd-eyebrow">SAME QUESTION AT EVERY STRENGTH · RECORDED {esc(s['question_id'])}</p><h3>{esc(s['question'])}</h3></div>
@@ -314,6 +322,7 @@ For actual paper QA, use the separate [published QASPER adapter](https://hugging
 
 - **QASPER:** {q['selection']['eligible_records']} records pass fixed readability/format filters: primary and evidence-strict; first reference ≤200 characters with one supporting paragraph ≤120 words; question ≤160 characters; all three saved answers valid JSON and ≤420 characters. The lexicographically first ID is `{q['record_id']}`. **No score-value or improvement filter was used.** One selected example is not representative evidence.
 - **Sarcasm:** `{s['question_id']}` is the first registered fresh question, selected by ID. All five requested strengths 0/2/4/8/16 are retained without score or output filtering. Scores are copied from completed scalar score files; no raw judge journals are published.
+- **Gemma QASPER:** the previously selected Qwen question ID is reused without a Gemma readability or score filter. Raw model text and strict/lenient per-item metrics are copied from the hash-bound saved study files. The development-selected prompt is an alias of the baseline. The [audited result](../results/gemma4_qasper_final_01.json) and [independent audit](../results/reviews/gemma4_qasper_final_audit_review_02.md) retain the format-floor interpretation.
 - **Attribution:** QASPER v0.3, Dasigi et al. (2021), [pinned dataset source]({q['attribution']['dataset_url']}), [dataset paper]({q['attribution']['dataset_paper_url']}), [CC BY 4.0]({q['attribution']['license_url']}). The selected paper and verbatim excerpt are attributed above; annotations, model text and project paragraph IDs are distinguished. Sarcasm uses [project-authored questions]({s['attribution']['fixture_url']}) and recorded model outputs; [repository licence]({s['attribution']['license_url']}).
 - **Provenance:** [Frozen demo JSON](assets/short_demonstration.json) contains source-file and source-row SHA256 hashes, pinned public result links, exact selected text and scalar scores. Row hashes use canonical UTF-8 JSON. Full local generation artifacts remain local; no token arrays, private paths, judge sessions or credentials are included.
 
@@ -334,7 +343,7 @@ def main():
     write_owned(PAGE,render_page(data),args.refresh_owned)
     print(json.dumps({'recorded_demo':'built','qasper_record':data['qasper']['record_id'],'qasper_eligible':data['qasper']['selection']['eligible_records'],
         'sarcasm_question':data['sarcasm']['question_id'],'JSON_sha256':sha(ASSET),'model_or_quality_calls':0,
-        'integration_needed':'Owner adds short_demonstration.md to Start here in docs_hooks.py; shared navigation is untouched.'},indent=2))
+        'navigation':'Existing Start here entry; no additional demonstration sidebar pages.'},indent=2))
 
 
 if __name__=='__main__':main()

@@ -6,6 +6,24 @@ physics abstract adaptation failed the writing-quality gates. Earlier activation
 studies show measurable style/refusal changes alongside usefulness and coherence
 costs. Fixed baselines and unsuccessful settings are retained throughout.
 
+## Gemma 4 31B QASPER
+
+The [Gemma QASPER adapter](gemma4_qasper_results.md) passes its registered task
+and retention gates on the reused 309-question primary subset. Strict Answer F1
+is 0.000 → 0.640, but all 403 baseline outputs were fenced: this strict comparison
+contains a large format-compliance component. The lenient diagnostic also
+improves, **0.334 → 0.640**, with paired paper-bootstrap gain interval
+**[0.251, 0.362]**. Evidence superiority was not established. This is a
+within-model adaptation result, not a general Gemma-versus-Qwen ranking.
+
+General MC retention changed 108 → 105 correct out of 128; GSM8K numeric fallback
+stayed 126/128 and IFEval strict stayed 26/32. All pass the fixed point-estimate
+loss limits, which are not non-inferiority tests. One configuration, one seed, 61 optimizer
+steps and development checkpoint selection were used. The
+[audited closeout](../results/gemma4_qasper_final_01.json) preserves the
+reporting-only correction, and the [recorded demonstration](short_demonstration.md#gemma-qasper-the-same-recorded-question)
+uses the question ID chosen for Qwen before Gemma evaluation.
+
 ## Qwen3.8-27B portfolio summary
 
 Built and evaluated two independent QLoRA adapters on a saved NF4 base, and

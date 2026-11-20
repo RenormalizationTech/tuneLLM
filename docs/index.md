@@ -14,7 +14,7 @@ retained experimental references together.
 | [Short demonstration](short_demonstration.md) | A four-minute recorded comparison of QASPER adaptation and tunable sarcasm; no GPU needed. |
 | [Results and portfolio](showcase.md) | Main findings, CV bullets, interview summary and saved examples. |
 | Quantization | [4B measurements](benchmark_summary.md) and [27B NF4/Q4_K_M results](qwen38_quantization_results.md). |
-| LoRA and QLoRA | [4B physics results](physics_prl_execution.md) and [27B QASPER/PRL adapters](qwen38_qlora_results.md). |
+| LoRA and QLoRA | [4B physics results](physics_prl_execution.md), [27B QASPER/PRL adapters](qwen38_qlora_results.md), and [Gemma 4 31B QASPER](gemma4_qasper_results.md). |
 | [Release catalog](../releases/README.md) | All ten public packages, model cards and pinned Hugging Face revisions. |
 | [Reproduce](reproduce.md) | CPU checks, loading instructions and separate runtime environments. |
 | [Project status](project_tracks.md) | Completed work and deferred studies. |
@@ -85,9 +85,10 @@ The [project status](project_tracks.md) and
 [final 27B closeout](../results/qwen38_project_closeout_02.json) retain the
 completed scope and unchanged outcomes.
 
-A separate [Gemma 4 31B feasibility preflight](gemma4_preflight.md) also passed
-synthetic training and reload checks. Whether to train QASPER/PRL adapters on
-that family is the next decision; there are no Gemma task-quality results yet.
+The separate [Gemma 4 31B QASPER study](gemma4_qasper_results.md) is complete and
+passes its registered task and retention gates. Lenient Answer F1 improved from
+0.334 to 0.640; the strict baseline was a format floor. Its adapter release is
+being verified. Gemma PRL remains a separate next decision.
 
 All Markdown documents under `docs/` are available through this site. Protocols,
 closeouts and execution notes preserve their historical decisions and wording;

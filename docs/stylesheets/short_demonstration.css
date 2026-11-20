@@ -15,6 +15,7 @@
 .short-demo .sd-reference blockquote { font-size: .91rem; background: white; border-left: 3px solid #8fb9af; padding: .85rem 1rem; margin: .8rem 0; }
 .short-demo .sd-reference blockquote p { margin: 0; }
 .short-demo .sd-qa-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; align-items: start; margin: 1rem 0 1.5rem; }
+.short-demo .sd-qa-grid.sd-gemma-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .short-demo .sd-card { border: 1px solid var(--sd-line); border-radius: 8px; background: white; padding: 1rem; min-width: 0; margin: .8rem 0; }
 .short-demo .sd-qa-grid .sd-card { margin: 0; height: 100%; }
 .short-demo .sd-card h3 { font-size: 1.04rem; margin-bottom: .8rem; }
@@ -46,7 +47,7 @@
 .short-demo .sd-cap { font-size: .78rem; color: #74521e; padding-top: .3rem; margin-bottom: .1rem; }
 .short-demo .sd-all-answers { border: 1px solid var(--sd-line); border-radius: 8px; padding: .6rem 1rem; margin: 1.2rem 0; }
 .short-demo .sd-all-answers > p { font-size: .82rem; }
-@media (max-width: 1000px) { .short-demo .sd-qa-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .short-demo .sd-qa-grid, .short-demo .sd-qa-grid.sd-gemma-grid { grid-template-columns: 1fr; } }
 @media (max-width: 520px) {
   .short-demo .sd-hero { padding: 1rem; }
   .short-demo .sd-card { padding: .85rem; }
