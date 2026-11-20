@@ -169,9 +169,20 @@ autocast, SDPA, batch one, greedy cached decoding, repetition penalty 1.0 and
 native stop tokens 1/106. It uses Gemma's no-thinking chat prefix. The numbered
 paper context and question must fit within the 8,192-token total envelope,
 including the 512-token QASPER output allowance. Vision inputs were excluded.
-Use the release's tested local helper once its verification is complete;
-loading only a generic model class does not reproduce the text-key mapping
-or precision choices.
+Use the [verified adapter card](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md) and
+[short local-use guide](gemma4_qasper_results.md#use-the-adapter). Adapter revision
+[`b3ca7a48aa6a95245c5778e2c2473d8129f58bbb`](https://huggingface.co/RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA/tree/b3ca7a48aa6a95245c5778e2c2473d8129f58bbb)
+and release-manifest SHA256 `4e06c0de10fd97b262bd032f34bc6481fa0d27fbd138b301befbc05e2cb8bdac`
+are recorded in the [public verification receipt](../results/gemma4_qasper_public_verification_01.json).
+The card specifies the eight-file base download, exact package pins and local
+formatter. Keep question inputs outside the reviewed adapter bundle and use
+`python -B` for its CLI. Loading only a generic model class does not reproduce
+the text-key mapping or precision choices.
+
+The public check downloaded the adapter anonymously into fresh caches, then
+matched 11 offline logit/token cells, 7 saved-row replays and all 820 adapter
+tensors. It reused and hash-verified the pinned Google base cache; it did not
+repeat a full base download or any task-quality evaluation.
 
 The [registered study](../results/protocols/gemma4-qasper-01.json),
 [source/mechanics review](../results/reviews/gemma4_qasper_source_review_01.md),

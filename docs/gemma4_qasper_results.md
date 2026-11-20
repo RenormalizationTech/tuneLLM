@@ -7,8 +7,9 @@ from **0.334 to 0.640**, with gain interval **[0.251, 0.362]**.
 This is a reused cross-family project evaluation, not a fresh held-out study or
 the full official QASPER benchmark.
 
-The adapter release is being packaged and independently reload-verified. The
-completed quality result below is separate from that release verification.
+The [adapter package](https://huggingface.co/RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA/tree/b3ca7a48aa6a95245c5778e2c2473d8129f58bbb) is public and independently reload-verified;
+see the [public verification receipt](../results/gemma4_qasper_public_verification_01.json).
+The completed quality result below is separate from that release verification.
 The [recorded demonstration](short_demonstration.md#gemma-qasper-the-same-recorded-question)
 already shows the same saved question used for Qwen, with no live inference.
 
@@ -111,12 +112,32 @@ retain the failed early check and the validation redesign before training.
 
 ## Use the adapter
 
-Release verification is in progress. The verified adapter revision, manifest
-hash and tested download/loading commands will be recorded here and in the
-[release catalog](../releases/README.md) when the public checks are complete.
-The scientific results above are complete; inference-package verification is
-a separate check. The package will contain the adapter and its local helper;
-obtain the pinned Google base separately. It does not retrieve papers.
+The [frozen adapter card](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md) provides the exact
+environment pins, eight-file Google-base download and numbered-paragraph formatter.
+Use adapter revision [`b3ca7a48aa6a95245c5778e2c2473d8129f58bbb`](https://huggingface.co/RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA/tree/b3ca7a48aa6a95245c5778e2c2473d8129f58bbb)
+and release-manifest SHA256 `4e06c0de10fd97b262bd032f34bc6481fa0d27fbd138b301befbc05e2cb8bdac`,
+bound by the [public verification receipt](../results/gemma4_qasper_public_verification_01.json).
+
+From the downloaded adapter directory, keep `../question.json` **outside** the
+reviewed bundle. Its `paragraphs` and `question` fields use the card's exact frozen
+formatter; supply only the intended context paragraphs in display order.
+
+```bash
+CUDA_VISIBLE_DEVICES=0 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+python -B -m runtime.example --bundle . --base ../gemma-base \
+  --manifest-sha256 4e06c0de10fd97b262bd032f34bc6481fa0d27fbd138b301befbc05e2cb8bdac \
+  --question-json ../question.json
+```
+
+Independent package verification used a fresh anonymous adapter download, exact
+reload of all 820 adapter tensors, and 11 logit/token cells including 7 full
+saved-row token-and-decoded-output replays. The base was the reused, content-hash-verified
+Google cache at `842da3794eaa0b77d5f08bae87a17459d91ff475`; this was not a fresh
+full-base download. These are functional checks, not a new quality experiment.
+Use the bundled helper rather than generic PEFT automatic loading to preserve
+the studied text-only mapping and FP32 preparation. The package does not retrieve papers.
+
+Release evidence covers [criteria](../results/reviews/gemma4_qasper_release_review_01.md), [source](../results/reviews/gemma4_qasper_release_review_02.md), [card usability](../results/reviews/gemma4_qasper_release_review_03.md), [local reload](../results/reviews/gemma4_qasper_release_review_04.md) and [public verification](../results/reviews/gemma4_qasper_release_review_05.md).
 
 ## Evidence, correction and scope
 

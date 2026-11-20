@@ -95,6 +95,8 @@ compliance component. Evidence superiority was not established. The task and
 retention gates passed. These reused project questions do not support a general
 Gemma-versus-Qwen ranking. See [Gemma QASPER results and use](gemma4_qasper_results.md).
 
+Use the [pinned Gemma adapter](https://huggingface.co/RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA/tree/b3ca7a48aa6a95245c5778e2c2473d8129f58bbb) with the [verified local loading instructions](gemma4_qasper_results.md#use-the-adapter).
+
 ## Sarcasm: an inference control
 
 <div class="short-demo" id="recorded-sarcasm" data-recorded-sarcasm data-demo-url="../assets/short_demonstration.json">

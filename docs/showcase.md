@@ -24,6 +24,12 @@ steps and development checkpoint selection were used. The
 reporting-only correction, and the [recorded demonstration](short_demonstration.md#gemma-qasper-the-same-recorded-question)
 uses the question ID chosen for Qwen before Gemma evaluation.
 
+The [public adapter](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md) has separate
+[functional verification](../results/gemma4_qasper_public_verification_01.json):
+a fresh anonymous adapter download, exact 820-tensor reload, 11 logit/token cells
+and 7 saved-row replays. The pinned Google base cache was reused and hash-verified;
+these checks did not add quality measurements. See the [local-use guide](gemma4_qasper_results.md#use-the-adapter).
+
 ## Qwen3.8-27B portfolio summary
 
 Built and evaluated two independent QLoRA adapters on a saved NF4 base, and

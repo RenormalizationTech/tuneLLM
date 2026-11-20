@@ -15,7 +15,7 @@ retained experimental references together.
 | [Results and portfolio](showcase.md) | Main findings, CV bullets, interview summary and saved examples. |
 | Quantization | [4B measurements](benchmark_summary.md) and [27B NF4/Q4_K_M results](qwen38_quantization_results.md). |
 | LoRA and QLoRA | [4B physics results](physics_prl_execution.md), [27B QASPER/PRL adapters](qwen38_qlora_results.md), and [Gemma 4 31B QASPER](gemma4_qasper_results.md). |
-| [Release catalog](../releases/README.md) | All ten public packages, model cards and pinned Hugging Face revisions. |
+| [Release catalog](../releases/README.md) | All eleven public packages, model cards and pinned Hugging Face revisions. |
 | [Reproduce](reproduce.md) | CPU checks, loading instructions and separate runtime environments. |
 | [Project status](project_tracks.md) | Completed work and deferred studies. |
 | [Theoretical background](learning_foundations.md) | Formulations, assumptions and primary references underlying the methods and implementation choices. |
@@ -29,7 +29,7 @@ Start with the [results and saved examples](showcase.md), then use the
 [reproduction guide](reproduce.md) to inspect an artifact or run the portable
 CPU checks. [GitHub](https://github.com/RenormalizationTech/tuneLLM) contains the
 code and compact results; [Hugging Face](https://huggingface.co/RenormalizationTech)
-hosts ten published artifacts, including the evaluated 27B NF4 and Q4_K_M bases.
+hosts eleven published artifacts, including the evaluated 27B NF4 and Q4_K_M bases.
 
 ## Research tracks
 
@@ -70,7 +70,7 @@ weights; they are distinct from LoRA adapters.
 
 ## Current scope and historical records
 
-The planned 4B, 7B and text-only 27B work is complete. Ten packages are public,
+The planned 4B, 7B and text-only 27B work is complete. Eleven packages are public,
 including five Qwen3.8 releases. Detailed benchmarks and methods live under
 **Quantization**, **LoRA and QLoRA**, **Refusal steering** and **Trait steering**.
 The [results overview](showcase.md) summarizes the findings; the
@@ -87,8 +87,8 @@ completed scope and unchanged outcomes.
 
 The separate [Gemma 4 31B QASPER study](gemma4_qasper_results.md) is complete and
 passes its registered task and retention gates. Lenient Answer F1 improved from
-0.334 to 0.640; the strict baseline was a format floor. Its adapter release is
-being verified. Gemma PRL remains a separate next decision.
+0.334 to 0.640; the strict baseline was a format floor. Its [public adapter](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md)
+has completed independent package verification. Gemma PRL remains a separate next decision.
 
 All Markdown documents under `docs/` are available through this site. Protocols,
 closeouts and execution notes preserve their historical decisions and wording;

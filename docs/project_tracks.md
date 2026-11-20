@@ -19,7 +19,8 @@ Gemma QASPER answers on the same paper question, plus tunable-sarcasm examples,
 without requiring a GPU. The [Gemma 4 31B QASPER study](gemma4_qasper_results.md)
 is complete: the adapter passes every registered task and retention gate.
 Lenient Answer F1 improved from 0.334 to 0.640; the strict baseline was a format
-floor. Adapter packaging and release verification are in progress. **The next
+floor. The [public adapter](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md) has completed
+independent package verification. **The next
 study decision is whether to proceed with Gemma PRL.**
 
 | Track | Status and evidence |
@@ -28,7 +29,7 @@ study decision is whether to proceed with Gemma PRL.**
 | Physics QLoRA | Published adapter; held-out paper NLL 1.975 → 1.734, numeric GSM8K 117/128 → 111/128 and strict-format correct 97/128 → 106/128. [Execution record](physics_prl_execution.md). Writing-quality improvement is unestablished. |
 | Refusal steering | 4B and 7B interventions implemented and compared. Fixed-workflow decisions remain null under their original gates. A separate 13-case 7B diagnostic rescued two useful benign answers, with one repetitive output. The [experimental package is published](../releases/qwen2.5-7b-refusal-steering-experiment/README.md); no general benign-only controller is validated. |
 | Trait steering | Individual GCAD/SAPS references show model-specific effects with quality costs. The joint 7B study qualified 0/5 combined candidates. [Consolidated evidence](steering_reference.md) and [joint-control discussion](gcad_and_combined_control.md). |
-| Portfolio presentation | Public GitHub, ten HF cards, saved examples, a results figure, [reproduction guidance](reproduce.md) and the [live documentation site](https://renormalizationtech.github.io/tuneLLM/). |
+| Portfolio presentation | Public GitHub, eleven HF cards, saved examples, a results figure, [reproduction guidance](reproduce.md) and the [live documentation site](https://renormalizationtech.github.io/tuneLLM/). |
 | 27B initial NF4 smoke | Official text-only checkpoint loaded, saved and reloaded. Two short prompts replayed exact tokens. The strict one-step cached/full-prefix logit comparison failed; this remains a limitation. [Execution record](../results/qwen38_27b_nf4_execution_01.json). |
 
 The 7B refusal package contains an inference-time direction and runtime, not new
@@ -145,7 +146,8 @@ sarcasm studies, including the separately registered instruction-activation
 and stronger-GCAD follow-up, plus the experimental tunable-controls release, are
 complete. The Qwen3.8 extension is closed. The recorded demonstration and separate
 Gemma feasibility preflight are complete. The Gemma QASPER study is also complete,
-with its release being verified; Gemma PRL remains a separate decision. No
+with its [verified public package](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md);
+Gemma PRL remains a separate decision. No
 additional Qwen model or judge run is scheduled.
 
 ## Where to look

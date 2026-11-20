@@ -13,7 +13,8 @@ provides a SAPS reference; Qwen3.8-27B adds evaluated base exports, two complete
 scientific-task QLoRA studies and a completed bounded sarcasm-steering study.
 Gemma 4 31B adds a completed QASPER QLoRA study with registered task and
 retention checks; its [results and format-compliance limits](docs/gemma4_qasper_results.md)
-are reported separately from the Qwen work.
+are reported separately from the Qwen work. The [public Gemma adapter](releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md)
+includes its tested local inference helper and independent package verification.
 
 The goal is to demonstrate practical LLM research: implement methods, reproduce
 results, compare alternatives and explain limitations. Positive effects, failed
@@ -64,6 +65,7 @@ is separate. [Source counts, interpretation and saved examples](docs/showcase.md
 | [27B Q4_K_M GGUF](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-GGUF) | Quantized base and reproduction notes | [GGUF card](releases/Qwen3.8-27B-tuneLLM-GGUF/README.md) |
 | [27B QASPER QLoRA](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-QASPER-QLoRA) | Adapter passing the fixed custom paper-QA/evidence task and retention gates | [QASPER card](releases/Qwen3.8-27B-tuneLLM-QASPER-QLoRA/README.md) |
 | [27B PRL abstract QLoRA](https://huggingface.co/RenormalizationTech/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA) | Experimental adapter; abstract-quality gates failed | [PRL card](releases/Qwen3.8-27B-tuneLLM-PRL-Abstract-QLoRA/README.md) |
+| [Gemma 4 31B QASPER QLoRA](https://huggingface.co/RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA/tree/b3ca7a48aa6a95245c5778e2c2473d8129f58bbb) | Adapter and the studied text-only local inference helper | [Results and use](docs/gemma4_qasper_results.md#use-the-adapter) |
 | [27B sarcasm GCAD controls](https://huggingface.co/RenormalizationTech/qwen38-27b-sarcasm-gcad-controls) | Bank and standalone runtime; tunable strength 0–16, experimental default 8 | [Pinned usage guide](docs/qwen38_sarcasm_release.md) |
 
 The refusal direction reduces refusal generally, including on unsafe contrasts;
@@ -218,7 +220,7 @@ adding runs, results, model assets or releases.
 | [scripts/](scripts/README.md) | Runnable entry points, shared modules and historical runbooks. |
 | [configs/](configs/README.md) / [evaluation/](evaluation/README.md) | Pinned experiment settings, scoring code, prompts and rubrics. |
 | [results/](results/README.md) | Compact outcomes, registered protocol bindings, reviews and publication receipts. |
-| [releases/](releases/README.md) | Ten current HF card mirrors, a release catalog and historical metadata; model weights are not stored here. |
+| [releases/](releases/README.md) | Eleven current HF card mirrors, a release catalog and historical metadata; model weights are not stored here. |
 | `artifacts/`, `outputs/`, `.hf/` | Ignored local models/release payloads, raw run evidence and download caches. |
 | `data/` | Mostly ignored corpora; selected small steering fixtures and license records remain tracked. |
 | [tests/](tests/conftest.py), `requirements*.txt` | Portable CPU checks plus opt-in research checks, and separate environment profiles. |

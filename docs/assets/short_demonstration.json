@@ -391,7 +391,11 @@
         "source_score_file_sha256": "f4d48ca79c40acc28b713be625d1adb52bc551a5b8b542c288e3e6344fb6b4f5"
       }
     ],
-    "release": null,
+    "release": {
+      "repo_id": "RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA",
+      "revision": "b3ca7a48aa6a95245c5778e2c2473d8129f58bbb",
+      "release_manifest_sha256": "4e06c0de10fd97b262bd032f34bc6481fa0d27fbd138b301befbc05e2cb8bdac"
+    },
     "prompt_alias": "Development selection tied at strict F1 zero and chose base; prompted is an alias, not an additional generation.",
     "aggregate": {
       "n": 309,
@@ -450,6 +454,10 @@
         "results/short_demonstration_01.json": {
           "url": "https://github.com/RenormalizationTech/tuneLLM/blob/4c55c72a40c99304f34873d13c42f9184d1d9608/results/short_demonstration_01.json",
           "sha256": "47c576a5b2ecabc9be5bbf82062e0d34e20f1e8e05d2a5ef95ca36272310c72e"
+        },
+        "results/gemma4_qasper_public_verification_01.json": {
+          "url": "https://github.com/RenormalizationTech/tuneLLM/blob/d87df99e0a49cdb50ea4caa999f4b43fe92e431d/results/gemma4_qasper_public_verification_01.json",
+          "sha256": "a996a7820832e5346d3d5dce34c82b266e2491cc317affb68b4688211328c75a"
         }
       }
     },
