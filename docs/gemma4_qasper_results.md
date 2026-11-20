@@ -161,5 +161,5 @@ details can lower it. The selected examples are illustrations, not representativ
 samples or factuality validation. This study supports a within-Gemma adaptation
 result under its registered method, not a broad Gemma-versus-Qwen ranking.
 
-Gemma PRL adaptation is a separate possible follow-up; it was not part of this
-completed QASPER study.
+The project owner chose to finish the Gemma showcase with this QASPER study and
+drop Gemma PRL adaptation. No Gemma PRL study was started.

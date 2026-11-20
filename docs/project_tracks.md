@@ -20,8 +20,8 @@ without requiring a GPU. The [Gemma 4 31B QASPER study](gemma4_qasper_results.md
 is complete: the adapter passes every registered task and retention gate.
 Lenient Answer F1 improved from 0.334 to 0.640; the strict baseline was a format
 floor. The [public adapter](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md) has completed
-independent package verification. **The next
-study decision is whether to proceed with Gemma PRL.**
+independent package verification. **The Gemma showcase is complete. Gemma PRL
+was dropped by the project owner; no further Gemma study is planned.**
 
 | Track | Status and evidence |
 | --- | --- |
@@ -147,8 +147,8 @@ and stronger-GCAD follow-up, plus the experimental tunable-controls release, are
 complete. The Qwen3.8 extension is closed. The recorded demonstration and separate
 Gemma feasibility preflight are complete. The Gemma QASPER study is also complete,
 with its [verified public package](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md);
-Gemma PRL remains a separate decision. No
-additional Qwen model or judge run is scheduled.
+Gemma PRL was dropped from the agenda. The current project scope is complete;
+no additional model or judge run is scheduled.
 
 ## Where to look
 

@@ -88,7 +88,8 @@ completed scope and unchanged outcomes.
 The separate [Gemma 4 31B QASPER study](gemma4_qasper_results.md) is complete and
 passes its registered task and retention gates. Lenient Answer F1 improved from
 0.334 to 0.640; the strict baseline was a format floor. Its [public adapter](../releases/Gemma-4-31B-tuneLLM-QASPER-QLoRA/README.md)
-has completed independent package verification. Gemma PRL remains a separate next decision.
+has completed independent package verification. The Gemma showcase is complete;
+Gemma PRL was dropped from the project agenda.
 
 All Markdown documents under `docs/` are available through this site. Protocols,
 closeouts and execution notes preserve their historical decisions and wording;
