@@ -24,6 +24,7 @@ PORTABLE = {
     "test_qwen38_sync_catalog.py",
     "test_qwen38_complete_science.py",
     "test_qwen38_stage_adapter.py", "test_qwen38_retention_batch_preflight.py",
+    "test_gemma4_qasper_analysis.py",
 }
 
 

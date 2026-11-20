@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "id": "gemma4-qasper-01",
+  "registered_at_utc": "2026-11-20T00:58:52.031181+00:00",
+  "scope": "Gemma QASPER only; reused project evaluation; no PRL or automatic HF upload",
+  "plan": {
+    "path": "docs/gemma4_qasper_plan.md",
+    "sha256": "6d9d1a090d290cd339fd0ca85dc6488fdaaa50bd1e0c0f48af52740c316eac96"
+  },
+  "model_identity": {
+    "base": "/home/angkunwu/Documents/tuneLLM/.hf/gemma4-preflight-01/hub/models--google--gemma-4-31B-it/snapshots/842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "files": {
+      "config.json": {
+        "sha256": "e967dd38bc5cfd38bd09a995a7bf4a754075df2b46aba68f7fbb5a791e6d8dd1",
+        "bytes": 4621
+      },
+      "generation_config.json": {
+        "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de",
+        "bytes": 208
+      },
+      "model.safetensors.index.json": {
+        "sha256": "d4aff3b976d69c123a29d1c085d7ba4de1ac3f4ca1726a7f81e1b11462a64ea2",
+        "bytes": 120246
+      },
+      "tokenizer.json": {
+        "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+        "bytes": 32169626
+      },
+      "tokenizer_config.json": {
+        "sha256": "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633",
+        "bytes": 3082
+      },
+      "chat_template.jinja": {
+        "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+        "bytes": 18683
+      },
+      "model-00001-of-00002.safetensors": {
+        "bytes": 49784788364,
+        "sha256": "eeef8791537bc04f110967c513149e037d2a9ae97d49add7291ebfa62806bbfa"
+      },
+      "model-00002-of-00002.safetensors": {
+        "bytes": 12761549884,
+        "sha256": "018912220f559f7025d60333e0996183cd538aa77ad6f4988a89ce47be681f10"
+      }
+    },
+    "native_generation_eos": [
+      1,
+      106,
+      50
+    ],
+    "study_eos_override": [
+      1,
+      106
+    ],
+    "preflight_weights_sha256": "af9babb2edc89879fb786dd7605bfb214781cd2107d4a977e9b27309dc6c8941"
+  },
+  "source_review": {
+    "path": "results/reviews/gemma4_qasper_source_review_01.md",
+    "sha256": "73a966a1ecbbb6951f74cc8fa30ada8d774a2319aa72c54d1554223cc886c9e5"
+  },
+  "versions": {
+    "torch": "2.12.0+cu130",
+    "transformers": "5.23.0",
+    "peft": "0.21.0",
+    "bitsandbytes": "0.49.2",
+    "accelerate": "1.12.0",
+    "huggingface_hub": "2.4.0"
+  },
+  "data": {
+    "manifest": {
+      "path": "outputs/qwen38-science-01/prepared-qasper-tokenizer-01/manifest.json",
+      "sha256": "89c5e45e95bf45001fa00680c6af370bd85589ef7aa794d536585bd3577a9464"
+    },
+    "train": {
+      "path": "outputs/qwen38-science-01/prepared-qasper-tokenizer-01/train.jsonl",
+      "sha256": "bb9b16642c47491b83150b278aa27ebcd37d5d3a06bb0b6e617fb8e274def897"
+    },
+    "development": {
+      "path": "outputs/qwen38-science-01/prepared-qasper-tokenizer-01/validation.jsonl",
+      "sha256": "7028881d0af592c9a5b8727ac56e3bfedda6aa3338af367809654ef4b4451fc4"
+    },
+    "final": {
+      "path": "outputs/qwen38-science-01/prepared-qasper-tokenizer-01/test.jsonl",
+      "sha256": "6dc33a31460e8720c49e71595a37067f0f479e3b400b868262d8204af23e4ac2"
+    },
+    "prompt_development": {
+      "path": "outputs/qwen38-qasper-evaluation-01/prompt_development.jsonl",
+      "sha256": "3bde8d406a1e37b9f6ef391b78bf33b5355015288a5a3c2bc105540b89e25e29"
+    },
+    "qwen_training_selection": {
+      "path": "results/protocols/qwen38-qasper-02.json",
+      "sha256": "27667d78453004a56471fe4dbbfed815f725eb079533942aeed567f185c13f63"
+    },
+    "qwen_evaluation_protocol": {
+      "path": "results/protocols/qwen38-qasper-evaluation-01.json",
+      "sha256": "005cf1110c9746434729433ba5086ed628c8df207d9523151c29a8cbd58b8701"
+    },
+    "retention_fixture": {
+      "path": "data/benchmark-screen-01/test.json",
+      "sha256": "6b3a9f408e4614ad87c4b9e8879c232814da17e1615dc0cbdedd7a0e589e0264"
+    }
+  },
+  "job_registrations": {
+    "coverage": {
+      "path": "outputs/gemma4-qasper-study-01/coverage/registration.json",
+      "sha256": "907c2f8b2f402bfe4b25742a194a6c0d999acf13d36379235c693655f9759348"
+    },
+    "training": {
+      "path": "outputs/gemma4-qasper-study-01/training/registration.json",
+      "sha256": "3f780de5bcdad9b5954d83bb00d8f74636c14e80e9dc9357e85853ee31bc0f0c"
+    },
+    "prompt_development": {
+      "path": "outputs/gemma4-qasper-study-01/prompt-development/registration.json",
+      "sha256": "66b75527fd1f6c98015f6a18027ae5e8f1b302d7a9afe60347cfb40335fdbe90"
+    },
+    "retention_base": {
+      "path": "outputs/gemma4-qasper-study-01/retention-base/registration.json",
+      "sha256": "d74319771730c062c8ae58ea44ed0f03f94ca16fb1e93b21afa19eef5de2ddb1"
+    }
+  },
+  "retention_scorer": {
+    "python": "/home/angkunwu/Documents/tuneLLM/.venv/bin/python",
+    "python_sha256": "a2f33a6e006989270f4340528eb61f8f97366e00a5d1b602ac8672ea44fc56ae",
+    "packages": {
+      "absl-py": "2.3.1",
+      "immutabledict": "4.2.2",
+      "langdetect": "1.0.9",
+      "nltk": "3.9.2"
+    },
+    "assets": {
+      "revision": {
+        "repository": "https://github.com/google-research/google-research",
+        "revision": "f8d6d14a1fc6eaef606d7d1e1fa4e96ee09afb81"
+      },
+      "files": {
+        "/home/angkunwu/Documents/tuneLLM/data/benchmark-screen-01/provenance.json": "ff52d7e1f3cfbcc12e4718d0aada43e1e0686206aa9ce4524efc862ff89a4653",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/ifeval/evaluation_lib.py": "35decc06000718487f44d7deafa6d3f48a8ec0886281edf40162c0265b7d248c",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/ifeval/instructions_util.py": "a73797261eee5bf447e279d82a2b700b1bdd3cb1193412dbab1270a85832bc6b",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/ifeval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/ifeval/instructions_registry.py": "ec92d72c264f6d906978613085db262356174300370a3fffe6fefd5969ce9cfc",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/ifeval/instructions.py": "60e086f5342a03ce8e18b64bbcccf86308f523c08aa826707a562150a52f3edf",
+        "/home/angkunwu/Documents/tuneLLM/results/physics_nltk_resource.json": "960585e51a9f5048f5f27a0e04b4ac0aa57c4161ffd8daa5f44f16910e7d8955",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/nltk/tokenizers/punkt_tab/README": "d3251cae66a9359bd68c039e3a46172a05ca9df0b27dcdfa23ae594d68d27ec4",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/nltk/tokenizers/punkt_tab/english/abbrev_types.txt": "92a3e070f43d9b4c5534758ca40ad7343b04e7e29bfe0c2eb658a39445a4f779",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/nltk/tokenizers/punkt_tab/english/collocations.tab": "8e2da1225e4dd2cc9dba261ee231ccb134859e21b46006e7f472c5ee269af0cf",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/nltk/tokenizers/punkt_tab/english/ortho_context.tab": "4bbcca25ed3d3f06c02402abf8419b9f033b8adc06e7b482eca4e45f81a5dc4c",
+        "/home/angkunwu/Documents/tuneLLM/artifacts/tools/nltk/tokenizers/punkt_tab/english/sent_starters.txt": "f3f8535483e1dba487241b764945168123bca3209a9645e59acd1225dc76edac"
+      },
+      "nltk_version": "3.9.2"
+    },
+    "python_version": "3.10.12"
+  },
+  "prelaunch_mechanics": {
+    "manifest": {
+      "path": "outputs/gemma4-qasper-mechanics-03/manifest.json",
+      "sha256": "eadc8ec5ddd14889a641b22b1f5dfc501d1c7c55e3e9ecaaafdb9db610a64b10"
+    },
+    "result": {
+      "path": "outputs/gemma4-qasper-mechanics-03/result.json",
+      "sha256": "95e0ce1e995f4c97f355588a874b8c25fb942c42e961e6e92397c4cc1e3ca3ac"
+    }
+  },
+  "preserved_pre_R0_failure": {
+    "path": "outputs/gemma4-qasper-mechanics-02/result.json",
+    "sha256": "4f545bf9e1884cdfa9f41aabdd478875bddb0f337fb21ad91ef9e200e590a736"
+  },
+  "prospective_runs": {
+    "coverage": "outputs/gemma4-qasper-study-01/coverage",
+    "training": "outputs/gemma4-qasper-study-01/training",
+    "prompt_development": "outputs/gemma4-qasper-study-01/prompt-development",
+    "final_base": "outputs/gemma4-qasper-study-01/final-base",
+    "final_prompt": "outputs/gemma4-qasper-study-01/final-prompt",
+    "final_adapter": "outputs/gemma4-qasper-study-01/final-adapter",
+    "retention_base": "outputs/gemma4-qasper-study-01/retention-base",
+    "retention_adapter": "outputs/gemma4-qasper-study-01/retention-adapter"
+  },
+  "sources": {
+    "evaluation/gsm8k.py": "badf9084ba0aa20f933cc1334871b68508c902bc42e3a42924a134785bb51fd0",
+    "evaluation/score.py": "eae16a2e9174db21a4140806e048a686fbddf4c12b5d58d058a8114377cd77e2",
+    "scripts/batched_generation.py": "c877379d4da7c05ce6817336f505fbc987347c8cb06f7934449f981a78012ebe",
+    "scripts/benchmark_screen.py": "0c4d54220a4a3ae9ad7613504415052afa1ed43ee057bda2ab57a25a8d667246",
+    "scripts/common.py": "22bced020942274c8d9215f5c3c8838379a4d0605ebdb7c6c18d0cd5d78edc3b",
+    "scripts/gemma4_eval_qasper.py": "6838680092ea587de5612217c625d2127d37d52611db1cc4fa0d40647a658b76",
+    "scripts/gemma4_preflight.py": "b8e8479b02af7a4e00209a4d14c677298135a3d46ebc01f6071f0983ecba2232",
+    "scripts/gemma4_qasper_runtime.py": "7a47b21c64733c8f41318df8019cd34d4bc3617c39dbeaf50522938efef7c247",
+    "scripts/gemma4_retention.py": "69f4869920a5e8de8b570fa9ac27557669c18dde3f267a1ec6cb04e091ac64b8",
+    "scripts/gemma4_train_qasper.py": "de1c50234cd5d51f9aeb9b7b783c3614f482b38ce0276b3887d8ee69fca5beb4",
+    "scripts/gguf_eval.py": "8420a1a47f71cfd7ee6c5200367329293de6e4ffc5f18c692e7f8898dc938a81",
+    "scripts/qwen38_eval_adapter.py": "f59586b10a8825b0e3a5f1748f17a20333739508bc48cf86b2d32484ad10d277",
+    "scripts/qwen38_eval_science.py": "9051b724975a71288da4e0bd0d76b5f6294a67e5f4be0d2bababf2f6db93d1e3",
+    "scripts/qwen38_nf4_smoke.py": "dd68928708b86b06df84ad26f7730277ab62e08515c534329f44b8605f868fe3",
+    "scripts/qwen38_retention.py": "af00adeba07800716ea788c202cb1dc87f0445f1a144e7b3bf2b107d50cd1241",
+    "scripts/qwen38_science_runtime.py": "b2b8bb1ccc5d4446b7be9640273765b722124fecce103503c570234360bec562",
+    "scripts/qwen38_science_score.py": "c9c3b6b03efffda64ae42ce246409d864fbaca1304759495b50da0788d383f5a",
+    "scripts/save_nf4.py": "d5900271d23688de7ab015387be3751aac1798449425c8868fadea0a310c247b",
+    "tests/test_gemma4_qasper.py": "ad5404b6e433f7428fe4bee2311bc8b7ef98180ffdc516a6c1c8b9a81f0cd561",
+    "scripts/qwen38_qasper_analysis.py": "97518b4a2b20523d566e4a0f63d7f3a584a3f80c32cdde447efcf2aa43cc97d1",
+    "scripts/gemma4_qasper_analysis.py": "f957f8a0de70b6a4624ea6c61f27c90e6ebc84a65290e7ab5be0596957337f2a",
+    "scripts/register_gemma4_qasper.py": "aa151635de108f03fce9cd695048692e6f1e594aa0b608afb4ca76e199bd20cd",
+    "scripts/gemma4_qasper_pipeline.py": "59616d92b26423dd73e730f7221592095fc18e7426cea2ef8003eba2ee77dee9",
+    "scripts/gemma4_qasper_watch.py": "8afe04b8f6bc6c9a4bfd7680434dbf8d32e70119b7431dbc14aead5b5e48610b",
+    "scripts/gemma4_qasper_mechanics.py": "b05a176c6a76838d2b2288e6b4c7c7fabbd5d451f770b84b1b7b625df0e24758",
+    "scripts/gemma4_refresh_qasper_preparation.py": "2894a04e4a76927fca56a446f484ff58677407cba69ada62639cff48cd7172bc",
+    "tests/test_gemma4_qasper_analysis.py": "f87dcccbd517d8b49fe17dae13bdb3582e7b9c2b04d1e93ea42b9a36b6f7c48a",
+    "results/reviews/gemma4_qasper_source_review_01.md": "73a966a1ecbbb6951f74cc8fa30ada8d774a2319aa72c54d1554223cc886c9e5"
+  },
+  "gates": {
+    "answer_f1_gain_each_baseline": 0.05,
+    "paired_paper_bootstrap_ci_excludes_zero": true,
+    "max_evidence_f1_loss_vs_better_answer_baseline": 0.02,
+    "max_invalid_json_fraction": 0.02,
+    "max_false_unanswerable_increase": 0.05,
+    "retention": {
+      "gsm8k_total": 128,
+      "gsm8k_max_net_loss": 5,
+      "general_mmlu_total": 128,
+      "general_mmlu_max_net_loss": 5,
+      "ifeval_total": 32,
+      "ifeval_max_strict_net_loss": 3
+    }
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20261117,
+    "unit": "paper",
+    "method": "paired percentile95"
+  },
+  "selection": {
+    "checkpoint": "minimum token-weighted101-development NLL at21/41/61; earliest tie",
+    "prompt": "maximum strict primary F1 on35 fixed development questions; base,verify,schema tie order",
+    "adapter_prompt": "base",
+    "prompt_alias": "alias base if base wins; no duplicate final generation"
+  },
+  "generation": {
+    "thinking": false,
+    "cached": true,
+    "batch_size": 1,
+    "greedy": true,
+    "max_new_tokens": 512,
+    "sequence_cap": 8192,
+    "eos_token_id": [
+      1,
+      106
+    ],
+    "autocast": true
+  },
+  "mapping_policy": "Role/path/source/arm/alias rules fixed here; completion hashes are sealed after files exist, before final analysis; no path discovery or quality-based replacement",
+  "recovery": "Exact durable optimizer-boundary recovery and validated append-only completed generation rows; deterministic bugs stop and require a prospective amendment",
+  "owner_scope": "User authorizes QASPER study; no additional permission gate for registered phases"
+}
