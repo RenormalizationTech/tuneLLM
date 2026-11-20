@@ -1,0 +1,28 @@
+{
+  "repo_id": "google/gemma-4-31B-it",
+  "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+  "license": "apache-2.0",
+  "upstream_LICENSE_file_present": false,
+  "sources": {
+    "metadata": {
+      "url": "https://huggingface.co/api/models/google/gemma-4-31B-it/revision/842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "final_url": "https://huggingface.co/api/models/google/gemma-4-31B-it/revision/842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "sha256": "562082838e26772dfb2ed0fbf8317bbd789405e642ad286134a40fffeea63200",
+      "bytes": 24246
+    },
+    "card": {
+      "url": "https://huggingface.co/google/gemma-4-31B-it/raw/842da3794eaa0b77d5f08bae87a17459d91ff475/README.md",
+      "final_url": "https://huggingface.co/google/gemma-4-31B-it/raw/842da3794eaa0b77d5f08bae87a17459d91ff475/README.md",
+      "sha256": "e209f5c435b1e66055bd6d7c29185103ae8d2027a03a96b359335154f206b82b",
+      "bytes": 27963
+    },
+    "license": {
+      "url": "https://ai.google.dev/gemma/docs/gemma_4_license",
+      "final_url": "https://gemma.ai/resources/apache-2/",
+      "sha256": "761eeb0f44bced4285f233c0a7819d76372b0f70986098b31446979a26deddf9",
+      "bytes": 126063
+    }
+  },
+  "license_text_sha256": "b30df9a48463d1c99c6a66cdee623b1b0832c3811d58a80b338268d71cea190e",
+  "verification": "Pinned official API/card declare Apache2; pinned repository has no LICENSE/NOTICE file; LICENSE is the actual Apache2 text extracted from Google's linked license page."
+}

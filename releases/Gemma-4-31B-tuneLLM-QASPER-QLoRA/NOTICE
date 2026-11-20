@@ -1,0 +1,8 @@
+Gemma QASPER QLoRA adapter and portable local runtime.
+Base model: Google DeepMind google/gemma-4-31B-it at 842da3794eaa0b77d5f08bae87a17459d91ff475.
+Upstream pinned card declares Apache-2.0; see upstream_license.json and LICENSE.
+Upstream weights are not redistributed here. Adapter trained by RenormalizationTech.
+Modified adapter_config.json: only base_model_name_or_path and revision normalized for portability.
+Portable inference code independently packages the studied text-only loading/generation recipe.
+Official license: https://ai.google.dev/gemma/docs/gemma_4_license
+Pinned card: https://huggingface.co/google/gemma-4-31B-it/blob/842da3794eaa0b77d5f08bae87a17459d91ff475/README.md

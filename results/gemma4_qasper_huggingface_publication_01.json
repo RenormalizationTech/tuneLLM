@@ -1,0 +1,91 @@
+{
+  "repo_id": "RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA",
+  "url": "https://huggingface.co/RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA",
+  "private": false,
+  "manifest_sha256": "2b3289df8e46d091063e191bd8f41908ad6b32022b6f046d8324613c9d063570",
+  "credentials_recorded": false,
+  "status": "published_remote_hashes_verified",
+  "revision": "b3ca7a48aa6a95245c5778e2c2473d8129f58bbb",
+  "commit_url": "https://huggingface.co/RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA/commit/b3ca7a48aa6a95245c5778e2c2473d8129f58bbb",
+  "verified_at_utc": "2026-11-20T17:16:44.085955+00:00",
+  "files": {
+    "LICENSE": {
+      "bytes": 9693,
+      "sha256": "b30df9a48463d1c99c6a66cdee623b1b0832c3811d58a80b338268d71cea190e",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "NOTICE": {
+      "bytes": 693,
+      "sha256": "b7cb321586990df2a7464068fb91dfc1b4da29d227d3f26bc9b4e427effac430",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "README.md": {
+      "bytes": 9542,
+      "sha256": "fb64e4cfdf35e5e04685aeb550b76373ed1a006ff9983491ab28a310737be258",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "adapter_config.json": {
+      "bytes": 1216,
+      "sha256": "5285ca3d75eea118875da77089889d73568bc32ac3b4da7b68cf5531b7c28053",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "adapter_model.safetensors": {
+      "bytes": 489828512,
+      "sha256": "5c539bb8e0744a3f0a4d95f98e8f1e05c1bb3ab46ed723a0e81a7643d6bc8eb7",
+      "method": "revision-pinned Hub LFS SHA256"
+    },
+    "evaluation_summary.json": {
+      "bytes": 14823,
+      "sha256": "1630bde8b8759d77ae8c6b1cc7658d3270cf5aed3daef567fa9f9cefacf39b54",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "release_manifest.json": {
+      "bytes": 54435,
+      "sha256": "4e06c0de10fd97b262bd032f34bc6481fa0d27fbd138b301befbc05e2cb8bdac",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "requirements.txt": {
+      "bytes": 117,
+      "sha256": "36fd2b8a8210a7b7f33e1339aea97ef775131ea088404322d13e6e7c2cf09f96",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/__init__.py": {
+      "bytes": 228,
+      "sha256": "6f7346fdadd0da10242433483ba7341799102abc5d1d104e3a5087b6c5355570",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/example.py": {
+      "bytes": 1362,
+      "sha256": "4086537b786a9ee5f3fc4887adf2af75e0e2ffb6342102c474493d0e20845c58",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "runtime/loader.py": {
+      "bytes": 16018,
+      "sha256": "07b7a375cc79692593a7c5173e389926a453d17c159298c28d664c8a0ef33358",
+      "method": "revision-pinned downloaded SHA256"
+    },
+    "upstream_license.json": {
+      "bytes": 1467,
+      "sha256": "a3fe6817b8855451db06ad3025243cd428b7b2da7effb2bcf77b9023dece0f2a",
+      "method": "revision-pinned downloaded SHA256"
+    }
+  },
+  "additional_remote_files": [
+    ".gitattributes"
+  ],
+  "card_metadata": {
+    "base_model": "google/gemma-4-31B-it",
+    "library_name": "peft",
+    "license": "apache-2.0",
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "qasper",
+      "qlora",
+      "gemma4",
+      "text-only",
+      "experimental"
+    ],
+    "base_model_relation": "adapter"
+  },
+  "load_check": "separate pinned-download runtime verification required"
+}
