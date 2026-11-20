@@ -1,0 +1,43 @@
+{
+  "id": "gemma4-qasper-release-01",
+  "registered_at_utc": "2026-11-20T17:02:55.191586+00:00",
+  "repo_id": "RenormalizationTech/Gemma-4-31B-tuneLLM-QASPER-QLoRA",
+  "private": false,
+  "owner_authorization": "Owner accepted agenda including publication of the verified QASPER adapter and requested continuing until a response is needed; Gemma PRL remains a separate decision.",
+  "release_manifest_sha256": "4e06c0de10fd97b262bd032f34bc6481fa0d27fbd138b301befbc05e2cb8bdac",
+  "publication_manifest_sha256": "2b3289df8e46d091063e191bd8f41908ad6b32022b6f046d8324613c9d063570",
+  "sources": {
+    "scripts/stage_gemma4_qasper_release.py": "9268a6aede5c5ad8be8100ebd0bb00283af9767fce64cf55aa197445f69ddfa7",
+    "scripts/verify_gemma4_qasper_release.py": "c50871eab911b26c80ab5abbada60d74160a9a10c02fa070910e1441c6d17505",
+    "scripts/gemma4_qasper_release_runtime/__init__.py": "6f7346fdadd0da10242433483ba7341799102abc5d1d104e3a5087b6c5355570",
+    "scripts/gemma4_qasper_release_runtime/loader.py": "07b7a375cc79692593a7c5173e389926a453d17c159298c28d664c8a0ef33358",
+    "scripts/gemma4_qasper_release_runtime/example.py": "4086537b786a9ee5f3fc4887adf2af75e0e2ffb6342102c474493d0e20845c58",
+    "tests/test_gemma4_qasper_release.py": "84a0498932116d5bbc698f345a4ee5f2331bf4f70d58c6e122e3f5cb242e18f0",
+    "docs/gemma4_qasper_hf_card_draft.md": "fb64e4cfdf35e5e04685aeb550b76373ed1a006ff9983491ab28a310737be258"
+  },
+  "review_sha256": {
+    "results/reviews/gemma4_qasper_release_review_01.md": "e1ddbd0dffb6b227bd35be2aa79520afbb34b615164962e1ac671580e9db0939",
+    "results/reviews/gemma4_qasper_release_review_02.md": "ba1f4c7fe66731c55f1f488ee9d7844f96be2025a8511298e2e52ac47941c280",
+    "results/reviews/gemma4_qasper_release_review_03.md": "91146898990a10392258b49b31b18ba7770738ed81b7489bd9f8181798627218"
+  },
+  "base_revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+  "adapter_weights_sha256": "5c539bb8e0744a3f0a4d95f98e8f1e05c1bb3ab46ed723a0e81a7643d6bc8eb7",
+  "canonical_result_sha256": "a149de809997eb8ec18b670a4c1d32eca13edf014bd07fc28333abad3d50b39f",
+  "active_stage": "outputs/gemma4-qasper-release-04",
+  "superseded_stages_preserved": [
+    "outputs/gemma4-qasper-release-01",
+    "outputs/gemma4-qasper-release-02",
+    "outputs/gemma4-qasper-release-03"
+  ],
+  "phases": [
+    "isolated frozen-reference GPU",
+    "isolated portable local GPU",
+    "exact-file HF publication",
+    "anonymous fresh-cache pinned adapter download",
+    "offline public portable GPU equality with local receipt",
+    "publish verified pins and catalog"
+  ],
+  "checks": "Exact tensor reload;11 mechanics/replay cells per model phase,7 exact saved token+decoded-text replays; torch.equal logits and tokens, cleanup exact; no optimization or regrading.",
+  "base_download_scope": "Existing pinned base cache content-hash verified; no fresh full-base download claimed.",
+  "editorial_scope": "Current guide/catalog/demo may add verified public pins after checks. Runtime, weights, adapter config, payload card and source hashes remain frozen."
+}
